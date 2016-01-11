@@ -1,4 +1,4 @@
-# EITC Works data
+# UK Jobs data
 
 
 Install stuff using pip & [homebrew](http://brew.sh/)
