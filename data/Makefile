@@ -1,45 +1,135 @@
 include config.mk
 
-.PHONY : all
-all: opp_index
+all: merged_regions.geojson
 
 .PHONY: clean
 clean: 
-	rm opp_index_tracts_w_data.geojson
+	rm merged_regions.geojson
 
-.PHONY : opp_index
-opp_index: opp_index_tracts_w_data.geojson 
+define convert_srs
+	ogr2ogr -t_srs EPSG:4326 $@ $<
+endef
 
-opp_index_tracts.table: opp_index_tracts.shp
-	shp2pgsql -I -s 4326 -d $< $* | \
+define create_shape_table
+	shp2pgsql -I -s 4326 $< $* | \
 		psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT)
+endef
 
-opportunity_data.table: opportunity_data.csv
-	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS opportunity_data"
-	csvsql $< \
-		--db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --table opportunity_data --insert
+european_region_region.shp:
+	touch european_region_region.shp
 
-opportunity_quintiles.table: opportunity_quintiles.csv
-	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS opportunity_quintiles"
-	csvsql $< \
-		--db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --table opportunity_quintiles --insert
+OSNI_Open_Data_Largescale_Boundaries__NI_Outline.shp:
+	touch OSNI_Open_Data_Largescale_Boundaries__NI_Outline.shp
 
-merged_opp_index_tracts.shp: opp_index_tracts.table opportunity_data.table opportunity_quintiles.table
+gb_regions.shp: european_region_region.shp
+	$(convert_srs)
+
+ni_shape.shp: OSNI_Open_Data_Largescale_Boundaries__NI_Outline.shp
+	$(convert_srs)
+
+gb_regions.table: gb_regions.shp
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS gb_regions"
+	$(create_shape_table)
+
+northern_ireland.table: ni_shape.shp
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS ni_shape"
+	$(create_shape_table)
+
+gb_regions.append: gb_regions.table northern_ireland.table
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"INSERT INTO gb_regions (name, geom) \
+		   SELECT \
+		     'Northern Ireland' AS name, \
+			 geom \
+		   FROM ni_shape"
+
+merged_regions.table: gb_regions.append
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS merged_regions"
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"CREATE TABLE merged_regions AS ( \
+		   SELECT \
+		     ST_Union(geom) AS geom, \
+		     name \
+		   FROM gb_regions \
+		   GROUP BY name \
+		 )"
+
+job_types_by_region.csv:
+	in2csv --sheet "SOC3 x Region" BGT\ UK\ IPPR\ Data\ 2016-1-11.xlsx | \
+		python slugify_header.py > $@
+
+job_types_by_region.table: job_types_by_region.csv
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS job_types_by_region"
+	csvsql $< --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_region
+
+merged_regions.alter: merged_regions.table
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"ALTER TABLE merged_regions ADD COLUMN job_region VARCHAR"
+
+merged_regions.update: merged_regions.alter
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'EAST OF ENGLAND' \
+	     WHERE name = 'Eastern Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'EAST MIDLANDS' \
+	     WHERE name = 'East Midlands Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'GREATER LONDON' \
+	     WHERE name = 'London Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'NORTH EAST ENGLAND' \
+	     WHERE name = 'North East Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'NORTHERN IRELAND' \
+	     WHERE name = 'Northern Ireland'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'NORTH WEST ENGLAND' \
+	     WHERE name = 'North West Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'SCOTLAND' \
+	     WHERE name = 'Scotland Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'SOUTH EAST ENGLAND' \
+	     WHERE name = 'South East Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'SOUTH WEST ENGLAND' \
+	     WHERE name = 'South West Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'WALES' \
+	     WHERE name = 'Wales Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'WEST MIDLANDS' \
+	     WHERE name = 'West Midlands Euro Region'" 
+	
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+		"UPDATE merged_regions SET \
+		   job_region = 'YORKSHIRE AND THE HUMBER' \
+	     WHERE name = 'Yorkshire and the Humber Euro Region'" 
+
+merged_regions.shp: job_types_by_region.table merged_regions.update
 	pgsql2shp -f $@ -h $(PG_HOST) -u $(PG_USER) -p $(PG_PORT) $(PG_DB) \
-		"SELECT opp_index_tracts.geom, opportunity_quintiles.*, \"Unemployment pct\",\"Mean Travel Time\",\"Walk to Work\",\
-		\"Public Transit to Work\",\"H.S. Diploma\",\"Bachelors Degree\",\"Graduate Degree\",\"Median Home Value 2010\",\
-		\"FoodDesert\",\"poverty rate pct\" FROM opp_index_tracts \
-		JOIN opportunity_data ON opp_index_tracts.GEOID10::bigint = opportunity_data.\"GEO.id2\"\
-		JOIN opportunity_quintiles ON opp_index_tracts.GEOID10::bigint = opportunity_quintiles.\"GEO.id2\""
+		"SELECT * FROM merged_regions"
 
-opp_index_tracts_w_data.geojson: merged_opp_index_tracts.shp
-	ogr2ogr -simplify 0.0001 -f GeoJSON $@ $<
-
-.PHONY : create_db
-create_db :
-	createdb $(PG_DB)
-	psql -d $(PG_DB) -c "CREATE EXTENSION postgis"
-
-.PHONY : cleanup_shapefiles
-cleanup_tmp_shapefiles :		
-	rm merged_opp_index_tracts.*
+merged_regions.geojson: merged_regions.shp
+	ogr2ogr -simplify 0.001 -f GeoJSON $@ $<
