@@ -1,0 +1,9 @@
+port:  5000
+markdown: kramdown
+name: "UK Jobs"
+url: http://jobs.ippr.org
+encoding: utf-8
+timezone: America/Chicago
+description: ""
+gems:
+  - jekyll-redirect-from
