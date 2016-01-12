@@ -132,4 +132,4 @@ merged_regions.shp: job_types_by_region.table merged_regions.update
 		"SELECT * FROM merged_regions"
 
 merged_regions.geojson: merged_regions.shp
-	ogr2ogr -simplify 0.005 -f GeoJSON $@ $<
+	ogr2ogr -simplify 0.0025 -f GeoJSON $@ $<

@@ -3,6 +3,7 @@ var map;
 var info;
 var regions_geojson;
 var job_types_by_region;
+var basic_columns = ['region_or_nation','job_family','occupation','demand_entry'];
 
 // set size of map based on window height
 $(window).resize(function () {
@@ -25,8 +26,11 @@ $(window).resize(function () {
         return this._div;
     }
 
-    info.update = function(props){
-        console.log('updating ....')
+    info.update = function(properties){
+        if(properties){
+            var content = '<h4>' + properties['NAME'] + '</h4>';
+            this._div.innerHTML = content;
+        }
     }
 
     info.clear = function(){
@@ -42,14 +46,16 @@ $(window).resize(function () {
                 'opacity': 1,
                 'fillOpacity': 0.2
             },
-            'onEachFeature': bindQuery,
+            'onEachFeature': bindLayer,
         }
-        $.when($.getJSON('data/merged_regions.geojson')).then(function(geojson){
-            regions_geojson = L.geoJson(geojson, geojson_opts).addTo(map);
-            // Papa.parse('data/job_types_by_region.csv', function(data){
-            //     console.log(data)
-            // });
-            console.log(regions_geojson)
+        $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
+            regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
+            job_types_by_region = $.csv.toObjects(csv[0]);
+
+            var table_guts = sliceColumns(basic_columns);
+            //var reduced_rows = reduceColumns(table_guts, 3);
+
+            initializeTable(basic_columns, table_guts);
         });
     })
     $('#search_address').geocomplete()
@@ -83,6 +89,44 @@ $(window).resize(function () {
     // }
 })()
 
-function bindQuery(feature, layer){
+function bindLayer(feature, layer){
+    if(typeof feature.properties !== 'undefined'){
+        layer.on('mouseover', function(e){
+            info.update(e.target.feature.properties);
+        });
+        layer.on('mouseout', function(e){
+            info.clear();
+        })
+    }
+}
 
+function sliceColumns(columns){
+    return _.map(job_types_by_region, function(row){
+        var sliced_row = [];
+        $.each(columns, function(i, column){
+            sliced_row.push(row[column]);
+        });
+        return sliced_row
+    });
+}
+
+function reduceColumns(data, grouper, column_index){
+    // data is a 2D array of values
+    // grouper is an index of the array to group by
+    return _.reduce(data, function(memo, row){
+        return memo[column_index]
+    })
+}
+
+function initializeTable(column_names, data){
+    // column_names is an array of names to be used as the header row of the table
+    // data is a 2D array of values for the table
+    var names = [];
+    $.each(column_names, function(i, name){
+        names.push({'title': name});
+    })
+    $('#job-data').DataTable({
+        data: data,
+        columns: names
+    });
 }

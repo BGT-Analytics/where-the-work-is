@@ -25,7 +25,6 @@ L.Google = L.Class.extend({
 
   onAdd: function(map, insertAtTheBottom) {
     this._map = map;
-    console.log(insertAtTheBottom);
     this._insertAtTheBottom = insertAtTheBottom;
 
     // create a container div for tiles
