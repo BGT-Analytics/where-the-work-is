@@ -14,10 +14,14 @@ $(window).resize(function () {
 
 // do stuff when the page loads
 (function(){
-    map = L.map('map', {center: [53.383328, -2.977295], zoom: 6});
+    map = L.map('map', {
+        scrollWheelZoom: false,
+        center: [55, -3.5], 
+        zoom: 5
+    });
 
-    var googleLayer = new L.Google('ROADMAP', {animate: false});
-    map.addLayer(googleLayer);
+    var layer = new L.StamenTileLayer("toner-lite");
+    map.addLayer(layer);
 
     info = L.control({position: 'topright'});
     info.onAdd = function(map){
