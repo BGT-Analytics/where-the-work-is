@@ -7,10 +7,10 @@ git clone git@github.com:datamade/bg-ippr-jobs.git
 cd bg-ippr-jobs
 
 # to run locally
-python -m SimpleHTTPServer
+jekyll serve
 ```
 
-navigate to http://localhost:8000/
+navigate to http://localhost:5000/
 
 # Web dependencies
 We used the following open source tools:
