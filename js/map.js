@@ -64,6 +64,9 @@ $(window).resize(function () {
 
             // TO-DO: do something as default view on page load
             // initializeTable(basic_columns, table_guts);
+
+            // TEMPORARY
+            updateRegion('GREATER LONDON')
         });
     })
     
@@ -95,6 +98,7 @@ function updateRegion(place_name){
     $("#content-heading").text(place_name);
 
     makeCharts(place_data);
+    makeBubbleChart(place_data);
 }
 
 
@@ -133,5 +137,87 @@ function initializeTable(column_names, data){
         destroy: true,
         data: data,
         columns: names
+    });
+}
+
+
+function makeBubbleChart(data){
+    var prepped_data = []
+    $(data).each( function(i, row){
+        console.log("*")
+        console.log(row)
+        thing = {
+                    x: parseFloat(row['demand_entry']), 
+                    y: parseFloat(row['advertised_avg_salary_entry_degree']), 
+                    z: parseFloat(row['fe_ds_ratio']), 
+                    name: row['occupation'], 
+                    country: row['occupation']
+                }
+        if (!isNaN(thing.x) && !isNaN(thing.y) && !isNaN(thing.z)) prepped_data.push(thing)
+        console.log(thing)
+
+    })
+
+    $('#scatterplot').highcharts({
+
+        chart: {
+            type: 'bubble',
+            plotBorderWidth: 1,
+            zoomType: 'xy'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        title: {
+            text: 'Demand & Salary by Occupation'
+        },
+
+        xAxis: {
+            gridLineWidth: 1,
+            title: {
+                text: 'Demand'
+            },
+            labels: {
+                format: '{value}'
+            },
+        },
+
+        yAxis: {
+            startOnTick: false,
+            endOnTick: false,
+            title: {
+                text: 'Average Salary'
+            },
+            labels: {
+                format: '{value}'
+            },
+            maxPadding: 0.2,
+        },
+
+        tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="2"><strong>{point.country}</strong></th></tr>' +
+                '<tr><th>Demand (# jobs):</th><td>{point.x}</td></tr>' +
+                '<tr><th>Average Salary:</th><td>{point.y}</td></tr>' +
+                '<tr><th>Demand Ratio:</th><td>{point.z}</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: false,
+                }
+            }
+        },
+
+        series: [{
+            data: prepped_data
+        }]
+
     });
 }
