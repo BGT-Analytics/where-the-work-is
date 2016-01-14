@@ -140,7 +140,9 @@ function initializeTable(table_id, column_names, data){
         lengthMenu: [ [20, 100, -1], [20, 100, "All"] ],
         destroy: true,
         data: data,
-        columns: names
+        columns: names,
+        info: false,
+        paging: false
     });
 }
 
