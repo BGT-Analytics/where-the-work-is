@@ -7,3 +7,4 @@ timezone: America/Chicago
 description: ""
 gems:
   - jekyll-redirect-from
+baseurl: "/bg-ippr-jobs"
