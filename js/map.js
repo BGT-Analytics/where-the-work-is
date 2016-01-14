@@ -8,7 +8,7 @@ var basic_columns = ['region_or_nation','job_family','occupation', 'fe_ds_ratio'
 // set size of map based on window height
 $(window).resize(function () {
   var h = $(window).height(),
-  offsetTop = 110; // Calculate the top offset
+  offsetTop = 150; // Calculate the top offset
   $('#map').css('height', (h - offsetTop));
 }).resize();
 
@@ -161,8 +161,14 @@ function makeBubbleChart(data){
 
         chart: {
             type: 'bubble',
-            plotBorderWidth: 1,
-            zoomType: 'xy'
+            zoomType: 'xy',
+            plotBackgroundColor: {
+                linearGradient: [0, 0, 0, 400],
+                stops: [
+                    [0, 'rgb(225, 242, 241)'], //green
+                    [1, 'rgb(242, 231, 225)']  //red
+                ]
+            }
         },
 
         legend: {
@@ -170,11 +176,11 @@ function makeBubbleChart(data){
         },
 
         title: {
-            text: 'Demand & Salary by Occupation'
+            //text: 'Demand & Salary by Occupation'
+            text: ''
         },
 
         xAxis: {
-            gridLineWidth: 1,
             title: {
                 text: 'Average Salary'
             },
@@ -184,6 +190,7 @@ function makeBubbleChart(data){
         },
 
         yAxis: {
+            gridLineWidth: 0,
             startOnTick: false,
             endOnTick: false,
             title: {
