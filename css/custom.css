@@ -3,8 +3,12 @@ body {
   font: 18px "PT Sans",sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  color: #006167;
+}
+
 a, a:hover {
-color: #05A9C5;
+  color: #f47730;
 }
 
 hr {
@@ -18,7 +22,7 @@ hr {
   font-size: .8em;
 }
 
-.navbar-header>.navbar-brand, .navbar-inverse .navbar-nav>li>a {color: #05A9C5;}
+.navbar-header>.navbar-brand, .navbar-inverse .navbar-nav>li>a {color: #f47730;}
 
 #map { width: 100%; }
 

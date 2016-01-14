@@ -51,7 +51,8 @@ $(window).resize(function () {
             'style': {
                 'weight': 1,
                 'opacity': 1,
-                'fillOpacity': 0.2
+                'fillOpacity': 0.2,
+                'color': '#fbab18'
             },
             'onEachFeature': bindLayer,
         }
@@ -163,7 +164,7 @@ function makeBubbleChart(data){
             type: 'bubble',
             zoomType: 'xy',
             plotBackgroundColor: {
-                linearGradient: [0, 0, 0, 400],
+                linearGradient: [0, 0, 0, 450],
                 stops: [
                     [0, 'rgb(225, 242, 241)'], //green
                     [1, 'rgb(242, 231, 225)']  //red
