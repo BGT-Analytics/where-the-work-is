@@ -144,13 +144,12 @@ function initializeTable(column_names, data){
 function makeBubbleChart(data){
     var prepped_data = []
     $(data).each( function(i, row){
-        console.log("*")
-        console.log(row)
+
         thing = {
-                    x: parseFloat(row['demand_entry']), 
-                    y: parseFloat(row['advertised_avg_salary_entry_degree']), 
-                    z: parseFloat(row['fe_ds_ratio']), 
-                    name: row['occupation'], 
+                    x: parseFloat(row['advertised_avg_salary_entry_degree']), 
+                    y: parseFloat(row['fe_ds_ratio']), 
+                    z: parseFloat(row['demand_entry']), 
+                    name: row['occupation'].split(" ")[0], 
                     country: row['occupation']
                 }
         if (!isNaN(thing.x) && !isNaN(thing.y) && !isNaN(thing.z)) prepped_data.push(thing)
@@ -158,7 +157,7 @@ function makeBubbleChart(data){
 
     })
 
-    $('#scatterplot').highcharts({
+    $('#bubblechart').highcharts({
 
         chart: {
             type: 'bubble',
@@ -177,7 +176,7 @@ function makeBubbleChart(data){
         xAxis: {
             gridLineWidth: 1,
             title: {
-                text: 'Demand'
+                text: 'Average Salary'
             },
             labels: {
                 format: '{value}'
@@ -188,7 +187,7 @@ function makeBubbleChart(data){
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'Average Salary'
+                text: 'Ratio of Demand to Supply'
             },
             labels: {
                 format: '{value}'
@@ -200,9 +199,9 @@ function makeBubbleChart(data){
             useHTML: true,
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2"><strong>{point.country}</strong></th></tr>' +
-                '<tr><th>Demand (# jobs):</th><td>{point.x}</td></tr>' +
-                '<tr><th>Average Salary:</th><td>{point.y}</td></tr>' +
-                '<tr><th>Demand Ratio:</th><td>{point.z}</td></tr>',
+                '<tr><th>Average Salary:</th><td>{point.x}</td></tr>' +
+                '<tr><th>Demand Ratio:</th><td>{point.y}</td></tr>' +
+                '<tr><th>Demand (# jobs):</th><td>{point.z}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -210,7 +209,12 @@ function makeBubbleChart(data){
         plotOptions: {
             series: {
                 dataLabels: {
-                    enabled: false,
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        fontWeight: 'normal',
+                        fontSize: '8px'
+                    }
                 }
             }
         },
