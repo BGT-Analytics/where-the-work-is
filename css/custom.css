@@ -98,7 +98,7 @@ hr {
 
 table {
   background: #fff;
-  border: solid 1px #ddd;
+  font-size: 12px;
 }
 
 table tr th, table tr td {

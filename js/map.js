@@ -3,8 +3,8 @@ var map;
 var info;
 var regions_geojson;
 var job_types_by_region;
-var display_columns_all = ['region_or_nation','job_family','occupation', 'fe_ds_ratio', 'he_ds_ratio'];
-var display_columns_region = ['job_family','occupation', 'fe_ds_ratio', 'he_ds_ratio'];
+var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
+var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 
 // set size of map based on window height
 $(window).resize(function () {
@@ -136,6 +136,8 @@ function initializeTable(table_id, column_names, data){
         names.push({'title': name});
     })
     $(table_id).DataTable({
+        searching: false,
+        lengthMenu: [ [20, 100, -1], [20, 100, "All"] ],
         destroy: true,
         data: data,
         columns: names
