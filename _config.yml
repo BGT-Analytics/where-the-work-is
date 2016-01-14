@@ -7,4 +7,3 @@ timezone: America/Chicago
 description: ""
 gems:
   - jekyll-redirect-from
-baseurl: ""
