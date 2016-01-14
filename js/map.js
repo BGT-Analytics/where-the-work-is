@@ -220,14 +220,21 @@ function makeBubbleChart(data){
                     format: '{point.name}',
                     style: {
                         fontWeight: 'normal',
-                        fontSize: '8px'
+                        fontSize: '8px',
+                        color: '#333'
                     }
+                },
+                color: '#777',
+                marker: {
+                    fillColor: '#FFFFFF',
+                    lineWidth: 1,
+                    lineColor: '#777'
                 }
             }
         },
 
         series: [{
-            data: prepped_data
+            data: prepped_data,
         }]
 
     });
