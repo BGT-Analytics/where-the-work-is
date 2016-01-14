@@ -153,7 +153,7 @@ function makeBubbleChart(data){
 
         thing = {
                     x: parseFloat(row['advertised_avg_salary_entry_degree']), 
-                    y: parseFloat(row['fe_ds_ratio']), 
+                    y: parseFloat(row['fe_ds_ratio_log']), 
                     z: parseFloat(row['demand_entry']), 
                     name: row['occupation'].split(" ")[0], 
                     country: row['occupation']
@@ -200,31 +200,13 @@ function makeBubbleChart(data){
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'Ratio of Demand to Supply',
+                text: 'Opportunity',
                 x: -15
             },
             labels: {
                 enabled: false,
             },
-            maxPadding: 0.2,
-            plotLines: [{
-                color: '#777',
-                width: 1,
-                value: 1,
-                dashStyle: 'dot',
-                label: {
-                    text: '&#8592;oversupply &nbsp; undersupply&#8594;',
-                    useHTML: true,
-                    align: 'left',
-                    x: -3,
-                    y: 68,
-                    rotation: -90,
-                    style: {
-                        fontSize: '10px',
-                        color: "#777"
-                    }
-                }
-            }]
+            maxPadding: 0.2
         },
 
         tooltip: {
@@ -256,6 +238,27 @@ function makeBubbleChart(data){
                     lineColor: '#777'
                 }
             }
+        },
+
+        labels: {
+            items: [
+                {
+                    html: "↑ Less Competition",
+                    style: {
+                        color: '#333',
+                        left: '20px',
+                        top: '30px',
+                    }
+                },
+                {
+                    html: "↓ More Competition",
+                    style: {
+                        color: '#333',
+                        left: '20px',
+                        top: '290px',
+                    }
+                }
+            ]
         },
 
         series: [{
