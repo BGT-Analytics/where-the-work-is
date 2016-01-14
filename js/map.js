@@ -3,7 +3,8 @@ var map;
 var info;
 var regions_geojson;
 var job_types_by_region;
-var basic_columns = ['region_or_nation','job_family','occupation', 'fe_ds_ratio', 'he_ds_ratio'];
+var display_columns_all = ['region_or_nation','job_family','occupation', 'fe_ds_ratio', 'he_ds_ratio'];
+var display_columns_region = ['job_family','occupation', 'fe_ds_ratio', 'he_ds_ratio'];
 
 // set size of map based on window height
 $(window).resize(function () {
@@ -61,13 +62,11 @@ $(window).resize(function () {
             job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1", include_fe: "1", include_he: "1"});
 
 
-            var table_guts = sliceColumns(job_types_by_region, basic_columns);
+            var table_guts = sliceColumns(job_types_by_region, display_columns_all);
 
             // TO-DO: do something as default view on page load
-            // initializeTable(basic_columns, table_guts);
+            initializeTable('#job-data-all', display_columns_all, table_guts);
 
-            // TEMPORARY
-            updateRegion('GREATER LONDON')
         });
     })
     
@@ -92,7 +91,7 @@ function updateRegion(place_name){
 
     var place_data = _.where(job_types_by_region, {region_or_nation: place_name})
 
-    var table_guts = sliceColumns(place_data, basic_columns);
+    var table_guts = sliceColumns(place_data, display_columns_region);
 
     $("#default-content").hide()
     $("#detail-content").show()
@@ -100,6 +99,8 @@ function updateRegion(place_name){
 
     makeCharts(place_data);
     makeBubbleChart(place_data);
+    
+    initializeTable('#job-data-region', display_columns_region, table_guts);
 }
 
 
@@ -127,14 +128,14 @@ function makeCharts(data){
 }
 
 
-function initializeTable(column_names, data){
+function initializeTable(table_id, column_names, data){
     // column_names is an array of names to be used as the header row of the table
     // data is a 2D array of values for the table
     var names = [];
     $.each(column_names, function(i, name){
         names.push({'title': name});
     })
-    $('#job-data').DataTable({
+    $(table_id).DataTable({
         destroy: true,
         data: data,
         columns: names
