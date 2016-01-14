@@ -185,7 +185,7 @@ function makeBubbleChart(data){
                 text: 'Average Salary'
             },
             labels: {
-                format: '{value}'
+                format: '£{value}'
             },
         },
 
@@ -194,12 +194,31 @@ function makeBubbleChart(data){
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'Ratio of Demand to Supply'
+                text: 'Ratio of Demand to Supply',
+                x: -15
             },
             labels: {
-                format: '{value}'
+                enabled: false,
             },
             maxPadding: 0.2,
+            plotLines: [{
+                color: '#777',
+                width: 1,
+                value: 1,
+                dashStyle: 'dot',
+                label: {
+                    text: '&#8592;oversupply &nbsp; undersupply&#8594;',
+                    useHTML: true,
+                    align: 'left',
+                    x: -3,
+                    y: 68,
+                    rotation: -90,
+                    style: {
+                        fontSize: '10px',
+                        color: "#777"
+                    }
+                }
+            }]
         },
 
         tooltip: {
