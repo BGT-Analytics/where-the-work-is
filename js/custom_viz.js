@@ -19,21 +19,99 @@ function initializeTable(table_id, column_names, data){
 
 
 
+function makeScatterPlot(data){
+    var prepped_data = []
+    $(data).each(function(i, row){
+        point = {
+            x: row['advertised_avg_salary_entry_degree'],
+            y: row['demand_entry'],
+            name: row['occupation'].split(" ")[0],
+            full_name: row['occupation']
+        }
+        if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
+    })
+
+    $('#agg-scatter').highcharts({
+
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        title: {
+            //text: 'Demand & Salary by Occupation'
+            text: ''
+        },
+
+        xAxis: {
+            title: {
+                text: 'Average Salary'
+            },
+            labels: {
+                format: '£{value}'
+            }
+        },
+
+        yAxis: {
+            gridLineWidth: 0,
+            title: {
+                text: 'Total Demand (job openings)',
+            }
+        },
+
+        tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="2"><strong>{point.full_name}</strong></th></tr>' +
+                '<tr><th>Average Salary:</th><td>{point.x}</td></tr>' +
+                '<tr><th>Demand (# jobs):</th><td>{point.y}</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        fontWeight: 'normal',
+                        fontSize: '8px',
+                        color: '#333'
+                    }
+                },
+                color: '#777'
+            }
+        },
+
+        series: [{
+            data: prepped_data,
+        }]
+
+    });
+
+
+}
+
+
+
+
 
 function makeBubbleChart(data){
     var prepped_data = []
     $(data).each( function(i, row){
-
-        thing = {
+        bubble = {
                     x: parseFloat(row['advertised_avg_salary_entry_degree']), 
                     y: parseFloat(row['fe_ds_ratio_log']), 
                     z: parseFloat(row['demand_entry']), 
                     name: row['occupation'].split(" ")[0], 
-                    country: row['occupation']
+                    full_name: row['occupation']
                 }
-        if (!isNaN(thing.x) && !isNaN(thing.y) && !isNaN(thing.z)) prepped_data.push(thing)
-        console.log(thing)
-
+        if (!isNaN(bubble.x) && !isNaN(bubble.y) && !isNaN(bubble.z)) prepped_data.push(bubble)
     })
 
     $('#bubblechart').highcharts({
@@ -85,7 +163,7 @@ function makeBubbleChart(data){
         tooltip: {
             useHTML: true,
             headerFormat: '<table>',
-            pointFormat: '<tr><th colspan="2"><strong>{point.country}</strong></th></tr>' +
+            pointFormat: '<tr><th colspan="2"><strong>{point.full_name}</strong></th></tr>' +
                 '<tr><th>Average Salary:</th><td>{point.x}</td></tr>' +
                 '<tr><th>Demand Ratio:</th><td>{point.y}</td></tr>' +
                 '<tr><th>Demand (# jobs):</th><td>{point.z}</td></tr>',

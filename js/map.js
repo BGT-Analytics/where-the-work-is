@@ -64,8 +64,17 @@ $(window).resize(function () {
 
             var table_guts = sliceColumns(job_types_by_region, display_columns_all);
 
-            // TO-DO: do something as default view on page load
-            initializeTable('#job-data-all', display_columns_all, table_guts);
+            var agg_demand = _.chain(job_types_by_region)
+                .groupBy("occupation")
+                .map(function(value, key) {
+                    return {
+                        occupation: key,
+                        demand_entry: sum(_.pluck(value, "demand_entry")),
+                        advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"])
+                    }
+                })
+                .value();
+            makeScatterPlot(agg_demand);
 
         });
     })
@@ -121,5 +130,9 @@ function reduceColumns(data, grouper, column_index){
     })
 }
 
-
+function sum(numbers) {
+    return _.reduce(numbers, function(result, current) {
+        return result + parseFloat(current);
+    }, 0);
+}
 
