@@ -1,6 +1,6 @@
 include config.mk
 
-all: merged_regions.geojson
+all: merged_regions.geojson job_types_by_lep.csv
 
 .PHONY: clean
 clean: 
@@ -55,7 +55,11 @@ merged_regions.table: gb_regions.append
 		 )"
 
 job_types_by_region.csv:
-	in2csv --sheet "SOC3 x Region" BGT\ UK\ IPPR\ Data\ 2016-1-11.xlsx | \
+	in2csv --sheet "SOC3 x Region" BGT_UK_IPPR_Data.xlsx | \
+		python slugify_header.py > $@
+
+job_types_by_lep.csv:
+	in2csv --sheet "SOC3 x LEP" BGT_UK_IPPR_Data.xlsx | \
 		python slugify_header.py > $@
 
 job_types_by_region.table: job_types_by_region.csv

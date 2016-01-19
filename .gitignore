@@ -1,2 +1,7 @@
 .DS_Store
 _site
+
+*.dbf
+*.prj
+*.shp
+*.shx
