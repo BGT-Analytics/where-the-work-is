@@ -12,6 +12,34 @@ jekyll serve
 
 navigate to http://localhost:5000/
 
+## Updating data
+We use Make to prepare the data.
+
+**1. Initial setup**  
+a. ensure that `PG_USER` in `config.mk` is your username  
+b. create the database (you'll only have to do this once)  
+```
+createdb burning_glass
+```
+c. add postgis extension
+```
+psql burning_glass
+create extension postgis;
+```
+d. make sure you have the following OS dependencies (brew install these if missing): `gdal`, `postgis`  
+e. make sure you have the following python libraries: `csvkit`, `psycopg2`, `MySQL-python`
+
+**2. Add new data**  
+The main excel file should be named `BGT_UK_IPPR_Data.xlsx` & it should go in `data/`  
+
+**3. Prep the data**  
+to prep everything:
+```
+cd data/
+make clean
+make all
+```
+
 # Web dependencies
 We used the following open source tools:
 
