@@ -66,6 +66,18 @@ job_types_by_region.table: job_types_by_region.csv
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS job_types_by_region"
 	csvsql $< --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_region
 
+job_types_by_lep.table: job_types_by_lep.csv
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS job_types_by_lep"
+	csvsql $< --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_lep
+
+job_types_by_lep_merge.csv: job_types_by_lep.table merged_regions.update
+	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
+	"copy ( select l.*, r.job_region as region_or_nation \
+				from job_types_by_lep as l \
+				join merged_regions as r \
+				on st_contains(geom, st_setsrid(st_makepoint(l.lon, l.lat), 4326))\
+			) to stdout with csv header" > job_types_by_lep_merge.csv 
+
 merged_regions.alter: merged_regions.table
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"ALTER TABLE merged_regions ADD COLUMN job_region VARCHAR"
