@@ -1,0 +1,370 @@
+jobfamilycode,Job_Family,soc2,SOC2_Title,soc3,soc3description,SOC,SOC Title,Middle_Skill
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,111,Chief Executives and Senior Officials,1115,Chief executives and senior officials,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,111,Chief Executives and Senior Officials,1116,Elected officers and representatives,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,112,Production Managers and Directors,1121,Production managers and directors in manufacturing,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,112,Production Managers and Directors,1122,Production managers and directors in construction,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,112,Production Managers and Directors,1123,Production managers and directors in mining and energy,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1131,Financial managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1132,Marketing and sales directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1133,Purchasing managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1134,Advertising and public relations directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1135,Human resource managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1136,Information technology and telecommunications directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,113,Functional Managers and Directors,1139,Functional managers and directors n.e.c.,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,115,Financial Institution Managers and Directors,1150,Financial institution managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,116,Managers and Directors in Transport and Logistics,1161,Managers and directors in transport and distribution,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,116,Managers and Directors in Transport and Logistics,1162,Managers and directors in storage and warehousing,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,117,Senior Officers in Protective Services,1171,Officers in armed forces,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,117,Senior Officers in Protective Services,1172,Senior police officers,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,117,Senior Officers in Protective Services,1173,"Senior officers in fire, ambulance, prison and related services",0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,118,Health and Social Services Managers and Directors,1181,Health services and public health managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,118,Health and Social Services Managers and Directors,1184,Social services managers and directors,0
+1,"Managers, Directors And Senior Officials",11,Corporate Managers And Directors,119,Managers and Directors in Retail and Wholesale,1190,Managers and directors in retail and wholesale,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,121,Managers and Proprietors in Agriculture Related Services,1211,Managers and proprietors in agriculture and horticulture,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,121,Managers and Proprietors in Agriculture Related Services,1213,"Managers and proprietors in forestry, fishing and related services",0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,122,Managers and Proprietors in Hospitality and Leisure Services,1221,Hotel and accommodation managers and proprietors,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,122,Managers and Proprietors in Hospitality and Leisure Services,1223,Restaurant and catering establishment managers and proprietors,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,122,Managers and Proprietors in Hospitality and Leisure Services,1224,Publicans and managers of licensed premises,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,122,Managers and Proprietors in Hospitality and Leisure Services,1225,Leisure and sports managers,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,122,Managers and Proprietors in Hospitality and Leisure Services,1226,Travel agency managers and proprietors,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,124,Managers and Proprietors in Health and Care Services,1241,Health care practice managers,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,124,Managers and Proprietors in Health and Care Services,1242,"Residential, day and domiciliary care managers and proprietors",0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1251,"Property, housing and estate managers",0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1254,Shopkeepers and proprietors û wholesale and retail,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1259,Managers and proprietors in other services n.e.c.,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1252,Garage managers and proprietors,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1253,Hairdressing and beauty salon managers and proprietors,0
+1,"Managers, Directors And Senior Officials",12,Other Managers And Proprietors,125,Managers and Proprietors in Other Services,1255,Waste disposal and environmental services managers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",211,Natural and Social Science Professionals,2111,Chemical scientists,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",211,Natural and Social Science Professionals,2112,Biological scientists and biochemists,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",211,Natural and Social Science Professionals,2113,Physical scientists,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",211,Natural and Social Science Professionals,2114,Social and humanities scientists,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",211,Natural and Social Science Professionals,2119,Natural and social science professionals n.e.c.,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2121,Civil engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2122,Mechanical engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2123,Electrical engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2124,Electronics engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2126,Design and development engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2127,Production and process engineers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",212,Engineering Professionals,2129,Engineering professionals n.e.c.,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2133,IT specialist managers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2134,IT project and programme managers,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2135,"IT business analysts, architects and systems designers",0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2136,Programmers and software development professionals,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2137,Web design and development professionals,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",213,Information Technology and Telecommunications Professionals,2139,Information technology and telecommunications professionals n.e.c.,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",214,Conservation and Environment Professionals,2141,Conservation professionals,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",214,Conservation and Environment Professionals,2142,Environment professionals,0
+2,Professional Occupations,21,"Science, Research, Engineering And Technology Professionals",215,Research and Development Managers ,2150,Research and development managers,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2211,Medical practitioners,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2212,Psychologists,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2213,Pharmacists,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2214,Ophthalmic opticians,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2215,Dental practitioners,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2216,Veterinarians,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2217,Medical radiographers,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2218,Podiatrists,0
+2,Professional Occupations,22,Health Professionals,221,Health Professionals,2219,Health professionals n.e.c.,0
+2,Professional Occupations,22,Health Professionals,222,Therapy Professionals,2221,Physiotherapists,0
+2,Professional Occupations,22,Health Professionals,222,Therapy Professionals,2222,Occupational therapists,0
+2,Professional Occupations,22,Health Professionals,222,Therapy Professionals,2223,Speech and language therapists,0
+2,Professional Occupations,22,Health Professionals,222,Therapy Professionals,2229,Therapy professionals n.e.c.,0
+2,Professional Occupations,22,Health Professionals,223,Nursing and Midwifery Professionals,2231,Nurses,0
+2,Professional Occupations,22,Health Professionals,223,Nursing and Midwifery Professionals,2232,Midwives,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2312,Further education teaching professionals,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2314,Secondary education teaching professionals,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2315,Primary and nursery education teaching professionals,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2316,Special needs education teaching professionals,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2317,Senior professionals of educational establishments,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2318,Education advisers and school inspectors,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2311,Higher education teaching professionals,0
+2,Professional Occupations,23,Teaching And Educational Professionals,231,Teaching and Educational Professionals,2319,Teaching and other educational professionals n.e.c.,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",241,Legal Professionals,2412,Barristers and judges,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",241,Legal Professionals,2413,Solicitors,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",241,Legal Professionals,2419,Legal professionals n.e.c.,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2421,Chartered and certified accountants,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2423,Management consultants and business analysts,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2424,Business and financial project management professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2425,"Actuaries, economists and statisticians",0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2426,Business and related research professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",242,"Business, Research and Administrative Professionals",2429,"Business, research and administrative professionals n.e.c.",0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2431,Architects,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2434,Chartered surveyors,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2435,Chartered architectural technologists,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2436,Construction project managers and related professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2432,Town planning officers,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",243,"Architects, Town Planners and Surveyors",2433,Quantity surveyors,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",244,Welfare Professionals,2442,Social workers,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",244,Welfare Professionals,2443,Probation officers,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",244,Welfare Professionals,2444,Clergy,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",244,Welfare Professionals,2449,Welfare professionals n.e.c.,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",245,Librarians and Related Professionals,2451,Librarians,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",245,Librarians and Related Professionals,2452,Archivists and curators,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",246,Quality and Regulatory Professionals,2462,Quality assurance and regulatory professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",246,Quality and Regulatory Professionals,2463,Environmental health professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",246,Quality and Regulatory Professionals,2461,Quality control and planning engineers,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",247,Media Professionals,2471,"Journalists, newspaper and periodical editors",0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",247,Media Professionals,2472,Public relations professionals,0
+2,Professional Occupations,24,"Business, Media And Public Service Professionals",247,Media Professionals,2473,Advertising accounts managers and creative directors,0
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3111,Laboratory technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3112,Electrical and electronics technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3113,Engineering technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3114,Building and civil engineering technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3115,Quality assurance technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3116,"Planning, process and production technicians",1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",311,"Science, Engineering and Production Technicians",3119,"Science, engineering and production technicians n.e.c.",1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",312,Draughtspersons and Related Architectural Technicians,3122,Draughtspersons,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",312,Draughtspersons and Related Architectural Technicians,3121,Architectural and town planning technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",313,Information Technology Technicians,3131,IT operations technicians,1
+3,Associate Professional And Technical Occupations,31,"Science, Engineering And Technology Associate Professionals",313,Information Technology Technicians,3132,IT user support technicians,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,321,Health Associate Professionals,3213,Paramedics,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,321,Health Associate Professionals,3216,Dispensing opticians,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,321,Health Associate Professionals,3217,Pharmaceutical technicians,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,321,Health Associate Professionals,3218,Medical and dental technicians,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,321,Health Associate Professionals,3219,Health associate professionals n.e.c.,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,323,Welfare and Housing Associate Professionals,3235,Counsellors,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,323,Welfare and Housing Associate Professionals,3231,Youth and community workers,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,323,Welfare and Housing Associate Professionals,3233,Child and early years officers,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,323,Welfare and Housing Associate Professionals,3234,Housing officers,1
+3,Associate Professional And Technical Occupations,32,Health And Social Care Associate Professionals,323,Welfare and Housing Associate Professionals,3239,Welfare and housing associate professionals n.e.c.,1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3312,Police officers (sergeant and below),1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3313,Fire service officers (watch manager and below),1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3314,Prison service officers (below principal officer),1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3319,Protective service associate professionals n.e.c.,1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3311,NCOs and other ranks,1
+3,Associate Professional And Technical Occupations,33,Protective Service Occupations,331,Protective Service Occupations,3315,Police community support officers,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3411,Artists,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3412,"Authors, writers and translators",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3413,"Actors, entertainers and presenters",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3414,Dancers and choreographers,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3415,Musicians,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3416,"Arts officers, producers and directors",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",341,"Artistic, Literary and Media Occupations",3417,"Photographers, audio-visual and broadcasting equipment operators",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",342,Design Occupations,3421,Graphic designers,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",342,Design Occupations,3422,"Product, clothing and related designers",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",344,Sports and Fitness Occupations,3441,Sports players,1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",344,Sports and Fitness Occupations,3442,"Sports coaches, instructors and officials",1
+3,Associate Professional And Technical Occupations,34,"Culture, Media And Sports Occupations",344,Sports and Fitness Occupations,3443,Fitness instructors,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,351,Transport Associate Professionals,3511,Air traffic controllers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,351,Transport Associate Professionals,3512,Aircraft pilots and flight engineers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,351,Transport Associate Professionals,3513,Ship and hovercraft officers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,352,Legal Associate Professionals,3520,Legal associate professionals,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3531,"Estimators, valuers and assessors",1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3532,Brokers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3533,Insurance underwriters,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3534,Finance and investment analysts and advisers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3535,Taxation experts,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3538,Financial accounts managers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3539,Business and related associate professionals n.e.c.,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3536,Importers and exporters,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,353,"Business, Finance and Related Associate Professionals",3537,Financial and accounting technicians,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3541,Buyers and procurement officers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3542,Business sales executives,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3543,Marketing associate professionals,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3544,Estate agents and auctioneers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3546,Conference and exhibition managers and organisers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,354,"Sales, Marketing and Related Associate Professionals",3545,Sales accounts and business development managers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,355,Conservation and Environmental Associate Professionals,3550,Conservation and environmental associate professionals,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3562,Human resources and industrial relations officers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3563,Vocational and industrial trainers and instructors,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3565,Inspectors of standards and regulations,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3567,Health and safety officers,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3561,Public services associate professionals,1
+3,Associate Professional And Technical Occupations,35,Business And Public Service Associate Professionals,356,Public Services and Other Associate Professionals,3564,Careers advisers and vocational guidance specialists,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,411,Administrative Occupations: Government and Related Organisations,4112,National government administrative occupations,0
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,411,Administrative Occupations: Government and Related Organisations,4113,Local government administrative occupations,0
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,411,Administrative Occupations: Government and Related Organisations,4114,Officers of non-governmental organisations,0
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,412,Administrative Occupations: Finance,4122,"Book-keepers, payroll managers and wages clerks",1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,412,Administrative Occupations: Finance,4123,Bank and post office clerks,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,412,Administrative Occupations: Finance,4121,Credit controllers,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,412,Administrative Occupations: Finance,4124,Finance officers,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,412,Administrative Occupations: Finance,4129,Financial administrative occupations n.e.c.,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4131,Records clerks and assistants,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4132,Pensions and insurance clerks and assistants,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4133,Stock control clerks and assistants,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4134,Transport and distribution clerks and assistants,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4135,Library clerks and assistants,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,413,Administrative Occupations: Records,4138,Human resources administrative occupations,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,415,Other Administrative Occupations,4151,Sales administrators,0
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,415,Other Administrative Occupations,4159,Other administrative occupations n.e.c.,0
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,416,Administrative Occupations: Office Managers and Supervisors,4161,Office managers,1
+4,Administrative And Secretarial Occupations,41,Administrative Occupations,416,Administrative Occupations: Office Managers and Supervisors,4162,Office supervisors,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4211,Medical secretaries,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4212,Legal secretaries,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4214,Company secretaries,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4215,Personal assistants and other secretaries,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4216,Receptionists,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4217,Typists and related keyboard occupations,1
+4,Administrative And Secretarial Occupations,42,Secretarial And Related Occupations,421,Secretarial and Related Occupations,4213,School secretaries,1
+5,Skilled Trades Occupations,51,Skilled Agricultural And Related Trades,511,Agricultural and Related Trades,5111,Farmers,1
+5,Skilled Trades Occupations,51,Skilled Agricultural And Related Trades,511,Agricultural and Related Trades,5112,Horticultural trades,1
+5,Skilled Trades Occupations,51,Skilled Agricultural And Related Trades,511,Agricultural and Related Trades,5113,Gardeners and landscape gardeners,1
+5,Skilled Trades Occupations,51,Skilled Agricultural And Related Trades,511,Agricultural and Related Trades,5114,Groundsmen and greenkeepers,1
+5,Skilled Trades Occupations,51,Skilled Agricultural And Related Trades,511,Agricultural and Related Trades,5119,Agricultural and fishing trades n.e.c.,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5211,Smiths and forge workers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5212,"Moulders, core makers and die casters",1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5213,Sheet metal workers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5215,Welding trades,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5216,Pipe fitters,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",521,"Metal Forming, Welding and Related Trades",5214,"Metal plate workers, and riveters",1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",522,"Metal Machining, Fitting and Instrument Making Trades",5221,Metal machining setters and setter-operators,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",522,"Metal Machining, Fitting and Instrument Making Trades",5222,"Tool makers, tool fitters and markers-out",1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",522,"Metal Machining, Fitting and Instrument Making Trades",5223,Metal working production and maintenance fitters,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",522,"Metal Machining, Fitting and Instrument Making Trades",5225,Air-conditioning and refrigeration engineers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",522,"Metal Machining, Fitting and Instrument Making Trades",5224,Precision instrument makers and repairers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5231,"Vehicle technicians, mechanics and electricians",1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5232,Vehicle body builders and repairers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5234,Vehicle paint technicians,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5235,Aircraft maintenance and related trades,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5236,Boat and ship builders and repairers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",523,Vehicle Trades,5237,Rail and rolling stock builders and repairers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",524,Electrical and Electronic Trades,5241,Electricians and electrical fitters,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",524,Electrical and Electronic Trades,5242,Telecommunications engineers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",524,Electrical and Electronic Trades,5244,"TV, video and audio engineers",1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",524,Electrical and Electronic Trades,5245,IT engineers,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",524,Electrical and Electronic Trades,5249,Electrical and electronic trades n.e.c.,1
+5,Skilled Trades Occupations,52,"Skilled Metal, Electrical And Electronic Trades",525,"Skilled Metal, Electrical and Electronic Trades Supervisors",5250,"Skilled metal, electrical and electronic trades supervisors",1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5312,Bricklayers and masons,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5313,"Roofers, roof tilers and slaters",1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5314,Plumbers and heating and ventilating engineers,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5315,Carpenters and joiners,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5316,"Glaziers, window fabricators and fitters",1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5319,Construction and building trades n.e.c.,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,531,Construction and Building Trades,5311,Steel erectors,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,532,Building Finishing Trades,5321,Plasterers,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,532,Building Finishing Trades,5322,Floorers and wall tilers,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,532,Building Finishing Trades,5323,Painters and decorators,1
+5,Skilled Trades Occupations,53,Skilled Construction And Building Trades,533,Construction and Building Trades Supervisors,5330,Construction and building trades supervisors,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",541,Textiles and Garments Trades,5411,Weavers and knitters,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",541,Textiles and Garments Trades,5412,Upholsterers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",541,Textiles and Garments Trades,5413,Footwear and leather working trades,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",541,Textiles and Garments Trades,5414,Tailors and dressmakers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",541,Textiles and Garments Trades,5419,"Textiles, garments and related trades n.e.c.",1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",542,Printing Trades,5421,Pre-press technicians,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",542,Printing Trades,5422,Printers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",542,Printing Trades,5423,Print finishing and binding workers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5431,Butchers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5432,Bakers and flour confectioners,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5434,Chefs,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5435,Cooks,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5433,Fishmongers and poultry dressers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",543,Food Preparation and Hospitality Trades,5436,Catering and bar managers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",544,Other Skilled Trades,5441,"Glass and ceramics makers, decorators and finishers",1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",544,Other Skilled Trades,5442,Furniture makers and other craft woodworkers,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",544,Other Skilled Trades,5443,Florists,1
+5,Skilled Trades Occupations,54,"Textiles, Printing And Other Skilled Trades",544,Other Skilled Trades,5449,Other skilled trades n.e.c.,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,612,Childcare and Related Personal Services,6121,Nursery nurses and assistants,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,612,Childcare and Related Personal Services,6122,Childminders and related occupations,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,612,Childcare and Related Personal Services,6125,Teaching assistants,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,612,Childcare and Related Personal Services,6123,Playworkers,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,612,Childcare and Related Personal Services,6126,Educational support assistants,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,613,Animal Care and Control Services,6131,Veterinary nurses,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,613,Animal Care and Control Services,6132,Pest control officers,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,613,Animal Care and Control Services,6139,Animal care services occupations n.e.c.,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6141,Nursing auxiliaries and assistants,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6142,Ambulance staff (excluding paramedics),1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6143,Dental nurses,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6145,Care workers and home carers,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6146,Senior care workers,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6147,Care escorts,1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6148,"Undertakers, mortuary and crematorium assistants",1
+6,"Caring, Leisure And Other Service Occupations",61,Caring Personal Service Occupations,614,Caring Personal Services,6144,Houseparents and residential wardens,1
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",621,Leisure and Travel Services,6211,Sports and leisure assistants,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",621,Leisure and Travel Services,6212,Travel agents,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",621,Leisure and Travel Services,6214,Air travel assistants,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",621,Leisure and Travel Services,6215,Rail travel assistants,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",621,Leisure and Travel Services,6219,Leisure and travel service occupations n.e.c.,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",622,Hairdressers and Related Services,6221,Hairdressers and barbers,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",622,Hairdressers and Related Services,6222,Beauticians and related occupations,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",623,Housekeeping and Related Services,6231,Housekeepers and related occupations,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",623,Housekeeping and Related Services,6232,Caretakers,0
+6,"Caring, Leisure And Other Service Occupations",62,"Leisure, Travel And Related Personal Service Occupations",624,Cleaning and Housekeeping Managers and Supervisors,6240,Cleaning and housekeeping managers and supervisors,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,711,Sales Assistants and Retail Cashiers,7111,Sales and retail assistants,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,711,Sales Assistants and Retail Cashiers,7112,Retail cashiers and check-out operators,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,711,Sales Assistants and Retail Cashiers,7113,Telephone salespersons,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,711,Sales Assistants and Retail Cashiers,7114,Pharmacy and other dispensing assistants,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,711,Sales Assistants and Retail Cashiers,7115,Vehicle and parts salespersons and advisers,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7121,Collector salespersons and credit agents,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7122,"Debt, rent and other cash collectors",0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7123,Roundspersons and van salespersons,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7124,Market and street traders and assistants,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7125,Merchandisers and window dressers,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,712,Sales Related Occupations,7129,Sales related occupations n.e.c.,0
+7,Sales And Customer Service Occupations,71,Sales Occupations,713,Sales Supervisors,7130,Sales Supervisors,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,721,Customer Service Occupations,7211,Call and contact centre occupations,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,721,Customer Service Occupations,7213,Telephonists,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,721,Customer Service Occupations,7214,Communication operators,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,721,Customer Service Occupations,7215,Market research interviewers,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,721,Customer Service Occupations,7219,Customer service occupations n.e.c.,0
+7,Sales And Customer Service Occupations,72,Customer Service Occupations,722,Customer Service Managers and Supervisors,7220,Customer service managers and supervisors,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8111,"Food, drink and tobacco process operatives",0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8113,Textile process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8112,Glass and ceramics process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8114,Chemical and related process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8115,Rubber process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8116,Plastics process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8117,Metal making and treating process operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8118,Electroplaters,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",811,Process Operatives,8119,Process operatives n.e.c.,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8122,Coal mine operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8123,Quarry workers and related operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8125,Metal working machine operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8126,Water and sewerage plant operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8121,Paper and wood machine operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8124,Energy plant operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8127,Printing machine assistants,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",812,Plant and Machine Operatives,8129,Plant and machine operatives n.e.c.,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8131,Assemblers (electrical and electronic products),0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8132,Assemblers (vehicles and metal goods),0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8133,Routine inspectors and testers,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8134,"Weighers, graders and sorters",0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8135,"Tyre, exhaust and windscreen fitters",0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8137,Sewing machinists,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",813,Assemblers and Routine Operatives,8139,Assemblers and routine operatives n.e.c.,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",814,Construction Operatives,8141,"Scaffolders, stagers and riggers",0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",814,Construction Operatives,8142,Road construction operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",814,Construction Operatives,8143,Rail construction and maintenance operatives,0
+8,"Process, Plant And Machine Operatives",81,"Process, Plant And Machine Operatives",814,Construction Operatives,8149,Construction operatives n.e.c.,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,821,Road Transport Drivers,8211,Large goods vehicle drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,821,Road Transport Drivers,8212,Van drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,821,Road Transport Drivers,8213,Bus and coach drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,821,Road Transport Drivers,8214,Taxi and cab drivers and chauffeurs,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,821,Road Transport Drivers,8215,Driving instructors,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,822,Mobile Machine Drivers and Operatives,8221,Crane drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,822,Mobile Machine Drivers and Operatives,8222,Fork-lift truck drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,822,Mobile Machine Drivers and Operatives,8223,Agricultural machinery drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,822,Mobile Machine Drivers and Operatives,8229,Mobile machine drivers and operatives n.e.c.,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,823,Other Drivers and Transport Operatives,8231,Train and tram drivers,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,823,Other Drivers and Transport Operatives,8232,Marine and waterways transport operatives,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,823,Other Drivers and Transport Operatives,8233,Air transport operatives,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,823,Other Drivers and Transport Operatives,8234,Rail transport operatives,0
+8,"Process, Plant And Machine Operatives",82,Transport And Mobile Machine Drivers And Operatives,823,Other Drivers and Transport Operatives,8239,Other drivers and transport operatives n.e.c.,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,911,Elementary Agricultural Occupations,9111,Farm workers,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,911,Elementary Agricultural Occupations,9112,Forestry workers,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,911,Elementary Agricultural Occupations,9119,Fishing and other elementary agriculture occupations n.e.c.,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,912,Elementary Construction Occupations,9120,Elementary construction occupations,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,913,Elementary Process Plant Occupations,9132,Industrial cleaning process occupations,0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,913,Elementary Process Plant Occupations,9134,"Packers, bottlers, canners and fillers",0
+9,Elementary Occupations,91,Elementary Trades And Related Occupations,913,Elementary Process Plant Occupations,9139,Elementary process plant occupations n.e.c.,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,921,Elementary Administration Occupations,9211,"Postal workers, mail sorters, messengers and couriers",0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,921,Elementary Administration Occupations,9219,Elementary administration occupations n.e.c.,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9231,Window cleaners,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9232,Street cleaners,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9233,Cleaners and domestics,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9234,"Launderers, dry cleaners and pressers",0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9235,Refuse and salvage occupations,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9236,Vehicle valeters and cleaners,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,923,Elementary Cleaning Occupations,9239,Elementary cleaning occupations n.e.c.,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,924,Elementary Security Occupations,9241,Security guards and related occupations,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,924,Elementary Security Occupations,9242,Parking and civil enforcement occupations,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,924,Elementary Security Occupations,9244,School midday and crossing patrol occupations,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,924,Elementary Security Occupations,9249,Elementary security occupations n.e.c.,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,925,Elementary Sales Occupations,9251,Shelf fillers,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,925,Elementary Sales Occupations,9259,Elementary sales occupations n.e.c.,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,926,Elementary Storage Occupations,9260,Elementary storage occupations,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9271,Hospital porters,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9272,Kitchen and catering assistants,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9273,Waiters and waitresses,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9274,Bar staff,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9275,Leisure and theme park attendants,0
+9,Elementary Occupations,92,Elementary Administration And Service Occupations,927,Other Elementary Services Occupations,9279,Other elementary services occupations n.e.c.,0
