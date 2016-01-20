@@ -31,7 +31,7 @@ var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand
 
     info.update = function(properties){
         if(properties){
-            var content = '<p>' + properties['JOB_REGION'] + '</p>';
+            var content = '<p>' + properties['NAME'] + '</p>';
             this._div.innerHTML = content;
         }
     }
@@ -97,11 +97,11 @@ function bindLayer(feature, layer){
             }
         })
         layer.on('click', function(e){
-            updateRegion(feature.properties['JOB_REGION'])
+            updateRegion(feature.properties['JOB_REGION'], feature.properties['NAME'])
             e.target.feature.properties['selected'] = true
             e.target.setStyle({'fillOpacity': 0.8, 'color': '#fbab18'});
             regions_geojson.eachLayer(function(layer){
-                if(layer.feature.properties['JOB_REGION'] != e.target.feature.properties['JOB_REGION']){
+                if(layer.feature.properties['NAME'] != e.target.feature.properties['NAME']){
                     layer.feature.properties['selected'] = false
                     layer.setStyle({'fillOpacity': 0.2, 'color': '#fbab18'});
                 }
@@ -112,19 +112,19 @@ function bindLayer(feature, layer){
 
 
 
-function updateRegion(place_name){
+function updateRegion(place_name_lookup, place_name_friendly){
 
-    var place_data = _.where(job_types_by_region, {region_or_nation: place_name})
+    var place_data = _.where(job_types_by_region, {region_or_nation: place_name_lookup})
 
     var table_guts = sliceColumns(place_data, display_columns_region);
 
     // these are the leps within the selected region
-    var lep_data = _.where(job_types_by_lep, {region_or_nation: place_name})
+    var lep_data = _.where(job_types_by_lep, {region_or_nation: place_name_lookup})
     console.log(lep_data)
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").html('<a>The United Kingdom</a> &raquo; <strong>' + place_name + '</strong>');
+    $("#content-heading").html('<a>The United Kingdom</a> &raquo; <strong>' + place_name_friendly + '</strong>');
 
     makeBubbleChart(place_data);
     
