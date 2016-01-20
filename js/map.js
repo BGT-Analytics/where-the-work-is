@@ -86,15 +86,30 @@ function bindLayer(feature, layer){
     if(typeof feature.properties !== 'undefined'){
         layer.on('mouseover', function(e){
             info.update(e.target.feature.properties);
+            if(!e.target.feature.properties['selected']){
+                e.target.setStyle({'fillOpacity': 0.5, 'color': '#fbab18'});
+            }
         });
         layer.on('mouseout', function(e){
             info.clear();
+            if(!e.target.feature.properties['selected']){
+                e.target.setStyle({'fillOpacity': 0.2, 'color': '#fbab18'});
+            }
         })
         layer.on('click', function(e){
             updateRegion(feature.properties['JOB_REGION'])
+            e.target.feature.properties['selected'] = true
+            e.target.setStyle({'fillOpacity': 0.8, 'color': '#fbab18'});
+            regions_geojson.eachLayer(function(layer){
+                if(layer.feature.properties['JOB_REGION'] != e.target.feature.properties['JOB_REGION']){
+                    layer.feature.properties['selected'] = false
+                    layer.setStyle({'fillOpacity': 0.2, 'color': '#fbab18'});
+                }
+            })
         });
 }
 }
+
 
 
 function updateRegion(place_name){
