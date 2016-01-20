@@ -3,15 +3,10 @@ var map;
 var info;
 var regions_geojson;
 var job_types_by_region;
+var job_types_by_lep;
 var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 
-// set size of map based on window height
-$(window).resize(function () {
-  var h = $(window).height(),
-  offsetTop = 150; // Calculate the top offset
-  $('#map').css('height', (h - offsetTop));
-}).resize();
 
 // do stuff when the page loads
 (function(){
@@ -21,11 +16,11 @@ $(window).resize(function () {
     map = L.map('map', {
         scrollWheelZoom: false,
         center: [55, -3.5], 
-        zoom: 5
+        zoom: 4,
+        attributionControl: false,
+        zoomControl:false
     });
 
-    var layer = new L.StamenTileLayer("toner-lite");
-    map.addLayer(layer);
 
     info = L.control({position: 'topright'});
     info.onAdd = function(map){
@@ -36,7 +31,7 @@ $(window).resize(function () {
 
     info.update = function(properties){
         if(properties){
-            var content = '<h4>' + properties['JOB_REGION'] + '</h4>';
+            var content = '<p>' + properties['JOB_REGION'] + '</p>';
             this._div.innerHTML = content;
         }
     }
@@ -77,7 +72,13 @@ $(window).resize(function () {
             makeScatterPlot(agg_demand);
 
         });
+
+        
     })
+
+    $.when($.get('data/job_types_by_lep_merge.csv')).then(function(csv){
+        job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1", include_fe: "1", include_he: "1"});
+    });
     
 })()
 
@@ -102,6 +103,10 @@ function updateRegion(place_name){
 
     var table_guts = sliceColumns(place_data, display_columns_region);
 
+    // these are the leps within the selected region
+    var lep_data = _.where(job_types_by_lep, {region_or_nation: place_name})
+    console.log(lep_data)
+
     $("#default-content").hide()
     $("#detail-content").show()
     $("#content-heading").text(place_name);
@@ -109,6 +114,7 @@ function updateRegion(place_name){
     makeBubbleChart(place_data);
     
     initializeTable('#job-data-region', display_columns_region, table_guts);
+
 }
 
 
@@ -121,7 +127,7 @@ function sliceColumns(data, columns){
         return sliced_row
     });
 }
-
+ 
 function reduceColumns(data, grouper, column_index){
     // data is a 2D array of values
     // grouper is an index of the array to group by
