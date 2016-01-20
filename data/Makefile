@@ -1,10 +1,12 @@
 include config.mk
 
-all: merged_regions.geojson job_types_by_lep.csv
+all: merged_regions.geojson job_types_by_lep_merge.csv
 
 .PHONY: clean
 clean: 
 	rm merged_regions.geojson
+	rm job_types_by_lep.csv
+	rm job_types_by_lep_merge.csv
 
 define convert_srs
 	ogr2ogr -t_srs EPSG:4326 $@ $<
