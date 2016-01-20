@@ -87,7 +87,7 @@ function bindLayer(feature, layer){
         layer.on('mouseover', function(e){
             info.update(e.target.feature.properties);
             if(!e.target.feature.properties['selected']){
-                e.target.setStyle({'fillOpacity': 0.5, 'color': '#fbab18'});
+                e.target.setStyle({'fillOpacity': 0.4, 'color': '#fbab18'});
             }
         });
         layer.on('mouseout', function(e){
@@ -124,7 +124,7 @@ function updateRegion(place_name){
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").text(place_name);
+    $("#content-heading").html('<a>The United Kingdom</a> &raquo; <strong>' + place_name + '</strong>');
 
     makeBubbleChart(place_data);
     
