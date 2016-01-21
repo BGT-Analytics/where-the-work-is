@@ -43,7 +43,12 @@ var region_lep_mapping
             .value();
 
         if($.address.parameter("region")){
-            updateRegion(decodeURIComponent($.address.parameter("region")))
+            if($.address.parameter("lep")){
+                updateLep(decodeURIComponent($.address.parameter("region")), decodeURIComponent($.address.parameter("lep")))
+            }
+            else{
+                updateRegion(decodeURIComponent($.address.parameter("region")))
+            }
         }
         else{
             makeScatterPlot(agg_demand);
@@ -68,9 +73,9 @@ var region_lep_mapping
         // populating select menu w/ regions & leps
         $.each(region_lep_mapping, function(index, value){
             var r = value['region_or_nation']
-            $('#list-select').append('<p class="option-region"><a href="/?region='+r+'">'+toTitleCase(r)+'</a></p>')
+            $('#list-select').append('<p class="option-region"><a href="/#?region='+r+'">'+toTitleCase(r)+'</a></p>')
             $.each(value['leps_within'] , function(index, value){
-                $('#list-select').append('<p class="small option-lep">'+value+'</p>')
+                $('#list-select').append('<p class="small option-lep"><a href="/#?region='+r+'&lep='+value+'">'+value+'</a></p>')
             });
         });
 
@@ -79,6 +84,12 @@ var region_lep_mapping
 })()
 
 
+
+
+function updateLep(region_name, lep_name){
+
+    var place_data = _.where(job_types_by_lep, {region_or_nation: place_name})
+}
 
 
 function updateRegion(place_name){
