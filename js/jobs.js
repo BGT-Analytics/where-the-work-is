@@ -6,7 +6,7 @@ var job_types_by_region;
 var job_types_by_lep;
 var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
-
+var region_lep_mapping
 
 // do stuff when the page loads
 (function(){
@@ -57,6 +57,23 @@ var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand
 
     $.when($.get('data/job_types_by_lep_merge.csv')).then(function(csv){
         job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1", include_fe: "1", include_he: "1"});
+
+        region_lep_mapping = _.chain(job_types_by_lep).groupBy("region_or_nation").map(function(value, key) {
+            return {
+                region_or_nation: key,
+                leps_within: _.uniq(_.pluck(value, "lep"))
+            }
+        }).value()
+
+        // populating select menu w/ regions & leps
+        $.each(region_lep_mapping, function(index, value){
+            var r = value['region_or_nation']
+            $('#list-select').append('<p class="option-region"><a href="/?region='+r+'">'+toTitleCase(r)+'</a></p>')
+            $.each(value['leps_within'] , function(index, value){
+                $('#list-select').append('<p class="small option-lep">'+value+'</p>')
+            });
+        });
+
     });
     
 })()
@@ -82,9 +99,6 @@ function updateRegion(place_name){
 
     var table_guts = sliceColumns(place_data, display_columns_region);
 
-    // these are the leps within the selected region
-    var lep_data = _.where(job_types_by_lep, {region_or_nation: place_name})
-    console.log(lep_data)
 
     $("#default-content").hide()
     $("#detail-content").show()
