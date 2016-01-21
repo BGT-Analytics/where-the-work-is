@@ -88,7 +88,16 @@ var region_lep_mapping
 
 function updateLep(region_name, lep_name){
 
-    var place_data = _.where(job_types_by_lep, {region_or_nation: place_name})
+    var lep_data = _.where(job_types_by_lep, {lep: lep_name})
+
+    // TO DO: add lep point to selector map & clear any region highlighting
+    // (will also need to clear all lep points in updateRegion)
+
+    $("#default-content").hide()
+    $("#detail-content").show()
+    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <a href="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+
+    makeBubbleChart(lep_data);
 }
 
 
@@ -108,7 +117,7 @@ function updateRegion(place_name){
 
     var place_data = _.where(job_types_by_region, {region_or_nation: place_name})
 
-    var table_guts = sliceColumns(place_data, display_columns_region);
+    // var table_guts = sliceColumns(place_data, display_columns_region);
 
 
     $("#default-content").hide()
@@ -117,7 +126,7 @@ function updateRegion(place_name){
 
     makeBubbleChart(place_data);
     
-    initializeTable('#job-data-region', display_columns_region, table_guts);
+    // initializeTable('#job-data-region', display_columns_region, table_guts);
 
 }
 
