@@ -26,7 +26,7 @@ var region_lep_mapping
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
         regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
-        job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1", include_fe: "1", include_he: "1"});
+        job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
 
         var table_guts = sliceColumns(job_types_by_region, display_columns_all);
@@ -44,10 +44,10 @@ var region_lep_mapping
 
         if($.address.parameter("region")){
             if($.address.parameter("lep")){
-                updateLep(decodeURIComponent($.address.parameter("region")), decodeURIComponent($.address.parameter("lep")))
+                updateLep(decodeURIComponent($.address.parameter("region")), decodeURIComponent($.address.parameter("lep")), $.address.parameter("education"))
             }
             else{
-                updateRegion(decodeURIComponent($.address.parameter("region")))
+                updateRegion(decodeURIComponent($.address.parameter("region")), $.address.parameter("education"))
             }
         }
         else{
@@ -61,7 +61,7 @@ var region_lep_mapping
 
 
     $.when($.get('data/job_types_by_lep_merge.csv')).then(function(csv){
-        job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1", include_fe: "1", include_he: "1"});
+        job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1"});
 
         region_lep_mapping = _.chain(job_types_by_lep).groupBy("region_or_nation").map(function(value, key) {
             return {
@@ -77,13 +77,13 @@ var region_lep_mapping
             $.each(value['leps_within'] , function(index, value){
                 $('#list-select').append('<p class="small"><a class="option-lep" href="/#?region='+r+'&lep='+value+'">'+value+'</a></p>')
                 $('.option-lep').last().click(function() {
-                    updateLep(r, value)
+                    updateLep(r, value, 'fe')
                     return false;
                 });
             });
 
             $('.option-region').last().click(function() {
-                updateRegion(r)
+                updateRegion(r, 'fe')
                 return false;
             });
         });
@@ -96,12 +96,18 @@ var region_lep_mapping
 
 
 
-function updateLep(region_name, lep_name){
+function updateLep(region_name, lep_name, education){
 
     $.address.parameter('region', region_name);
     $.address.parameter('lep', lep_name);
+    $.address.parameter('education', education);
 
-    var lep_data = _.where(job_types_by_lep, {lep: lep_name})
+    if (education=='he'){
+        var lep_data = _.where(job_types_by_lep, {lep: lep_name, include_he: "1"})
+    }
+    else{
+        var lep_data = _.where(job_types_by_lep, {lep: lep_name, include_fe: "1"})
+    }
 
     // TO DO: add lep point to selector map & clear any region highlighting
     // (will also need to clear all lep points in updateRegion)
@@ -110,7 +116,7 @@ function updateLep(region_name, lep_name){
     $("#detail-content").show()
     $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
     $('.option-region').last().click(function() {
-        updateRegion(region_name)
+        updateRegion(region_name, 'fe')
         return false;
     });
 
@@ -119,9 +125,10 @@ function updateLep(region_name, lep_name){
 }
 
 
-function updateRegion(place_name){
+function updateRegion(place_name, education){
 
     $.address.parameter('region', place_name);
+    $.address.parameter('education', education);
 
     regions_geojson.eachLayer(function(layer){
         if(layer.feature.properties['JOB_REGION'] != place_name){
@@ -134,9 +141,12 @@ function updateRegion(place_name){
         }
     })
 
-
-    var place_data = _.where(job_types_by_region, {region_or_nation: place_name})
-
+    if (education=='he'){
+        var place_data = _.where(job_types_by_region, {region_or_nation: place_name, include_he: "1"})
+    }
+    else{
+        var place_data = _.where(job_types_by_region, {region_or_nation: place_name, include_fe: "1"})
+    }
     // var table_guts = sliceColumns(place_data, display_columns_region);
 
 
