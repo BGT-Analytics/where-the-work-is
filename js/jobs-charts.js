@@ -31,7 +31,7 @@ function makeDemandScatterPlot(element_id, data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Total Demand (job openings)', 'Demand (# jobs)')
+    scatterHelper(element_id, prepped_data, 'Job Openings', 'Demand (# jobs)')
 }
 
 function makeCompScatterPlot(element_id, data){
@@ -46,7 +46,7 @@ function makeCompScatterPlot(element_id, data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Opportunity (demand ratio)', 'demand ratio')
+    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity')
 }
 
 
@@ -57,6 +57,10 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
         chart: {
             type: 'scatter',
             zoomType: 'xy'
+        },
+
+        credits: {
+            enabled: false
         },
 
         legend: {
@@ -101,7 +105,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
                     style: {
                         fontWeight: 'normal',
                         fontSize: '8px',
-                        color: '#333'
+                        color: '#777'
                     }
                 },
                 color: '#777'
