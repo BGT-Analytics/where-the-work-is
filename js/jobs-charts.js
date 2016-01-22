@@ -19,7 +19,7 @@ function initializeTable(table_id, column_names, data){
 
 
 
-function makeScatterPlot(data){
+function makeDemandScatterPlot(element_id, data){
     var prepped_data = []
     $(data).each(function(i, row){
         point = {
@@ -31,6 +31,27 @@ function makeScatterPlot(data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
+    scatterHelper(element_id, prepped_data, 'Total Demand (job openings)', 'Demand (# jobs)')
+}
+
+function makeCompScatterPlot(element_id, data){
+    var prepped_data = []
+    $(data).each(function(i, row){
+        point = {
+            x: row['advertised_avg_salary_entry_degree'],
+            y: row['fe_ds_ratio_log'],
+            name: row['occupation'].split(" ")[0],
+            full_name: row['occupation']
+        }
+        if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
+    })
+
+    scatterHelper(element_id, prepped_data, 'Total Demand (job openings)', 'Demand (# jobs)')
+}
+
+
+
+function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
     $('#agg-scatter').highcharts({
 
         chart: {
@@ -43,7 +64,6 @@ function makeScatterPlot(data){
         },
 
         title: {
-            //text: 'Demand & Salary by Occupation'
             text: ''
         },
 
@@ -59,7 +79,7 @@ function makeScatterPlot(data){
         yAxis: {
             gridLineWidth: 0,
             title: {
-                text: 'Total Demand (job openings)',
+                text: y_label_full,
             }
         },
 
@@ -68,7 +88,7 @@ function makeScatterPlot(data){
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2"><strong>{point.full_name}</strong></th></tr>' +
                 '<tr><th>Average Salary:</th><td>{point.x}</td></tr>' +
-                '<tr><th>Demand (# jobs):</th><td>{point.y}</td></tr>',
+                '<tr><th>'+y_label_short+':</th><td>{point.y}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -93,8 +113,6 @@ function makeScatterPlot(data){
         }]
 
     });
-
-
 }
 
 

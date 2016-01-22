@@ -51,7 +51,7 @@ var region_lep_mapping
             }
         }
         else{
-            makeScatterPlot(agg_demand);
+            makeDemandScatterPlot('#agg-scatter', agg_demand);
         }
 
     });
