@@ -186,6 +186,15 @@ function makeBubbleChart(data){
                     fillColor: '#FFFFFF',
                     lineWidth: 1,
                     lineColor: '#777'
+                },
+                allowPointSelect: true,
+                point: {
+                    events: {
+                        select: function () {
+                            var div = document.getElementById('occupation-detail');
+                            div.innerHTML = this.full_name+"<br/><br/>[location quotient chloropleth map here]";
+                        }
+                    }
                 }
             }
         },
