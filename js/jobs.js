@@ -73,13 +73,23 @@ var region_lep_mapping
         // populating select menu w/ regions & leps
         $.each(region_lep_mapping, function(index, value){
             var r = value['region_or_nation']
-            $('#list-select').append('<p class="option-region"><a href="/#?region='+r+'">'+toTitleCase(r)+'</a></p>')
+            $('#list-select').append('<p><a class="option-region" href="/#?region='+r+'">'+toTitleCase(r)+'</a></p>')
             $.each(value['leps_within'] , function(index, value){
-                $('#list-select').append('<p class="small option-lep"><a href="/#?region='+r+'&lep='+value+'">'+value+'</a></p>')
+                $('#list-select').append('<p class="small"><a class="option-lep" href="/#?region='+r+'&lep='+value+'">'+value+'</a></p>')
+                $('.option-lep').last().click(function() {
+                    updateLep(r, value)
+                    return false;
+                });
+            });
+
+            $('.option-region').last().click(function() {
+                updateRegion(r)
+                return false;
             });
         });
 
     });
+
     
 })()
 
@@ -88,6 +98,9 @@ var region_lep_mapping
 
 function updateLep(region_name, lep_name){
 
+    $.address.parameter('region', region_name);
+    $.address.parameter('lep', lep_name);
+
     var lep_data = _.where(job_types_by_lep, {lep: lep_name})
 
     // TO DO: add lep point to selector map & clear any region highlighting
@@ -95,13 +108,20 @@ function updateLep(region_name, lep_name){
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <a href="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+    $('.option-region').last().click(function() {
+        updateRegion(region_name)
+        return false;
+    });
+
 
     makeBubbleChart(lep_data);
 }
 
 
 function updateRegion(place_name){
+
+    $.address.parameter('region', place_name);
 
     regions_geojson.eachLayer(function(layer){
         if(layer.feature.properties['JOB_REGION'] != place_name){

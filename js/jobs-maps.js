@@ -50,7 +50,6 @@ function bindLayer(feature, layer){
             }
         })
         layer.on('click', function(e){
-            $.address.parameter('region', encodeURIComponent(feature.properties['JOB_REGION']));
             updateRegion(feature.properties['JOB_REGION'])
         });
     }
