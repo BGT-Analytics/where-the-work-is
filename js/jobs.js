@@ -143,18 +143,18 @@ function updateRegion(region_name, education){
 
     if (education=='he'){
         var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
-        $("#bubblechart-title").html("Higher Education Occupations")
-        $("#bubblechart-change-edu").text("View Community College")
-        $('#bubblechart-change-edu').click(function() {
+        $("#detail-scatter-title").html("Higher Education Occupations")
+        $("#detail-scatter-change-edu").text("View Community College")
+        $('#detail-scatter-change-edu').click(function() {
             updateRegion(region_name, 'fe')
             return false;
         });
     }
     else{
         var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
-        $("#bubblechart-title").html("Community College Occupations")
-        $("#bubblechart-change-edu").text("View Higher Education")
-        $('#bubblechart-change-edu').click(function() {
+        $("#detail-scatter-title").html("Community College Occupations")
+        $("#detail-scatter-change-edu").text("View Higher Education")
+        $('#detail-scatter-change-edu').click(function() {
             updateRegion(region_name, 'he')
             return false;
         });
@@ -166,8 +166,10 @@ function updateRegion(region_name, education){
     $("#detail-content").show()
     $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
-    makeBubbleChart(place_data);
+    //makeBubbleChart(place_data);
     
+    makeDemandScatterPlot('#region-scatter-demand', place_data)
+    makeCompScatterPlot('#region-scatter-comp', place_data)
     // initializeTable('#job-data-region', display_columns_region, table_guts);
 
 }

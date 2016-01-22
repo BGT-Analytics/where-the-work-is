@@ -23,8 +23,8 @@ function makeDemandScatterPlot(element_id, data){
     var prepped_data = []
     $(data).each(function(i, row){
         point = {
-            x: row['advertised_avg_salary_entry_degree'],
-            y: row['demand_entry'],
+            x: parseFloat(row['advertised_avg_salary_entry_degree']),
+            y: parseFloat(row['demand_entry']),
             name: row['occupation'].split(" ")[0],
             full_name: row['occupation']
         }
@@ -38,21 +38,21 @@ function makeCompScatterPlot(element_id, data){
     var prepped_data = []
     $(data).each(function(i, row){
         point = {
-            x: row['advertised_avg_salary_entry_degree'],
-            y: row['fe_ds_ratio_log'],
+            x: parseFloat(row['advertised_avg_salary_entry_degree']),
+            y: parseFloat(row['fe_ds_ratio_log']),
             name: row['occupation'].split(" ")[0],
             full_name: row['occupation']
         }
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Total Demand (job openings)', 'Demand (# jobs)')
+    scatterHelper(element_id, prepped_data, 'Opportunity (demand ratio)', 'demand ratio')
 }
 
 
 
 function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
-    $('#agg-scatter').highcharts({
+    $(element_id).highcharts({
 
         chart: {
             type: 'scatter',
