@@ -167,7 +167,8 @@ function updateRegion(region_name, education){
     $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
     //makeBubbleChart(place_data);
-    
+
+    makeDemandBarChart('#region-bar-demand', place_data)
     makeDemandScatterPlot('#region-scatter-demand', place_data)
     makeCompScatterPlot('#region-scatter-comp', place_data)
     // initializeTable('#job-data-region', display_columns_region, table_guts);

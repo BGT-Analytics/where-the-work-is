@@ -18,6 +18,27 @@ function initializeTable(table_id, column_names, data){
 }
 
 
+function makeDemandBarChart(element_id, data){
+    var sorted_data = _.sortBy(data, parseInt('demand_entry'))
+    var prepped_data = [
+        {
+            name: 'Further Education',
+            data: _.map(_.pluck(sorted_data, "demand_entry_fe"), Number)
+        }, {
+            name: 'Higher Education',
+            data: _.map(_.pluck(sorted_data, "demand_entry_he"), Number)
+        }
+        , {
+            name: 'High School',
+            data: _.map(_.pluck(sorted_data, "demand_entry_hs"), Number)
+        }
+    ]
+
+    occupations = _.pluck(data, "occupation")
+
+    barHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)')
+}
+
 
 function makeDemandScatterPlot(element_id, data){
     var prepped_data = []
@@ -148,6 +169,50 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
 
     });
 }
+
+
+
+function barHelper(element_id, prepped_data, categories, y_label_full, y_label_short){
+    $(element_id).highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: categories
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: y_label_short
+            }
+        },
+        legend: {
+            align: 'right',
+            x: -30,
+            verticalAlign: 'top',
+            y: 10,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            borderColor: '#CCC',
+            borderWidth: 1,
+            shadow: false
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+        series: prepped_data
+    });
+}
+
 
 
 
