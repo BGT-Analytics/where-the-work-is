@@ -31,7 +31,7 @@ function makeDemandScatterPlot(element_id, data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Job Openings', 'Demand (# jobs)')
+    scatterHelper(element_id, prepped_data, 'Demand', 'Demand (# jobs)', ['More Jobs', 'Fewer Jobs'])
 }
 
 function makeCompScatterPlot(element_id, data){
@@ -46,17 +46,26 @@ function makeCompScatterPlot(element_id, data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity')
+    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', ['Less Competition', 'More Competition'])
 }
 
 
 
-function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
+function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, chart_labels){
+    var chart_height = $(element_id).height()
+
     $(element_id).highcharts({
 
         chart: {
             type: 'scatter',
-            zoomType: 'xy'
+            zoomType: 'xy',
+            plotBackgroundColor: {
+                linearGradient: [0, 0, 0, chart_height],
+                stops: [
+                    [0, 'rgb(225, 242, 241)'], //green
+                    [1, 'rgb(242, 231, 225)']  //red
+                ]
+            }
         },
 
         credits: {
@@ -95,6 +104,27 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short){
                 '<tr><th>'+y_label_short+':</th><td>{point.y}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
+        },
+
+        labels: {
+            items: [
+                {
+                    html: "↑ "+chart_labels[0],
+                    style: {
+                        color: '#006167',
+                        left: '10px',
+                        top: '10px',
+                    }
+                },
+                {
+                    html: "↓ "+chart_labels[1],
+                    style: {
+                        color: '#f47730',
+                        left: '10px',
+                        top: chart_height - 90
+                    }
+                }
+            ]
         },
 
         plotOptions: {
