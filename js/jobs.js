@@ -102,11 +102,12 @@ function updateLep(region_name, lep_name, education){
     $.address.parameter('lep', lep_name);
     $.address.parameter('education', education);
 
+    var lep_data = _.where(job_types_by_lep, {lep: lep_name})
     if (education=='he'){
-        var lep_data = _.where(job_types_by_lep, {lep: lep_name, include_he: "1"})
+        var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_he: "1"})
     }
     else{
-        var lep_data = _.where(job_types_by_lep, {lep: lep_name, include_fe: "1"})
+        var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_fe: "1"})
     }
 
     // TO DO: add lep point to selector map & clear any region highlighting
@@ -121,7 +122,9 @@ function updateLep(region_name, lep_name, education){
     });
 
 
-    makeBubbleChart(lep_data);
+    makeDemandBarChart('#region-bar-demand', lep_data)
+    makeDemandScatterPlot('#region-scatter-demand', lep_data_scatter)
+    makeCompScatterPlot('#region-scatter-comp', lep_data_scatter)
 }
 
 
@@ -141,8 +144,9 @@ function updateRegion(region_name, education){
         }
     })
 
+    var place_data = _.where(job_types_by_region, {region_or_nation: region_name})
     if (education=='he'){
-        var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
+        var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
         $("#detail-scatter-title").html("Occupations &mdash; Higher Education")
         $("#detail-scatter-change-edu").text("View Further Education")
         $('#detail-scatter-change-edu').click(function() {
@@ -151,7 +155,7 @@ function updateRegion(region_name, education){
         });
     }
     else{
-        var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
+        var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
         $("#detail-scatter-title").html("Occupations &mdash; Further Education")
         $("#detail-scatter-change-edu").text("View Higher Education")
         $('#detail-scatter-change-edu').click(function() {
@@ -169,8 +173,8 @@ function updateRegion(region_name, education){
     //makeBubbleChart(place_data);
 
     makeDemandBarChart('#region-bar-demand', place_data)
-    makeDemandScatterPlot('#region-scatter-demand', place_data)
-    makeCompScatterPlot('#region-scatter-comp', place_data)
+    makeDemandScatterPlot('#region-scatter-demand', place_data_scatter)
+    makeCompScatterPlot('#region-scatter-comp', place_data_scatter)
     // initializeTable('#job-data-region', display_columns_region, table_guts);
 
 }
