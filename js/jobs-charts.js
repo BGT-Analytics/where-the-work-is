@@ -22,19 +22,22 @@ function makeDemandBarChart(element_id, data){
     var sorted_data = _.sortBy(data, parseInt('demand_entry'))
     var prepped_data = [
         {
-            name: 'Further Education',
-            data: _.map(_.pluck(sorted_data, "demand_entry_fe"), Number)
-        }, {
             name: 'Higher Education',
-            data: _.map(_.pluck(sorted_data, "demand_entry_he"), Number)
+            color: '#006167',
+            data: _.map(_.pluck(sorted_data, "demand_entry_he"), Number).slice(0,10)
+        }, {
+            name: 'Further Education',
+            color: '#fbab18',
+            data: _.map(_.pluck(sorted_data, "demand_entry_fe"), Number).slice(0,10)
         }
         , {
             name: 'High School',
-            data: _.map(_.pluck(sorted_data, "demand_entry_hs"), Number)
+            color: '#f47730',
+            data: _.map(_.pluck(sorted_data, "demand_entry_hs"), Number).slice(0,10)
         }
     ]
 
-    occupations = _.pluck(data, "occupation")
+    occupations = _.pluck(data, "occupation").slice(0,10)
 
     barHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)')
 }
