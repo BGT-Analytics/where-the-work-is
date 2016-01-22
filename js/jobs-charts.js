@@ -151,8 +151,7 @@ function makeBubbleChart(data){
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'Opportunity',
-                x: -15
+                text: 'Opportunity'
             },
             labels: {
                 enabled: false,

@@ -125,13 +125,13 @@ function updateLep(region_name, lep_name, education){
 }
 
 
-function updateRegion(place_name, education){
+function updateRegion(region_name, education){
 
-    $.address.parameter('region', place_name);
+    $.address.parameter('region', region_name);
     $.address.parameter('education', education);
 
     regions_geojson.eachLayer(function(layer){
-        if(layer.feature.properties['JOB_REGION'] != place_name){
+        if(layer.feature.properties['JOB_REGION'] != region_name){
             layer.feature.properties['selected'] = false
             layer.setStyle({'fillOpacity': 0.2, 'color': '#fbab18'});
         }
@@ -142,17 +142,29 @@ function updateRegion(place_name, education){
     })
 
     if (education=='he'){
-        var place_data = _.where(job_types_by_region, {region_or_nation: place_name, include_he: "1"})
+        var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
+        $("#bubblechart-title").html("Higher Education Occupations")
+        $("#bubblechart-change-edu").text("View Community College")
+        $('#bubblechart-change-edu').click(function() {
+            updateRegion(region_name, 'fe')
+            return false;
+        });
     }
     else{
-        var place_data = _.where(job_types_by_region, {region_or_nation: place_name, include_fe: "1"})
+        var place_data = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
+        $("#bubblechart-title").html("Community College Occupations")
+        $("#bubblechart-change-edu").text("View Higher Education")
+        $('#bubblechart-change-edu').click(function() {
+            updateRegion(region_name, 'he')
+            return false;
+        });
     }
     // var table_guts = sliceColumns(place_data, display_columns_region);
 
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(place_name) + '</strong>');
+    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
     makeBubbleChart(place_data);
     

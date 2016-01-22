@@ -39,6 +39,17 @@ hr {
   margin-left: 10px;
 }
 
+
+
+#bubblechart-above {
+  text-align: center;
+}
+#bubblechart-change-edu {
+  font-size: .7em;
+}
+
+
+
 .info h4 {
   font-size: 18px;
   color: #777;
