@@ -188,6 +188,9 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
         chart: {
             type: 'column'
         },
+        credits: {
+            enabled: false
+        },
         title: {
             text: ''
         },

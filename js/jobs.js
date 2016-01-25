@@ -37,6 +37,9 @@ var region_lep_mapping
                 return {
                     occupation: key,
                     demand_entry: sum(_.pluck(value, "demand_entry")),
+                    demand_entry_he: sum(_.pluck(value, "demand_entry_he")),
+                    demand_entry_fe: sum(_.pluck(value, "demand_entry_fe")),
+                    demand_entry_hs: sum(_.pluck(value, "demand_entry_hs")),
                     advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"])
                 }
             })
@@ -44,14 +47,17 @@ var region_lep_mapping
 
         if($.address.parameter("region")){
             if($.address.parameter("lep")){
+                // lep view
                 updateLep(decodeURIComponent($.address.parameter("region")), decodeURIComponent($.address.parameter("lep")), $.address.parameter("education"))
             }
             else{
+                // region view
                 updateRegion(decodeURIComponent($.address.parameter("region")), $.address.parameter("education"))
             }
         }
         else{
-            makeDemandScatterPlot('#agg-scatter', agg_demand);
+            // aggregate view (default)
+            makeDemandBarChart('#agg-bar-demand', agg_demand)
         }
 
     });
