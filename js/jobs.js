@@ -24,6 +24,22 @@ var region_lep_mapping
     initializeMapSelect(map);
 
 
+
+
+    occ_map = L.map('occupation-detail-map', {
+        scrollWheelZoom: false,
+        center: [55, -3.5], 
+        zoom: 5,
+        attributionControl: false,
+        zoomControl:false
+    });
+
+    var layer = new L.StamenTileLayer("toner-lite");
+    occ_map.addLayer(layer);
+
+
+
+
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
         regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
         job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
@@ -190,7 +206,7 @@ function updateRegion(region_name, education){
 function showOccupationDetail(occupation){
     $('#occupation-detail-title').html(occupation);
     $('#occupation-detail-content').html(occupation+' info here<br/><br/>')
-    $('#occupation-detail-map').html("[location quotient chloropleth map here]")
+
     $('#occupation-detail-modal').modal('show');
 
 }

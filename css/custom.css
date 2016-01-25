@@ -82,6 +82,15 @@ hr {
   color: #777;
 }
 
+
+
+#occupation-detail-map{
+  height: 400px;
+  width: 100%
+}
+
+
+
 .leaflet-google-layer{
     z-index: 0;
 }
