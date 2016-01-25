@@ -1,6 +1,10 @@
 body {
-  padding-top: 10px;
   font: 18px "PT Sans",sans-serif;
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -37,6 +41,29 @@ hr {
 #list-select .option-lep{
   font-size: .8em;
   margin-left: 10px;
+}
+
+
+#control-pane{
+  background-color: #5a5858;
+  height: 100%;
+  display: block;
+  position: fixed;
+  overflow-y: scroll;
+}
+#control-pane h3{
+  color: #fff;
+}
+#control-pane h5{
+  color: #A0A09D;
+}
+#control-pane a, #control-pane a:hover {
+  color: #fbab18;
+}
+
+
+#chart-content {
+  display: block;
 }
 
 
@@ -125,4 +152,31 @@ table tr.even, table tr.alt, table tr:nth-of-type(even) {
 }
 table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
   display: table-cell;
+}
+
+
+
+.non-desktop-only{
+  display: none;
+}
+
+
+
+/* medium screens */
+@media only screen and (max-width : 767px) {
+  .desktop-only{
+    display: none;
+  }
+  .non-desktop-only{
+    display: inline;
+  }
+
+  #control-pane{
+    display: none;
+  }
+
+  #chart-content{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
