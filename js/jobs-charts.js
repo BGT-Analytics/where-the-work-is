@@ -162,8 +162,16 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
                         color: '#777'
                     }
                 },
-                color: '#777'
-            }
+                color: '#777',
+                allowPointSelect: true,
+                point: {
+                    events: {
+                        select: function () {
+                            showOccupationDetail(this.full_name);
+                        }
+                    }
+                }
+            },
         },
 
         series: [{

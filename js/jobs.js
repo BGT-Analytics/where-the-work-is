@@ -131,6 +131,7 @@ function updateLep(region_name, lep_name, education){
 function updateRegion(region_name, education){
 
     $.address.parameter('region', region_name);
+    $.address.parameter('lep', '');
     $.address.parameter('education', education);
 
     regions_geojson.eachLayer(function(layer){
@@ -179,4 +180,8 @@ function updateRegion(region_name, education){
 
 }
 
+
+function showOccupationDetail(occupation){
+    $('#occupation-detail').html(occupation+"<br/><br/>[location quotient chloropleth map here]");
+}
 
