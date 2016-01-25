@@ -188,6 +188,10 @@ function updateRegion(region_name, education){
 
 
 function showOccupationDetail(occupation){
-    $('#occupation-detail').html(occupation+"<br/><br/>[location quotient chloropleth map here]");
+    $('#occupation-detail-title').html(occupation);
+    $('#occupation-detail-content').html(occupation+' info here<br/><br/>')
+    $('#occupation-detail-map').html("[location quotient chloropleth map here]")
+    $('#occupation-detail-modal').modal('show');
+
 }
 
