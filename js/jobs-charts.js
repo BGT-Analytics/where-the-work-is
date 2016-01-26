@@ -39,7 +39,7 @@ function makeDemandBarChart(element_id, data){
             data: _.map(_.pluck(sorted_data, "demand_entry_fe"), Number).slice(0,n_cols)
         }
         , {
-            name: 'High School',
+            name: 'School Leavers',
             color: '#f47730',
             data: _.map(_.pluck(sorted_data, "demand_entry_hs"), Number).slice(0,n_cols)
         }
