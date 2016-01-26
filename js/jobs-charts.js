@@ -263,8 +263,10 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
             shadow: false
         },
         tooltip: {
-            headerFormat: '<b>{point.x}</b><br/>',
-            pointFormat: '<span color="{series.color}">{series.name}</span>: {point.y:,.0f}<br />',
+            useHTML: true,
+            headerFormat: '<table><tr><th colspan="2"><strong>{point.x}</strong></th></tr>',
+            pointFormat:  '<tr><th>{series.name}:</th><td>{point.y:,.0f}</td></tr>',
+            footerFormat: '</table>',
             shared: true
         },
         plotOptions: {
