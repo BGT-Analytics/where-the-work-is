@@ -62,7 +62,7 @@ hr {
 #control-pane h5{
   color: #A0A09D;
 }
-#control-pane a, #control-pane a:hover {
+#list-select a, #list-select a:hover {
   color: #fbab18;
 }
 
@@ -75,15 +75,31 @@ hr {
 #education-select{
   text-align: center;
 }
-#education-select .btn{
-  border: 1px solid #006167;
+
+
+.btn, .btn:hover{
   margin: 0px;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 15px;
 }
-#education-select .btn-default{
+.btn-info{
+  border: 1px solid #f47730;
+  background-color: inherit;
+  color: #f47730;
+}
+.btn-info:hover{
+  border: 1px solid #fbab18;
+  background-color: inherit;
+  color: #fbab18;
+}
+.btn-default{
+  border: 1px solid #006167;
   background-color: inherit;
   color: #006167;
 }
-#education-select .btn-default.selected, #education-select .btn:hover{
+.btn-default.selected, .btn-default:hover{
+  border: 1px solid #006167;
   background-color: #006167;
   color: #fff;
 }
@@ -155,28 +171,7 @@ hr {
 
 
 
-#take-action {
-  color: #333;
-}
 
-.btn-primary {
-    background-color: #3690c0;
-    border-color: #3690c0;
-    text-transform: none;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-.btn-primary:hover {
-    background-color: #0570b0;
-    border-color: #0570b0;
-}
-
-.btn-default {
-    text-transform: none;
-    font-size: 15px;
-    font-weight: normal;
-}
 
 .footer-brand { margin-bottom: 10px;}
 
