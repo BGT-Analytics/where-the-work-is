@@ -91,28 +91,21 @@ hr {
 
 
 
-#agg-bar-demand {
-  min-width: 310px; 
-  height: 300px; 
-  max-width: 800px; 
-  margin: 0 auto;
-}
-
-#region-bar-demand {
+#bar-demand {
   min-width: 200px; 
   height: 300px; 
   max-width: 800px; 
   margin: 0 auto;
 }
 
-#region-scatter-demand {
+#scatter-demand {
   min-width: 200px; 
   height: 300px; 
   max-width: 800px; 
   margin: 0 auto;
 }
 
-#region-scatter-comp {
+#scatter-comp {
   min-width: 200px; 
   height: 300px; 
   max-width: 800px; 

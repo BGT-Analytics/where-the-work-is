@@ -14,8 +14,6 @@ var occ_map;
 // do stuff when the page loads
 (function(){
 
-    $("#detail-content").hide()
-
     map = L.map('map-select', {
         scrollWheelZoom: false,
         center: [55, -3.5], 
@@ -41,20 +39,6 @@ var occ_map;
 
         var table_guts = sliceColumns(job_types_by_region, display_columns_all);
 
-        var agg_demand = _.chain(job_types_by_region)
-            .groupBy("occupation")
-            .map(function(value, key) {
-                return {
-                    occupation: key,
-                    demand_entry: sum(_.pluck(value, "demand_entry")),
-                    demand_entry_he: sum(_.pluck(value, "demand_entry_he")),
-                    demand_entry_fe: sum(_.pluck(value, "demand_entry_fe")),
-                    demand_entry_hs: sum(_.pluck(value, "demand_entry_hs")),
-                    advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"])
-                }
-            })
-            .value();
-
         if($.address.parameter("region")){
             if($.address.parameter("lep")){
                 // lep view
@@ -67,7 +51,7 @@ var occ_map;
         }
         else{
             // aggregate view (default)
-            makeDemandBarChart('#agg-bar-demand', agg_demand)
+            updateAgg($.address.parameter("education"))
         }
 
     });
@@ -124,6 +108,44 @@ var occ_map;
     
 })()
 
+function updateAgg(education){
+
+    var agg_demand = _.chain(job_types_by_region)
+        .groupBy("occupation")
+        .map(function(value, key) {
+            return {
+                occupation: key,
+                demand_entry: sum(_.pluck(value, "demand_entry")),
+                demand_entry_he: sum(_.pluck(value, "demand_entry_he")),
+                demand_entry_fe: sum(_.pluck(value, "demand_entry_fe")),
+                demand_entry_hs: sum(_.pluck(value, "demand_entry_hs")),
+                advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"]),
+                //how to aggregate fe_ds_ratio_log?
+                include_he: value[0]["include_he"],
+                include_fe: value[0]["include_fe"]
+            }
+        })
+        .value();
+
+    $.address.parameter('education', education);
+    $.address.parameter('region', '');
+    $.address.parameter('lep', '');
+
+    if (education=='he'){
+        var agg_data_scatter = _.where(agg_demand, {include_he: "1"})
+    }
+    else{
+        var agg_data_scatter = _.where(agg_demand, {include_fe: "1"})
+    }
+
+    $("#default-content").show()
+    $("#charts").show()
+
+    makeDemandBarChart('#bar-demand', agg_demand)
+    makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
+    makeCompScatterPlot('#scatter-comp', agg_data_scatter)
+}
+
 function updateLep(region_name, lep_name, education){
 
     $.address.parameter('region', region_name);
@@ -159,17 +181,16 @@ function updateLep(region_name, lep_name, education){
     // (will also need to clear all lep points in updateRegion)
 
     $("#default-content").hide()
-    $("#detail-content").show()
+    $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
     $('.option-region').last().click(function() {
         updateRegion(region_name, 'fe')
         return false;
     });
 
-
-    makeDemandBarChart('#region-bar-demand', lep_data)
-    makeDemandScatterPlot('#region-scatter-demand', lep_data_scatter)
-    makeCompScatterPlot('#region-scatter-comp', lep_data_scatter)
+    makeDemandBarChart('#bar-demand', lep_data)
+    makeDemandScatterPlot('#scatter-demand', lep_data_scatter)
+    makeCompScatterPlot('#scatter-comp', lep_data_scatter)
 }
 
 
@@ -219,14 +240,14 @@ function updateRegion(region_name, education){
 
 
     $("#default-content").hide()
-    $("#detail-content").show()
+    $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
     //makeBubbleChart(place_data);
 
-    makeDemandBarChart('#region-bar-demand', place_data)
-    makeDemandScatterPlot('#region-scatter-demand', place_data_scatter)
-    makeCompScatterPlot('#region-scatter-comp', place_data_scatter)
+    makeDemandBarChart('#bar-demand', place_data)
+    makeDemandScatterPlot('#scatter-demand', place_data_scatter)
+    makeCompScatterPlot('#scatter-comp', place_data_scatter)
     // initializeTable('#job-data-region', display_columns_region, table_guts);
 
 }
