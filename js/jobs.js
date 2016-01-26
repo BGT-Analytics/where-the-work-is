@@ -133,9 +133,25 @@ function updateAgg(education){
 
     if (education=='he'){
         var agg_data_scatter = _.where(agg_demand, {include_he: "1"})
+
+        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#fe-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#fe-select').click(function() {
+            updateAgg('fe')
+            return false;
+        });
     }
     else{
         var agg_data_scatter = _.where(agg_demand, {include_fe: "1"})
+
+        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#he-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#he-select').click(function() {
+            updateAgg('he')
+            return false;
+        });
     }
 
     $("#default-content").show()
