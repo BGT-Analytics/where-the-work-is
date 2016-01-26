@@ -289,7 +289,7 @@ function updateRegion(region_name, education){
 
 function showOccupationDetail(occupation){
     $('#occupation-detail-title').html(occupation);
-    $('#occupation-detail-content').html(occupation+' info here<br/><br/>')
+    $('#occupation-detail-content').html('Description for this occupation<br/>')
 
     $('#occupation-detail-modal').modal('show');
 }

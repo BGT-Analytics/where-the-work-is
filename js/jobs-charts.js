@@ -180,6 +180,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
 
         plotOptions: {
             series: {
+                cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
                     format: '{point.name}',
@@ -274,6 +275,7 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
                 stacking: 'normal'
             },
             series: {
+                cursor: 'pointer',
                 pointPadding: 0,
                 groupPadding: .1
             }
@@ -358,6 +360,7 @@ function makeBubbleChart(data){
 
         plotOptions: {
             series: {
+                cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
                     format: '{point.name}',
