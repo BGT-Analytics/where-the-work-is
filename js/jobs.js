@@ -6,7 +6,8 @@ var job_types_by_region;
 var job_types_by_lep;
 var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
-var region_lep_mapping
+var region_lep_mapping;
+var occ_map;
 
 // do stuff when the page loads
 (function(){
@@ -28,20 +29,6 @@ var region_lep_mapping
     });
 
     initializeMapSelect(map);
-
-    occ_map = L.map('occupation-detail-map', {
-        scrollWheelZoom: false,
-        center: [55, -3.5], 
-        zoom: 5,
-        attributionControl: false,
-        zoomControl:false
-    });
-
-    var layer = new L.StamenTileLayer("toner-lite");
-    occ_map.addLayer(layer);
-
-
-
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
         regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
@@ -81,9 +68,6 @@ var region_lep_mapping
 
     });
 
-        
-
-
 
     $.when($.get('data/job_types_by_lep_merge.csv')).then(function(csv){
         job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1"});
@@ -115,11 +99,21 @@ var region_lep_mapping
 
     });
 
+    $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
+      occ_map = L.map('occupation-detail-map', {
+        scrollWheelZoom: false,
+        center: [55, -3.5], 
+        zoom: 5,
+        attributionControl: false,
+        zoomControl:false
+        });
+
+        var layer = new L.StamenTileLayer("toner-lite");
+        occ_map.addLayer(layer);
+    })
+
     
 })()
-
-
-
 
 function updateLep(region_name, lep_name, education){
 
@@ -234,6 +228,5 @@ function showOccupationDetail(occupation){
     $('#occupation-detail-content').html(occupation+' info here<br/><br/>')
 
     $('#occupation-detail-modal').modal('show');
-
 }
 
