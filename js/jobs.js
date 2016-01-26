@@ -1,7 +1,9 @@
 // variable init
 var map;
 var info;
+var regions_data;
 var regions_geojson;
+var job_types_data;
 var job_types_by_region;
 var job_types_by_lep;
 var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
@@ -31,6 +33,8 @@ var occ_map;
     initializeMapSelect(map);
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
+        regions_data = geojson
+        job_types_data = csv
         regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
         job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
@@ -100,16 +104,21 @@ var occ_map;
     });
 
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
-      occ_map = L.map('occupation-detail-map', {
-        scrollWheelZoom: false,
-        center: [55, -3.5], 
-        zoom: 5,
-        attributionControl: false,
-        zoomControl:false
+        occ_map = L.map('occupation-detail-map', {
+            scrollWheelZoom: false,
+            center: [55, -3.5], 
+            zoom: 5,
+            attributionControl: false,
+            zoomControl:false
         });
 
         var layer = new L.StamenTileLayer("toner-lite");
         occ_map.addLayer(layer);
+
+        var regions_occ_geojson = L.geoJson(regions_data[0], {'style': {'weight': 1,'opacity': 1,'fillOpacity': 0.2,'color': '#fbab18'}}).addTo(occ_map);
+        var job_types_lep = _.where($.csv.toObjects(job_types_data[0]), {occupation: $('#occupation-detail-title').html()})
+
+        // console.log(job_types_lep);
     })
 
     
