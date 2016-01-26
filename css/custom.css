@@ -1,5 +1,5 @@
 body {
-  font: 18px "PT Sans",sans-serif;
+  font: 16px "PT Sans",sans-serif;
 }
 
 .container-fluid{
@@ -26,7 +26,12 @@ hr {
   font-size: .8em;
 }
 
-.navbar-header>.navbar-brand, .navbar-inverse .navbar-nav>li>a {color: #f47730;}
+
+.chart-title{
+  font-weight: 700;
+  font-size: 18px;
+}
+
 
 #map-select {
   width: 100%;
@@ -88,7 +93,7 @@ hr {
 
 #agg-bar-demand {
   min-width: 310px; 
-  height: 400px; 
+  height: 300px; 
   max-width: 800px; 
   margin: 0 auto;
 }
