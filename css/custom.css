@@ -67,13 +67,24 @@ hr {
 }
 
 
-
-#detail-scatter-above {
+#education-select{
   text-align: center;
 }
-#detail-scatter-change-edu {
-  font-size: .7em;
+#education-select .btn{
+  border: 1px solid #006167;
+  margin: 0px;
 }
+#education-select .btn-default{
+  background-color: inherit;
+  color: #006167;
+}
+#education-select .btn-default.selected, #education-select .btn:hover{
+  background-color: #006167;
+  color: #fff;
+}
+
+
+
 
 #agg-bar-demand {
   min-width: 310px; 

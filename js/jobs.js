@@ -140,7 +140,7 @@ function updateLep(region_name, lep_name, education){
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+    $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
     $('.option-region').last().click(function() {
         updateRegion(region_name, 'fe')
         return false;
@@ -173,28 +173,34 @@ function updateRegion(region_name, education){
     var place_data = _.where(job_types_by_region, {region_or_nation: region_name})
     if (education=='he'){
         var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
-        $("#detail-scatter-title").html("Occupations &mdash; Higher Education")
-        $("#detail-scatter-change-edu").text("View Further Education")
-        $('#detail-scatter-change-edu').click(function() {
+
+        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#fe-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#fe-select').click(function() {
             updateRegion(region_name, 'fe')
             return false;
         });
+
     }
     else{
         var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
-        $("#detail-scatter-title").html("Occupations &mdash; Further Education")
-        $("#detail-scatter-change-edu").text("View Higher Education")
-        $('#detail-scatter-change-edu').click(function() {
+
+        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#he-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#he-select').click(function() {
             updateRegion(region_name, 'he')
             return false;
         });
+
     }
     // var table_guts = sliceColumns(place_data, display_columns_region);
 
 
     $("#default-content").hide()
     $("#detail-content").show()
-    $("#content-heading").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
+    $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
     //makeBubbleChart(place_data);
 

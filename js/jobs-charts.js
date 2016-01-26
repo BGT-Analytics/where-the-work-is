@@ -213,6 +213,7 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
         yAxis: {
             min: 0,
             gridLineWidth: 0,
+            endOnTick: false,
             title: {
                 text: y_label_short
             }
