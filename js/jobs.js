@@ -130,10 +130,27 @@ function updateLep(region_name, lep_name, education){
     var lep_data = _.where(job_types_by_lep, {lep: lep_name})
     if (education=='he'){
         var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_he: "1"})
+
+        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#fe-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#fe-select').click(function() {
+            updateLep(region_name, lep_name, 'fe')
+            return false;
+        });
     }
     else{
         var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_fe: "1"})
+
+        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
+        $("#he-select").attr('class', 'btn btn-xs btn-default');
+
+        $('#he-select').click(function() {
+            updateLep(region_name, lep_name, 'he')
+            return false;
+        });
     }
+
 
     // TO DO: add lep point to selector map & clear any region highlighting
     // (will also need to clear all lep points in updateRegion)
