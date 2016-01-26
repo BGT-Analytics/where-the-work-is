@@ -91,13 +91,13 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
         chart: {
             type: 'scatter',
             zoomType: 'xy',
-            plotBackgroundColor: {
-                linearGradient: [0, 0, 0, chart_height],
-                stops: [
-                    [0, 'rgb(225, 242, 241)'], //green
-                    [1, 'rgb(242, 231, 225)']  //red
-                ]
-            }
+            // plotBackgroundColor: {
+            //     linearGradient: [0, 0, 0, chart_height],
+            //     stops: [
+            //         [0, 'rgb(225, 242, 241)'], //green
+            //         [1, 'rgb(242, 231, 225)']  //red
+            //     ]
+            // }
         },
 
         credits: {
@@ -114,17 +114,36 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
 
         xAxis: {
             title: {
-                text: 'Average Salary'
+                text: 'Average Salary',
+                style: {
+                    color: '#aaa',
+                }
             },
             labels: {
-                format: '£{value}'
-            }
+                format: '£{value}',
+                style: {
+                    color: '#aaa',
+                    fontSize: '9px',
+                }
+            },
+            tickColor: '#eee',
+            tickLength: 5,
+            lineColor: '#eee'
         },
 
         yAxis: {
             gridLineWidth: 0,
             title: {
                 text: y_label_full,
+                style: {
+                    color: '#aaa',
+                }
+            },
+            labels: {
+                style: {
+                    color: '#aaa',
+                    fontSize: '9px',
+                }
             }
         },
 
@@ -207,15 +226,28 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
             labels: {
                 formatter: function () {
                     return shortenName(this.value);
+                },
+                style: {
+                    fontSize: '9px'
                 }
-            }
+            },
+            lineColor: '#eee'
         },
         yAxis: {
             min: 0,
             gridLineWidth: 0,
             endOnTick: false,
             title: {
-                text: y_label_short
+                text: y_label_short,
+                style: {
+                    color: '#aaa'
+                }
+            },
+            labels: {
+                style: {
+                    color: '#aaa',
+                    fontSize: '9px',
+                }
             }
         },
         legend: {
