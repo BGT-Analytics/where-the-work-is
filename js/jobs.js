@@ -18,13 +18,16 @@ var region_lep_mapping
         center: [55, -3.5], 
         zoom: 4,
         attributionControl: false,
-        zoomControl:false
+        zoomControl:false,
+        dragging: false,
+        touchZoom: false, 
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        tap: false
     });
 
     initializeMapSelect(map);
-
-
-
 
     occ_map = L.map('occupation-detail-map', {
         scrollWheelZoom: false,
