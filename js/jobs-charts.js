@@ -264,7 +264,7 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
         },
         tooltip: {
             headerFormat: '<b>{point.x}</b><br/>',
-            pointFormat: '<span color="{series.color}">{series.name}: {point.y:,.0f}</span><br />',
+            pointFormat: '<span color="{series.color}">{series.name}</span>: {point.y:,.0f}<br />',
             shared: true
         },
         plotOptions: {
