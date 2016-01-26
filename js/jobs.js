@@ -105,6 +105,8 @@ function initialize(){
     });
 
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
+        var occupation_title = $('#occupation-detail-title').html();
+
         occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
             center: [55, -3.5], 
@@ -116,10 +118,123 @@ function initialize(){
         var layer = new L.StamenTileLayer("toner-lite");
         occ_map.addLayer(layer);
 
-        var regions_occ_geojson = L.geoJson(regions_data[0], {'style': {'weight': 1,'opacity': 1,'fillOpacity': 0.2,'color': '#fbab18'}}).addTo(occ_map);
-        var job_types_lep = _.where($.csv.toObjects(job_types_data[0]), {occupation: $('#occupation-detail-title').html()})
+        var job_types_region = _.where($.csv.toObjects(job_types_data[0]), {occupation: occupation_title});
 
-        // console.log(job_types_lep);
+        $.each(regions_data[0]['features'], function(r_index, region){
+            $.each(job_types_region, function(j_index, job){
+                if (region.properties['JOB_REGION'] == job['region_or_nation']) {
+                    region.properties['lq'] = job['lq'];
+                    region.properties['lq_label'] = job['lq_label'];
+                }
+            });
+        });
+
+        var regions_occ_geojson = L.geoJson(regions_data[0], {style: occ_style, onEachFeature: onEachFeature}).addTo(occ_map);
+
+        // control that shows state info on hover
+        var info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+
+        info.update = function (props) {
+            this._div.innerHTML = (props ?
+                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />Job prospects: ' + props.lq_label
+                : 'Hover over a region or nation');
+        };
+
+        info.addTo(occ_map);
+
+
+        // get color depending on population density value
+        function getColor(d) {
+            return d > 1.5      ? '#800026' :
+                   d > 1.2      ? '#BD0026' :
+                   d > 0.833    ? '#E31A1C' :
+                   d > 0.667    ? '#FED976' :
+                   d > 0.16     ? '#FFEDA0' :
+                                  '#FFEDA0' ;
+        }
+
+        function getLabel(d) {
+            return d > 1.5      ? 'Very High' :
+                   d > 1.2      ? 'High' :
+                   d > 0.833    ? 'Average' :
+                   d > 0.667    ? 'Low' :
+                   d > 0.16     ? 'Very Low' :
+                                  '' ;
+        }
+
+        function occ_style(feature) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7,
+                fillColor: getColor(feature.properties.lq)
+            };
+        }
+
+        function highlightFeature(e) {
+            var layer = e.target;
+
+            layer.setStyle({
+                weight: 5,
+                color: '#666',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
+
+            if (!L.Browser.ie && !L.Browser.opera) {
+                layer.bringToFront();
+            }
+
+            info.update(layer.feature.properties);
+        }
+
+        function resetHighlight(e) {
+            regions_occ_geojson.resetStyle(e.target);
+            info.update();
+        }
+
+        function zoomToFeature(e) {
+            occ_map.fitBounds(e.target.getBounds());
+        }
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight
+            });
+        }
+
+        var legend = L.control({position: 'bottomright'});
+
+        legend.onAdd = function (map) {
+
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0.16, 0.667, 0.833, 1.2, 1.5],
+                labels = [],
+                from, to;
+
+            for (var i = 0; i < grades.length; i++) {
+                from = grades[i];
+                to = grades[i + 1];
+
+                labels.push(
+                    '<i style="background:' + getColor(from + 0.001) + '"></i> ' +
+                    getLabel(from + 0.001));
+            }
+
+            div.innerHTML = labels.join('<br>');
+            return div;
+        };
+
+        legend.addTo(occ_map);
     })
 
 }
