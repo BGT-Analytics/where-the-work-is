@@ -1,12 +1,4 @@
-var geojson_opts = {
-    'style': {
-        'weight': 1,
-        'opacity': 1,
-        'fillOpacity': 0.2,
-        'color': '#fbab18'
-    },
-    'onEachFeature': bindLayer,
-}
+
 
 
 function initializeMapSelect(map){

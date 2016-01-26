@@ -11,8 +11,17 @@ var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand
 var region_lep_mapping;
 var occ_map;
 
+
 // do stuff when the page loads
 (function(){
+
+    initialize();
+    
+})()
+
+
+
+function initialize(){
 
     map = L.map('map-select', {
         scrollWheelZoom: false,
@@ -28,6 +37,16 @@ var occ_map;
         tap: false
     });
 
+    var geojson_opts = {
+        'style': {
+            'weight': 1,
+            'opacity': 1,
+            'fillOpacity': 0.2,
+            'color': '#fbab18'
+        },
+        'onEachFeature': bindLayer,
+    }
+
     initializeMapSelect(map);
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
@@ -36,8 +55,6 @@ var occ_map;
         regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
         job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
-
-        var table_guts = sliceColumns(job_types_by_region, display_columns_all);
 
         if($.address.parameter("region")){
             if($.address.parameter("lep")){
@@ -105,8 +122,9 @@ var occ_map;
         // console.log(job_types_lep);
     })
 
-    
-})()
+}
+
+
 
 function updateAgg(education){
 
