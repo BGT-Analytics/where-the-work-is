@@ -6,8 +6,8 @@ var regions_geojson;
 var job_types_data;
 var job_types_by_region;
 var job_types_by_lep;
-var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
-var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
+var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_sl', 'demand_entry_fe', 'demand_entry_he'];
+var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_sl', 'demand_entry_fe', 'demand_entry_he'];
 var region_lep_mapping;
 var occ_map;
 var regions_occ_geojson;
@@ -254,7 +254,7 @@ function updateAgg(education){
                 demand_entry: sum(_.pluck(value, "demand_entry")),
                 demand_entry_he: sum(_.pluck(value, "demand_entry_he")),
                 demand_entry_fe: sum(_.pluck(value, "demand_entry_fe")),
-                demand_entry_hs: sum(_.pluck(value, "demand_entry_hs")),
+                demand_entry_sl: sum(_.pluck(value, "demand_entry_sl")),
                 advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"]),
                 //how to aggregate fe_ds_ratio_log?
                 include_he: value[0]["include_he"],
