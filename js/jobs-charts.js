@@ -26,26 +26,40 @@ function initializeTable(table_id, column_names, data){
 
 
 function makeDemandBarChart(element_id, data){
-    var sorted_data = _.sortBy(data, parseInt('demand_entry'))
+    var clean_demand_data = _.map(
+        data, 
+        function(row) {
+            return { 
+                demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
+                demand_entry_he: parseInt(row.demand_entry_he),
+                demand_entry_fe: parseInt(row.demand_entry_fe),
+                demand_entry_sl: parseInt(row.demand_entry_sl),
+                occupation: row.occupation
+            };
+        }
+    );
+    var sorted_data = _.sortBy(clean_demand_data, 'demand_sum').reverse()
+
+
     var n_cols = 16
     var prepped_data = [
         {
             name: 'Higher Education',
             color: '#006167',
-            data: _.map(_.pluck(sorted_data, "demand_entry_he"), Number).slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
             name: 'Further Education',
             color: '#fbab18',
-            data: _.map(_.pluck(sorted_data, "demand_entry_fe"), Number).slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
             name: 'School Leavers',
             color: '#f47730',
-            data: _.map(_.pluck(sorted_data, "demand_entry_sl"), Number).slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
 
-    occupations = _.pluck(data, "occupation").slice(0,n_cols)
+    occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
 
     barHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)')
 }
