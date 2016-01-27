@@ -10,6 +10,7 @@ var display_columns_all = ['region_or_nation','job_family','occupation', 'demand
 var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_hs', 'demand_entry_fe', 'demand_entry_he'];
 var region_lep_mapping;
 var occ_map;
+var regions_occ_geojson;
 
 
 // do stuff when the page loads
@@ -107,16 +108,60 @@ function initialize(){
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         var occupation_title = $('#occupation-detail-title').html();
 
-        occ_map = L.map('occupation-detail-map', {
-            scrollWheelZoom: false,
-            center: [55, -3.5], 
-            zoom: 5,
-            attributionControl: false,
-            zoomControl:false
-        });
+        if (occ_map == null) {
+            occ_map = L.map('occupation-detail-map', {
+                scrollWheelZoom: false,
+                center: [55, -3.5], 
+                zoom: 5,
+                attributionControl: false,
+                zoomControl:false
+            });
 
-        var layer = new L.StamenTileLayer("toner-lite");
-        occ_map.addLayer(layer);
+            var layer = new L.StamenTileLayer("toner-lite");
+            occ_map.addLayer(layer);
+
+            // control that shows state info on hover
+            var info = L.control();
+
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+
+            info.update = function (props) {
+                this._div.innerHTML = (props ?
+                    '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />Job prospects: ' + props.lq_label
+                    : 'Hover over a region or nation');
+            };
+
+            info.addTo(occ_map);
+
+            var legend = L.control({position: 'bottomright'});
+
+            legend.onAdd = function (map) {
+
+                var div = L.DomUtil.create('div', 'info legend'),
+                    grades = [0.16, 0.667, 0.833, 1.2, 1.5],
+                    labels = [],
+                    from, to;
+
+                for (var i = 0; i < grades.length; i++) {
+                    from = grades[i];
+                    to = grades[i + 1];
+
+                    labels.push(
+                        '<i style="background:' + getColor(from + 0.001) + '"></i> ' +
+                        getLabel(from + 0.001));
+                }
+
+                div.innerHTML = "<h4>Job prospects</h4>"
+                div.innerHTML += labels.join('<br>');
+                return div;
+            };
+
+            legend.addTo(occ_map);
+        }
 
         var job_types_region = _.where($.csv.toObjects(job_types_data[0]), {occupation: occupation_title});
 
@@ -129,34 +174,17 @@ function initialize(){
             });
         });
 
-        var regions_occ_geojson = L.geoJson(regions_data[0], {style: occ_style, onEachFeature: onEachFeature}).addTo(occ_map);
-
-        // control that shows state info on hover
-        var info = L.control();
-
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info');
-            this.update();
-            return this._div;
-        };
-
-        info.update = function (props) {
-            this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />Job prospects: ' + props.lq_label
-                : 'Hover over a region or nation');
-        };
-
-        info.addTo(occ_map);
+        regions_occ_geojson = L.geoJson(regions_data[0], {style: occ_style, onEachFeature: onEachFeature}).addTo(occ_map);
 
 
         // get color depending on population density value
         function getColor(d) {
-            return d > 1.5      ? '#800026' :
-                   d > 1.2      ? '#BD0026' :
-                   d > 0.833    ? '#E31A1C' :
-                   d > 0.667    ? '#FED976' :
-                   d > 0.16     ? '#FFEDA0' :
-                                  '#FFEDA0' ;
+            return d > 1.5      ? '#993404' :
+                   d > 1.2      ? '#d95f0e' :
+                   d > 0.833    ? '#fe9929' :
+                   d > 0.667    ? '#fed98e' :
+                   d > 0.16     ? '#ffffd4' :
+                                  '#ffffd4' ;
         }
 
         function getLabel(d) {
@@ -170,10 +198,9 @@ function initialize(){
 
         function occ_style(feature) {
             return {
-                weight: 2,
+                weight: 1,
                 opacity: 1,
                 color: 'white',
-                dashArray: '3',
                 fillOpacity: 0.7,
                 fillColor: getColor(feature.properties.lq)
             };
@@ -183,8 +210,8 @@ function initialize(){
             var layer = e.target;
 
             layer.setStyle({
-                weight: 5,
-                color: '#666',
+                weight: 3,
+                color: '#5A5858',
                 dashArray: '',
                 fillOpacity: 0.7
             });
@@ -211,30 +238,6 @@ function initialize(){
                 mouseout: resetHighlight
             });
         }
-
-        var legend = L.control({position: 'bottomright'});
-
-        legend.onAdd = function (map) {
-
-            var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0.16, 0.667, 0.833, 1.2, 1.5],
-                labels = [],
-                from, to;
-
-            for (var i = 0; i < grades.length; i++) {
-                from = grades[i];
-                to = grades[i + 1];
-
-                labels.push(
-                    '<i style="background:' + getColor(from + 0.001) + '"></i> ' +
-                    getLabel(from + 0.001));
-            }
-
-            div.innerHTML = labels.join('<br>');
-            return div;
-        };
-
-        legend.addTo(occ_map);
     })
 
 }
