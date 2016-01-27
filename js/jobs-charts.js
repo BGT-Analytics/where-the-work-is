@@ -291,7 +291,15 @@ function barHelper(element_id, prepped_data, categories, y_label_full, y_label_s
             series: {
                 cursor: 'pointer',
                 pointPadding: 0,
-                groupPadding: .1
+                groupPadding: .1,
+                allowPointSelect: true,
+                point: {
+                    events: {
+                        select: function () {
+                            showOccupationDetail(categories[this.x]);
+                        }
+                    }
+                }
             }
         },
         series: prepped_data
