@@ -263,7 +263,7 @@ function updateAgg(education){
         });
     }
 
-    $("#current-location-name").text(region_name)
+    $("#current-location-name").text("The United Kingdom")
     $("#default-content").show()
     $("#charts").show()
 
