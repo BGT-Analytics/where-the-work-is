@@ -24,36 +24,9 @@ var regions_occ_geojson;
 
 function initialize(){
 
-    map = L.map('map-select', {
-        scrollWheelZoom: false,
-        center: [55, -3.5], 
-        zoom: 4,
-        attributionControl: false,
-        zoomControl:false,
-        dragging: false,
-        touchZoom: false, 
-        scrollWheelZoom: false,
-        doubleClickZoom: false,
-        boxZoom: false,
-        tap: false
-    });
-
-    var geojson_opts = {
-        'style': {
-            'weight': 1,
-            'opacity': 1,
-            'fillOpacity': 0.2,
-            'color': '#fbab18'
-        },
-        'onEachFeature': bindLayer,
-    }
-
-    initializeMapSelect(map);
-
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
         regions_data = geojson
         job_types_data = csv
-        regions_geojson = L.geoJson(geojson[0], geojson_opts).addTo(map);
         job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
 
@@ -88,9 +61,9 @@ function initialize(){
         // populating select menu w/ regions & leps
         $.each(region_lep_mapping, function(index, value){
             var r = value['region_or_nation']
-            $('#list-select').append('<p><a class="option-region" href="/#?region='+r+'">'+toTitleCase(r)+'</a></p>')
+            $('#location-select-list').append('<li><a class="option-region" href="/#?region='+r+'">'+toTitleCase(r)+'</a></li>')
             $.each(value['leps_within'] , function(index, value){
-                $('#list-select').append('<p class="small"><a class="option-lep" href="/#?region='+r+'&lep='+value+'">'+value+'</a></p>')
+                $('#location-select-list').append('<li class="small"><a class="option-lep" href="/#?region='+r+'&lep='+value+'">'+value+'</a></li>')
                 $('.option-lep').last().click(function() {
                     updateLep(r, value, 'fe')
                     return false;
@@ -329,9 +302,6 @@ function updateLep(region_name, lep_name, education){
     }
 
 
-    // TO DO: add lep point to selector map & clear any region highlighting
-    // (will also need to clear all lep points in updateRegion)
-
     $("#default-content").hide()
     $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
@@ -351,17 +321,6 @@ function updateRegion(region_name, education){
     $.address.parameter('region', region_name);
     $.address.parameter('lep', '');
     $.address.parameter('education', education);
-
-    regions_geojson.eachLayer(function(layer){
-        if(layer.feature.properties['JOB_REGION'] != region_name){
-            layer.feature.properties['selected'] = false
-            layer.setStyle({'fillOpacity': 0.2, 'color': '#fbab18'});
-        }
-        else{
-            layer.feature.properties['selected'] = true
-            layer.setStyle({'fillOpacity': 0.8, 'color': '#fbab18'});
-        }
-    })
 
     var place_data = _.where(job_types_by_region, {region_or_nation: region_name})
     if (education=='he'){
@@ -388,19 +347,16 @@ function updateRegion(region_name, education){
         });
 
     }
-    // var table_guts = sliceColumns(place_data, display_columns_region);
 
 
     $("#default-content").hide()
     $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
 
-    //makeBubbleChart(place_data);
 
     makeDemandBarChart('#bar-demand', place_data)
     makeDemandScatterPlot('#scatter-demand', place_data_scatter)
     makeCompScatterPlot('#scatter-comp', place_data_scatter)
-    // initializeTable('#job-data-region', display_columns_region, table_guts);
 
 }
 
