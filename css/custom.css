@@ -59,6 +59,21 @@ hr {
 #list-select a, #list-select a:hover {
   color: #fbab18;
 }
+#site-title{
+  color: #fff;
+}
+#current-location-name{
+  color: #FBAB18;
+  font-size: 26px;
+  font-weight: 700;
+  padding-top: 6px;
+}
+#control-pane .dropdown-toggle{
+  margin-top: 6px;
+  border: none;
+  background-color: #C0BEBE;
+  color: #5A5858;
+}
 
 
 #chart-content {
@@ -215,10 +230,6 @@ table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, tabl
   }
   .non-desktop-only{
     display: inline;
-  }
-
-  #control-pane{
-    display: none;
   }
 
   #chart-content{

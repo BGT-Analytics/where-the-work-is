@@ -263,6 +263,7 @@ function updateAgg(education){
         });
     }
 
+    $("#current-location-name").text(region_name)
     $("#default-content").show()
     $("#charts").show()
 
@@ -305,6 +306,7 @@ function updateLep(region_name, lep_name, education){
     $("#default-content").hide()
     $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+    $("#current-location-name").text(lep_name)
     $('.option-region').last().click(function() {
         updateRegion(region_name, 'fe')
         return false;
@@ -352,6 +354,7 @@ function updateRegion(region_name, education){
     $("#default-content").hide()
     $("#charts").show()
     $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
+    $("#current-location-name").text(toTitleCase(region_name))
 
 
     makeDemandBarChart('#bar-demand', place_data)
