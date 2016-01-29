@@ -8,9 +8,9 @@ description: "This tool visualises the dynamics of the entry level job market fo
 
 <div class='row'>
 
-  <div class='col-sm-12' id="chart-content">
-
+  <div class='col-sm-10 col-sm-offset-1' id="chart-content">
     <div id='default-content'>
+      <br/>
 
       <div id="orientation-blurb" class="well">
         <p>This tool visualises the dynamics of the entry level job market for medium-skilled occupations</p>
@@ -22,59 +22,45 @@ description: "This tool visualises the dynamics of the entry level job market fo
           <li>locations with the strongest job prospects</li>
         </ul>
       </div>
-
-
     </div>
+  </div>
 
-    <div id='charts'>
+</div>
 
-      <p class="text-center chart-title">Occupations with the Highest Demand</p>
-      <div id="bar-demand"></div>
+<div class='row'>
 
-      <hr/>
-      <div id="education-select">
-        <a href="" title="browse occupations for further education" id="fe-select">Further Education</a>
-        <a href="" title="browse occupations for higher education" id="he-select">Higher Education</a>
-      </div>
-      <br/><br/>
+  <div class='col-sm-6 chart-col'>
 
 
-      <p class="text-center chart-title">Demand vs. Salary</p>
-      <div id="scatter-demand" ></div>
-      <br/>
-
-      <p class="text-center chart-title">Competitiveness vs. Salary</p>
-      <div id="scatter-comp"></div>
-      <br/>
-
-    </div>
-
-    <div id="footer">
-      <hr />
-      <small class='muted'>
-        By the <a href='http://ippr.org' target="_blank">Institute for Public Policy Research</a> and <a href='http://burning-glass.com/' target="_blank">Burning Glass Technologies</a>. Website by <a href='http://datamade.us' target="_blank">DataMade</a>.
-      </small>
-    </div>
-
-
-    <div class="modal fade" id="occupation-detail-modal" tabindex="-1" role="dialog" aria-labelledby="occupation-detail">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="occupation-detail-title"></h4>
-          </div>
-
-          <div class="modal-body">
-            <div id="occupation-detail-content"></div>
-            <div id="occupation-detail-map"></div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
+    <p class="text-center chart-title">Occupations with the Highest Demand</p>
+    <div id="bar-demand"></div>
 
   </div>
+  <div class='col-sm-3 chart-col'>
+  </div>
+  <div class='col-sm-3 chart-col'>
+    <div id="education-select">
+      <a href="" title="browse occupations for further education" id="fe-select">Further Education</a>
+      <a href="" title="browse occupations for higher education" id="he-select">Higher Education</a>
+    </div>
+  </div>
+
+  <div class="modal fade" id="occupation-detail-modal" tabindex="-1" role="dialog" aria-labelledby="occupation-detail">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="occupation-detail-title"></h4>
+        </div>
+
+        <div class="modal-body">
+          <div id="occupation-detail-content"></div>
+          <div id="occupation-detail-map"></div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
