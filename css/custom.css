@@ -66,7 +66,15 @@ hr {
   color: #FBAB18;
   font-size: 26px;
   font-weight: 700;
-  padding-top: 6px;
+  padding-top: 0px;
+}
+#breadcrumbs{
+  margin-bottom: 0px;
+  font-size: 11px;
+  color: #C0BEBE;
+}
+#breadcrumbs a{
+  color: #C0BEBE;
 }
 #control-pane .dropdown-toggle{
   margin-top: 6px;
