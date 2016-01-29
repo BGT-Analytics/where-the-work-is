@@ -130,6 +130,18 @@ hr {
   max-width: 800px; 
   margin: 0 auto;
 }
+#salary-chart {
+  min-width: 200px; 
+  height: 600px; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+#comp-chart {
+  min-width: 200px; 
+  height: 600px; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
 
 #scatter-demand {
   min-width: 200px; 

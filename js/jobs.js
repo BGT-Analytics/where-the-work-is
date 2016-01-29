@@ -267,9 +267,9 @@ function updateAgg(education){
     $("#default-content").show()
     $("#charts").show()
 
-    makeDemandBarChart('#bar-demand', agg_demand)
-    makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
-    makeCompScatterPlot('#scatter-comp', agg_data_scatter)
+    makeDemandChart('#bar-demand', agg_demand)
+    // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
+    // makeCompScatterPlot('#scatter-comp', agg_data_scatter)
 }
 
 function updateLep(region_name, lep_name, education){
@@ -312,9 +312,9 @@ function updateLep(region_name, lep_name, education){
         return false;
     });
 
-    makeDemandBarChart('#bar-demand', lep_data)
-    makeDemandScatterPlot('#scatter-demand', lep_data_scatter)
-    makeCompScatterPlot('#scatter-comp', lep_data_scatter)
+    makeDemandChart('#bar-demand', lep_data)
+    // makeDemandScatterPlot('#scatter-demand', lep_data_scatter)
+    // makeCompScatterPlot('#scatter-comp', lep_data_scatter)
 }
 
 
@@ -357,9 +357,11 @@ function updateRegion(region_name, education){
     $("#current-location-name").text(toTitleCase(region_name))
 
 
-    makeDemandBarChart('#bar-demand', place_data)
-    makeDemandScatterPlot('#scatter-demand', place_data_scatter)
-    makeCompScatterPlot('#scatter-comp', place_data_scatter)
+    makeDemandChart('#bar-demand', place_data)
+    makeSalaryChart('#salary-chart', place_data)
+    makeCompChart('#comp-chart', place_data)
+    // makeDemandScatterPlot('#scatter-demand', place_data_scatter)
+    // makeCompScatterPlot('#scatter-comp', place_data_scatter)
 
 }
 
