@@ -8,6 +8,189 @@ var regions_occ_geojson;
 
 var occ_map;
 
+var geo_hierarchy = {
+    'name': 'UK Total',
+    'level': 'Country',
+    'children': [
+        {
+            'name': 'NORTHERN IRELAND',
+            'level': 'Nation',
+            'children': []
+        },
+        {
+            'name': 'SCOTLAND',
+            'level': 'Nation',
+            'children': []
+        },
+        {
+            'name': 'WALES',
+            'level': 'Nation',
+            'children': []
+        },
+        {
+            'name': 'ENGLAND',
+            'level': 'Nation',
+            'children': [
+                {
+                    'name': 'EAST MIDLANDS',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Leicester and Leicestershire',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Derby, Derbyshire, Nottingham and Nottinghamshire',
+                            'level': 'LEP'
+                        }
+
+                    ]
+                },
+                {
+                    'name': 'EAST OF ENGLAND',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Greater Cambridge and Greater Peterborough',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'New Anglia',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'South East',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'GREATER LONDON',
+                    'level': 'Region',
+                    'children': []
+                },
+                {
+                    'name': 'NORTH EAST ENGLAND',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'North Eastern',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Tees Valley',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'NORTH WEST ENGLAND',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Greater Manchester',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Lancashire',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Liverpool City Region',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'SOUTH EAST ENGLAND',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Coast to Capital',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Oxfordshire',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Solent',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Thames Valley Berkshire',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'SOUTH WEST ENGLAND',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Cornwall and Isles of Scilly',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Heart of the South West',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Swindon and Wiltshire',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'West of England',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'WEST MIDLANDS',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Black Country',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Coventry and Warwickshire',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Greater Birmingham and Solihull',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Stoke-on-Trent and Staffordshire',
+                            'level': 'LEP'
+                        }
+                    ]
+                },
+                {
+                    'name': 'YORKSHIRE AND THE HUMBER',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'Humber',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Leeds City Region',
+                            'level': 'LEP'
+                        },
+                        {
+                            'name': 'Sheffield City Region',
+                            'level': 'LEP'
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ]
+};
+
 
 // do stuff when the page loads
 (function(){
@@ -32,38 +215,24 @@ function initialize(){
             updateLocation('Country', 'UK Total', decodeURIComponent($.address.parameter("education")))
         }
 
-    });
-
-
-    $.when($.get('data/job_types_by_lep_merge.csv')).then(function(csv){
-        job_types_by_lep = _.where($.csv.toObjects(csv), {medium_skilled: "1"});
-
-        region_lep_mapping = _.chain(job_types_by_lep).groupBy("region_or_nation").map(function(value, key) {
-            return {
-                region_or_nation: key,
-                leps_within: _.uniq(_.pluck(value, "lep"))
-            }
-        }).value()
-
         // populating select menu w/ regions & leps
-        $.each(region_lep_mapping, function(index, value){
-            var r = value['region_or_nation']
-            $('#location-select-list').append('<li><a class="option-region" href="/#?region='+r+'">'+toTitleCase(r)+'</a></li>')
-            $.each(value['leps_within'] , function(index, value){
-                $('#location-select-list').append('<li class="small"><a class="option-lep" href="/#?region='+r+'&lep='+value+'">'+value+'</a></li>')
-                $('.option-lep').last().click(function() {
-                    updateLep(r, value, 'fe')
-                    return false;
+        $.each(geo_hierarchy['children'], function(index, value){
+            n = value['name']
+            $('#location-select-list').append('<li><a class="option-nation" href="">'+toTitleCase(n)+'</a></li>')
+            // loop thru regions within nation
+            $.each(value['children'] , function(index, value){
+                r = value['name']
+                $('#location-select-list').append('<li><a class="option-region" href="">'+toTitleCase(r)+'</a></li>')
+                // loop thru leps within region
+                $.each(value['children'] , function(index, value){
+                    l = value['name']
+                    $('#location-select-list').append('<li><a class="option-lep" href="">'+l+'</a></li>')
                 });
-            });
-
-            $('.option-region').last().click(function() {
-                updateRegion(r, 'fe')
-                return false;
             });
         });
 
     });
+
 
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         var occupation_title = $('#occupation-detail-title').html();

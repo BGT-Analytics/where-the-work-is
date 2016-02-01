@@ -82,6 +82,19 @@ hr {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+#location-select-list .option-nation{
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+#location-select-list .option-region{
+  padding-left: 20px;
+  font-size: 12px;
+}
+#location-select-list .option-lep{
+  padding-left: 30px;
+  font-size: 10px;
+}
 
 
 
