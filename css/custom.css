@@ -34,16 +34,6 @@ hr {
 
 
 
-#list-select p{
-  margin-bottom: 2px;
-}
-#list-select .option-region{
-  font-size: .8em;
-}
-#list-select .option-lep{
-  font-size: .8em;
-  margin-left: 10px;
-}
 
 
 
@@ -58,9 +48,6 @@ hr {
 }
 #control-pane h5{
   color: #A0A09D;
-}
-#list-select a, #list-select a:hover {
-  color: #fbab18;
 }
 #site-title{
   color: #fff;
@@ -86,6 +73,19 @@ hr {
   background-color: #C0BEBE;
   color: #5A5858;
 }
+
+
+
+
+/* location select dropdown */
+#location-select-list>li>a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+
 
 
 #education-select{
