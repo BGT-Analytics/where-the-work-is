@@ -1,16 +1,12 @@
 // variable init
-var map;
-var info;
-var regions_data;
-var regions_geojson;
-var job_types_data;
-var job_types_by_region;
-var job_types_by_lep;
-var display_columns_all = ['region_or_nation','job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_sl', 'demand_entry_fe', 'demand_entry_he'];
-var display_columns_region = ['job_family','occupation', 'demand_entry', 'demand_ticker', 'demand_entry_sl', 'demand_entry_fe', 'demand_entry_he'];
+var occupation_data;
+
 var region_lep_mapping;
-var occ_map;
+
+var regions_data;
 var regions_occ_geojson;
+
+var occ_map;
 
 
 // do stuff when the page loads
@@ -24,10 +20,9 @@ var regions_occ_geojson;
 
 function initialize(){
 
-    $.when($.getJSON('data/merged_regions.geojson'), $.get('data/job_types_by_region.csv')).then(function(geojson, csv){
+    $.when($.getJSON('data/merged_regions.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
         regions_data = geojson
-        job_types_data = csv
-        job_types_by_region = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
+        occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
 
         if($.address.parameter("region")){
@@ -219,29 +214,15 @@ function initialize(){
 
 function updateAgg(education){
 
-    var agg_demand = _.chain(job_types_by_region)
-        .groupBy("occupation")
-        .map(function(value, key) {
-            return {
-                occupation: key,
-                demand_entry: sum(_.pluck(value, "demand_entry")),
-                demand_entry_he: sum(_.pluck(value, "demand_entry_he")),
-                demand_entry_fe: sum(_.pluck(value, "demand_entry_fe")),
-                demand_entry_sl: sum(_.pluck(value, "demand_entry_sl")),
-                advertised_avg_salary_entry_degree: parseFloat(value[0]["advertised_avg_salary_entry_degree"]),
-                //how to aggregate fe_ds_ratio_log?
-                include_he: value[0]["include_he"],
-                include_fe: value[0]["include_fe"]
-            }
-        })
-        .value();
+    geo_type = 'Country'
 
     $.address.parameter('education', education);
     $.address.parameter('region', '');
     $.address.parameter('lep', '');
 
+    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total'})
     if (education=='he'){
-        var agg_data_scatter = _.where(agg_demand, {include_he: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total', include_he: "1"})
 
         $("#he-select").attr('class', 'btn btn-xs btn-default selected');
         $("#fe-select").attr('class', 'btn btn-xs btn-default');
@@ -252,7 +233,7 @@ function updateAgg(education){
         });
     }
     else{
-        var agg_data_scatter = _.where(agg_demand, {include_fe: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total', include_fe: "1"})
 
         $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
         $("#he-select").attr('class', 'btn btn-xs btn-default');
@@ -267,20 +248,24 @@ function updateAgg(education){
     $("#default-content").show()
     $("#charts").show()
 
-    makeDemandChart('#bar-demand', agg_demand)
+    makeDemandChart('#bar-demand', place_data)
+    makeSalaryChart('#salary-chart', place_data)
+    makeCompChart('#comp-chart', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
     // makeCompScatterPlot('#scatter-comp', agg_data_scatter)
 }
 
 function updateLep(region_name, lep_name, education){
 
+    geo_type = 'LEP'
+
     $.address.parameter('region', region_name);
     $.address.parameter('lep', lep_name);
     $.address.parameter('education', education);
 
-    var lep_data = _.where(job_types_by_lep, {lep: lep_name})
+    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name})
     if (education=='he'){
-        var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_he: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name, include_he: "1"})
 
         $("#he-select").attr('class', 'btn btn-xs btn-default selected');
         $("#fe-select").attr('class', 'btn btn-xs btn-default');
@@ -291,7 +276,7 @@ function updateLep(region_name, lep_name, education){
         });
     }
     else{
-        var lep_data_scatter = _.where(job_types_by_lep, {lep: lep_name, include_fe: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name, include_fe: "1"})
 
         $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
         $("#he-select").attr('class', 'btn btn-xs btn-default');
@@ -312,7 +297,9 @@ function updateLep(region_name, lep_name, education){
         return false;
     });
 
-    makeDemandChart('#bar-demand', lep_data)
+    makeDemandChart('#bar-demand', place_data)
+    makeSalaryChart('#salary-chart', place_data)
+    makeCompChart('#comp-chart', place_data)
     // makeDemandScatterPlot('#scatter-demand', lep_data_scatter)
     // makeCompScatterPlot('#scatter-comp', lep_data_scatter)
 }
@@ -320,13 +307,15 @@ function updateLep(region_name, lep_name, education){
 
 function updateRegion(region_name, education){
 
+    geo_type = 'Region'
+
     $.address.parameter('region', region_name);
     $.address.parameter('lep', '');
     $.address.parameter('education', education);
 
-    var place_data = _.where(job_types_by_region, {region_or_nation: region_name})
+    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name})
     if (education=='he'){
-        var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_he: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name, include_he: "1"})
 
         $("#he-select").attr('class', 'btn btn-xs btn-default selected');
         $("#fe-select").attr('class', 'btn btn-xs btn-default');
@@ -338,7 +327,7 @@ function updateRegion(region_name, education){
 
     }
     else{
-        var place_data_scatter = _.where(job_types_by_region, {region_or_nation: region_name, include_fe: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name, include_fe: "1"})
 
         $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
         $("#he-select").attr('class', 'btn btn-xs btn-default');
