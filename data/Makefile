@@ -1,12 +1,11 @@
 include config.mk
 
-all: merged_regions.geojson job_types_by_lep_merge.csv
+all: merged_regions.geojson occupation_data.csv
 
 .PHONY: clean
 clean: 
 	rm merged_regions.geojson
-	rm job_types_by_lep.csv
-	rm job_types_by_lep_merge.csv
+	rm occupation_data.csv
 
 define convert_srs
 	ogr2ogr -t_srs EPSG:4326 $@ $<
@@ -56,29 +55,13 @@ merged_regions.table: gb_regions.append
 		   GROUP BY name \
 		 )"
 
-job_types_by_region.csv:
-	in2csv --sheet "SOC3 x Region" BGT_UK_IPPR_Data.xlsx | \
+occupation_data.csv: BGT_UK_IPPR_input_data.xlsx
+	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 
-job_types_by_lep.csv:
-	in2csv --sheet "SOC3 x LEP" BGT_UK_IPPR_Data.xlsx | \
-		python slugify_header.py > $@
-
-job_types_by_region.table: job_types_by_region.csv
+job_types_by_region.table: occupation_data.csv
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS job_types_by_region"
-	csvsql $< --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_region
-
-job_types_by_lep.table: job_types_by_lep.csv
-	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c "DROP TABLE IF EXISTS job_types_by_lep"
-	csvsql $< --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_lep
-
-job_types_by_lep_merge.csv: job_types_by_lep.table merged_regions.update
-	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
-	"copy ( select l.*, r.job_region as region_or_nation \
-				from job_types_by_lep as l \
-				join merged_regions as r \
-				on st_contains(geom, st_setsrid(st_makepoint(l.lon, l.lat), 4326))\
-			) to stdout with csv header" > job_types_by_lep_merge.csv 
+	csvgrep -c 'geography_type' -r "(Region|Nation)" $< | csvsql --db "postgresql://$(PG_USER):@$(PG_HOST):$(PG_PORT)/$(PG_DB)" --insert --table job_types_by_region
 
 merged_regions.alter: merged_regions.table
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
