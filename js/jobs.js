@@ -25,19 +25,11 @@ function initialize(){
         occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
 
-        if($.address.parameter("region")){
-            if($.address.parameter("lep")){
-                // lep view
-                updateLep(decodeURIComponent($.address.parameter("region")), decodeURIComponent($.address.parameter("lep")), $.address.parameter("education"))
-            }
-            else{
-                // region view
-                updateRegion(decodeURIComponent($.address.parameter("region")), $.address.parameter("education"))
-            }
+        if($.address.parameter("location_type") && $.address.parameter("location")){
+            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")), decodeURIComponent($.address.parameter("education")))
         }
         else{
-            // aggregate view (default)
-            updateAgg($.address.parameter("education"))
+            updateLocation('Country', 'UK Total', decodeURIComponent($.address.parameter("education")))
         }
 
     });
@@ -211,42 +203,62 @@ function initialize(){
 }
 
 
+function updateLocation(geo_type, geo_name, education){
 
-function updateAgg(education){
+    var geo_display_name = geo_name
 
-    geo_type = 'Country'
+    if(education != 'fe' && education != 'he'){
+        // setting default education level
+        education = 'fe'
+    }
+    else{
+        $.address.parameter('education', education);
+    }
 
-    $.address.parameter('education', education);
-    $.address.parameter('region', '');
-    $.address.parameter('lep', '');
+    if(geo_type=="Country" && geo_name=='UK Total'){
+        geo_display_name = "The United Kingdom"
+    }
+    else{
+        $.address.parameter('location_type', geo_type)
+        $.address.parameter('location', geo_name)
+    }
 
-    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total'})
+    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
     if (education=='he'){
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total', include_he: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_he: "1"})
 
         $("#he-select").attr('class', 'btn btn-xs btn-default selected');
         $("#fe-select").attr('class', 'btn btn-xs btn-default');
 
         $('#fe-select').click(function() {
-            updateAgg('fe')
+            updateLocation(geo_type, geo_name, 'fe')
             return false;
         });
     }
     else{
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: 'UK Total', include_fe: "1"})
+        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_fe: "1"})
 
         $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
         $("#he-select").attr('class', 'btn btn-xs btn-default');
 
         $('#he-select').click(function() {
-            updateAgg('he')
+            updateLocation(geo_type, geo_name, 'he')
             return false;
         });
     }
 
-    $("#current-location-name").text("The United Kingdom")
-    $("#default-content").show()
-    $("#charts").show()
+    $("#current-location-name").text(geo_display_name)
+
+    // TO-DO: update breadcrumbs
+    //$("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+
+    // TO-DO: move this logic elsewhere
+    if(geo_type=='Country'){
+        $("#default-content").show()
+    }
+    else{
+        $("#default-content").hide()
+    }
 
     makeDemandChart('#bar-demand', place_data)
     makeSalaryChart('#salary-chart', place_data)
@@ -255,104 +267,6 @@ function updateAgg(education){
     // makeCompScatterPlot('#scatter-comp', agg_data_scatter)
 }
 
-function updateLep(region_name, lep_name, education){
-
-    geo_type = 'LEP'
-
-    $.address.parameter('region', region_name);
-    $.address.parameter('lep', lep_name);
-    $.address.parameter('education', education);
-
-    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name})
-    if (education=='he'){
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name, include_he: "1"})
-
-        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#fe-select").attr('class', 'btn btn-xs btn-default');
-
-        $('#fe-select').click(function() {
-            updateLep(region_name, lep_name, 'fe')
-            return false;
-        });
-    }
-    else{
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: lep_name, include_fe: "1"})
-
-        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#he-select").attr('class', 'btn btn-xs btn-default');
-
-        $('#he-select').click(function() {
-            updateLep(region_name, lep_name, 'he')
-            return false;
-        });
-    }
-
-
-    $("#default-content").hide()
-    $("#charts").show()
-    $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
-    $("#current-location-name").text(lep_name)
-    $('.option-region').last().click(function() {
-        updateRegion(region_name, 'fe')
-        return false;
-    });
-
-    makeDemandChart('#bar-demand', place_data)
-    makeSalaryChart('#salary-chart', place_data)
-    makeCompChart('#comp-chart', place_data)
-    // makeDemandScatterPlot('#scatter-demand', lep_data_scatter)
-    // makeCompScatterPlot('#scatter-comp', lep_data_scatter)
-}
-
-
-function updateRegion(region_name, education){
-
-    geo_type = 'Region'
-
-    $.address.parameter('region', region_name);
-    $.address.parameter('lep', '');
-    $.address.parameter('education', education);
-
-    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name})
-    if (education=='he'){
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name, include_he: "1"})
-
-        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#fe-select").attr('class', 'btn btn-xs btn-default');
-
-        $('#fe-select').click(function() {
-            updateRegion(region_name, 'fe')
-            return false;
-        });
-
-    }
-    else{
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: region_name, include_fe: "1"})
-
-        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#he-select").attr('class', 'btn btn-xs btn-default');
-
-        $('#he-select').click(function() {
-            updateRegion(region_name, 'he')
-            return false;
-        });
-
-    }
-
-
-    $("#default-content").hide()
-    $("#charts").show()
-    $("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <strong>' + toTitleCase(region_name) + '</strong>');
-    $("#current-location-name").text(toTitleCase(region_name))
-
-
-    makeDemandChart('#bar-demand', place_data)
-    makeSalaryChart('#salary-chart', place_data)
-    makeCompChart('#comp-chart', place_data)
-    // makeDemandScatterPlot('#scatter-demand', place_data_scatter)
-    // makeCompScatterPlot('#scatter-comp', place_data_scatter)
-
-}
 
 
 function showOccupationDetail(occupation){
