@@ -51,7 +51,7 @@ var geo_hierarchy = {
                     'level': 'Region',
                     'children': [
                         {
-                            'name': 'Greater Cambridge and Greater Peterborough',
+                            'name': 'Greater Cambridge & Greater Peterborough',
                             'level': 'LEP'
                         },
                         {
@@ -74,7 +74,7 @@ var geo_hierarchy = {
                     'level': 'Region',
                     'children': [
                         {
-                            'name': 'North Eastern',
+                            'name': 'North East',
                             'level': 'LEP'
                         },
                         {
@@ -207,9 +207,10 @@ function initialize(){
         regions_data = geojson
         occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
+        var edu_param = decodeURIComponent($.address.parameter("education"))
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
-            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")), decodeURIComponent($.address.parameter("education")))
+            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")), edu_param)
         }
         else{
             updateLocation('Country', 'UK Total', decodeURIComponent($.address.parameter("education")))
@@ -218,17 +219,30 @@ function initialize(){
         // populating select menu w/ regions & leps
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
-            $('#location-select-list').append('<li><a class="option-nation" href="">'+toTitleCase(n)+'</a></li>')
+            $('#location-select-list').append('<li><a class="option-nation" data="'+n+'" href="">'+toTitleCase(n)+'</a></li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
                 r = value['name']
-                $('#location-select-list').append('<li><a class="option-region" href="">'+toTitleCase(r)+'</a></li>')
+                $('#location-select-list').append('<li><a class="option-region" data="'+r+'" href="">'+toTitleCase(r)+'</a></li>')
                 // loop thru leps within region
                 $.each(value['children'] , function(index, value){
                     l = value['name']
-                    $('#location-select-list').append('<li><a class="option-lep" href="">'+l+'</a></li>')
+                    $('#location-select-list').append('<li><a class="option-lep" data="'+l+'" href="">'+l+'</a></li>')
                 });
             });
+        });
+
+        $('#control-pane').on('click', '.option-nation', function() {
+            updateLocation('Nation', $(this).attr('data'), edu_param);
+            return false;
+        });
+        $('#control-pane').on('click', '.option-region', function() {
+            updateLocation('Region', $(this).attr('data'), edu_param);
+            return false;
+        });
+        $('#control-pane').on('click', '.option-lep', function() {
+            updateLocation('LEP', $(this).attr('data'), edu_param);
+            return false;
         });
 
     });
@@ -381,15 +395,15 @@ function updateLocation(geo_type, geo_name, education){
         education = 'fe'
     }
     else{
-        $.address.parameter('education', education);
+        $.address.parameter('education', encodeURIComponent(education));
     }
 
     if(geo_type=="Country" && geo_name=='UK Total'){
         geo_display_name = "The United Kingdom"
     }
     else{
-        $.address.parameter('location_type', geo_type)
-        $.address.parameter('location', geo_name)
+        $.address.parameter('location_type', encodeURIComponent(geo_type))
+        $.address.parameter('location', encodeURIComponent(geo_name))
     }
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
