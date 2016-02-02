@@ -112,7 +112,22 @@ hr {
 
 /* buttons */
 #education-select{
-  text-align: center;
+  position: relative;
+  top: 30px;
+  right: 10px;
+  z-index: 1;
+}
+#education-select .btn{
+  border: 1px solid #F47730;
+  color: #F47730;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+#education-select .btn.selected, #education-select .btn:hover{
+  /*background-color: #eee;
+  color: #F47730;*/
+  background-color: #F47730;
+  color: #fff;
 }
 
 .btn, .btn:hover{
@@ -136,7 +151,7 @@ hr {
   background-color: inherit;
   color: #006167;
 }
-.btn-default.selected, .btn-default:hover{
+.btn-default:hover{
   border: 1px solid #006167;
   background-color: #006167;
   color: #fff;

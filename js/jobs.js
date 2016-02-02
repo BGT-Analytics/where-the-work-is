@@ -236,8 +236,8 @@ function updateLocation(geo_type, geo_name, education){
     if (education=='he'){
         var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_he: "1"})
 
-        $("#he-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#fe-select").attr('class', 'btn btn-xs btn-default');
+        $("#he-select").attr('class', 'btn selected');
+        $("#fe-select").attr('class', 'btn');
 
         $('#fe-select').click(function() {
             updateLocation(geo_type, geo_name, 'fe')
@@ -247,8 +247,8 @@ function updateLocation(geo_type, geo_name, education){
     else{
         var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_fe: "1"})
 
-        $("#fe-select").attr('class', 'btn btn-xs btn-default selected');
-        $("#he-select").attr('class', 'btn btn-xs btn-default');
+        $("#fe-select").attr('class', 'btn selected');
+        $("#he-select").attr('class', 'btn');
 
         $('#he-select').click(function() {
             updateLocation(geo_type, geo_name, 'he')
