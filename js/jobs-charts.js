@@ -54,7 +54,7 @@ function makeDemandChart(element_id, data){
         }
         , {
             name: 'School Leavers',
-            color: '#f47730',
+            color: '#a89b91',
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
@@ -100,26 +100,19 @@ function makeCompScatterPlot(element_id, data, edu){
         var point_color = "#fbab18"
     }
 
-    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', ['Less Competition', 'More Competition'], point_color)
+    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', point_color)
 }
 
 
 
-function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, chart_labels, point_color){
+function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, point_color){
     var chart_height = $(element_id).height()
 
     $(element_id).highcharts({
 
         chart: {
             type: 'scatter',
-            zoomType: 'xy',
-            // plotBackgroundColor: {
-            //     linearGradient: [0, 0, 0, chart_height],
-            //     stops: [
-            //         [0, 'rgb(225, 242, 241)'], //green
-            //         [1, 'rgb(242, 231, 225)']  //red
-            //     ]
-            // }
+            zoomType: 'xy'
         },
 
         credits: {
@@ -155,6 +148,8 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
 
         yAxis: {
             gridLineWidth: 0,
+            startOnTick: true,
+            endOnTick: true,
             title: {
                 text: y_label_full,
                 style: {
@@ -162,10 +157,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
                 }
             },
             labels: {
-                style: {
-                    color: '#aaa',
-                    fontSize: '9px',
-                }
+                enabled: false
             }
         },
 
@@ -182,15 +174,15 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
         labels: {
             items: [
                 {
-                    html: "↑ "+chart_labels[0],
+                    html: "↑ Less Competition",
                     style: {
-                        color: '#006167',
+                        color: '#f47730',
                         left: '10px',
                         top: '10px',
                     }
                 },
                 {
-                    html: "↓ "+chart_labels[1],
+                    html: "↓ More Competition",
                     style: {
                         color: '#f47730',
                         left: '10px',
@@ -252,7 +244,8 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                     return shortenName(this.value);
                 },
                 style: {
-                    fontSize: '9px'
+                    fontSize: '9px',
+                    color: '#aaa'
                 }
             },
             lineColor: '#eee'
