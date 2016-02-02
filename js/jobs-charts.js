@@ -81,7 +81,7 @@ function makeDemandChart(element_id, data){
 //     scatterHelper(element_id, prepped_data, 'Demand', 'Demand (# jobs)', ['More Jobs', 'Fewer Jobs'])
 // }
 
-function makeCompScatterPlot(element_id, data){
+function makeCompScatterPlot(element_id, data, edu){
     var prepped_data = []
     $(data).each(function(i, row){
         point = {
@@ -93,12 +93,19 @@ function makeCompScatterPlot(element_id, data){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', ['Less Competition', 'More Competition'])
+    if (edu=='he'){
+        var point_color = '#006167'
+    }
+    else{
+        var point_color = "#fbab18"
+    }
+
+    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', ['Less Competition', 'More Competition'], point_color)
 }
 
 
 
-function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, chart_labels){
+function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, chart_labels, point_color){
     var chart_height = $(element_id).height()
 
     $(element_id).highcharts({
@@ -202,10 +209,11 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
                     style: {
                         fontWeight: 'normal',
                         fontSize: '8px',
-                        color: '#777'
+                        color: '#aaa',
+                        textShadow: false
                     }
                 },
-                color: '#777',
+                color: point_color,
                 allowPointSelect: true,
                 point: {
                     events: {

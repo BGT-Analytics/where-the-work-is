@@ -124,8 +124,6 @@ hr {
   font-size: 10px;
 }
 #education-select .btn.selected, #education-select .btn:hover{
-  /*background-color: #eee;
-  color: #F47730;*/
   background-color: #F47730;
   color: #fff;
 }

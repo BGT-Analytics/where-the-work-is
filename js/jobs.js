@@ -267,7 +267,7 @@ function updateLocation(geo_type, geo_name, education){
 
     makeDemandChart('#bar-demand', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
-    makeCompScatterPlot('#scatter-comp', place_data_edu)
+    makeCompScatterPlot('#scatter-comp', place_data_edu, education)
 }
 
 
