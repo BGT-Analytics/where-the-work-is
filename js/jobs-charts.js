@@ -158,7 +158,9 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             },
             labels: {
                 enabled: false
-            }
+            },
+            lineColor: '#eee',
+            lineWidth: 1
         },
 
         tooltip: {
@@ -228,7 +230,8 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
 function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_label_short){
     $(element_id).highcharts({
         chart: {
-            type: 'bar'
+            type: 'bar',
+            zoomType: 'y'
         },
         credits: {
             enabled: false
@@ -284,7 +287,10 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
             headerFormat: '<table><tr><th colspan="2"><strong>{point.x}</strong></th></tr>',
             pointFormat:  '<tr><th>{series.name}:</th><td>{point.y:,.0f}</td></tr>',
             footerFormat: '</table>',
-            shared: true
+            shared: true,
+            positioner: function () {
+                return { x: 200, y: 350 };
+            }
         },
         plotOptions: {
             bar: {
