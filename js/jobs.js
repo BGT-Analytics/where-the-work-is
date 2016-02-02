@@ -191,6 +191,46 @@ var geo_hierarchy = {
     ]
 };
 
+var breadcrumbs = {
+    "NORTHERN IRELAND":[],
+    "SCOTLAND":[],
+    "WALES":[],
+    "ENGLAND":[],
+    "EAST MIDLANDS":["ENGLAND"],
+    "Leicester and Leicestershire":["ENGLAND","EAST MIDLANDS"],
+    "Derby, Derbyshire, Nottingham and Nottinghamshire":["ENGLAND","EAST MIDLANDS"],
+    "EAST OF ENGLAND":["ENGLAND"],
+    "Greater Cambridge & Greater Peterborough":["ENGLAND","EAST OF ENGLAND"],
+    "New Anglia":["ENGLAND","EAST OF ENGLAND"],
+    "South East":["ENGLAND","EAST OF ENGLAND"],
+    "GREATER LONDON":["ENGLAND"],
+    "NORTH EAST ENGLAND":["ENGLAND"],
+    "North East":["ENGLAND","NORTH EAST ENGLAND"],
+    "Tees Valley":["ENGLAND","NORTH EAST ENGLAND"],
+    "NORTH WEST ENGLAND":["ENGLAND"],
+    "Greater Manchester":["ENGLAND","NORTH WEST ENGLAND"],
+    "Lancashire":["ENGLAND","NORTH WEST ENGLAND"],
+    "Liverpool City Region":["ENGLAND","NORTH WEST ENGLAND"],
+    "SOUTH EAST ENGLAND":["ENGLAND"],
+    "Coast to Capital":["ENGLAND","SOUTH EAST ENGLAND"],
+    "Oxfordshire":["ENGLAND","SOUTH EAST ENGLAND"],
+    "Solent":["ENGLAND","SOUTH EAST ENGLAND"],
+    "Thames Valley Berkshire":["ENGLAND","SOUTH EAST ENGLAND"],
+    "SOUTH WEST ENGLAND":["ENGLAND"],
+    "Cornwall and Isles of Scilly":["ENGLAND","SOUTH WEST ENGLAND"],
+    "Heart of the South West":["ENGLAND","SOUTH WEST ENGLAND"],
+    "Swindon and Wiltshire":["ENGLAND","SOUTH WEST ENGLAND"],
+    "West of England":["ENGLAND","SOUTH WEST ENGLAND"],
+    "WEST MIDLANDS":["ENGLAND"],
+    "Black Country":["ENGLAND","WEST MIDLANDS"],
+    "Coventry and Warwickshire":["ENGLAND","WEST MIDLANDS"],
+    "Greater Birmingham and Solihull":["ENGLAND","WEST MIDLANDS"],
+    "Stoke-on-Trent and Staffordshire":["ENGLAND","WEST MIDLANDS"],
+    "YORKSHIRE AND THE HUMBER":["ENGLAND"],
+    "Humber":["ENGLAND","YORKSHIRE AND THE HUMBER"],
+    "Leeds City Region":["ENGLAND","YORKSHIRE AND THE HUMBER"],
+    "Sheffield City Region":["ENGLAND","YORKSHIRE AND THE HUMBER"]
+};
 
 // do stuff when the page loads
 (function(){
@@ -219,19 +259,26 @@ function initialize(){
         // populating select menu w/ regions & leps
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
-            $('#location-select-list').append('<li><a class="option-nation" data="'+n+'" href="">'+toTitleCase(n)+'</a></li>')
+            n_link_html = makeLinkHTML(n, toTitleCase(n), 'option-nation')
+            $('#location-select-list').append('<li>'+n_link_html+'</li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
                 r = value['name']
-                $('#location-select-list').append('<li><a class="option-region" data="'+r+'" href="">'+toTitleCase(r)+'</a></li>')
+                r_link_html =  makeLinkHTML(r, toTitleCase(r), 'option-region')
+                $('#location-select-list').append('<li>'+r_link_html+'</li>')
                 // loop thru leps within region
                 $.each(value['children'] , function(index, value){
                     l = value['name']
-                    $('#location-select-list').append('<li><a class="option-lep" data="'+l+'" href="">'+l+'</a></li>')
+                    l_link_html = makeLinkHTML(l, l, 'option-lep')
+                    $('#location-select-list').append('<li>'+l_link_html+'</li>')
                 });
             });
         });
 
+        $('#control-pane').on('click', '.option-country', function() {
+            updateLocation('Country', 'UK Total', edu_param);
+            return false;
+        });
         $('#control-pane').on('click', '.option-nation', function() {
             updateLocation('Nation', $(this).attr('data'), edu_param);
             return false;
@@ -244,7 +291,6 @@ function initialize(){
             updateLocation('LEP', $(this).attr('data'), edu_param);
             return false;
         });
-
     });
 
 
@@ -432,8 +478,12 @@ function updateLocation(geo_type, geo_name, education){
 
     $("#current-location-name").text(geo_display_name)
 
-    // TO-DO: update breadcrumbs
-    //$("#breadcrumbs").html('<a href="/">The United Kingdom</a> &raquo; <a class="option-region" href="" id="/#?region='+region_name+'">'+toTitleCase(region_name)+'</a> &raquo; <strong>'+lep_name+'</strong>');
+    // updating breadcrumbs
+    $('#breadcrumbs').html("&nbsp;") // TO-DO: add default text for breadcrumbs for uk
+    var breadcrumb_links = makeBreadcrumbLinks(geo_name)
+    $.each(breadcrumb_links, function(index, value){
+        $('#breadcrumbs').append(value+' &raquo; ')
+    });
 
     // TO-DO: move this logic elsewhere
     if(geo_type=='Country'){
@@ -459,3 +509,28 @@ function showOccupationDetail(occupation){
     $('#occupation-detail-modal').modal('show');
 }
 
+function makeLinkHTML(data, display_name, cls){
+    return '<a class="'+cls+'" data="'+data+'" href="">'+display_name+'</a>'
+}
+
+function makeBreadcrumbLinks(geo_name){
+    if(geo_name=='UK Total'){
+        return [];
+    }
+    else{
+        var links = [ makeLinkHTML("UK Total", "The United Kingdom", "option-country") ]
+        var b = breadcrumbs[geo_name]
+        if(b.length==0){
+            return links
+        }
+        else if(b.length==1){
+            var n = b[0]
+            return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation')] )
+        }
+        else if(b.length==2){
+            var n = b[0]
+            var r = b[1]
+            return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation'), makeLinkHTML(r, toTitleCase(r), 'option-region')] )
+        }
+    }
+}
