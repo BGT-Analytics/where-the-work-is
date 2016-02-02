@@ -221,3 +221,148 @@ var breadcrumbs = {
     "Leeds City Region":["ENGLAND","YORKSHIRE AND THE HUMBER"],
     "Sheffield City Region":["ENGLAND","YORKSHIRE AND THE HUMBER"]
 };
+
+
+var occupation_mapping = {
+    "Science, Engineering and Production Technicians":{
+        "short_name":"Engineering Techs",
+        "description":"",
+        "example_titles":""},
+    "Draughtspersons and Related Architectural Technicians":{
+        "short_name":"Architectural Techs",
+        "description":"",
+        "example_titles":""},
+    "Information Technology Technicians":{
+        "short_name":"IT Techs",
+        "description":"",
+        "example_titles":""},
+    "Health Associate Professionals":{
+        "short_name":"Health Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Welfare and Housing Associate Professionals":{
+        "short_name":"Welfare Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Protective Service Occupations":{
+        "short_name":"Protective Service",
+        "description":"",
+        "example_titles":""},
+    "Artistic, Literary and Media Occupations":{
+        "short_name":"Artistic/Media Occs",
+        "description":"",
+        "example_titles":""},
+    "Design Occupations":{
+        "short_name":"Design Occs",
+        "description":"",
+        "example_titles":""},
+    "Sports and Fitness Occupations":{
+        "short_name":"Sports Occs",
+        "description":"",
+        "example_titles":""},
+    "Transport Associate Professionals":{
+        "short_name":"Transport Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Legal Associate Professionals":{
+        "short_name":"Legal Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Business, Finance and Related Associate Professionals":{
+        "short_name":"Business Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Sales, Marketing and Related Associate Professionals":{
+        "short_name":"Sales  Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Conservation and Environmental Associate Professionals":{
+        "short_name":"Environmental Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Public Services and Other Associate Professionals":{
+        "short_name":"Public Services Assoc. Profnls",
+        "description":"",
+        "example_titles":""},
+    "Administrative Occupations: Finance":{
+        "short_name":"Administrative: Finance",
+        "description":"",
+        "example_titles":""},
+    "Administrative Occupations: Records":{
+        "short_name":"Administrative: Records",
+        "description":"",
+        "example_titles":""},
+    "Administrative Occupations: Office Managers and Supervisors":{
+        "short_name":"Administrative: Office Mngrs",
+        "description":"",
+        "example_titles":""},
+    "Secretarial and Related Occupations":{
+        "short_name":"Secretarial Occs",
+        "description":"",
+        "example_titles":""},
+    "Agricultural and Related Trades":{
+        "short_name":"Agricultural Trades",
+        "description":"",
+        "example_titles":""},
+    "Metal Forming, Welding and Related Trades":{
+        "short_name":"Metal Forming Trades",
+        "description":"",
+        "example_titles":""},
+    "Metal Machining, Fitting and Instrument Making Trades":{
+        "short_name":"Metal Machining Trades",
+        "description":"",
+        "example_titles":""},
+    "Vehicle Trades":{
+        "short_name":"Vehicle Trades",
+        "description":"",
+        "example_titles":""},
+    "Electrical and Electronic Trades":{
+        "short_name":"Electrical/Electronic Trades",
+        "description":"",
+        "example_titles":""},
+    "Skilled Metal, Electrical and Electronic Trades Supervisors":{
+        "short_name":"Metal Trades Supvrs",
+        "description":"",
+        "example_titles":""},
+    "Construction and Building Trades":{
+        "short_name":"Construction Trades",
+        "description":"",
+        "example_titles":""},
+    "Building Finishing Trades":{
+        "short_name":"Building Finishing Trades",
+        "description":"",
+        "example_titles":""},
+    "Construction and Building Trades Supervisors":{
+        "short_name":"Construction Trades Supvrs",
+        "description":"",
+        "example_titles":""},
+    "Textiles and Garments Trades":{
+        "short_name":"Textiles Trades",
+        "description":"",
+        "example_titles":""},
+    "Printing Trades":{
+        "short_name":"Printing Trades",
+        "description":"",
+        "example_titles":""},
+    "Food Preparation and Hospitality Trades":{
+        "short_name":"Hospitality Trades",
+        "description":"",
+        "example_titles":""},
+    "Other Skilled Trades":{
+        "short_name":"Skilled Trades (Other)",
+        "description":"",
+        "example_titles":""},
+    "Childcare and Related Personal Services":{
+        "short_name":"Childcare",
+        "description":"",
+        "example_titles":""},
+    "Animal Care and Control Services":{
+        "short_name":"Animal Care",
+        "description":"",
+        "example_titles":""},
+    "Caring Personal Services":{
+        "short_name":"Personal Care",
+        "description":"",
+        "example_titles":""}
+}
+

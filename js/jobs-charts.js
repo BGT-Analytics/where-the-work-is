@@ -222,7 +222,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
         }]
 
     });
-}
+};
 
 
 function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_label_short){
@@ -303,12 +303,13 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
             }
         },
         series: prepped_data
+
     });
-}
+};
 
 
 
 
 function shortenName(long_name) {
-    return long_name.split(" ")[0].replace(/,/g , "");
-}
+    return occupation_mapping[long_name]['short_name'];
+};
