@@ -106,13 +106,13 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, ch
         chart: {
             type: 'scatter',
             zoomType: 'xy',
-            plotBackgroundColor: {
-                linearGradient: [0, 0, 0, chart_height],
-                stops: [
-                    [0, 'rgb(225, 242, 241)'], //green
-                    [1, 'rgb(242, 231, 225)']  //red
-                ]
-            }
+            // plotBackgroundColor: {
+            //     linearGradient: [0, 0, 0, chart_height],
+            //     stops: [
+            //         [0, 'rgb(225, 242, 241)'], //green
+            //         [1, 'rgb(242, 231, 225)']  //red
+            //     ]
+            // }
         },
 
         credits: {

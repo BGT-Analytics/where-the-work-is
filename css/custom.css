@@ -27,6 +27,19 @@ hr {
 }
 
 
+
+.well{
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.well-occ{
+  background-color: #c0bebe;
+  height: 160px;
+  margin: 0px 18px;
+}
+
+
 /* footer */
 #footer{
   padding: 10px 20px;
@@ -70,8 +83,8 @@ hr {
 #control-pane .dropdown-toggle{
   margin-top: 6px;
   border: none;
-  background-color: #C0BEBE;
-  color: #5A5858;
+  background-color: #f47730;
+  color: #fff;
 }
 
 
@@ -141,7 +154,7 @@ hr {
 
 #bar-demand {
   min-width: 200px; 
-  height: 600px;
+  height: 500px;
   max-width: 800px; 
   margin: 0 auto;
 }

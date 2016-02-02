@@ -265,14 +265,6 @@ function updateLocation(geo_type, geo_name, education){
         $('#breadcrumbs').append(value+' &raquo; ')
     });
 
-    // TO-DO: move this logic elsewhere
-    if(geo_type=='Country'){
-        $("#default-content").show()
-    }
-    else{
-        $("#default-content").hide()
-    }
-
     makeDemandChart('#bar-demand', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
     makeCompScatterPlot('#scatter-comp', place_data_edu)
