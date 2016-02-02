@@ -274,10 +274,8 @@ function updateLocation(geo_type, geo_name, education){
     }
 
     makeDemandChart('#bar-demand', place_data)
-    makeSalaryChart('#salary-chart', place_data)
-    makeCompChart('#comp-chart', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
-    // makeCompScatterPlot('#scatter-comp', agg_data_scatter)
+    makeCompScatterPlot('#scatter-comp', place_data_edu)
 }
 
 
