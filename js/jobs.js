@@ -272,12 +272,24 @@ function updateLocation(geo_type, geo_name, education){
 
 
 
-function showOccupationDetail(occupation){
-    $('#occupation-detail-title').html(occupation);
-    $('#occupation-detail-content').html('Description for this occupation<br/>')
+function selectOccupation(occupation){
+    // this populates the occupation detail pane on the main location view
 
-    $('#occupation-detail-modal').modal('show');
+    $("#default-occ-info").hide()
+    $("#occ-detail").show()
+
+    $("#sel-occ-name").html(occupation)
+    $("#sel-occ-desc").html(occupation_mapping[occupation]['description'])
+
+    $('#btn-occ-lq').click(function() {
+        $('#occupation-detail-title').html(occupation);
+        $('#occupation-detail-modal').modal('show');
+        return false;
+    });
 }
+
+
+
 
 function makeLinkHTML(data, display_name, cls){
     return '<a class="'+cls+'" data="'+data+'" href="">'+display_name+'</a>'

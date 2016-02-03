@@ -20,9 +20,20 @@ description: "This tool visualises the dynamics of the entry level job market fo
   <div class='col-sm-6 chart-col'>
 
     <div class="well well-occ" id="occ-info-pane">
+      <div id="default-occ-info">
         <p>This tool visualises the dynamics of the entry level job market for medium-skilled occupations</p>
 
         <p><strong>Click an occupation to view details</strong></p>
+      </div>
+
+      <div id="occ-detail" style="display:none;">
+        <h5 id="sel-occ-name" class="no-pad-top"></h5>
+        <p id="sel-occ-desc" class="text-xs"></p>
+
+        <a href="" id="btn-occ-lq">View locations</a>
+
+      </div>
+
     </div>
     <br/>
 

@@ -27,6 +27,16 @@ hr {
 }
 
 
+.no-pad-top{
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.text-xs{
+  font-size: 10px;
+}
+
+
+
 
 .well{
   border: none;

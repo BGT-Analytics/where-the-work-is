@@ -212,7 +212,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                 point: {
                     events: {
                         select: function () {
-                            showOccupationDetail(this.full_name);
+                            selectOccupation(this.full_name);
                         }
                     }
                 }
@@ -303,7 +303,7 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 point: {
                     events: {
                         click: function () {
-                            showOccupationDetail(categories[this.x]);
+                            selectOccupation(categories[this.x]);
                         }
                     }
                 }
