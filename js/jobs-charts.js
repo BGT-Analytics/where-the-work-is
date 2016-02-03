@@ -213,6 +213,21 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                         click: function () {
                             selectOccupation(this.full_name);
                             highlightOcc(this.full_name);
+                        },
+                        mouseOver: function () {
+                            triggerHoverBar(this.full_name);
+                        },
+                    }
+                },
+                states: {
+                    select: {
+                        halo: {
+                            size: 16
+                        }
+                    },
+                    hover: {
+                        halo: {
+                            size: 16
                         }
                     }
                 }
@@ -305,6 +320,9 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                         click: function () {
                             selectOccupation(categories[this.x]);
                             highlightOcc(categories[this.x]);
+                        },
+                        mouseOver: function () {
+                            triggerHoverScatter(categories[this.x]);
                         }
                     }
                 },
@@ -312,6 +330,10 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                     select: {
                         borderColor: "#F47730",
                         color: "#F47730"
+                    },
+                    hover: {
+                        borderColor: "#F47730",
+                        color: '#F47730'                                                           
                     }
                 }
             }
@@ -345,6 +367,35 @@ function highlightOcc(occupation){
         else{
             point.select(false, true);
         }
+    });
+
+}
+
+function triggerHoverScatter(occupation){
+
+    // looping thru stuff in scatterplot
+    $.each(Highcharts.charts[1].series[0].points, function(index, point){
+        if(point.full_name == occupation){
+            point.setState('hover');
+        }
+        else{
+            point.setState();
+        }
+    });
+
+}
+function triggerHoverBar(occupation){
+
+    // looping thru stuff in bar chart
+    $.each(Highcharts.charts[0].series, function(index, series){
+        $.each(series.data, function(index, point){
+            if(point.category == occupation){
+                point.setState('hover');
+            }
+            else{
+                point.setState();
+            }
+        });
     });
 
 }
