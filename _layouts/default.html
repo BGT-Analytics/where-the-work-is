@@ -109,40 +109,19 @@
     </head>
     <body>
 
-    <div class="container-fluid" id="control-pane">
+    <div class="container-fluid" id="navbar">
       <div class-"row">
-        <div class='col-sm-2'>
-          <a href="/" id="site-title">UK Jobs [draft]</a></br>
-          <a href="/about.html">About this tool</a>
+        <div class='col-sm-12'>
+          <a href="/" id="site-title">UK Jobs [draft]</a>
+          <a href="/about.html" class="pull-right">About this tool</a>
         </div>
-        <div class='col-sm-6'>
-
-          <p id="breadcrumbs">&nbsp;</p>
-          <p id="current-location-name"></p>
-
-        </div>
-        <div class='col-sm-4'>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="location-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Select a location to view job prospects
-              <span class="caret"></span>
-            </button>
-            <ul id='location-select-list' class="dropdown-menu" aria-labelledby="location-dropdown-menu">
-            </ul>
-          </div>
-        </div>
-
       </div>
-     
     </div>
 
-    <div class="container-fluid">
-      <div class='col-md-12'>
 
-        {{content}}
 
-      </div>
-    </div> <!-- /container -->
+    {{content}}
+
 
     <div class="container-fluid" id="footer">
       <div class='col-md-12'>

@@ -70,10 +70,22 @@ hr {
 
 
 
+/* nav bar */
+#navbar{
+  background-color: #5a5858;
+  padding: 4px 0px;
+  height: 40px;
+}
+#site-title{
+  color: #fff;
+  font-size: 26px;
+}
+
+
 
 /* top control pane */
 #control-pane{
-  background-color: #5a5858;
+  background-color: #f3f1f1;
   padding: 4px 0px;
   height: 58px;
 }
@@ -82,9 +94,6 @@ hr {
 }
 #control-pane h5{
   color: #A0A09D;
-}
-#site-title{
-  color: #fff;
 }
 #current-location-name{
   color: #FBAB18;
