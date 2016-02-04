@@ -197,16 +197,6 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
         plotOptions: {
             series: {
                 cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}',
-                    style: {
-                        fontWeight: 'normal',
-                        fontSize: '8px',
-                        color: '#aaa',
-                        textShadow: false
-                    }
-                },
                 color: point_color,
                 point: {
                     events: {
@@ -219,15 +209,14 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                         },
                     }
                 },
-                states: {
-                    select: {
-                        halo: {
-                            size: 16
-                        }
-                    },
-                    hover: {
-                        halo: {
-                            size: 16
+                allowPointSelect: true,
+                marker: {
+                    states: {
+                        select: {
+                            fillColor: point_color,
+                            lineWidth: 6,
+                            lineColor: "#f47730",
+                            radius: 8
                         }
                     }
                 }
