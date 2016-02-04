@@ -343,9 +343,11 @@ function highlightOcc(occupation){
 function triggerHoverScatter(occupation){
 
     // looping thru stuff in scatterplot
-    $.each(Highcharts.charts[1].series[0].points, function(index, point){
+    var chart = Highcharts.charts[1]
+    $.each(chart.series[0].points, function(index, point){
         if(point.full_name == occupation){
             point.setState('hover');
+            chart.tooltip.refresh(point);
         }
         else{
             point.setState();
@@ -356,10 +358,12 @@ function triggerHoverScatter(occupation){
 function triggerHoverBar(occupation){
 
     // looping thru stuff in bar chart
-    $.each(Highcharts.charts[0].series, function(index, series){
+    var chart = Highcharts.charts[0]
+    $.each(chart.series, function(index, series){
         $.each(series.data, function(index, point){
             if(point.category == occupation){
                 point.setState('hover');
+                chart.tooltip.refresh([chart.series[0].data[index], chart.series[1].data[index], chart.series[2].data[index]]);
             }
             else{
                 point.setState();
