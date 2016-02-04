@@ -43,10 +43,21 @@ hr {
   box-shadow: none;
   border-radius: 0px;
 }
-.well-occ{
-  background-color: #c0bebe;
+.well-occ-inactive{
+  background-color: #f3f1f1;
   height: 160px;
   margin: 0px 18px;
+}
+.well-occ-active{
+  background-color: #006167;
+  height: 160px;
+  margin: 0px 18px;
+}
+#sel-occ-name{
+  color: #fff;
+}
+#sel-occ-desc{
+  color: #c0bebe;
 }
 
 

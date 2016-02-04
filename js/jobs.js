@@ -270,6 +270,8 @@ function updateLocation(geo_type, geo_name, education){
 function selectOccupation(occupation){
     // this populates the occupation detail pane on the main location view
 
+    $("#occ-info-pane").removeClass("well-occ-inactive")
+    $("#occ-info-pane").addClass("well-occ-active")
     $("#default-occ-info").hide()
     $("#occ-detail").show()
 
