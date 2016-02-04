@@ -66,21 +66,6 @@ function makeDemandChart(element_id, data){
 
 
 
-// function makeDemandScatterPlot(element_id, data){
-//     var prepped_data = []
-//     $(data).each(function(i, row){
-//         point = {
-//             x: parseFloat(row['advertised_avg_salary_entry_degree']),
-//             y: parseFloat(row['demand_entry']),
-//             name: shortenName(row['occupation']),
-//             full_name: row['occupation']
-//         }
-//         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
-//     })
-
-//     scatterHelper(element_id, prepped_data, 'Demand', 'Demand (# jobs)', ['More Jobs', 'Fewer Jobs'])
-// }
-
 function makeCompScatterPlot(element_id, data, edu){
     var prepped_data = []
     $(data).each(function(i, row){
@@ -209,7 +194,6 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                         },
                     }
                 },
-                allowPointSelect: true,
                 marker: {
                     states: {
                         select: {
@@ -319,10 +303,6 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                     select: {
                         borderColor: "#F47730",
                         color: "#F47730"
-                    },
-                    hover: {
-                        borderColor: "#F47730",
-                        color: '#F47730'                                                           
                     }
                 }
             }
