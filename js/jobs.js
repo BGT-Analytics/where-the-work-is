@@ -228,28 +228,6 @@ function updateLocation(geo_type, geo_name, education){
     }
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
-    if (education=='he'){
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_he: "1"})
-
-        $("#he-select").attr('class', 'btn selected');
-        $("#fe-select").attr('class', 'btn');
-
-        $('#fe-select').click(function() {
-            updateLocation(geo_type, geo_name, 'fe')
-            return false;
-        });
-    }
-    else{
-        var place_data_edu = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name, include_fe: "1"})
-
-        $("#fe-select").attr('class', 'btn selected');
-        $("#he-select").attr('class', 'btn');
-
-        $('#he-select').click(function() {
-            updateLocation(geo_type, geo_name, 'he')
-            return false;
-        });
-    }
 
     $("#current-location-name").text(geo_display_name)
 
@@ -262,7 +240,7 @@ function updateLocation(geo_type, geo_name, education){
 
     makeDemandChart('#bar-demand', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
-    makeCompScatterPlot('#scatter-comp', place_data_edu, education)
+    makeCompScatterPlot('#scatter-comp', place_data, education)
 
     if ($.address.parameter('occupation')){
         selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)

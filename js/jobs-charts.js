@@ -66,9 +66,34 @@ function makeDemandChart(element_id, place_data){
 
 
 
-function makeCompScatterPlot(element_id, place_data, edu){
+function makeCompScatterPlot(element_id, place_data, education){
+    if (education=='he'){
+        var place_data_edu = _.where(place_data, {include_he: "1"})
+        var point_color = '#006167'
+
+        $("#he-select").attr('class', 'btn selected');
+        $("#fe-select").attr('class', 'btn');
+
+        $('#fe-select').click(function() {
+            updateLocation(geo_type, geo_name, 'fe')
+            return false;
+        });
+    }
+    else{
+        var place_data_edu = _.where(place_data, {include_fe: "1"})
+        var point_color = "#fbab18"
+
+        $("#fe-select").attr('class', 'btn selected');
+        $("#he-select").attr('class', 'btn');
+
+        $('#he-select').click(function() {
+            updateLocation(geo_type, geo_name, 'he')
+            return false;
+        });
+    }
+
     var prepped_data = []
-    $(place_data).each(function(i, row){
+    $(place_data_edu).each(function(i, row){
         point = {
             x: parseFloat(row['advertised_avg_salary_entry_degree']),
             y: parseFloat(row['fe_ds_ratio_log']),
@@ -77,13 +102,6 @@ function makeCompScatterPlot(element_id, place_data, edu){
         }
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
-
-    if (edu=='he'){
-        var point_color = '#006167'
-    }
-    else{
-        var point_color = "#fbab18"
-    }
 
     scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', point_color, place_data)
 }
