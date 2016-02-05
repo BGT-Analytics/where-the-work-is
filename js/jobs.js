@@ -277,11 +277,12 @@ function selectOccupation(occupation){
 
     $("#occ-info-pane").removeClass("well-occ-inactive")
     $("#occ-info-pane").addClass("well-occ-active")
+    $("#occ-info-pane").addClass("well-sm")
     $("#default-occ-info").hide()
     $("#occ-detail").show()
 
     $("#sel-occ-name").html(occupation)
-    $("#sel-occ-desc").html(occupation_mapping[occupation]['description'])
+    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="left" title="'+occupation_mapping[occupation]['description']+'"><i class="fa fa-info-circle"></i></a>')
 
     $('#btn-occ-lq').click(function() {
         $('#occupation-detail-title').html(occupation);
@@ -296,6 +297,8 @@ function selectOccupation(occupation){
     $.address.parameter('occupation', encodeURIComponent(occupation));
 
     highlightOcc(occupation);
+
+    $('[data-toggle="tooltip"]').tooltip();
 }
 
 
