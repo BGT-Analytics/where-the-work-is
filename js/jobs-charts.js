@@ -292,7 +292,6 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                     events: {
                         click: function () {
                             selectOccupation(categories[this.x]);
-                            highlightOcc(categories[this.x]);
                         },
                         mouseOver: function () {
                             triggerHoverScatter(categories[this.x]);

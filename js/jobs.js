@@ -263,6 +263,11 @@ function updateLocation(geo_type, geo_name, education){
     makeDemandChart('#bar-demand', place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
     makeCompScatterPlot('#scatter-comp', place_data_edu, education)
+
+    if ($.address.parameter('occupation')){
+        selectOccupation(decodeURIComponent($.address.parameter('occupation')))
+
+    }
 }
 
 
@@ -287,6 +292,10 @@ function selectOccupation(occupation){
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         render_occ_map();
     });
+
+    $.address.parameter('occupation', encodeURIComponent(occupation));
+
+    highlightOcc(occupation);
 }
 
 
