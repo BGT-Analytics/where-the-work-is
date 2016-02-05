@@ -8,14 +8,14 @@ description: "This tool visualises the dynamics of the entry level job market fo
 
 <div class="container-fluid" id="control-pane">
   <div class-"row">
-    <div class='col-sm-7'>
+    <div class='col-sm-12'>
 
-      <p id="breadcrumbs">&nbsp;</p>
-      <p id="current-location-name"></p>
+      <div class="pull-left">
+        <p id="breadcrumbs">&nbsp;</p>
+        <p id="current-location-name"></p>
+      </div>
 
-    </div>
-    <div class='col-sm-5'>
-      <div class="dropdown">
+      <div class="dropdown pull-right">
         <button class="btn btn-default dropdown-toggle" type="button" id="location-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Select a location to view job prospects
           <span class="caret"></span>
@@ -29,65 +29,66 @@ description: "This tool visualises the dynamics of the entry level job market fo
  
 </div>
 
-<div class='row'>
-  <br/>
-
-  <div class='col-sm-6 chart-col'>
-
-    <p class="text-center chart-title">Demand</p>
-    <div id="bar-demand"></div>
-    </br/>
-
-  </div>
-
-  <div class='col-sm-6 chart-col'>
-
-    <div class="well well-occ-inactive" id="occ-info-pane">
-      <div id="default-occ-info">
-        <p>This tool visualises the dynamics of the entry level job market for medium-skilled occupations</p>
-
-        <p><strong>Click an occupation to view details</strong></p>
-      </div>
-
-      <div id="occ-detail" style="display:none;">
-        <h5 id="sel-occ-name" class="no-pad-top"></h5>
-        <p id="sel-occ-desc" class="text-xs"></p>
-
-        <a href="" id="btn-occ-lq">View locations</a>
-
-      </div>
-
-    </div>
-
-
+<div class="container">
+  <div class='row'>
     <br/>
 
-    <p class="text-center chart-title">Opportunity vs Salary</p>
-    <div id="education-select" class="btn-group pull-right" role="group">
-      <a href="" title="browse occupations for further education" id="fe-select" class="btn">Further Education</a>
-      <a href="" title="browse occupations for higher education" id="he-select" class="btn">Higher Education</a>
+    <div class='col-sm-6 chart-col'>
+
+      <p class="text-center chart-title">Demand</p>
+      <div id="bar-demand"></div>
+      </br/>
+
     </div>
-    <div id="scatter-comp"></div>
-    <br/>
 
-  </div>
+    <div class='col-sm-6 chart-col'>
 
-  <div class="modal fade" id="occupation-detail-modal" tabindex="-1" role="dialog" aria-labelledby="occupation-detail">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="occupation-detail-title"></h4>
+      <div class="well well-occ-inactive" id="occ-info-pane">
+        <div id="default-occ-info">
+          <p>This tool visualises the dynamics of the entry level job market for medium-skilled occupations</p>
+
+          <p><strong>Click an occupation to view details</strong></p>
         </div>
 
-        <div class="modal-body">
-          <div id="occupation-detail-content"></div>
-          <div id="occupation-detail-map"></div>
+        <div id="occ-detail" style="display:none;">
+          <h5 id="sel-occ-name" class="no-pad-top"></h5>
+          <p id="sel-occ-desc" class="text-xs"></p>
+
+          <a href="" id="btn-occ-lq">View locations</a>
 
         </div>
+      </div>
 
+
+      <br/>
+
+      <p class="text-center chart-title">Opportunity vs Salary</p>
+      <div id="education-select" class="btn-group pull-right" role="group">
+        <a href="" title="browse occupations for further education" id="fe-select" class="btn">Further Education</a>
+        <a href="" title="browse occupations for higher education" id="he-select" class="btn">Higher Education</a>
+      </div>
+      <div id="scatter-comp"></div>
+      <br/>
+
+    </div>
+
+    <div class="modal fade" id="occupation-detail-modal" tabindex="-1" role="dialog" aria-labelledby="occupation-detail">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="occupation-detail-title"></h4>
+          </div>
+
+          <div class="modal-body">
+            <div id="occupation-detail-content"></div>
+            <div id="occupation-detail-map"></div>
+
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

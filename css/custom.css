@@ -148,13 +148,13 @@ hr {
   z-index: 1;
 }
 #education-select .btn{
-  border: 1px solid #F47730;
-  color: #F47730;
+  border: 1px solid #5A5858;
+  color: #5A5858;
   padding: 2px 4px;
   font-size: 10px;
 }
 #education-select .btn.selected, #education-select .btn:hover{
-  background-color: #F47730;
+  background-color: #5A5858;
   color: #fff;
 }
 
@@ -192,6 +192,7 @@ hr {
 .chart-title{
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 0px;
 }
 
 
