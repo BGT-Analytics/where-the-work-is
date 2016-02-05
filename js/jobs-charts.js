@@ -25,9 +25,9 @@ function initializeTable(table_id, column_names, data){
 }
 
 
-function makeDemandChart(element_id, data){
+function makeDemandChart(element_id, place_data){
     var clean_demand_data = _.map(
-        data, 
+        place_data, 
         function(row) {
             return { 
                 demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
@@ -61,14 +61,14 @@ function makeDemandChart(element_id, data){
 
     occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
 
-    stackedBarHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)')
+    stackedBarHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)', place_data)
 }
 
 
 
-function makeCompScatterPlot(element_id, data, edu){
+function makeCompScatterPlot(element_id, place_data, edu){
     var prepped_data = []
-    $(data).each(function(i, row){
+    $(place_data).each(function(i, row){
         point = {
             x: parseFloat(row['advertised_avg_salary_entry_degree']),
             y: parseFloat(row['fe_ds_ratio_log']),
@@ -85,12 +85,12 @@ function makeCompScatterPlot(element_id, data, edu){
         var point_color = "#fbab18"
     }
 
-    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', point_color)
+    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', point_color, place_data)
 }
 
 
 
-function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, point_color){
+function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, point_color, place_data){
     var chart_height = $(element_id).height()
 
     $(element_id).highcharts({
@@ -186,8 +186,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                 point: {
                     events: {
                         click: function () {
-                            selectOccupation(this.full_name);
-                            highlightOcc(this.full_name);
+                            selectOccupation(this.full_name, place_data);
                         },
                         mouseOver: function () {
                             triggerHoverBar(this.full_name);
@@ -215,7 +214,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
 };
 
 
-function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_label_short){
+function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_label_short, place_data){
     $(element_id).highcharts({
         chart: {
             type: 'bar',
@@ -291,7 +290,7 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 point: {
                     events: {
                         click: function () {
-                            selectOccupation(categories[this.x]);
+                            selectOccupation(categories[this.x], place_data);
                         },
                         mouseOver: function () {
                             triggerHoverScatter(categories[this.x]);

@@ -265,14 +265,14 @@ function updateLocation(geo_type, geo_name, education){
     makeCompScatterPlot('#scatter-comp', place_data_edu, education)
 
     if ($.address.parameter('occupation')){
-        selectOccupation(decodeURIComponent($.address.parameter('occupation')))
+        selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
 
     }
 }
 
 
 
-function selectOccupation(occupation){
+function selectOccupation(occupation, place_data){
     // this populates the occupation detail pane on the main location view
 
     $("#occ-info-pane").removeClass("well-occ-inactive")
@@ -283,6 +283,15 @@ function selectOccupation(occupation){
 
     $("#sel-occ-name").html(occupation)
     $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="left" title="'+occupation_mapping[occupation]['description']+'"><i class="fa fa-info-circle"></i></a>')
+
+
+    var place_occ_data = _.where(place_data, {occupation: occupation})
+
+    // TO-DO: update with actual figures
+    $("#occ-figure-demand").html("")
+    $("#occ-figure-salary").html("")
+    $("#occ-figure-comp").html("")
+
 
     $('#btn-occ-lq').click(function() {
         $('#occupation-detail-title').html(occupation);

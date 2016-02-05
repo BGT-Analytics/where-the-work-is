@@ -31,6 +31,10 @@ hr {
   padding-top: 0px;
   margin-top: 0px;
 }
+.no-pad-bottom{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 .text-xs{
   font-size: 10px;
 }
@@ -57,12 +61,13 @@ hr {
 .well-occ-inactive{
   background-color: #f3f1f1;
   height: 160px;
-  margin: 0px 18px;
+  margin: 0px;
 }
 .well-occ-active{
   background-color: #006167;
+  color: #f3f1f1;
   height: 160px;
-  margin: 0px 18px;
+  margin: 0px;
 }
 #sel-occ-name{
   color: #fff;
