@@ -71,9 +71,21 @@ hr {
 }
 #sel-occ-name{
   color: #fff;
+  font-weight: 700;
+  font-size: 20px;
 }
 #sel-occ-desc{
   color: #c0bebe;
+}
+
+.occ-figure{
+  font-size: 30px;
+}
+.occ-figure-title{
+  font-size: 14px;
+  color: #fbab18;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 

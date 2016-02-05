@@ -51,26 +51,29 @@ description: "This tool visualises the dynamics of the entry level job market fo
         </div>
 
         <div id="occ-detail" style="display:none;">
-          <h5 id="sel-occ-name" class="pull-left no-pad-top no-pad-bottom"></h5>
-          <p id="sel-occ-desc" class="pull-right no-pad-top no-pad-bottom"></p>
-          <br/>
+          <p class="no-pad-top no-pad-bottom">
+            <span id="sel-occ-name"></span>
+            <span id="sel-occ-desc" class="pull-right"></span>
+          </p>
+
           <div class="row">
             <div class="col-xs-4">
-              <p>Demand</p>
-              <p id="occ-figure-demand"></p>
+              <p class="occ-figure-title">Demand</p>
+              <p id="occ-figure-demand" class="occ-figure"></p>
 
             </div>
             <div class="col-xs-4">
-              <p>Salary</p>
-              <p id="occ-figure-salary"></p>
+              <p class="occ-figure-title">Salary</p>
+              <p id="occ-figure-salary" class="occ-figure"></p>
             </div>
             <div class="col-xs-4">
-              <p>Competition</p>
-              <p id="occ-figure-comp"></p>
+              <p class="occ-figure-title">Competition</p>
+              <p id="occ-figure-comp" class="occ-figure"></p>
             </div>
           </div>
 
-          <a href="" id="btn-occ-lq">View locations</a>
+          <br/>
+          <a href="" id="btn-occ-lq"><i class="fa fa-fw fa-map-o"></i> View map of job prospects</a>
 
         </div>
       </div>

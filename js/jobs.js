@@ -263,12 +263,14 @@ function selectOccupation(occupation, place_data){
     $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="left" title="'+occupation_mapping[occupation]['description']+'"><i class="fa fa-info-circle"></i></a>')
 
 
-    var place_occ_data = _.where(place_data, {occupation: occupation})
+    var place_occ_data = _.where(place_data, {occupation: occupation})[0]
+
+    demand_sum = parseInt(place_occ_data["demand_entry_fe"])+parseInt(place_occ_data["demand_entry_he"])+parseInt(place_occ_data["demand_entry_sl"])
 
     // TO-DO: update with actual figures
-    $("#occ-figure-demand").html("")
-    $("#occ-figure-salary").html("")
-    $("#occ-figure-comp").html("")
+    $("#occ-figure-demand").html(demand_sum+' <span class="text-xs">jobs</span>')
+    $("#occ-figure-salary").html('£'+parseInt(place_occ_data['advertised_avg_salary_entry_degree']))
+    $("#occ-figure-comp").html(parseInt(place_occ_data['he_ds_ratio_log']))
 
 
     $('#btn-occ-lq').click(function() {
