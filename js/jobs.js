@@ -126,11 +126,11 @@ function render_occ_map(){
         legend.addTo(occ_map);
     }
 
-    var job_types_region = _.where($.csv.toObjects(occupation_data[0]), {occupation: occupation_title});
+    var job_types_region = _.where(occupation_data, {geography_type: 'Region', occupation: occupation_title});
 
     $.each(regions_data[0]['features'], function(r_index, region){
         $.each(job_types_region, function(j_index, job){
-            if (region.properties['JOB_REGION'] == job['region_or_nation']) {
+            if (region.properties['JOB_REGION'] == job['geography_name']) {
                 region.properties['lq'] = job['lq'];
                 region.properties['lq_label'] = job['lq_label'];
             }
