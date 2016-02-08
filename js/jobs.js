@@ -21,13 +21,11 @@ function initialize(){
         regions_data = geojson
         occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
 
-        var edu_param = decodeURIComponent($.address.parameter("education"))
-
         if($.address.parameter("location_type") && $.address.parameter("location")){
-            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")), edu_param)
+            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
-            updateLocation('Country', 'UK Total', decodeURIComponent($.address.parameter("education")))
+            updateLocation('Country', 'UK Total')
         }
 
         // populating select menu w/ regions & leps
@@ -50,19 +48,19 @@ function initialize(){
         });
 
         $('#control-pane').on('click', '.option-country', function() {
-            updateLocation('Country', 'UK Total', edu_param);
+            updateLocation('Country', 'UK Total');
             return false;
         });
         $('#control-pane').on('click', '.option-nation', function() {
-            updateLocation('Nation', $(this).attr('data'), edu_param);
+            updateLocation('Nation', $(this).attr('data'));
             return false;
         });
         $('#control-pane').on('click', '.option-region', function() {
-            updateLocation('Region', $(this).attr('data'), edu_param);
+            updateLocation('Region', $(this).attr('data'));
             return false;
         });
         $('#control-pane').on('click', '.option-lep', function() {
-            updateLocation('LEP', $(this).attr('data'), edu_param);
+            updateLocation('LEP', $(this).attr('data'));
             return false;
         });
     });
@@ -204,16 +202,13 @@ function render_occ_map(){
 }
 
 
-function updateLocation(geo_type, geo_name, education){
-
+function updateLocation(geo_type, geo_name){
+    var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
     if(education != 'fe' && education != 'he'){
         // setting default education level
         education = 'fe'
-    }
-    else{
-        $.address.parameter('education', encodeURIComponent(education));
     }
 
     if(geo_type=="Country" && geo_name=='UK Total'){
@@ -244,7 +239,19 @@ function updateLocation(geo_type, geo_name, education){
 
     if ($.address.parameter('occupation')){
         selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
+    }
+}
 
+function updateEducation(education){
+    $.address.parameter('education', encodeURIComponent(edu_param));
+    var geo_type = $.address.parameter('location_type')
+    var geo_name = $.address.parameter('location')
+    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
+
+    makeCompScatterPlot('#scatter-comp', place_data, education)
+
+    if ($.address.parameter('occupation')){
+        selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
     }
 }
 
@@ -267,7 +274,6 @@ function selectOccupation(occupation, place_data){
 
     demand_sum = parseInt(place_occ_data["demand_entry_fe"])+parseInt(place_occ_data["demand_entry_he"])+parseInt(place_occ_data["demand_entry_sl"])
 
-    // TO-DO: update with actual figures
     $("#occ-figure-demand").html(demand_sum+' <span class="text-xs">jobs</span>')
     $("#occ-figure-salary").html('£'+parseInt(place_occ_data['advertised_avg_salary_entry_degree']))
     $("#occ-figure-comp").html(parseInt(place_occ_data['he_ds_ratio_log']))

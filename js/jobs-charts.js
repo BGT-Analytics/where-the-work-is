@@ -76,7 +76,7 @@ function makeCompScatterPlot(element_id, place_data, education){
         $("#fe-select").attr('class', 'btn');
 
         $('#fe-select').click(function() {
-            updateLocation(geo_type, geo_name, 'fe')
+            updateEducation('fe') // TO-DO: move this
             return false;
         });
     }
@@ -88,7 +88,7 @@ function makeCompScatterPlot(element_id, place_data, education){
         $("#he-select").attr('class', 'btn');
 
         $('#he-select').click(function() {
-            updateLocation(geo_type, geo_name, 'he')
+            updateEducation('he') // TO-DO: move this
             return false;
         });
     }
