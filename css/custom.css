@@ -6,6 +6,9 @@ body {
   padding-left: 0px;
   padding-right: 0px;
 }
+#content{
+  max-width: 900px;
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   color: #006167;
