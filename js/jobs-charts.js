@@ -336,26 +336,31 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
 
 function highlightOcc(occupation){
 
-    // looping thru stuff in bar chart
-    $.each(Highcharts.charts[0].series, function(index, series){
-        $.each(series.data, function(index, point){
-            if(point.category == occupation){
-                point.select(true, true);
-            }
-            else{
-                point.select(false, true);
-            }
-        });
-    });
-
-    // looping thru stuff in scatterplot
-    $.each(Highcharts.charts[1].series[0].points, function(index, point){
-        if(point.full_name == occupation){
-            point.select(true, true);
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'scatter'){
+            // looping thru stuff in scatterplot
+            $.each(Highcharts.charts[1].series[0].points, function(index, point){
+                if(point.full_name == occupation){
+                    point.select(true, true);
+                }
+                else{
+                    point.select(false, true);
+                }
+            });
         }
-        else{
-            point.select(false, true);
-        }
+        else if (chart && chart.options.chart.type == 'bar'){
+            // looping thru stuff in bar chart
+            $.each(Highcharts.charts[0].series, function(index, series){
+                $.each(series.data, function(index, point){
+                    if(point.category == occupation){
+                        point.select(true, true);
+                    }
+                    else{
+                        point.select(false, true);
+                    }
+                });
+            });
+        };
     });
 
 }
