@@ -74,11 +74,6 @@ function makeCompScatterPlot(element_id, place_data, education){
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
-
-        $('#fe-select').click(function() {
-            updateEducation('fe') // TO-DO: move this
-            return false;
-        });
     }
     else{
         var place_data_edu = _.where(place_data, {include_fe: "1"})
@@ -86,11 +81,6 @@ function makeCompScatterPlot(element_id, place_data, education){
 
         $("#fe-select").attr('class', 'btn selected');
         $("#he-select").attr('class', 'btn');
-
-        $('#he-select').click(function() {
-            updateEducation('he') // TO-DO: move this
-            return false;
-        });
     }
 
     var prepped_data = []
@@ -339,7 +329,7 @@ function highlightOcc(occupation){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             // looping thru stuff in scatterplot
-            $.each(Highcharts.charts[1].series[0].points, function(index, point){
+            $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation){
                     point.select(true, true);
                 }
@@ -350,7 +340,7 @@ function highlightOcc(occupation){
         }
         else if (chart && chart.options.chart.type == 'bar'){
             // looping thru stuff in bar chart
-            $.each(Highcharts.charts[0].series, function(index, series){
+            $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
                     if(point.category == occupation){
                         point.select(true, true);

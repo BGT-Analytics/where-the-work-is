@@ -63,6 +63,16 @@ function initialize(){
             updateLocation('LEP', $(this).attr('data'));
             return false;
         });
+
+        $('#fe-select').click(function() {
+            updateEducation('fe')
+            return false;
+        });
+        $('#he-select').click(function() {
+            updateEducation('he')
+            return false;
+        });
+
     });
 }
 
@@ -243,9 +253,17 @@ function updateLocation(geo_type, geo_name){
 }
 
 function updateEducation(education){
-    $.address.parameter('education', encodeURIComponent(edu_param));
+    $.address.parameter('education', encodeURIComponent(education));
+
     var geo_type = $.address.parameter('location_type')
     var geo_name = $.address.parameter('location')
+
+    // TO-DO: move this logic elsewhere
+    if(!geo_type || !geo_name){
+        geo_type = 'Country'
+        geo_name = 'UK Total'
+    }
+
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     makeCompScatterPlot('#scatter-comp', place_data, education)
