@@ -44,16 +44,16 @@ function makeDemandChart(element_id, place_data){
     var n_cols = 36
     var prepped_data = [
         {
-            name: 'Higher Education',
+            name: 'Higher education',
             color: '#154779',
             data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
-            name: 'Further Education',
+            name: 'Further education',
             color: '#2b74a6',
             data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
-            name: 'School Leavers',
+            name: 'School leavers',
             color: '#60aadb',
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
@@ -132,18 +132,21 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
 
         xAxis: {
             title: {
-                text: 'Average Salary',
+                text: 'Average salary',
                 style: {
                     color: '#aaa',
                 }
             },
             labels: {
-                format: '£{value}',
+                formatter: function () {
+                   return '£'+(this.value / 1000) + 'k';
+                },
                 style: {
                     color: '#aaa',
                     fontSize: '9px',
                 }
             },
+            min: 18000,
             tickColor: '#eee',
             tickLength: 5,
             lineColor: '#eee'
@@ -170,7 +173,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             useHTML: true,
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2"><strong>{point.full_name}</strong></th></tr>' +
-                '<tr><th>Average Salary:</th><td>£{point.x:,.0f}</td></tr>' +
+                '<tr><th>Average salary:</th><td>£{point.x:,.0f}</td></tr>' +
                 '<tr><th>'+y_label_short+':</th><td>{point.y}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
@@ -179,7 +182,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
         labels: {
             items: [
                 {
-                    html: "↑ Less Competition",
+                    html: "↑ Less competition",
                     style: {
                         color: '#FBAB18',
                         left: '10px',
@@ -187,7 +190,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                     }
                 },
                 {
-                    html: "↓ More Competition",
+                    html: "↓ More competition",
                     style: {
                         color: '#FBAB18',
                         left: '10px',
