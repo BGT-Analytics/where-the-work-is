@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-  color: #006167;
+  color: #154779;
 }
 
 a, a:hover {
@@ -67,7 +67,7 @@ hr {
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #006167;
+  background-color: #154779;
   color: #f3f1f1;
   height: 160px;
   margin: 0px;
@@ -103,7 +103,7 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #5a5858;
+  background-color: #154779;
   padding: 4px 0px;
   height: 40px;
 }
@@ -206,13 +206,13 @@ hr {
   color: #fbab18;
 }
 .btn-default{
-  border: 1px solid #006167;
+  border: 1px solid #154779;
   background-color: inherit;
-  color: #006167;
+  color: #154779;
 }
 .btn-default:hover{
-  border: 1px solid #006167;
-  background-color: #006167;
+  border: 1px solid #154779;
+  background-color: #154779;
   color: #fff;
 }
 

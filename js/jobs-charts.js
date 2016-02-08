@@ -45,16 +45,16 @@ function makeDemandChart(element_id, place_data){
     var prepped_data = [
         {
             name: 'Higher Education',
-            color: '#006167',
+            color: '#154779',
             data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
             name: 'Further Education',
-            color: '#fbab18',
+            color: '#2b74a6',
             data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
             name: 'School Leavers',
-            color: '#a89b91',
+            color: '#60aadb',
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
@@ -69,7 +69,7 @@ function makeDemandChart(element_id, place_data){
 function makeCompScatterPlot(element_id, place_data, education){
     if (education=='he'){
         var place_data_edu = _.where(place_data, {include_he: "1"})
-        var point_color = '#006167'
+        var point_color = '#154779'
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
@@ -81,7 +81,7 @@ function makeCompScatterPlot(element_id, place_data, education){
     }
     else{
         var place_data_edu = _.where(place_data, {include_fe: "1"})
-        var point_color = "#fbab18"
+        var point_color = "#2b74a6"
 
         $("#fe-select").attr('class', 'btn selected');
         $("#he-select").attr('class', 'btn');
@@ -181,7 +181,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                 {
                     html: "↑ Less Competition",
                     style: {
-                        color: '#f47730',
+                        color: '#FBAB18',
                         left: '10px',
                         top: '10px',
                     }
@@ -189,7 +189,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                 {
                     html: "↓ More Competition",
                     style: {
-                        color: '#f47730',
+                        color: '#FBAB18',
                         left: '10px',
                         top: chart_height - 90
                     }
@@ -317,8 +317,8 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 },
                 states: {
                     select: {
-                        borderColor: "#F47730",
-                        color: "#F47730"
+                        borderColor: "#f47730",
+                        color: "#f47730"
                     }
                 }
             }
