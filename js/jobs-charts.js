@@ -26,6 +26,7 @@ function initializeTable(table_id, column_names, data){
 
 
 function makeDemandChart(element_id, place_data){
+
     var clean_demand_data = _.map(
         place_data, 
         function(row) {
@@ -361,33 +362,38 @@ function highlightOcc(occupation){
 
 function triggerHoverScatter(occupation){
 
-    // looping thru stuff in scatterplot
-    var chart = Highcharts.charts[1]
-    $.each(chart.series[0].points, function(index, point){
-        if(point.full_name == occupation){
-            point.setState('hover');
-            chart.tooltip.refresh(point);
-        }
-        else{
-            point.setState();
-        }
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'scatter'){
+            $.each(chart.series[0].points, function(index, point){
+                if(point.full_name == occupation){
+                    point.setState('hover');
+                    chart.tooltip.refresh(point);
+                }
+                else{
+                    point.setState();
+                }
+            });
+        };
     });
 
 }
 function triggerHoverBar(occupation){
 
     // looping thru stuff in bar chart
-    var chart = Highcharts.charts[0]
-    $.each(chart.series, function(index, series){
-        $.each(series.data, function(index, point){
-            if(point.category == occupation){
-                point.setState('hover');
-                chart.tooltip.refresh([chart.series[0].data[index], chart.series[1].data[index], chart.series[2].data[index]]);
-            }
-            else{
-                point.setState();
-            }
-        });
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'bar'){
+            $.each(chart.series, function(index, series){
+                $.each(series.data, function(index, point){
+                    if(point.category == occupation){
+                        point.setState('hover');
+                        chart.tooltip.refresh([chart.series[0].data[index], chart.series[1].data[index], chart.series[2].data[index]]);
+                    }
+                    else{
+                        point.setState();
+                    }
+                });
+            });
+        };
     });
 
 }
