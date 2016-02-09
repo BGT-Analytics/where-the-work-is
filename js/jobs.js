@@ -317,24 +317,22 @@ function selectOccupation(occupation, place_data){
 
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
-    demand_sum = parseInt(place_occ_data["demand_entry_fe"])+parseInt(place_occ_data["demand_entry_he"])+parseInt(place_occ_data["demand_entry_sl"])
 
-
-    if (parseInt(place_occ_data['advertised_avg_salary_entry_degree'])){
-        salary_fig = '£'+numberWithCommas(parseInt(place_occ_data['advertised_avg_salary_entry_degree']))
+    if (place_occ_data['advertised_avg_salary_entry_degree']){
+        salary_fig = '£'+numberWithCommas(place_occ_data['advertised_avg_salary_entry_degree'])
     }
     else {
         salary_fig = '--'
     }
 
-    if (parseInt(place_occ_data['he_ds_ratio_log'])){
-        figure_comp = parseInt(place_occ_data['he_ds_ratio_log'])
+    if (place_occ_data['he_ds_ratio_log']){
+        figure_comp = place_occ_data['he_ds_ratio_log']
     }
     else {
         figure_comp = '--'
     }
 
-    $("#occ-figure-demand").html(numberWithCommas(demand_sum))
+    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum']))
     $("#occ-figure-salary").html(salary_fig)
     $("#occ-figure-comp").html(figure_comp)
 
