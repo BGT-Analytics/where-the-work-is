@@ -292,9 +292,24 @@ function selectOccupation(occupation, place_data){
 
     demand_sum = parseInt(place_occ_data["demand_entry_fe"])+parseInt(place_occ_data["demand_entry_he"])+parseInt(place_occ_data["demand_entry_sl"])
 
-    $("#occ-figure-demand").html(demand_sum+' <span class="text-xs">jobs</span>')
-    $("#occ-figure-salary").html('£'+parseInt(place_occ_data['advertised_avg_salary_entry_degree']))
-    $("#occ-figure-comp").html(parseInt(place_occ_data['he_ds_ratio_log']))
+
+    if (parseInt(place_occ_data['advertised_avg_salary_entry_degree'])){
+        salary_fig = '£'+numberWithCommas(parseInt(place_occ_data['advertised_avg_salary_entry_degree']))
+    }
+    else {
+        salary_fig = '--'
+    }
+
+    if (parseInt(place_occ_data['he_ds_ratio_log'])){
+        figure_comp = parseInt(place_occ_data['he_ds_ratio_log'])
+    }
+    else {
+        figure_comp = '--'
+    }
+
+    $("#occ-figure-demand").html(numberWithCommas(demand_sum))
+    $("#occ-figure-salary").html(salary_fig)
+    $("#occ-figure-comp").html(figure_comp)
 
 
     $('#btn-occ-lq').click(function() {
@@ -341,4 +356,12 @@ function makeBreadcrumbLinks(geo_name){
             return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation'), makeLinkHTML(r, toTitleCase(r), 'option-region')] )
         }
     }
+}
+
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
 }
