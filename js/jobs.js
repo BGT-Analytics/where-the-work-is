@@ -255,8 +255,8 @@ function updateLocation(geo_type, geo_name){
 function updateEducation(education){
     $.address.parameter('education', encodeURIComponent(education));
 
-    var geo_type = $.address.parameter('location_type')
-    var geo_name = $.address.parameter('location')
+    var geo_type = decodeURIComponent($.address.parameter('location_type'))
+    var geo_name = decodeURIComponent($.address.parameter('location'))
 
     // TO-DO: move this logic elsewhere
     if(!geo_type || !geo_name){
