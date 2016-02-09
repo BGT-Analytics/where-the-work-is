@@ -19,7 +19,27 @@ function initialize(){
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
         regions_data = geojson
-        occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
+        raw_occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
+        occupation_data = _.map(
+            raw_occupation_data,
+            function(row) {
+                return {
+                    demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
+                    demand_entry_he: parseInt(row.demand_entry_he),
+                    demand_entry_fe: parseInt(row.demand_entry_fe),
+                    demand_entry_sl: parseInt(row.demand_entry_sl),
+                    occupation: row.occupation,
+                    advertised_avg_salary_entry_degree: parseInt(row.advertised_avg_salary_entry_degree),
+                    geography_name: row.geography_name,
+                    geography_type: row.geography_type,
+                    he_ds_ratio_log: parseFloat(row.he_ds_ratio_log),
+                    fe_ds_ratio_log: parseFloat(row.fe_ds_ratio_log),
+                    include_fe: row.include_fe,
+                    include_he: row.include_he,
+                    medium_skilled: row.medium_skilled
+                };
+            }
+        );
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -240,6 +260,7 @@ function updateLocation(geo_type, geo_name){
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
+
     $("#current-location-name").text(geo_display_name)
 
     // updating breadcrumbs
@@ -293,7 +314,6 @@ function selectOccupation(occupation, place_data){
 
     $("#sel-occ-name").html(occupation)
     $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="left" title="'+occupation_mapping[occupation]['description']+'"><i class="fa fa-info-circle"></i></a>')
-
 
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 

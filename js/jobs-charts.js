@@ -27,20 +27,7 @@ function initializeTable(table_id, column_names, data){
 
 function makeDemandChart(element_id, place_data){
 
-    var clean_demand_data = _.map(
-        place_data, 
-        function(row) {
-            return { 
-                demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
-                demand_entry_he: parseInt(row.demand_entry_he),
-                demand_entry_fe: parseInt(row.demand_entry_fe),
-                demand_entry_sl: parseInt(row.demand_entry_sl),
-                occupation: row.occupation
-            };
-        }
-    );
-    var sorted_data = _.sortBy(clean_demand_data, 'demand_sum').reverse()
-
+    var sorted_data = _.sortBy(place_data, 'demand_sum').reverse()
 
     var n_cols = 36
     var prepped_data = [
@@ -68,6 +55,7 @@ function makeDemandChart(element_id, place_data){
 
 
 function makeCompScatterPlot(element_id, place_data, education){
+
     if (education=='he'){
         var place_data_edu = _.where(place_data, {include_he: "1"})
         var point_color = '#154779'
@@ -86,8 +74,8 @@ function makeCompScatterPlot(element_id, place_data, education){
     var prepped_data = []
     $(place_data_edu).each(function(i, row){
         point = {
-            x: parseFloat(row['advertised_avg_salary_entry_degree']),
-            y: parseFloat(row['fe_ds_ratio_log']),
+            x: row['advertised_avg_salary_entry_degree'],
+            y: row['fe_ds_ratio_log'],
             name: shortenName(row['occupation']),
             full_name: row['occupation']
         }
