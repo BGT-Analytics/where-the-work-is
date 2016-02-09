@@ -97,144 +97,9 @@ function initialize(){
            $("#location-dropdown-menu").dropdown("toggle");
         });
 
+        MapsLib.initialize();
     });
 }
-
-function render_occ_map(){
-    var occupation_title = $('#occupation-detail-title').html();
-
-    if (occ_map == null) {
-        occ_map = L.map('occupation-detail-map', {
-            scrollWheelZoom: false,
-            center: [55, -3.5], 
-            zoom: 5,
-            attributionControl: false,
-            zoomControl:false
-        });
-
-        var layer = new L.StamenTileLayer("toner-lite");
-        occ_map.addLayer(layer);
-
-        // control that shows state info on hover
-        var info = L.control();
-
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info');
-            this.update();
-            return this._div;
-        };
-
-        info.update = function (props) {
-            this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />Job prospects: ' + props.lq_label
-                : 'Hover over a region or nation');
-        };
-
-        info.addTo(occ_map);
-
-        var legend = L.control({position: 'bottomright'});
-
-        legend.onAdd = function (map) {
-
-            var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0.16, 0.667, 0.833, 1.2, 1.5],
-                labels = [],
-                from, to;
-
-            for (var i = 0; i < grades.length; i++) {
-                from = grades[i];
-                to = grades[i + 1];
-
-                labels.push(
-                    '<i style="background:' + getColor(from + 0.001) + '"></i> ' +
-                    getLabel(from + 0.001));
-            }
-
-            div.innerHTML = "<h4>Job prospects</h4>"
-            div.innerHTML += labels.join('<br>');
-            return div;
-        };
-
-        legend.addTo(occ_map);
-    }
-
-    var job_types_region = _.where(occupation_data, {geography_type: 'Region', occupation: occupation_title});
-
-    $.each(regions_data[0]['features'], function(r_index, region){
-        $.each(job_types_region, function(j_index, job){
-            if (region.properties['JOB_REGION'] == job['geography_name']) {
-                region.properties['lq'] = job['lq'];
-                region.properties['lq_label'] = job['lq_label'];
-            }
-        });
-    });
-
-    regions_occ_geojson = L.geoJson(regions_data[0], {style: occ_style, onEachFeature: onEachFeature}).addTo(occ_map);
-
-
-    // get color depending on population density value
-    function getColor(d) {
-        return d > 1.5      ? '#993404' :
-               d > 1.2      ? '#d95f0e' :
-               d > 0.833    ? '#fe9929' :
-               d > 0.667    ? '#fed98e' :
-               d > 0.16     ? '#ffffd4' :
-                              '#ffffd4' ;
-    }
-
-    function getLabel(d) {
-        return d > 1.5      ? 'Very High' :
-               d > 1.2      ? 'High' :
-               d > 0.833    ? 'Average' :
-               d > 0.667    ? 'Low' :
-               d > 0.16     ? 'Very Low' :
-                              '' ;
-    }
-
-    function occ_style(feature) {
-        return {
-            weight: 1,
-            opacity: 1,
-            color: 'white',
-            fillOpacity: 0.7,
-            fillColor: getColor(feature.properties.lq)
-        };
-    }
-
-    function highlightFeature(e) {
-        var layer = e.target;
-
-        layer.setStyle({
-            weight: 3,
-            color: '#5A5858',
-            dashArray: '',
-            fillOpacity: 0.7
-        });
-
-        if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront();
-        }
-
-        info.update(layer.feature.properties);
-    }
-
-    function resetHighlight(e) {
-        regions_occ_geojson.resetStyle(e.target);
-        info.update();
-    }
-
-    function zoomToFeature(e) {
-        occ_map.fitBounds(e.target.getBounds());
-    }
-
-    function onEachFeature(feature, layer) {
-        layer.on({
-            mouseover: highlightFeature,
-            mouseout: resetHighlight
-        });
-    }
-}
-
 
 function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
@@ -338,13 +203,14 @@ function selectOccupation(occupation, place_data){
 
 
     $('#btn-occ-lq').click(function() {
-        $('#occupation-detail-title').html(occupation);
         $('#occupation-detail-modal').modal('show');
         return false;
     });
 
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
-        render_occ_map();
+        // $("#occupation-detail-map").spin('large');
+        MapsLib.occ_map._onResize();
+        MapsLib.updateData(occupation);
     });
 
     $.address.parameter('occupation', encodeURIComponent(occupation));
