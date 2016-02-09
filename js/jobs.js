@@ -24,19 +24,21 @@ function initialize(){
             raw_occupation_data,
             function(row) {
                 return {
+                    geography_name: row.geography_name,
+                    geography_type: row.geography_type,
+                    occupation: row.occupation,
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
                     demand_entry_sl: parseInt(row.demand_entry_sl),
-                    occupation: row.occupation,
                     advertised_avg_salary_entry_degree: parseInt(row.advertised_avg_salary_entry_degree),
-                    geography_name: row.geography_name,
-                    geography_type: row.geography_type,
                     he_ds_ratio_log: parseFloat(row.he_ds_ratio_log),
                     fe_ds_ratio_log: parseFloat(row.fe_ds_ratio_log),
                     include_fe: row.include_fe,
                     include_he: row.include_he,
-                    medium_skilled: row.medium_skilled
+                    medium_skilled: row.medium_skilled,
+                    lq: row.lq,
+                    lq_label: row.lq_label
                 };
             }
         );
