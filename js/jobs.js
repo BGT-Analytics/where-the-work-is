@@ -73,6 +73,10 @@ function initialize(){
             return false;
         });
 
+        $("#location-select-list li").click(function() {
+           $("#location-dropdown-menu").dropdown("toggle");
+        });
+
     });
 }
 
@@ -223,6 +227,8 @@ function updateLocation(geo_type, geo_name){
 
     if(geo_type=="Country" && geo_name=='UK Total'){
         geo_display_name = "The United Kingdom"
+        $.address.parameter('location_type', '')
+        $.address.parameter('location', '')
     }
     else{
         $.address.parameter('location_type', encodeURIComponent(geo_type))
