@@ -74,9 +74,17 @@ hr {
   color: #c0bebe;
 }
 
-.occ-figure{
+
+.occ-rank{
   font-size: 30px;
+  margin-bottom: 0px;
 }
+.occ-rank small{
+  font-size: 14px;
+}
+/*.occ-figure{
+  font-size: 30px;
+}*/
 .occ-figure-title{
   font-size: 14px;
   color: #fbab18;

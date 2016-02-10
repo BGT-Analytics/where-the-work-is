@@ -191,23 +191,72 @@ function selectOccupation(occupation, place_data){
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
 
+    demand_rank = 1;
+    demand_total = 0;
+    $.each(place_data, function(index, row){
+        if(row['demand_sum']>place_occ_data['demand_sum']){
+            demand_rank = demand_rank+1;
+        }
+        if(row['demand_sum']){
+            demand_total = demand_total+1;
+        }
+    });
+
+    demand_rank_str = '#'+demand_rank+' <small>of '+demand_total+'</small>'
+
+
+
     if (place_occ_data['advertised_avg_salary_entry_degree']){
-        salary_fig = '£'+numberWithCommas(place_occ_data['advertised_avg_salary_entry_degree'])
+        salary_fig = place_occ_data['advertised_avg_salary_entry_degree']
+
+        salary_rank = 1;
+        salary_total = 0;
+        $.each(place_data, function(index, row){
+            if(row['advertised_avg_salary_entry_degree']>salary_fig){
+                salary_rank = salary_rank+1;
+            }
+            if(row['advertised_avg_salary_entry_degree']){
+                salary_total = salary_total+1;
+            }
+        });
+
+        salary_fig_str = '£'+numberWithCommas(salary_fig)
+        salary_rank_str = '#'+salary_rank+' <small>of '+salary_total+'</small>'
     }
     else {
-        salary_fig = '--'
+        salary_rank_str = '--'
+        salary_fig_str = '--'
     }
 
     if (place_occ_data['he_ds_ratio_log']){
         figure_comp = place_occ_data['he_ds_ratio_log']
+
+        comp_rank = 1;
+        comp_total = 0;
+        $.each(place_data, function(index, row){
+            if(row['he_ds_ratio_log']>figure_comp){
+                comp_rank = comp_rank+1;
+            }
+            if(row['he_ds_ratio_log']){
+                comp_total = comp_total+1;
+            }
+        });
+
+        comp_rank_str = '#'+comp_rank+' <small>of '+comp_total+'</small>'
+
     }
     else {
+        comp_rank_str = '--'
         figure_comp = '--'
     }
 
     $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum']))
-    $("#occ-figure-salary").html(salary_fig)
+    $("#occ-figure-salary").html(salary_fig_str)
     $("#occ-figure-comp").html(figure_comp)
+
+    $("#occ-rank-demand").html(demand_rank_str)
+    $("#occ-rank-salary").html(salary_rank_str)
+    $("#occ-rank-comp").html(comp_rank_str)
 
 
     $('#btn-occ-lq').click(function() {
