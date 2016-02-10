@@ -28,6 +28,7 @@ function initialize(){
                     geography_type: row.geography_type,
                     occupation: row.occupation,
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
+                    demand_ticker: row.demand_ticker,
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
                     demand_entry_sl: parseInt(row.demand_entry_sl),
@@ -217,7 +218,15 @@ function selectOccupation(occupation, place_data){
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
-        MapsLib.updateData(occupation);
+        MapsLib.updateData(occupation, 'lq_label');
+    });
+
+    $('#mapToggleProspects').on('click', function (e) {
+        MapsLib.updateData(occupation, 'lq_label');
+    });
+
+    $('#mapToggleDemand').on('click', function (e) {
+        MapsLib.updateData(occupation, 'demand_ticker');
     });
 
     $.address.parameter('occupation', encodeURIComponent(occupation));

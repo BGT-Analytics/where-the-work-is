@@ -2,6 +2,8 @@ var MapsLib = MapsLib || {};
 var MapsLib = {
 
     occupation_title: null,
+    compare_by: null,
+    compare_name: null,
     occ_map: null,
     layer: null,
     info: L.control(),
@@ -38,39 +40,41 @@ var MapsLib = {
 
         MapsLib.info.update = function (props) {
             this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />Job prospects: ' + props.lq_label
+                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props[MapsLib.compare_by]
                 : 'Hover over a region or nation');
         };
 
-        MapsLib.info.addTo(MapsLib.occ_map);
+        MapsLib.info.addTo(MapsLib.occ_map);    
 
         MapsLib.legend.onAdd = function (map) {
 
-            var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0.16, 0.667, 0.833, 1.2, 1.5],
-                labels = [],
-                from, to;
+            var div = L.DomUtil.create('div', 'info legend');
 
-            for (var i = (grades.length - 1); i >= 0; i--) {
-                from = grades[i];
-                to = grades[i - 1];
-
-                labels.push(
-                    '<i style="background:' + MapsLib.getColor(from + 0.001) + '"></i> ' +
-                    MapsLib.getLabel(from + 0.001));
-            }
+            var labels = "\
+                <i style='background:" + MapsLib.getColor('Very High') + "'></i> Very High<br>\
+                <i style='background:" + MapsLib.getColor('High') + "'></i> High<br>\
+                <i style='background:" + MapsLib.getColor('Average') + "'></i> Average<br>\
+                <i style='background:" + MapsLib.getColor('Low') + "'></i> Low<br>\
+                <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very Low\
+            ";
 
             div.innerHTML = "<h4>Job prospects</h4>"
-            div.innerHTML += labels.join('<br>');
+            div.innerHTML += labels;
             return div;
         };
 
-        MapsLib.legend.addTo(MapsLib.occ_map);
-        
+        MapsLib.legend.addTo(MapsLib.occ_map);    
     },
 
-    updateData: function(occupation){
+    updateData: function(occupation, compare_by){
         MapsLib.occupation_title = occupation;
+        MapsLib.compare_by = compare_by;
+
+        if (compare_by == 'lq_label')
+            MapsLib.compare_name = 'Job prospects'
+        else if (compare_by == 'demand_ticker')
+            MapsLib.compare_name = 'Job demand'
+
         $('#occupation-detail-title').html(occupation);
 
         if (MapsLib.regions_occ_geojson)
@@ -83,6 +87,8 @@ var MapsLib = {
                 if (region.properties['JOB_REGION'] == job['geography_name']) {
                     region.properties['lq'] = job['lq'];
                     region.properties['lq_label'] = job['lq_label'];
+                    region.properties['demand_sum'] = job['demand_sum'];
+                    region.properties['demand_ticker'] = job['demand_ticker'];
                 }
             });
         });
@@ -98,21 +104,12 @@ var MapsLib = {
 
     // get color depending on population density value
     getColor: function (d) {
-        return d > 1.5      ? '#0b253f' :
-               d > 1.2      ? '#154779' :
-               d > 0.833    ? '#2B74A6' :
-               d > 0.667    ? '#60AADB' :
-               d > 0.16     ? '#8ac0e4' :
-                              '#8ac0e4' ;
-    },
-
-    getLabel: function (d) {
-        return d > 1.5      ? 'Very High' :
-               d > 1.2      ? 'High' :
-               d > 0.833    ? 'Average' :
-               d > 0.667    ? 'Low' :
-               d > 0.16     ? 'Very Low' :
-                              '' ;
+        return d == 'Very High' ? '#0b253f' :
+               d == 'High'      ? '#154779' :
+               d == 'Average'   ? '#2B74A6' :
+               d == 'Low'       ? '#60AADB' :
+               d == 'Very Low'  ? '#8ac0e4' :
+                                  '#8ac0e4' ;
     },
 
     occ_style: function (feature) {
@@ -121,7 +118,7 @@ var MapsLib = {
             opacity: 1,
             color: 'white',
             fillOpacity: 0.7,
-            fillColor: MapsLib.getColor(feature.properties.lq)
+            fillColor: MapsLib.getColor(feature.properties[MapsLib.compare_by])
         };
     },
 
