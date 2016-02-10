@@ -129,10 +129,9 @@ var MapsLib = {
         var layer = e.target;
 
         layer.setStyle({
-            weight: 3,
-            color: '#5A5858',
+            fillColor: '#F47730',
             dashArray: '',
-            fillOpacity: 0.7
+            fillOpacity: 1
         });
 
         if (!L.Browser.ie && !L.Browser.opera) {
