@@ -137,11 +137,17 @@ hr {
 #breadcrumbs a{
   color: #C0BEBE;
 }
-#control-pane .dropdown-toggle{
-  margin-top: 6px;
+#location-dropdown-menu{
   border: none;
   background-color: #f47730;
   color: #fff;
+  padding: 1px 7px;
+  margin-right: 6px;
+  margin-top: -10px;
+  display: inline-block;
+}
+#current-location-div, #dropdown-div{
+  display: inline-block;
 }
 
 
