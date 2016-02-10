@@ -153,11 +153,13 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
         tooltip: {
             useHTML: true,
             headerFormat: '<table>',
-            pointFormat: '<tr><th colspan="2"><strong>{point.full_name}</strong></th></tr>' +
-                '<tr><th>Average salary:</th><td>£{point.x:,.0f}</td></tr>' +
-                '<tr><th>'+y_label_short+':</th><td>{point.y}</td></tr>',
+            pointFormat: '<tr><th colspan="2">{point.full_name}</th></tr>' +
+                '<tr><td>Average salary:</td><td style="text-align:right;">£{point.x:,.0f}</td></tr>' +
+                '<tr><td>'+y_label_short+':</td><td style="text-align:right;">{point.y}</td></tr>',
             footerFormat: '</table>',
-            followPointer: true
+            followPointer: true,
+            shadow: false,
+            borderColor: '#eee'
         },
 
         labels: {
@@ -204,6 +206,14 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                             radius: 8
                         }
                     }
+                },
+                states: {
+                    hover: {
+                        halo: {
+                            size: 12,
+                        }
+                    }
+
                 }
             },
         },
@@ -273,13 +283,15 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
         },
         tooltip: {
             useHTML: true,
-            headerFormat: '<table><tr><th colspan="2"><strong>{point.x}</strong></th></tr>',
-            pointFormat:  '<tr><th>{series.name}:</th><td>{point.y:,.0f}</td></tr>',
+            headerFormat: '<table><tr><th colspan="2">{point.x}</th></tr>',
+            pointFormat:  '<tr><td>{series.name}:</td><td style="text-align:right;">{point.y:,.0f}</td></tr>',
             footerFormat: '</table>',
             shared: true,
             positioner: function () {
                 return { x: 200, y: 350 };
-            }
+            },
+            shadow: false,
+            borderColor: '#eee'
         },
         plotOptions: {
             bar: {
@@ -303,6 +315,9 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                     select: {
                         borderColor: "#f47730",
                         color: "#f47730"
+                    },
+                    hover: {
+                        brightness: .2
                     }
                 }
             }

@@ -243,6 +243,13 @@ hr {
   margin: 0 auto;
 }
 
+.highcharts-tooltip span {
+  height:auto;
+  width:240px;
+  white-space:normal !important; /*this is required to get tooltip contents to wrap*/
+}
+
+
 
 
 /* map stuff */
