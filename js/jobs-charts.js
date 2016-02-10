@@ -135,6 +135,8 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             gridLineWidth: 0,
             startOnTick: true,
             endOnTick: true,
+            max: 2.4,
+            min: -2.4,
             title: {
                 text: y_label_full,
                 style: {
