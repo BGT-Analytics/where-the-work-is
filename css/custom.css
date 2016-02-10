@@ -47,6 +47,7 @@ hr {
   max-width: 400px;
   background-color: #F3F1F1;
   color: #5A5858;
+  text-align: left;
 }
 .tooltip.top .tooltip-arrow {
   border-top-color: #F3F1F1;
