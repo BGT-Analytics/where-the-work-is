@@ -187,7 +187,7 @@ hr {
 /* buttons */
 #education-select{
   position: relative;
-  top: 30px;
+  top: 18px;
   right: 10px;
   z-index: 1;
 }
@@ -233,7 +233,7 @@ hr {
 /* page layout */
 #main-content{
   height: calc(100% - 140px);
-  min-height: 550px;
+  min-height: 560px;
 }
 #main-content .row{
   height: calc(100% - 55px);

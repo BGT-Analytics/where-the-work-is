@@ -96,7 +96,9 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
 
         chart: {
             type: 'scatter',
-            zoomType: 'xy'
+            zoomType: 'xy',
+            marginLeft: 20,
+            marginTop: 0
         },
 
         credits: {
@@ -159,7 +161,8 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                         text: '↑ Less competition',
                         style: {
                             color: '#FBAB18'
-                        }
+                        },
+                        y: 8
                     }
                 },
                 {
@@ -253,7 +256,8 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 style: {
                     fontSize: '9px',
                     color: '#aaa'
-                }
+                },
+                x: -6
             },
             lineColor: '#eee'
         },
@@ -277,14 +281,26 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
         legend: {
             align: 'right',
             layout: 'vertical',
-            x: -30,
+            x: -20,
             verticalAlign: 'top',
             y: 50,
             floating: true,
             backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
+            borderColor: '#eee',
             borderWidth: 1,
-            shadow: false
+            shadow: false,
+            itemStyle: {
+                color: '#555',
+                fontWeight: 'normal'
+            },
+            title: {
+                text: 'Click to hide',
+                style: {
+                    fontSize: '9px',
+                    color: '#aaa',
+                    fontWeight: 'normal',
+                }
+            }
         },
         tooltip: {
             useHTML: true,
@@ -293,7 +309,7 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
             footerFormat: '</table>',
             shared: true,
             positioner: function () {
-                return { x: 200, y: 350 };
+                return { x: 160, y: 330 };
             },
             shadow: false,
             borderColor: '#eee'
