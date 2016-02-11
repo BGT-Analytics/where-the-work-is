@@ -59,6 +59,7 @@ function makeCompScatterPlot(element_id, place_data, education){
     if (education=='he'){
         var place_data_edu = _.where(place_data, {include_he: "1"})
         var point_color = '#154779'
+        var col_name = 'he_ds_ratio_log'
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
@@ -66,6 +67,7 @@ function makeCompScatterPlot(element_id, place_data, education){
     else{
         var place_data_edu = _.where(place_data, {include_fe: "1"})
         var point_color = "#2b74a6"
+        var col_name = 'fe_ds_ratio_log'
 
         $("#fe-select").attr('class', 'btn selected');
         $("#he-select").attr('class', 'btn');
@@ -75,7 +77,7 @@ function makeCompScatterPlot(element_id, place_data, education){
     $(place_data_edu).each(function(i, row){
         point = {
             x: row['advertised_avg_salary_entry_degree'],
-            y: row['fe_ds_ratio_log'],
+            y: row[col_name],
             name: shortenName(row['occupation']),
             full_name: row['occupation']
         }
