@@ -149,7 +149,31 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                 enabled: false
             },
             lineColor: '#eee',
-            lineWidth: 1
+            lineWidth: 1,
+            plotLines: [
+                {
+                    color: 'transparent',
+                    width: 1,
+                    value: 2.3,
+                    label: {
+                        text: '↑ Less competition',
+                        style: {
+                            color: '#FBAB18'
+                        }
+                    }
+                },
+                {
+                    color: 'transparent',
+                    width: 1,
+                    value: -2.3,
+                    label: {
+                        text: '↓ More competition',
+                        style: {
+                            color: '#FBAB18'
+                        }
+                    }
+                }
+            ]
         },
 
         tooltip: {
@@ -162,27 +186,6 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             followPointer: true,
             shadow: false,
             borderColor: '#eee'
-        },
-
-        labels: {
-            items: [
-                {
-                    html: "↑ Less competition",
-                    style: {
-                        color: '#FBAB18',
-                        left: '10px',
-                        top: '10px',
-                    }
-                },
-                {
-                    html: "↓ More competition",
-                    style: {
-                        color: '#FBAB18',
-                        left: '10px',
-                        top: chart_height - 90
-                    }
-                }
-            ]
         },
 
         plotOptions: {
@@ -204,7 +207,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                         select: {
                             fillColor: point_color,
                             lineWidth: 6,
-                            lineColor: "#f47730",
+                            lineColor: "#FBAB18",
                             radius: 8
                         }
                     }
@@ -315,8 +318,8 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 },
                 states: {
                     select: {
-                        borderColor: "#f47730",
-                        color: "#f47730"
+                        borderColor: "#FBAB18",
+                        color: "#FBAB18"
                     },
                     hover: {
                         brightness: .2
