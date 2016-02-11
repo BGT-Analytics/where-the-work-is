@@ -119,6 +119,19 @@ function initialize(){
            $("#location-dropdown-menu").dropdown("toggle");
         });
 
+
+        setInterval(function () {
+            $('.flash').fadeIn(0, function () {
+                $('.flash').fadeOut(600, function () {
+                    $('.flash').fadeIn(600)
+                });
+            });
+        }, 1200);
+        $("#location-dropdown-menu").click(function(){
+            $("#location-dropdown-menu i").removeClass("flash")
+            $("#location-dropdown-menu i").css("display", "inline-block")
+        });
+
         MapsLib.initialize();
     });
 }
