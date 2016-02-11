@@ -31,11 +31,11 @@ description: "This tool visualises the dynamics of the entry level job market fo
  
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="main-content">
   <div class='row'>
-    <br/>
 
     <div class='col-sm-5 col-sm-offset-1 chart-col'>
+      <br/>
 
       <div class="well well-occ-inactive" id="occ-info-pane">
         <div id="default-occ-info">
@@ -75,19 +75,20 @@ description: "This tool visualises the dynamics of the entry level job market fo
       </div>
 
 
-      <br/>
-
-      <p class="text-center chart-title">Opportunity vs Salary</p>
-      <div id="education-select" class="btn-group pull-right" role="group">
-        <a href="" title="browse occupations for further education" id="fe-select" class="btn">Further education</a>
-        <a href="" title="browse occupations for higher education" id="he-select" class="btn">Higher education</a>
+      <div id="below-occ-info-pane">
+        <p class="text-center chart-title">Opportunity vs Salary</p>
+        <div id="education-select" class="btn-group pull-right" role="group">
+          <a href="" title="browse occupations for further education" id="fe-select" class="btn">Further education</a>
+          <a href="" title="browse occupations for higher education" id="he-select" class="btn">Higher education</a>
+        </div>
+        <div id="scatter-comp"></div>
+        <br/>
       </div>
-      <div id="scatter-comp"></div>
-      <br/>
 
     </div>
 
     <div class='col-sm-5 chart-col'>
+      <br/>
 
       <p class="text-center chart-title">Demand</p>
       <div id="bar-demand"></div>

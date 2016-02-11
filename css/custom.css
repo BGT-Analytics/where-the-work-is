@@ -1,4 +1,8 @@
+html{
+  height: 100%;
+}
 body {
+  height: 100%;
   font: 16px "PT Sans",sans-serif;
 }
 
@@ -56,13 +60,11 @@ hr {
 }
 .well-occ-inactive{
   background-color: #f3f1f1;
-  height: 160px;
   margin: 0px;
 }
 .well-occ-active{
   background-color: #154779;
   color: #f3f1f1;
-  height: 160px;
   margin: 0px;
 }
 #sel-occ-name{
@@ -227,6 +229,25 @@ hr {
 }
 
 
+/* page layout */
+#main-content{
+  height: calc(100% - 140px);
+  min-height: 550px;
+}
+#main-content .row{
+  height: calc(100% - 55px);
+}
+#main-content .row .chart-col{
+  height: calc(100% - 20px);
+}
+#occ-info-pane{
+  height: 180px;
+}
+#below-occ-info-pane{
+  padding-top: 20px;
+  height: calc(100% - 200px); /*subtract height of occ-info-pane & padding*/
+}
+
 
 
 /* charts */
@@ -236,17 +257,16 @@ hr {
   margin-bottom: 0px;
 }
 
-
 #bar-demand {
   min-width: 200px; 
-  height: 500px;
-  max-width: 800px; 
+  max-width: 800px;
+  height: 100%;
   margin: 0 auto;
 }
 
 #scatter-comp {
   min-width: 200px; 
-  height: 300px; 
+  height: 100%;
   max-width: 800px; 
   margin: 0 auto;
 }
