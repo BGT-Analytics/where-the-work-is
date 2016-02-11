@@ -210,68 +210,32 @@ function selectOccupation(occupation, place_data){
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
 
-    demand_rank = 1;
-    demand_total = 0;
-    $.each(place_data, function(index, row){
-        if(row['demand_sum']>place_occ_data['demand_sum']){
-            demand_rank = demand_rank+1;
-        }
-        if(row['demand_sum']){
-            demand_total = demand_total+1;
-        }
-    });
 
-    demand_rank_str = '#'+demand_rank+' <small>of '+demand_total+'</small>'
+    demand_rank_str = getRankStr(place_data, 'demand_sum', place_occ_data['demand_sum'])
 
 
-
-    if (place_occ_data['advertised_avg_salary_entry_degree']){
-        salary_fig = place_occ_data['advertised_avg_salary_entry_degree']
-
-        salary_rank = 1;
-        salary_total = 0;
-        $.each(place_data, function(index, row){
-            if(row['advertised_avg_salary_entry_degree']>salary_fig){
-                salary_rank = salary_rank+1;
-            }
-            if(row['advertised_avg_salary_entry_degree']){
-                salary_total = salary_total+1;
-            }
-        });
-
+    var salary_fig = place_occ_data['advertised_avg_salary_entry_degree']
+    if (salary_fig){
         salary_fig_str = '£'+numberWithCommas(salary_fig)
-        salary_rank_str = '#'+salary_rank+' <small>of '+salary_total+'</small>'
     }
     else {
-        salary_rank_str = '--'
         salary_fig_str = '--'
     }
+    salary_rank_str = getRankStr(place_data, 'advertised_avg_salary_entry_degree', salary_fig)
 
-    if (place_occ_data['he_ds_ratio_log']){
-        figure_comp = place_occ_data['he_ds_ratio_log']
 
-        comp_rank = 1;
-        comp_total = 0;
-        $.each(place_data, function(index, row){
-            if(row['he_ds_ratio_log']>figure_comp){
-                comp_rank = comp_rank+1;
-            }
-            if(row['he_ds_ratio_log']){
-                comp_total = comp_total+1;
-            }
-        });
-
-        comp_rank_str = '#'+comp_rank+' <small>of '+comp_total+'</small>'
-
+    var comp_fig = place_occ_data['he_ds_ratio_log']
+    if (comp_fig){
+        comp_fig_str = comp_fig
     }
     else {
-        comp_rank_str = '--'
-        figure_comp = '--'
+        comp_fig_str = '--'
     }
+    comp_rank_str = getRankStr(place_data, 'he_ds_ratio_log', comp_fig)
 
     $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum']))
     $("#occ-figure-salary").html(salary_fig_str)
-    $("#occ-figure-comp").html(figure_comp)
+    $("#occ-figure-comp").html(comp_fig_str)
 
     $("#occ-rank-demand").html(demand_rank_str)
     $("#occ-rank-salary").html(salary_rank_str)
@@ -304,6 +268,28 @@ function selectOccupation(occupation, place_data){
     $('[data-toggle="tooltip"]').tooltip({
                 html: true
             });
+}
+
+
+function getRankStr(place_data, occ_figure_name, occ_figure_val){
+    if (occ_figure_val){
+        // do stuff
+        rank = 1;
+        out_of = 0;
+        $.each(place_data, function(index, row){
+            if(row[occ_figure_name]){
+                out_of = out_of+1;
+                if(row[occ_figure_name]>occ_figure_val){
+                    rank = rank+1;
+                };
+            };
+        });
+
+        return '#'+rank+' <small>of '+out_of+'</small>';
+    }
+    else{
+        return '--'
+    }
 }
 
 
