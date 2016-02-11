@@ -2,7 +2,6 @@
 var occupation_data;
 var region_lep_mapping;
 var regions_data;
-var regions_occ_geojson;
 var occ_map;
 
 
@@ -43,6 +42,26 @@ function initialize(){
                 };
             }
         );
+
+        //merge region geojson and job data
+        var job_types_region;
+        var occupation_list = [];
+        $.each(occupation_mapping, function(key, value) {occupation_list.push(String(key))});
+
+        $.each(regions_data[0]['features'], function(r_index, region){
+            $.each(occupation_list, function(k_index, occ) {
+                job_types_region = _.where(occupation_data, {occupation: occ});
+                $.each(job_types_region, function(j_index, job){
+                    if (region.properties['JOB_REGION'] == job['geography_name']) {
+                        region.properties[occ] = {};
+                        region.properties[occ]['lq'] = job['lq'];
+                        region.properties[occ]['lq_label'] = job['lq_label'];
+                        region.properties[occ]['demand_sum'] = job['demand_sum'];
+                        region.properties[occ]['demand_ticker'] = job['demand_ticker'];
+                    }
+                });
+            });
+        });
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -267,7 +286,7 @@ function selectOccupation(occupation, place_data){
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
-        MapsLib.updateData(occupation, 'lq_label');
+        $('#mapToggleProspects').click();
     });
 
     $('#mapToggleProspects').on('click', function (e) {

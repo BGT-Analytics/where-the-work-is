@@ -1,7 +1,7 @@
 var MapsLib = MapsLib || {};
 var MapsLib = {
 
-    occupation_title: null,
+    occupation: null,
     compare_by: null,
     compare_name: null,
     occ_map: null,
@@ -40,7 +40,7 @@ var MapsLib = {
 
         MapsLib.info.update = function (props) {
             this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props[MapsLib.compare_by]
+                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props[MapsLib.occupation][MapsLib.compare_by]
                 : 'Hover over a region or nation');
         };
 
@@ -63,11 +63,15 @@ var MapsLib = {
             return div;
         };
 
-        MapsLib.legend.addTo(MapsLib.occ_map);    
+        MapsLib.legend.addTo(MapsLib.occ_map);
+
+        MapsLib.regions_occ_geojson = L.geoJson(regions_data[0], {onEachFeature: MapsLib.onEachFeature});
+        MapsLib.regions_occ_geojson.addTo(MapsLib.occ_map);
+
     },
 
     updateData: function(occupation, compare_by){
-        MapsLib.occupation_title = occupation;
+        MapsLib.occupation = occupation;
         MapsLib.compare_by = compare_by;
 
         if (compare_by == 'lq_label')
@@ -77,29 +81,15 @@ var MapsLib = {
 
         $('#occupation-detail-title').html(occupation);
 
-        if (MapsLib.regions_occ_geojson)
-            MapsLib.occ_map.removeLayer(MapsLib.regions_occ_geojson);
-
-        MapsLib.job_types_region = _.where(occupation_data, {geography_type: 'Region', occupation: MapsLib.occupation_title});
-
-        $.each(regions_data[0]['features'], function(r_index, region){
-            $.each(MapsLib.job_types_region, function(j_index, job){
-                if (region.properties['JOB_REGION'] == job['geography_name']) {
-                    region.properties['lq'] = job['lq'];
-                    region.properties['lq_label'] = job['lq_label'];
-                    region.properties['demand_sum'] = job['demand_sum'];
-                    region.properties['demand_ticker'] = job['demand_ticker'];
-                }
+        MapsLib.regions_occ_geojson.eachLayer(function (layer) {
+            layer.setStyle({
+                weight: 1,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.7,
+                fillColor: MapsLib.getColor(layer.feature.properties[MapsLib.occupation][MapsLib.compare_by])
             });
         });
-
-        MapsLib.regions_occ_geojson = L.geoJson(regions_data[0], {style: MapsLib.occ_style, onEachFeature: MapsLib.onEachFeature});
-        MapsLib.regions_occ_geojson.addTo(MapsLib.occ_map);
-
-        // MapsLib.layer.on("load",function() {
-        //     console.log('loaded')
-        //     $("#occupation-detail-map").spin(false);
-        // });
     },
 
     // get color depending on population density value
@@ -112,22 +102,11 @@ var MapsLib = {
                                   '#8ac0e4' ;
     },
 
-    occ_style: function (feature) {
-        return {
-            weight: 1,
-            opacity: 1,
-            color: 'white',
-            fillOpacity: 0.7,
-            fillColor: MapsLib.getColor(feature.properties[MapsLib.compare_by])
-        };
-    },
-
     highlightFeature: function (e) {
         var layer = e.target;
 
         layer.setStyle({
             fillColor: '#F47730',
-            dashArray: '',
             fillOpacity: 1
         });
 
@@ -139,7 +118,7 @@ var MapsLib = {
     },
 
     resetHighlight: function (e) {
-        MapsLib.regions_occ_geojson.resetStyle(e.target);
+        e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties[MapsLib.occupation][MapsLib.compare_by])});
         MapsLib.info.update();
     },
 
