@@ -25,6 +25,11 @@ hr {
   font-size: .8em;
 }
 
+.chart-col{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 
 .no-pad-top{
   padding-top: 0px;
@@ -70,7 +75,7 @@ hr {
 #sel-occ-name{
   color: #fff;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
 }
 #sel-occ-desc{
   color: #c0bebe;
