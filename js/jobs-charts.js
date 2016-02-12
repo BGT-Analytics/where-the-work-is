@@ -184,7 +184,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2">{point.full_name}</th></tr>' +
                 '<tr><td>Average salary:</td><td style="text-align:right;">£{point.x:,.0f}</td></tr>' +
-                '<tr><td>'+y_label_short+':</td><td style="text-align:right;">{point.y}</td></tr>',
+                '<tr><td>'+y_label_short+':</td><td style="text-align:right;">{point.y:.0f}/100</td></tr>',
             footerFormat: '</table>',
             followPointer: true,
             shadow: false,
@@ -312,8 +312,10 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
             pointFormat:  '<tr><td>{series.name}:</td><td style="text-align:right;">{point.y:,.0f}</td></tr>',
             footerFormat: '</table>',
             shared: true,
-            positioner: function () {
-                return { x: 160, y: 330 };
+            positioner: function (boxWidth, boxHeight, point) {
+                var xpos = this.chart.plotWidth-160
+                var ypos = Math.max(140, point.plotY) // keep tooltip below legend
+                return { x: xpos, y: ypos };
             },
             shadow: false,
             borderColor: '#eee'

@@ -239,7 +239,7 @@ function selectOccupation(occupation, place_data){
 
     var comp_fig = place_occ_data['he_ds_ratio_log']
     if (comp_fig){
-        comp_fig_str = comp_fig
+        comp_fig_str = parseInt(comp_fig)+'/100'
     }
     else {
         comp_fig_str = '--'
