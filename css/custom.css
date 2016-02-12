@@ -18,6 +18,26 @@ hr {
   border-color: #efefef;
 }
 
+
+
+.text-very-high{
+  color: #27ae60;
+}
+.text-high{
+  color: #27ae60;
+}
+.text-medium{
+  color: #f1c40f;
+}
+.text-low{
+  color: #e67e22;
+}
+.text-very-low{
+  color: #e74c3c;
+}
+
+
+
 .nowrap { white-space: nowrap; }
 
 .notes p, .notes li {
@@ -89,9 +109,8 @@ hr {
 
 
 .occ-rank{
-  font-size: 14px;
-  margin-bottom: 0px;
-  color: #baccd8;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 .occ-rank small{
   font-size: 10px;
@@ -104,6 +123,14 @@ hr {
   color: #fbab18;
   margin-bottom: 0px;
   margin-top: 10px;
+}
+
+
+.label-occ{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 0px; 
 }
 
 

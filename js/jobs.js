@@ -255,7 +255,9 @@ function selectOccupation(occupation, place_data){
     }
     comp_rank_str_fe = getRankStr(place_data, 'fe_ds_ratio_log', comp_fig_fe)
 
-    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum']))
+    $("#occ-label-demand").html('<span class="text-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
+
+    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' <small>jobs</small>')
     $("#occ-figure-salary").html(salary_fig_str)
     $("#occ-figure-comp-fe").html(comp_fig_str_fe)
     $("#occ-figure-comp-he").html(comp_fig_str_he)
@@ -351,4 +353,9 @@ function numberWithCommas(x) {
     while (pattern.test(x))
         x = x.replace(pattern, "$1,$2");
     return x;
+}
+
+function slugify(text)
+{
+  return text.toString().toLowerCase().replace(/\s+/g, '-');
 }
