@@ -237,22 +237,33 @@ function selectOccupation(occupation, place_data){
     salary_rank_str = getRankStr(place_data, 'advertised_avg_salary_entry_degree', salary_fig)
 
 
-    var comp_fig = place_occ_data['he_ds_ratio_log']
-    if (comp_fig){
-        comp_fig_str = parseInt(comp_fig)+'/100'
+    var comp_fig_he = place_occ_data['he_ds_ratio_log']
+    if (comp_fig_he){
+        comp_fig_str_he = parseInt(comp_fig_he)+'/100'
     }
     else {
-        comp_fig_str = '--'
+        comp_fig_str_he = '--'
     }
-    comp_rank_str = getRankStr(place_data, 'he_ds_ratio_log', comp_fig)
+    comp_rank_str_he = getRankStr(place_data, 'he_ds_ratio_log', comp_fig_he)
+
+    var comp_fig_fe = place_occ_data['fe_ds_ratio_log']
+    if (comp_fig_fe){
+        comp_fig_str_fe = parseInt(comp_fig_fe)+'/100'
+    }
+    else {
+        comp_fig_str_fe = '--'
+    }
+    comp_rank_str_fe = getRankStr(place_data, 'fe_ds_ratio_log', comp_fig_fe)
 
     $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum']))
     $("#occ-figure-salary").html(salary_fig_str)
-    $("#occ-figure-comp").html(comp_fig_str)
+    $("#occ-figure-comp-fe").html(comp_fig_str_fe)
+    $("#occ-figure-comp-he").html(comp_fig_str_he)
 
     $("#occ-rank-demand").html(demand_rank_str)
     $("#occ-rank-salary").html(salary_rank_str)
-    $("#occ-rank-comp").html(comp_rank_str)
+    $("#occ-rank-comp-fe").html(comp_rank_str_fe)
+    $("#occ-rank-comp-he").html(comp_rank_str_he)
 
 
     $('#btn-occ-lq').click(function() {

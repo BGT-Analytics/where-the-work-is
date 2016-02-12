@@ -63,6 +63,8 @@ hr {
   box-shadow: none;
   border-radius: 0px;
 }
+
+/* occupation pane */
 .well-occ-inactive{
   background-color: #f3f1f1;
   margin: 0px;
@@ -72,6 +74,10 @@ hr {
   color: #f3f1f1;
   margin: 0px;
 }
+#occ-detail{
+  height: 100%;
+}
+
 #sel-occ-name{
   color: #fff;
   font-weight: 700;
@@ -83,21 +89,23 @@ hr {
 
 
 .occ-rank{
-  font-size: 30px;
+  font-size: 14px;
   margin-bottom: 0px;
+  color: #baccd8;
 }
 .occ-rank small{
+  font-size: 10px;
+}
+.occ-figure{
   font-size: 14px;
 }
-/*.occ-figure{
-  font-size: 30px;
-}*/
 .occ-figure-title{
   font-size: 14px;
   color: #fbab18;
   margin-bottom: 0px;
   margin-top: 10px;
 }
+
 
 
 /* footer */
