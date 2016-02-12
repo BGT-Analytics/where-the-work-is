@@ -37,12 +37,12 @@ function makeDemandChart(element_id, place_data){
             data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
             name: 'Further education',
-            color: '#2b74a6',
+            color: '#60aadb',
             data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
             name: 'School leavers',
-            color: '#60aadb',
+            color: '#baccd8',
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
@@ -66,7 +66,7 @@ function makeCompScatterPlot(element_id, place_data, education){
     }
     else{
         var place_data_edu = _.where(place_data, {include_fe: "1"})
-        var point_color = "#2b74a6"
+        var point_color = "#60aadb"
         var col_name = 'fe_ds_ratio_log'
 
         $("#fe-select").attr('class', 'btn selected');
@@ -219,6 +219,10 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
                     hover: {
                         halo: {
                             size: 12,
+                            attributes: {
+                                fill: '#FBAB18'
+                            },
+                            opacity: .5
                         }
                     }
 
@@ -334,11 +338,11 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
                 },
                 states: {
                     select: {
-                        borderColor: "#FBAB18",
+                        borderColor: '#fff',
                         color: "#FBAB18"
                     },
                     hover: {
-                        brightness: .2
+                        color: '#e2be7c'
                     }
                 }
             }
