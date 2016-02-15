@@ -49,7 +49,7 @@ function makeDemandChart(element_id, place_data){
 
     occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
 
-    stackedBarHelper(element_id, prepped_data, occupations, 'Demand', 'Demand (# jobs)', place_data)
+    stackedBarHelper(element_id, prepped_data, occupations, place_data)
 }
 
 
@@ -84,12 +84,12 @@ function makeCompScatterPlot(element_id, place_data, education){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, 'Opportunity', 'Opportunity', point_color, place_data)
+    scatterHelper(element_id, prepped_data, point_color, place_data)
 }
 
 
 
-function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, point_color, place_data){
+function scatterHelper(element_id, prepped_data, point_color, place_data){
     var chart_height = $(element_id).height()
 
     $(element_id).highcharts({
@@ -142,7 +142,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             max: 2.4,
             min: -2.4,
             title: {
-                text: y_label_full,
+                text: 'Job opportunity',
                 style: {
                     color: '#aaa',
                 }
@@ -184,7 +184,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2">{point.full_name}</th></tr>' +
                 '<tr><td>Average salary:</td><td style="text-align:right;">£{point.x:,.0f}</td></tr>' +
-                '<tr><td>'+y_label_short+':</td><td style="text-align:right;">{point.y:.0f}/100</td></tr>',
+                '<tr><td>opportunity:</td><td style="text-align:right;">{point.y:.0f}/100</td></tr>',
             footerFormat: '</table>',
             followPointer: true,
             shadow: false,
@@ -238,7 +238,7 @@ function scatterHelper(element_id, prepped_data, y_label_full, y_label_short, po
 };
 
 
-function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_label_short, place_data){
+function stackedBarHelper(element_id, prepped_data, categories, place_data){
     $(element_id).highcharts({
         chart: {
             type: 'bar',
@@ -270,7 +270,7 @@ function stackedBarHelper(element_id, prepped_data, categories, y_label_full, y_
             gridLineWidth: 0,
             endOnTick: false,
             title: {
-                text: y_label_short,
+                text: 'Entry level job openings',
                 style: {
                     color: '#aaa'
                 }
