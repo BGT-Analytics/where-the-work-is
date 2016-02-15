@@ -43,6 +43,11 @@ hr {
 }
 
 
+.opaque{
+  opacity: 1 !important;
+}
+
+
 
 .nowrap { white-space: nowrap; }
 
@@ -135,6 +140,12 @@ hr {
   margin-top: 10px;
 }
 
+.occ-xs{
+  font-size: 9px;
+  font-weight: 200px;
+  margin-bottom: 0px;
+  margin-top: -2px;
+}
 
 .label-occ{
   text-transform: uppercase;

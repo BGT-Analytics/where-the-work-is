@@ -144,8 +144,8 @@ function initialize(){
         }, 1200);
 
         $("#location-dropdown-menu").click(function(){
-            $("#location-dropdown-menu i").removeClass("flash")
-            $("#location-dropdown-menu i").css("opacity", 1)
+            $("#location-dropdown-menu i").removeClass('flash')
+            $("#location-dropdown-menu i").addClass('opaque')
         });
 
         MapsLib.initialize();
