@@ -17,7 +17,7 @@ var MapsLib = {
 
         MapsLib.occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
-            center: [55, -1], 
+            center: [55, 1.5], 
             zoom: 5,
             attributionControl: false,
             zoomControl:false,
@@ -64,7 +64,7 @@ var MapsLib = {
                 <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very Low\
             ";
 
-            div.innerHTML = "<h4>Job prospects</h4>"
+            div.innerHTML = "<h4>Job prospects<br /><small id='legend-occupation'></small></h4>"
             div.innerHTML += labels;
             return div;
         };
@@ -119,6 +119,8 @@ var MapsLib = {
             MapsLib.compare_name = 'Job demand'
 
         $('#occupation-detail-title').html(occupation);
+        var occupation_formatted = occupation.replace(/((\w+\W+){3})/, '$1<br/>');
+        $('#legend-occupation').html(occupation_formatted);
 
         MapsLib.regions_occ_geojson.eachLayer(function (layer) {
             layer.setStyle({
