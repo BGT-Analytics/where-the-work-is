@@ -293,21 +293,20 @@ function selectOccupation(occupation, place_data){
 
     $( "#occupation-detail-modal" ).off('shown.bs.modal');
     $( "#occupation-detail-modal" ).on('shown.bs.modal', function (e) {
-        // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
-        $('#mapToggleProspects').click();
+        MapsLib.updateData(occupation, 'lq_label');
         $('#mapGeoRegions').click();
     });
 
-    $( "#mapToggleProspects" ).off('click');
-    $( "#mapToggleProspects" ).on('click', function (e) {
-        MapsLib.updateData(occupation, 'lq_label');
-    });
+    // $( "#mapToggleProspects" ).off('click');
+    // $( "#mapToggleProspects" ).on('click', function (e) {
+    //     MapsLib.updateData(occupation, 'lq_label');
+    // });
 
-    $( "#mapToggleDemand" ).off('click');
-    $( "#mapToggleDemand" ).on('click', function (e) {
-        MapsLib.updateData(occupation, 'demand_ticker');
-    });
+    // $( "#mapToggleDemand" ).off('click');
+    // $( "#mapToggleDemand" ).on('click', function (e) {
+    //     MapsLib.updateData(occupation, 'demand_ticker');
+    // });
 
     $( "#mapGeoRegions" ).off('click');
     $( "#mapGeoRegions" ).on('click', function (e) {
