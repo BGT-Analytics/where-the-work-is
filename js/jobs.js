@@ -276,6 +276,7 @@ function selectOccupation(occupation, place_data){
     $("#occ-label-demand").html('<span class="text-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
     $("#occ-label-comp-fe").html('<span class="text-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
     $("#occ-label-comp-he").html('<span class="text-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
+    $("#occ-label-salary").html('<span class="text-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
 
     $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' <small>jobs</small>')
     $("#occ-figure-salary").html(salary_fig_str)
@@ -402,21 +403,32 @@ function oppLabel(opp_val) {
     // converting demand/supply figures into natural language labels
     if (!opp_val){
         return '--'
-    }
-    else if (opp_val <= -1.5){
+    } else if (opp_val <= -1.5){
         return 'Very Low'
-    }
-    else if (opp_val <= -.5){
+    } else if (opp_val <= -.5){
         return 'Low'
-    }
-    else if (opp_val <= .5){
+    } else if (opp_val <= .5){
         return 'Medium'
-    }
-    else if (opp_val <= 1.5){
+    } else if (opp_val <= 1.5){
         return 'High'
-    }
-    else {
+    } else {
         return 'Very High'
     }
 
+}
+
+function salaryLabel(salary_val) {
+    if (!salary_val) {
+        return '--'
+    } else if (salary_val <= 25000){
+        return 'Very Low'
+    } else if (salary_val <= 30000){
+        return 'Low'
+    } else if (salary_val <= 35000){
+        return 'Medium'
+    } else if (salary_val <= 40000){
+        return 'High'
+    } else{
+        return 'Very High'
+    }
 }
