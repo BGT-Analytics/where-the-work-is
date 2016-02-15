@@ -1,10 +1,13 @@
 Highcharts.setOptions({
     lang: {
         thousandsSep: ','
+    },
+    chart: {
+        style: {
+            fontFamily: 'Source Sans Pro'
+        }
     }
 });
-
-
 
 function initializeTable(table_id, column_names, data){
     // column_names is an array of names to be used as the header row of the table
@@ -295,14 +298,14 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
             shadow: false,
             itemStyle: {
                 color: '#555',
-                fontWeight: 'normal'
+                fontWeight: 200
             },
             title: {
-                text: 'Click to hide',
+                text: 'Click to hide or show',
                 style: {
                     fontSize: '9px',
                     color: '#aaa',
-                    fontWeight: 'normal',
+                    fontWeight: 200,
                 }
             }
         },

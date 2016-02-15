@@ -3,7 +3,8 @@ html{
 }
 body {
   height: 100%;
-  font: 16px "PT Sans",sans-serif;
+  font: 16px "Source Sans Pro",sans-serif;
+  font-weight: 200;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -100,7 +101,7 @@ hr {
 
 #sel-occ-name{
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
 }
 #sel-occ-desc{
@@ -123,6 +124,7 @@ hr {
   color: #fbab18;
   margin-bottom: 0px;
   margin-top: 10px;
+  font-weight: 400;
 }
 
 
@@ -154,9 +156,11 @@ hr {
 #site-title{
   color: #fff;
   font-size: 26px;
+  font-weight: 400;
 }
 .nav-item{
   margin: 6px 8px;
+  font-weight: 400;
 }
 
 
@@ -232,13 +236,14 @@ hr {
   z-index: 1;
 }
 #education-select .btn{
-  border: 1px solid #5A5858;
-  color: #5A5858;
+  border: 1px solid #f47730;
+  color: #f47730;
   padding: 2px 4px;
   font-size: 10px;
+  font-weight: 400;
 }
 #education-select .btn.selected, #education-select .btn:hover{
-  background-color: #5A5858;
+  background-color: #f47730;
   color: #fff;
 }
 
@@ -295,6 +300,10 @@ hr {
 .chart-title{
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 0px;
+}
+.chart-subtitle{
+  font-size: 14px;
   margin-bottom: 0px;
 }
 
