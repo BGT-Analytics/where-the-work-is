@@ -4,7 +4,7 @@ Highcharts.setOptions({
     },
     chart: {
         style: {
-            fontFamily: 'Source Sans Pro'
+            fontFamily: '"Source Sans Pro", sans-serif'
         }
     }
 });

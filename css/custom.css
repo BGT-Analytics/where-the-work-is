@@ -140,6 +140,7 @@ hr {
 /* footer */
 #footer{
   padding: 10px 20px;
+  margin-top: 24px;
   border-top: 1px solid #eee;
   font-size: 10px;
 }
@@ -279,7 +280,7 @@ hr {
 
 /* page layout */
 #main-content{
-  height: calc(100% - 140px);
+  height: calc(100% - 150px);
   min-height: 560px;
 }
 #main-content .row{
