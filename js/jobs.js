@@ -268,25 +268,25 @@ function selectOccupation(occupation, place_data){
     $("#occ-rank-comp-he").html(comp_rank_str_he)
 
 
-    $('#btn-occ-lq').click(function() {
+    $( "#btn-occ-lq" ).off('click');
+    $('#btn-occ-lq').on('click', function() {
         $('#occupation-detail-modal').modal('show');
         return false;
     });
 
-    // $( "#occupation-detail-modal" ).unbind();
-    $( "#mapToggleProspects" ).unbind();
-    $( "#mapToggleDemand" ).unbind();
-
+    $( "#occupation-detail-modal" ).off('shown.bs.modal');
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
         $('#mapToggleProspects').click();
     });
 
+    $( "#mapToggleProspects" ).off('click');
     $('#mapToggleProspects').on('click', function (e) {
         MapsLib.updateData(occupation, 'lq_label');
     });
 
+    $( "#mapToggleDemand" ).off('click');
     $('#mapToggleDemand').on('click', function (e) {
         MapsLib.updateData(occupation, 'demand_ticker');
     });
