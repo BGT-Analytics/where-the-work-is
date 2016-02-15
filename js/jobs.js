@@ -138,15 +138,13 @@ function initialize(){
 
 
         setInterval(function () {
-            $('.flash').fadeIn(0, function () {
-                $('.flash').fadeOut(600, function () {
-                    $('.flash').fadeIn(600)
-                });
+            $('.flash').fadeTo(600, 1, function () {
+                $('.flash').fadeTo(600, .1)
             });
         }, 1200);
+
         $("#location-dropdown-menu").click(function(){
             $("#location-dropdown-menu i").removeClass("flash")
-            $("#location-dropdown-menu i").css("display", "inline-block")
         });
 
         MapsLib.initialize();
