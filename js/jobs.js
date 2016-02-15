@@ -25,7 +25,7 @@ function initialize(){
                 return {
                     geography_name: row.geography_name,
                     geography_type: row.geography_type,
-                    occupation: row.occupation,
+                    occupation: cleanOccupation(row.occupation),
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_ticker: row.demand_ticker,
                     demand_entry_he: parseInt(row.demand_entry_he),
@@ -355,7 +355,11 @@ function numberWithCommas(x) {
     return x;
 }
 
-function slugify(text)
-{
+function slugify(text) {
   return text.toString().toLowerCase().replace(/\s+/g, '-');
+}
+
+function cleanOccupation(text) {
+    // replace 'and' w/ '&'
+    return text.replace(/\band\b/, '&');
 }
