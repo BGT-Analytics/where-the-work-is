@@ -103,6 +103,10 @@ hr {
 #occ-detail{
   height: 100%;
 }
+.no-pad-left{ /*fighting bootstrap to get more space into the occupation box*/
+  padding-left: 0px;
+}
+
 
 #sel-occ-name{
   font-size: 16px;
