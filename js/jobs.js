@@ -144,8 +144,11 @@ function initialize(){
         }, 1200);
 
         $("#location-dropdown-menu").click(function(){
-            $("#location-dropdown-menu i").removeClass('flash')
-            $("#location-dropdown-menu i").addClass('opaque')
+            if($("#location-dropdown-menu i").hasClass( "flash" )){
+                $("#location-dropdown-menu i").removeClass('flash')
+                $("#location-dropdown-menu i").addClass('opaque')
+                $("#default-occ-info .text-info i").addClass('flash')
+            }
         });
 
         MapsLib.initialize();
