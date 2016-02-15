@@ -39,7 +39,7 @@ var MapsLib = {
         MapsLib.info.update = function (props) {
             if (props) {
                 if (typeof props['JOB_REGION'] === 'undefined') {
-                    this._div.innerHTML = '<b>' + toTitleCase(props['location_label']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by];
+                    this._div.innerHTML = '<b>' + toTitleCase(props['lep']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by];
                 }
                 else {
                     this._div.innerHTML = '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by];
