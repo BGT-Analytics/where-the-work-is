@@ -221,8 +221,10 @@ function updateEducation(education){
 function selectOccupation(occupation, place_data){
     // this populates the occupation detail pane on the main location view
 
-    $("#occ-info-pane").removeClass("well-occ-inactive")
-    $("#occ-info-pane").addClass("well-occ-active")
+    $('#occ-info-pane').fadeTo(0, 0, function () {
+        $('#occ-info-pane').fadeTo(800, 1)
+    });
+
     $("#occ-info-pane").addClass("well-sm")
     $("#default-occ-info").hide()
     $("#occ-detail").show()
