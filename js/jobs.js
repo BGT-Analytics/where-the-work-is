@@ -273,6 +273,10 @@ function selectOccupation(occupation, place_data){
         return false;
     });
 
+    // $( "#occupation-detail-modal" ).unbind();
+    $( "#mapToggleProspects" ).unbind();
+    $( "#mapToggleDemand" ).unbind();
+
     $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
         // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
