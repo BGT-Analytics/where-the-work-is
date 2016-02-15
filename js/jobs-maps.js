@@ -10,6 +10,8 @@ var MapsLib = {
     legend: L.control({position: 'bottomright'}),
     job_types_region: null,
     regions_occ_geojson: null,
+    lep_occ_geojson: null,
+    regions_bg_geojson: null,
 
     initialize: function() {
 
@@ -27,11 +29,7 @@ var MapsLib = {
             tap: false
         });
 
-        // MapsLib.layer = new L.StamenTileLayer("toner-lite");
-        // MapsLib.occ_map.addLayer(MapsLib.layer);
-
         // control that shows state info on hover
-
         MapsLib.info.onAdd = function (map) {
             this._div = L.DomUtil.create('div', 'info');
             this.update();
@@ -39,9 +37,18 @@ var MapsLib = {
         };
 
         MapsLib.info.update = function (props) {
-            this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by]
-                : 'Hover over a region or nation');
+            if (props) {
+                if (typeof props['JOB_REGION'] === 'undefined') {
+                    this._div.innerHTML = (props ?
+                        '<b>' + toTitleCase(props['location_label']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by]
+                        : 'Hover over a location');
+                }
+                else {
+                    this._div.innerHTML = (props ?
+                        '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by]
+                        : 'Hover over a region or nation');
+                }
+            }
         };
 
         MapsLib.info.addTo(MapsLib.occ_map);    
@@ -65,9 +72,42 @@ var MapsLib = {
 
         MapsLib.legend.addTo(MapsLib.occ_map);
 
+        // define geographic layers
         MapsLib.regions_occ_geojson = L.geoJson(regions_data[0], {onEachFeature: MapsLib.onEachFeature});
-        MapsLib.regions_occ_geojson.addTo(MapsLib.occ_map);
+        
+        MapsLib.regions_bg_geojson = L.geoJson(regions_data[0], {style: {
+                weight: .5,
+                opacity: .5,
+                color: '#333',
+                fillOpacity: 0.3,
+                fillColor: '#ddd'}});
 
+        MapsLib.lep_occ_geojson = L.geoJson(lep_locations, {
+            pointToLayer: function(feature, latlng){
+                return L.circleMarker(latlng, {
+                    color: '#154779', 
+                    fillColor: '#154779',
+                    radius: 6,
+                    weight: 0,
+                    opacity: .8,
+                    fillOpacity: .8 });
+            },
+            onEachFeature: MapsLib.onEachFeature
+        });
+    },
+
+    toggleGeo: function(geo_type){
+        //remove existing layers
+        MapsLib.occ_map.removeLayer(MapsLib.regions_occ_geojson);
+        MapsLib.occ_map.removeLayer(MapsLib.regions_bg_geojson);
+        MapsLib.occ_map.removeLayer(MapsLib.lep_occ_geojson);
+
+        if (geo_type == 'regions')
+            MapsLib.regions_occ_geojson.addTo(MapsLib.occ_map);
+        else if (geo_type == 'leps') {
+            MapsLib.regions_bg_geojson.addTo(MapsLib.occ_map);
+            MapsLib.lep_occ_geojson.addTo(MapsLib.occ_map);
+        }
     },
 
     updateData: function(occupation, compare_by){
@@ -87,6 +127,12 @@ var MapsLib = {
                 opacity: 1,
                 color: 'white',
                 fillOpacity: 0.7,
+                fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
+            });
+        });
+
+        MapsLib.lep_occ_geojson.eachLayer(function (layer) {
+            layer.setStyle({
                 fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
             });
         });

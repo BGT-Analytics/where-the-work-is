@@ -66,15 +66,15 @@ function initialize(){
                 });
 
                 // populate LEPs 
-                $.each(lep_locations, function(l_index, lep){
-                    if (lep['lep'] == job['geography_name']) {
-                        if (typeof lep['jobs_data'] === 'undefined')
-                            lep['jobs_data'] = {};
-                        lep['jobs_data'][occ] = {};
-                        lep['jobs_data'][occ]['lq'] = job['lq'];
-                        lep['jobs_data'][occ]['lq_label'] = job['lq_label'];
-                        lep['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
-                        lep['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+                $.each(lep_locations['features'], function(l_index, lep){
+                    if (lep.properties['lep'] == job['geography_name']) {
+                        if (typeof lep.properties['jobs_data'] === 'undefined')
+                            lep.properties['jobs_data'] = {};
+                        lep.properties['jobs_data'][occ] = {};
+                        lep.properties['jobs_data'][occ]['lq'] = job['lq'];
+                        lep.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
+                        lep.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+                        lep.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
                     }
                 });
             });
@@ -292,20 +292,31 @@ function selectOccupation(occupation, place_data){
     });
 
     $( "#occupation-detail-modal" ).off('shown.bs.modal');
-    $('#occupation-detail-modal').on('shown.bs.modal', function (e) {
+    $( "#occupation-detail-modal" ).on('shown.bs.modal', function (e) {
         // $("#occupation-detail-map").spin('large');
         MapsLib.occ_map._onResize();
         $('#mapToggleProspects').click();
+        $('#mapGeoRegions').click();
     });
 
     $( "#mapToggleProspects" ).off('click');
-    $('#mapToggleProspects').on('click', function (e) {
+    $( "#mapToggleProspects" ).on('click', function (e) {
         MapsLib.updateData(occupation, 'lq_label');
     });
 
     $( "#mapToggleDemand" ).off('click');
-    $('#mapToggleDemand').on('click', function (e) {
+    $( "#mapToggleDemand" ).on('click', function (e) {
         MapsLib.updateData(occupation, 'demand_ticker');
+    });
+
+    $( "#mapGeoRegions" ).off('click');
+    $( "#mapGeoRegions" ).on('click', function (e) {
+        MapsLib.toggleGeo('regions');
+    });
+
+    $( "#mapGeoLeps" ).off('click');
+    $( "#mapGeoLeps" ).on('click', function (e) {
+        MapsLib.toggleGeo('leps');
     });
 
     $.address.parameter('occupation', encodeURIComponent(occupation));
@@ -313,8 +324,8 @@ function selectOccupation(occupation, place_data){
     highlightOcc(occupation);
 
     $('[data-toggle="tooltip"]').tooltip({
-                html: true
-            });
+        html: true
+    });
 }
 
 
