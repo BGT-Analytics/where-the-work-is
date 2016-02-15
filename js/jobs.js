@@ -43,21 +43,38 @@ function initialize(){
             }
         );
 
-        //merge region geojson and job data
-        var job_types_region;
+        //merge location and job data
+        var current_occupation;
         var occupation_list = [];
         $.each(occupation_mapping, function(key, value) {occupation_list.push(String(key))});
 
-        $.each(regions_data[0]['features'], function(r_index, region){
-            $.each(occupation_list, function(k_index, occ) {
-                job_types_region = _.where(occupation_data, {occupation: occ});
-                $.each(job_types_region, function(j_index, job){
+        $.each(occupation_list, function(k_index, occ) {
+            current_occupation = _.where(occupation_data, {occupation: occ});
+            $.each(current_occupation, function(j_index, job){
+                
+                // populate regions 
+                $.each(regions_data[0]['features'], function(r_index, region){
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
-                        region.properties[occ] = {};
-                        region.properties[occ]['lq'] = job['lq'];
-                        region.properties[occ]['lq_label'] = job['lq_label'];
-                        region.properties[occ]['demand_sum'] = job['demand_sum'];
-                        region.properties[occ]['demand_ticker'] = job['demand_ticker'];
+                        if (typeof region.properties['jobs_data'] === 'undefined')
+                            region.properties['jobs_data'] = {};
+                        region.properties['jobs_data'][occ] = {};
+                        region.properties['jobs_data'][occ]['lq'] = job['lq'];
+                        region.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
+                        region.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+                        region.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+                    }
+                });
+
+                // populate LEPs 
+                $.each(lep_locations, function(l_index, lep){
+                    if (lep['lep'] == job['geography_name']) {
+                        if (typeof lep['jobs_data'] === 'undefined')
+                            lep['jobs_data'] = {};
+                        lep['jobs_data'][occ] = {};
+                        lep['jobs_data'][occ]['lq'] = job['lq'];
+                        lep['jobs_data'][occ]['lq_label'] = job['lq_label'];
+                        lep['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+                        lep['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
                     }
                 });
             });

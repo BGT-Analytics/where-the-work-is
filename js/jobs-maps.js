@@ -40,7 +40,7 @@ var MapsLib = {
 
         MapsLib.info.update = function (props) {
             this._div.innerHTML = (props ?
-                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props[MapsLib.occupation][MapsLib.compare_by]
+                '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by]
                 : 'Hover over a region or nation');
         };
 
@@ -87,7 +87,7 @@ var MapsLib = {
                 opacity: 1,
                 color: 'white',
                 fillOpacity: 0.7,
-                fillColor: MapsLib.getColor(layer.feature.properties[MapsLib.occupation][MapsLib.compare_by])
+                fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
             });
         });
     },
@@ -118,7 +118,7 @@ var MapsLib = {
     },
 
     resetHighlight: function (e) {
-        e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties[MapsLib.occupation][MapsLib.compare_by])});
+        e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])});
         MapsLib.info.update();
     },
 
