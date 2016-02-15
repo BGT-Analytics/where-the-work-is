@@ -4,7 +4,7 @@ html{
 body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -101,7 +101,6 @@ hr {
 
 #sel-occ-name{
   color: #fff;
-  font-weight: 400;
   font-size: 16px;
 }
 #sel-occ-desc{
@@ -111,6 +110,7 @@ hr {
 
 .occ-rank{
   font-size: 10px;
+  font-weight: 200;
   margin-bottom: 5px;
 }
 .occ-rank small{
@@ -118,13 +118,13 @@ hr {
 }
 .occ-figure{
   font-size: 14px;
+  font-weight: 200;
 }
 .occ-figure-title{
   font-size: 14px;
   color: #fbab18;
   margin-bottom: 0px;
   margin-top: 10px;
-  font-weight: 400;
 }
 
 
@@ -151,16 +151,18 @@ hr {
 #navbar{
   background-color: #154779;
   padding: 4px 0px;
-  height: 40px;
+  height: 34px;
 }
 #site-title{
-  color: #fff;
-  font-size: 26px;
-  font-weight: 400;
+  color: #baccd8;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 .nav-item{
-  margin: 6px 8px;
-  font-weight: 400;
+  color: #baccd8;
+  margin: 2px 8px;
+  font-size: 16px;
 }
 
 
@@ -240,7 +242,7 @@ hr {
   color: #f47730;
   padding: 2px 4px;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 300;
 }
 #education-select .btn.selected, #education-select .btn:hover{
   background-color: #f47730;
@@ -250,7 +252,7 @@ hr {
 .btn, .btn:hover{
   margin: 0px;
   text-transform: none;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 15px;
 }
 .btn-info{
@@ -303,6 +305,7 @@ hr {
   margin-bottom: 0px;
 }
 .chart-subtitle{
+  font-weight: 200;
   font-size: 14px;
   margin-bottom: 0px;
 }
