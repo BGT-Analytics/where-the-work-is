@@ -118,7 +118,7 @@ var geo_hierarchy = {
                     'level': 'Region',
                     'children': [
                         {
-                            'name': 'Cornwall and Isles of Scilly',
+                            'name': 'Cornwall and the Isles of Scilly',
                             'level': 'LEP'
                         },
                         {
@@ -207,7 +207,7 @@ var breadcrumbs = {
     "Solent":["ENGLAND","SOUTH EAST ENGLAND"],
     "Thames Valley Berkshire":["ENGLAND","SOUTH EAST ENGLAND"],
     "SOUTH WEST ENGLAND":["ENGLAND"],
-    "Cornwall and Isles of Scilly":["ENGLAND","SOUTH WEST ENGLAND"],
+    "Cornwall and the Isles of Scilly":["ENGLAND","SOUTH WEST ENGLAND"],
     "Heart of the South West":["ENGLAND","SOUTH WEST ENGLAND"],
     "Swindon and Wiltshire":["ENGLAND","SOUTH WEST ENGLAND"],
     "West of England":["ENGLAND","SOUTH WEST ENGLAND"],
