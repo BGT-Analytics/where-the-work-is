@@ -143,7 +143,7 @@ hr {
 }
 .occ-figure-title{
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 0px;
   margin-top: 10px;
 }
@@ -198,7 +198,7 @@ hr {
 #site-title{
   color: #baccd8;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 20px;
 }
 .nav-item{
@@ -226,7 +226,7 @@ hr {
 #current-location-name{
   color: #FBAB18;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 700;
   padding-top: 0px;
   margin-bottom: 0px;
 }
@@ -261,7 +261,7 @@ hr {
 #location-select-list .option-nation{
   padding-left: 10px;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
 }
 #location-select-list .option-region{
   padding-left: 20px;

@@ -36,16 +36,19 @@ function makeDemandChart(element_id, place_data){
     var prepped_data = [
         {
             name: 'Higher education',
-            color: '#154779',
+            // color: '#154779',
+            color: "#ddd",
             data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
             name: 'Further education',
-            color: '#60aadb',
+            // color: '#60aadb',
+            color: "#bbb",
             data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
             name: 'School leavers',
-            color: '#baccd8',
+            // color: '#baccd8',
+            color: "#999",
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
@@ -60,14 +63,16 @@ function makeDemandChart(element_id, place_data){
 function makeCompScatterPlot(element_id, place_data, education){
 
     if (education=='he'){
-        var point_color = '#154779'
+        // var point_color = '#154779'
+        var point_color = '#ddd'
         var col_name = 'he_opportunity_score'
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
     }
     else{
-        var point_color = "#60aadb"
+        //var point_color = "#60aadb"
+        var point_color = '#bbb'
         var col_name = 'fe_opportunity_score'
 
         $("#fe-select").attr('class', 'btn selected');
