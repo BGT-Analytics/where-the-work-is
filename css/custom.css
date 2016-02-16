@@ -4,7 +4,7 @@ html{
 body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -133,7 +133,6 @@ hr {
 
 .occ-rank{
   font-size: 10px;
-  font-weight: 200;
   margin-bottom: 5px;
 }
 .occ-rank small{
@@ -141,11 +140,10 @@ hr {
 }
 .occ-figure{
   font-size: 14px;
-  font-weight: 200;
 }
 .occ-figure-title{
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 0px;
   margin-top: 10px;
 }
@@ -200,7 +198,7 @@ hr {
 #site-title{
   color: #baccd8;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
 }
 .nav-item{
@@ -228,7 +226,7 @@ hr {
 #current-location-name{
   color: #FBAB18;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 900;
   padding-top: 0px;
   margin-bottom: 0px;
 }
@@ -263,7 +261,7 @@ hr {
 #location-select-list .option-nation{
   padding-left: 10px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
 }
 #location-select-list .option-region{
   padding-left: 20px;
@@ -288,7 +286,7 @@ hr {
   color: #f47730;
   padding: 2px 4px;
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 400;
 }
 #education-select .btn.selected, #education-select .btn:hover{
   background-color: #f47730;
@@ -298,8 +296,8 @@ hr {
 .btn, .btn:hover{
   margin: 0px;
   text-transform: none;
-  font-weight: 300;
   font-size: 15px;
+  font-weight: 400;
 }
 .btn-info{
   border: 1px solid #f47730;
@@ -346,12 +344,11 @@ hr {
 
 /* charts */
 .chart-title{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 18px;
   margin-bottom: 0px;
 }
 .chart-subtitle{
-  font-weight: 200;
   font-size: 14px;
   margin-bottom: 0px;
 }
