@@ -163,12 +163,27 @@ hr {
 
 /* footer */
 #footer{
-  padding: 10px 20px;
+  padding: 6px 0px;
   margin-top: 24px;
   border-top: 1px solid #eee;
   font-size: 10px;
 }
-.footer-brand { margin-bottom: 10px;}
+.footer-brand {
+  height: 28px;
+  margin-right: 20px;
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+/* Disable grayscale on hover */
+.footer-brand:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+.footer-brand.smaller {
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
 
 
 
