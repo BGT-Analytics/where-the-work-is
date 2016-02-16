@@ -114,6 +114,9 @@ hr {
 .no-pad-left{ /*fighting bootstrap to get more space into the occupation box*/
   padding-left: 0px;
 }
+.no-pad-right{
+  padding-right: 0px;
+}
 
 
 #sel-occ-name{
