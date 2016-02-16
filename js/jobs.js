@@ -18,9 +18,8 @@ function initialize(){
 
     $.when($.getJSON('data/merged_regions.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
         regions_data = geojson
-        raw_occupation_data = _.where($.csv.toObjects(csv[0]), {medium_skilled: "1"});
         occupation_data = _.map(
-            raw_occupation_data,
+            $.csv.toObjects(csv[0]),
             function(row) {
                 return {
                     geography_name: row.geography_name,
@@ -31,12 +30,9 @@ function initialize(){
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
                     demand_entry_sl: parseInt(row.demand_entry_sl),
-                    advertised_avg_salary_entry_degree: parseInt(row.advertised_avg_salary_entry_degree),
-                    he_ds_ratio_log: parseFloat(row.he_ds_ratio_log),
-                    fe_ds_ratio_log: parseFloat(row.fe_ds_ratio_log),
-                    include_fe: row.include_fe,
-                    include_he: row.include_he,
-                    medium_skilled: row.medium_skilled,
+                    reg_salary: parseInt(row.reg_salary),
+                    he_opportunity_score: parseInt(row.he_opportunity_score),
+                    fe_opportunity_score: parseInt(row.fe_opportunity_score),
                     lq: row.lq,
                     lq_label: row.lq_label
                 };
@@ -248,33 +244,33 @@ function selectOccupation(occupation, place_data){
     demand_rank_str = getRankStr(place_data, 'demand_sum', place_occ_data['demand_sum'])
 
 
-    var salary_fig = place_occ_data['advertised_avg_salary_entry_degree']
+    var salary_fig = place_occ_data['reg_salary']
     if (salary_fig){
         salary_fig_str = '£'+numberWithCommas(salary_fig)
     }
     else {
         salary_fig_str = '--'
     }
-    salary_rank_str = getRankStr(place_data, 'advertised_avg_salary_entry_degree', salary_fig)
+    salary_rank_str = getRankStr(place_data, 'reg_salary', salary_fig)
 
 
-    var comp_fig_he = place_occ_data['he_ds_ratio_log']
+    var comp_fig_he = place_occ_data['he_opportunity_score']
     if (comp_fig_he){
         comp_fig_str_he = parseInt(comp_fig_he)+'/100'
     }
     else {
         comp_fig_str_he = '--'
     }
-    comp_rank_str_he = getRankStr(place_data, 'he_ds_ratio_log', comp_fig_he)
+    comp_rank_str_he = getRankStr(place_data, 'he_opportunity_score', comp_fig_he)
 
-    var comp_fig_fe = place_occ_data['fe_ds_ratio_log']
+    var comp_fig_fe = place_occ_data['fe_opportunity_score']
     if (comp_fig_fe){
         comp_fig_str_fe = parseInt(comp_fig_fe)+'/100'
     }
     else {
         comp_fig_str_fe = '--'
     }
-    comp_rank_str_fe = getRankStr(place_data, 'fe_ds_ratio_log', comp_fig_fe)
+    comp_rank_str_fe = getRankStr(place_data, 'fe_opportunity_score', comp_fig_fe)
 
     $("#occ-label-demand").html('<span class="text-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
     $("#occ-label-comp-fe").html('<span class="text-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')

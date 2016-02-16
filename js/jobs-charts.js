@@ -60,26 +60,24 @@ function makeDemandChart(element_id, place_data){
 function makeCompScatterPlot(element_id, place_data, education){
 
     if (education=='he'){
-        var place_data_edu = _.where(place_data, {include_he: "1"})
         var point_color = '#154779'
-        var col_name = 'he_ds_ratio_log'
+        var col_name = 'he_opportunity_score'
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
     }
     else{
-        var place_data_edu = _.where(place_data, {include_fe: "1"})
         var point_color = "#60aadb"
-        var col_name = 'fe_ds_ratio_log'
+        var col_name = 'fe_opportunity_score'
 
         $("#fe-select").attr('class', 'btn selected');
         $("#he-select").attr('class', 'btn');
     }
 
     var prepped_data = []
-    $(place_data_edu).each(function(i, row){
+    $(place_data).each(function(i, row){
         point = {
-            x: row['advertised_avg_salary_entry_degree'],
+            x: row['reg_salary'],
             y: row[col_name],
             name: shortenName(row['occupation']),
             full_name: row['occupation']
@@ -142,8 +140,8 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             gridLineWidth: 0,
             startOnTick: false,
             endOnTick: false,
-            max: 2.4,
-            min: -2.4,
+            max: 115,
+            min: 0,
             title: {
                 text: 'Job opportunity',
                 style: {
@@ -159,7 +157,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 {
                     color: 'transparent',
                     width: 1,
-                    value: 2.3,
+                    value: 112,
                     label: {
                         text: '↑ Less competition',
                         style: {
@@ -171,7 +169,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 {
                     color: 'transparent',
                     width: 1,
-                    value: -2.3,
+                    value: 5,
                     label: {
                         text: '↓ More competition',
                         style: {
