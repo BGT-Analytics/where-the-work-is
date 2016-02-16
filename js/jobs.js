@@ -402,13 +402,13 @@ function oppLabel(opp_val) {
     // converting demand/supply figures into natural language labels
     if (!opp_val){
         return '--'
-    } else if (opp_val <= -1.5){
+    } else if (opp_val <= 9){
         return 'Very Low'
-    } else if (opp_val <= -.5){
+    } else if (opp_val <= 32){
         return 'Low'
-    } else if (opp_val <= .5){
+    } else if (opp_val <= 65){
         return 'Medium'
-    } else if (opp_val <= 1.5){
+    } else if (opp_val <= 89){
         return 'High'
     } else {
         return 'Very High'
