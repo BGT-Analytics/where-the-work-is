@@ -491,11 +491,11 @@ Region,WEST MIDLANDS,Associate Professional And Technical Occupations,Welfare an
 Region,YORKSHIRE AND THE HUMBER,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,4753,Medium,756.22,1726.15,1835.99,24000,0.97258614891,Average,64,77,Medium,High
 LEP,Black Country,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,672.833548742,Medium,151,325,168,28800,0.749733115848,Low,47,74,Medium,High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,1329.94059138,Medium,315,593,357,32300,0.733695302313,Low,46,84,Medium,High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,218.805590306,Medium,52,106,51,28000,0.460173645761,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,218.805590306,Medium,52,106,51,28000,0.460173645761,Very Low,32,,Low,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,1391.20778609,Medium,315,656,364,33500,1.82452563563,Very High,80,70,High,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,2417.70327179,Medium,552,1136,623,30300,1.31578342806,High,63,76,Medium,High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,2494.02303345,Medium,560,1198,627,30400,1.57411259137,Very High,62,80,Medium,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,2139.91611281,Medium,504,961,571,30300,1.64386913328,Very High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,2139.91611281,Medium,504,961,571,30300,1.64386913328,Very High,69,100,High,Very High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,2092.7986433,Medium,491,948,547,30700,0.919680796636,Average,40,67,Medium,High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,1077.41196994,Medium,249,517,260,30100,0.733392389161,Low,45,75,Medium,High
 LEP,Humber,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,563.114633969,Medium,132,257,150,29600,0.726243432264,Low,47,78,Medium,High
@@ -520,7 +520,7 @@ LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupa
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,308.716815915,Medium,33,155,112,40700,2.97094149431,Very High,86,79,High,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,398.244375896,Low,39,187,150,39400,1.59040198211,Very High,58,44,Medium,Medium
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,315.492255393,Low,31,146,120,38500,1.46116707831,High,56,70,Medium,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,204.18197998,Low,21,98,76,35800,1.15096931614,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,204.18197998,Low,21,98,76,35800,1.15096931614,Average,61,72,Medium,High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,349.376863033,Low,33,155,137,36600,1.12662570862,Average,45,54,Medium,Medium
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,123.864504505,Low,11,51,50,34400,0.618696009857,Very Low,31,42,Low,Medium
 LEP,Humber,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,101.982770305,Low,11,50,37,34700,0.965134971002,Average,51,,Medium,
@@ -541,11 +541,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Dra
 LEP,West of England,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,208.673153153,Low,19,91,83,41200,1.54147843844,Very High,73,44,High,Medium
 LEP,Black Country,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,625.593623483,Medium,201,129,279,28900,0.470215832777,Very Low,29,95,Low,Very High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,3380.90194152,High,1087,700,1505,35900,1.25811966495,High,63,100,Medium,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,283.462693185,Medium,93,60,124,25200,0.402128743705,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,283.462693185,Medium,93,60,124,25200,0.402128743705,Very Low,25,,Low,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,1903.90873881,High,597,384,870,37200,1.68426326429,Very High,62,100,Medium,Very High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,2369.147064,Medium,760,490,1058,30600,0.869719711481,Average,38,100,Medium,Very High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,3314.66996566,High,1055,679,1493,32400,1.41117704951,High,48,100,Medium,Very High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,2631.91709173,High,845,543,1175,34300,1.36379337127,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,2631.91709173,High,845,543,1175,34300,1.36379337127,High,70,,High,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,4563.04720138,High,1453,935,2054,32600,1.3526035199,High,51,100,Medium,Very High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,1296.48669953,Medium,415,266,581,34400,0.595289945149,Very Low,38,100,Medium,Very High
 LEP,Humber,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,573.684666997,High,185,119,255,29200,0.499073517671,Very Low,35,,Medium,
@@ -566,11 +566,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Inf
 LEP,West of England,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,2240.17983981,High,705,454,1021,35700,1.52119117162,Very High,79,100,High,Very High
 LEP,Black Country,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,381.72112805,Medium,38,168,146,28100,0.655363802031,Very Low,81,,High,
 LEP,Coast to Capital,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1252.7663906,Medium,132,554,488,32200,1.064855764,Average,93,100,Very High,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,376.066007631,Medium,37,165,148,35600,1.21860962592,High,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,376.066007631,Medium,37,165,148,35600,1.21860962592,High,89,,High,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,495.923920196,Medium,54,212,197,28800,1.00209806177,Average,,59,,Medium
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1151.52376972,Medium,115,519,435,31600,0.965587236961,Average,90,88,Very High,High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1508.10895228,Medium,151,684,569,30500,1.46657827142,High,99,82,Very High,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1144.33992686,Medium,116,514,437,31200,1.35444925477,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1144.33992686,Medium,116,514,437,31200,1.35444925477,High,92,,Very High,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,1636.63305265,Medium,160,738,624,30300,1.10814907032,Average,76,81,High,High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,950.023177018,Medium,95,414,373,29400,0.996382287611,Average,89,76,High,High
 LEP,Humber,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,255.622568354,Medium,26,108,104,34700,0.507950969713,Very Low,76,78,High,High
@@ -591,11 +591,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Hea
 LEP,West of England,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,669.697889136,Medium,69,292,264,29100,1.0387502911,Average,,83,,High
 LEP,Black Country,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,752.80557108,Medium,143,262,287,24100,0.849436666467,Average,57,89,Medium,High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,2075.03110856,Medium,344,747,802,26300,1.15919695633,Average,71,97,High,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,320.607773007,Medium,48,114,126,27000,0.68278897488,Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,320.607773007,Medium,48,114,126,27000,0.68278897488,Low,61,,Medium,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,863.20694744,Medium,148,309,331,24600,1.14636263089,Average,76,80,High,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,1946.42421338,Medium,310,710,750,25100,1.07267469578,Average,69,79,High,High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,2110.04371091,Medium,347,770,809,24300,1.34857749547,High,67,87,High,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,1384.78590174,Medium,217,506,538,24100,1.07721464375,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,1384.78590174,Medium,217,506,538,24100,1.07721464375,Average,81,,High,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,2933.46096232,Medium,500,1029,1141,24700,1.30538647746,High,63,93,Medium,Very High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,1362.04488693,Medium,216,492,526,25200,0.938847698406,Average,70,83,High,High
 LEP,Humber,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,400.313998926,Medium,59,141,155,22000,0.522799670205,Very Low,54,78,Medium,High
@@ -620,7 +620,7 @@ LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupa
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,131.516698993,Low,51,40,35,33600,1.57835348779,Very High,,,,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,135.841558513,Low,60,42,29,36800,0.676518183319,Low,,,,
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,246.13101444,Low,121,75,44,35400,1.4215661669,High,4,,Very Low,
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,169.719104091,Low,83,58,26,32300,1.19307192701,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,169.719104091,Low,83,58,26,32300,1.19307192701,Average,15,,Low,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,481.26795151,Low,244,139,85,37000,1.93536115371,Very High,6,,Very Low,
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,96.6062663649,Low,44,25,24,41500,0.601762755394,Very Low,,,,
 LEP,Humber,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,38.7805573316,Low,18,12,7,30900,0.457683077167,Very Low,,,,
@@ -641,11 +641,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Pro
 LEP,West of England,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,293.197757632,Low,143,83,61,40600,2.70097821743,Very High,37,,Medium,
 LEP,Black Country,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,305.259668255,Medium,49,56,138,31300,0.636990174085,Very Low,7,47,Very Low,Medium
 LEP,Coast to Capital,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,955.146714078,Medium,186,221,390,38200,0.986774304807,Average,16,60,Low,Medium
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,188.750306072,Medium,49,45,68,33200,0.743387480765,Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,188.750306072,Medium,49,45,68,33200,0.743387480765,Low,,29,,Low
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,597.74385755,Medium,108,107,279,36300,1.46803814875,High,37,69,Medium,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,1088.61119591,Medium,191,200,496,34800,1.10947739921,Average,21,65,Low,Medium
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,1446.30753053,Medium,260,289,625,36800,1.70946506324,Very High,31,73,Low,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,732.650605366,Medium,131,139,337,36200,1.05397826251,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,732.650605366,Medium,131,139,337,36200,1.05397826251,Average,23,97,Low,Very High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,2278.51447429,Medium,423,464,961,36900,1.87510552804,Very High,25,65,Low,Medium
 LEP,Heart of the South West,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,432.475305642,Medium,80,88,184,35500,0.551290065007,Very Low,1,47,Very Low,Medium
 LEP,Humber,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,149.40234425,Medium,27,33,64,28700,0.360833678157,Very Low,,50,,Medium
@@ -666,11 +666,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,"Ar
 LEP,West of England,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,924.035628225,Medium,185,184,385,36400,1.74199939097,Very High,51,55,Medium,Medium
 LEP,Black Country,Associate Professional And Technical Occupations,Design Occupations,Design Occs,83.5151549049,Low,14,14,52,29600,0.297566794306,Very Low,,42,,Medium
 LEP,Coast to Capital,Associate Professional And Technical Occupations,Design Occupations,Design Occs,659.596759756,Medium,114,109,411,43500,1.16354217495,Average,15,77,Low,High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Design Occupations,Design Occs,85.3266589484,Medium,14,14,53,30600,0.573810101288,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Design Occupations,Design Occs,85.3266589484,Medium,14,14,53,30600,0.573810101288,Very Low,,32,,Low
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Design Occupations,Design Occs,495.708771162,Medium,86,82,309,41300,2.07876163484,Very High,41,72,Medium,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Design Occupations,Design Occs,717.402211834,Medium,124,117,447,36000,1.24843013908,High,18,54,Low,Medium
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Design Occupations,Design Occs,626.745114373,Low,108,103,390,37400,1.26487150614,High,22,64,Low,Medium
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Design Occupations,Design Occs,427.526149869,Medium,73,71,266,36800,1.05015473535,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Design Occupations,Design Occs,427.526149869,Medium,73,71,266,36800,1.05015473535,Average,22,,Low,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Design Occupations,Design Occs,1235.48887616,Medium,212,204,769,39700,1.73607559514,Very High,18,69,Low,High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Design Occupations,Design Occs,333.258098541,Medium,57,55,207,36400,0.725363058375,Low,1,63,Very Low,Medium
 LEP,Humber,Associate Professional And Technical Occupations,Design Occupations,Design Occs,129.244772399,Medium,22,21,80,35400,0.532989323417,Very Low,,,,
@@ -695,7 +695,7 @@ LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupa
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,365.984859712,Medium,125,189,47,29200,1.59863620967,Very High,44,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,577.513506233,Medium,188,304,78,31500,1.04682025047,Average,31,49,Low,Medium
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,617.547708986,Low,201,335,72,25800,1.29817847398,High,33,48,Medium,Medium
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,396.288847892,Low,130,216,46,27700,1.01393683036,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,396.288847892,Low,130,216,46,27700,1.01393683036,Average,31,,Low,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,829.596041313,Low,266,463,90,26300,1.21424101926,High,29,50,Low,Medium
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,329.108600569,Medium,116,157,50,31400,0.746143551839,Low,18,34,Low,Medium
 LEP,Humber,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,139.713149524,Medium,45,76,16,26000,0.600138160758,Very Low,20,,Low,
@@ -745,7 +745,7 @@ LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupa
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,247.245930488,Low,53,16,144,29800,0.618150297804,Very Low,,61,,Medium
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,787.332470893,Medium,168,50,458,33700,0.816857944771,Low,52,68,Medium,High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,1076.74659041,Medium,229,68,626,32700,1.29555483209,High,38,89,Medium,High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,519.879698912,Medium,111,33,302,32800,0.761342916107,Low,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,519.879698912,Medium,111,33,302,32800,0.761342916107,Low,,90,,Very High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,3502.47105424,Medium,746,221,2036,33000,2.9342099702,Very High,38,100,Medium,Very High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,734.443069307,Medium,156,46,427,31000,0.95305880907,Average,,77,,High
 LEP,Humber,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,97.9412293853,Low,21,6,57,26600,0.240800794622,Very Low,,55,,Medium
@@ -766,11 +766,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Leg
 LEP,West of England,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,1010.09282178,Medium,215,64,587,35000,1.93848871996,Very High,68,90,High,Very High
 LEP,Black Country,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,718.528992662,Medium,140,157,364,34200,0.478824851075,Very Low,24,88,Low,High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,3563.78567449,High,664,694,1884,39500,1.17578632363,Average,52,98,Medium,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,274.063916087,Medium,52,52,144,32900,0.344705742041,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,274.063916087,Medium,52,52,144,32900,0.344705742041,Very Low,22,,Low,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,2188.10383435,High,407,407,1173,37800,1.71616573658,Very High,71,72,High,High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,2996.42338979,High,585,663,1504,36500,0.975254408414,Average,62,80,Medium,High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,4339.33270638,High,831,935,2201,37000,1.6379159501,Very High,56,90,Medium,Very High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,2321.29825445,High,443,481,1194,36000,1.06643592425,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,2321.29825445,High,443,481,1194,36000,1.06643592425,Average,63,100,Medium,Very High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,5387.34751072,High,999,1054,2842,36900,1.41585243935,High,48,84,Medium,High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,1709.7266338,High,327,342,884,35300,0.696008605352,Low,51,68,Medium,High
 LEP,Humber,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,576.649553464,High,115,130,284,33700,0.444765092095,Very Low,43,69,Medium,High
@@ -791,11 +791,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,"Bu
 LEP,West of England,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,2962.11389813,High,545,540,1597,40500,1.78332343332,Very High,86,88,High,High
 LEP,Black Country,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,1899.08007772,High,396,222,1219,31800,0.528675440761,Very Low,36,100,Medium,Very High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,8195.50752177,Very High,1626,934,5340,34700,1.12955180091,Average,56,100,Medium,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,807.73988966,High,163,92,522,31000,0.424406143679,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,807.73988966,High,163,92,522,31000,0.424406143679,Very Low,35,100,Medium,Very High
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,4815.37445101,Very High,949,562,3138,37200,1.57773782149,Very High,71,96,High,Very High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,7083.37099919,Very High,1414,803,4624,32800,0.96309295325,Average,59,100,Medium,Very High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,9904.93018469,Very High,2005,1153,6399,34100,1.5618292558,Very High,63,100,Medium,Very High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,6399.23692503,Very High,1272,729,4174,34500,1.22813323433,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,6399.23692503,Very High,1272,729,4174,34500,1.22813323433,High,70,100,High,Very High
 LEP,Greater Manchester,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,13089.0678731,Very High,2641,1479,8505,33300,1.43702788343,High,54,99,Medium,Very High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,3795.98065313,Very High,774,437,2449,33900,0.645543325187,Very Low,51,100,Medium,Very High
 LEP,Humber,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,1375.70349566,Very High,278,159,893,33700,0.443258474134,Very Low,40,92,Medium,Very High
@@ -841,11 +841,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Con
 LEP,West of England,Associate Professional And Technical Occupations,Conservation and Environmental Associate Professionals,Environmental Assoc. Profnls,12,Low,3,2,6,26900,0.991428891795,Average,,,,
 LEP,Black Country,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,1079.83863984,High,228,217,582,30200,0.642755343634,Very Low,47,100,Medium,Very High
 LEP,Coast to Capital,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,3086.91282423,High,659,580,1703,34400,0.909694644645,Average,60,100,Medium,Very High
-LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,391.89413114,Medium,84,74,214,31000,0.440270781966,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,391.89413114,Medium,84,74,214,31000,0.440270781966,Very Low,46,,Medium,
 LEP,Coventry and Warwickshire,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,2573.30127786,High,548,492,1412,35000,1.80275364346,Very High,82,100,High,Very High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,3492.34071972,High,748,642,1940,31900,1.0152799223,Average,64,100,Medium,Very High
 LEP,Greater Birmingham and Solihull,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,5068.01336223,High,1091,910,2836,32900,1.70868048808,Very High,65,100,Medium,Very High
-LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,2494.12344102,High,529,477,1367,31900,1.02347258062,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,2494.12344102,High,529,477,1367,31900,1.02347258062,Average,75,,High,
 LEP,Greater Manchester,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,6296.38618107,High,1356,1120,3534,31700,1.47804891289,High,61,100,Medium,Very High
 LEP,Heart of the South West,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,1669.5943211,High,355,323,911,33600,0.607090360964,Very Low,54,100,Medium,Very High
 LEP,Humber,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,696.325827002,High,146,144,370,28800,0.479717634898,Very Low,52,100,Medium,Very High
@@ -866,11 +866,11 @@ LEP,Thames Valley Berkshire,Associate Professional And Technical Occupations,Pub
 LEP,West of England,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,3526.47685453,Very High,763,597,2009,34200,1.8963733643,Very High,88,100,High,Very High
 LEP,Black Country,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,827.020547151,Medium,586,151,79,23300,0.560569552398,Very Low,7,,Very Low,
 LEP,Coast to Capital,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,2870.31997655,High,2002,534,296,30000,0.963225474733,Average,34,,Medium,
-LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,441.285316125,High,321,84,32,23300,0.564542906841,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,441.285316125,High,321,84,32,23300,0.564542906841,Very Low,18,,Low,
 LEP,Coventry and Warwickshire,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,2191.43356936,High,1527,391,241,27700,1.74823749222,Very High,54,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,3155.22781801,High,2191,542,373,25000,1.04454291039,Average,41,,Medium,
 LEP,Greater Birmingham and Solihull,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,3776.41014096,High,2637,693,394,27300,1.44986857678,High,35,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,2473.760496,High,1756,453,234,26100,1.15595862928,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,2473.760496,High,1756,453,234,26100,1.15595862928,Average,50,,Medium,
 LEP,Greater Manchester,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,5251.05679351,High,3622,932,616,26700,1.40368784145,High,32,,Low,
 LEP,Heart of the South West,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,1700.73881565,High,1178,315,183,24100,0.704216790425,Low,32,,Low,
 LEP,Humber,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,632.296572634,High,458,120,49,23400,0.496044206082,Very Low,25,,Low,
@@ -891,11 +891,11 @@ LEP,Thames Valley Berkshire,Administrative And Secretarial Occupations,Administr
 LEP,West of England,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,1950.8308627,Medium,1319,349,249,27900,1.19461730073,Average,58,,Medium,
 LEP,Black Country,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,564.213102664,Medium,385,180,0,25100,0.60835208311,Very Low,34,,Medium,
 LEP,Coast to Capital,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1918.69402431,Medium,1368,551,0,30400,1.02424062115,Average,51,,Medium,
-LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,163.787555751,Medium,109,55,0,21800,0.333316649008,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,163.787555751,Medium,109,55,0,21800,0.333316649008,Very Low,32,,Low,
 LEP,Coventry and Warwickshire,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1357.1076873,Medium,932,425,0,28100,1.72220583648,Very High,69,,High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1677.76308795,Medium,1144,534,0,28300,0.883537171109,Average,51,,Medium,
 LEP,Greater Birmingham and Solihull,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,2636.64337056,Medium,1848,789,0,27900,1.61027296018,Very High,54,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1515.71650575,Medium,1045,469,0,27000,1.1266817195,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1515.71650575,Medium,1045,469,0,27000,1.1266817195,Average,67,,High,
 LEP,Greater Manchester,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,3466.23583217,Medium,2466,1000,0,26600,1.47394255089,High,50,,Medium,
 LEP,Heart of the South West,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1025.31539694,Medium,696,329,0,26500,0.675343707301,Low,46,,Medium,
 LEP,Humber,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,442.091657766,Medium,295,144,0,24100,0.551709547931,Very Low,44,,Medium,
@@ -920,7 +920,7 @@ LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,
 LEP,Coventry and Warwickshire,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,328.252252346,Medium,189,140,0,38600,1.34960480732,High,71,,High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,593.325586543,Medium,343,251,0,32400,1.01231441915,Average,62,,Medium,
 LEP,Greater Birmingham and Solihull,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,802.268335096,Medium,468,335,0,37600,1.58743486908,Very High,62,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,495.289950012,Medium,290,206,0,36700,1.19280908797,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,495.289950012,Medium,290,206,0,36700,1.19280908797,Average,75,,High,
 LEP,Greater Manchester,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,915.735216193,Medium,523,393,0,37600,1.26159663177,High,57,,Medium,
 LEP,Heart of the South West,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,339.83473858,Medium,195,144,0,36800,0.725209200701,Low,57,,Medium,
 LEP,Humber,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,127.905606061,Medium,74,54,0,31800,0.517149269573,Very Low,50,,Medium,
@@ -941,11 +941,11 @@ LEP,Thames Valley Berkshire,Administrative And Secretarial Occupations,Administr
 LEP,West of England,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,502.06971651,Medium,293,208,0,42900,1.58452826722,Very High,86,,High,
 LEP,Black Country,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,856.731096037,High,621,236,0,21900,0.610765862841,Very Low,35,,Medium,
 LEP,Coast to Capital,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2797.42146144,High,2019,778,0,23800,0.987353268605,Average,51,,Medium,
-LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,631.764123757,High,458,174,0,20900,0.850059759585,Average,,,,
+LEP,Cornwall and the Isles of Scilly,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,631.764123757,High,458,174,0,20900,0.850059759585,Average,50,,Medium,
 LEP,Coventry and Warwickshire,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,1504.17262345,Medium,1087,416,0,23100,1.26207980984,High,63,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2788.11546173,High,2025,763,0,21900,0.970785627012,Average,52,,Medium,
 LEP,Greater Birmingham and Solihull,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,3879.85986104,High,2806,1074,0,23600,1.56668808657,Very High,55,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2879.33591282,High,2081,798,0,23600,1.41512236556,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2879.33591282,High,2081,798,0,23600,1.41512236556,High,72,,High,
 LEP,Greater Manchester,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,5198.00553179,High,3784,1414,0,22600,1.46142852327,High,51,,Medium,
 LEP,Heart of the South West,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2022.37323682,High,1473,550,0,21300,0.88073870184,Average,51,,Medium,
 LEP,Humber,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,638.094188819,High,461,176,0,19700,0.52650362114,Very Low,42,,Medium,
@@ -966,11 +966,11 @@ LEP,Thames Valley Berkshire,Administrative And Secretarial Occupations,Secretari
 LEP,West of England,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,2284.0595691,High,1651,633,0,23700,1.47107097954,High,75,,High,
 LEP,Black Country,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,102.672694952,Low,45,54,4,28300,0.734866048231,Low,24,,Low,
 LEP,Coast to Capital,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,402.435706775,Low,179,207,16,33600,1.42604808417,High,37,,Medium,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,149.617392109,Medium,67,56,24,20300,2.02115478931,Very High,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,149.617392109,Medium,67,56,24,20300,2.02115478931,Very High,14,,Low,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,142.009481205,Low,64,70,8,33600,1.19627072912,Average,38,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,243.895530013,Low,110,121,13,28000,0.852588401387,Average,35,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,253.685965015,Low,111,124,18,35300,1.0284565275,Average,32,,Low,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,308.079027132,Low,135,157,16,29300,1.52015121678,Very High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,308.079027132,Low,135,157,16,29300,1.52015121678,Very High,47,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,258.91067424,Low,116,121,21,39500,0.730825671285,Low,19,,Low,
 LEP,Heart of the South West,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,235.658663664,Low,105,107,22,27800,1.03036756349,Average,19,,Low,
 LEP,Humber,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,66.8140453915,Low,30,31,6,31600,0.553486888311,Very Low,,,,
@@ -995,7 +995,7 @@ LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,"Metal Forming, 
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,482.453946643,Medium,197,285,0,25800,2.03873233044,Very High,94,,Very High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,958.877826809,Medium,379,581,0,24400,1.68147752391,Very High,83,,High,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,856.566548865,Medium,356,501,0,24300,1.74197861528,Very High,82,,High,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,445.990873127,Medium,180,266,0,24800,1.10393331453,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,445.990873127,Medium,180,266,0,24800,1.10393331453,Average,83,,High,
 LEP,Greater Manchester,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,728.742312937,Low,289,441,0,26000,1.03188199888,Average,77,,High,
 LEP,Heart of the South West,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,250.10510594,Low,101,150,0,24800,0.548559242734,Very Low,61,,Medium,
 LEP,Humber,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,216.409097904,Medium,89,128,0,27900,0.899305594746,Average,68,,High,
@@ -1016,11 +1016,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,"Metal Forming, Welding a
 LEP,West of England,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,121.927470515,Low,45,76,0,29800,0.395496799539,Very Low,69,,High,
 LEP,Black Country,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,1039.77880995,High,289,752,0,27000,1.83466141191,Very High,82,,High,
 LEP,Coast to Capital,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,626.45515018,Medium,174,450,0,32200,0.54725455997,Very Low,66,,High,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,141.631802801,Medium,39,102,0,27500,0.471671918131,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,141.631802801,Medium,39,102,0,27500,0.471671918131,Very Low,54,,Medium,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,982.281686429,Medium,273,708,0,31800,2.03990492003,Very High,93,,Very High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,1459.24255574,Medium,403,1056,0,29300,1.25754868825,High,76,,High,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,1807.55021496,Medium,501,1307,0,28200,1.8065151662,Very High,82,,High,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,875.663954807,Medium,244,632,0,31700,1.06518213301,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,875.663954807,Medium,244,632,0,31700,1.06518213301,Average,81,,High,
 LEP,Greater Manchester,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,1233.0607151,Medium,354,880,0,30200,0.858044956113,Average,71,,High,
 LEP,Heart of the South West,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,685.021672646,Medium,189,494,0,28300,0.73837132517,Low,68,,High,
 LEP,Humber,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,313.934495594,Medium,91,224,0,29100,0.641121515132,Very Low,60,,Medium,
@@ -1041,11 +1041,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,"Metal Machining, Fitting
 LEP,West of England,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,609.995424756,Medium,172,439,0,32900,0.972383360535,Average,91,,Very High,
 LEP,Black Country,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,505.229894736,Medium,107,395,0,25600,0.818203334189,Low,47,,Medium,
 LEP,Coast to Capital,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1095.50636387,Medium,236,853,0,31600,0.878357978425,Average,55,,Medium,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,163.937981545,Medium,36,128,0,25600,0.501090375882,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,163.937981545,Medium,36,128,0,25600,0.501090375882,Very Low,33,,Medium,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1223.1225727,Medium,265,952,0,32500,2.33131576301,Very High,79,,High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1468.31215255,Medium,317,1144,0,29200,1.16137629164,Average,54,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1666.09803903,Medium,359,1299,0,28400,1.52830148389,Very High,59,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1057.26267499,Medium,228,825,0,33100,1.18039277111,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1057.26267499,Medium,228,825,0,33100,1.18039277111,Average,62,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,1123.58623312,Medium,249,869,0,26800,0.71761123802,Low,45,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,898.491413604,Medium,197,696,0,30300,0.88887702784,Average,51,,Medium,
 LEP,Humber,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,324.062807708,Medium,71,251,0,28100,0.607418120111,Very Low,49,,Medium,
@@ -1066,11 +1066,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,Vehicle Trades,Vehicle Tr
 LEP,West of England,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,885.795911454,Medium,192,689,0,29600,1.29599060459,High,85,,High,
 LEP,Black Country,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,276.133855174,Medium,57,189,28,29800,0.657970495844,Very Low,39,,Medium,
 LEP,Coast to Capital,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,764.585741217,Medium,160,483,112,38100,0.901981020177,Average,54,,Medium,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,117.091190527,Medium,24,81,12,28400,0.526593214254,Very Low,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,117.091190527,Medium,24,81,12,28400,0.526593214254,Very Low,34,,Medium,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,665.324196742,Medium,144,400,111,37300,1.86585974891,Very High,63,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,952.271319078,Medium,188,640,115,33000,1.10822980449,Average,47,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,1239.3488241,Medium,253,817,155,33700,1.67269438608,Very High,56,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,837.200408115,Medium,169,538,120,35400,1.37526892785,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,837.200408115,Medium,169,538,120,35400,1.37526892785,High,64,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,1063.15983457,Medium,221,693,138,33800,0.999070053791,Average,50,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,544.97715707,Medium,111,372,56,32600,0.79326923037,Low,44,,Medium,
 LEP,Humber,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,218.730840387,Medium,43,159,15,32100,0.603230279682,Very Low,34,,Medium,
@@ -1095,7 +1095,7 @@ LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,"Skilled Metal, 
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,70.8049113233,Low,22,49,0,35200,1.67948828211,Very High,,,,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,108.874418605,Low,34,75,0,35300,1.07167447676,Average,61,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,151.522510232,Low,47,104,0,33500,1.72968936036,Very High,70,,High,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,84.0941147433,Low,26,58,0,31800,1.16840046134,Average,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,84.0941147433,Low,26,58,0,31800,1.16840046134,Average,71,,High,
 LEP,Greater Manchester,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,117.543103448,Low,37,81,0,33500,0.934248589636,Average,60,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,70.8888888889,Low,22,49,0,33000,0.872747063928,Average,,,,
 LEP,Humber,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,43.4605954466,Low,14,30,0,31600,1.01376361765,Average,,,,
@@ -1116,11 +1116,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,"Skilled Metal, Electrica
 LEP,West of England,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,101.607407407,Low,32,70,0,32500,1.85001831425,Very High,,,,
 LEP,Black Country,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,490.674750917,Medium,121,370,0,30300,0.724082428351,Low,22,,Low,
 LEP,Coast to Capital,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1542.73032121,Medium,379,1163,0,35600,1.12711636097,Average,44,,Medium,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,443.727632253,High,108,337,0,29600,1.23587641739,High,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,443.727632253,High,108,337,0,29600,1.23587641739,High,47,,Medium,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,716.566234019,Medium,179,537,0,32000,1.24454198253,High,50,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1258.85691576,Medium,297,960,0,30600,0.907304418402,Average,35,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1352.07015222,Medium,326,1024,0,33500,1.13013363352,Average,33,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1239.75854325,Medium,298,943,0,34600,1.26125483283,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1239.75854325,Medium,298,943,0,34600,1.26125483283,High,53,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1607.60148726,Medium,384,1225,0,32500,0.935585137608,Average,36,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,1380.2714289,Medium,340,1042,0,32900,1.24426917575,High,48,,Medium,
 LEP,Humber,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,414.379799742,Medium,101,313,0,29400,0.707748930862,Low,39,,Medium,
@@ -1141,11 +1141,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,Construction and Building
 LEP,West of England,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,978.801686044,Medium,234,744,0,33200,1.30492329284,High,58,,Medium,
 LEP,Black Country,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,85.1064752333,Low,19,66,0,26600,0.626270292621,Very Low,18,,Low,
 LEP,Coast to Capital,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,273.498467525,Low,62,211,0,29700,0.996411073182,Average,35,,Medium,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,79.6643688932,Medium,18,60,0,26600,1.10643931785,Average,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,79.6643688932,Medium,18,60,0,26600,1.10643931785,Average,32,,Low,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,113.365843503,Low,26,88,0,25700,0.981839149526,Average,44,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,260.885186,Low,59,202,0,27100,0.937628898269,Average,31,,Low,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,234.669016511,Low,53,181,0,26000,0.978117968207,Average,30,,Low,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,265.073623666,Low,61,205,0,26100,1.34473639199,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,265.073623666,Low,61,205,0,26100,1.34473639199,High,49,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,388.315571815,Low,88,300,0,29000,1.12692400679,Average,32,,Low,
 LEP,Heart of the South West,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,292.571885035,Low,67,226,0,25700,1.31518650332,High,37,,Medium,
 LEP,Humber,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,71.1193495693,Low,15,55,0,22400,0.605721977164,Very Low,27,,Low,
@@ -1220,7 +1220,7 @@ LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Printing Trades,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Printing Trades,Printing Trades,50.8001872659,Low,25,25,0,28500,0.998474814597,Average,,,,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Printing Trades,Printing Trades,154.321326913,Low,83,72,0,27300,1.2586969917,High,56,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Printing Trades,Printing Trades,152.0282397,Low,76,74,0,28600,1.4380481609,High,62,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Printing Trades,Printing Trades,111.748859247,Low,58,53,0,26700,1.28655222957,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Printing Trades,Printing Trades,111.748859247,Low,58,53,0,26700,1.28655222957,High,62,,Medium,
 LEP,Greater Manchester,Skilled Trades Occupations,Printing Trades,Printing Trades,199.506942675,Low,100,99,0,32800,1.31395810412,High,49,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Printing Trades,Printing Trades,55.8598193376,Low,28,29,0,31900,0.569859720272,Very Low,,,,
 LEP,Humber,Skilled Trades Occupations,Printing Trades,Printing Trades,31.3512859689,Low,16,17,0,22400,0.605974843081,Very Low,,,,
@@ -1241,11 +1241,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,Printing Trades,Printing 
 LEP,West of England,Skilled Trades Occupations,Printing Trades,Printing Trades,67.8442006656,Low,34,34,0,33700,1.02357953504,Average,,,,
 LEP,Black Country,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,842.637462555,High,345,496,0,20900,0.502814545795,Very Low,49,,Medium,
 LEP,Coast to Capital,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,4887.19463428,Very High,1811,3069,0,24500,1.4438136575,High,80,,High,
-LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,1266.72334995,Very High,470,795,0,21700,1.42663580227,High,,,,
+LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,1266.72334995,Very High,470,795,0,21700,1.42663580227,High,67,,High,
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,2293.54437681,High,853,1437,0,24300,1.61076851149,Very High,85,,High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,3296.88947608,High,1241,2049,0,22400,0.960846064433,Average,64,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,3305.32666818,Medium,1301,2000,0,22800,1.11716606152,Average,71,,High,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,3368.6576185,High,1258,2103,0,24300,1.3857834744,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,3368.6576185,High,1258,2103,0,24300,1.3857834744,High,89,,High,
 LEP,Greater Manchester,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,3338.25981175,Medium,1295,2041,0,23000,0.785593390105,Low,60,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,2940.0681859,High,1113,1823,0,23700,1.07171675027,Average,63,,Medium,
 LEP,Humber,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,651.149240536,High,269,381,0,21800,0.449711461061,Very Low,51,,Medium,
@@ -1270,7 +1270,7 @@ LEP,Cornwall and the Isles of Scilly,Skilled Trades Occupations,Other Skilled Tr
 LEP,Coventry and Warwickshire,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),174.052428649,Low,70,94,6,34600,1.09575675181,Average,60,,Medium,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire",Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),385.031237325,Low,166,192,17,29000,1.00589691576,Average,47,,Medium,
 LEP,Greater Birmingham and Solihull,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),462.605284253,Low,200,228,24,29000,1.40159332211,High,53,,Medium,
-LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),395.442460977,Low,165,214,11,32800,1.45824296436,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),395.442460977,Low,165,214,11,32800,1.45824296436,High,67,,High,
 LEP,Greater Manchester,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),479.922916251,Low,214,240,17,32500,1.01241194052,Average,42,,Medium,
 LEP,Heart of the South West,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),309.678768496,Low,142,150,11,32000,1.0119105674,Average,41,,Medium,
 LEP,Humber,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),73.4986667652,Low,34,36,3,27300,0.455030976917,Very Low,,,,
@@ -1291,11 +1291,11 @@ LEP,Thames Valley Berkshire,Skilled Trades Occupations,Other Skilled Trades,Skil
 LEP,West of England,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),325.58998226,Low,134,177,10,42400,1.57341093637,Very High,76,,High,
 LEP,Black Country,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,2514.42142131,Very High,1037,990,367,21100,1.36697138718,High,50,84,Medium,High
 LEP,Coast to Capital,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,3530.9716668,High,1276,1696,445,22000,0.950385999432,Average,55,85,Medium,High
-LEP,Cornwall and the Isles of Scilly,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,651.310269796,High,260,272,91,17300,0.668303222982,Low,,,,
+LEP,Cornwall and the Isles of Scilly,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,651.310269796,High,260,272,91,17300,0.668303222982,Low,39,,Medium,
 LEP,Coventry and Warwickshire,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,2042.99794156,High,816,896,255,21600,1.30721854226,High,69,91,High,Very High
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire","Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,3627.40964328,High,1470,1502,498,21900,0.963164168119,Average,54,70,Medium,High
 LEP,Greater Birmingham and Solihull,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,5376.09832573,High,2208,2150,772,21100,1.65548342207,Very High,55,79,Medium,High
-LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,2088.92522838,Medium,758,1028,243,20900,0.78291693493,Low,,,,
+LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,2088.92522838,Medium,758,1028,243,20900,0.78291693493,Low,59,,Medium,
 LEP,Greater Manchester,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,8998.11021938,Very High,3734,3474,1355,20500,1.92922678082,Very High,55,100,Medium,Very High
 LEP,Heart of the South West,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,1766.92185546,High,683,848,184,19700,0.586805594095,Very Low,46,52,Medium,Medium
 LEP,Humber,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,759.10589675,High,304,332,94,18800,0.477650316011,Very Low,39,55,Medium,Medium
@@ -1320,7 +1320,7 @@ LEP,Cornwall and the Isles of Scilly,"Caring, Leisure And Other Service Occupati
 LEP,Coventry and Warwickshire,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,121.20520622,Low,61,38,17,20600,1.23353368028,High,,,,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire","Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,201.862068966,Low,103,63,27,25900,0.852526526727,Average,9,,Very Low,
 LEP,Greater Birmingham and Solihull,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,185.320824882,Low,93,58,24,27300,0.907676986348,Average,19,,Low,
-LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,376.851942467,Low,191,117,51,23700,2.24653411001,Very High,,,,
+LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,376.851942467,Low,191,117,51,23700,2.24653411001,Very High,38,,Medium,
 LEP,Greater Manchester,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,270.413631022,Low,137,86,35,27600,0.922167940682,Average,24,,Low,
 LEP,Heart of the South West,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,196.611570248,Low,99,61,27,23700,1.0385692052,Average,11,,Low,
 LEP,Humber,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,37.7822364901,Low,19,11,5,23300,0.37813322013,Very Low,,,,
@@ -1341,11 +1341,11 @@ LEP,Thames Valley Berkshire,"Caring, Leisure And Other Service Occupations",Anim
 LEP,West of England,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,119.629090909,Low,61,38,15,22600,0.934552281887,Average,,,,
 LEP,Black Country,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,2704.02100929,Very High,507,2177,18,20900,0.750995563044,Low,77,,High,
 LEP,Coast to Capital,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,8315.84487893,Very High,1517,6758,38,23800,1.14345250439,Average,97,,Very High,
-LEP,Cornwall and the Isles of Scilly,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,1349.72239741,Very High,260,1081,7,22600,0.707515628241,Low,,,,
+LEP,Cornwall and the Isles of Scilly,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,1349.72239741,Very High,260,1081,7,22600,0.707515628241,Low,81,,High,
 LEP,Coventry and Warwickshire,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,3586.32581739,Very High,665,2912,10,22200,1.17229244564,Average,100,,Very High,
 LEP,"Derby, Derbyshire, Nottingham and Nottinghamshire","Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,8181.72070321,Very High,1532,6613,36,20500,1.10982452484,Average,89,,High,
 LEP,Greater Birmingham and Solihull,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,8268.29469996,Very High,1530,6697,38,21900,1.30070716839,High,90,,Very High,
-LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,6775.78019531,Very High,1258,5491,25,22800,1.29735268399,High,,,,
+LEP,Greater Cambridge & Greater Peterborough,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,6775.78019531,Very High,1258,5491,25,22800,1.29735268399,High,93,,Very High,
 LEP,Greater Manchester,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,8135.025936,High,1505,6596,32,22800,0.891039318909,Average,76,,High,
 LEP,Heart of the South West,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,5709.65475726,Very High,1076,4610,22,22900,0.968707595045,Average,93,,Very High,
 LEP,Humber,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,1533.65165696,Very High,297,1217,18,20800,0.492992583443,Very Low,75,,High,
