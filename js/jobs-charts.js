@@ -104,7 +104,8 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             type: 'scatter',
             zoomType: 'xy',
             marginLeft: 20,
-            marginTop: 0
+            marginTop: 0,
+            backgroundColor: 'transparent'
         },
 
         credits: {
@@ -248,7 +249,8 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
     $(element_id).highcharts({
         chart: {
             type: 'bar',
-            zoomType: 'y'
+            zoomType: 'y',
+            backgroundColor: 'transparent'
         },
         credits: {
             enabled: false
@@ -331,6 +333,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 stacking: 'normal'
             },
             series: {
+                borderColor: '#2c3e50',
                 cursor: 'pointer',
                 pointPadding: 0,
                 groupPadding: .1,
@@ -346,7 +349,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 },
                 states: {
                     select: {
-                        borderColor: '#fff',
+                        borderColor: '#2c3e50',
                         color: "#FBAB18"
                     },
                     hover: {

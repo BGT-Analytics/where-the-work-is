@@ -5,6 +5,8 @@ body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
   font-weight: 400;
+  background: #2c3e50;
+  color: #bdc3c7;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -16,7 +18,7 @@ a, a:hover {
 }
 
 hr {
-  border-color: #efefef;
+  border-color: #34495e;
 }
 
 
@@ -104,7 +106,7 @@ hr {
 
 /* occupation pane */
 .well-occ-inactive{
-  background-color: #f3f1f1;
+  background-color: #34495e;
   margin: 0px;
 }
 .well-occ-active{
@@ -167,8 +169,8 @@ hr {
 #footer{
   padding: 6px 0px;
   margin-top: 24px;
-  border-top: 1px solid #eee;
   font-size: 10px;
+  background: #fff;
 }
 .footer-brand {
   height: 28px;
@@ -191,7 +193,7 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #154779;
+  background-color: #34495e;
   padding: 4px 0px;
   height: 34px;
 }
@@ -215,7 +217,7 @@ hr {
   height: 58px;
 }
 #control-pane>.container-fluid>.row>div{
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #34495e;
 }
 #control-pane h3{
   color: #fff;
@@ -344,6 +346,7 @@ hr {
 
 /* charts */
 .chart-title{
+  color: #ecf0f1;
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 0px;
