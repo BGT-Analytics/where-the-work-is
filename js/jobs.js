@@ -132,6 +132,19 @@ function initialize(){
            $("#location-dropdown-menu").dropdown("toggle");
         });
 
+        $("#close-occ").click(function(){
+            $('#occ-info-pane').fadeTo(0, 0, function () {
+                $('#occ-info-pane').fadeTo(800, 1)
+            });
+
+            $("#occ-info-pane").removeClass("well-sm");
+            $("#occ-detail").hide();
+            $("#default-occ-info").show();
+
+            $.address.parameter('occupation', '');
+            highlightOcc('');
+        });
+
 
         setInterval(function () {
             $('.flash').fadeTo(600, 1, function () {
