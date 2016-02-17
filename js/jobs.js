@@ -235,7 +235,7 @@ function selectOccupation(occupation, place_data){
         tooltip_content = tooltip_content +'<li>'+ title + '</li>'
     });
     tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
-    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="left" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
+    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="right" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
 
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
