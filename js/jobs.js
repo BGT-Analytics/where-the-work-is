@@ -1,6 +1,5 @@
 // variable init
 var occupation_data;
-var region_lep_mapping;
 var regions_data;
 var occ_map;
 
@@ -24,6 +23,7 @@ function initialize(){
                 return {
                     geography_name: row.geography_name,
                     geography_type: row.geography_type,
+                    job_family: cleanOccupation(row.job_family),
                     occupation: cleanOccupation(row.occupation),
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_ticker: row.demand_ticker,
@@ -147,10 +147,10 @@ function initialize(){
 
 
         setInterval(function () {
-            $('.flash').fadeTo(600, 1, function () {
-                $('.flash').fadeTo(600, .1)
+            $('.flash').fadeTo(400, 1, function () {
+                $('.flash').fadeTo(400, .1)
             });
-        }, 1200);
+        }, 800);
 
         $("#location-dropdown-menu").click(function(){
             if($("#location-dropdown-menu i").hasClass( "flash" )){
@@ -408,7 +408,7 @@ function slugify(text) {
 
 function cleanOccupation(text) {
     // replace 'and' w/ '&'
-    return text.replace(/\band\b/, '&');
+    return text.replace(/\b[a|A]nd\b/, '&');
 }
 
 function oppLabel(opp_val) {
