@@ -215,24 +215,18 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 marker: {
                     states: {
                         select: {
-                            fillColor: point_color,
-                            lineWidth: 6,
-                            lineColor: "#FBAB18",
-                            radius: 8
+                            fillColor: "#FBAB18",
+                            lineWidth: 1,
+                            lineColor: "#2c3e50",
+                            radius: 7
+                        },
+                        hover: {
+                            fillColor: "#e2be7c",
+                            lineWidth: 1,
+                            lineColor: "#2c3e50",
+                            radius: 7
                         }
                     }
-                },
-                states: {
-                    hover: {
-                        halo: {
-                            size: 12,
-                            attributes: {
-                                fill: '#FBAB18'
-                            },
-                            opacity: .5
-                        }
-                    }
-
                 }
             },
         },
@@ -388,6 +382,41 @@ function highlightOcc(occupation){
                     }
                     else{
                         point.select(false, true);
+                    }
+                });
+            });
+        };
+    });
+
+}
+
+function highlightOccFamily(job_family){
+
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'scatter'){
+            // looping thru stuff in scatterplot
+            $.each(chart.series[0].points, function(index, point){
+                if(occupation_mapping[point.full_name]['job_family'] == job_family){
+                    point.select(true, true);
+                    // point.setState('hover');
+                }
+                else{
+                    point.select(false, true);
+                    // point.setState();
+                }
+            });
+        }
+        else if (chart && chart.options.chart.type == 'bar'){
+            // looping thru stuff in bar chart
+            $.each(chart.series, function(index, series){
+                $.each(series.data, function(index, point){
+                    if(occupation_mapping[point.category]['job_family'] == job_family){
+                        point.select(true, true);
+                        // point.setState('hover');
+                    }
+                    else{
+                        point.select(false, true);
+                        // point.setState();
                     }
                 });
             });
