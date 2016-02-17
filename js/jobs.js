@@ -145,6 +145,15 @@ function initialize(){
             highlightOcc('');
         });
 
+        $(".job-family").hover(
+            function(){
+                highlightOccFamily($(this).text());
+            },
+            function(){
+                highlightOccFamily('');
+            }
+        );
+
 
         setInterval(function () {
             $('.flash').fadeTo(400, 1, function () {
@@ -161,6 +170,7 @@ function initialize(){
         });
 
         MapsLib.initialize();
+
     });
 }
 

@@ -132,6 +132,11 @@ hr {
   cursor: pointer;
 }
 
+.job-family{
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
 
 #sel-occ-name{
   font-size: 14px;
