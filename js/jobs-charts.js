@@ -136,7 +136,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                     fontSize: '9px',
                 }
             },
-            min: 18000,
+            min: 17000,
             tickColor: '#eee',
             tickLength: 5,
             lineColor: '#eee'

@@ -448,13 +448,13 @@ function oppLabel(opp_val) {
 function salaryLabel(salary_val) {
     if (!salary_val) {
         return '--'
-    } else if (salary_val <= 25000){
+    } else if (salary_val <= 17818){
         return 'Very Low'
-    } else if (salary_val <= 30000){
+    } else if (salary_val <= 23823){
         return 'Low'
-    } else if (salary_val <= 35000){
+    } else if (salary_val <= 30999){
         return 'Medium'
-    } else if (salary_val <= 40000){
+    } else if (salary_val <= 41734){
         return 'High'
     } else{
         return 'Very High'
