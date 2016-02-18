@@ -306,15 +306,15 @@ function selectOccupation(occupation, place_data){
     $("#occ-label-comp-he").html('<span class="text-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
     $("#occ-label-salary").html('<span class="text-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
 
-    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' <small>jobs</small>')
-    $("#occ-figure-salary").html(salary_fig_str)
-    $("#occ-figure-comp-fe").html(comp_fig_str_fe)
-    $("#occ-figure-comp-he").html(comp_fig_str_he)
+    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' jobs'+demand_rank_str)
+    $("#occ-figure-salary").html(salary_fig_str+salary_rank_str)
+    $("#occ-figure-comp-fe").html(comp_fig_str_fe+comp_rank_str_fe)
+    $("#occ-figure-comp-he").html(comp_fig_str_he+comp_rank_str_he)
 
-    $("#occ-rank-demand").html(demand_rank_str)
-    $("#occ-rank-salary").html(salary_rank_str)
-    $("#occ-rank-comp-fe").html(comp_rank_str_fe)
-    $("#occ-rank-comp-he").html(comp_rank_str_he)
+    // $("#occ-rank-demand").html(demand_rank_str)
+    // $("#occ-rank-salary").html(salary_rank_str)
+    // $("#occ-rank-comp-fe").html(comp_rank_str_fe)
+    // $("#occ-rank-comp-he").html(comp_rank_str_he)
 
 
     $( "#btn-occ-lq" ).off('click');
@@ -364,20 +364,20 @@ function getRankStr(place_data, occ_figure_name, occ_figure_val){
     if (occ_figure_val){
         // do stuff
         rank = 1;
-        out_of = 0;
+        // out_of = 0;
         $.each(place_data, function(index, row){
             if(row[occ_figure_name]){
-                out_of = out_of+1;
+                // out_of = out_of+1;
                 if(row[occ_figure_name]>occ_figure_val){
                     rank = rank+1;
                 };
             };
         });
 
-        return '#'+rank+' <small>of '+out_of+'</small>';
+        return ' <small>(#'+rank+')</small>';
     }
     else{
-        return '--'
+        return ''
     }
 }
 
