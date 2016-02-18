@@ -2,8 +2,7 @@ var MapsLib = MapsLib || {};
 var MapsLib = {
 
     occupation: null,
-    compare_by: null,
-    compare_name: null,
+    compare_by: 'lq_label',
     occ_map: null,
     layer: null,
     info: L.control(),
@@ -37,13 +36,20 @@ var MapsLib = {
         };
 
         MapsLib.info.update = function (props) {
+
+            var location_key = 'JOB_REGION';
             if (props) {
-                if (typeof props['JOB_REGION'] === 'undefined') {
-                    this._div.innerHTML = '<b>' + toTitleCase(props['lep']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by];
-                }
-                else {
-                    this._div.innerHTML = '<b>' + toTitleCase(props['JOB_REGION']) + '</b><br />' + MapsLib.compare_name + ': ' + props['jobs_data'][MapsLib.occupation][MapsLib.compare_by];
-                }
+                if (typeof props['JOB_REGION'] === 'undefined') 
+                    location_key = 'lep';
+
+                this._div.innerHTML = '<b>' + toTitleCase(props[location_key]) + '</b>\
+                                       <table class="table table-condensed"><tbody>\
+                                       <tr><td>Job concentration</td><td>' + props['jobs_data'][MapsLib.occupation]['lq_label'] + '</td></tr>\
+                                       <tr><td>Job demand</td><td>' + props['jobs_data'][MapsLib.occupation]['demand_ticker'] + '</td></tr>\
+                                       <tr><td>Salary</td><td>£' + numberWithCommas(props['jobs_data'][MapsLib.occupation]['reg_salary']) + '</td></tr>\
+                                       <tr><td>Opportunity (Further Ed)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['fe_opportunity_score']) + '</td></tr>\
+                                       <tr><td>Opportunity (Higher Ed)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['he_opportunity_score']) + '</td></tr>';
+
             }
             else {
                 this._div.innerHTML = 'Hover over a location';
@@ -109,14 +115,8 @@ var MapsLib = {
         }
     },
 
-    updateData: function(occupation, compare_by){
+    updateData: function(occupation){
         MapsLib.occupation = occupation;
-        MapsLib.compare_by = compare_by;
-
-        if (compare_by == 'lq_label')
-            MapsLib.compare_name = 'Job concentration'
-        else if (compare_by == 'demand_ticker')
-            MapsLib.compare_name = 'Job demand'
 
         $('#occupation-detail-title').html(occupation);
         var occupation_formatted = occupation.replace(/((\w+\W+){3})/, '$1<br/>');
