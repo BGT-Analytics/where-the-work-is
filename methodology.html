@@ -12,28 +12,80 @@ description:
       <div class='well well-xs'>
         <h3>Methodology</h3>
         <ul class='list-unstyled'>
-          <li><a href='#data-source'>Data source</a></li>
-          <li><a href='#occupations'>Occupations</a></li>
+          <li><a href='#data-source'>Data collection</a></li>
           <li><a href='#analysis'>Analysis</a></li>
+          <li><a href='#limitations'>Limitations</a></li>
+          <li><a href='#download'>Download data</a></li>
         </ul>
       </div>
     </div>
     <div class='col-sm-9'>
       <br/>
       <br/>
-      <h2 id="data-source">Data source</h2>
-      <p>content here</p>
+      <h2 id="data-source">Data collection</h2>
+      <h4>Demand data</h4>
       <p>
-        <a href="data/occupation_data.csv" target="_blank" class="btn btn-info"><i class="fa fa-download fa-fw"></i> Download data</a>
+        Burning Glass has collected more than 1.5 million jobs posted online by employers in the UK since 2012. Burning Glass uses advanced natural language analytics to turn the information in each job posting into usable data. This allows Burning Glass to describe employer demand for specific roles or skills.
       </p>
-
-      <h2 id="occupations">Occupations</h2>
+      <p>
+        The demand for entry level (< 2 years of experience) talent is compared with the available supply of new graduates or trainees. Burning Glass postings data is normalised against vacancy data published by the Office for National Statistics (ONS) and Jobcentre Plus. The data is further validated against the Annual Survey of Hours and Earnings (ASHE) from ONS.
+      </p>
+      <h4>Supply data</h4>
+      <p>
+        We have used the numbers of learners leaving higher and further education (programme finishers by subject area) as a proxy for the “supply” of entry level talent.
+      </p>
+      <h4>Occupations</h4>
       <p>
         We use the <a href="http://www.ons.gov.uk/ons/guide-method/classifications/current-standard-classifications/soc2010/index.html" target="_blank">standard occupational classification 2010</a> (SOC2010) by the Office for National Statistics, which is the official classification of occupational information for the UK. Within this system, jobs are classified in terms of their skill level and skill content. In this tool, the occupations are shown at “minor group” or 3-digit level.
       </p>
+      <h4>Updating data</h4>
+      <p>
+        Burning Glass and IPPR hope to refresh this tool with new data each year. It may also be possible to supplement the existing data with further datasets and information, to provide background, contextual information or data on other learners not included in the existing FE and HE datasets. 
+      </p>
 
       <h2 id="analysis">Analysis</h2>
-      <p>content here</p>
+      <h4>Linking supply & demand data</h4>
+      <p>
+        IPPR and Burning Glass undertook this comparison by building a customised confluence or “crosswalk” between degrees, college courses, and jobs. The crosswalk uses destination data from national surveys to inform the likely career trajectories of programme finishers, informing the most nuanced and accurate mapping of how education programmes align to specific jobs. 
+      </p>
+
+      <h4>Normalisation methodology</h4>
+      <p>
+        Burning Glass postings data are first normalised against the number of total vacancies as published by the Office for the National Statistics (ONS) Vacancy Survey, to ensure that the total level of demand is estimated correctly. The Burning Glass data are then further normalised using information from the Jobcentre Plus Vacancies, provided by the Nomis service from ONS. In this way we make sure that the geographic distribution of demand and the distribution of occupations are correctly represented by the normalised demand. 
+      </p>
+      <p>
+        In order to validate this normalisation method, the distribution of normalised demand is compared with the distribution of employment, which is estimated by the Annual Survey of Hours and Earnings (ASHE) from ONS. The comparison is done by geography and by major occupational group. Correlation of the two distributions is very high.
+      </p>
+
+      <h4>Advertised salary</h4>
+      <p>
+        Burning Glass salary data is based upon the salary stated in the job posting. When a range is specified, the mid-point salary is used. Different salary frequencies are adjusted to reflect an annual salary. Salary is shown by location – nation or region.
+      </p>
+      <p>
+        Using full time employee wages from the Annual Survey of Hours and Earnings (ASHE) survey data, the 20th, 40th, 60th and 80th percentiles were used to determine the wage categories of “very low”, “low”, “medium”, “high”, and “very high”. As the occupations shown in the tool are medium skilled (excluding elementary and manual roles), there are very few in the lower categories.
+      </p>
+
+      <h2 id="limitations">Limitations</h2>
+      <p>
+        It is important to note that certain occupations will not appear – those that are not medium-skilled occupations fall outside the scope of the tool. Other occupations do not require any formal qualifications or training, so “supply” cannot be meaningfully quantified.
+      </p>
+      <p>
+        Some occupations do not have specific qualifications that “supply” them, or subject-specific requirements (such as Sales, Marketing and Related Associate Professionals). As a result of this, and despite the fact that many people with a broad range of qualifications can apply for these occupations, they frequently appear “under supplied” in the tool.
+      </p>
+      <p>
+        Some occupations do not rely solely on college finishers or graduates from their immediate location. Many people travel to find work, often moving across the country. Other occupations, such as those on the Migration Advisory Committee (MAC) shortage occupation list, may rely more heavily on workforce arriving from outside the UK.
+      </p>
+      <p>
+        Burning Glass acknowledge that not all jobs are posted online, although a comparison of the Annual Survey of Hours and Earnings (ASHE) Employment Data and Burning Glass Technologies postings data for UK in 2014 showed a 94% correlation between their occupational distributions. The posting data slightly over-estimate the proportion of professional and associate professional occupations, while slightly under-estimating the proportion of elementary occupations. Note that Professional and elementary occupations are not included in the scope of this tool.
+      </p>
+
+      <h2 id="download">Download data</h2>
+      <p>
+        The data used to produce the data visualizations are available for download.
+      </p>
+      <p>
+        <a href="data/occupation_data.csv" target="_blank" class="btn btn-info"><i class="fa fa-download fa-fw"></i> Download CSV file</a>
+      </p>
 
       <br/>
       <br/>

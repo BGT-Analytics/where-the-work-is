@@ -25,6 +25,10 @@ hr {
 .full-height-container{
   height: calc(100% - 98px); /*take up full height, taking header & footer into account*/
 }
+.full-height-container h4{
+  color: #ecf0f1;
+  font-weight: 700;
+}
 
 
 
