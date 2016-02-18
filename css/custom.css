@@ -133,8 +133,11 @@ hr {
 }
 
 .job-family{
-  margin-bottom: 0px;
-  padding-left: 10px;
+  text-align: center;
+}
+.job-family .job-family-name{
+  margin-top: 4px;
+  font-size: 9px;
 }
 
 

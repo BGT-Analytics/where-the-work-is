@@ -137,7 +137,6 @@ function initialize(){
                 $('#occ-info-pane').fadeTo(800, 1)
             });
 
-            $("#occ-info-pane").removeClass("well-sm");
             $("#occ-detail").hide();
             $("#default-occ-info").show();
 
@@ -147,9 +146,17 @@ function initialize(){
 
         $(".job-family").hover(
             function(){
-                highlightOccFamily($(this).text());
+                $(this).css('color','#FBAB18')
+                highlightOccFamily($(this).attr('data'));
+                if($("#helper-job-family i").hasClass( "flash" )){
+                    $("#helper-job-family i").removeClass('flash')
+                    $("#helper-job-family i").addClass('opaque')
+                    // TO-DO: add flash to occupation helper
+                    //$("#").addClass('flash')
+                }
             },
             function(){
+                $(this).css('color','inherit')
                 highlightOccFamily('');
             }
         );
@@ -165,7 +172,7 @@ function initialize(){
             if($("#location-dropdown-menu i").hasClass( "flash" )){
                 $("#location-dropdown-menu i").removeClass('flash')
                 $("#location-dropdown-menu i").addClass('opaque')
-                $("#default-occ-info .text-info i").addClass('flash')
+                $("#helper-job-family i").addClass('flash')
             }
         });
 
@@ -248,7 +255,6 @@ function selectOccupation(occupation, place_data){
         $('#occ-info-pane').fadeTo(800, 1)
     });
 
-    $("#occ-info-pane").addClass("well-sm")
     $("#default-occ-info").hide()
     $("#occ-detail").show()
 

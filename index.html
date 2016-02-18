@@ -37,21 +37,47 @@ description: "This tool visualises the dynamics of the entry level job market fo
     <div class='col-sm-6 col-md-5 col-md-offset-1 chart-col'>
       <br/>
 
-      <div class="well well-occ-inactive" id="occ-info-pane">
+      <div class="well well-occ-inactive well-sm" id="occ-info-pane">
         <div id="default-occ-info">
-          <p>Explore prospects for medium-skilled jobs.</p>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Explore prospects for medium-skilled jobs.</p>
 
-          <p>Job families:</p>
+              <p class="text-info" id="helper-job-family">
+                <small>Hover over a job family to highlight jobs </small>
+                <i class="fa fa-hand-o-down"></i>
+              </p>
+            </div>
+          </div>
+          <div class="row">
 
-          <p class="job-family">Associate Professional & Technical Occupations</p>
-          <p class="job-family">Administrative & Secretarial Occupations</p>
-          <p class="job-family">Skilled Trades Occupations</p>
-          <p class="job-family">Caring, Leisure & Other Service Occupations</p>
+            <div class="col-xs-3 job-family" data="Associate Professional & Technical Occupations">
+              <i class="fa fa-briefcase fa-fw fa-3x"></i>
+              <div class="job-family-name">
+                Associate Professional & Technical
+              </div>
+            </div>
+            <div class="col-xs-3 job-family" data="Administrative & Secretarial Occupations">
+              <i class="fa fa-folder-open-o fa-fw fa-3x"></i>
+              <div class="job-family-name">
+                Administrative & Secretarial
+              </div>
+            </div>
+            <div class="col-xs-3 job-family" data="Skilled Trades Occupations">
+              <i class="fa fa-cogs fa-fw fa-3x"></i>
+              <div class="job-family-name">
+                Skilled Trades
+              </div>
+            </div>
+            <div class="col-xs-3 job-family" data="Caring, Leisure & Other Service Occupations">
+              <i class="fa fa-hand-paper-o fa-fw fa-3x fa-rotate-90"></i>
+              <div class="job-family-name">
+                Caring, Leisure & Other Service
+              </div>
+            </div>
 
-<!--           <p class="text-info">
-            <i class="fa fa-hand-o-down"></i>
-            <strong>Select an occupation to view details</strong>
-          </p> -->
+          </div>
+
         </div>
 
         <div id="occ-detail" style="display:none;">
