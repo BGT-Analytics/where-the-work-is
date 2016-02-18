@@ -134,7 +134,9 @@ function initialize(){
 
         $(".job-family").hover(
             function(){
-                $(this).css('color','#e2be7c')
+                if(!$(this).hasClass('selected')){
+                    $(this).css('color','#e2be7c')
+                }
                 highlightOccFamily($(this).attr('data'));
                 if($("#helper-job-family i").hasClass( "flash" )){
                     $("#helper-job-family i").removeClass('flash')
@@ -144,11 +146,21 @@ function initialize(){
                 }
             },
             function(){
-                $(this).css('color','inherit')
+                if(!$(this).hasClass('selected')){
+                    $(this).css('color','inherit')
+                }
                 highlightOccFamily('');
             }
         );
         $(".job-family").click(function(){
+            var clicked_job_fam = $(this).attr('data')
+            // unselect other selected stuff
+            $('.job-family').each(function(index, elem){
+                if ($(elem).attr('data')!=clicked_job_fam){
+                    $(elem).removeClass('selected');
+                    $(elem).css('color', 'inherit');
+                };
+            });
             if($(this).hasClass('selected')){
                 // unselecting
                 $(this).css('color','inherit')
@@ -158,7 +170,7 @@ function initialize(){
                 // selecting
                 $(this).css('color','#fBAB18')
                 $(this).addClass('selected')
-                selectOccFamily($(this).attr('data'));
+                selectOccFamily(clicked_job_fam);
             };
         });
 
