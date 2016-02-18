@@ -347,13 +347,18 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
             verticalAlign: 'top',
             y: 50,
             floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#eee',
-            borderWidth: 1,
+            backgroundColor: '#34495e',
+            borderWidth: 0,
             shadow: false,
             itemStyle: {
-                color: '#555',
+                color: '#ecf0f1',
                 fontWeight: 200
+            },
+            itemHoverStyle: {
+                color: '#fff'
+            },
+            itemHiddenStyle: {
+                color: '#1d2a38'
             },
             title: {
                 text: 'Click to hide or show',
