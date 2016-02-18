@@ -64,7 +64,7 @@ var MapsLib = {
                 <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very Low\
             ";
 
-            div.innerHTML = "<h4>Job prospects<br /><small id='legend-occupation'></small></h4>"
+            div.innerHTML = "<h4>Job concentration<br /><small id='legend-occupation'></small></h4>"
             div.innerHTML += labels;
             return div;
         };
@@ -114,7 +114,7 @@ var MapsLib = {
         MapsLib.compare_by = compare_by;
 
         if (compare_by == 'lq_label')
-            MapsLib.compare_name = 'Job prospects'
+            MapsLib.compare_name = 'Job concentration'
         else if (compare_by == 'demand_ticker')
             MapsLib.compare_name = 'Job demand'
 
@@ -141,12 +141,12 @@ var MapsLib = {
 
     // get color depending on population density value
     getColor: function (d) {
-        return d == 'Very High' ? '#0b253f' :
-               d == 'High'      ? '#154779' :
-               d == 'Average'   ? '#2B74A6' :
-               d == 'Low'       ? '#60AADB' :
-               d == 'Very Low'  ? '#8ac0e4' :
-                                  '#8ac0e4' ;
+        return d == 'Very High' ? '#0e1419' :
+               d == 'High'      ? '#2c3e50' :
+               d == 'Average'   ? '#56799d' :
+               d == 'Low'       ? '#89a4be' :
+               d == 'Very Low'  ? '#cbd7e3' :
+                                  '#cbd7e3' ;
     },
 
     highlightFeature: function (e) {

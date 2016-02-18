@@ -51,30 +51,20 @@ function initialize(){
                 // populate regions 
                 $.each(regions_data[0]['features'], function(r_index, region){
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
-                        if (typeof region.properties['jobs_data'] === 'undefined')
-                            region.properties['jobs_data'] = {};
-                        region.properties['jobs_data'][occ] = {};
-                        region.properties['jobs_data'][occ]['lq'] = job['lq'];
-                        region.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
-                        region.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
-                        region.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+                        addDataToLocation(region, occ, job);
                     }
                 });
 
                 // populate LEPs 
                 $.each(lep_locations['features'], function(l_index, lep){
                     if (lep.properties['lep'] == job['geography_name']) {
-                        if (typeof lep.properties['jobs_data'] === 'undefined')
-                            lep.properties['jobs_data'] = {};
-                        lep.properties['jobs_data'][occ] = {};
-                        lep.properties['jobs_data'][occ]['lq'] = job['lq'];
-                        lep.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
-                        lep.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
-                        lep.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+                        addDataToLocation(lep, occ, job);
                     }
                 });
             });
         });
+
+        console.log(lep_locations['features'])
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -179,6 +169,22 @@ function initialize(){
         MapsLib.initialize();
 
     });
+}
+
+// helper function for stuffing data into GeoJSON object
+function addDataToLocation(location, occ, job){
+    if (typeof location.properties['jobs_data'] === 'undefined')
+        location.properties['jobs_data'] = {};
+    location.properties['jobs_data'][occ] = {};
+    location.properties['jobs_data'][occ]['lq'] = job['lq'];
+    location.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
+    location.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+    location.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+    location.properties['jobs_data'][occ]['reg_salary'] = job['reg_salary'];
+    location.properties['jobs_data'][occ]['fe_opportunity_score'] = job['fe_opportunity_score'];
+    location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
+    location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
+    location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
 }
 
 function updateLocation(geo_type, geo_name){
