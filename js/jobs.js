@@ -64,8 +64,6 @@ function initialize(){
             });
         });
 
-        console.log(lep_locations['features'])
-
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
