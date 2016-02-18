@@ -129,7 +129,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             },
             labels: {
                 formatter: function () {
-                   return '£'+(this.value / 1000) + 'k';
+                   return '£'+( numberWithCommas(this.value));
                 },
                 style: {
                     color: '#aaa',
@@ -278,6 +278,9 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 }
             },
             labels: {
+                formatter: function () {
+                   return '£'+( numberWithCommas(this.value));
+                },
                 style: {
                     color: '#aaa',
                     fontSize: '9px',
