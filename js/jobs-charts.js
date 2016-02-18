@@ -338,6 +338,9 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                         },
                         mouseOver: function () {
                             triggerHoverScatter(categories[this.x]);
+                        },
+                        mouseOut: function () {
+                            removeHoverScatter();
                         }
                     }
                 },
@@ -441,6 +444,16 @@ function triggerHoverScatter(occupation){
         };
     });
 
+}
+function removeHoverScatter(){
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'scatter'){
+            $.each(chart.series[0].points, function(index, point){
+                point.setState();
+            });
+            chart.tooltip.hide()
+        };
+    });
 }
 function triggerHoverBar(occupation){
 
