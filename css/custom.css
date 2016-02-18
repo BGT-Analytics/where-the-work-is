@@ -318,20 +318,20 @@ hr {
 /* buttons */
 #education-select{
   position: relative;
-  top: 18px;
-  right: 10px;
+  top: 24px;
+  right: 12px;
   z-index: 1;
 }
 #education-select .btn{
-  border: 1px solid #f47730;
-  color: #f47730;
+  border: 1px solid #bdc3c7;
+  color: #bdc3c7;
   padding: 2px 4px;
   font-size: 10px;
   font-weight: 400;
 }
 #education-select .btn.selected, #education-select .btn:hover{
-  background-color: #f47730;
-  color: #fff;
+  background-color: #bdc3c7;
+  color: #2c3e50;
 }
 
 .btn, .btn:hover{

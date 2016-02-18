@@ -124,7 +124,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             title: {
                 text: 'Average salary',
                 style: {
-                    color: '#aaa',
+                    color: '#bdc3c7',
                 }
             },
             labels: {
@@ -132,7 +132,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                    return '£'+( numberWithCommas(this.value));
                 },
                 style: {
-                    color: '#aaa',
+                    color: '#bdc3c7',
                     fontSize: '9px',
                 }
             },
@@ -151,7 +151,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             title: {
                 text: 'Job opportunity',
                 style: {
-                    color: '#aaa',
+                    color: '#bdc3c7',
                 }
             },
             labels: {
@@ -314,7 +314,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 },
                 style: {
                     fontSize: '9px',
-                    color: '#aaa'
+                    color: '#bdc3c7'
                 },
                 x: -6
             },
@@ -327,7 +327,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
             title: {
                 text: 'Entry level job openings',
                 style: {
-                    color: '#aaa'
+                    color: '#bdc3c7'
                 }
             },
             labels: {
@@ -335,7 +335,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                    return '£'+( numberWithCommas(this.value));
                 },
                 style: {
-                    color: '#aaa',
+                    color: '#bdc3c7',
                     fontSize: '9px',
                 }
             }
@@ -359,7 +359,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 text: 'Click to hide or show',
                 style: {
                     fontSize: '9px',
-                    color: '#aaa',
+                    color: '#bdc3c7',
                     fontWeight: 200,
                 }
             }
