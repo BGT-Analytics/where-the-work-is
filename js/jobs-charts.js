@@ -9,6 +9,11 @@ Highcharts.setOptions({
     }
 });
 
+
+var he_color = '#ECF0F1';
+var fe_color = '#959DA6';
+var sl_color = '#667481';
+
 function initializeTable(table_id, column_names, data){
     // column_names is an array of names to be used as the header row of the table
     // data is a 2D array of values for the table
@@ -36,19 +41,16 @@ function makeDemandChart(element_id, place_data){
     var prepped_data = [
         {
             name: 'Higher education',
-            // color: '#154779',
-            color: "#ddd",
+            color: he_color,
             data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
         }, {
             name: 'Further education',
-            // color: '#60aadb',
-            color: "#bbb",
+            color: fe_color,
             data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
         }
         , {
             name: 'School leavers',
-            // color: '#baccd8',
-            color: "#999",
+            color: sl_color,
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
@@ -63,16 +65,14 @@ function makeDemandChart(element_id, place_data){
 function makeCompScatterPlot(element_id, place_data, education){
 
     if (education=='he'){
-        // var point_color = '#154779'
-        var point_color = '#ddd'
+        var point_color = he_color
         var col_name = 'he_opportunity_score'
 
         $("#he-select").attr('class', 'btn selected');
         $("#fe-select").attr('class', 'btn');
     }
     else{
-        //var point_color = "#60aadb"
-        var point_color = '#bbb'
+        var point_color = fe_color
         var col_name = 'fe_opportunity_score'
 
         $("#fe-select").attr('class', 'btn selected');
