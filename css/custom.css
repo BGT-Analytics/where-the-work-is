@@ -10,7 +10,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-  color: #154779;
+  color: #FBAB18;
 }
 
 a, a:hover {
@@ -19,6 +19,11 @@ a, a:hover {
 
 hr {
   border-color: #34495e;
+}
+
+
+.full-height-container{
+  height: calc(100% - 98px); /*take up full height, taking header & footer into account*/
 }
 
 
@@ -104,9 +109,13 @@ hr {
 
 
 .well{
+  background-color: #34495e;
   border: none;
   box-shadow: none;
   border-radius: 0px;
+}
+.well h3{
+  margin-top: 0px;
 }
 
 /* occupation pane */
@@ -185,6 +194,7 @@ hr {
 
 /* footer */
 #footer{
+  clear: both;
   padding: 6px 0px;
   margin-top: 24px;
   font-size: 10px;
