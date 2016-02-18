@@ -145,6 +145,9 @@ hr {
   cursor: pointer;
 }
 
+.job-family:hover{
+  cursor: pointer;
+}
 .job-family{
   text-align: center;
 }

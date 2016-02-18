@@ -134,7 +134,7 @@ function initialize(){
 
         $(".job-family").hover(
             function(){
-                $(this).css('color','#FBAB18')
+                $(this).css('color','#e2be7c')
                 highlightOccFamily($(this).attr('data'));
                 if($("#helper-job-family i").hasClass( "flash" )){
                     $("#helper-job-family i").removeClass('flash')
@@ -148,6 +148,19 @@ function initialize(){
                 highlightOccFamily('');
             }
         );
+        $(".job-family").click(function(){
+            if($(this).hasClass('selected')){
+                // unselecting
+                $(this).css('color','inherit')
+                $(this).removeClass('selected');
+                selectOccFamily('');
+            }else{
+                // selecting
+                $(this).css('color','#fBAB18')
+                $(this).addClass('selected')
+                selectOccFamily($(this).attr('data'));
+            };
+        });
 
 
         setInterval(function () {

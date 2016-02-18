@@ -377,7 +377,7 @@ function highlightOcc(occupation){
                     point.select(false, true);
                 }
             });
-            if (isVisible){
+            if (isVisible || !occupation){
                 $('#scatter-note').hide()
             }
             else{
@@ -409,12 +409,39 @@ function highlightOccFamily(job_family){
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
                 if(occupation_mapping[point.full_name]['job_family'] == job_family){
+                    point.setState('hover');
+                }
+                else{
+                    point.setState();
+                }
+            });
+        }
+        else if (chart && chart.options.chart.type == 'bar'){
+            // looping thru stuff in bar chart
+            $.each(chart.series, function(index, series){
+                $.each(series.data, function(index, point){
+                    if(occupation_mapping[point.category]['job_family'] == job_family){
+                        point.setState('hover');
+                    }
+                    else{
+                        point.setState();
+                    }
+                });
+            });
+        };
+    });
+
+}
+function selectOccFamily(job_family){
+    $.each(Highcharts.charts, function(index, chart){
+        if (chart && chart.options.chart.type == 'scatter'){
+            // looping thru stuff in scatterplot
+            $.each(chart.series[0].points, function(index, point){
+                if(occupation_mapping[point.full_name]['job_family'] == job_family){
                     point.select(true, true);
-                    // point.setState('hover');
                 }
                 else{
                     point.select(false, true);
-                    // point.setState();
                 }
             });
         }
@@ -424,17 +451,14 @@ function highlightOccFamily(job_family){
                 $.each(series.data, function(index, point){
                     if(occupation_mapping[point.category]['job_family'] == job_family){
                         point.select(true, true);
-                        // point.setState('hover');
                     }
                     else{
                         point.select(false, true);
-                        // point.setState();
                     }
                 });
             });
         };
     });
-
 }
 
 function triggerHoverScatter(occupation){
