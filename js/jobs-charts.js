@@ -157,33 +157,86 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             labels: {
                 enabled: false
             },
-            lineColor: '#eee',
-            lineWidth: 1,
-            plotLines: [
+            // lineColor: '#eee',
+            // lineWidth: 1,
+            plotBands: [
+                // using http://meyerweb.com/eric/tools/color-blend/
                 {
-                    color: 'transparent',
-                    width: 1,
-                    value: 112,
+                    // #9e4940,
+                    color: '#43404D',
                     label: {
-                        text: '↑ Less competition',
+                        text: 'Very low',
                         style: {
-                            color: '#FBAB18'
+                            color: '#bdc3c7',
+                            fontSize: '9px'
                         },
-                        y: 8
-                    }
+                        x: 3,
+                        y: 0
+                    },
+                    from: 0,
+                    to: 9
                 },
                 {
-                    color: 'transparent',
-                    width: 1,
-                    value: 5,
+                    // #ba7639
+                    color: '#48494B',
                     label: {
-                        text: '↓ More competition',
+                        text: 'Low',
                         style: {
-                            color: '#FBAB18'
-                        }
-                    }
+                            color: '#bdc3c7',
+                            fontSize: '9px'
+                        },
+                        x: 3,
+                        y: 0
+                    },
+                    from: 9,
+                    to: 32
+                },
+                {
+                    // #baa242
+                    color: '#48524D',
+                    label: {
+                        text: 'Medium',
+                        style: {
+                            color: '#bdc3c7',
+                            fontSize: '9px'
+                        },
+                        x: 3,
+                        y: 0
+                    },
+                    from: 32,
+                    to: 65
+                },
+                {
+                    // #83A540
+                    color: '#3D534D',
+                    label: {
+                        text: 'High',
+                        style: {
+                            color: '#bdc3c7',
+                            fontSize: '9px'
+                        },
+                        x: 3,
+                        y: 0
+                    },
+                    from: 65,
+                    to: 89
+                },
+                {
+                    // #38925e
+                    color: '#2E4F53',
+                    label: {
+                        text: 'Very high',
+                        style: {
+                            color: '#bdc3c7',
+                            fontSize: '9px'
+                        },
+                        x: 3,
+                        y: 0
+                    },
+                    from: 89,
+                    to: 120
                 }
-            ]
+            ],
         },
 
         tooltip: {
