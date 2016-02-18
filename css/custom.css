@@ -404,6 +404,20 @@ hr {
   white-space:normal !important; /*this is required to get tooltip contents to wrap*/
 }
 
+#scatter-note{
+  max-width: 160px;
+  font-size: 11px;
+  color: #fbab18;
+  display: none;
+  position: relative;
+  top: -70px;
+  right: 10px;
+  z-index: 2;
+}
+
+
+
+
 
 .modal-body {
   color: #777;

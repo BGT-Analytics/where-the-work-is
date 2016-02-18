@@ -366,15 +366,24 @@ function highlightOcc(occupation){
 
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
+            var isVisible = false; 
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation){
+                    isVisible = true;
                     point.select(true, true);
                 }
                 else{
                     point.select(false, true);
                 }
             });
+            if (isVisible){
+                $('#scatter-note').hide()
+            }
+            else{
+                $('#scatter-note').fadeIn(800)
+                $('#scatter-note-occ').html(shortenName(occupation))
+            }
         }
         else if (chart && chart.options.chart.type == 'bar'){
             // looping thru stuff in bar chart
@@ -429,7 +438,6 @@ function highlightOccFamily(job_family){
 }
 
 function triggerHoverScatter(occupation){
-
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             $.each(chart.series[0].points, function(index, point){
