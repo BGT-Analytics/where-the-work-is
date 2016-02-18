@@ -330,12 +330,12 @@ hr {
   font-weight: 400;
 }
 .btn-info{
-  border: 1px solid #f47730;
+  border: 2px solid #f47730;
   background-color: inherit;
   color: #f47730;
 }
 .btn-info:hover{
-  border: 1px solid #fbab18;
+  border: 2px solid #fbab18;
   background-color: inherit;
   color: #fbab18;
 }
