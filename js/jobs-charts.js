@@ -377,7 +377,8 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
             shared: true,
             positioner: function (boxWidth, boxHeight, point) {
                 var xpos = this.chart.plotWidth-160
-                var ypos = Math.max(140, point.plotY) // keep tooltip below legend
+                var ypos = Math.max(120, point.plotY)+20 // keep tooltip below legend
+                var ypos = Math.min(this.chart.plotHeight-80, ypos) // keep tooltip above bottom of chart
                 return { x: xpos, y: ypos };
             },
             shadow: false,
