@@ -203,11 +203,6 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
-    if(education != 'fe' && education != 'he'){
-        // setting default education level
-        education = 'fe'
-    }
-
     if(geo_type=="Country" && geo_name=='UK Total'){
         geo_display_name = "The United Kingdom"
         $.address.parameter('location_type', '')
@@ -262,12 +257,6 @@ function updateEducation(education){
         geo_type = 'Country'
         geo_name = 'UK Total'
     }
-
-    if(education=='fe'){
-        $('#selected-edu').html('further education');
-    }else{
-        $('#selected-edu').html('higher education');
-    };
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
