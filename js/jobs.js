@@ -254,9 +254,9 @@ function updateLocation(geo_type, geo_name){
         $('#breadcrumbs').append(value+' &raquo; ')
     });
 
-    makeDemandChart('#bar-demand', place_data)
+    makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
-    makeCompScatterPlot('#scatter-comp', place_data, education)
+    makeCompScatterPlot(place_data, education)
 
     if ($.address.parameter('occupation')){
         selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
@@ -278,7 +278,7 @@ function updateEducation(education){
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
-    makeCompScatterPlot('#scatter-comp', place_data, education)
+    makeCompScatterPlot(place_data, education)
 
     if ($.address.parameter('occupation')){
         selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)

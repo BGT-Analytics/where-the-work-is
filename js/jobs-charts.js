@@ -33,7 +33,7 @@ function initializeTable(table_id, column_names, data){
 }
 
 
-function makeDemandChart(element_id, place_data){
+function makeDemandChart(place_data){
 
     var sorted_data = _.sortBy(place_data, 'demand_sum').reverse()
 
@@ -57,12 +57,12 @@ function makeDemandChart(element_id, place_data){
 
     occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
 
-    stackedBarHelper(element_id, prepped_data, occupations, place_data)
+    stackedBarHelper(prepped_data, occupations, place_data)
 }
 
 
 
-function makeCompScatterPlot(element_id, place_data, education){
+function makeCompScatterPlot(place_data, education){
 
     if (education=='he'){
         var point_color = he_color
@@ -88,15 +88,14 @@ function makeCompScatterPlot(element_id, place_data, education){
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
 
-    scatterHelper(element_id, prepped_data, point_color, place_data)
+    scatterHelper(prepped_data, point_color, place_data)
 }
 
 
 
-function scatterHelper(element_id, prepped_data, point_color, place_data){
-    var chart_height = $(element_id).height()
+function scatterHelper(prepped_data, point_color, place_data){
 
-    $(element_id).highcharts({
+    $('#scatter-comp').highcharts({
 
         chart: {
             type: 'scatter',
@@ -290,8 +289,8 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
 };
 
 
-function stackedBarHelper(element_id, prepped_data, categories, place_data){
-    $(element_id).highcharts({
+function stackedBarHelper(prepped_data, categories, place_data){
+    $('#bar-demand').highcharts({
         chart: {
             type: 'bar',
             zoomType: 'y',

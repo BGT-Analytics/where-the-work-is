@@ -152,6 +152,28 @@ description: "This tool visualises the dynamics of the entry level job market fo
 
 
       <div id="below-occ-info-pane">
+
+
+        <!-- mobile demand bar chart -->
+        <div class="visible-xs">
+          <br/>
+
+          <p class="text-center chart-title">Which occupations have the most openings?</p>
+          <p class="text-center chart-subtitle">Job openings by occupation & education level</p>
+          <div id="bar-demand-mobile"></div>
+<!--           <div id="helper-occupation" class="pull-right">
+            <i class="fa fa-hand-o-left"></i>
+            <small>Select an occupation</small>
+          </div> -->
+
+          <br/>
+        </div>
+
+
+
+
+
+
         <p class="text-center chart-title">Which occupations are most promising?</p>
         <div class="text-center chart-subtitle">
           Salary & opportunity for 
@@ -172,7 +194,7 @@ description: "This tool visualises the dynamics of the entry level job market fo
           graduates
         </div>
 
-        <div id="scatter-comp"></div>
+        <div id="scatter-comp" class="hidden-xs"></div>
         <div id="scatter-note" class="pull-right">
           <i class="fa fa-asterisk"></i>
           <span id="scatter-note-occ"></span>: 
@@ -182,7 +204,7 @@ description: "This tool visualises the dynamics of the entry level job market fo
 
     </div>
 
-    <div class='col-sm-6 col-md-5 chart-col'>
+    <div class='col-sm-6 col-md-5 chart-col hidden-xs'>
       <br/>
 
       <p class="text-center chart-title">Which occupations have the most openings?</p>
