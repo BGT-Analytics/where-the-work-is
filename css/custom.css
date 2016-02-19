@@ -363,7 +363,7 @@ hr {
 }
 #below-occ-info-pane{
   padding-top: 20px;
-  height: calc(100% - 200px); /*subtract height of occ-info-pane & padding*/
+  height: calc(100% - 180px); /*subtract height of occ-info-pane & padding*/
 }
 
 
@@ -406,7 +406,7 @@ hr {
   color: #fbab18;
   display: none;
   position: relative;
-  top: -70px;
+  top: -85px;
   right: 10px;
   z-index: 2;
 }
