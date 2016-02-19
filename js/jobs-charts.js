@@ -147,7 +147,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             startOnTick: false,
             endOnTick: false,
             max: 115,
-            min: 0,
+            min: -15,
             title: {
                 text: 'Job opportunity',
                 style: {
@@ -173,7 +173,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                         x: 3,
                         y: 0
                     },
-                    from: 0,
+                    from: -20,
                     to: 9
                 },
                 {
