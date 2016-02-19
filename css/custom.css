@@ -560,9 +560,16 @@ hr {
     display: inline;
   }
 
+  #bar-demand-mobile{
+    height: 550px;
+  }
+  #scatter-comp-mobile{
+    height: 350px;
+  }
+
   /* page layout */
   #main-content{
-    min-height: 1000px;
+    min-height: 1300px;
   }
 
 
