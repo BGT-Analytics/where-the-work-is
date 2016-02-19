@@ -132,9 +132,6 @@ function initialize(){
 
         $(".job-family").hover(
             function(){
-                if(!$(this).hasClass('selected')){
-                    $(this).css('color','#e2be7c')
-                }
                 highlightOccFamily($(this).attr('data'));
                 if($("#helper-job-family i").hasClass( "flash" )){
                     $("#helper-job-family i").removeClass('flash')
@@ -144,9 +141,6 @@ function initialize(){
                 }
             },
             function(){
-                if(!$(this).hasClass('selected')){
-                    $(this).css('color','inherit')
-                }
                 highlightOccFamily('');
             }
         );
@@ -156,17 +150,14 @@ function initialize(){
             $('.job-family').each(function(index, elem){
                 if ($(elem).attr('data')!=clicked_job_fam){
                     $(elem).removeClass('selected');
-                    $(elem).css('color', 'inherit');
                 };
             });
             if($(this).hasClass('selected')){
                 // unselecting
-                $(this).css('color','inherit')
                 $(this).removeClass('selected');
                 selectOccFamily('');
             }else{
                 // selecting
-                $(this).css('color','#fBAB18')
                 $(this).addClass('selected')
                 selectOccFamily(clicked_job_fam);
             };
@@ -229,6 +220,14 @@ function updateLocation(geo_type, geo_name){
             geo_display_name = toTitleCase(geo_name)
         }
     }
+
+    // clear any selected job families
+    $('.job-family').each(function(index, elem){
+        if ($(elem).hasClass('selected')){
+            $(elem).removeClass('selected');
+        };
+    });
+
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 

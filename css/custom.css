@@ -147,9 +147,13 @@ hr {
 
 .job-family:hover{
   cursor: pointer;
+  color: #e2be7c;
 }
 .job-family{
   text-align: center;
+}
+.job-family.selected{
+  color: #fbab18;
 }
 .job-family .job-family-name{
   margin-top: 4px;
