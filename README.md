@@ -1,4 +1,6 @@
-# Burning Glass + Institute for Public Policy Research - UK Jobs 
+# UK Jobs 
+
+Burning Glass + Institute for Public Policy Research
 
 ## Running locally
 
@@ -67,4 +69,4 @@ Report it here: https://github.com/datamade/bg-ippr-jobs/issues
 
 ## Copyright
 
-Copyright (c) 2015 DataMade and Chicago Area Fair Housing Alliance. Released under the [MIT License](https://github.com/datamade/bg-ippr-jobs/blob/master/LICENSE).
+Copyright (c) 2016 Burning Glass Technologies and DataMade. Released under the [MIT License](https://github.com/datamade/bg-ippr-jobs/blob/master/LICENSE).
