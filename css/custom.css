@@ -145,12 +145,15 @@ hr {
   cursor: pointer;
 }
 
+
+.job-family{
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
 .job-family:hover{
   cursor: pointer;
   color: #e2be7c;
-}
-.job-family{
-  text-align: center;
 }
 .job-family.selected{
   color: #fbab18;
@@ -410,6 +413,21 @@ hr {
   right: 10px;
   z-index: 2;
 }
+
+
+#helper-job-family{
+  display: none;
+}
+#helper-occupation{
+  color: #fbab18;
+  display: none;
+  position: relative;
+  top: -345px;
+  right: 28px;
+  z-index: 3;
+}
+
+
 
 
 .modal-header {

@@ -133,12 +133,6 @@ function initialize(){
         $(".job-family").hover(
             function(){
                 highlightOccFamily($(this).attr('data'));
-                if($("#helper-job-family i").hasClass( "flash" )){
-                    $("#helper-job-family i").removeClass('flash')
-                    $("#helper-job-family i").addClass('opaque')
-                    // TO-DO: add flash to occupation helper
-                    //$("#").addClass('flash')
-                }
             },
             function(){
                 highlightOccFamily('');
@@ -161,6 +155,15 @@ function initialize(){
                 $(this).addClass('selected')
                 selectOccFamily(clicked_job_fam);
             };
+
+            if($("#helper-job-family i").hasClass( "flash" )){
+                $("#helper-job-family i").removeClass('flash')
+                $("#helper-job-family").fadeOut(800)
+
+                // show & flash occupation helper
+                $("#helper-occupation").fadeIn(800)
+                $("#helper-occupation i").addClass('flash')
+            }
         });
 
 
@@ -174,6 +177,9 @@ function initialize(){
             if($("#location-dropdown-menu i").hasClass( "flash" )){
                 $("#location-dropdown-menu i").removeClass('flash')
                 $("#location-dropdown-menu i").addClass('opaque')
+                
+                // show & flash job family helper
+                $("#helper-job-family").fadeIn(800)
                 $("#helper-job-family i").addClass('flash')
             }
         });
@@ -392,10 +398,6 @@ function numberWithCommas(x) {
     while (pattern.test(x))
         x = x.replace(pattern, "$1,$2");
     return x;
-}
-
-function slugify(text) {
-  return text.toString().toLowerCase().replace(/\s+/g, '-');
 }
 
 function cleanOccupation(text) {

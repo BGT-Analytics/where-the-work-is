@@ -375,7 +375,7 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
             shared: true,
             positioner: function (boxWidth, boxHeight, point) {
                 var xpos = this.chart.plotWidth-160
-                var ypos = Math.max(120, point.plotY)+20 // keep tooltip below legend
+                var ypos = Math.max(120, point.plotY)+40 // keep tooltip below legend
                 var ypos = Math.min(this.chart.plotHeight-80, ypos) // keep tooltip above bottom of chart
                 return { x: xpos, y: ypos };
             },
@@ -394,6 +394,10 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
+                            if($("#helper-occupation i").hasClass( "flash" )){
+                                $("#helper-occupation i").removeClass('flash')
+                                $("#helper-occupation").fadeOut(800)
+                            };
                             selectOccupation(categories[this.x], place_data);
                         },
                         mouseOver: function () {
