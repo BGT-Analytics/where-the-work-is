@@ -193,7 +193,7 @@ function initialize(){
                 $("#helper-job-family").fadeIn(800);
                 $("#helper-job-family i").addClass('flash');
             };
-            
+
         });
 
         MapsLib.initialize();
@@ -294,8 +294,13 @@ function selectOccupation(occupation, place_data){
         $('#occ-info-pane').fadeTo(800, 1)
     });
 
-    $("#default-occ-info").hide()
-    $("#occ-detail").show()
+    if(clicked_map==false&&clicked_location==true){
+        $("#btn-occ-lq i").addClass('flash');
+    };
+
+
+    $("#default-occ-info").hide();
+    $("#occ-detail").show();
 
     $("#sel-occ-name").html(occupation)
     var tooltip_content = 'Jobs included:<br/><ul>'
@@ -346,6 +351,13 @@ function selectOccupation(occupation, place_data){
 
     $( "#btn-occ-lq" ).off('click');
     $('#btn-occ-lq').on('click', function() {
+
+        if(clicked_map==false){
+            clicked_map = true;
+            $('#btn-occ-lq').removeClass('flash');
+            $('#btn-occ-lq').addClass('opaque');
+        };
+
         $('#occupation-detail-modal').modal('show');
         return false;
     });
