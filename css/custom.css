@@ -316,24 +316,6 @@ hr {
 
 
 /* buttons */
-#education-select{
-  position: relative;
-  top: 24px;
-  right: 12px;
-  z-index: 1;
-}
-#education-select .btn{
-  border: 1px solid #bdc3c7;
-  color: #bdc3c7;
-  padding: 2px 4px;
-  font-size: 10px;
-  font-weight: 400;
-}
-#education-select .btn.selected, #education-select .btn:hover{
-  background-color: #bdc3c7;
-  color: #2c3e50;
-}
-
 .btn, .btn:hover{
   margin: 0px;
   text-transform: none;
@@ -499,6 +481,42 @@ hr {
     box-shadow: none;
 }
 
+
+/* education toggle */
+#selected-edu{
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  font-size: 14px;
+  color: #bdc3c7;
+}
+#edu-dropdown{
+  display: inline-block;
+}
+#edu-dropdown-menu i{
+  color: #f47730;
+}
+#edu-dropdown-menu{
+  padding-right: 2px;
+  font-size: 10px;
+}
+#edu-dropdown-menu:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
+#edu-select-list{
+  border: none;
+  border-radius: 0px;
+  float: right;
+  text-align: left;
+  font-size: 12px;
+  padding: 4px 6px;
+  min-width: 110px;
+  background-color: #2c3e50;
+}
+#edu-select-list li:hover{
+  cursor: pointer;
+  color: #f47730;
+}
 
 
 

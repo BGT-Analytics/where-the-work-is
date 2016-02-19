@@ -109,11 +109,9 @@ function initialize(){
 
         $('#fe-select').click(function() {
             updateEducation('fe')
-            return false;
         });
         $('#he-select').click(function() {
             updateEducation('he')
-            return false;
         });
 
         $("#location-select-list li").click(function() {
@@ -265,6 +263,12 @@ function updateEducation(education){
         geo_type = 'Country'
         geo_name = 'UK Total'
     }
+
+    if(education=='fe'){
+        $('#selected-edu').html('further education');
+    }else{
+        $('#selected-edu').html('higher education');
+    };
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 

@@ -67,16 +67,10 @@ function makeCompScatterPlot(element_id, place_data, education){
     if (education=='he'){
         var point_color = he_color
         var col_name = 'he_opportunity_score'
-
-        $("#he-select").attr('class', 'btn selected');
-        $("#fe-select").attr('class', 'btn');
     }
     else{
         var point_color = fe_color
         var col_name = 'fe_opportunity_score'
-
-        $("#fe-select").attr('class', 'btn selected');
-        $("#he-select").attr('class', 'btn');
     }
 
     var prepped_data = []
@@ -104,7 +98,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
             type: 'scatter',
             zoomType: 'xy',
             marginLeft: 20,
-            marginTop: 0,
+            marginTop: 10,
             backgroundColor: 'transparent'
         },
 
