@@ -141,12 +141,12 @@ var MapsLib = {
 
     // get color depending on population density value
     getColor: function (d) {
-        return d == 'Very High' ? '#0e1419' :
-               d == 'High'      ? '#2c3e50' :
-               d == 'Average'   ? '#56799d' :
-               d == 'Low'       ? '#89a4be' :
-               d == 'Very Low'  ? '#cbd7e3' :
-                                  '#cbd7e3' ;
+        return d == 'Very High' ? '#38925e' :
+               d == 'High'      ? '#83A540' :
+               d == 'Average'   ? '#baa242' :
+               d == 'Low'       ? '#ba7639' :
+               d == 'Very Low'  ? '#9e4940' :
+                                  '#9e4940' ;
     },
 
     highlightFeature: function (e) {

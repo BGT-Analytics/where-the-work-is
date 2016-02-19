@@ -427,7 +427,20 @@ hr {
 }
 
 
+.modal-header {
+  background-color: #2C3E50;
+}
 
+.modal-title {
+  color: #ecf0f1;
+  font-size: 16px;
+}
+
+.modal-header .close {
+  color: #ecf0f1;
+  opacity: 1;
+  text-shadow: none;
+}
 
 
 .modal-body {
