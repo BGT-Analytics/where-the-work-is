@@ -134,8 +134,15 @@ function stackedBarHelper(prepped_data, categories, place_data){
     };
 
 
+    var mobile_config = $.extend({}, config);
+    mobile_config.chart = {
+        type: 'bar',
+        backgroundColor: 'transparent'
+    }
+
+
 
     $('#bar-demand').highcharts(config);
-    $('#bar-demand-mobile').highcharts(config);
+    $('#bar-demand-mobile').highcharts(mobile_config);
 };
 

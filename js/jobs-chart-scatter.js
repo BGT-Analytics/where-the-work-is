@@ -193,7 +193,14 @@ function scatterHelper(prepped_data, point_color, place_data){
     };
 
 
+    var mobile_config = $.extend({}, config);
+    mobile_config.chart = {
+        type: 'scatter',
+        marginLeft: 20,
+        marginTop: 10,
+        backgroundColor: 'transparent'
+    }
 
     $('#scatter-comp').highcharts(config);
-    $('#scatter-comp-mobile').highcharts(config);
+    $('#scatter-comp-mobile').highcharts(mobile_config);
 };
