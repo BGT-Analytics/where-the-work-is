@@ -157,7 +157,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 // using http://meyerweb.com/eric/tools/color-blend/
                 {
                     // #9e4940,
-                    color: '#43404D',
+                    color: 'rgba(65, 73, 82, 0.1)',
                     label: {
                         text: 'Very low',
                         style: {
@@ -172,7 +172,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 },
                 {
                     // #ba7639
-                    color: '#48494B',
+                    color: 'rgba(102, 116, 129, 0.1)',
                     label: {
                         text: 'Low',
                         style: {
@@ -187,7 +187,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 },
                 {
                     // #baa242
-                    color: '#48524D',
+                    color: 'rgba(149, 157, 166, 0.1)',
                     label: {
                         text: 'Medium',
                         style: {
@@ -202,7 +202,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 },
                 {
                     // #83A540
-                    color: '#3D534D',
+                    color: 'rgba(195, 200, 205, 0.1)',
                     label: {
                         text: 'High',
                         style: {
@@ -217,7 +217,7 @@ function scatterHelper(element_id, prepped_data, point_color, place_data){
                 },
                 {
                     // #38925e
-                    color: '#2E4F53',
+                    color: 'rgba(236, 240, 241, 0.1)',
                     label: {
                         text: 'Very high',
                         style: {

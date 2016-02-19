@@ -32,23 +32,23 @@ hr {
 
 
 
-.text-very-high{
+.label-very-high{
   background-color: #38925e;
   color: #fff;
 }
-.text-high{
+.label-high{
   background-color: #83A540;
   color: #fff;
 }
-.text-medium{
+.label-medium{
   background-color: #baa242;
   color: #fff;
 }
-.text-low{
+.label-low{
   background-color: #ba7639;
   color: #fff;
 }
-.text-very-low{
+.label-very-low{
   background-color: #9e4940;
   color: #fff;
 }
@@ -192,7 +192,6 @@ hr {
 }
 
 .label-occ{
-  text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 0px;
 }

@@ -327,10 +327,10 @@ function selectOccupation(occupation, place_data){
         comp_fig_str_fe = '--'
     }
 
-    $("#occ-label-demand").html('<span class="text-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
-    $("#occ-label-comp-fe").html('<span class="text-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
-    $("#occ-label-comp-he").html('<span class="text-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
-    $("#occ-label-salary").html('<span class="text-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
+    $("#occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
+    $("#occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
+    $("#occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
+    $("#occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
 
     $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' jobs')
     $("#occ-figure-salary").html(salary_fig_str)
