@@ -35,5 +35,5 @@ function toTitleCase(str)
 }
 
 function slugify(text) {
-  return text.toString().toLowerCase().replace(/\s+/g, '-');
+    return text.toString().toLowerCase().replace(/\s+/g, '-');
 }

@@ -3,6 +3,11 @@ var occupation_data;
 var regions_data;
 var occ_map;
 
+var clicked_location = false;
+var clicked_occ_family = false;
+var clicked_occ = false;
+var clicked_map = false;
+
 
 // do stuff when the page loads
 (function(){
@@ -139,10 +144,10 @@ function initialize(){
             }
         );
         $(".job-family").click(function(){
-            var clicked_job_fam = $(this).attr('data')
+            var clicked_job_fam_name = $(this).attr('data')
             // unselect other selected stuff
             $('.job-family').each(function(index, elem){
-                if ($(elem).attr('data')!=clicked_job_fam){
+                if ($(elem).attr('data')!=clicked_job_fam_name){
                     $(elem).removeClass('selected');
                 };
             });
@@ -153,17 +158,20 @@ function initialize(){
             }else{
                 // selecting
                 $(this).addClass('selected')
-                selectOccFamily(clicked_job_fam);
+                selectOccFamily(clicked_job_fam_name);
             };
 
-            if($("#helper-job-family i").hasClass( "flash" )){
-                $("#helper-job-family i").removeClass('flash')
-                $("#helper-job-family").fadeOut(800)
-
-                // show & flash occupation helper
-                $("#helper-occupation").fadeIn(800)
-                $("#helper-occupation i").addClass('flash')
+            if(clicked_occ_family==false){
+                clicked_occ_family = true;
+                $("#helper-job-family i").removeClass('flash');
+                $("#helper-job-family").fadeOut(800);
             }
+            if(clicked_occ==false){
+                // show & flash occupation helper
+                $("#helper-occupation").fadeIn(800);
+                $("#helper-occupation i").addClass('flash');
+            };
+
         });
 
 
@@ -174,14 +182,18 @@ function initialize(){
         }, 800);
 
         $("#location-dropdown-menu").click(function(){
-            if($("#location-dropdown-menu i").hasClass( "flash" )){
+
+            if(clicked_location==false){
+                clicked_location=true;
                 $("#location-dropdown-menu i").removeClass('flash')
                 $("#location-dropdown-menu i").addClass('opaque')
-                
-                // show & flash job family helper
-                $("#helper-job-family").fadeIn(800)
-                $("#helper-job-family i").addClass('flash')
             }
+            // show & flash job family helper
+            if(clicked_occ_family==false){
+                $("#helper-job-family").fadeIn(800);
+                $("#helper-job-family i").addClass('flash');
+            };
+            
         });
 
         MapsLib.initialize();

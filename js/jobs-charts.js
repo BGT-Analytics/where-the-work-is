@@ -394,7 +394,8 @@ function stackedBarHelper(element_id, prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
-                            if($("#helper-occupation i").hasClass( "flash" )){
+                            if(clicked_occ==false){
+                                clicked_occ = true;
                                 $("#helper-occupation i").removeClass('flash')
                                 $("#helper-occupation").fadeOut(800)
                             };
