@@ -139,7 +139,22 @@ function stackedBarHelper(prepped_data, categories, place_data){
         type: 'bar',
         backgroundColor: 'transparent'
     }
-
+    mobile_config.plotOptions.series.states = {
+        select: {
+            borderColor: '#2c3e50',
+            color: "#FBAB18"
+        }
+    }
+    mobile_config.plotOptions.series.states.events = {
+        click: function () {
+            if(clicked_occ==false){
+                clicked_occ = true;
+                $("#helper-occupation i").removeClass('flash')
+                $("#helper-occupation").fadeOut(800)
+            };
+            selectOccupation(categories[this.x], place_data);
+        }
+    }
 
 
     $('#bar-demand').highcharts(config);

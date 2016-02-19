@@ -200,6 +200,19 @@ function scatterHelper(prepped_data, point_color, place_data){
         marginTop: 10,
         backgroundColor: 'transparent'
     }
+    mobile_config.plotOptions.series.point.events = {
+        click: function () {
+            selectOccupation(this.full_name, place_data);
+        }
+    }
+    mobile_config.plotOptions.series.marker.states = {
+        select: {
+            fillColor: "#FBAB18",
+            lineWidth: 1,
+            lineColor: "#2c3e50",
+            radius: 7
+        }
+    }
 
     $('#scatter-comp').highcharts(config);
     $('#scatter-comp-mobile').highcharts(mobile_config);
