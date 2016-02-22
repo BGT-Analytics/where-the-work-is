@@ -610,6 +610,25 @@ hr {
     min-width: 320px;
   }
 
+
+  .occ-figure{
+    font-size: 12px;
+  }
+
+  .job-family{
+    font-size: 12px;
+  }
+  .job-family .job-family-name{
+    font-size: 10px;
+  }
+
+
+  .chart-title{
+    font-size: 26px;
+  }
+  .chart-subtitle, #selected-edu{
+    font-size: 12px;
+  }
   
 
 }

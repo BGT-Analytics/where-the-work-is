@@ -352,7 +352,7 @@ function selectOccupation(occupation, place_data){
     $("#occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
     $("#occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
 
-    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+' jobs')
+    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
     $("#occ-figure-salary").html(salary_fig_str)
     $("#occ-figure-comp-fe").html(comp_fig_str_fe)
     $("#occ-figure-comp-he").html(comp_fig_str_he)
