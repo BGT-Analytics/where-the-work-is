@@ -2,14 +2,6 @@ function scatterHelper(prepped_data, point_color, place_data){
 
     var config = {
 
-        chart: {
-            type: 'scatter',
-            zoomType: 'xy',
-            marginLeft: 20,
-            marginTop: 10,
-            backgroundColor: 'transparent'
-        },
-
         credits: {
             enabled: false
         },
@@ -153,6 +145,57 @@ function scatterHelper(prepped_data, point_color, place_data){
             borderColor: '#eee'
         },
 
+        series: [{
+            data: prepped_data,
+        }]
+
+    };
+
+
+
+    var mobile_extras = {
+        chart: {
+            type: 'scatter',
+            marginLeft: 20,
+            marginTop: 10,
+            backgroundColor: 'transparent'
+        },
+        plotOptions: {
+            series: {
+                cursor: 'pointer',
+                color: point_color,
+                point: {
+                    events: {
+                        click: function () {
+                            selectOccupation(this.full_name, place_data);
+                        }
+                    }
+                },
+                marker: {
+                    states: {
+                        select: {
+                            fillColor: "#FBAB18",
+                            lineWidth: 1,
+                            lineColor: "#2c3e50",
+                            radius: 7
+                        }
+                    }
+                }
+            },
+        }
+    }
+    var mobile_config = $.extend(mobile_extras, config);
+
+
+
+    var desktop_extras = {
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy',
+            marginLeft: 20,
+            marginTop: 10,
+            backgroundColor: 'transparent'
+        },
         plotOptions: {
             series: {
                 cursor: 'pointer',
@@ -185,35 +228,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 }
             },
         },
-
-        series: [{
-            data: prepped_data,
-        }]
-
-    };
-
-
-    var mobile_config = $.extend({}, config);
-    mobile_config.chart = {
-        type: 'scatter',
-        marginLeft: 20,
-        marginTop: 10,
-        backgroundColor: 'transparent'
     }
-    mobile_config.plotOptions.series.point.events = {
-        click: function () {
-            selectOccupation(this.full_name, place_data);
-        }
-    }
-    mobile_config.plotOptions.series.marker.states = {
-        select: {
-            fillColor: "#FBAB18",
-            lineWidth: 1,
-            lineColor: "#2c3e50",
-            radius: 7
-        }
-    }
+    var desktop_config = $.extend(desktop_extras, config);
 
-    $('#scatter-comp').highcharts(config);
+
+
+    $('#scatter-comp').highcharts(desktop_config);
     $('#scatter-comp-mobile').highcharts(mobile_config);
 };

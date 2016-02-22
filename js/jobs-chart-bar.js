@@ -1,11 +1,6 @@
 
 function stackedBarHelper(prepped_data, categories, place_data){
     var config = {
-        chart: {
-            type: 'bar',
-            zoomType: 'y',
-            backgroundColor: 'transparent'
-        },
         credits: {
             enabled: false
         },
@@ -91,6 +86,16 @@ function stackedBarHelper(prepped_data, categories, place_data){
             shadow: false,
             borderColor: '#eee'
         },
+        series: prepped_data
+
+    };
+
+
+    var mobile_extras = {
+        chart: {
+            type: 'bar',
+            backgroundColor: 'transparent'
+        },
         plotOptions: {
             bar: {
                 stacking: 'normal'
@@ -100,6 +105,54 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 cursor: 'pointer',
                 pointPadding: 0,
                 groupPadding: .1,
+                states: {
+                    select: {
+                        borderColor: '#2c3e50',
+                        color: "#FBAB18"
+                    }
+                },
+                point: {
+                    events: {
+                        click: function () {
+                            if(clicked_occ==false){
+                                clicked_occ = true;
+                                $("#helper-occupation i").removeClass('flash')
+                                $("#helper-occupation").fadeOut(800)
+                            };
+                            selectOccupation(categories[this.x], place_data);
+                        }
+                    }
+                }
+            }
+        },
+    }
+    var mobile_config = $.extend(mobile_extras, config);
+
+
+    var deskop_extras = {
+        chart: {
+            type: 'bar',
+            backgroundColor: 'transparent',
+            zoomType: 'y',
+        },
+        plotOptions: {
+            bar: {
+                stacking: 'normal'
+            },
+            series: {
+                borderColor: '#2c3e50',
+                cursor: 'pointer',
+                pointPadding: 0,
+                groupPadding: .1,
+                states: {
+                    select: {
+                        borderColor: '#2c3e50',
+                        color: "#FBAB18"
+                    },
+                    hover: {
+                        color: '#e2be7c'
+                    }
+                },
                 point: {
                     events: {
                         click: function () {
@@ -117,47 +170,15 @@ function stackedBarHelper(prepped_data, categories, place_data){
                             removeHoverScatter();
                         }
                     }
-                },
-                states: {
-                    select: {
-                        borderColor: '#2c3e50',
-                        color: "#FBAB18"
-                    },
-                    hover: {
-                        color: '#e2be7c'
-                    }
                 }
+
             }
-        },
-        series: prepped_data
-
-    };
-
-
-    var mobile_config = $.extend({}, config);
-    mobile_config.chart = {
-        type: 'bar',
-        backgroundColor: 'transparent'
-    }
-    mobile_config.plotOptions.series.states = {
-        select: {
-            borderColor: '#2c3e50',
-            color: "#FBAB18"
         }
     }
-    mobile_config.plotOptions.series.states.events = {
-        click: function () {
-            if(clicked_occ==false){
-                clicked_occ = true;
-                $("#helper-occupation i").removeClass('flash')
-                $("#helper-occupation").fadeOut(800)
-            };
-            selectOccupation(categories[this.x], place_data);
-        }
-    }
+    var desktop_config = $.extend(deskop_extras, config);
 
 
-    $('#bar-demand').highcharts(config);
+    $('#bar-demand').highcharts(desktop_config);
     $('#bar-demand-mobile').highcharts(mobile_config);
 };
 
