@@ -568,10 +568,10 @@ hr {
   }
 
   #bar-demand-mobile{
-    height: 550px;
+    height: 500px;
   }
   #scatter-comp-mobile{
-    height: 350px;
+    height: 300px;
   }
 
   /* page layout */
@@ -630,5 +630,13 @@ hr {
     font-size: 12px;
   }
   
+
+
+
+
+  .footer-brand{
+    height: 22px;
+    margin-right: 16px;
+  }
 
 }

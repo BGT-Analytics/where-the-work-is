@@ -42,35 +42,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 }
             }
         },
-        legend: {
-            align: 'right',
-            layout: 'vertical',
-            x: -20,
-            verticalAlign: 'top',
-            y: 50,
-            floating: true,
-            backgroundColor: '#34495e',
-            borderWidth: 0,
-            shadow: false,
-            itemStyle: {
-                color: '#ecf0f1',
-                fontWeight: 200
-            },
-            itemHoverStyle: {
-                color: '#fff'
-            },
-            itemHiddenStyle: {
-                color: '#1d2a38'
-            },
-            title: {
-                text: 'Click to hide or show',
-                style: {
-                    fontSize: '9px',
-                    color: '#bdc3c7',
-                    fontWeight: 200,
-                }
-            }
-        },
         tooltip: {
             useHTML: true,
             headerFormat: '<table><tr><th colspan="2">{point.x}</th></tr>',
@@ -128,6 +99,35 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 }
             }
         },
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            x: -10,
+            verticalAlign: 'top',
+            y: 150,
+            floating: true,
+            backgroundColor: '#34495e',
+            borderWidth: 0,
+            shadow: false,
+            itemStyle: {
+                color: '#ecf0f1',
+                fontWeight: 200
+            },
+            itemHoverStyle: {
+                color: '#fff'
+            },
+            itemHiddenStyle: {
+                color: '#1d2a38'
+            },
+            title: {
+                text: 'Click to hide or show',
+                style: {
+                    fontSize: '9px',
+                    color: '#bdc3c7',
+                    fontWeight: 200,
+                }
+            }
+        }
     }
     var mobile_config = $.extend(mobile_extras, config);
 
@@ -175,6 +175,35 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     }
                 }
 
+            }
+        },
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            x: -20,
+            verticalAlign: 'top',
+            y: 50,
+            floating: true,
+            backgroundColor: '#34495e',
+            borderWidth: 0,
+            shadow: false,
+            itemStyle: {
+                color: '#ecf0f1',
+                fontWeight: 200
+            },
+            itemHoverStyle: {
+                color: '#fff'
+            },
+            itemHiddenStyle: {
+                color: '#1d2a38'
+            },
+            title: {
+                text: 'Click to hide or show',
+                style: {
+                    fontSize: '9px',
+                    color: '#bdc3c7',
+                    fontWeight: 200,
+                }
             }
         }
     }
