@@ -253,11 +253,14 @@ function updateLocation(geo_type, geo_name){
     }
 
     // updating breadcrumbs
-    $('#breadcrumbs').html("&nbsp;") // TO-DO: add default text for breadcrumbs for uk
+    $('#breadcrumbs').html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location")
     var breadcrumb_links = makeBreadcrumbLinks(geo_name)
-    $.each(breadcrumb_links, function(index, value){
-        $('#breadcrumbs').append(value+' &raquo; ')
-    });
+    if(breadcrumb_links.length){
+        $('#breadcrumbs').html("")
+        $.each(breadcrumb_links, function(index, value){
+            $('#breadcrumbs').append(value+' &raquo; ')
+        });
+    }
 
     makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
