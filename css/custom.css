@@ -276,6 +276,10 @@ hr {
   font-weight: 700;
   padding-top: 0px;
   margin-bottom: 0px;
+  line-height: 22px;
+}
+#current-location-name small{
+  font-size: 60%;
 }
 #breadcrumbs{
   margin-bottom: 0px;
@@ -289,9 +293,9 @@ hr {
   border: none;
   background-color: #f47730;
   color: #2c3e50;
-  padding: 1px 7px;
+  padding: 1px 8px;
   margin-right: 6px;
-  margin-top: -10px;
+  margin-top: -22px;
   display: inline-block;
 }
 #current-location-div, #dropdown-div{
@@ -573,6 +577,29 @@ hr {
   }
 
 
+  .nav-item{
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  #navbar{
+    height: 52px;
+  }
+
+  #location-dropdown-menu{
+    padding: 0px 6px;
+    margin-top: -16px;
+    font-size: 12px;
+    margin-right: 2px;
+  }
+  #breadcrumbs{
+    font-size: 9px;
+  }
+  #current-location-name{
+    font-size: 18px;
+    line-height: 18px;
+  }
 
   
 

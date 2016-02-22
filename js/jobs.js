@@ -245,7 +245,12 @@ function updateLocation(geo_type, geo_name){
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
 
-    $("#current-location-name").text(geo_display_name)
+    if(geo_display_name.length>32){
+        $("#current-location-name").html('<small>'+geo_display_name+'</small>')
+    }
+    else{
+        $("#current-location-name").html(geo_display_name)
+    }
 
     // updating breadcrumbs
     $('#breadcrumbs').html("&nbsp;") // TO-DO: add default text for breadcrumbs for uk
