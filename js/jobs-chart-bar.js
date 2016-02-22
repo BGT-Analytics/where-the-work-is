@@ -109,6 +109,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     select: {
                         borderColor: '#2c3e50',
                         color: "#FBAB18"
+                    },
+                    hover: {
+                        enabled: false
                     }
                 },
                 point: {

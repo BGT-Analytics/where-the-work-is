@@ -178,6 +178,9 @@ function scatterHelper(prepped_data, point_color, place_data){
                             lineWidth: 1,
                             lineColor: "#2c3e50",
                             radius: 7
+                        },
+                        hover: {
+                            enabled: false
                         }
                     }
                 }
