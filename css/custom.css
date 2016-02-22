@@ -104,6 +104,9 @@ hr {
 .tooltip.top .tooltip-arrow {
   border-top-color: #f47730;
 }
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #f47730;
+}
 .tooltip.left .tooltip-arrow {
   border-left-color: #f47730;
 }
@@ -599,6 +602,12 @@ hr {
   #current-location-name{
     font-size: 18px;
     line-height: 18px;
+  }
+
+
+
+  .tooltip-inner {
+    min-width: 320px;
   }
 
   

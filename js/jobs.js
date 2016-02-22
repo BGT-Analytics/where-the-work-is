@@ -307,13 +307,17 @@ function selectOccupation(occupation, place_data){
     $("#default-occ-info").hide();
     $("#occ-detail").show();
 
-    $("#sel-occ-name").html(occupation)
+    if(occupation.length>40){
+        $("#sel-occ-name").html('<small>'+occupation+'</small>')
+    }else{
+        $("#sel-occ-name").html(occupation)
+    }
     var tooltip_content = 'Jobs included:<br/><ul>'
     $.each(occupation_mapping[occupation]['example_titles'], function(index, title){
         tooltip_content = tooltip_content +'<li>'+ title + '</li>'
     });
     tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
-    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="right" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
+    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
 
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
