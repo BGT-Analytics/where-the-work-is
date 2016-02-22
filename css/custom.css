@@ -484,6 +484,10 @@ hr {
   height: 400px;
   width: 100%
 }
+#map-helper{
+  font-size: 14px;
+  color: #fbab18;
+}
 
 .leaflet-google-layer{
     z-index: 0;
@@ -501,7 +505,7 @@ hr {
   background-color: inherit;
 }
 .info.leaflet-control {
-    font-family:'Montserrat',sans-serif;
+    font-family:"Source Sans Pro",sans-serif;
     background-color: #fff;
     padding: 0 10px;
     -moz-box-shadow: none;
@@ -630,7 +634,38 @@ hr {
     font-size: 12px;
   }
   
-
+  #occupation-detail-modal .modal-header{
+    padding: 6px;
+  }
+  #occupation-detail-modal .modal-body{
+    font-size: 12px;
+    padding: 6px;
+  }
+  #occupation-detail-title{
+    font-size: 14px;
+  }
+  #occupation-detail-map{
+    height: 320px;
+  }
+  .info.leaflet-control{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    margin:0px;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .legend i{
+    width:12px;
+    height:12px;
+    margin-right: 4px;
+  }
+  .info.leaflet-control h4{
+    font-size: 12px;
+  }
+  #legend-occupation{
+    display: none;
+  }
 
 
 

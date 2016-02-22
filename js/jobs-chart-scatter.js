@@ -172,12 +172,13 @@ function scatterHelper(prepped_data, point_color, place_data){
                     }
                 },
                 marker: {
+                    radius: 5,
                     states: {
                         select: {
                             fillColor: "#FBAB18",
                             lineWidth: 1,
                             lineColor: "#2c3e50",
-                            radius: 7
+                            radius: 9
                         },
                         hover: {
                             enabled: false

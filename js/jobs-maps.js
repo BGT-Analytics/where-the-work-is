@@ -16,7 +16,7 @@ var MapsLib = {
 
         MapsLib.occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
-            center: [55, 1.5], 
+            center: [55, -.5], 
             zoom: 5,
             attributionControl: false,
             zoomControl:false,
@@ -52,7 +52,7 @@ var MapsLib = {
 
             }
             else {
-                this._div.innerHTML = 'Hover over a location';
+                this._div.innerHTML = '<span id="map-helper">Hover over a location</span>';
             }
         };
 
