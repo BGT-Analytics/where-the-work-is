@@ -34,7 +34,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             },
             labels: {
                 formatter: function () {
-                   return '£'+( numberWithCommas(this.value));
+                   return numberWithCommas(this.value);
                 },
                 style: {
                     color: '#bdc3c7',

@@ -138,7 +138,7 @@ function scatterHelper(prepped_data, point_color, place_data){
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2">{point.full_name}</th></tr>' +
                 '<tr><td>Average salary:</td><td style="text-align:right;">£{point.x:,.0f}</td></tr>' +
-                '<tr><td>opportunity:</td><td style="text-align:right;">{point.y:.0f}/100</td></tr>',
+                '<tr><td>Opportunity:</td><td style="text-align:right;">{point.y:.0f}/100</td></tr>',
             footerFormat: '</table>',
             followPointer: true,
             shadow: false,
