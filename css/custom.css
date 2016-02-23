@@ -499,18 +499,6 @@ hr {
   color: #fbab18;
 }
 
-.leaflet-google-layer{
-    z-index: 0;
-}
-.leaflet-map-pane{
-    z-index: 100;
-}
-.leaflet-google-layer .leaflet-zoom-anim, .leaflet-google-layer .leaflet-zoom-animated {
-    transition-property: none!important;
-    -webkit-transition-property: none!important;
-    -webkit-animation: none!important;
-    animation: none!important;
-}
 .leaflet-container{
   background-color: inherit;
 }
