@@ -33,7 +33,8 @@ function scatterHelper(prepped_data, point_color, place_data){
             min: 17000,
             tickColor: '#eee',
             tickLength: 5,
-            lineColor: '#eee'
+            lineColor: '#eee',
+            endOnTick: true
         },
 
         yAxis: {
