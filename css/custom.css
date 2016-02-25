@@ -464,9 +464,12 @@ hr {
   color: #fbab18;
   display: none;
   position: relative;
-  top: -355px;
+  top: -345px;
   right: 20px;
   z-index: 3;
+}
+#helper-map{
+  display: none;
 }
 
 

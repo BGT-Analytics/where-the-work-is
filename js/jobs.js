@@ -305,7 +305,9 @@ function selectOccupation(occupation, place_data){
     });
 
     if(clicked_map==false&&clicked_location==true){
-        $("#btn-occ-lq i").addClass('flash');
+        $("#helper-map").fadeIn(800);
+        $("#helper-map i").addClass('flash');
+        // $("#btn-occ-lq i").addClass('flash');
     };
 
 
@@ -368,8 +370,9 @@ function selectOccupation(occupation, place_data){
 
         if(clicked_map==false){
             clicked_map = true;
-            $('#btn-occ-lq').removeClass('flash');
-            $('#btn-occ-lq').addClass('opaque');
+            $('#helper-map').fadeOut(800);
+            // $('#btn-occ-lq').removeClass('flash');
+            // $('#btn-occ-lq').addClass('opaque');
         };
 
         $('#occupation-detail-modal').modal('show');
