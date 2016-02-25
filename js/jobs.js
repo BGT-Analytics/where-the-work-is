@@ -119,9 +119,6 @@ function initialize(){
             updateEducation('he')
         });
 
-        $("#location-select-list li").click(function() {
-           $("#location-dropdown-menu").dropdown("toggle");
-        });
 
         $("#close-occ").click(function(){
             $('#occ-info-pane').fadeTo(0, 0, function () {
@@ -166,11 +163,7 @@ function initialize(){
                 $("#helper-job-family i").removeClass('flash');
                 $("#helper-job-family").fadeOut(800);
             }
-            if(clicked_occ==false){
-                // show & flash occupation helper
-                $("#helper-occupation").fadeIn(800);
-                $("#helper-occupation i").addClass('flash');
-            };
+            setTimeout(showHelperOcc, 800);
 
         });
 
@@ -181,13 +174,23 @@ function initialize(){
             });
         }, 800);
 
-        $("#location-select-list").click(function(){
+        $("#location-dropdown-menu").click(function(){
+            $("#helper-location").removeClass('flash');
+            $("#helper-location").addClass('opaque')
+        });
+        $("#location-select-list li").click(function() {
+           $("#location-dropdown-menu").dropdown("toggle");
+           if(clicked_location==false){
+                clicked_location=true;
+                $("#location-dropdown-menu").addClass('muted');
+            };
+        });
 
+        $("#breadcrumbs a").click(function(){
             if(clicked_location==false){
                 clicked_location=true;
-                $("#location-dropdown-menu").addClass('muted')
-            }
-
+                $("#location-dropdown-menu").addClass('muted');
+            };
         });
 
         MapsLib.initialize();
@@ -227,10 +230,8 @@ function updateLocation(geo_type, geo_name){
             geo_display_name = toTitleCase(geo_name)
         }
         // show & flash job family helper
-        if(clicked_occ_family==false){
-            $("#helper-job-family").fadeTo(1600, 0).fadeTo(800, 1);
-            $("#helper-job-family i").addClass('flash');
-        };
+        setTimeout(showHelperJobFamily, 3000);
+
     }
 
     // clear any selected job families
@@ -480,3 +481,19 @@ function salaryLabel(salary_val) {
         return 'Very High'
     }
 }
+
+function showHelperJobFamily(){
+    if(clicked_occ_family==false){
+        $("#helper-job-family").fadeTo(800, 1);
+        $("#helper-job-family i").addClass('flash');
+    };
+};
+
+function showHelperOcc(){
+    if(clicked_occ==false){
+        // show & flash occupation helper
+        $("#helper-occupation").fadeIn(800);
+        $("#helper-occupation i").addClass('flash');
+    };
+}
+
