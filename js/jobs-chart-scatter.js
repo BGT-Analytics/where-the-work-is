@@ -44,7 +44,7 @@ function scatterHelper(prepped_data, point_color, place_data){
             max: 115,
             min: -15,
             title: {
-                text: 'Job opportunity',
+                text: 'Employment opportunity',
                 style: {
                     color: '#bdc3c7',
                 }

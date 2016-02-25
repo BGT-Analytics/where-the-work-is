@@ -293,13 +293,17 @@ hr {
   color: #bdc3c7;
 }
 #location-dropdown-menu{
-  border: none;
+  border: 1px solid #f47730;
   background-color: #f47730;
   color: #2c3e50;
   padding: 1px 8px;
   margin-right: 6px;
   margin-top: -22px;
   display: inline-block;
+}
+#location-dropdown-menu.muted{
+  background-color: inherit;
+  color: #f47730;
 }
 #current-location-div, #dropdown-div{
   display: inline-block;
@@ -308,7 +312,13 @@ hr {
 
 
 /* location select dropdown */
+#location-select-list{
+  border: 1px solid #2c3e50;
+  border-radius: 0px;
+  background-color: #34495e;
+}
 #location-select-list>li>a {
+  color: #FBAB18;
   padding-top: 0px;
   padding-bottom: 0px;
 }

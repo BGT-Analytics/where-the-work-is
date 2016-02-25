@@ -185,6 +185,7 @@ function initialize(){
 
             if(clicked_location==false){
                 clicked_location=true;
+                $("#location-dropdown-menu").addClass('muted')
             }
             // show & flash job family helper
             if(clicked_occ_family==false){
