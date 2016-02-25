@@ -187,11 +187,6 @@ function initialize(){
                 clicked_location=true;
                 $("#location-dropdown-menu").addClass('muted')
             }
-            // show & flash job family helper
-            if(clicked_occ_family==false){
-                $("#helper-job-family").fadeTo(1600, 0).fadeTo(800, 1);
-                $("#helper-job-family i").addClass('flash');
-            };
 
         });
 
@@ -231,6 +226,11 @@ function updateLocation(geo_type, geo_name){
         if(geo_type=="Nation" || geo_type=="Region"){
             geo_display_name = toTitleCase(geo_name)
         }
+        // show & flash job family helper
+        if(clicked_occ_family==false){
+            $("#helper-job-family").fadeTo(1600, 0).fadeTo(800, 1);
+            $("#helper-job-family i").addClass('flash');
+        };
     }
 
     // clear any selected job families

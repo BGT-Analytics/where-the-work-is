@@ -61,6 +61,13 @@ hr {
 .text-info, .text-info:hover{
   color: #fbab18;
 }
+.bg-info{
+  display: inline-block;
+  background-color: #FBAB18;
+  color: #2c3e50;
+  opacity: .5;
+  padding: 4px;
+}
 
 
 .nowrap { white-space: nowrap; }
@@ -143,6 +150,9 @@ hr {
 }
 .no-pad-right{
   padding-right: 0px;
+}
+#close-occ{
+  color: #f47730;
 }
 #close-occ:hover{
   cursor: pointer;
@@ -455,7 +465,7 @@ hr {
   display: none;
   position: relative;
   top: -345px;
-  right: 28px;
+  right: 20px;
   z-index: 3;
 }
 
