@@ -88,11 +88,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
-                            if(clicked_occ==false){
-                                clicked_occ = true;
-                                $("#helper-occupation i").removeClass('flash')
-                                $("#helper-occupation").fadeOut(800)
-                            };
+                            hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
                         }
                     }
@@ -159,11 +155,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
-                            if(clicked_occ==false){
-                                clicked_occ = true;
-                                $("#helper-occupation i").removeClass('flash')
-                                $("#helper-occupation").fadeOut(800)
-                            };
+                            hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
                         },
                         mouseOver: function () {

@@ -158,11 +158,7 @@ function initialize(){
                 selectOccFamily(clicked_job_fam_name);
             };
 
-            if(clicked_occ_family==false){
-                clicked_occ_family = true;
-                $("#helper-job-family i").removeClass('flash');
-                $("#helper-job-family").fadeOut(800);
-            }
+            hideHelperJobFamily();
             setTimeout(showHelperOcc, 800);
 
         });
@@ -175,8 +171,7 @@ function initialize(){
         }, 800);
 
         $("#location-dropdown-menu").click(function(){
-            $("#helper-location").removeClass('flash');
-            $("#helper-location").addClass('opaque')
+            silenceHelperLocation();
         });
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
@@ -482,11 +477,16 @@ function salaryLabel(salary_val) {
     }
 }
 
+
+
+
+
 function showHelperJobFamily(){
     if(clicked_occ_family==false){
         $("#helper-job-family").fadeTo(800, 1);
         $("#helper-job-family i").addClass('flash');
     };
+    silenceHelperLocation();
 };
 
 function showHelperOcc(){
@@ -495,5 +495,29 @@ function showHelperOcc(){
         $("#helper-occupation").fadeIn(800);
         $("#helper-occupation i").addClass('flash');
     };
-}
+    silenceHelperLocation();
+};
+
+function hideHelperJobFamily(){
+    if(clicked_occ_family==false){
+        clicked_occ_family = true;
+        $("#helper-job-family i").removeClass('flash');
+        $("#helper-job-family").fadeOut(800);
+    }
+};
+
+function hideHelperOcc(){
+    if(clicked_occ==false){
+        clicked_occ = true;
+        $("#helper-occupation i").removeClass('flash')
+        $("#helper-occupation").fadeOut(800)
+    };
+};
+
+function silenceHelperLocation(){
+    if($("#helper-location").hasClass('flash')){
+        $("#helper-location").removeClass('flash');
+        $("#helper-location").addClass('opaque');
+    };
+};
 
