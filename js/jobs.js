@@ -181,16 +181,14 @@ function initialize(){
             });
         }, 800);
 
-        $("#location-dropdown-menu").click(function(){
+        $("#location-select-list").click(function(){
 
             if(clicked_location==false){
                 clicked_location=true;
-                $("#location-dropdown-menu i").removeClass('flash')
-                $("#location-dropdown-menu i").addClass('opaque')
             }
             // show & flash job family helper
             if(clicked_occ_family==false){
-                $("#helper-job-family").fadeIn(800);
+                $("#helper-job-family").fadeTo(1600, 0).fadeTo(800, 1);
                 $("#helper-job-family i").addClass('flash');
             };
 
@@ -244,8 +242,10 @@ function updateLocation(geo_type, geo_name){
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
-
-    if(geo_display_name.length>32){
+    if(geo_display_name == "The United Kingdom"){
+        $("#current-location-name").html('<span id="default-location">'+geo_display_name+'</span>')
+    }
+    else if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
     }
     else{
@@ -253,7 +253,12 @@ function updateLocation(geo_type, geo_name){
     }
 
     // updating breadcrumbs
-    $('#breadcrumbs').html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location")
+    if(!clicked_location && !clicked_occ_family){
+        $('#breadcrumbs').html("<span id='helper-location' class='flash'><i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within</span>")
+    }
+    else{
+        $('#breadcrumbs').html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within")
+    }
     var breadcrumb_links = makeBreadcrumbLinks(geo_name)
     if(breadcrumb_links.length){
         $('#breadcrumbs').html("")

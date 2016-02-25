@@ -287,10 +287,10 @@ hr {
 #breadcrumbs{
   margin-bottom: 0px;
   font-size: 11px;
-  color: #C0BEBE;
+  color: #bdc3c7;
 }
 #breadcrumbs a{
-  color: #C0BEBE;
+  color: #bdc3c7;
 }
 #location-dropdown-menu{
   border: none;
@@ -431,7 +431,12 @@ hr {
   z-index: 2;
 }
 
-
+#default-location{
+  color: #bdc3c7;
+}
+#helper-location{
+  color: #fbab18;
+}
 #helper-job-family{
   display: none;
 }
