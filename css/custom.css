@@ -585,7 +585,7 @@ hr {
 
 
 
-/* medium screens */
+/* small screens (less than ipad, collapsed into one col) */
 @media only screen and (max-width : 767px) {
   .desktop-only{
     display: none;
@@ -695,6 +695,53 @@ hr {
   .footer-brand{
     height: 22px;
     margin-right: 16px;
+  }
+
+}
+
+/* large screens */
+@media (min-width: 992px) {
+
+  #sel-occ-name{
+    font-size: 18px;
+  }
+
+
+  .label-occ{
+    font-size: 22px;
+  }
+
+}
+
+/* very large screens */
+@media (min-width: 1200px) {
+
+  body{
+    font-size: 18px;
+  }
+
+
+  .chart-title{
+    font-size: 22px;
+  }
+  .chart-subtitle{
+    font-size: 18px;
+  }
+  #selected-edu, #edu-select-list>li{
+    font-size: 18px;
+  }
+
+
+
+  #sel-occ-name{
+    font-size: 20px;
+  }
+
+  .occ-figure-title{
+    font-size: 18px;
+  }
+  .label-occ{
+    font-size: 24px;
   }
 
 }
