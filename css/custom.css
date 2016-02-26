@@ -61,13 +61,6 @@ hr {
 .text-info, .text-info:hover{
   color: #fbab18;
 }
-.bg-info{
-  display: inline-block;
-  background-color: #FBAB18;
-  color: #2c3e50;
-  opacity: .5;
-  padding: 4px;
-}
 
 
 .nowrap { white-space: nowrap; }
@@ -470,6 +463,10 @@ hr {
 }
 #helper-map{
   display: none;
+}
+.text-helper{
+  color: #fbab18;
+  font-weight: 700;
 }
 
 
