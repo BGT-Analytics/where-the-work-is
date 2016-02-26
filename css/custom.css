@@ -150,6 +150,9 @@ hr {
 #close-occ:hover{
   cursor: pointer;
 }
+#occ-bottom{
+  margin-top: 14px;
+}
 
 
 .job-family{
@@ -193,8 +196,8 @@ hr {
 .occ-figure-title{
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin-bottom: 4px;
+  margin-top: 20px;
 }
 
 .occ-xs{
@@ -205,8 +208,8 @@ hr {
 }
 
 .label-occ{
-  font-size: 16px;
-  margin-bottom: 0px;
+  font-size: 20px;
+  margin-bottom: 6px;
 }
 .label-occ span{
   padding-left: 2px;
@@ -637,9 +640,11 @@ hr {
     min-width: 320px;
   }
 
-
+  .occ-figure-title{
+    font-size: 11px
+  }
   .occ-figure{
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .job-family{

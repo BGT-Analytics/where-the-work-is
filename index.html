@@ -107,15 +107,13 @@ description: "This tool visualises the dynamics of the entry level job market fo
               </div>
               <div class="row">
                 <div class="col-xs-6">
-                  <p class="occ-xs">&nbsp;</p>
+                  <!-- <p class="occ-xs">&nbsp;</p> -->
                   <p id="occ-label-demand" class="label-occ"></p>
-                  <p id="occ-rank-demand" class="occ-rank"></p>
                   <p id="occ-figure-demand" class="occ-figure"></p>
                 </div>
                 <div class="col-xs-6 no-pad-left">
-                  <p class="occ-xs">&nbsp;</p>
+                  <!-- <p class="occ-xs">&nbsp;</p> -->
                   <p id="occ-label-salary" class="label-occ"></p>
-                  <p id="occ-rank-salary" class="occ-rank"></p>
                   <p id="occ-figure-salary" class="occ-figure"></p>
                 </div>
               </div>
@@ -128,21 +126,19 @@ description: "This tool visualises the dynamics of the entry level job market fo
               </div>
               <div class="row">
                 <div class="col-xs-6 no-pad-left no-pad-right">
-                  <p class="occ-xs">Further education</p>
+                  <!-- <p class="occ-xs">Further education</p> -->
                   <p id="occ-label-comp-fe" class="label-occ"></p>
-                  <p id="occ-rank-comp-fe" class="occ-rank"></p>
-                  <p id="occ-figure-comp-fe" class="occ-figure"></p>
+                  <p class="occ-figure">FE: <span id="occ-figure-comp-fe"></span></p>
                 </div>
                 <div class="col-xs-6 no-pad-left no-pad-right">
-                  <p class="occ-xs">Higher education</p>
+                  <!-- <p class="occ-xs">Higher education</p> -->
                   <p id="occ-label-comp-he" class="label-occ"></p>
-                  <p id="occ-rank-comp-he" class="occ-rank"></p>
-                  <p id="occ-figure-comp-he" class="occ-figure"></p>
+                  <p class="occ-figure">HE: <span id="occ-figure-comp-he"></span></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row hidden-print">
+          <div class="row hidden-print" id="occ-bottom">
             <div class="col-xs-12">
               <a href="" id="btn-occ-lq" class=""><i class="fa fa-fw fa-map-o"></i> Launch map</a>
               <span id="helper-map">
@@ -190,13 +186,13 @@ description: "This tool visualises the dynamics of the entry level job market fo
             <div class="dropdown">
               <a class="dropdown-toggle" type="button" id="edu-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span id="selected-edu">
-                  further education finishers
+                  further education finishers (FE)
                 </span>
                 <i class="fa fa-lg fa-caret-down"></i>
               </a>
               <ul id='edu-select-list' class="dropdown-menu" aria-labelledby="edu-dropdown-menu">
-                <li id="fe-select">further education finishers</li>
-                <li id="he-select">higher education graduates</li>
+                <li id="fe-select">further education finishers (FE)</li>
+                <li id="he-select">higher education graduates (HE)</li>
               </ul>
             </div>
           </div>
