@@ -178,6 +178,10 @@ function initialize(){
             });
         }, 800);
 
+
+        // show & flash job family helper if user doesn't figure it out in 5 secs
+        setTimeout(showHelperJobFamily, 5000);
+
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
            if(clicked_location==false){
@@ -229,9 +233,6 @@ function updateLocation(geo_type, geo_name){
         if(geo_type=="Nation" || geo_type=="Region"){
             geo_display_name = toTitleCase(geo_name)
         }
-        // show & flash job family helper
-        setTimeout(showHelperJobFamily, 3000);
-
     }
 
     clearJobFamilies();
@@ -304,11 +305,8 @@ function selectOccupation(occupation, place_data){
     $occ_info_pane.addClass('well-occ-inactive');
     $occ_info_pane.removeClass('well-occ-active');
 
-    if(clicked_map==false&&clicked_location==true){
-        $("#helper-map").fadeIn(800);
-        $("#helper-map i").addClass('flash');
-        // $("#btn-occ-lq i").addClass('flash');
-    };
+    // show map helper if user doesn't figure it out after 5 secs
+    setTimeout(showHelperMap, 5000);
 
     clearJobFamilies();
 
@@ -509,6 +507,14 @@ function showHelperOcc(){
         $("#helper-occupation i").addClass('flash');
     };
 };
+
+function showHelperMap(){
+    if(clicked_map==false){
+        $("#helper-map").fadeIn(800);
+        $("#helper-map i").addClass('flash');
+        // $("#btn-occ-lq i").addClass('flash');
+    };
+}
 
 function hideHelperJobFamily(){
     if(clicked_occ_family==false){
