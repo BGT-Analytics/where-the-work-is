@@ -35,11 +35,10 @@ e. make sure you have the following python libraries: `csvkit`, `psycopg2`, `MyS
 The main excel file should be named `BGT_UK_IPPR_Data.xlsx` & it should go in `data/`  
 
 **3. Prep the data**  
-to prep everything:
+to prep the csv that the visualizations read in:
 ```
 cd data/
-make clean
-make all
+make occupation_data.csv
 ```
 
 # Web dependencies

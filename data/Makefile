@@ -1,6 +1,8 @@
 include config.mk
 
 all: merged_regions.geojson occupation_data.csv
+# note: the viz now uses merged_regions_simplified.geojson
+# which has been manually derived from merged_regions.geojson
 
 .PHONY: clean
 clean: 

@@ -20,7 +20,7 @@ var clicked_map = false;
 
 function initialize(){
 
-    $.when($.getJSON('data/merged_regions.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
         regions_data = geojson
         occupation_data = _.map(
             $.csv.toObjects(csv[0]),
