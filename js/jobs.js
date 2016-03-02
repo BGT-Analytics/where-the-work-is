@@ -1,12 +1,13 @@
-// variable init
+// data
 var occupation_data;
 var regions_data;
 var occ_map;
 
-var clicked_location = false;
-var clicked_occ_family = false;
-var clicked_occ = false;
-var clicked_map = false;
+// remembering what has been clicked
+var clicked_location = false,
+    clicked_occ_family = false,
+    clicked_occ = false,
+    clicked_map = false;
 
 
 // do stuff when the page loads
@@ -21,6 +22,7 @@ var clicked_map = false;
 function initialize(){
 
     $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
+
         regions_data = geojson
         occupation_data = _.map(
             $.csv.toObjects(csv[0]),
@@ -77,37 +79,39 @@ function initialize(){
         }
 
         // populating select menu w/ regions & leps
+        var $location_select_list = $('#location-select-list');
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
             n_link_html = makeLinkHTML(n, toTitleCase(n), 'option-nation')
-            $('#location-select-list').append('<li>'+n_link_html+'</li>')
+            $location_select_list.append('<li>'+n_link_html+'</li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
                 r = value['name']
                 r_link_html =  makeLinkHTML(r, toTitleCase(r), 'option-region')
-                $('#location-select-list').append('<li>'+r_link_html+'</li>')
+                $location_select_list.append('<li>'+r_link_html+'</li>')
                 // loop thru leps within region
                 $.each(value['children'] , function(index, value){
                     l = value['name']
                     l_link_html = makeLinkHTML(l, l, 'option-lep')
-                    $('#location-select-list').append('<li>'+l_link_html+'</li>')
+                    $location_select_list.append('<li>'+l_link_html+'</li>')
                 });
             });
         });
 
-        $('#control-pane').on('click', '.option-country', function() {
+        var $control_pane = $('#control-pane');
+        $control_pane.on('click', '.option-country', function() {
             updateLocation('Country', 'UK Total');
             return false;
         });
-        $('#control-pane').on('click', '.option-nation', function() {
+        $control_pane.on('click', '.option-nation', function() {
             updateLocation('Nation', $(this).attr('data'));
             return false;
         });
-        $('#control-pane').on('click', '.option-region', function() {
+        $control_pane.on('click', '.option-region', function() {
             updateLocation('Region', $(this).attr('data'));
             return false;
         });
-        $('#control-pane').on('click', '.option-lep', function() {
+        $control_pane.on('click', '.option-lep', function() {
             updateLocation('LEP', $(this).attr('data'));
             return false;
         });
@@ -119,23 +123,24 @@ function initialize(){
             updateEducation('he')
         });
 
-
+        var $occ_info_pane = $('#occ-info-pane');
         $("#close-occ").click(function(){
-            $('#occ-info-pane').fadeTo(0, 0, function () {
-                $('#occ-info-pane').fadeTo(800, 1)
+            $occ_info_pane.fadeTo(0, 0, function () {
+                $occ_info_pane.fadeTo(800, 1)
             });
 
             $("#occ-detail").hide();
             $("#default-occ-info").show();
 
-            $('#occ-info-pane').removeClass('well-occ-inactive');
-            $('#occ-info-pane').addClass('well-occ-active');
+            $occ_info_pane.removeClass('well-occ-inactive');
+            $occ_info_pane.addClass('well-occ-active');
 
             $.address.parameter('occupation', '');
             highlightOcc('');
         });
 
-        $(".job-family").hover(
+        var $cls_job_family = $(".job-family");
+        $cls_job_family.hover(
             function(){
                 highlightOccFamily($(this).attr('data'));
             },
@@ -143,10 +148,10 @@ function initialize(){
                 highlightOccFamily('');
             }
         );
-        $(".job-family").click(function(){
+        $cls_job_family.click(function(){
             var clicked_job_fam_name = $(this).attr('data')
             // unselect other selected stuff
-            $('.job-family').each(function(index, elem){
+            $cls_job_family.each(function(index, elem){
                 if ($(elem).attr('data')!=clicked_job_fam_name){
                     $(elem).removeClass('selected');
                 };
@@ -232,12 +237,7 @@ function updateLocation(geo_type, geo_name){
 
     }
 
-    // clear any selected job families
-    $('.job-family').each(function(index, elem){
-        if ($(elem).hasClass('selected')){
-            $(elem).removeClass('selected');
-        };
-    });
+    clearJobFamilies();
 
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
@@ -253,17 +253,18 @@ function updateLocation(geo_type, geo_name){
     }
 
     // updating breadcrumbs
+    var $breadcrumbs = $('#breadcrumbs');
     if(!clicked_location && !clicked_occ_family){
-        $('#breadcrumbs').html("<span id='helper-location' class='flash'><i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within</span>")
+        $breadcrumbs.html("<span id='helper-location' class='flash'><i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within</span>")
     }
     else{
-        $('#breadcrumbs').html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within")
+        $breadcrumbs.html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within")
     }
     var breadcrumb_links = makeBreadcrumbLinks(geo_name)
     if(breadcrumb_links.length){
-        $('#breadcrumbs').html("")
+        $breadcrumbs.html("")
         $.each(breadcrumb_links, function(index, value){
-            $('#breadcrumbs').append(value+' &raquo; ')
+            $breadcrumbs.append(value+' &raquo; ')
         });
     }
 
@@ -303,17 +304,20 @@ function updateEducation(education){
 function selectOccupation(occupation, place_data){
     // this populates the occupation detail pane on the main location view
 
-    $('#occ-info-pane').fadeTo(0, 0, function () {
-        $('#occ-info-pane').fadeTo(800, 1)
+    var $occ_info_pane = $('#occ-info-pane');
+    $occ_info_pane.fadeTo(0, 0, function () {
+        $occ_info_pane.fadeTo(800, 1)
     });
-    $('#occ-info-pane').addClass('well-occ-inactive');
-    $('#occ-info-pane').removeClass('well-occ-active');
+    $occ_info_pane.addClass('well-occ-inactive');
+    $occ_info_pane.removeClass('well-occ-active');
 
     if(clicked_map==false&&clicked_location==true){
         $("#helper-map").fadeIn(800);
         $("#helper-map i").addClass('flash');
         // $("#btn-occ-lq i").addClass('flash');
     };
+
+    clearJobFamilies();
 
 
     $("#default-occ-info").hide();
@@ -486,6 +490,15 @@ function salaryLabel(salary_val) {
 }
 
 
+
+function clearJobFamilies(){
+    // clear any selected job families
+    $(".cls_job_family").each(function(index, elem){
+        if ($(elem).hasClass('selected')){
+            $(elem).removeClass('selected');
+        };
+    });
+}
 
 
 
