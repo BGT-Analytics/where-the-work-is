@@ -178,9 +178,6 @@ function initialize(){
             });
         }, 800);
 
-        $("#location-dropdown-menu").click(function(){
-            silenceHelperLocation();
-        });
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
            if(clicked_location==false){
@@ -254,12 +251,8 @@ function updateLocation(geo_type, geo_name){
 
     // updating breadcrumbs
     var $breadcrumbs = $('#breadcrumbs');
-    if(!clicked_location && !clicked_occ_family){
-        $breadcrumbs.html("<span id='helper-location' class='flash'><i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within</span>")
-    }
-    else{
-        $breadcrumbs.html("<i class='fa fa-fw fa-hand-o-left'></i> Select a location to explore occupational prospects within")
-    }
+
+    $breadcrumbs.html("<span id='helper-location'><i class='fa fa-fw fa-hand-o-left'></i> Change location to explore occupations elsewhere</span>")
     var breadcrumb_links = makeBreadcrumbLinks(geo_name)
     if(breadcrumb_links.length){
         $breadcrumbs.html("")
@@ -507,7 +500,6 @@ function showHelperJobFamily(){
         $("#helper-job-family").fadeTo(800, 1);
         $("#helper-job-family i").addClass('flash');
     };
-    silenceHelperLocation();
 };
 
 function showHelperOcc(){
@@ -516,7 +508,6 @@ function showHelperOcc(){
         $("#helper-occupation").fadeIn(800);
         $("#helper-occupation i").addClass('flash');
     };
-    silenceHelperLocation();
 };
 
 function hideHelperJobFamily(){
@@ -535,10 +526,5 @@ function hideHelperOcc(){
     };
 };
 
-function silenceHelperLocation(){
-    if($("#helper-location").hasClass('flash')){
-        $("#helper-location").removeClass('flash');
-        $("#helper-location").addClass('opaque');
-    };
-};
+
 

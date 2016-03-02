@@ -269,14 +269,18 @@ hr {
 /* nav bar */
 #navbar{
   background-color: #baccd8;
-  padding: 4px 0px;
-  height: 34px;
+  padding: 8px 0px;
+  height: 42px;
 }
 #site-title{
   color: #2c3e50;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
+}
+#nav-subtitle{
+  font-weight: 400;
+  font-size: 14px;
 }
 #navbar .nav-item{
   color: #2c3e50;
@@ -287,12 +291,11 @@ hr {
 
 
 /* top control pane */
-#control-pane{
-  padding: 4px 0px;
-  height: 58px;
-}
-#control-pane>.container-fluid>.row>div{
+#control-pane>.row>div{
   border-bottom: 2px solid #34495e;
+}
+#control-pane-content{
+  padding: 8px 0px;
 }
 #control-pane h3{
   color: #fff;
@@ -348,6 +351,9 @@ hr {
   color: #FBAB18;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+#location-select-list>li>a:hover{
+  color: #f47730;
 }
 #location-select-list .option-nation{
   padding-left: 10px;
@@ -638,7 +644,8 @@ hr {
     line-height: 12px;
   }
   #navbar{
-    height: 52px;
+    padding: 4px 0px;
+    height: 32px;
   }
 
   #location-dropdown-menu{
