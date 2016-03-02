@@ -364,9 +364,9 @@ function selectOccupation(occupation, place_data){
     $("#occ-figure-comp-fe").html(comp_fig_str_fe)
     $("#occ-figure-comp-he").html(comp_fig_str_he)
 
-
-    $( "#btn-occ-lq" ).off('click');
-    $('#btn-occ-lq').on('click', function() {
+    var $btn_occ_lq = $('#btn-occ-lq');
+    $btn_occ_lq.off('click');
+    $btn_occ_lq.on('click', function() {
 
         if(clicked_map==false){
             clicked_map = true;
@@ -379,20 +379,23 @@ function selectOccupation(occupation, place_data){
         return false;
     });
 
-    $( "#occupation-detail-modal" ).off('shown.bs.modal');
-    $( "#occupation-detail-modal" ).on('shown.bs.modal', function (e) {
+    var $occupation_detail_modal = $( "#occupation-detail-modal" )
+    $occupation_detail_modal.off('shown.bs.modal');
+    $occupation_detail_modal.on('shown.bs.modal', function (e) {
         MapsLib.occ_map._onResize();
         MapsLib.updateData(occupation);
         $('#mapGeoRegions').click();
     });
 
-    $( "#mapGeoRegions" ).off('click');
-    $( "#mapGeoRegions" ).on('click', function (e) {
+    var $map_geo_regions = $('#mapGeoRegions');
+    $map_geo_regions.off('click');
+    $map_geo_regions.on('click', function (e) {
         MapsLib.toggleGeo('regions');
     });
 
-    $( "#mapGeoLeps" ).off('click');
-    $( "#mapGeoLeps" ).on('click', function (e) {
+    var $map_gep_leps = $('#mapGeoLeps');
+    $map_gep_leps.off('click');
+    $map_gep_leps.on('click', function (e) {
         MapsLib.toggleGeo('leps');
     });
 
