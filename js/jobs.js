@@ -128,6 +128,9 @@ function initialize(){
             $("#occ-detail").hide();
             $("#default-occ-info").show();
 
+            $('#occ-info-pane').removeClass('well-occ-inactive');
+            $('#occ-info-pane').addClass('well-occ-active');
+
             $.address.parameter('occupation', '');
             highlightOcc('');
         });
@@ -303,6 +306,8 @@ function selectOccupation(occupation, place_data){
     $('#occ-info-pane').fadeTo(0, 0, function () {
         $('#occ-info-pane').fadeTo(800, 1)
     });
+    $('#occ-info-pane').addClass('well-occ-inactive');
+    $('#occ-info-pane').removeClass('well-occ-active');
 
     if(clicked_map==false&&clicked_location==true){
         $("#helper-map").fadeIn(800);

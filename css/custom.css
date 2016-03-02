@@ -131,8 +131,8 @@ hr {
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #154779;
-  color: #f3f1f1;
+  background-color: #baccd8;
+  color: #2c3e50;
   margin: 0px;
 }
 #occ-detail{
@@ -154,18 +154,39 @@ hr {
   margin-top: 14px;
 }
 
+/*making some more space for the families*/
+#family1{
+  padding-right: 0px;
+}
+#family2{
+  padding-left: 10px;
+  padding-right: 5px;
+}
+#family3{
+  padding-left: 5px;
+  padding-right: 10px;
+}
+#family4{
+  padding-left: 0px;
+}
 
 .job-family{
   text-align: center;
   margin-top: 14px;
+  padding-top: 10px;
+  padding-left:2px;
+  padding-right: 2px;
   margin-bottom: 14px;
+  background-color: #c4d4de;
+  border-radius: 6px;
+  min-height: 100px;
 }
 .job-family:hover{
   cursor: pointer;
-  color: #e2be7c;
+  background-color: #e2be7c;
 }
 .job-family.selected{
-  color: #fbab18;
+  background-color: #fbab18;
 }
 .job-family .job-family-name{
   margin-top: 4px;
@@ -247,18 +268,18 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #34495e;
+  background-color: #baccd8;
   padding: 4px 0px;
   height: 34px;
 }
 #site-title{
-  color: #baccd8;
+  color: #2c3e50;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
 }
-.nav-item{
-  color: #baccd8;
+#navbar .nav-item{
+  color: #2c3e50;
   margin: 2px 8px;
   font-size: 16px;
 }
