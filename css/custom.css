@@ -435,6 +435,8 @@ hr {
 .chart-subtitle a{
   color: inherit;
   text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dashed;
 }
 .chart-subtitle a:hover{
   color: #ecf0f1;
@@ -605,6 +607,8 @@ hr {
 #selected-edu{
   text-decoration: underline;
   text-decoration-style: dashed;
+  text-decoration-color: #fbab18;
+  -moz-text-decoration-color: #fbab18;
   font-size: 14px;
   color: #bdc3c7;
 }
