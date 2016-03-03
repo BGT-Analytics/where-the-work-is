@@ -62,8 +62,8 @@ function scatterHelper(prepped_data, point_color, place_data){
                     label: {
                         text: 'Very low',
                         style: {
-                            color: '#bdc3c7',
-                            fontSize: '9px'
+                            color: '#9e4940',
+                            fontSize: '10px'
                         },
                         x: 3,
                         y: 0
@@ -77,8 +77,8 @@ function scatterHelper(prepped_data, point_color, place_data){
                     label: {
                         text: 'Low',
                         style: {
-                            color: '#bdc3c7',
-                            fontSize: '9px'
+                            color: '#ba7639',
+                            fontSize: '10px'
                         },
                         x: 3,
                         y: 0
@@ -92,8 +92,8 @@ function scatterHelper(prepped_data, point_color, place_data){
                     label: {
                         text: 'Medium',
                         style: {
-                            color: '#bdc3c7',
-                            fontSize: '9px'
+                            color: '#baa242',
+                            fontSize: '10px'
                         },
                         x: 3,
                         y: 0
@@ -107,8 +107,8 @@ function scatterHelper(prepped_data, point_color, place_data){
                     label: {
                         text: 'High',
                         style: {
-                            color: '#bdc3c7',
-                            fontSize: '9px'
+                            color: '#83A540',
+                            fontSize: '10px'
                         },
                         x: 3,
                         y: 0
@@ -122,8 +122,8 @@ function scatterHelper(prepped_data, point_color, place_data){
                     label: {
                         text: 'Very high',
                         style: {
-                            color: '#bdc3c7',
-                            fontSize: '9px'
+                            color: '#38925e',
+                            fontSize: '10px'
                         },
                         x: 3,
                         y: 0
