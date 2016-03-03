@@ -262,6 +262,7 @@ function updateLocation(geo_type, geo_name){
     makeCompScatterPlot(place_data, education)
 
     if ($.address.parameter('occupation')){
+        clicked_occ = true;
         selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
     }
 }

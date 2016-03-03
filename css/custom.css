@@ -500,6 +500,10 @@ hr {
   top: -345px;
   z-index: 3;
 }
+#helper-map{
+  display: none;
+  margin-left: 8px;
+}
 
 .hint{
   position: relative;
@@ -529,11 +533,6 @@ hr {
   margin-left: -8px;
 }
 
-
-
-#helper-map{
-  display: none;
-}
 
 
 
