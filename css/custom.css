@@ -480,25 +480,60 @@ hr {
 #helper-location{
   color: #fbab18;
 }
-#helper-job-family{
+
+
+
+
+
+.helper{
+  display: inline-block;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+#helper-job-family {
   display: none;
 }
 #helper-occupation{
-  color: #fbab18;
   display: none;
   position: relative;
   top: -345px;
-  right: 20px;
   z-index: 3;
 }
+
+.hint{
+  position: relative;
+  background: #fbab18;
+  padding: 6px;
+}
+.hint:after{
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(251, 171, 24, 0);
+  border-width: 8px;
+}
+.hint-right:after {
+  right: 100%;
+  top: 50%;
+  border-right-color: #fbab18;
+  margin-top: -8px;
+}
+.hint-bottom:after {
+  bottom: 100%;
+  left: 50%;
+  border-bottom-color: #fbab18;
+  margin-left: -8px;
+}
+
+
+
 #helper-map{
   display: none;
 }
-.text-helper{
-  color: #fbab18;
-  font-weight: 700;
-}
-
 
 
 

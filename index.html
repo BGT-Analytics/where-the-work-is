@@ -85,11 +85,11 @@ description: "This tool visualises the dynamics of the entry level job market fo
           <div class="row">
             <div class="col-sm-12">
 
-              <div class="hidden-print" id="helper-job-family">
-                <span class="text-helper">
+              <div class="helper">
+                <div class="hint hint-bottom hidden-print" id="helper-job-family">
                   Click a family to highlight occupations
                   <i class="fa fa-hand-o-up"></i>
-                </span>
+                </div>
               </div>
             </div>
           </div>
@@ -175,11 +175,6 @@ description: "This tool visualises the dynamics of the entry level job market fo
             <a data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry level roles (<2 years of experience) in 2014, based on online job postings and ONS Vacancy data">Job openings</a> by occupation & education level
           </p>
           <div id="bar-demand-mobile"></div>
-<!--           <div id="helper-occupation" class="pull-right">
-            <i class="fa fa-hand-o-left"></i>
-            <small>Select an occupation</small>
-          </div> -->
-
           <br/>
         </div>
 
@@ -227,11 +222,11 @@ description: "This tool visualises the dynamics of the entry level job market fo
         <a data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry level roles (<2 years of experience) in 2014, based on online job postings and ONS Vacancy data">Job openings</a> by occupation & education level
       </p>
       <div id="bar-demand"></div>
-      <div id="helper-occupation" class="pull-right hidden-print">
-        <span class="text-helper">
+      <div class="helper pull-right" id="helper-occupation">
+        <div class="hint hint-right hidden-print">
           <i class="fa fa-hand-o-left"></i>
-          Select an occupation for details
-        </span>
+          Click an occupation for details
+        </div>
       </div>
 
     </div>
