@@ -290,7 +290,7 @@ function updateEducation(education){
     makeCompScatterPlot(place_data, education)
 
     if ($.address.parameter('occupation')){
-        selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
+        highlightOcc(decodeURIComponent($.address.parameter('occupation')), place_data);
     }
 }
 
