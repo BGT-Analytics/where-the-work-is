@@ -192,6 +192,11 @@ function initialize(){
             };
         });
 
+
+        $('[data-toggle="tooltip"]').tooltip({
+            html: true
+        });
+
         MapsLib.initialize();
 
     });
@@ -292,6 +297,8 @@ function updateEducation(education){
 
 
 function selectOccupation(occupation, place_data){
+    highlightOcc(occupation);
+
     // this populates the occupation detail pane on the main location view
 
     var $occ_info_pane = $('#occ-info-pane');
@@ -320,7 +327,7 @@ function selectOccupation(occupation, place_data){
         tooltip_content = tooltip_content +'<li>'+ title + '</li>'
     });
     tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
-    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
+    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" id="occ-info-tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
 
     var place_occ_data = _.where(place_data, {occupation: occupation})[0]
 
@@ -395,9 +402,7 @@ function selectOccupation(occupation, place_data){
 
     $.address.parameter('occupation', encodeURIComponent(occupation));
 
-    highlightOcc(occupation);
-
-    $('[data-toggle="tooltip"]').tooltip({
+    $('#occ-info-tooltip').tooltip({
         html: true
     });
 }
