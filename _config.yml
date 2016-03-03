@@ -1,9 +1,11 @@
 port:  5000
 markdown: kramdown
 name: "Where the work is"
-url: http://ukjobs.datamade.us
+url: http://wheretheworkis.org
 encoding: utf-8
 timezone: America/Chicago
-description: ""
+description: "Explore entry-level job dynamics for middle-skilled jobs in the UK"
+author: "DataMade"
+image: "images/screencap.png"
 gems:
   - jekyll-redirect-from
