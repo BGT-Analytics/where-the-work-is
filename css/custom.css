@@ -369,7 +369,7 @@ hr {
   font-size: 15px;
   font-weight: 400;
 }
-.btn-info{
+.btn-info, .btn-info:active, .btn-info:visited{
   border: 2px solid #f47730;
   background-color: inherit;
   color: #f47730;
