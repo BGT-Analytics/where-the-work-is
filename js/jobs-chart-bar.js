@@ -43,6 +43,10 @@ function stackedBarHelper(prepped_data, categories, place_data){
             }
         },
         tooltip: {
+            backgroundColor: 'rgba(186, 204, 216, .85)',
+            style: {
+                color: '#2c3e50',
+            },
             useHTML: true,
             headerFormat: '<table><tr><th colspan="2">{point.x}</th></tr>',
             pointFormat:  '<tr><td>{series.name}:</td><td style="text-align:right;">{point.y:,.0f}</td></tr>',
@@ -55,7 +59,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 return { x: xpos, y: ypos };
             },
             shadow: false,
-            borderColor: '#eee'
+            borderColor: '#2c3e50'
         },
         series: prepped_data
 

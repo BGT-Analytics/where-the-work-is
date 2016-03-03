@@ -135,6 +135,10 @@ function scatterHelper(prepped_data, point_color, place_data){
         },
 
         tooltip: {
+            backgroundColor: 'rgba(186, 204, 216, .85)',
+            style: {
+                color: '#2c3e50',
+            },
             useHTML: true,
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2">{point.full_name}</th></tr>' +
@@ -143,7 +147,7 @@ function scatterHelper(prepped_data, point_color, place_data){
             footerFormat: '</table>',
             followPointer: true,
             shadow: false,
-            borderColor: '#eee'
+            borderColor: '#2c3e50'
         },
 
         series: [{

@@ -464,6 +464,9 @@ hr {
   width:240px;
   white-space:normal !important; /*this is required to get tooltip contents to wrap*/
 }
+.highcharts-tooltip table{
+  width: 240px;
+}
 
 #scatter-note{
   max-width: 160px;
