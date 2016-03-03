@@ -167,20 +167,15 @@ function initialize(){
             };
 
             hideHelperJobFamily();
-            setTimeout(showHelperOcc, 800);
 
         });
 
 
-        setInterval(function () {
-            $('.flash').fadeTo(400, 1, function () {
-                $('.flash').fadeTo(400, .1)
-            });
-        }, 800);
 
-
-        // show & flash job family helper if user doesn't figure it out in 5 secs
-        setTimeout(showHelperJobFamily, 5000);
+        // show & flash job family & occupation helpers
+        // if user doesn't figure it out within 5 secs
+        setTimeout(showHelperJobFamily, 4500);
+        setTimeout(showHelperOcc, 5500);
 
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
@@ -371,8 +366,6 @@ function selectOccupation(occupation, place_data){
         if(clicked_map==false){
             clicked_map = true;
             $('#helper-map').fadeOut(800);
-            // $('#btn-occ-lq').removeClass('flash');
-            // $('#btn-occ-lq').addClass('opaque');
         };
 
         $('#occupation-detail-modal').modal('show');
@@ -499,30 +492,24 @@ function clearJobFamilies(){
 function showHelperJobFamily(){
     if(clicked_occ_family==false){
         $("#helper-job-family").fadeTo(800, 1);
-        $("#helper-job-family i").addClass('flash');
     };
 };
 
 function showHelperOcc(){
     if(clicked_occ==false){
-        // show & flash occupation helper
-        $("#helper-occupation").fadeIn(800);
-        $("#helper-occupation i").addClass('flash');
+        $("#helper-occupation").fadeTo(800, 1);
     };
 };
 
 function showHelperMap(){
     if(clicked_map==false){
         $("#helper-map").fadeIn(800);
-        $("#helper-map i").addClass('flash');
-        // $("#btn-occ-lq i").addClass('flash');
     };
 }
 
 function hideHelperJobFamily(){
     if(clicked_occ_family==false){
         clicked_occ_family = true;
-        $("#helper-job-family i").removeClass('flash');
         $("#helper-job-family").fadeOut(800);
     }
 };
@@ -530,7 +517,6 @@ function hideHelperJobFamily(){
 function hideHelperOcc(){
     if(clicked_occ==false){
         clicked_occ = true;
-        $("#helper-occupation i").removeClass('flash')
         $("#helper-occupation").fadeOut(800)
     };
 };
