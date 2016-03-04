@@ -822,6 +822,11 @@ hr {
     font-size: 18px;
   }
 
+  #helper-occupation{
+    top: -95%;
+    left: -5%;
+  }
+
 
 
   #sel-occ-name{
