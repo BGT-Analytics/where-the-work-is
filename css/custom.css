@@ -83,21 +83,21 @@ hr {
 }
 .tooltip-inner {
   min-width: 360px;
-  background-color: #baccd8;
+  background-color: #ecf0f1;
   color: #3B4B5C;
   text-align: left;
 }
 .tooltip.top .tooltip-arrow {
-  border-top-color: #baccd8;
+  border-top-color: #ecf0f1;
 }
 .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: #baccd8;
+  border-bottom-color: #ecf0f1;
 }
 .tooltip.left .tooltip-arrow {
-  border-left-color: #baccd8;
+  border-left-color: #ecf0f1;
 }
 .tooltip.right .tooltip-arrow {
-  border-right-color: #baccd8;
+  border-right-color: #ecf0f1;
 }
 
 
@@ -114,12 +114,12 @@ hr {
 /* occupation pane */
 .well-occ-inactive{
   background-color: #3B4B5C;
-  border: 1px solid #ecf0f1;
+  border: 1px solid #fbab18;
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #baccd8;
-  color: #3B4B5C;
+  background-color: #3B4B5C;
+  border: 1px solid #ecf0f1;
   margin: 0px;
 }
 #occ-detail{
@@ -136,7 +136,7 @@ hr {
   position: relative;
   top: -14px;
   right: -10px;
-  color: #ecf0f1;
+  color: #fbab18;
 }
 #close-occ:hover{
   cursor: pointer;
@@ -168,16 +168,18 @@ hr {
   padding-left:2px;
   padding-right: 2px;
   margin-bottom: 14px;
-  background-color: #c4d4de;
+  background-color: #4e5d6c;
   border-radius: 6px;
   min-height: 100px;
 }
 .job-family:hover{
   cursor: pointer;
   background-color: #e2be7c;
+  color: #3B4B5C;
 }
 .job-family.selected{
   background-color: #fbab18;
+  color: #3B4B5C;
 }
 .job-family .job-family-name{
   margin-top: 4px;
@@ -372,25 +374,25 @@ hr {
 
 
 /* buttons */
-.btn, .btn:hover{
+.btn, .btn:hover, .btn:active, .btn:visited{
   margin: 0px;
   text-transform: none;
   font-size: 15px;
   font-weight: 400;
 }
-.btn-info, .btn-info:active, .btn-info:visited{
+.btn-info, .btn-info:active, .btn-info:visited {
   border: 2px solid #f47730;
-  background-color: inherit;
+  background-color: transparent;
   color: #f47730;
 }
 .btn-info:hover{
   border: 2px solid #fbab18;
-  background-color: inherit;
+  background-color: transparent;
   color: #fbab18;
 }
 .btn-default{
   border: 1px solid #154779;
-  background-color: inherit;
+  background-color: transparent;
   color: #154779;
 }
 .btn-default:hover{
@@ -516,7 +518,7 @@ hr {
 
 .hint{
   position: relative;
-  background: #fbab18;
+  background: #ecf0f1;
   padding: 6px;
 }
 .hint:after{
@@ -532,13 +534,13 @@ hr {
 .hint-right:after {
   right: 100%;
   top: 50%;
-  border-right-color: #fbab18;
+  border-right-color: #ecf0f1;
   margin-top: -8px;
 }
 .hint-bottom:after {
   bottom: 100%;
   left: 50%;
-  border-bottom-color: #fbab18;
+  border-bottom-color: #ecf0f1;
   margin-left: -8px;
 }
 

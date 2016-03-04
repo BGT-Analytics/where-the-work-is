@@ -43,7 +43,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             }
         },
         tooltip: {
-            backgroundColor: 'rgba(186, 204, 216, .85)',
+            backgroundColor: 'rgba(236, 240, 241, .85)',
             style: {
                 color: '#3B4B5C',
             },
