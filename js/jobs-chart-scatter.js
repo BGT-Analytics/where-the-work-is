@@ -52,8 +52,8 @@ function scatterHelper(prepped_data, point_color, place_data){
             labels: {
                 enabled: false
             },
-            // lineColor: '#eee',
-            // lineWidth: 1,
+            lineColor: '#eee',
+            lineWidth: 1,
             plotBands: [
                 // using http://meyerweb.com/eric/tools/color-blend/
                 {
@@ -63,7 +63,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         text: 'Very low',
                         style: {
                             color: '#9e4940',
-                            fontSize: '10px'
+                            fontSize: '11px'
                         },
                         x: 3,
                         y: 0
@@ -78,7 +78,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         text: 'Low',
                         style: {
                             color: '#ba7639',
-                            fontSize: '10px'
+                            fontSize: '11px'
                         },
                         x: 3,
                         y: 0
@@ -93,7 +93,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         text: 'Medium',
                         style: {
                             color: '#baa242',
-                            fontSize: '10px'
+                            fontSize: '11px'
                         },
                         x: 3,
                         y: 0
@@ -108,7 +108,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         text: 'High',
                         style: {
                             color: '#83A540',
-                            fontSize: '10px'
+                            fontSize: '11px'
                         },
                         x: 3,
                         y: 0
@@ -123,7 +123,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         text: 'Very high',
                         style: {
                             color: '#38925e',
-                            fontSize: '10px'
+                            fontSize: '11px'
                         },
                         x: 3,
                         y: 0

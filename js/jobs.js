@@ -317,7 +317,9 @@ function selectOccupation(occupation, place_data){
     $("#default-occ-info").hide();
     $("#occ-detail").show();
 
-    if(occupation.length>40){
+    if(occupation.length>50){
+        $("#sel-occ-name").html('<small class="long">'+occupation+'</small>')
+    }else if(occupation.length>40){
         $("#sel-occ-name").html('<small>'+occupation+'</small>')
     }else{
         $("#sel-occ-name").html(occupation)

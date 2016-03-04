@@ -34,7 +34,7 @@ description: "This tool visualises the dynamics of the entry level job market fo
 <div class="container-fluid" id="main-content">
   <div class='row'>
 
-    <div class='col-sm-6 col-md-5 col-md-offset-1 chart-col'>
+    <div class='col-sm-6 col-md-5 col-md-offset-1 chart-col chart-col-left'>
       <br/>
 
       <div class="well well-occ-active well-sm" id="occ-info-pane">
@@ -97,10 +97,10 @@ description: "This tool visualises the dynamics of the entry level job market fo
         </div>
 
         <div id="occ-detail" style="display:none;">
-          <p class="no-pad-top no-pad-bottom">
+          <p id="occ-detail-top">
             <span id="sel-occ-name"></span>
             <span id="sel-occ-desc"></span>
-            <span id="close-occ" class="pull-right" title="Back to occupation families"><i class="fa fa-times"></i></span>
+            <span id="close-occ" class="pull-right" title="Back to occupation families">✕</span>
           </p>
 
           <div class="row">
@@ -108,10 +108,10 @@ description: "This tool visualises the dynamics of the entry level job market fo
             <div class="col-xs-7">
               <div class="row">
                 <div class="col-xs-6">
-                  <p class="occ-figure-title">Openings</p>
+                  <p class="occ-figure-title">OPENINGS</p>
                 </div>
                 <div class="col-xs-6 no-pad-left">
-                  <p class="occ-figure-title">Salary</p>
+                  <p class="occ-figure-title">SALARY</p>
                 </div>
               </div>
               <div class="row">
@@ -130,7 +130,7 @@ description: "This tool visualises the dynamics of the entry level job market fo
             <div class="col-xs-5 no-pad-left">
               <div class="row">
                 <div class="col-xs-12 no-pad-left">
-                  <p class="occ-figure-title">Employment opportunity</p>
+                  <p class="occ-figure-title">EMPLOYMENT OPPORTUNITY</p>
                 </div>
               </div>
               <div class="row">
@@ -216,7 +216,7 @@ description: "This tool visualises the dynamics of the entry level job market fo
 
     </div>
 
-    <div class='col-sm-6 col-md-5 chart-col hidden-xs'>
+    <div class='col-sm-6 col-md-5 chart-col chart-col-right hidden-xs'>
       <br/>
 
       <p class="text-center chart-title">Which occupations have the most openings?</p>

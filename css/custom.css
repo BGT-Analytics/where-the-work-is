@@ -27,23 +27,23 @@ hr {
 
 .label-very-high{
   background-color: #38925e;
-  color: #fff;
+  color: #ecf0f1;
 }
 .label-high{
   background-color: #83A540;
-  color: #fff;
+  color: #ecf0f1;
 }
 .label-medium{
   background-color: #baa242;
-  color: #fff;
+  color: #ecf0f1;
 }
 .label-low{
   background-color: #ba7639;
-  color: #fff;
+  color: #ecf0f1;
 }
 .label-very-low{
   background-color: #9e4940;
-  color: #fff;
+  color: #ecf0f1;
 }
 
 
@@ -61,11 +61,6 @@ hr {
 .notes p, .notes li {
   color: #999;
   font-size: .8em;
-}
-
-.chart-col{
-  padding-left: 6px;
-  padding-right: 6px;
 }
 
 
@@ -118,7 +113,8 @@ hr {
 
 /* occupation pane */
 .well-occ-inactive{
-  background-color: #4e5d6c;
+  background-color: #3B4B5C;
+  border: 1px solid #ecf0f1;
   margin: 0px;
 }
 .well-occ-active{
@@ -136,7 +132,11 @@ hr {
   padding-right: 0px;
 }
 #close-occ{
-  color: #f47730;
+  padding: 6px;
+  position: relative;
+  top: -14px;
+  right: -10px;
+  color: #ecf0f1;
 }
 #close-occ:hover{
   cursor: pointer;
@@ -185,15 +185,26 @@ hr {
 }
 
 
+#occ-detail-top{
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
 #sel-occ-name{
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: #ecf0f1;
-  border-bottom: 3px solid #ecf0f1;
+}
+#sel-occ-name .long{
+  /*don't bold the extra long names to save space*/
+  font-weight: 400;
+  font-size: 75%;
 }
 #sel-occ-desc{
   color: #c0bebe;
 }
-
+#occ-info-tooltip{
+  color: #ecf0f1;
+}
 
 .occ-rank{
   font-size: 10px;
@@ -203,13 +214,12 @@ hr {
   font-size: 10px;
 }
 .occ-figure{
-  font-size: 14px;
+  font-size: 12px;
 }
 .occ-figure-title{
-  font-size: 14px;
-  font-weight: 700;
+  color: #ecf0f1;
+  font-size: 12px;
   margin-bottom: 4px;
-  margin-top: 20px;
 }
 
 .occ-xs{
@@ -223,9 +233,8 @@ hr {
   font-size: 20px;
   margin-bottom: 6px;
 }
-.label-occ span{
-  padding-left: 2px;
-  padding-right: 2px;
+.label-occ .label{
+  padding: 1px 2px 2px 2px;
 }
 
 
@@ -396,7 +405,7 @@ hr {
   height: calc(100% - 150px);
   min-height: 560px;
 }
-#main-content .row{
+#main-content>.row{
   height: calc(100% - 55px);
 }
 #main-content .row .chart-col{
@@ -408,6 +417,10 @@ hr {
 #below-occ-info-pane{
   padding-top: 20px;
   height: calc(100% - 180px); /*subtract height of occ-info-pane & padding*/
+}
+.chart-col{
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 
@@ -776,6 +789,13 @@ hr {
     font-size: 22px;
   }
 
+  .chart-col-left{
+    padding-right: 30px;
+  }
+  .chart-col-right{
+    padding-left: 30px;
+  }
+
 }
 
 /* very large screens */
@@ -785,6 +805,12 @@ hr {
     font-size: 18px;
   }
 
+  .chart-col-left{
+    padding-right: 50px;
+  }
+  .chart-col-right{
+    padding-left: 50px;
+  }
 
   .chart-title{
     font-size: 22px;
