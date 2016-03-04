@@ -390,15 +390,13 @@ hr {
   background-color: transparent;
   color: #fbab18;
 }
-.btn-default{
-  border: 1px solid #154779;
-  background-color: transparent;
-  color: #154779;
+.btn-default, .btn-default:active, .btn-default:visited {
+  border: none;
+  background-color: #f47730;
+  color: #3B4B5C;
 }
 .btn-default:hover{
-  border: 1px solid #154779;
-  background-color: #154779;
-  color: #fff;
+  background-color: #fbab18;
 }
 
 
