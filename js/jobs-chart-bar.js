@@ -45,7 +45,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
         tooltip: {
             backgroundColor: 'rgba(186, 204, 216, .85)',
             style: {
-                color: '#2c3e50',
+                color: '#3B4B5C',
             },
             useHTML: true,
             headerFormat: '<table><tr><th colspan="2">{point.x}</th></tr>',
@@ -59,7 +59,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 return { x: xpos, y: ypos };
             },
             shadow: false,
-            borderColor: '#2c3e50'
+            borderColor: '#3B4B5C'
         },
         series: prepped_data
 
@@ -76,13 +76,13 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 stacking: 'normal'
             },
             series: {
-                borderColor: '#2c3e50',
+                borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 pointPadding: 0,
                 groupPadding: .1,
                 states: {
                     select: {
-                        borderColor: '#2c3e50',
+                        borderColor: '#3B4B5C',
                         color: "#FBAB18"
                     },
                     hover: {
@@ -106,12 +106,12 @@ function stackedBarHelper(prepped_data, categories, place_data){
             verticalAlign: 'top',
             y: 150,
             floating: true,
-            backgroundColor: '#34495e',
+            backgroundColor: '#4e5d6c',
             borderWidth: 0,
             shadow: false,
             itemStyle: {
                 color: '#ecf0f1',
-                fontWeight: 200
+                fontWeight: 400
             },
             itemHoverStyle: {
                 color: '#fff'
@@ -124,7 +124,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 style: {
                     fontSize: '9px',
                     color: '#bdc3c7',
-                    fontWeight: 200,
+                    fontWeight: 400,
                 }
             }
         }
@@ -143,13 +143,13 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 stacking: 'normal'
             },
             series: {
-                borderColor: '#2c3e50',
+                borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 pointPadding: 0,
                 groupPadding: .1,
                 states: {
                     select: {
-                        borderColor: '#2c3e50',
+                        borderColor: '#3B4B5C',
                         color: "#FBAB18"
                     },
                     hover: {
@@ -180,12 +180,12 @@ function stackedBarHelper(prepped_data, categories, place_data){
             verticalAlign: 'top',
             y: 50,
             floating: true,
-            backgroundColor: '#34495e',
+            backgroundColor: '#4e5d6c',
             borderWidth: 0,
             shadow: false,
             itemStyle: {
                 color: '#ecf0f1',
-                fontWeight: 200
+                fontWeight: 400
             },
             itemHoverStyle: {
                 color: '#fff'
@@ -198,7 +198,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 style: {
                     fontSize: '9px',
                     color: '#bdc3c7',
-                    fontWeight: 200,
+                    fontWeight: 400,
                 }
             }
         }

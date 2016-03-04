@@ -137,7 +137,7 @@ function scatterHelper(prepped_data, point_color, place_data){
         tooltip: {
             backgroundColor: 'rgba(186, 204, 216, .85)',
             style: {
-                color: '#2c3e50',
+                color: '#3B4B5C',
             },
             useHTML: true,
             headerFormat: '<table>',
@@ -147,7 +147,7 @@ function scatterHelper(prepped_data, point_color, place_data){
             footerFormat: '</table>',
             followPointer: true,
             shadow: false,
-            borderColor: '#2c3e50'
+            borderColor: '#3B4B5C'
         },
 
         series: [{
@@ -182,7 +182,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                         select: {
                             fillColor: "#FBAB18",
                             lineWidth: 1,
-                            lineColor: "#2c3e50",
+                            lineColor: "#3B4B5C",
                             radius: 9
                         },
                         hover: {
@@ -224,13 +224,13 @@ function scatterHelper(prepped_data, point_color, place_data){
                         select: {
                             fillColor: "#FBAB18",
                             lineWidth: 1,
-                            lineColor: "#2c3e50",
+                            lineColor: "#3B4B5C",
                             radius: 7
                         },
                         hover: {
                             fillColor: "#e2be7c",
                             lineWidth: 1,
-                            lineColor: "#2c3e50",
+                            lineColor: "#3B4B5C",
                             radius: 7
                         }
                     }

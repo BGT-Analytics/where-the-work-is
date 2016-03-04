@@ -5,7 +5,7 @@ body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
   font-weight: 400;
-  background: #2c3e50;
+  background: #3B4B5C;
   color: #bdc3c7;
 }
 
@@ -18,7 +18,7 @@ a, a:hover, a:active, a:visited {
 }
 
 hr {
-  border-color: #34495e;
+  border-color: #4e5d6c;
 }
 
 
@@ -89,7 +89,7 @@ hr {
 .tooltip-inner {
   min-width: 360px;
   background-color: #baccd8;
-  color: #2c3e50;
+  color: #3B4B5C;
   text-align: left;
 }
 .tooltip.top .tooltip-arrow {
@@ -107,7 +107,7 @@ hr {
 
 
 .well{
-  background-color: #34495e;
+  background-color: #4e5d6c;
   border: none;
   box-shadow: none;
   border-radius: 0px;
@@ -118,12 +118,12 @@ hr {
 
 /* occupation pane */
 .well-occ-inactive{
-  background-color: #34495e;
+  background-color: #4e5d6c;
   margin: 0px;
 }
 .well-occ-active{
   background-color: #baccd8;
-  color: #2c3e50;
+  color: #3B4B5C;
   margin: 0px;
 }
 #occ-detail{
@@ -259,12 +259,12 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #baccd8;
+  background-color: #ecf0f1;
   padding: 8px 0px;
   height: 42px;
 }
 #site-title{
-  color: #2c3e50;
+  color: #3B4B5C;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
@@ -274,7 +274,7 @@ hr {
   font-size: 14px;
 }
 #navbar .nav-item{
-  color: #2c3e50;
+  color: #3B4B5C;
   margin: 2px 8px;
   font-size: 16px;
 }
@@ -283,7 +283,7 @@ hr {
 
 /* top control pane */
 #control-pane>.row>div{
-  border-bottom: 2px solid #34495e;
+  border-bottom: 2px solid #4e5d6c;
 }
 #control-pane-content{
   padding: 8px 0px;
@@ -316,7 +316,7 @@ hr {
 #location-dropdown-menu{
   border: 1px solid #f47730;
   background-color: #f47730;
-  color: #2c3e50;
+  color: #3B4B5C;
   padding: 1px 8px;
   margin-right: 6px;
   margin-top: -22px;
@@ -334,9 +334,9 @@ hr {
 
 /* location select dropdown */
 #location-select-list{
-  border: 1px solid #2c3e50;
+  border: 1px solid #3B4B5C;
   border-radius: 0px;
-  background-color: #34495e;
+  background-color: #4e5d6c;
 }
 #location-select-list>li>a {
   color: #FBAB18;
@@ -483,7 +483,7 @@ hr {
 
 .helper{
   display: inline-block;
-  color: #2c3e50;
+  color: #3B4B5C;
   font-size: 14px;
 }
 
@@ -533,7 +533,7 @@ hr {
 
 
 .modal-header {
-  background-color: #2C3E50;
+  background-color: #3B4B5C;
 }
 
 .modal-title {
@@ -628,7 +628,7 @@ hr {
   font-size: 12px;
   padding: 4px 6px;
   min-width: 110px;
-  background-color: #2c3e50;
+  background-color: #3B4B5C;
 }
 #edu-select-list li:hover{
   cursor: pointer;
