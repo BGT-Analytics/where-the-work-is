@@ -68,12 +68,14 @@ function makeCompScatterPlot(place_data, education){
         var point_color = he_color
         var col_name = 'he_opportunity_score'
         $('#selected-edu').html('higher education graduates (HE)');
+        $('#scatter-note-edu').html('HE graduates');
     }
     else{
         // fe is default when no education is provided
         var point_color = fe_color
         var col_name = 'fe_opportunity_score'
         $('#selected-edu').html('further education finishers (FE)');
+        $('#scatter-note-edu').html('FE finishers');
     }
 
 
