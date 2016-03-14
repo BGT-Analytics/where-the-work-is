@@ -305,7 +305,7 @@ hr {
 #control-pane h5{
   color: #A0A09D;
 }
-#current-location-name{
+#current-location-name, #current-occ-name{
   color: #FBAB18;
   font-size: 26px;
   font-weight: 700;
@@ -313,18 +313,18 @@ hr {
   margin-bottom: 0px;
   line-height: 22px;
 }
-#current-location-name small{
+#current-location-name small, #current-occ-name small{
   font-size: 60%;
 }
-#breadcrumbs{
+#breadcrumbs, #current-occ-fam{
   margin-bottom: 0px;
   font-size: 11px;
   color: #bdc3c7;
 }
-#breadcrumbs a{
+#breadcrumbs a, #current-occ-fam a{
   color: #bdc3c7;
 }
-#location-dropdown-menu{
+#location-dropdown-menu, #occ-dropdown-menu{
   border: 1px solid #f47730;
   background-color: #f47730;
   color: #3B4B5C;
@@ -333,11 +333,11 @@ hr {
   margin-top: -22px;
   display: inline-block;
 }
-#location-dropdown-menu.muted{
+#location-dropdown-menu.muted, #occ-dropdown-menu.muted{
   background-color: inherit;
   color: #f47730;
 }
-#current-location-div, #dropdown-div{
+#current-location-div, #current-occ-div, #dropdown-div{
   display: inline-block;
 }
 
@@ -699,10 +699,10 @@ hr {
     font-size: 12px;
     margin-right: 2px;
   }
-  #breadcrumbs{
+  #breadcrumbs, #current-occ-fam{
     font-size: 9px;
   }
-  #current-location-name{
+  #current-location-name, #current-occ-name{
     font-size: 18px;
     line-height: 18px;
   }
