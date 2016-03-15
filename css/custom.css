@@ -344,19 +344,20 @@ hr {
 
 
 /* location select dropdown */
-#location-select-list{
+#location-select-list, #occ-select-list{
   border: 1px solid #3B4B5C;
   border-radius: 0px;
   background-color: #4e5d6c;
 }
-#location-select-list>li>a {
+#location-select-list>li>a, #occ-select-list>li>a {
   color: #FBAB18;
   padding-top: 0px;
   padding-bottom: 0px;
 }
-#location-select-list>li>a:hover{
+#location-select-list>li>a:hover, #occ-select-list>li>a:hover{
   color: #f47730;
 }
+
 #location-select-list .option-nation{
   padding-left: 10px;
   font-size: 12px;
@@ -370,6 +371,17 @@ hr {
   padding-left: 30px;
   font-size: 10px;
 }
+#occ-select-list .occ-fam{
+  padding-left: 10px;
+  font-size: 12px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+#occ-select-list .option-occ{
+  padding-left: 10px;
+  font-size: 12px;
+}
+
 
 
 

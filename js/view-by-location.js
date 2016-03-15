@@ -408,12 +408,7 @@ function selectOccupation(occupation, place_data){
         html: true
     });
 }
-
-
-
-function makeLinkHTML(data, display_name, cls){
-    return '<a class="'+cls+'" data="'+data+'" href="">'+display_name+'</a>'
-}
+\
 
 function makeBreadcrumbLinks(geo_name){
     if(geo_name=='UK Total'){

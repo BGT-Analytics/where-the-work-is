@@ -37,3 +37,7 @@ function toTitleCase(str)
 function slugify(text) {
     return text.toString().toLowerCase().replace(/\s+/g, '-');
 }
+
+function makeLinkHTML(data, display_name, cls){
+    return '<a class="'+cls+'" data="'+data+'" href="">'+display_name+'</a>'
+}

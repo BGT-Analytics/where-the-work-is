@@ -64,6 +64,12 @@ function initialize(){
             });
         });
 
+        console.log(occupation_mapping)
+        var occ_fams = [    'Associate Professional & Technical',
+                            'Administrative & Secretarial',
+                            'Skilled Trades',
+                            'Caring, Leisure & Other Service' ]
+
         // if($.address.parameter("location_type") && $.address.parameter("location")){
         //     updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         // }
@@ -71,16 +77,29 @@ function initialize(){
         //     updateLocation('Country', 'UK Total')
         // }
 
-        // TO DO: populate select menu w/ regions & leps
+        // populating select menu w/ regions & leps
+        var $occ_select_list = $('#occ-select-list');
+        $.each(occ_fams, function(index, occ_fam){
+            // adding occ fam label (not a link, just a label for organization)
+            $occ_select_list.append('<li class="occ-fam"><span>'+occ_fam+'</span></li>')
+            // loop thru jobs & add the ones within this job fam
+            $.each(occupation_mapping , function(occ_name, occ_dict){
+
+                if(occ_dict['job_family']==occ_fam+' Occupations'){
+                    occ_link_html =  makeLinkHTML(occ_name, occ_name, 'option-occ')
+                    $occ_select_list.append('<li>'+occ_link_html+'</li>')
+                }
+            });
+        });
 
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-occ', function() {
-            updateLocation($(this).attr('data'));
+            updateOccupation($(this).attr('data'));
             return false;
         });
 
 
-        MapsLib.initialize();
+        // MapsLib.initialize();
 
     });
 }
@@ -101,9 +120,15 @@ function addDataToLocation(location, occ, job){
     location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
 }
 
-function updateOccupation(occupation_name){
+function updateOccupation(occ_name){
 
-    var place_data = _.where(occupation_data, {occupation: occupation_name})
+
+    if(!occ_name){
+        // TO DO: prompt select occupation
+    } else{
+        var place_data = _.where(occupation_data, {occupation: occ_name})
+        $.address.parameter('occupation', encodeURIComponent(occ_name))
+    }
 
 
     // TO DO: update control pane
