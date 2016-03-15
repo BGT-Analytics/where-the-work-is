@@ -369,6 +369,12 @@ function selectOccupation(occupation, place_data){
     $("#occ-figure-comp-fe").html(comp_fig_str_fe)
     $("#occ-figure-comp-he").html(comp_fig_str_he)
 
+
+    var $btn_occ_view = $('#btn-occ-view');
+    var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
+    $btn_occ_view.attr('href', occ_view_url)
+
+
     var $btn_occ_lq = $('#btn-occ-lq');
     $btn_occ_lq.off('click');
     $btn_occ_lq.on('click', function() {
@@ -408,7 +414,7 @@ function selectOccupation(occupation, place_data){
         html: true
     });
 }
-\
+
 
 function makeBreadcrumbLinks(geo_name){
     if(geo_name=='UK Total'){
