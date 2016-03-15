@@ -2,6 +2,12 @@
 var occupation_data;
 var regions_data;
 var occ_map;
+var table_header_cols = [   'geography_type',
+                            'geography_name',
+                            'demand_sum',
+                            'reg_salary',
+                            'fe_opportunity_score',
+                            'he_opportunity_score'  ];
 
 // do stuff when the page loads
 (function(){
@@ -124,14 +130,13 @@ function addDataToLocation(location, occ, job){
 
 function updateOccupation(occ_name){
 
-
-
-    var place_data = _.where(occupation_data, {occupation: occ_name})
     $.address.parameter('occupation', encodeURIComponent(occ_name))
-
-
     $("#current-occ-name").html(occ_name)
     $("#current-occ-fam").html(occupation_mapping[occ_name]['job_family'])
+
+    var occ_data = _.where(occupation_data, {occupation: occ_name})
+    var table_guts = sliceColumns(occ_data, table_header_cols);
+    initializeTable('#occ-table', table_header_cols, table_guts);
 
 
     // TO DO: update control pane
@@ -170,4 +175,21 @@ function updateOccupation(occ_name){
 function cleanOccupation(text) {
     // replace 'and' w/ '&'
     return text.replace(/\b[a|A]nd\b/, '&');
+}
+
+
+function initializeTable(table_id, column_names, data){
+    // column_names is an array of names to be used as the header row of the table
+    // data is a 2D array of values for the table
+    var names = [];
+    $.each(column_names, function(i, name){
+        names.push({'title': name});
+    })
+    $(table_id).DataTable({
+        searching: false,
+        lengthMenu: [ [20, 100, -1], [20, 100, "All"] ],
+        destroy: true,
+        data: data,
+        columns: names
+    });
 }
