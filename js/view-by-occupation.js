@@ -70,12 +70,13 @@ function initialize(){
                             'Skilled Trades',
                             'Caring, Leisure & Other Service' ]
 
-        // if($.address.parameter("location_type") && $.address.parameter("location")){
-        //     updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
-        // }
-        // else{
-        //     updateLocation('Country', 'UK Total')
-        // }
+        if($.address.parameter("occupation")){
+            updateOccupation(decodeURIComponent($.address.parameter("occupation")))
+        }
+        else{
+            $("#current-occ-name").html("View prospects by occupation")
+            $("#current-occ-fam").html("<i class='fa fa-fw fa-hand-o-left'></i> Select an occupation")
+        }
 
         // populating select menu w/ regions & leps
         var $occ_select_list = $('#occ-select-list');
@@ -95,6 +96,7 @@ function initialize(){
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-occ', function() {
             updateOccupation($(this).attr('data'));
+            $("#occ-dropdown-menu").dropdown("toggle");
             return false;
         });
 
@@ -123,12 +125,13 @@ function addDataToLocation(location, occ, job){
 function updateOccupation(occ_name){
 
 
-    if(!occ_name){
-        // TO DO: prompt select occupation
-    } else{
-        var place_data = _.where(occupation_data, {occupation: occ_name})
-        $.address.parameter('occupation', encodeURIComponent(occ_name))
-    }
+
+    var place_data = _.where(occupation_data, {occupation: occ_name})
+    $.address.parameter('occupation', encodeURIComponent(occ_name))
+
+
+    $("#current-occ-name").html(occ_name)
+    $("#current-occ-fam").html(occupation_mapping[occ_name]['job_family'])
 
 
     // TO DO: update control pane
