@@ -25,7 +25,7 @@ function sum(numbers) {
 function toTitleCase(str)
 {
     return str.replace(/\w\S*/g, function(txt){
-        if (txt=='OF'||txt=='AND'||txt=='THE'){
+        if (txt.toUpperCase()=='OF'||txt.toUpperCase()=='AND'||txt.toUpperCase()=='THE'){
             return txt.toLowerCase();
         }
         else{

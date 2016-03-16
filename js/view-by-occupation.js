@@ -2,8 +2,7 @@
 var occupation_data;
 var regions_data;
 var occ_map;
-var table_header_cols = [   'geography_type',
-                            'geography_name',
+var table_header_cols = [   'geography_name',
                             'demand_sum',
                             'reg_salary',
                             'fe_opportunity_score',
@@ -27,7 +26,7 @@ function initialize(){
             $.csv.toObjects(csv[0]),
             function(row) {
                 return {
-                    geography_name: row.geography_name,
+                    geography_name: toTitleCase(row.geography_name),
                     geography_type: row.geography_type,
                     job_family: cleanOccupation(row.job_family),
                     occupation: cleanOccupation(row.occupation),
@@ -70,7 +69,6 @@ function initialize(){
             });
         });
 
-        console.log(occupation_mapping)
         var occ_fams = [    'Associate Professional & Technical',
                             'Administrative & Secretarial',
                             'Skilled Trades',
@@ -185,11 +183,20 @@ function initializeTable(table_id, column_names, data){
     $.each(column_names, function(i, name){
         names.push({'title': name});
     })
+
     $(table_id).DataTable({
         searching: false,
-        lengthMenu: [ [20, 100, -1], [20, 100, "All"] ],
         destroy: true,
         data: data,
-        columns: names
+        columns: names,
+        info: false,
+        paging: false,
+        aoColumns: [
+            { "sTitle": "Location", "sType": "string", "oDefault": "N/A" },
+            { "sTitle": "Openings", "sType": "numeric", "oDefault": "" },
+            { "sTitle": "Average salary", "sType": "numeric", "oDefault": 0, "defaultContent": "<i>Not set</i>" },
+            { "sTitle": "Opportunity score (FE)", "sType": "numeric", "oDefault": 0, "defaultContent": "<i>Not set</i>" },
+            { "sTitle": "Opportunity score (HE)", "sType": "numeric", "oDefault": 0 }
+        ]
     });
 }
