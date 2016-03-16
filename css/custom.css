@@ -670,6 +670,12 @@ hr {
   font-size: 14px;
   margin-bottom: 80px;
 }
+#occ-table th:nth-child(2), #occ-table th:nth-child(3), #occ-table th:nth-child(4), #occ-table th:nth-child(5) {
+ text-align:center !important;
+}
+#occ-table td:nth-child(2), #occ-table td:nth-child(3), #occ-table td:nth-child(4), #occ-table td:nth-child(5) {
+ text-align:right !important;
+}
 
 
 

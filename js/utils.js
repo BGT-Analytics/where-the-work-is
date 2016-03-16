@@ -41,3 +41,11 @@ function slugify(text) {
 function makeLinkHTML(data, display_name, cls){
     return '<a class="'+cls+'" data="'+data+'" href="">'+display_name+'</a>'
 }
+
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}

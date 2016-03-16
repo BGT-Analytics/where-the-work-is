@@ -192,11 +192,63 @@ function initializeTable(table_id, column_names, data){
         info: false,
         paging: false,
         aoColumns: [
-            { "sTitle": "Location", "sType": "string", "oDefault": "N/A" },
-            { "sTitle": "Openings", "sType": "numeric", "oDefault": "" },
-            { "sTitle": "Average salary", "sType": "numeric", "oDefault": 0, "defaultContent": "<i>Not set</i>" },
-            { "sTitle": "Opportunity score (FE)", "sType": "numeric", "oDefault": 0, "defaultContent": "<i>Not set</i>" },
-            { "sTitle": "Opportunity score (HE)", "sType": "numeric", "oDefault": 0 }
+            { "sTitle": "Location", "sType": "string", "width": "40%"},
+            {
+                "sTitle": "Openings", 
+                "sType": "numeric", 
+                "oDefault": 0, 
+                "width": "15%",
+                "mRender": function (data, type, full) {
+                            if(data){
+                                return numberWithCommas(data);
+                            }
+                            else{
+                                return '--'
+                            }
+                        }
+            },
+            { 
+                "sTitle": "Average salary", 
+                "sType": "numeric", 
+                "oDefault": 0, 
+                "width": "15%",
+                "mRender": function (data, type, full) {
+                            if(data){
+                                return '£'+numberWithCommas(data);
+                            }
+                            else{
+                                return '--'
+                            }
+                        }
+            },
+            { 
+                "sTitle": "Opportunity score (FE)", 
+                "sType": "numeric", 
+                "oDefault": 0, 
+                "width": "15%",
+                "mRender": function (data, type, full) {
+                            if(data){
+                                return data;
+                            }
+                            else{
+                                return '--'
+                            }
+                        }
+            },
+            { 
+                "sTitle": "Opportunity score (HE)", 
+                "sType": "numeric", 
+                "oDefault": 0, 
+                "width": "15%",
+                "mRender": function (data, type, full) {
+                            if(data){
+                                return data;
+                            }
+                            else{
+                                return '--'
+                            }
+                        }
+            }
         ]
     });
 }
