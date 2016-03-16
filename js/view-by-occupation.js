@@ -75,7 +75,7 @@ function initialize(){
                             'Caring, Leisure & Other Service' ]
 
         if($.address.parameter("occupation")){
-            updateOccupation(decodeURIComponent($.address.parameter("occupation")))
+            updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
         else{
             $("#current-occ-name").html("View prospects by occupation")
@@ -99,9 +99,43 @@ function initialize(){
 
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-occ', function() {
-            updateOccupation($(this).attr('data'));
+            updateOccupation($(this).attr('data'), $.address.parameter('location_level'));
             $("#occ-dropdown-menu").dropdown("toggle");
             return false;
+        });
+
+
+
+        $('#geo-level-region').on('click', function (e) {
+
+            $.address.parameter('location_level', 'region')
+
+            if($.address.parameter("occupation")){
+                if($.address.parameter('location_level') && $.address.parameter('location_level')=='lep'){
+                    updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'lep');
+                } else{
+                    // by default, view by region
+                    updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'region');
+                }
+            }
+
+            //MapsLib.toggleGeo('regions');
+        });
+
+        $('#geo-level-lep').on('click', function (e) {
+
+            $.address.parameter('location_level', 'lep')
+
+            if($.address.parameter("occupation")){
+                if($.address.parameter('location_level') && $.address.parameter('location_level')=='lep'){
+                    updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'lep');
+                } else{
+                    // by default, view by region
+                    updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'region');
+                }
+            }
+
+            //MapsLib.toggleGeo('leps');
         });
 
 
@@ -126,46 +160,23 @@ function addDataToLocation(location, occ, job){
     location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
 }
 
-function updateOccupation(occ_name){
+function updateOccupation(occ_name, location_level){
+
+    // TO DO: select radio button appropriately
+    if(location_level!='lep'){
+        // by default, if location_level not specified, show nations/regions
+        var occ_data = _.filter(occupation_data, function(row){ return row.occupation==occ_name&&(row.geography_type=='Region'||row.geography_type=='Nation'); });
+    } else{
+        var occ_data = _.where(occupation_data, {occupation: occ_name, geography_type: 'LEP'})
+    }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
     $("#current-occ-name").html(occ_name)
     $("#current-occ-fam").html(occupation_mapping[occ_name]['job_family'])
 
-    var occ_data = _.where(occupation_data, {occupation: occ_name})
     var table_guts = sliceColumns(occ_data, table_header_cols);
     initializeTable('#occ-table', table_header_cols, table_guts);
 
-
-    // TO DO: update control pane
-
-    // if(geo_display_name == "The United Kingdom"){
-    //     $("#current-location-name").html('<span id="default-location">'+geo_display_name+'</span>')
-    // }
-    // else if(geo_display_name.length>32){
-    //     $("#current-location-name").html('<small>'+geo_display_name+'</small>')
-    // }
-    // else{
-    //     $("#current-location-name").html(geo_display_name)
-    // }
-
-
-
-    // TO DO: update breadcrumbs
-    // var $breadcrumbs = $('#breadcrumbs');
-
-    // $breadcrumbs.html("<span id='helper-location'><i class='fa fa-fw fa-hand-o-left'></i> Change location to explore occupations elsewhere</span>")
-    // var breadcrumb_links = makeBreadcrumbLinks(geo_name)
-    // if(breadcrumb_links.length){
-    //     $breadcrumbs.html("")
-    //     $.each(breadcrumb_links, function(index, value){
-    //         $breadcrumbs.append(value+' &raquo; ')
-    //     });
-    // }
-
-
-
-    // TO DO: populate chart
 }
 
 
