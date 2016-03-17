@@ -654,6 +654,7 @@ hr {
 #occ-table{
   font-size: 14px;
   margin-bottom: 80px;
+  color: #777;
 }
 #occ-table th:nth-child(2), #occ-table th:nth-child(3), #occ-table th:nth-child(4), #occ-table th:nth-child(5) {
  text-align:center !important;
@@ -662,6 +663,15 @@ hr {
  text-align:right !important;
 }
 
+#occ-table th {
+  white-space: nowrap;
+  background-color: #fff;
+  color: #777;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) {
+  background-color: #efefef;
+}
 
 
 

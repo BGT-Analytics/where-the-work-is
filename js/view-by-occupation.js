@@ -1,7 +1,6 @@
 // data
 var occupation_data;
 var regions_data;
-var occ_map;
 var table_header_cols = [   'geography_name',
                             'demand_sum',
                             'reg_salary',
@@ -119,8 +118,6 @@ function initialize(){
                     updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'region');
                 }
             }
-
-            MapsLib.toggleGeo('regions');
         });
 
         $('#geo-level-lep').on('click', function (e) {
@@ -135,12 +132,7 @@ function initialize(){
                     updateOccupation(decodeURIComponent($.address.parameter("occupation")), 'region');
                 }
             }
-
-            MapsLib.toggleGeo('leps');
         });
-
-        MapsLib.initialize();
-        MapsLib.occ_map._onResize();
 
     });
 }
