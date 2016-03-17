@@ -134,6 +134,8 @@ function initialize(){
         });
 
     });
+
+
 }
 
 // helper function for stuffing data into GeoJSON object
@@ -201,12 +203,11 @@ function initializeTable(table_id, column_names, data){
         info: false,
         paging: false,
         aoColumns: [
-            { "sTitle": "Location", "sType": "string", "width": "40%"},
+            { "sTitle": "Location", "sType": "string"},
             {
                 "sTitle": "Openings", 
-                "sType": "numeric", 
-                "oDefault": 0, 
-                "width": "15%",
+                "sType": "num-html", 
+                "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
                                 return numberWithCommas(data);
@@ -218,9 +219,8 @@ function initializeTable(table_id, column_names, data){
             },
             { 
                 "sTitle": "Average salary", 
-                "sType": "numeric", 
-                "oDefault": 0, 
-                "width": "15%",
+                "sType": "num-html", 
+                "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
                                 return '£'+numberWithCommas(data);
