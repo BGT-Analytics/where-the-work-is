@@ -1,3 +1,42 @@
+function cleanOccupation(text) {
+    // replace 'and' w/ '&'
+    return text.replace(/\b[a|A]nd\b/, '&');
+}
+
+function oppLabel(opp_val) {
+    // converting demand/supply figures into natural language labels
+    if (!opp_val){
+        return '--'
+    } else if (opp_val <= 9){
+        return 'Very Low'
+    } else if (opp_val <= 32){
+        return 'Low'
+    } else if (opp_val <= 65){
+        return 'Medium'
+    } else if (opp_val <= 89){
+        return 'High'
+    } else {
+        return 'Very High'
+    }
+
+}
+
+function salaryLabel(salary_val) {
+    if (!salary_val) {
+        return '--'
+    } else if (salary_val <= 17818){
+        return 'Very Low'
+    } else if (salary_val <= 23823){
+        return 'Low'
+    } else if (salary_val <= 30999){
+        return 'Medium'
+    } else if (salary_val <= 41734){
+        return 'High'
+    } else{
+        return 'Very High'
+    }
+}
+
 function sliceColumns(data, columns){
     return _.map(data, function(row){
         var sliced_row = [];

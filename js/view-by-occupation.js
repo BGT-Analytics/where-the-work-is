@@ -1,6 +1,7 @@
 // data
 var occupation_data;
 var regions_data;
+var occ_map;
 var table_header_cols = [   'geography_name',
                             'demand_sum',
                             'reg_salary',
@@ -11,7 +12,6 @@ var table_header_cols = [   'geography_name',
 (function(){
 
     initialize();
-    
 })()
 
 
@@ -25,7 +25,7 @@ function initialize(){
             $.csv.toObjects(csv[0]),
             function(row) {
                 return {
-                    geography_name: toTitleCase(row.geography_name),
+                    geography_name: row.geography_name,
                     geography_type: row.geography_type,
                     job_family: cleanOccupation(row.job_family),
                     occupation: cleanOccupation(row.occupation),
@@ -51,7 +51,6 @@ function initialize(){
         $.each(occupation_list, function(k_index, occ) {
             current_occupation = _.where(occupation_data, {occupation: occ});
             $.each(current_occupation, function(j_index, job){
-                
                 // populate regions 
                 $.each(regions_data[0]['features'], function(r_index, region){
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
@@ -133,6 +132,8 @@ function initialize(){
             }
         });
 
+        MapsLib.initialize();
+
     });
 
 
@@ -177,8 +178,41 @@ function updateOccupation(occ_name, location_level){
     var table_guts = sliceColumns(occ_data, table_header_cols);
     initializeTable('#occ-table', table_header_cols, table_guts);
 
+    initModal(occ_name, location_level);
 }
 
+function initModal(occ_name, location_level){
+
+    // modal stuff
+    var $btn_occ_lq = $('#btn-occ-lq');
+    $btn_occ_lq.off('click');
+    $btn_occ_lq.on('click', function() {
+        $('#occupation-detail-modal').modal('show');
+        return false;
+    });
+
+    var $occupation_detail_modal = $( "#occupation-detail-modal" )
+    $occupation_detail_modal.off('shown.bs.modal');
+    $occupation_detail_modal.on('shown.bs.modal', function (e) {
+        MapsLib.occ_map._onResize();
+        MapsLib.updateData(occ_name);
+        $('#mapGeoRegions').click();
+    });
+
+    var $map_geo_regions = $('#mapGeoRegions');
+    $map_geo_regions.off('click');
+    $map_geo_regions.on('click', function (e) {
+        MapsLib.toggleGeo('regions');
+    });
+
+    var $map_gep_leps = $('#mapGeoLeps');
+    $map_gep_leps.off('click');
+    $map_gep_leps.on('click', function (e) {
+        MapsLib.toggleGeo('leps');
+    });
+
+    $.address.parameter('occupation', encodeURIComponent(occ_name));
+}
 
 
 function cleanOccupation(text) {
@@ -203,7 +237,18 @@ function initializeTable(table_id, column_names, data){
         info: false,
         paging: false,
         aoColumns: [
-            { "sTitle": "Location", "sType": "string"},
+            { 
+                "sTitle": "Location", 
+                "sType": "string",
+                "mRender": function (data, type, full) {
+                            if(data){
+                                return toTitleCase(data);
+                            }
+                            else{
+                                return ''
+                            }
+                        }
+            },
             {
                 "sTitle": "Openings", 
                 "sType": "num-html", 
