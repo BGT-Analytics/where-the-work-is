@@ -861,8 +861,11 @@ hr {
     font-size: 20px;
   }
 
+  #occ-detail-top{
+    margin-bottom: 12px;
+  }
   .occ-figure-title{
-    font-size: 18px;
+    font-size: 14px;
   }
   .label-occ{
     font-size: 24px;
