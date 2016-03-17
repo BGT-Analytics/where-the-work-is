@@ -113,13 +113,11 @@ hr {
 
 /* occupation pane */
 .well-occ-inactive{
-  background-color: #3B4B5C;
-  border: 1px solid #fbab18;
+  background-color: #4e5d6c;
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #3B4B5C;
-  border: 1px solid #ecf0f1;
+  background-color: #4e5d6c;
   margin: 0px;
 }
 #occ-detail{
@@ -270,7 +268,7 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #ecf0f1;
+  background-color: #e2be7c;
   padding: 8px 0px;
   height: 42px;
 }
