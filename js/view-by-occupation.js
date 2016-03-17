@@ -74,6 +74,7 @@ function initialize(){
                             'Skilled Trades',
                             'Caring, Leisure & Other Service' ]
 
+
         if($.address.parameter("occupation")){
             updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
@@ -119,7 +120,7 @@ function initialize(){
                 }
             }
 
-            //MapsLib.toggleGeo('regions');
+            MapsLib.toggleGeo('regions');
         });
 
         $('#geo-level-lep').on('click', function (e) {
@@ -135,11 +136,11 @@ function initialize(){
                 }
             }
 
-            //MapsLib.toggleGeo('leps');
+            MapsLib.toggleGeo('leps');
         });
 
-
-        // MapsLib.initialize();
+        MapsLib.initialize();
+        MapsLib.occ_map._onResize();
 
     });
 }
