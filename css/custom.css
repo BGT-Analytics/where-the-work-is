@@ -280,10 +280,6 @@ hr {
   font-weight: 700;
   margin-top: 20px;
 }
-#nav-subtitle{
-  font-weight: 400;
-  font-size: 14px;
-}
 #navbar .nav-item{
   color: #3B4B5C;
   margin: 2px 8px;
@@ -295,48 +291,34 @@ hr {
 /* top control pane */
 #control-pane>.row>div{
   border-bottom: 2px solid #4e5d6c;
-}
-#control-pane-content{
-  padding: 8px 0px;
-}
-#control-pane h3{
-  color: #fff;
-}
-#control-pane h5{
-  color: #A0A09D;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 #current-location-name, #current-occ-name{
-  color: #FBAB18;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 18px;
   padding-top: 0px;
   margin-bottom: 0px;
   line-height: 22px;
 }
 #current-location-name small, #current-occ-name small{
-  font-size: 60%;
+  font-size: 80%;
 }
-#breadcrumbs, #current-occ-fam{
-  margin-bottom: 0px;
-  font-size: 11px;
-  color: #bdc3c7;
+
+#dropdown-prompt{
+  margin-bottom: 2px;
 }
-#breadcrumbs a, #current-occ-fam a{
-  color: #bdc3c7;
-}
+
 #location-dropdown-menu, #occ-dropdown-menu{
-  border: 1px solid #f47730;
-  background-color: #f47730;
+  border: 1px solid #bdc3c7;
+  background-color: #bdc3c7;
   color: #3B4B5C;
   padding: 1px 8px;
-  margin-right: 6px;
-  margin-top: -22px;
-  display: inline-block;
+  min-width: 380px;
 }
-#location-dropdown-menu.muted, #occ-dropdown-menu.muted{
-  background-color: inherit;
-  color: #f47730;
+#btn-caret{
+  line-height: 22px;
 }
+
 #current-location-div, #current-occ-div, #dropdown-div{
   display: inline-block;
 }
@@ -345,6 +327,7 @@ hr {
 
 /* location select dropdown */
 #location-select-list, #occ-select-list{
+  min-width: 380px;
   border: 1px solid #3B4B5C;
   border-radius: 0px;
   background-color: #4e5d6c;
@@ -495,9 +478,6 @@ hr {
   z-index: 2;
 }
 
-#default-location{
-  color: #bdc3c7;
-}
 #helper-location{
   color: #fbab18;
 }
@@ -723,7 +703,6 @@ hr {
 
   #location-dropdown-menu{
     padding: 0px 6px;
-    margin-top: -16px;
     font-size: 12px;
     margin-right: 2px;
   }

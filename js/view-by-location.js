@@ -240,27 +240,24 @@ function updateLocation(geo_type, geo_name){
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
-    if(geo_display_name == "The United Kingdom"){
-        $("#current-location-name").html('<span id="default-location">'+geo_display_name+'</span>')
-    }
-    else if(geo_display_name.length>32){
+    if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
     }
     else{
         $("#current-location-name").html(geo_display_name)
     }
 
-    // updating breadcrumbs
-    var $breadcrumbs = $('#breadcrumbs');
+    // // updating breadcrumbs
+    // var $breadcrumbs = $('#breadcrumbs');
 
-    $breadcrumbs.html("<span id='helper-location'><i class='fa fa-fw fa-hand-o-left'></i> Change location to explore occupations elsewhere</span>")
-    var breadcrumb_links = makeBreadcrumbLinks(geo_name)
-    if(breadcrumb_links.length){
-        $breadcrumbs.html("")
-        $.each(breadcrumb_links, function(index, value){
-            $breadcrumbs.append(value+' &raquo; ')
-        });
-    }
+    // $breadcrumbs.html("<span id='helper-location'><i class='fa fa-fw fa-hand-o-left'></i> Change location to explore occupations elsewhere</span>")
+    // var breadcrumb_links = makeBreadcrumbLinks(geo_name)
+    // if(breadcrumb_links.length){
+    //     $breadcrumbs.html("")
+    //     $.each(breadcrumb_links, function(index, value){
+    //         $breadcrumbs.append(value+' &raquo; ')
+    //     });
+    // }
 
     makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
@@ -416,27 +413,27 @@ function selectOccupation(occupation, place_data){
 }
 
 
-function makeBreadcrumbLinks(geo_name){
-    if(geo_name=='UK Total'){
-        return [];
-    }
-    else{
-        var links = [ makeLinkHTML("UK Total", "The United Kingdom", "option-country") ]
-        var b = breadcrumbs[geo_name]
-        if(b.length==0){
-            return links
-        }
-        else if(b.length==1){
-            var n = b[0]
-            return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation')] )
-        }
-        else if(b.length==2){
-            var n = b[0]
-            var r = b[1]
-            return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation'), makeLinkHTML(r, toTitleCase(r), 'option-region')] )
-        }
-    }
-}
+// function makeBreadcrumbLinks(geo_name){
+//     if(geo_name=='UK Total'){
+//         return [];
+//     }
+//     else{
+//         var links = [ makeLinkHTML("UK Total", "The United Kingdom", "option-country") ]
+//         var b = breadcrumbs[geo_name]
+//         if(b.length==0){
+//             return links
+//         }
+//         else if(b.length==1){
+//             var n = b[0]
+//             return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation')] )
+//         }
+//         else if(b.length==2){
+//             var n = b[0]
+//             var r = b[1]
+//             return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation'), makeLinkHTML(r, toTitleCase(r), 'option-region')] )
+//         }
+//     }
+// }
 
 function cleanOccupation(text) {
     // replace 'and' w/ '&'
