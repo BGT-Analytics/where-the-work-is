@@ -173,7 +173,6 @@ function updateOccupation(occ_name, location_level){
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
     $("#current-occ-name").html(occ_name)
-    $("#current-occ-fam").html(occupation_mapping[occ_name]['job_family'])
 
     var table_guts = sliceColumns(occ_data, table_header_cols);
     initializeTable('#occ-table', table_header_cols, table_guts);

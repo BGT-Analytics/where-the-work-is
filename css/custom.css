@@ -330,6 +330,12 @@ hr {
   border-radius: 0px;
   background-color: #ecf0f1;
 }
+#occ-select-list{
+  height: auto;
+  max-height: 400px;
+  overflow-x: hidden;
+  z-index: 10000;
+}
 #location-select-list>li>a, #occ-select-list>li>a {
   color: #3B4B5C;
   padding-top: 0px;
@@ -357,6 +363,7 @@ hr {
   font-size: 12px;
   margin-top: 12px;
   margin-bottom: 4px;
+  font-weight: 700;
 }
 #occ-select-list .option-occ{
   padding-left: 10px;

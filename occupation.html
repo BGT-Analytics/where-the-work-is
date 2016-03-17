@@ -7,20 +7,20 @@ view: occupation
   <div id="control-pane">
     <div class="row">
       <div class='col-md-10 col-md-offset-1'>
+
         <div id="control-pane-content">
+
+          <p class="small" id="dropdown-prompt">Browse medium-skilled job prospects by occupation:</p>
 
           <div id="dropdown-div">
             <div class="dropdown">
               <button class="btn btn-default btn-sm dropdown-toggle hidden-print" type="button" id="occ-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <i class="fa fa-2x fa-caret-down"></i>
+                <span id="current-occ-name" class="pull-left"></span>
+                <span class="pull-right"><i id="btn-caret" class="fa fa-2x fa-caret-down"></i></span>
               </button>
               <ul id='occ-select-list' class="dropdown-menu" aria-labelledby="occ-dropdown-menu">
               </ul>
             </div>
-          </div>
-          <div id="current-occ-div">
-            <p id="current-occ-fam"></p>
-            <p id="current-occ-name"></p>
           </div>
         </div>
 
@@ -57,7 +57,7 @@ view: occupation
     <div class='col-sm-4 col-md-3 col-md-offset-1'>
 
       <div id="occupation-detail-map"></div>
-      
+
     </div>
     <div class='col-sm-8 col-md-7'>
       <table id="occ-table"></table>
