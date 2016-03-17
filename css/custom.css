@@ -268,20 +268,20 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #e2be7c;
-  padding: 8px 0px;
-  height: 42px;
+  background-color: #4e5d6c;
+  padding: 10px 0px;
+  height: 48px;
 }
 #site-title{
-  color: #3B4B5C;
-  font-size: 18px;
+  color: #f47730;
+  font-size: 22px;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 #navbar .nav-item{
-  color: #3B4B5C;
+  color: #f47730;
   margin: 2px 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 
@@ -328,10 +328,10 @@ hr {
   min-width: 380px;
   border: 1px solid #3B4B5C;
   border-radius: 0px;
-  background-color: #4e5d6c;
+  background-color: #ecf0f1;
 }
 #location-select-list>li>a, #occ-select-list>li>a {
-  color: #FBAB18;
+  color: #3B4B5C;
   padding-top: 0px;
   padding-bottom: 0px;
 }
