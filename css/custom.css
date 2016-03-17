@@ -716,17 +716,20 @@ hr {
     height: 32px;
   }
 
-  #location-dropdown-menu{
-    padding: 0px 6px;
-    font-size: 12px;
-    margin-right: 2px;
+  #location-dropdown-menu, #occ-dropdown-menu{
+    padding: 4px 6px 0px 6px;
+    min-width: 300px;
   }
+  #btn-caret{
+    line-height: 16px;
+  }
+
   #breadcrumbs, #current-occ-fam{
     font-size: 9px;
   }
   #current-location-name, #current-occ-name{
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
   }
 
 

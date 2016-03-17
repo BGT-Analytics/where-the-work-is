@@ -79,7 +79,6 @@ function initialize(){
         }
         else{
             $("#current-occ-name").html("View prospects by occupation")
-            $("#current-occ-fam").html("<i class='fa fa-fw fa-hand-o-left'></i> Select an occupation")
         }
 
         // populating select menu w/ regions & leps
@@ -164,7 +163,14 @@ function updateOccupation(occ_name, location_level){
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
-    $("#current-occ-name").html(occ_name)
+
+
+    if(occ_name.length>32){
+        $("#current-occ-name").html('<small>'+occ_name+'</small>')
+    }
+    else{
+        $("#current-occ-name").html(occ_name)
+    }
 
     var table_guts = sliceColumns(occ_data, table_header_cols);
     initializeTable('#occ-table', table_header_cols, table_guts);
