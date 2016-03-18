@@ -129,9 +129,9 @@ hr {
 }
 #close-occ{
   padding: 6px;
-  position: relative;
-  top: -14px;
-  right: -10px;
+  position: absolute;
+  top: 16px;
+  right: 6px;
   color: #fbab18;
 }
 #close-occ:hover{
@@ -753,6 +753,7 @@ hr {
   }
 
 
+
   .chart-title{
     font-size: 26px;
   }
@@ -814,6 +815,10 @@ hr {
     font-size: 22px;
   }
 
+  #close-occ{
+    right: 30px;
+  }
+
   .chart-col-left{
     padding-right: 30px;
   }
@@ -866,6 +871,9 @@ hr {
   }
   .label-occ{
     font-size: 24px;
+  }
+  #close-occ{
+    right: 48px;
   }
 
 }
