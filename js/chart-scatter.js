@@ -58,11 +58,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 // using http://meyerweb.com/eric/tools/color-blend/
                 {
                     // #9e4940,
-                    color: 'rgba(65, 73, 82, 0.1)',
+                    color: 'rgba(65, 73, 82, 0.3)',
                     label: {
                         text: 'Very low',
                         style: {
-                            color: '#9e4940',
+                            color: '#ce8d87',
                             fontSize: '11px'
                         },
                         x: 3,
@@ -73,11 +73,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 },
                 {
                     // #ba7639
-                    color: 'rgba(102, 116, 129, 0.1)',
+                    color: 'rgba(102, 116, 129, 0.3)',
                     label: {
                         text: 'Low',
                         style: {
-                            color: '#ba7639',
+                            color: '#dcb38e',
                             fontSize: '11px'
                         },
                         x: 3,
@@ -88,11 +88,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 },
                 {
                     // #baa242
-                    color: 'rgba(149, 157, 166, 0.1)',
+                    color: 'rgba(149, 157, 166, 0.3)',
                     label: {
                         text: 'Medium',
                         style: {
-                            color: '#baa242',
+                            color: '#dbcd98',
                             fontSize: '11px'
                         },
                         x: 3,
@@ -103,11 +103,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 },
                 {
                     // #83A540
-                    color: 'rgba(195, 200, 205, 0.1)',
+                    color: 'rgba(195, 200, 205, 0.3)',
                     label: {
                         text: 'High',
                         style: {
-                            color: '#83A540',
+                            color: '#bad28a',
                             fontSize: '11px'
                         },
                         x: 3,
@@ -118,11 +118,11 @@ function scatterHelper(prepped_data, point_color, place_data){
                 },
                 {
                     // #38925e
-                    color: 'rgba(236, 240, 241, 0.1)',
+                    color: 'rgba(236, 240, 241, 0.3)',
                     label: {
                         text: 'Very high',
                         style: {
-                            color: '#38925e',
+                            color: '#76cb9a',
                             fontSize: '11px'
                         },
                         x: 3,

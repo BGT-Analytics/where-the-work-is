@@ -135,8 +135,6 @@ function initialize(){
         MapsLib.initialize();
 
     });
-
-
 }
 
 // helper function for stuffing data into GeoJSON object

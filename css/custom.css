@@ -103,9 +103,7 @@ hr {
 
 .well{
   background-color: #4e5d6c;
-  border: none;
-  box-shadow: none;
-  border-radius: 0px;
+  border-color: #62768b;
 }
 .well h3{
   margin-top: 0px;
@@ -392,7 +390,7 @@ hr {
 }
 .btn-default, .btn-default:active, .btn-default:visited {
   border: none;
-  background-color: #f47730;
+  background-color: #FDAC00;
   color: #3B4B5C;
 }
 .btn-default:hover{
