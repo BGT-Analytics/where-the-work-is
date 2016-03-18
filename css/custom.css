@@ -267,11 +267,12 @@ hr {
 /* nav bar */
 #navbar{
   background-color: #4e5d6c;
-  padding: 10px 0px;
-  height: 48px;
+  padding: 12px 0px;
+  height: 52px;
 }
 #site-title{
   color: #f47730;
+  text-shadow: 1px 1px 0px #fbab18;
   font-size: 22px;
   font-weight: 700;
   margin-top: 22px;
@@ -279,7 +280,7 @@ hr {
 #navbar .nav-item{
   color: #f47730;
   margin: 2px 8px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
