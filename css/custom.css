@@ -115,7 +115,7 @@ hr {
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #b2becb;
+  background-color: #e2be7c;
   color: #3B4B5C;
   margin: 0px;
 }
@@ -165,13 +165,13 @@ hr {
   padding-left:2px;
   padding-right: 2px;
   margin-bottom: 14px;
-  background-color: #b2becb;
+  background-color: #e2be7c;
   border-radius: 6px;
   min-height: 100px;
 }
 .job-family:hover{
   cursor: pointer;
-  background-color: #e2be7c;
+  background-color: #deb66c;
   color: #3B4B5C;
 }
 .job-family.selected{
