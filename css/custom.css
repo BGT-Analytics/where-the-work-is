@@ -5,7 +5,7 @@ body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
   font-weight: 400;
-  background: #3B4B5C;
+  background: #2c3e50;
   color: #bdc3c7;
 }
 
@@ -115,7 +115,8 @@ hr {
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #4e5d6c;
+  background-color: #b2becb;
+  color: #3B4B5C;
   margin: 0px;
 }
 #occ-detail{
@@ -164,7 +165,7 @@ hr {
   padding-left:2px;
   padding-right: 2px;
   margin-bottom: 14px;
-  background-color: #4e5d6c;
+  background-color: #b2becb;
   border-radius: 6px;
   min-height: 100px;
 }
