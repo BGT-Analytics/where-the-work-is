@@ -250,6 +250,7 @@ function updateEducation(education){
 
 function selectOccupation(occupation, place_data){
     highlightOcc(occupation);
+    $.address.parameter('occupation', encodeURIComponent(occupation));
 
     // this populates the occupation detail pane on the main location view
 
