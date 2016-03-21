@@ -677,11 +677,11 @@ table > tfoot > tr > td,
 #occ-table th:nth-child(2), #occ-table th:nth-child(3), #occ-table th:nth-child(4), #occ-table th:nth-child(5) {
  text-align:center !important;
 }
-#occ-table td:nth-child(2), #occ-table td:nth-child(3) {
+#occ-table td:nth-child(2) {
  text-align:right !important;
 }
 
-#occ-table td:nth-child(4), #occ-table td:nth-child(5) {
+#occ-table td:nth-child(3), #occ-table td:nth-child(4), #occ-table td:nth-child(5) {
   text-align:center !important;
 }
 
