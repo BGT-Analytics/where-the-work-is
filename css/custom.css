@@ -115,7 +115,7 @@ hr {
   margin: 0px;
 }
 .well-occ-active{
-  background-color: #e2be7c;
+  background-color: #b2becb;
   color: #3B4B5C;
   margin: 0px;
 }
@@ -165,13 +165,13 @@ hr {
   padding-left:2px;
   padding-right: 2px;
   margin-bottom: 14px;
-  background-color: #e2be7c;
+  background-color: #b2becb;
   border-radius: 6px;
   min-height: 100px;
 }
 .job-family:hover{
   cursor: pointer;
-  background-color: #deb66c;
+  background-color: #e2be7c;
   color: #3B4B5C;
 }
 .job-family.selected{
@@ -267,21 +267,26 @@ hr {
 
 /* nav bar */
 #navbar{
-  background-color: #4e5d6c;
+  background-color: #FDAC00;
   padding: 12px 0px;
-  height: 52px;
+  height: 70px;
 }
 #site-title{
-  color: #f47730;
-  text-shadow: 1px 1px 0px #fbab18;
+  color: #3A4B5D;
+  text-shadow: 1px 1px 0px #ECF0F1;
   font-size: 22px;
   font-weight: 700;
   margin-top: 22px;
 }
+
+#site-subtitle {
+  color: #3A4B5D;
+}
 #navbar .nav-item{
-  color: #f47730;
-  margin: 2px 8px;
-  font-size: 18px;
+  color: #3A4B5D;
+  margin: 15px 12px;
+  font-size: 16px;
+  float: right;
 }
 
 
