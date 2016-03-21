@@ -248,7 +248,7 @@ function initializeTable(table_id, column_names, data){
                         }
             },
             {
-                "sTitle": "Openings", 
+                "sTitle": "Job openings", 
                 "sType": "num-html", 
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
@@ -266,7 +266,7 @@ function initializeTable(table_id, column_names, data){
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
-                                return '£'+numberWithCommas(data);
+                                return '<span title="' + salaryLabel(data) + ' average salary" class="label label-' + slugify(salaryLabel(data)) +'">£' + numberWithCommas(data) + '</span>';
                             }
                             else{
                                 return '--'
@@ -280,7 +280,7 @@ function initializeTable(table_id, column_names, data){
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){
-                                return data;
+                                return '<span title="' + oppLabel(data) + ' opportunity" class="label label-' + slugify(oppLabel(data)) +'">' + data + '</span>';
                             }
                             else{
                                 return '--'
@@ -294,7 +294,7 @@ function initializeTable(table_id, column_names, data){
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){
-                                return data;
+                                return '<span title="' + oppLabel(data) + ' opportunity" class="label label-' + slugify(oppLabel(data)) +'">' + data + '</span>';
                             }
                             else{
                                 return '--'
