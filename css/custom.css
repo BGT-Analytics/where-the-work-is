@@ -654,18 +654,12 @@ hr {
 
 
 
-table > thead > tr > th, 
-.table > thead > tr > th, 
-table > tbody > tr > th, 
-.table > tbody > tr > th, 
-table > tfoot > tr > th, 
-.table > tfoot > tr > th, 
-table > thead > tr > td, 
-.table > thead > tr > td, 
-table > tbody > tr > td, 
-.table > tbody > tr > td, 
-table > tfoot > tr > td, 
-.table > tfoot > tr > td {
+#occ-table > thead > tr > th, 
+#occ-table > tbody > tr > th, 
+#occ-table > tfoot > tr > th, 
+#occ-table > thead > tr > td, 
+#occ-table > tbody > tr > td, 
+#occ-table > tfoot > tr > td {
   border: 1px solid #ddd;
 }
 
