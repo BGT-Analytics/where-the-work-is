@@ -54,6 +54,7 @@ function initialize(){
 
         // populating select menu w/ regions & leps
         var $location_select_list = $('#location-select-list');
+        $location_select_list.append('<li><a href="/" id="option-uk">The United Kingdom</a></li><hr/>')
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
             n_link_html = makeLinkHTML(n, toTitleCase(n), 'option-nation')
