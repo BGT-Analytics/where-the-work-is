@@ -451,8 +451,8 @@ hr {
   text-decoration: underline;
   text-decoration-style: dashed;*/
 }
-.highlight-bg{
-  background-color: rgba(236, 240, 241, .15);
+.fake-underline{
+  border-bottom: 2px dotted orange;
 }
 .chart-subtitle a:hover{
   color: #ecf0f1;
