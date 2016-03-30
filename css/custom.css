@@ -276,8 +276,9 @@ hr {
   text-shadow: 1px 1px 0px #ECF0F1;
   font-size: 24px;
   font-weight: 700;
+  display: table-cell;
   vertical-align: middle;
-  padding-top: 22px;
+  padding-top: 8px;
 }
 
 #navbar .nav-item, #navbar .nav-item-mobile{
