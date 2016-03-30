@@ -282,8 +282,10 @@ hr {
 #site-subtitle {
   color: #3A4B5D;
 }
-#navbar .nav-item{
+#navbar .nav-item, #navbar .nav-item-mobile{
   color: #3A4B5D;
+}
+#navbar .nav-item{
   margin: 15px 12px;
   font-size: 16px;
   float: right;
