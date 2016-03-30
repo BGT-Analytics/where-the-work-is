@@ -285,9 +285,13 @@ hr {
   color: #3A4B5D;
 }
 #navbar .nav-item{
-  margin: 15px 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 16px;
   float: right;
+}
+#navbar .nav-item:not(:first-child){
+  margin-right:14px;
 }
 
 
@@ -722,10 +726,12 @@ hr {
 
   .nav-item-mobile{
     margin-left: 0px;
-    margin-right: 10px;
     margin-top: 0px;
     font-size: 12px;
     line-height: 12px;
+  }
+  .nav-item-mobile:not(:last-child){
+    margin-right: 4px;
   }
   #navbar{
     padding: 4px 0px;
