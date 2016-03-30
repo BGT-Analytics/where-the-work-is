@@ -350,7 +350,7 @@ hr {
   color: #f47730;
 }
 
-#location-select-list .option-nation{
+#location-select-list .option-nation, #option-uk{
   padding-left: 10px;
   font-size: 12px;
   font-weight: 700;
@@ -362,6 +362,9 @@ hr {
 #location-select-list .option-lep{
   padding-left: 30px;
   font-size: 10px;
+}
+#location-select-list hr{
+  margin: 4px 10px;
 }
 #occ-select-list .occ-fam{
   padding-left: 10px;
