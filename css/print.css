@@ -14,4 +14,9 @@
   a[href]:after {
     content: none;
   }
+
+  text {
+    color: #000;
+    fill: #000;
+  }
 }

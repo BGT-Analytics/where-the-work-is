@@ -57,8 +57,7 @@ function scatterHelper(prepped_data, point_color, place_data){
             plotBands: [
                 // using http://meyerweb.com/eric/tools/color-blend/
                 {
-                    // #9e4940,
-                    color: 'rgba(65, 73, 82, 0.3)',
+                    color: '#314151',
                     label: {
                         text: 'Very low',
                         style: {
@@ -72,8 +71,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                     to: 9
                 },
                 {
-                    // #ba7639
-                    color: 'rgba(102, 116, 129, 0.3)',
+                    color: '#3C4E5F',
                     label: {
                         text: 'Low',
                         style: {
@@ -87,8 +85,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                     to: 32
                 },
                 {
-                    // #baa242
-                    color: 'rgba(149, 157, 166, 0.3)',
+                    color: '#4A5A6A',
                     label: {
                         text: 'Medium',
                         style: {
@@ -102,8 +99,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                     to: 65
                 },
                 {
-                    // #83A540
-                    color: 'rgba(195, 200, 205, 0.3)',
+                    color: '#596776',
                     label: {
                         text: 'High',
                         style: {
@@ -117,8 +113,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                     to: 89
                 },
                 {
-                    // #38925e
-                    color: 'rgba(236, 240, 241, 0.3)',
+                    color: '#657381',
                     label: {
                         text: 'Very high',
                         style: {
