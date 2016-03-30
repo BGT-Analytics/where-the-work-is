@@ -730,6 +730,9 @@ hr {
   #navbar{
     padding: 4px 0px;
   }
+  #site-title{
+    display: inline-block;
+  }
 
   #location-dropdown-menu, #occ-dropdown-menu{
     padding: 4px 6px 0px 6px;
