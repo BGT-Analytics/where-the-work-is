@@ -14,4 +14,8 @@
   a[href]:after {
     content: none;
   }
+
+  #scatter-title {
+    page-break-before: always;
+  }
 }
