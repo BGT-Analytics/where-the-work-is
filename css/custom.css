@@ -274,14 +274,12 @@ hr {
 #site-title{
   color: #3A4B5D;
   text-shadow: 1px 1px 0px #ECF0F1;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  margin-top: 22px;
+  vertical-align: middle;
+  padding-top: 22px;
 }
 
-#site-subtitle {
-  color: #3A4B5D;
-}
 #navbar .nav-item, #navbar .nav-item-mobile{
   color: #3A4B5D;
 }
@@ -730,7 +728,6 @@ hr {
   }
   #navbar{
     padding: 4px 0px;
-    height: 54px;
   }
 
   #location-dropdown-menu, #occ-dropdown-menu{
