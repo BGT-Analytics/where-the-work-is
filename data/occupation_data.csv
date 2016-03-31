@@ -1,8 +1,8 @@
-geography_type,geography_name,job_family,occupation,occ_abb,demand_entry,demand_ticker,demand_entry_sl,demand_entry_fe,demand_entry_he,reg_salary,reg_salary_label,lq,lq_label,fe_opportunity_score,he_opportunity_score,fe_opportunity_level,he_opportunity_level
+geography_type,geography_name,occupation_group,occupation,occ_abb,demand_entry,demand_ticker,demand_entry_sl,demand_entry_fe,demand_entry_he,reg_salary,reg_salary_label,lq,lq_label,fe_opportunity_score,he_opportunity_score,fe_opportunity_level,he_opportunity_level
 Country,UK Total,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,62316,Medium,14433.3,28620.21,16341.25,29800,Medium,,,57,76,Medium,High
-Country,UK Total,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,8250,Low,800.34,3751.12,3187.33,36500,High,,,51,53,Medium,Medium
+Country,UK Total,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,8250,Low,800.34,3751.12,3187.33,36500,High,,,50,53,Medium,Medium
 Country,UK Total,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,100202,Medium,31823.59,20474.82,45230.86,31400,High,,,53,99,Medium,Very High
-Country,UK Total,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,37488,Medium,3782.08,16646.88,14603.43,29200,Medium,,,83,79,High,High
+Country,UK Total,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,37488,Medium,3782.08,16646.88,14603.43,29200,Medium,,,82,79,High,High
 Country,UK Total,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,59619,Medium,9728.74,21390.03,23123.39,26100,Medium,,,68,84,High,High
 Country,UK Total,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,8851,Low,4368.45,2599.84,1657.24,37300,High,,,8,95,Very Low,Very High
 Country,UK Total,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,41914,Medium,7740.48,9745.29,17211.66,36300,High,,,30,60,Low,Medium
@@ -10,7 +10,7 @@ Country,UK Total,Associate Professional And Technical Occupations,Design Occupat
 Country,UK Total,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,17276,Low,5768.75,9155.45,2121.32,28800,Medium,,,32,45,Low,Medium
 Country,UK Total,Associate Professional And Technical Occupations,Transport Associate Professionals,Transport Assoc. Profnls,2040,Low,752.83,392.06,619.95,35200,High,,,20,60,Low,Medium
 Country,UK Total,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,30751,Medium,6551.28,1943.8,17874.67,36200,High,,,39,82,Medium,High
-Country,UK Total,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,124312,High,23175.34,23260.83,65919.29,35700,High,,,58,87,Medium,High
+Country,UK Total,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,124312,High,23175.34,23260.83,65919.29,35700,High,,,57,87,Medium,High
 Country,UK Total,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,283727,Very High,56413.14,32175.67,185141.54,33600,High,,,62,99,Medium,Very High
 Country,UK Total,Associate Professional And Technical Occupations,Conservation and Environmental Associate Professionals,Environmental Assoc. Profnls,871,Low,186.92,174.61,455.59,25400,Medium,,,44,62,Medium,Medium
 Country,UK Total,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,126553,High,27120.92,23253.39,70298.49,31600,High,,,66,99,High,Very High
@@ -18,22 +18,22 @@ Country,UK Total,Administrative And Secretarial Occupations,Administrative Occup
 Country,UK Total,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,64401,Medium,44748.59,19652.41,0,28400,Medium,,,54,,Medium,
 Country,UK Total,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,21795,Medium,12597.8,9197.2,0,36300,High,,,65,,Medium,
 Country,UK Total,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,99565,Medium,71976.6,27588.4,0,24900,Medium,,,55,,Medium,
-Country,UK Total,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,10025,Low,4438.91,4883.11,687.33,31100,High,,,33,77,Medium,High
+Country,UK Total,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,10025,Low,4438.91,4883.11,687.33,31100,High,,,32,77,Low,High
 Country,UK Total,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,14835,Low,5957.63,8877.37,0,29300,Medium,,,68,,High,
-Country,UK Total,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,33450,Medium,9371.27,24074.06,0,30400,Medium,,,71,,High,
+Country,UK Total,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,33450,Medium,9371.27,24074.06,0,30400,Medium,,,70,,High,
 Country,UK Total,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,36604,Medium,7948.55,28486.44,0,31300,High,,,52,,Medium,
-Country,UK Total,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,29022,Medium,6031.55,18851.41,3806.84,34000,High,,,49,99,Medium,Very High
+Country,UK Total,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,29022,Medium,6031.55,18851.41,3806.84,34000,High,,,48,99,Medium,Very High
 Country,UK Total,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,3382,Low,1051.53,2330.47,0,35600,High,,,63,,Medium,
-Country,UK Total,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,44587,Medium,10889.22,33663.97,0,31800,High,,,40,,Medium,
-Country,UK Total,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,8915,Low,2027.87,6887.13,0,28900,Medium,,,36,,Medium,
-Country,UK Total,Skilled Trades Occupations,Construction and Building Trades Supervisors,Construction Trades Supvrs,1950,Low,780.62,971.91,182.04,31900,High,,,33,92,Medium,Very High
+Country,UK Total,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,44587,Medium,10889.22,33663.97,0,31800,High,,,39,,Medium,
+Country,UK Total,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,8915,Low,2027.87,6887.13,0,28900,Medium,,,35,,Medium,
+Country,UK Total,Skilled Trades Occupations,Construction and Building Trades Supervisors,Construction Trades Supvrs,1950,Low,780.62,971.91,182.04,31900,High,,,32,92,Low,Very High
 Country,UK Total,Skilled Trades Occupations,Textiles and Garments Trades,Textiles Trades,3641,Low,1693.75,1439.48,451.34,31100,High,,,64,80,Medium,High
 Country,UK Total,Skilled Trades Occupations,Printing Trades,Printing Trades,4311,Low,2172.54,2138.46,0,33500,High,,,56,,Medium,
 Country,UK Total,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,115705,High,43705.31,71835.3,0,24000,Medium,,,69,,High,
 Country,UK Total,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),13040,Low,5761.9,6479.54,523.32,32900,High,,,50,95,Medium,Very High
 Country,UK Total,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,117804,High,45412.64,51866.04,15949.8,22100,Low,,,53,73,Medium,High
-Country,UK Total,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,7104,Low,3612.46,2250.31,936.74,27300,Medium,,,20,50,Low,Medium
-Country,UK Total,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,214069,Very High,39926.14,172886.64,1152.62,24500,Medium,,,82,99,High,Very High
+Country,UK Total,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,7104,Low,3612.46,2250.31,936.74,27300,Medium,,,19,50,Low,Medium
+Country,UK Total,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,214069,Very High,39926.14,172886.64,1152.62,24500,Medium,,,81,99,High,Very High
 Nation,ENGLAND,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,255528,Very High,50778.74,29001.29,166705.41,31500,High,1.06753364576,Average,63,99,Medium,Very High
 Nation,ENGLAND,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,186671,Very High,34759.32,150834.42,990.27,24100,Medium,1.0336340696,Average,88,99,High,Very High
 Nation,ENGLAND,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,112538,High,24145.99,20561.85,62631.82,30100,Medium,1.05407251662,Average,66,99,High,Very High
@@ -104,41 +104,41 @@ Nation,NORTHERN IRELAND,Skilled Trades Occupations,Textiles and Garments Trades,
 Nation,NORTHERN IRELAND,Associate Professional And Technical Occupations,Transport Associate Professionals,Transport Assoc. Profnls,48,Low,17.89,9.23,14.41,27400,Medium,0.874935504354,Average,,,,
 Nation,NORTHERN IRELAND,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,325,Medium,69.3,254.19,0,26800,Medium,0.330156448855,Very Low,31,,Low,
 Nation,NORTHERN IRELAND,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,1227,Medium,187.53,447.33,478.04,22000,Low,0.765287898376,Low,53,79,Medium,High
-Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,8877,High,6167.06,1650.98,937.67,24400,Medium,1.00942234936,Average,63,,Medium,
-Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,1520,Medium,867.16,652.84,0,33700,High,0.821499023303,Low,78,,High,
-Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,5315,Medium,3696.65,1618.35,0,26800,Medium,0.972144883298,Average,72,,High,
-Nation,SCOTLAND,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,910,Low,400.67,474.12,34.45,26900,Medium,1.0692452949,Average,30,,Low,
-Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,540,Low,274.96,171.42,70.68,22700,Low,0.895387740687,Average,15,38,Low,Medium
-Nation,SCOTLAND,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,2802,Medium,563.72,679.73,1139.08,33900,High,0.787461552516,Low,34,64,Medium,Medium
-Nation,SCOTLAND,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,709,Low,160.64,548.36,0,24800,Medium,0.93679642456,Average,48,,Medium,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,8307,High,1527.06,1466.94,4472.39,33700,High,0.787139114028,Low,74,85,High,High
-Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,16725,Very High,3155.84,13442.79,114.58,22300,Low,0.92030691019,Average,79,,High,
-Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,4613,Medium,1709.36,2445.48,366.51,22100,Low,0.461257833066,Very Low,39,73,Medium,High
+Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,8877,High,6167.06,1650.98,937.67,24400,Medium,1.00942234936,Average,56,,Medium,
+Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,1520,Medium,867.16,652.84,0,33700,High,0.821499023303,Low,71,,High,
+Nation,SCOTLAND,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,5315,Medium,3696.65,1618.35,0,26800,Medium,0.972144883298,Average,64,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Agricultural and Related Trades,Agricultural Trades,910,Low,400.67,474.12,34.45,26900,Medium,1.0692452949,Average,28,,Low,
+Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Animal Care and Control Services,Animal Care,540,Low,274.96,171.42,70.68,22700,Low,0.895387740687,Average,13,38,Low,Medium
+Nation,SCOTLAND,Associate Professional And Technical Occupations,"Artistic, Literary and Media Occupations",Artistic/Media Occs,2802,Medium,563.72,679.73,1139.08,33900,High,0.787461552516,Low,33,64,Medium,Medium
+Nation,SCOTLAND,Skilled Trades Occupations,Building Finishing Trades,Building Finishing Trades,709,Low,160.64,548.36,0,24800,Medium,0.93679642456,Average,42,,Medium,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,"Business, Finance and Related Associate Professionals",Business Assoc. Profnls,8307,High,1527.06,1466.94,4472.39,33700,High,0.787139114028,Low,67,85,High,High
+Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Caring Personal Services,Personal Care,16725,Very High,3155.84,13442.79,114.58,22300,Low,0.92030691019,Average,74,,High,
+Nation,SCOTLAND,"Caring, Leisure And Other Service Occupations",Childcare and Related Personal Services,Childcare,4613,Medium,1709.36,2445.48,366.51,22100,Low,0.461257833066,Very Low,38,73,Medium,High
 Nation,SCOTLAND,Associate Professional And Technical Occupations,Conservation and Environmental Associate Professionals,Environmental Assoc. Profnls,130,Low,27.9,26.06,68,24200,Medium,1.75810793528,Very High,,68,,High
-Nation,SCOTLAND,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,3316,Medium,778.05,2534.85,0,31400,High,0.876045385868,Average,42,,Medium,
-Nation,SCOTLAND,Skilled Trades Occupations,Construction and Building Trades Supervisors,Construction Trades Supvrs,175,Low,70.06,87.22,16.34,30000,Medium,1.0571187457,Average,38,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Construction and Building Trades,Construction Trades,3316,Medium,778.05,2534.85,0,31400,High,0.876045385868,Average,35,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Construction and Building Trades Supervisors,Construction Trades Supvrs,175,Low,70.06,87.22,16.34,30000,Medium,1.0571187457,Average,31,,Low,
 Nation,SCOTLAND,Associate Professional And Technical Occupations,Design Occupations,Design Occs,1326,Medium,227.93,210.25,830.36,37600,High,0.587504044181,Very Low,31,65,Low,Medium
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,734,Low,73.32,344.74,278.22,37900,High,1.04800281262,Average,63,49,Medium,Medium
-Nation,SCOTLAND,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,2464,Medium,493.59,1712.08,236.88,30700,Medium,1.00007760602,Average,40,,Medium,
-Nation,SCOTLAND,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,8650,High,3315.88,5323.14,0,21500,Low,0.880611428971,Average,55,,Medium,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,2231,Medium,222.75,999.79,860.47,28700,Medium,0.701015524546,Low,72,82,High,High
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,5706,Medium,1819.34,1170.65,2565.07,30500,Medium,0.670773217973,Low,56,99,Medium,Very High
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,859,Low,183,54.3,499.31,31800,High,0.329044213193,Very Low,,67,,High
-Nation,SCOTLAND,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,1246,Low,493.35,752.65,0,35600,High,0.989351982831,Average,59,,Medium,
-Nation,SCOTLAND,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,2681,Medium,770.52,1910.12,0,30100,Medium,0.944106589209,Average,58,,Medium,
-Nation,SCOTLAND,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),905,Low,387.45,463.47,36.06,29100,Medium,0.817506707482,Low,60,,Medium,
-Nation,SCOTLAND,Skilled Trades Occupations,Printing Trades,Printing Trades,315,Low,159.48,155.52,0,32400,High,0.860702110278,Average,67,,High,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,663,Low,331.51,201.76,114.16,31300,High,0.882351289041,Average,22,,Low,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,8295,High,1758.52,1590.46,4539.77,29600,Medium,0.772083519672,Low,73,99,High,Very High
-Nation,SCOTLAND,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,17858,Very High,3558.67,2021.65,11674.77,29500,Medium,0.741399842472,Low,68,99,High,Very High
-Nation,SCOTLAND,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,6063,Medium,1405.97,2848.6,1520,29000,Medium,1.14606258999,Average,70,75,High,High
-Nation,SCOTLAND,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,8359,High,6042.75,2316.25,0,21700,Low,0.988935492871,Average,73,,High,
-Nation,SCOTLAND,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,366,Low,113.8,252.2,0,33300,High,1.27475821375,High,58,,Medium,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,1302,Medium,440.3,676.74,166.83,25800,Medium,0.88774477672,Average,49,50,Medium,Medium
-Nation,SCOTLAND,Skilled Trades Occupations,Textiles and Garments Trades,Textiles Trades,261,Low,140.05,92.32,25.45,28800,Medium,0.844384330245,Average,74,,High,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Draughtspersons and Related Architectural Technicians,Architectural Techs,734,Low,73.32,344.74,278.22,37900,High,1.04800281262,Average,58,49,Medium,Medium
+Nation,SCOTLAND,Skilled Trades Occupations,Electrical and Electronic Trades,Electrical/Electronic Trades,2464,Medium,493.59,1712.08,236.88,30700,Medium,1.00007760602,Average,37,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Food Preparation and Hospitality Trades,Hospitality Trades,8650,High,3315.88,5323.14,0,21500,Low,0.880611428971,Average,52,,Medium,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Health Associate Professionals,Health Assoc. Profnls,2231,Medium,222.75,999.79,860.47,28700,Medium,0.701015524546,Low,66,82,High,High
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Information Technology Technicians,IT Techs,5706,Medium,1819.34,1170.65,2565.07,30500,Medium,0.670773217973,Low,55,99,Medium,Very High
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Legal Associate Professionals,Legal Assoc. Profnls,859,Low,183,54.3,499.31,31800,High,0.329044213193,Very Low,64,67,Medium,High
+Nation,SCOTLAND,Skilled Trades Occupations,"Metal Forming, Welding and Related Trades",Metal Forming Trades,1246,Low,493.35,752.65,0,35600,High,0.989351982831,Average,55,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,"Metal Machining, Fitting and Instrument Making Trades",Metal Machining Trades,2681,Medium,770.52,1910.12,0,30100,Medium,0.944106589209,Average,55,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Other Skilled Trades,Skilled Trades (Other),905,Low,387.45,463.47,36.06,29100,Medium,0.817506707482,Low,55,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,Printing Trades,Printing Trades,315,Low,159.48,155.52,0,32400,High,0.860702110278,Average,66,,High,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Protective Service Occupations,Protective Service,663,Low,331.51,201.76,114.16,31300,High,0.882351289041,Average,17,,Low,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Public Services and Other Associate Professionals,Public Services Assoc. Profnls,8295,High,1758.52,1590.46,4539.77,29600,Medium,0.772083519672,Low,67,99,High,Very High
+Nation,SCOTLAND,Associate Professional And Technical Occupations,"Sales, Marketing and Related Associate Professionals",Sales  Assoc. Profnls,17858,Very High,3558.67,2021.65,11674.77,29500,Medium,0.741399842472,Low,61,99,Medium,Very High
+Nation,SCOTLAND,Associate Professional And Technical Occupations,"Science, Engineering and Production Technicians",Engineering Techs,6063,Medium,1405.97,2848.6,1520,29000,Medium,1.14606258999,Average,67,75,High,High
+Nation,SCOTLAND,Administrative And Secretarial Occupations,Secretarial and Related Occupations,Secretarial Occs,8359,High,6042.75,2316.25,0,21700,Low,0.988935492871,Average,65,,Medium,
+Nation,SCOTLAND,Skilled Trades Occupations,"Skilled Metal, Electrical and Electronic Trades Supervisors",Metal Trades Supvrs,366,Low,113.8,252.2,0,33300,High,1.27475821375,High,56,,Medium,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Sports and Fitness Occupations,Sports Occs,1302,Medium,440.3,676.74,166.83,25800,Medium,0.88774477672,Average,47,50,Medium,Medium
+Nation,SCOTLAND,Skilled Trades Occupations,Textiles and Garments Trades,Textiles Trades,261,Low,140.05,92.32,25.45,28800,Medium,0.844384330245,Average,71,,High,
 Nation,SCOTLAND,Associate Professional And Technical Occupations,Transport Associate Professionals,Transport Assoc. Profnls,236,Low,89.04,46.84,68.54,35600,High,1.36270601336,High,,,,
-Nation,SCOTLAND,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,2031,Medium,444.77,1577,0,29800,Medium,0.653584453909,Very Low,37,,Medium,
-Nation,SCOTLAND,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,5774,Medium,920.23,2087.58,2239.02,24300,Medium,1.14080766136,Average,74,99,High,Very High
+Nation,SCOTLAND,Skilled Trades Occupations,Vehicle Trades,Vehicle Trades,2031,Medium,444.77,1577,0,29800,Medium,0.653584453909,Very Low,35,,Medium,
+Nation,SCOTLAND,Associate Professional And Technical Occupations,Welfare and Housing Associate Professionals,Welfare Assoc. Profnls,5774,Medium,920.23,2087.58,2239.02,24300,Medium,1.14080766136,Average,72,99,High,Very High
 Nation,WALES,Administrative And Secretarial Occupations,Administrative Occupations: Finance,Administrative: Finance,2988,Medium,2047.75,561.78,336.05,24400,Medium,0.64711354345,Very Low,37,,Medium,
 Nation,WALES,Administrative And Secretarial Occupations,Administrative Occupations: Office Managers and Supervisors,Administrative: Office Mngrs,625,Medium,358.08,266.92,0,30300,Medium,0.643334261306,Very Low,58,,Medium,
 Nation,WALES,Administrative And Secretarial Occupations,Administrative Occupations: Records,Administrative: Records,1833,Medium,1264.49,568.51,0,24300,Medium,0.638533064337,Very Low,46,,Medium,
