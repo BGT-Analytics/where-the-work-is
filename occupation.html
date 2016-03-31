@@ -33,27 +33,33 @@ view: occupation
   <br/>
   <div class='row'>
     <div class='col-md-10 col-md-offset-1'>
-      <p class='pull-right'>
+      <p class='pull-right hidden-xs'>
         <a href="" id="btn-occ-lq" class="btn btn-default"><i class="fa fa-fw fa-map-marker"></i> View job concentration map</a>
+      </p>
+      <p class='visible-xs'>
+        <a href="" id="btn-occ-lq" class="btn btn-default"><i class="fa fa-fw fa-map-marker"></i> View job concentration map</a>
+        <br/>
+        <br/>
       </p>
       <ul class="list-inline">
         <li>
-          View by:
+          View table by:
         </li>
         <li>
           <label>
             <input type="radio" name="geoLevel" id="geo-level-region" checked>
-            Nations and regions
+            Nation/Region
           </label>
         </li>
         <li>
           <label>
             <input type="radio" name="geoLevel" id="geo-level-lep">
-            LEPs
+            LEP
           </label>
         </li>
       </ul>
       <table class='table table-striped table-bordered table-responsive' id="occ-table"></table>
+    </div>
   </div>
 
   <div class="modal fade" id="occupation-detail-modal" tabindex="-1" role="dialog" aria-labelledby="occupation-detail">
