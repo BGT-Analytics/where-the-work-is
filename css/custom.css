@@ -654,7 +654,10 @@ hr {
 }
 
 
-
+.horizontal-scroll{
+  overflow-x: scroll;
+  margin-bottom: 85px;
+}
 
 
 #occ-table > thead > tr > th, 
@@ -667,8 +670,7 @@ hr {
 }
 
 #occ-table{
-  font-size: 16px;
-  margin-bottom: 80px;
+  font-size: 14px;
   color: #777;
 }
 #occ-table th:nth-child(2), #occ-table th:nth-child(3), #occ-table th:nth-child(4), #occ-table th:nth-child(5) {
@@ -823,6 +825,17 @@ hr {
     display: none;
   }
 
+
+  #occ-table{
+    font-size: 12px;
+    color: #777;
+  }
+  #occ-table th, #occ-table td{
+    padding: 2px;
+  }
+  #occ-table th {
+    white-space: normal;
+  }
 
 
   .footer-brand{

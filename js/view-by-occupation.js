@@ -182,7 +182,7 @@ function updateOccupation(occ_name, location_level){
 function initModal(occ_name, location_level){
 
     // modal stuff
-    var $btn_occ_lq = $('#btn-occ-lq');
+    var $btn_occ_lq = $('.btn-occ-lq');
     $btn_occ_lq.off('click');
     $btn_occ_lq.on('click', function() {
         $('#occupation-detail-modal').modal('show');
