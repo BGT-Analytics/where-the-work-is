@@ -757,6 +757,11 @@ hr {
   }
 
 
+  #sel-occ-name{
+    font-size: 14px;
+  }
+
+
 
   .tooltip-inner {
     min-width: 320px;
