@@ -4,7 +4,7 @@ var regions_data;
 
 // remembering what has been clicked
 var clicked_location = false,
-    clicked_occ_family = false,
+    clicked_occ_group = false,
     clicked_occ = false,
     clicked_map = false;
 
@@ -29,7 +29,7 @@ function initialize(){
                 return {
                     geography_name: row.geography_name,
                     geography_type: row.geography_type,
-                    job_family: cleanOccupation(row.job_family),
+                    occ_group: cleanOccupation(row.occupation_group),
                     occupation: cleanOccupation(row.occupation),
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_ticker: row.demand_ticker,
@@ -114,8 +114,8 @@ function initialize(){
             highlightOcc('');
         });
 
-        var $cls_job_family = $(".job-family");
-        $cls_job_family.hover(
+        var $cls_occ_group = $(".job-family");
+        $cls_occ_group.hover(
             function(){
                 highlightOccFamily($(this).attr('data'));
             },
@@ -123,10 +123,10 @@ function initialize(){
                 highlightOccFamily('');
             }
         );
-        $cls_job_family.click(function(){
+        $cls_occ_group.click(function(){
             var clicked_job_fam_name = $(this).attr('data')
             // unselect other selected stuff
-            $cls_job_family.each(function(index, elem){
+            $cls_occ_group.each(function(index, elem){
                 if ($(elem).attr('data')!=clicked_job_fam_name){
                     $(elem).removeClass('selected');
                 };
@@ -358,7 +358,7 @@ function selectOccupation(occupation, place_data){
 
 function clearJobFamilies(){
     // clear any selected job families
-    $(".cls_job_family").each(function(index, elem){
+    $(".cls_occ_group").each(function(index, elem){
         if ($(elem).hasClass('selected')){
             $(elem).removeClass('selected');
         };
@@ -368,7 +368,7 @@ function clearJobFamilies(){
 
 
 function showHelperJobFamily(){
-    if(clicked_occ_family==false){
+    if(clicked_occ_group==false){
         $("#helper-job-family").fadeTo(800, 1);
     };
 };
@@ -386,8 +386,8 @@ function showHelperMap(){
 }
 
 function hideHelperJobFamily(){
-    if(clicked_occ_family==false){
-        clicked_occ_family = true;
+    if(clicked_occ_group==false){
+        clicked_occ_group = true;
         $("#helper-job-family").fadeOut(800);
     }
 };

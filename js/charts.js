@@ -136,13 +136,13 @@ function highlightOcc(occupation){
 
 }
 
-function highlightOccFamily(job_family){
+function highlightOccFamily(occ_group){
 
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
-                if(occupation_mapping[point.full_name]['job_family'] == job_family){
+                if(occupation_mapping[point.full_name]['occ_group'] == occ_group){
                     point.setState('hover');
                 }
                 else{
@@ -154,7 +154,7 @@ function highlightOccFamily(job_family){
             // looping thru stuff in bar chart
             $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
-                    if(occupation_mapping[point.category]['job_family'] == job_family){
+                    if(occupation_mapping[point.category]['occ_group'] == occ_group){
                         point.setState('hover');
                     }
                     else{
@@ -166,12 +166,12 @@ function highlightOccFamily(job_family){
     });
 
 }
-function selectOccFamily(job_family){
+function selectOccFamily(occ_group){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
-                if(occupation_mapping[point.full_name]['job_family'] == job_family){
+                if(occupation_mapping[point.full_name]['occ_group'] == occ_group){
                     point.select(true, true);
                 }
                 else{
@@ -183,7 +183,7 @@ function selectOccFamily(job_family){
             // looping thru stuff in bar chart
             $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
-                    if(occupation_mapping[point.category]['job_family'] == job_family){
+                    if(occupation_mapping[point.category]['occ_group'] == occ_group){
                         point.select(true, true);
                     }
                     else{

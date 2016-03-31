@@ -27,7 +27,7 @@ function initialize(){
                 return {
                     geography_name: row.geography_name,
                     geography_type: row.geography_type,
-                    job_family: cleanOccupation(row.job_family),
+                    occ_group: cleanOccupation(row.occupation_group),
                     occupation: cleanOccupation(row.occupation),
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_ticker: row.demand_ticker,
@@ -88,7 +88,7 @@ function initialize(){
             // loop thru jobs & add the ones within this job fam
             $.each(occupation_mapping , function(occ_name, occ_dict){
 
-                if(occ_dict['job_family']==occ_fam+' Occupations'){
+                if(occ_dict['occ_group']==occ_fam+' Occupations'){
                     occ_link_html =  makeLinkHTML(occ_name, occ_name, 'option-occ')
                     $occ_select_list.append('<li>'+occ_link_html+'</li>')
                 }
