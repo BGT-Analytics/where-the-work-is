@@ -1,0 +1,19 @@
+Variable / Column,Description
+Geography_Type,"Specifies either UK-wide, nation, region or LEP data aggregation"
+Geography_Name,"UK, or name of the particular nation, region or LEP"
+Occupation_Group,Major Occupation Group as per the ONS Standard Occupational Classification (SOC) 2010
+Occupation,Minor Occupation Group as per the ONS Standard Occupational Classification (SOC) 2010
+Occ_Abb,Shorter name for minor occupation group
+Demand_Entry,Geography-specific  Job Postings asking for entry level (2 years of experience or fewer) in 2014
+Demand_Ticker,Demand Label based on size of occupation within a geography
+Demand_Entry_SL,Geography-specific Job Postings asking for entry level (2 years of experience or fewer) and School Leaver education levels in 2014
+Demand_Entry_FE,Geography-specific  Job Postings asking for entry level (2 years of experience or fewer) and Further education levels in 2014
+Demand_Entry_HE,Geography-specific  Job Postings asking for entry level (2 years of experience or fewer) and Higher education levels in 2014
+Reg_Salary,Regional Advertised Salaries for Job Postings in 2014
+Reg_Salary_Label,Regional Advertised Salaries for Job Postings Label comparative to the other occupations within a geography
+LQ,Location Quotient - Measure of Job Posting Density relative to employment indexed to the national density relative to employment
+LQ_Label,"Location Quotient label providing context of the index (e.g., 1 is Average)"
+FE_Opportunity_Score,"Further Education Score based on the Demand Supply Ratio of FE postings within a geography, from Very Low (0) to Very High (100)"
+HE_Opportunity_Score,"Higher Education Score based on the Demand Supply Ratio of HE postings within a geography, from Very Low (0) to Very High (100)"
+FE_Opportunity_Level,Opportunity Scores were converted to levels to provide easier context of the score (Score of 34 to 66 is Medium)
+HE_Opportunity_Level,Opportunity Scores were converted to levels to provide easier context of the score (Score of 34 to 66 is Medium)
