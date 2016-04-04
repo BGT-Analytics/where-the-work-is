@@ -118,6 +118,7 @@ var MapsLib = {
     updateData: function(occupation){
         MapsLib.occupation = occupation;
 
+        $('#modal-occ-name').html('for '+occupation.toLowerCase());
         var occupation_formatted = occupation.replace(/((\w+\W+){3})/, '$1<br/>');
         $('#legend-occupation').html(occupation_formatted);
 
