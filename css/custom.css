@@ -26,24 +26,24 @@ hr {
 
 
 .label-very-high{
-  background-color: #5f8e78;
-  color: #3A4B5D;
+  background-color: #38925e;
+  color: #ecf0f1;
 }
 .label-high{
-  background-color: #97b5a6;
-  color: #3A4B5D;
+  background-color: #83A540;
+  color: #ecf0f1;
 }
 .label-medium{
-  background-color: #ffe7bf;
-  color: #3A4B5D;
+  background-color: #baa242;
+  color: #ecf0f1;
 }
 .label-low{
-  background-color: #fec162;
-  color: #3A4B5D;
+  background-color: #ba7639;
+  color: #ecf0f1;
 }
 .label-very-low{
-  background-color: #f37731;
-  color: #3A4B5D;
+  background-color: #9e4940;
+  color: #ecf0f1;
 }
 
 
