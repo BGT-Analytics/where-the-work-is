@@ -118,7 +118,6 @@ var MapsLib = {
     updateData: function(occupation){
         MapsLib.occupation = occupation;
 
-        $('#occupation-detail-title').html(occupation);
         var occupation_formatted = occupation.replace(/((\w+\W+){3})/, '$1<br/>');
         $('#legend-occupation').html(occupation_formatted);
 

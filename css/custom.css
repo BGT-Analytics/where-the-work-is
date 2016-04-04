@@ -563,9 +563,16 @@ hr {
   background-color: #3B4B5C;
 }
 
-.modal-title {
+.modal-title, .modal-subtitle{
   color: #ecf0f1;
-  font-size: 16px;
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.modal-subtitle {
+  margin: 0px;
+  font-size: 12px;
 }
 
 .modal-header .close {
@@ -798,9 +805,6 @@ hr {
   #occupation-detail-modal .modal-body{
     font-size: 12px;
     padding: 6px;
-  }
-  #occupation-detail-title{
-    font-size: 14px;
   }
   #occupation-detail-map{
     height: 320px;
