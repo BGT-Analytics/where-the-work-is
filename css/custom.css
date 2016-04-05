@@ -271,7 +271,7 @@ hr {
   padding: 12px 0px;
   height: 70px;
 }
-#site-title{
+#site-title, #site-icon{
   color: #3A4B5D;
   text-shadow: 1px 1px 0px #ECF0F1;
   font-size: 24px;
@@ -279,6 +279,11 @@ hr {
   display: table-cell;
   vertical-align: middle;
   padding-top: 8px;
+}
+
+#site-icon {
+  font-size: 36px;
+  padding: 4px 8px 0 0;
 }
 
 #navbar .nav-item, #navbar .nav-item-mobile{
