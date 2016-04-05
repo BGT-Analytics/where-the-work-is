@@ -168,6 +168,7 @@ function updateOccupation(occ_name, location_level){
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
+    $('#occ-back').attr('href', '/#/?occupation='+encodeURIComponent(occ_name))
 
 
     if(occ_name.length>32){
