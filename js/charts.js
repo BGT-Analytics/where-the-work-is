@@ -14,23 +14,6 @@ var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
 
-function initializeTable(table_id, column_names, data){
-    // column_names is an array of names to be used as the header row of the table
-    // data is a 2D array of values for the table
-    var names = [];
-    $.each(column_names, function(i, name){
-        names.push({'title': name});
-    })
-    $(table_id).DataTable({
-        searching: false,
-        lengthMenu: [ [20, 100, -1], [20, 100, "All"] ],
-        destroy: true,
-        data: data,
-        columns: names,
-        info: false,
-        paging: false
-    });
-}
 
 
 function makeDemandChart(place_data){

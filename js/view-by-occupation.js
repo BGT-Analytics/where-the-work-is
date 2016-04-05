@@ -158,9 +158,13 @@ function updateOccupation(occ_name, location_level){
     // TO DO: select radio button appropriately
     if(location_level!='lep'){
         // by default, if location_level not specified, show nations/regions
-        var occ_data = _.filter(occupation_data, function(row){ return row.occupation==occ_name&&(row.geography_type=='Region'||row.geography_type=='Nation'); });
+        var occ_data = _.filter(occupation_data, function(row){
+                            return row.occupation==occ_name&&(row.geography_type=='Region'||row.geography_type=='Nation'||row.geography_type=='Country');
+                        });
     } else{
-        var occ_data = _.where(occupation_data, {occupation: occ_name, geography_type: 'LEP'})
+        var occ_data = _.filter(occupation_data, function(row){
+                            return row.occupation==occ_name&&(row.geography_type=='LEP'||row.geography_type=='Country');
+                        });
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))

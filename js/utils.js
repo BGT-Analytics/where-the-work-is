@@ -66,8 +66,9 @@ function toTitleCase(str)
     return str.replace(/\w\S*/g, function(txt){
         if (txt.toUpperCase()=='OF'||txt.toUpperCase()=='AND'||txt.toUpperCase()=='THE'){
             return txt.toLowerCase();
-        }
-        else{
+        }else if (txt.toUpperCase()=='UK'){
+            return txt.toUpperCase();
+        }else{
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         }
     });
