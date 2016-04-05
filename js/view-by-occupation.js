@@ -231,7 +231,7 @@ function initializeTable(table_id, column_names, data){
         names.push({'title': name});
     })
 
-    $(table_id).DataTable({
+    var my_table = $(table_id).DataTable({
         searching: false,
         destroy: true,
         data: data,
@@ -244,7 +244,10 @@ function initializeTable(table_id, column_names, data){
                 "sType": "string",
                 "mRender": function (data, type, full) {
                             if(data){
-                                return toTitleCase(data);
+                                if (data == "UK Total")
+                                    return "<strong> " + toTitleCase(data) + "</strong>"
+                                else
+                                    return toTitleCase(data);
                             }
                             else{
                                 return ''
