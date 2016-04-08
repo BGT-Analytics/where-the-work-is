@@ -54,20 +54,20 @@ function initialize(){
 
         // populating select menu w/ regions & leps
         var $location_select_list = $('#location-select-list');
-        $location_select_list.append('<li><a href="/" id="option-uk">The United Kingdom</a></li><hr/>')
+        $location_select_list.append('<li><a href="/" id="option-uk">United Kingdom</a></li><hr/>')
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
-            n_link_html = makeLinkHTML(n, toTitleCase(n), 'option-nation')
+            n_link_html = makeLinkHTML(n, cleanGeo(n), 'option-nation')
             $location_select_list.append('<li>'+n_link_html+'</li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
                 r = value['name']
-                r_link_html =  makeLinkHTML(r, toTitleCase(r), 'option-region')
+                r_link_html =  makeLinkHTML(r, cleanGeo(r), 'option-region')
                 $location_select_list.append('<li>'+r_link_html+'</li>')
                 // loop thru leps within region
                 $.each(value['children'] , function(index, value){
                     l = value['name']
-                    l_link_html = makeLinkHTML(l, l, 'option-lep')
+                    l_link_html = makeLinkHTML(l, cleanGeo(l), 'option-lep')
                     $location_select_list.append('<li>'+l_link_html+'</li>')
                 });
             });
@@ -179,15 +179,15 @@ function updateLocation(geo_type, geo_name){
     var geo_display_name = geo_name
 
     if(geo_type=="Country" && geo_name=='UK Total'){
-        geo_display_name = "The United Kingdom"
+        geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
         $.address.parameter('location', '')
     }
     else{
         $.address.parameter('location_type', encodeURIComponent(geo_type))
         $.address.parameter('location', encodeURIComponent(geo_name))
-        if(geo_type=="Nation" || geo_type=="Region"){
-            geo_display_name = toTitleCase(geo_name)
+        if(geo_type=="Nation" || geo_type=="Region" || geo_type=='LEP'){
+            geo_display_name = cleanGeo(geo_name)
         }
     }
 
@@ -332,29 +332,6 @@ function selectOccupation(occupation, place_data){
         html: true
     });
 }
-
-
-// function makeBreadcrumbLinks(geo_name){
-//     if(geo_name=='UK Total'){
-//         return [];
-//     }
-//     else{
-//         var links = [ makeLinkHTML("UK Total", "The United Kingdom", "option-country") ]
-//         var b = breadcrumbs[geo_name]
-//         if(b.length==0){
-//             return links
-//         }
-//         else if(b.length==1){
-//             var n = b[0]
-//             return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation')] )
-//         }
-//         else if(b.length==2){
-//             var n = b[0]
-//             var r = b[1]
-//             return links.concat( [makeLinkHTML(n, toTitleCase(n), 'option-nation'), makeLinkHTML(r, toTitleCase(r), 'option-region')] )
-//         }
-//     }
-// }
 
 function clearJobFamilies(){
     // clear any selected job families

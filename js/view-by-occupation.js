@@ -246,9 +246,9 @@ function initializeTable(table_id, column_names, data){
                 "mRender": function (data, type, full) {
                             if(data){
                                 if (data == "UK Total")
-                                    return "<strong> " + toTitleCase(data) + "</strong>"
+                                    return "<strong> " + cleanGeo(data) + "</strong>"
                                 else
-                                    return toTitleCase(data);
+                                    return cleanGeo(data);
                             }
                             else{
                                 return ''

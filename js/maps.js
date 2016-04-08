@@ -42,7 +42,7 @@ var MapsLib = {
                 if (typeof props['JOB_REGION'] === 'undefined') 
                     location_key = 'lep';
 
-                this._div.innerHTML = '<b>' + toTitleCase(props[location_key]) + '</b>\
+                this._div.innerHTML = '<b>' + cleanGeo(props[location_key]) + '</b>\
                                        <table class="table table-condensed"><tbody>\
                                        <tr><td>Job concentration</td><td>' + props['jobs_data'][MapsLib.occupation]['lq_label'] + '</td></tr>\
                                        <tr><td>Job demand</td><td>' + props['jobs_data'][MapsLib.occupation]['demand_ticker'] + '</td></tr>\

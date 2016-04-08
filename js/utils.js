@@ -61,11 +61,13 @@ function sum(numbers) {
     }, 0);
 }
 
-function toTitleCase(str)
+function cleanGeo(str)
 {
     return str.replace(/\w\S*/g, function(txt){
-        if (txt.toUpperCase()=='OF'||txt.toUpperCase()=='AND'||txt.toUpperCase()=='THE'){
+        if (txt.toUpperCase()=='OF'||txt.toUpperCase()=='THE'||txt.toUpperCase()=='TO'){
             return txt.toLowerCase();
+        }else if (txt.toUpperCase()=='AND'){
+            return '&';
         }else if (txt.toUpperCase()=='UK'){
             return txt.toUpperCase();
         }else{
