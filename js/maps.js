@@ -47,8 +47,8 @@ var MapsLib = {
                                        <tr><td>Job concentration</td><td>' + props['jobs_data'][MapsLib.occupation]['lq_label'] + '</td></tr>\
                                        <tr><td>Job demand</td><td>' + props['jobs_data'][MapsLib.occupation]['demand_ticker'] + '</td></tr>\
                                        <tr><td>Salary</td><td>£' + numberWithCommas(props['jobs_data'][MapsLib.occupation]['reg_salary']) + '</td></tr>\
-                                       <tr><td>Opportunity (Further Ed)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['fe_opportunity_score']) + '</td></tr>\
-                                       <tr><td>Opportunity (Higher Ed)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['he_opportunity_score']) + '</td></tr>';
+                                       <tr><td>Opportunity (FE)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['fe_opportunity_score']) + '</td></tr>\
+                                       <tr><td>Opportunity (HE)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['he_opportunity_score']) + '</td></tr>';
 
             }
             else {

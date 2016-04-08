@@ -252,7 +252,7 @@ var occupation_mapping = {
     "Protective Service Occupations":{
         "short_name":"Protective Service",
         "occ_group": "Associate Professional & Technical Occupations",
-        "description":"Workers in this group serve in Her Majesty’s, foreign and Commonwealth armed forces, investigate crimes and maintain law and order, fight fires and advise on fire prevention, guard inmates and maintain discipline at prisons and detention centres, and perform other miscellaneous protective service roles.",
+        "description":"Workers in this group serve in the armed forces, investigate crimes and maintain law and order, fight fires and advise on fire prevention, guard inmates and maintain discipline at prisons and detention centres, and perform other miscellaneous protective service roles.",
         "example_titles":["Police officers (sergeant and below)","Fire service officers (watch manager and below)","Prison service officers (below principal officer)","Protective service associate professionals n.e.c."]},
     "Artistic, Literary & Media Occupations":{
         "short_name":"Art/Media",
@@ -347,7 +347,7 @@ var occupation_mapping = {
     "Skilled Metal, Electrical & Electronic Trades Supervisors":{
         "short_name":"Metal Supvrs",
         "occ_group": "Skilled Trades Occupations",
-        "description":"Jobholders in this group supervise and control technical and operational aspects of metal forming, welding and relate, metal machining, fitting and instrument making, vehicles trades and electrical and electronic trades.",
+        "description":"Jobholders in this group supervise and control technical and operational aspects of metal forming, welding and related trades, metal machining, fitting and instrument making, vehicles trades and electrical and electronic trades.",
         "example_titles":["Skilled metal, electrical and electronic trades supervisors"]},
     "Construction & Building Trades":{
         "short_name":"Construction",
