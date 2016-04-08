@@ -8,7 +8,7 @@ function oppLabel(opp_val) {
     if (!opp_val){
         return '--'
     } else if (opp_val <= 9){
-        return 'Very Low'
+        return 'Very low'
     } else if (opp_val <= 32){
         return 'Low'
     } else if (opp_val <= 65){
@@ -16,7 +16,7 @@ function oppLabel(opp_val) {
     } else if (opp_val <= 89){
         return 'High'
     } else {
-        return 'Very High'
+        return 'Very high'
     }
 
 }
@@ -25,7 +25,7 @@ function salaryLabel(salary_val) {
     if (!salary_val) {
         return '--'
     } else if (salary_val <= 17818){
-        return 'Very Low'
+        return 'Very low'
     } else if (salary_val <= 23823){
         return 'Low'
     } else if (salary_val <= 30999){
@@ -33,7 +33,7 @@ function salaryLabel(salary_val) {
     } else if (salary_val <= 41734){
         return 'High'
     } else{
-        return 'Very High'
+        return 'Very high'
     }
 }
 

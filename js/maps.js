@@ -63,11 +63,11 @@ var MapsLib = {
             var div = L.DomUtil.create('div', 'info legend');
 
             var labels = "\
-                <i style='background:" + MapsLib.getColor('Very High') + "'></i> Very High<br>\
+                <i style='background:" + MapsLib.getColor('Very High') + "'></i> Very high<br>\
                 <i style='background:" + MapsLib.getColor('High') + "'></i> High<br>\
                 <i style='background:" + MapsLib.getColor('Average') + "'></i> Average<br>\
                 <i style='background:" + MapsLib.getColor('Low') + "'></i> Low<br>\
-                <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very Low\
+                <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very low\
             ";
 
             div.innerHTML = "<h4>Job concentration<br /><small id='legend-occupation'></small></h4>"
