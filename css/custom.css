@@ -761,9 +761,6 @@ hr {
     line-height: 16px;
   }
 
-  #breadcrumbs, #current-occ-fam{
-    font-size: 9px;
-  }
   #current-location-name, #current-occ-name{
     font-size: 16px;
     line-height: 16px;

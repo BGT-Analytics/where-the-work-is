@@ -160,12 +160,6 @@ function initialize(){
             };
         });
 
-        $("#breadcrumbs a").click(function(){
-            if(clicked_location==false){
-                clicked_location=true;
-                $("#location-dropdown-menu").addClass('muted');
-            };
-        });
 
 
         $('[data-toggle="tooltip"]').tooltip({
@@ -203,17 +197,6 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    // // updating breadcrumbs
-    // var $breadcrumbs = $('#breadcrumbs');
-
-    // $breadcrumbs.html("<span id='helper-location'><i class='fa fa-fw fa-hand-o-left'></i> Change location to explore occupations elsewhere</span>")
-    // var breadcrumb_links = makeBreadcrumbLinks(geo_name)
-    // if(breadcrumb_links.length){
-    //     $breadcrumbs.html("")
-    //     $.each(breadcrumb_links, function(index, value){
-    //         $breadcrumbs.append(value+' &raquo; ')
-    //     });
-    // }
 
     makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
