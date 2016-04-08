@@ -227,7 +227,7 @@ var occupation_mapping = {
     "Science, Engineering & Production Technicians":{
         "short_name":"Engineering Techs",
         "occ_group": "Associate Professional & Technical Occupations",
-        "description":"Science, engineering and production technicians perform a variety of technical support functions to assist the work of scientists and technologists, assist in the design, development, production and maintenance of electronic systems, perform technical quality assurance related tasks, support the work of building and civil engineers, and perform various other technical support functions for engineers.",
+        "description":"Science, engineering and production technicians perform a variety of technical support functions to assist the work of scientists and technologists, assist in the design, development, production and maintenance of electronic systems, perform technical quality-assurance-related tasks, support the work of building and civil engineers, and perform various other technical support functions for engineers.",
         "example_titles":["Quality assurance technicians","Planning, process and production technicians","Science, engineering and production technicians n.e.c."]},
     "Draughtspersons & Related Architectural Technicians":{
         "short_name":"Architectural Techs",
@@ -257,7 +257,7 @@ var occupation_mapping = {
     "Artistic, Literary & Media Occupations":{
         "short_name":"Art/Media",
         "occ_group": "Associate Professional & Technical Occupations",
-        "description":"Workers in this group create and restore artistic work; write, evaluate and edit literary material; translate written and spoken statements; perform in films, theatre and other acts of entertainment; write, arrange and perform musical compositions; produce, direct, present and participate in television programmes, films and stage presentations; create artistic content for various media; and promote and administer artistic and cultural activities.",
+        "description":"Workers in this group create and restore artistic work, write and edit literary material, translate written and spoken statements, perform in films/theatre and other acts of entertainment, write and perform musical compositions, produce/direct/present/participate in television programmes/films/stage presentations, create artistic content for various media, and promote/administer artistic and cultural activities.",
         "example_titles":["Artists","Authors, writers and translators","Actors, entertainers and presenters","Dancers and choreographers","Musicians","Arts officers, producers and directors","Photographers, audio-visual and broadcasting equipment operators"]},
     "Design Occupations":{
         "short_name":"Design",
@@ -288,7 +288,7 @@ var occupation_mapping = {
         "short_name":"Sales",
         "occ_group": "Associate Professional & Technical Occupations",
         "description":"Sales, marketing and related associate professionals purchase raw materials, equipment and merchandise, provide technical sales advice to customers, undertake market research, support the implementation of the organisation’s marketing and sales policies and arrange for the trading and leasing of property on behalf of clients.",
-        "example_titles":["Buyers and procurement officers","Business sales executives","Marketing associate professionals","Estate agents and auctioneers; Conference and exhibition managers and organisers","Sales accounts and business development managers"]},
+        "example_titles":["Buyers and procurement officers","Business sales executives","Marketing associate professionals","Estate agents and auctioneers","Conference and exhibition managers and organisers","Sales accounts and business development managers"]},
     "Conservation & Environmental Associate Professionals":{
         "short_name":"Environmental",
         "occ_group": "Associate Professional & Technical Occupations",
@@ -332,7 +332,7 @@ var occupation_mapping = {
     "Metal Machining, Fitting & Instrument Making Trades":{
         "short_name":"Metal Machining",
         "occ_group": "Skilled Trades Occupations",
-        "description":"Metal machining, fitting and instrument making trades workers mark out metal for machine tool working, set up and operate lathes, boring, drilling, grinding, milling machines and presses, assemble and repair machine tools, install and repair plant and industrial machinery, fix and assemble parts and sub-assemblies in the manufacture of metal products, make, calibrate, test and repair precision and optical instruments, and install and repair air-conditioning and refrigeration systems.",
+        "description":"Metal machining, fitting and instrument-making trades workers mark out metal for machine tool working, set up and operate lathes, boring, drilling, grinding and milling machines and presses, assemble and repair machine tools, install and repair plant and industrial machinery, fix and assemble parts and sub-assemblies in the manufacture of metal products, make, calibrate, test and repair precision and optical instruments, and install and repair air-conditioning and refrigeration systems.",
         "example_titles":["Metal machining setters and setter-operators","Tool makers, tool fitters and markers-out","Metal working production and maintenance fitters","Air-conditioning and refrigeration engineers","Precision instrument makers and repairers"]},
     "Vehicle Trades":{
         "short_name":"Vehicle",
@@ -342,7 +342,7 @@ var occupation_mapping = {
     "Electrical & Electronic Trades":{
         "short_name":"Electrical/Electronic",
         "occ_group": "Skilled Trades Occupations",
-        "description":"Workers in electrical and electronic trades install wiring in road and rail vehicles and aircraft and assemble, install, maintain, test and repair electrical and electronic equipment, components and systems concerned with lighting, signalling, telecommunications, radio and television and other commercial, industrial and domestic functions.",
+        "description":"Workers in electrical and electronic trades install wiring in road and rail vehicles and aircraft, and assemble, install, maintain, test and repair electrical and electronic equipment, components and systems concerned with lighting, signalling, telecommunications, radio and television and other commercial, industrial and domestic functions.",
         "example_titles":["Electricians and electrical fitters","Telecommunications engineers","TV, video and audio engineers","IT engineers","Electrical and electronic trades n.e.c."]},
     "Skilled Metal, Electrical & Electronic Trades Supervisors":{
         "short_name":"Metal Supvrs",
@@ -352,8 +352,8 @@ var occupation_mapping = {
     "Construction & Building Trades":{
         "short_name":"Construction",
         "occ_group": "Skilled Trades Occupations",
-        "description":"Jobholders within construction and building trades erect and fit metal framework for building construction, cut, shape and lay stone, brick and similar materials, cover roofs and exterior walls, install, maintain and repair plumbing, heating and ventilating systems, construct and install wooden frameworks and fittings, fi glass into windows and doors, and perform other miscellaneous construction tasks.",
-        "example_titles":["Bricklayers and masons","Roofers, roof tilers and slaters","Plumbers and heating and ventilating engineers","Carpenters and joiners","Glaziers, window fabricators and fitters","Construction and building trades n.e.c.","Steel erectors"]},
+        "description":"Jobholders within construction and building trades erect and fit metal framework for building construction, cut, shape and lay stone, brick and similar materials, cover roofs and exterior walls, install, maintain and repair plumbing, heating and ventilation systems, construct and install wooden frameworks and fittings, fit glass into windows and doors, and perform other miscellaneous construction tasks.",
+        "example_titles":["Bricklayers and masons","Roofers, roof tilers and slaters","Plumbers and heating and ventilation engineers","Carpenters and joiners","Glaziers, window fabricators and fitters","Construction and building trades n.e.c.","Steel erectors"]},
     "Building Finishing Trades":{
         "short_name":"Building Finishing",
         "occ_group": "Skilled Trades Occupations",
@@ -368,7 +368,7 @@ var occupation_mapping = {
         "short_name":"Textiles",
         "occ_group": "Skilled Trades Occupations",
         "description":"Workers within textiles and garments trades weave fabrics into fire and carpet, knit garments from yarn, upholster the seating and interior of vehicles and planes, make soft furnishings, make, repair and finish leather goods, and make, fi and alter tailored articles of clothing.",
-        "example_titles":["Weavers and knitters","Upholsterers","Footwear and leather working trades","Tailors and dressmakers","Textiles, garments and related trades n.e.c."]},
+        "example_titles":["Weavers and knitters","Upholsterers","Footwear and leather-working trades","Tailors and dressmakers","Textiles, garments and related trades n.e.c."]},
     "Printing Trades":{
         "short_name":"Printing",
         "occ_group": "Skilled Trades Occupations",
@@ -382,7 +382,7 @@ var occupation_mapping = {
     "Other Skilled Trades":{
         "short_name":"Other Skilled Trades",
         "occ_group": "Skilled Trades Occupations",
-        "description":"Workers in this unit group perform a variety of other skilled craft and related trades.",
+        "description":"Workers in this group perform a variety of other skilled craft and related trades.",
         "example_titles":["Glass and ceramics makers, decorators and finishers","Furniture makers and other craft woodworkers","Florists","Other skilled trades n.e.c."]},
     "Childcare & Related Personal Services":{
         "short_name":"Childcare",
