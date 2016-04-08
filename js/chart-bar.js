@@ -27,7 +27,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             gridLineWidth: 0,
             endOnTick: false,
             title: {
-                text: 'Entry level job openings',
+                text: 'Entry-level job openings',
                 style: {
                     color: '#bdc3c7'
                 }
