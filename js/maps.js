@@ -63,11 +63,11 @@ var MapsLib = {
             var div = L.DomUtil.create('div', 'info legend');
 
             var labels = "\
-                <i style='background:" + MapsLib.getColor('Very High') + "'></i> Very high<br>\
+                <i style='background:" + MapsLib.getColor('Very high') + "'></i> Very high<br>\
                 <i style='background:" + MapsLib.getColor('High') + "'></i> High<br>\
                 <i style='background:" + MapsLib.getColor('Average') + "'></i> Average<br>\
                 <i style='background:" + MapsLib.getColor('Low') + "'></i> Low<br>\
-                <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very low\
+                <i style='background:" + MapsLib.getColor('Very low') + "'></i> Very low\
             ";
 
             div.innerHTML = "<h4>Job concentration<br /><small id='legend-occupation'></small></h4>"
@@ -141,11 +141,11 @@ var MapsLib = {
 
     // get color depending on population density value
     getColor: function (d) {
-        return d == 'Very High' ? '#0e1419' :
+        return d == 'Very high' ? '#0e1419' :
                d == 'High'      ? '#2c3e50' :
                d == 'Average'   ? '#56799d' :
                d == 'Low'       ? '#89a4be' :
-               d == 'Very Low'  ? '#cbd7e3' :
+               d == 'Very low'  ? '#cbd7e3' :
                                   '#cbd7e3' ;
     },
 
