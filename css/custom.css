@@ -23,7 +23,7 @@ hr {
 
 
 
-
+/*occupation figure labels*/
 
 .label-very-high{
   background-color: #38925e;
@@ -47,22 +47,16 @@ hr {
 }
 
 
-.opaque{
-  opacity: 1 !important;
-}
+
+/*text*/
 
 .text-info, .text-info:hover{
   color: #fbab18;
 }
 
-
-.nowrap { white-space: nowrap; }
-
-.notes p, .notes li {
-  color: #999;
-  font-size: .8em;
+.text-xs{
+  font-size: 10px;
 }
-
 
 .no-pad-top{
   padding-top: 0px;
@@ -72,10 +66,16 @@ hr {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-.text-xs{
-  font-size: 10px;
+
+.extra-pad-top{
+  padding-top: 30px;
+}
+.research-title{
+  font-style: italic;
 }
 
+
+/*tooltips*/
 
 .tooltip.in {
   opacity: 1;
@@ -101,6 +101,9 @@ hr {
 }
 
 
+
+
+/* occupation pane */
 .well{
   background-color: #4e5d6c;
   border-color: #62768b;
@@ -108,8 +111,6 @@ hr {
 .well h3{
   margin-top: 0px;
 }
-
-/* occupation pane */
 .well-occ-inactive{
   background-color: #4e5d6c;
   margin: 0px;
@@ -205,10 +206,7 @@ hr {
   color: #ecf0f1;
 }
 
-.occ-rank{
-  font-size: 10px;
-  margin-bottom: 5px;
-}
+
 .occ-figure small{
   font-size: 10px;
 }
@@ -505,13 +503,13 @@ hr {
   z-index: 2;
 }
 
+
+
+/*helper notes*/
+
 #helper-location{
   color: #fbab18;
 }
-
-
-
-
 
 .helper{
   display: inline-block;
@@ -563,6 +561,7 @@ hr {
 
 
 
+/*modal*/
 
 .modal-header {
   background-color: #3B4B5C;
