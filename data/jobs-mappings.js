@@ -322,7 +322,7 @@ var occupation_mapping = {
     "Construction & building trades supervisors":{
         "short_name":"Construction supvrs",
         "occ_group": "Skilled trades occupations",
-        "description":"Workers in this group supervise and control technical and operational aspects of Construction and Building, and Building Finishing Trades.",
+        "description":"Workers in this group supervise and control technical and operational aspects of construction and building, and building finishing trades.",
         "example_titles":["Construction and building trades supervisors"]},
     "Textiles & garments trades":{
         "short_name":"Textiles",
