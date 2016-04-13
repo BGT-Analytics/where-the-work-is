@@ -16,7 +16,7 @@ var MapsLib = {
 
         MapsLib.occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
-            center: [55, -.5], 
+            center: [59, -9], 
             zoom: 5,
             attributionControl: false,
             zoomControl:false,

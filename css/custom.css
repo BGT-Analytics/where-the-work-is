@@ -614,7 +614,7 @@ hr {
 }
 
 #occupation-detail-map{
-  height: 400px;
+  height: 360px;
   width: 100%
 }
 #map-helper{
@@ -627,7 +627,7 @@ hr {
 }
 .info.leaflet-control {
     font-family:"Source Sans Pro",sans-serif;
-    background-color: #fff;
+    background-color: transparent;
     padding: 0 10px;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -808,12 +808,12 @@ hr {
     padding: 6px;
   }
   #occupation-detail-map{
-    height: 320px;
+    height: 350px;
   }
   .info.leaflet-control{
     padding-right: 0px;
     padding-left: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 120px;
     margin:0px;
     font-size: 8px;
     line-height: 12px;
@@ -824,7 +824,7 @@ hr {
     margin-right: 4px;
   }
   .info.leaflet-control h4{
-    font-size: 12px;
+    font-size: 10px;
   }
   #legend-occupation{
     display: none;
