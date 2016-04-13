@@ -257,7 +257,7 @@ function initializeTable(table_id, column_names, data){
             },
             {
                 "sTitle": "Job openings", 
-                "sType": "num-html", 
+                "sType": "custom-num-html", 
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -270,7 +270,7 @@ function initializeTable(table_id, column_names, data){
             },
             { 
                 "sTitle": "Average salary", 
-                "sType": "num-html", 
+                "sType": "custom-num-html", 
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -283,7 +283,7 @@ function initializeTable(table_id, column_names, data){
             },
             { 
                 "sTitle": "Opportunity score (FE)", 
-                "sType": "numeric", 
+                "sType": "custom-num-html", 
                 "oDefault": 0, 
                 "width": "15%",
                 "mRender": function (data, type, full) {
@@ -297,7 +297,7 @@ function initializeTable(table_id, column_names, data){
             },
             { 
                 "sTitle": "Opportunity score (HE)", 
-                "sType": "numeric", 
+                "sType": "custom-num-html", 
                 "oDefault": 0, 
                 "width": "15%",
                 "mRender": function (data, type, full) {
