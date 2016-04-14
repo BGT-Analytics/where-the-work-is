@@ -57,7 +57,7 @@ merged_regions.table: gb_regions.append
 		   GROUP BY name \
 		 )"
 
-occupation_data.csv: BGT_UK_IPPR_input_data.xlsx
+occupation_data.csv: INPUT_DATA.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 
