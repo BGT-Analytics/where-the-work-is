@@ -137,6 +137,8 @@ var MapsLib = {
                 fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
             });
         });
+
+        MapsLib.occ_map.fitBounds(MapsLib.regions_occ_geojson.getBounds(), {paddingBottomRight: [150, 0]});
     },
 
     // get color depending on population density value
