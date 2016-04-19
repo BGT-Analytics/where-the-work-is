@@ -707,6 +707,11 @@ hr {
 
 
 
+#video-embed{
+  height: 315px;
+  width: 560px;
+}
+
 
 
 .non-desktop-only{
@@ -846,6 +851,12 @@ hr {
   .footer-brand{
     height: 22px;
     margin-right: 16px;
+  }
+
+
+  #video-embed{
+    height: 150px;
+    width: 300px;
   }
 
 }
