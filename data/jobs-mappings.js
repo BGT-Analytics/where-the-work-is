@@ -364,73 +364,68 @@ var occupation_mapping = {
     "Sales Assistants & Retail Cashiers": {
         "short_name":"Retail",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Sales assistants and retail cashiers sell goods and services in retail or wholesale establishments, accept payments, give change and arrange finance as appropriate in respect of sales; obtain, receive and record telephone orders for goods and services.",
+        "example_titles":["SALES AND RETAIL ASSISTANTS", "RETAIL CASHIERS AND CHECK-OUT OPERATORS", "TELEPHONE SALESPERSONS", "PHARMACY AND OTHER DISPENSING ASSISTANTS", "VEHICLE AND PARTS SALESPERSONS AND ADVISERS"]
     },
     "Teaching & Educational Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Teaching and educational professionals plan, organise and provide instruction in academic, technical, vocational, diversionary and other subjects and inspect schools and training establishments.",
+        "example_titles":["HIGHER EDUCATION TEACHING PROFESSIONALS", "FURTHER EDUCATION TEACHING PROFESSIONALS", "SECONDARY EDUCATION TEACHING PROFESSIONALS", "PRIMARY AND NURSERY EDUCATION TEACHING PROFESSIONALS", "SPECIAL NEEDS EDUCATION TEACHING PROFESSIONALS", "SENIOR PROFESSIONALS OF EDUCATIONAL ESTABLISHMENTS", "EDUCATION ADVISERS AND SCHOOL INSPECTORS", "TEACHING AND OTHER EDUCATIONAL PROFESSIONALS N.E.C."]
     },
     "Nursing & Midwifery Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Nursing and midwifery professionals provide nursing care for the sick and injured and prenatal and postnatal care for mothers and babies, working with and providing high level support for other health professionals, within teams of other healthcare providers and/or working autonomously across defined areas of significant responsibility.",
+        "example_titles":["Nurses", "Midwives"]
     },
     "Customer Service Occupations": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Workers in this minor group receive and respond to telephone and other enquiries regarding the products and services offered by an organisation, deal with customer complaints, and provide further services to customers after the point of sale",
+        "example_titles":["CALL AND CONTACT CENTRE OCCUPATIONS", "TELEPHONISTS", "COMMUNICATION OPERATORS", "MARKET RESEARCH INTERVIEWERS", "CUSTOMER SERVICE OCCUPATIONS N.E.C."]
     },
     "Business, Research & Administrative Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Business, research and administrative professionals perform accountancy duties, advise industrial, commercial and other establishments on management, business and administrative matters, collect and analyse financial and other information, and carry out research in non-scientific areas of activity.",
+        "example_titles":["CHARTERED AND CERTIFIED ACCOUNTANTS", "MANAGEMENT CONSULTANTS AND BUSINESS ANALYSTS", "BUSINESS AND FINANCIAL PROJECT MANAGEMENT PROFESSIONALS", "ACTUARIES, ECONOMISTS AND STATISTICIANS", "BUSINESS AND RELATED RESEARCH PROFESSIONALS", "BUSINESS, RESEARCH AND ADMINISTRATIVE PROFESSIONALS N.E.C."]
     },
     "Sales Related Occupations": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Job holders in this group visit private households to obtain orders and collect payments, deliver and sell food, drink and other goods in streets and open spaces from portable containers, stalls and vans, collect and deliver laundered and similarly serviced articles, replenish and display stocks of merchandise, and undertake a variety of sales occupations not elsewhere classified.",
+        "example_titles":["COLLECTOR SALESPERSONS AND CREDIT AGENTS", "DEBT, RENT AND OTHER CASH COLLECTORS", "ROUNDSPERSONS AND VAN SALESPERSONS", "MARKET AND STREET TRADERS AND ASSISTANTS", "MERCHANDISERS AND WINDOW DRESSERS", "SALES RELATED OCCUPATIONS N.E.C."]
     },
     "Hairdressers & Related Services": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Jobholders in this unit group cut, style and treat hair, apply cosmetics and give facial and body beauty treatments.",
+        "example_titles":["HAIRDRESSERS AND BARBERS", "BEAUTICIANS AND RELATED OCCUPATIONS"]
     },
     "Administrative Occupations: Government & Related Organisations": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Workers in this minor group undertake a variety of administrative and clerical work in government departments and related nongovernmental organisations.",
+        "example_titles":["NATIONAL GOVERNMENT ADMINISTRATIVE OCCUPATIONS", "LOCAL GOVERNMENT ADMINISTRATIVE OCCUPATIONS", "OFFICERS OF NON-GOVERNMENTAL ORGANISATIONS"]
     },
     "Sales Supervisors": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Job holders in this group supervise the activities of sales and related workers within retail and wholesale establishments.",
+        "example_titles":["SALES SUPERVISORS"]
     },
     "Welfare Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Workers in this minor group provide information, advice and support to protect the welfare of vulnerable groups; supervise, counsel and help offenders; and provide spiritual motivation and guidance.",
+        "example_titles":["SOCIAL WORKERS", "PROBATION OFFICERS", "CLERGY", "WELFARE PROFESSIONALS N.E.C."]
     },
     "Leisure & Travel Services": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Those working in occupations in this minor group organise and maintain services and equipment necessary for sporting and recreational activities, advise upon and make travel arrangements for customers and provide services to enhance the enjoyment, comfort and safety of holidaymakers and air, rail, and sea passengers.",
+        "example_titles":["SPORTS AND LEISURE ASSISTANTS", "TRAVEL AGENTS", "AIR TRAVEL ASSISTANTS", "RAIL TRAVEL ASSISTANTS", "LEISURE AND TRAVEL SERVICE OCCUPATIONS N.E.C."]
     },
     "Metal Machining, Fitting & Instrument Making Trades": {
         "short_name":"NA",
@@ -442,43 +437,38 @@ var occupation_mapping = {
     "Architects, Town Planners & Surveyors": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Architects, town planners and surveyors conduct surveys to determine the exact position of natural and constructed features, design and plan the layout of buildings for commercial, residential, industrial and other uses, prepare bills of quantities for construction projects, and manage major construction projects.",
+        "example_titles":[ "ARCHITECTS", "TOWN PLANNING OFFICERS", "QUANTITY SURVEYORS", "CHARTERED SURVEYORS", "CHARTERED ARCHITECTURAL TECHNOLOGISTS", "CONSTRUCTION PROJECT MANAGERS AND RELATED PROFESSIONALS"]
     },
     "Legal Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Legal professionals advise and act on behalf of individuals, businesses, organisations and government in legal matters; preside over judicial proceedings; and perform related professional legal duties.",
+        "example_titles":["BARRISTERS AND JUDGES", "SOLICITORS", "LEGAL PROFESSIONALS N.E.C."]
     },
     "Media Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Media professionals plan, coordinate and technically supervise activities in journalism, public relations and advertising.",
+        "example_titles": ["JOURNALISTS, NEWSPAPER AND PERIODICAL EDITORS", "PUBLIC RELATIONS PROFESSIONALS", "ADVERTISING ACCOUNTS MANAGERS AND CREATIVE DIRECTORS"]
     },
     "Customer Service Managers & Supervisors": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Customer service managers and supervisors plan, organise and coordinate resources and supervise the staff involved in handling the requests, complaints and further needs of customers.",
+        "example_titles":["CUSTOMER SERVICE MANAGERS AND SUPERVISORS"]
     },
     "Quality & Regulatory Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
-
+        "description":"Quality and regulatory professionals plan, coordinate and technically supervise products or services to ensure they are fit for purpose and meet legal compliance and industry quality standards.",
+        "example_titles":["QUALITY CONTROL AND PLANNING ENGINEERS", "QUALITY ASSURANCE AND REGULATORY PROFESSIONALS", "ENVIRONMENTAL HEALTH PROFESSIONALS"]
     },
     "Librarians & Related Professionals": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Librarians and related professionals appraise, obtain, organise, develop, preserve and make available collections of written and recorded material, art objects, pictures, artefacts and other items of general and specialised interest.",
+        "example_titles":["LIBRARIANS", "ARCHIVISTS AND CURATORS"]
     },
 }
 
