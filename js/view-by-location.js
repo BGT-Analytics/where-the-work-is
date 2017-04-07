@@ -23,6 +23,7 @@ function initialize(){
     $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
 
         regions_data = geojson
+
         occupation_data = _.map(
             $.csv.toObjects(csv[0]),
             function(row) {
@@ -45,14 +46,12 @@ function initialize(){
             }
         );
 
-        console.log("$$$$")
-        console.log(occupation_data)
-
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
-            updateLocation('Country', 'UK Total')
+            // updateLocation('Country', 'UK Total')
+            updateLocation('UK', 'UK Total')
         }
 
         // populating select menu w/ regions & leps
@@ -78,7 +77,7 @@ function initialize(){
 
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-country', function() {
-            updateLocation('Country', 'UK Total');
+            updateLocation('UK', 'UK Total');
             return false;
         });
         $control_pane.on('click', '.option-nation', function() {
@@ -90,7 +89,7 @@ function initialize(){
             return false;
         });
         $control_pane.on('click', '.option-lep', function() {
-            updateLocation('LEP', $(this).attr('data'));
+            updateLocation('LEPplus', $(this).attr('data'));
             return false;
         });
 
@@ -175,7 +174,8 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
-    if(geo_type=="Country" && geo_name=='UK Total'){
+    // if(geo_type=="Country" && geo_name=='UK Total'){
+    if(geo_type=="UK" && geo_name=='UK Total'){
         geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
         $.address.parameter('location', '')
@@ -183,13 +183,12 @@ function updateLocation(geo_type, geo_name){
     else{
         $.address.parameter('location_type', encodeURIComponent(geo_type))
         $.address.parameter('location', encodeURIComponent(geo_name))
-        if(geo_type=="Nation" || geo_type=="Region" || geo_type=='LEP'){
+        if(geo_type=="Nation" || geo_type=="Region" || geo_type=='LEPplus'){
             geo_display_name = cleanGeo(geo_name)
         }
     }
 
     clearJobFamilies();
-
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
@@ -199,7 +198,6 @@ function updateLocation(geo_type, geo_name){
     else{
         $("#current-location-name").html(geo_display_name)
     }
-
 
     makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
@@ -220,7 +218,7 @@ function updateEducation(education){
         var geo_name = decodeURIComponent($.address.parameter('location'))
     }
     else {
-        geo_type = 'Country'
+        geo_type = 'UK'
         geo_name = 'UK Total'
     }
 

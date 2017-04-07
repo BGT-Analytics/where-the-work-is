@@ -17,10 +17,11 @@ var sl_color = '#667481';
 
 
 function makeDemandChart(place_data){
-
     var sorted_data = _.sortBy(place_data, 'demand_sum').reverse()
 
-    var n_cols = 36
+    // var n_cols = 36
+    var n_cols = 51
+
     var prepped_data = [
         {
             name: 'Higher education',
@@ -38,7 +39,10 @@ function makeDemandChart(place_data){
         }
     ]
 
-    occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+    // occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+    // The data contains duplcates, so as a work around use 'uniq'...until we get intouch with Burning Glass.
+    plucked = _.pluck(sorted_data, "occupation")
+    occupations = _.uniq(plucked).slice(0,n_cols)
 
     stackedBarHelper(prepped_data, occupations, place_data)
 }
@@ -83,7 +87,7 @@ function highlightOcc(occupation){
 
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
-            var isVisible = false; 
+            var isVisible = false;
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation){
@@ -227,5 +231,6 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
+    console.log('long_name:', long_name)
     return occupation_mapping[long_name]['short_name'];
 };
