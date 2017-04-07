@@ -5,7 +5,7 @@ all: merged_regions.geojson occupation_data.csv
 # which has been manually derived from merged_regions.geojson
 
 .PHONY: clean
-clean: 
+clean:
 	rm merged_regions.geojson
 	rm occupation_data.csv
 
@@ -57,7 +57,8 @@ merged_regions.table: gb_regions.append
 		   GROUP BY name \
 		 )"
 
-occupation_data.csv: INPUT_DATA.xlsx
+# occupation_data.csv: INPUT_DATA.xlsx
+occupation_data.csv: INPUT_DATA_for_WTWI2.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 
@@ -73,62 +74,62 @@ merged_regions.update: merged_regions.alter
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'EAST OF ENGLAND' \
-	     WHERE name = 'Eastern Euro Region'" 
-	
+	     WHERE name = 'Eastern Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'EAST MIDLANDS' \
-	     WHERE name = 'East Midlands Euro Region'" 
-	
+	     WHERE name = 'East Midlands Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'GREATER LONDON' \
-	     WHERE name = 'London Euro Region'" 
-	
+	     WHERE name = 'London Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'NORTH EAST ENGLAND' \
-	     WHERE name = 'North East Euro Region'" 
-	
+	     WHERE name = 'North East Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'NORTHERN IRELAND' \
-	     WHERE name = 'Northern Ireland'" 
-	
+	     WHERE name = 'Northern Ireland'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'NORTH WEST ENGLAND' \
-	     WHERE name = 'North West Euro Region'" 
-	
+	     WHERE name = 'North West Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'SCOTLAND' \
-	     WHERE name = 'Scotland Euro Region'" 
-	
+	     WHERE name = 'Scotland Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'SOUTH EAST ENGLAND' \
-	     WHERE name = 'South East Euro Region'" 
-	
+	     WHERE name = 'South East Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'SOUTH WEST ENGLAND' \
-	     WHERE name = 'South West Euro Region'" 
-	
+	     WHERE name = 'South West Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'WALES' \
-	     WHERE name = 'Wales Euro Region'" 
-	
+	     WHERE name = 'Wales Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'WEST MIDLANDS' \
-	     WHERE name = 'West Midlands Euro Region'" 
-	
+	     WHERE name = 'West Midlands Euro Region'"
+
 	psql -d $(PG_DB) -U $(PG_USER) -h $(PG_HOST) -p $(PG_PORT) -c \
 		"UPDATE merged_regions SET \
 		   job_region = 'YORKSHIRE AND THE HUMBER' \
-	     WHERE name = 'Yorkshire and the Humber Euro Region'" 
+	     WHERE name = 'Yorkshire and the Humber Euro Region'"
 
 merged_regions.shp: job_types_by_region.table merged_regions.update
 	pgsql2shp -f $@ -h $(PG_HOST) -u $(PG_USER) -p $(PG_PORT) $(PG_DB) \

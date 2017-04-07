@@ -8,6 +8,6 @@ MAKEFLAGS += --warn-undefined-variables
 
 # Variables specific to this build
 PG_HOST="localhost"
-PG_USER="cathydeng"
+PG_USER="reginacompton"
 PG_DB="burning_glass"
 PG_PORT="5432"

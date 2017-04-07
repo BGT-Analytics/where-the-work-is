@@ -13,7 +13,7 @@ var clicked_location = false,
 (function(){
 
     initialize();
-    
+
 })()
 
 
@@ -44,6 +44,9 @@ function initialize(){
                 };
             }
         );
+
+        console.log("$$$$")
+        console.log(occupation_data)
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
