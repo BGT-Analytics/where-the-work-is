@@ -230,7 +230,7 @@ var occupation_mapping = {
         "occ_group": "Associate professional & technical occupations",
         "description":"Workers in this group prepare for and compete in sporting events for financial gain, train amateur and professional sportsmen and women to enhance performance, promote participation and standards in sport, organise and officiate at sporting events, and provide instruction, training and supervision for various forms of exercise and other recreational activities.",
         "example_titles":["Sports players","Sports coaches, instructors and officials","Fitness instructors"]},
-    "Transport associate professionals": {
+    "Transport Associate Professionals": {
         "short_name":"Transport",
         "occ_group": "Associate professional & technical occupations",
         "description":"Workers in this group command and navigate aircraft and vessels, perform technical functions to operate and maintain such craft, and plan and regulate the ground and air movements of aircraft.",

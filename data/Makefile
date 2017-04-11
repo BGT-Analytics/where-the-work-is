@@ -58,7 +58,7 @@ merged_regions.table: gb_regions.append
 		 )"
 
 # occupation_data.csv: INPUT_DATA.xlsx
-occupation_data.csv: INPUT_DATA_for_WTWI2.xlsx
+occupation_data.csv: INPUT_DATA_2.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 

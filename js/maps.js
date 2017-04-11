@@ -16,7 +16,7 @@ var MapsLib = {
 
         MapsLib.occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
-            center: [59, -9], 
+            center: [59, -9],
             zoom: 5,
             attributionControl: false,
             zoomControl:false,
@@ -39,7 +39,7 @@ var MapsLib = {
 
             var location_key = 'JOB_REGION';
             if (props) {
-                if (typeof props['JOB_REGION'] === 'undefined') 
+                if (typeof props['JOB_REGION'] === 'undefined')
                     location_key = 'lep';
 
                 this._div.innerHTML = '<b>' + cleanGeo(props[location_key]) + '</b>\
@@ -56,7 +56,7 @@ var MapsLib = {
             }
         };
 
-        MapsLib.info.addTo(MapsLib.occ_map);    
+        MapsLib.info.addTo(MapsLib.occ_map);
 
         MapsLib.legend.onAdd = function (map) {
 
@@ -79,7 +79,7 @@ var MapsLib = {
 
         // define geographic layers
         MapsLib.regions_occ_geojson = L.geoJson(regions_data[0], {onEachFeature: MapsLib.onEachFeature});
-        
+
         MapsLib.regions_bg_geojson = L.geoJson(regions_data[0], {style: {
                 weight: .5,
                 opacity: .5,
@@ -90,7 +90,7 @@ var MapsLib = {
         MapsLib.lep_occ_geojson = L.geoJson(lep_locations, {
             pointToLayer: function(feature, latlng){
                 return L.circleMarker(latlng, {
-                    color: '#154779', 
+                    color: '#154779',
                     fillColor: '#154779',
                     radius: 6,
                     weight: 0,
@@ -133,6 +133,8 @@ var MapsLib = {
         });
 
         MapsLib.lep_occ_geojson.eachLayer(function (layer) {
+            // console.log("!!!")
+            // console.log(layer)
             layer.setStyle({
                 fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
             });

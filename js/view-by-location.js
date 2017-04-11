@@ -51,7 +51,8 @@ function initialize(){
         }
         else{
             // updateLocation('Country', 'UK Total')
-            updateLocation('UK', 'UK Total')
+            // updateLocation('UK', 'UK Total')
+            updateLocation('Country', 'UK');
         }
 
         // populating select menu w/ regions & leps
@@ -77,7 +78,8 @@ function initialize(){
 
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-country', function() {
-            updateLocation('UK', 'UK Total');
+            // updateLocation('Country', 'UK Total');
+            updateLocation('Country', 'UK');
             return false;
         });
         $control_pane.on('click', '.option-nation', function() {
@@ -175,7 +177,8 @@ function updateLocation(geo_type, geo_name){
     var geo_display_name = geo_name
 
     // if(geo_type=="Country" && geo_name=='UK Total'){
-    if(geo_type=="UK" && geo_name=='UK Total'){
+    // if(geo_type=="UK" && geo_name=='UK Total'){
+    if(geo_type=="Country" && geo_name=='UK'){
         geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
         $.address.parameter('location', '')
@@ -218,8 +221,9 @@ function updateEducation(education){
         var geo_name = decodeURIComponent($.address.parameter('location'))
     }
     else {
-        geo_type = 'UK'
-        geo_name = 'UK Total'
+        geo_type = 'Country'
+        // geo_name = 'UK Total'
+        geo_name = 'UK'
     }
 
     var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
