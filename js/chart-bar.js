@@ -65,7 +65,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
 
     };
 
-
     var mobile_extras = {
         chart: {
             type: 'bar',
@@ -161,6 +160,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                         click: function () {
                             hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
+                            // selectOccupationGroup(categories[this.x], place_data);
                         },
                         mouseOver: function () {
                             triggerHoverScatter(categories[this.x]);

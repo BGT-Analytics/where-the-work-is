@@ -1,5 +1,6 @@
 // data
 var occupation_data;
+var occupation_group_data;
 var regions_data;
 
 // remembering what has been clicked
@@ -8,19 +9,13 @@ var clicked_location = false,
     clicked_occ = false,
     clicked_map = false;
 
-
 // do stuff when the page loads
 (function(){
-
     initialize();
-
 })()
 
-
-
 function initialize(){
-
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv')).then(function(geojson, csv, csv_groups){
 
         regions_data = geojson
 
@@ -46,12 +41,25 @@ function initialize(){
             }
         );
 
+        occupation_group_data = _.map(
+            $.csv.toObjects(csv_groups[0]),
+            function(row) {
+                console.log(row)
+                return {
+                    occ_group: cleanOccupation(row.occupation_group),
+                    demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
+                    demand_entry_he: parseInt(row.demand_entry_he),
+                    demand_entry_fe: parseInt(row.demand_entry_fe),
+                    demand_entry_sl: parseInt(row.demand_entry_sl),
+                };
+            }
+        );
+
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
-            // updateLocation('Country', 'UK Total')
-            // updateLocation('UK', 'UK Total')
+            // This makes the demand bar chart.
             updateLocation('Country', 'UK');
         }
 
@@ -149,8 +157,6 @@ function initialize(){
 
         });
 
-
-
         // show & flash job family & occupation helpers
         // if user doesn't figure it out within 5 secs
         setTimeout(showHelperJobFamily, 4500);
@@ -163,8 +169,6 @@ function initialize(){
                 $("#location-dropdown-menu").addClass('muted');
             };
         });
-
-
 
         $('[data-toggle="tooltip"]').tooltip({
             html: true
@@ -202,7 +206,10 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    makeDemandChart(place_data)
+    makeDemandChart(place_data, occupation_group_data, 6)
+
+// Good code here...
+    // makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
     makeCompScatterPlot(place_data, education)
 
@@ -235,90 +242,97 @@ function updateEducation(education){
     }
 }
 
-
-
 function selectOccupation(occupation, place_data){
     highlightOcc(occupation);
-    $.address.parameter('occupation', encodeURIComponent(occupation));
 
-    // this populates the occupation detail pane on the main location view
+    if ($.address.parameter('occupation_group')) {
+        $.address.parameter('occupation', encodeURIComponent(occupation));
+        // this populates the occupation detail pane on the main location view
 
-    var $occ_info_pane = $('#occ-info-pane');
-    $occ_info_pane.fadeTo(0, 0, function () {
-        $occ_info_pane.fadeTo(800, 1)
-    });
-    $occ_info_pane.addClass('well-occ-inactive');
-    $occ_info_pane.removeClass('well-occ-active');
+        var $occ_info_pane = $('#occ-info-pane');
+        $occ_info_pane.fadeTo(0, 0, function () {
+            $occ_info_pane.fadeTo(800, 1)
+        });
+        $occ_info_pane.addClass('well-occ-inactive');
+        $occ_info_pane.removeClass('well-occ-active');
 
-    // show map helper if user doesn't figure it out after 5 secs
-    setTimeout(showHelperMap, 5000);
+        // show map helper if user doesn't figure it out after 5 secs
+        setTimeout(showHelperMap, 5000);
 
-    clearJobFamilies();
-
-
-    $("#default-occ-info").hide();
-    $("#occ-detail").show();
-
-    if(occupation.length>50){
-        $("#sel-occ-name").html('<small class="long">'+occupation+'</small>')
-    }else if(occupation.length>40){
-        $("#sel-occ-name").html('<small>'+occupation+'</small>')
-    }else{
-        $("#sel-occ-name").html(occupation)
-    }
-    var tooltip_content = 'Jobs included:<br/><ul>'
-    $.each(occupation_mapping[occupation]['example_titles'], function(index, title){
-        tooltip_content = tooltip_content +'<li>'+ title + '</li>'
-    });
-    tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
-    $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" id="occ-info-tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
-
-    var place_occ_data = _.where(place_data, {occupation: occupation})[0]
+        clearJobFamilies();
 
 
-    var salary_fig = place_occ_data['reg_salary']
-    if (salary_fig){
-        salary_fig_str = '£'+numberWithCommas(salary_fig)
+        $("#default-occ-info").hide();
+        $("#occ-detail").show();
+
+        if(occupation.length>50){
+            $("#sel-occ-name").html('<small class="long">'+occupation+'</small>')
+        }else if(occupation.length>40){
+            $("#sel-occ-name").html('<small>'+occupation+'</small>')
+        }else{
+            $("#sel-occ-name").html(occupation)
+        }
+        var tooltip_content = 'Jobs included:<br/><ul>'
+        $.each(occupation_mapping[occupation]['example_titles'], function(index, title){
+            tooltip_content = tooltip_content +'<li>'+ title + '</li>'
+        });
+        tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
+        $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" id="occ-info-tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
+
+        var place_occ_data = _.where(place_data, {occupation: occupation})[0]
+
+
+        var salary_fig = place_occ_data['reg_salary']
+        if (salary_fig){
+            salary_fig_str = '£'+numberWithCommas(salary_fig)
+        }
+        else {
+            salary_fig_str = '--'
+        }
+
+
+        var comp_fig_he = place_occ_data['he_opportunity_score']
+        if (comp_fig_he){
+            comp_fig_str_he = parseInt(comp_fig_he)+'/100'
+        }
+        else {
+            comp_fig_str_he = '--'
+        }
+
+        var comp_fig_fe = place_occ_data['fe_opportunity_score']
+        if (comp_fig_fe){
+            comp_fig_str_fe = parseInt(comp_fig_fe)+'/100'
+        }
+        else {
+            comp_fig_str_fe = '--'
+        }
+
+        $("#occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
+        $("#occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
+        $("#occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
+        $("#occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
+
+        $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
+        $("#occ-figure-salary").html(salary_fig_str)
+        $("#occ-figure-comp-fe").html(comp_fig_str_fe)
+        $("#occ-figure-comp-he").html(comp_fig_str_he)
+
+
+        var $btn_occ_view = $('#btn-occ-view');
+        var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
+        $btn_occ_view.attr('href', occ_view_url)
+
+        $('#occ-info-tooltip').tooltip({
+            html: true
+        });
+
     }
     else {
-        salary_fig_str = '--'
+        $.address.parameter('occupation_group', encodeURIComponent(occupation));
+
+        console.log("click event!")
+        makeDemandChart(place_data, 51)
     }
-
-
-    var comp_fig_he = place_occ_data['he_opportunity_score']
-    if (comp_fig_he){
-        comp_fig_str_he = parseInt(comp_fig_he)+'/100'
-    }
-    else {
-        comp_fig_str_he = '--'
-    }
-
-    var comp_fig_fe = place_occ_data['fe_opportunity_score']
-    if (comp_fig_fe){
-        comp_fig_str_fe = parseInt(comp_fig_fe)+'/100'
-    }
-    else {
-        comp_fig_str_fe = '--'
-    }
-
-    $("#occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
-    $("#occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
-    $("#occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
-    $("#occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
-
-    $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
-    $("#occ-figure-salary").html(salary_fig_str)
-    $("#occ-figure-comp-fe").html(comp_fig_str_fe)
-    $("#occ-figure-comp-he").html(comp_fig_str_he)
-
-
-    var $btn_occ_view = $('#btn-occ-view');
-    var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
-    $btn_occ_view.attr('href', occ_view_url)
-
-    $('#occ-info-tooltip').tooltip({
-        html: true
-    });
 }
 
 function clearJobFamilies(){
@@ -363,6 +377,14 @@ function hideHelperOcc(){
         $("#helper-occupation").fadeOut(800)
     };
 };
+
+// function selectOccupationGroup(occupation_group, place_data){
+//     highlightOcc(occupation_group);
+//     $.address.parameter('occupation_group', encodeURIComponent(occupation_group));
+
+//     console.log("click event!")
+//     makeDemandChart(place_data, 51)
+// }
 
 
 

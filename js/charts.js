@@ -16,11 +16,21 @@ var sl_color = '#667481';
 
 
 
-function makeDemandChart(place_data){
-    var sorted_data = _.sortBy(place_data, 'demand_sum').reverse()
+function makeDemandChart(place_data, occupation_group_data, n_cols){
+    if ($.address.parameter('occupation_group')) {
+        occ_group = decodeURIComponent($.address.parameter('occupation_group'))
+        console.log(place_data)
+        var filtered_data = _.filter(place_data, function(el) {
+            return el['occ_group'] == occ_group;
+        });
 
-    // var n_cols = 36
-    var n_cols = 51
+        var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
+        occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+    }
+    else {
+        var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
+        occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+    }
 
     var prepped_data = [
         {
@@ -39,15 +49,9 @@ function makeDemandChart(place_data){
         }
     ]
 
-    // occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
-    // The data contains duplcates, so as a work around use 'uniq'...until we get intouch with Burning Glass.
-    plucked = _.pluck(sorted_data, "occupation")
-    occupations = _.uniq(plucked).slice(0,n_cols)
-
     stackedBarHelper(prepped_data, occupations, place_data)
+    // stackedBarHelper(prepped_data, occupations, place_data)
 }
-
-
 
 function makeCompScatterPlot(place_data, education){
 
@@ -231,6 +235,7 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
-    console.log('long_name:', long_name)
-    return occupation_mapping[long_name]['short_name'];
+    // console.log('long_name:', long_name)
+    // return occupation_mapping[long_name]['short_name'];
+    return(long_name)
 };

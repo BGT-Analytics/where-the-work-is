@@ -1,6 +1,6 @@
 include config.mk
 
-all: merged_regions.geojson occupation_data.csv
+all: merged_regions.geojson occupation_group_data.csv occupation_data.csv
 # note: the viz now uses merged_regions_simplified.geojson
 # which has been manually derived from merged_regions.geojson
 
@@ -8,6 +8,7 @@ all: merged_regions.geojson occupation_data.csv
 clean:
 	rm merged_regions.geojson
 	rm occupation_data.csv
+	rm occupation_group_data.csv
 
 define convert_srs
 	ogr2ogr -t_srs EPSG:4326 $@ $<
@@ -56,6 +57,10 @@ merged_regions.table: gb_regions.append
 		   FROM gb_regions \
 		   GROUP BY name \
 		 )"
+
+occupation_group_data.csv: INPUT_DATA_2.xlsx
+		in2csv --sheet "Occupation x Geo" $< | \
+			python calc_occupation_groups.py > $@
 
 # occupation_data.csv: INPUT_DATA.xlsx
 occupation_data.csv: INPUT_DATA_2.xlsx
