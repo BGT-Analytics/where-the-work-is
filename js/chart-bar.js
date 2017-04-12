@@ -72,9 +72,10 @@ function stackedBarHelper(prepped_data, categories, place_data){
         },
         plotOptions: {
             bar: {
-                stacking: 'normal'
+                stacking: 'normal',
             },
             series: {
+                pointWidth: 20,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 pointPadding: 0,
@@ -139,13 +140,21 @@ function stackedBarHelper(prepped_data, categories, place_data){
         },
         plotOptions: {
             bar: {
-                stacking: 'normal'
+                stacking: 'normal',
+                pointPadding: 0.2,
+                groupPadding: 0.1,
             },
             series: {
+                // pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
-                pointPadding: 0,
-                groupPadding: .1,
+                // pointPadding: 0,
+                // groupPadding: 0.1,
+            //                 stacking: 'normal',
+            // shadow: false,
+            // groupPadding: 0,
+            // pointPadding: 0,
+
                 states: {
                     select: {
                         borderColor: '#3B4B5C',
