@@ -1,7 +1,10 @@
 // data
+// The data created from the full csv document.
 var occupation_data;
+// The data created from the csv document, which contains only the occupation groups (made in the Makefile)
 var occupation_group_data;
 var regions_data;
+var place_data;
 
 // remembering what has been clicked
 var clicked_location = false,
@@ -44,7 +47,6 @@ function initialize(){
         occupation_group_data = _.map(
             $.csv.toObjects(csv_groups[0]),
             function(row) {
-                console.log(row)
                 return {
                     occ_group: cleanOccupation(row.occupation_group),
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
@@ -84,9 +86,9 @@ function initialize(){
             });
         });
 
+        // To "Browse mid-skilled jobs by location":
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-country', function() {
-            // updateLocation('Country', 'UK Total');
             updateLocation('Country', 'UK');
             return false;
         });
@@ -126,6 +128,7 @@ function initialize(){
             highlightOcc('');
         });
 
+
         var $cls_occ_group = $(".job-family");
         $cls_occ_group.hover(
             function(){
@@ -135,25 +138,19 @@ function initialize(){
                 highlightOccFamily('');
             }
         );
-        $cls_occ_group.click(function(){
-            var clicked_job_fam_name = $(this).attr('data')
-            // unselect other selected stuff
-            $cls_occ_group.each(function(index, elem){
-                if ($(elem).attr('data')!=clicked_job_fam_name){
-                    $(elem).removeClass('selected');
-                };
-            });
-            if($(this).hasClass('selected')){
-                // unselecting
-                $(this).removeClass('selected');
-                selectOccFamily('');
-            }else{
-                // selecting
-                $(this).addClass('selected')
-                selectOccFamily(clicked_job_fam_name);
-            };
 
-            hideHelperJobFamily();
+        $cls_occ_group.click(function(){
+            var clicked_occ_group = $(this).attr('data')
+            $.address.parameter('occupation_group', encodeURIComponent(clicked_occ_group));
+            // makeDemandChart(place_data, 51)
+
+            if($.address.parameter("location_type") && $.address.parameter("location")){
+                updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
+            }
+            else{
+                // This makes the demand bar chart.
+                updateLocation('Country', 'UK');
+            }
 
         });
 
@@ -197,7 +194,8 @@ function updateLocation(geo_type, geo_name){
 
     clearJobFamilies();
 
-    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
+    // var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
@@ -206,9 +204,14 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    makeDemandChart(place_data, occupation_group_data, 6)
+    if ($.address.parameter('occupation_group')) {
+        makeDemandChart(place_data, occupation_group_data, 51)
+    }
+    else {
+        makeDemandChart(place_data, occupation_group_data, 6)
+    }
 
-// Good code here...
+    // Good code here...
     // makeDemandChart(place_data)
     // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
     makeCompScatterPlot(place_data, education)
@@ -329,9 +332,15 @@ function selectOccupation(occupation, place_data){
     }
     else {
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
+        // makeDemandChart(place_data, 51)
 
-        console.log("click event!")
-        makeDemandChart(place_data, 51)
+        if($.address.parameter("location_type") && $.address.parameter("location")){
+            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
+        }
+        else{
+            // This makes the demand bar chart.
+            updateLocation('Country', 'UK');
+        }
     }
 }
 

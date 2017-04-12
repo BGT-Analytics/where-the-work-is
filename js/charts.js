@@ -14,8 +14,6 @@ var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
 
-
-
 function makeDemandChart(place_data, occupation_group_data, n_cols){
     if ($.address.parameter('occupation_group')) {
         occ_group = decodeURIComponent($.address.parameter('occupation_group'))
@@ -50,7 +48,6 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     ]
 
     stackedBarHelper(prepped_data, occupations, place_data)
-    // stackedBarHelper(prepped_data, occupations, place_data)
 }
 
 function makeCompScatterPlot(place_data, education){
@@ -145,7 +142,10 @@ function highlightOccFamily(occ_group){
             // looping thru stuff in bar chart
             $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
-                    if(occupation_mapping[point.category]['occ_group'] == occ_group){
+                    // if(occupation_mapping[point.category]['occ_group'] == occ_group){
+                    //     point.setState('hover');
+                    // }
+                    if(point.category == occ_group){
                         point.setState('hover');
                     }
                     else{
@@ -235,7 +235,7 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
-    // console.log('long_name:', long_name)
-    // return occupation_mapping[long_name]['short_name'];
-    return(long_name)
+    if (occupation_mapping[long_name]) {
+        return occupation_mapping[long_name]['short_name'];
+    }
 };

@@ -36,49 +36,69 @@ view: location
     <div class='col-sm-6 col-md-5 col-md-offset-1 chart-col chart-col-left'>
       <br/>
 
+      <!-- <div class="well well-occ-active well-sm" id="occ-info-pane"> -->
       <div class="well well-occ-active well-sm" id="occ-info-pane">
         <div id="default-occ-info">
           <div class="row">
             <div class="col-sm-12">
-              <p>Compare groups of mid-skilled occupations:</p>
+              <!-- <p>Compare groups of mid-skilled occupations:</p> -->
+              <p>View mid-skilled occupations by group:</p>
 
             </div>
           </div>
-          <div class="row">
 
-            <div class="col-xs-3" id="family1">
-              <div class="job-family" data="Associate professional & technical occupations">
+          <div class="row">
+            <div class="col-xs-4" id="family1">
+              <div class="job-family" data="Associate Professional & Technical Occupations">
                 <i class="fa fa-briefcase fa-fw fa-2x"></i>
                 <div class="job-family-name">
                   Associate professional & technical
                 </div>
               </div>
             </div>
-            <div class="col-xs-3" id="family2">
-              <div class="job-family" data="Administrative & secretarial occupations">
-                <i class="fa fa-folder-open-o fa-fw fa-2x"></i>
+            <div class="col-xs-4" id="family2">
+              <div class="job-family" data="Sales & Customer Service Occupations">
+                <i class="fa fa-gbp fa-fw fa-2x" aria-hidden="true"></i>
                 <div class="job-family-name">
-                  Administrative & secretarial
+                  Sales & customer service
                 </div>
               </div>
             </div>
-            <div class="col-xs-3" id="family3">
-              <div class="job-family" data="Skilled trades occupations">
-                <i class="fa fa-wrench fa-fw fa-2x"></i>
-                <div class="job-family-name">
-                  Skilled trades
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-3" id="family4">
-              <div class="job-family" data="Caring, leisure & other service occupations">
+            <div class="col-xs-4" id="family3">
+              <div class="job-family" data="Caring, Leisure & Other Service Occupations">
                 <i class="fa fa-hand-paper-o fa-fw fa-2x fa-rotate-90"></i>
                 <div class="job-family-name">
                   Caring, leisure & other service
                 </div>
               </div>
             </div>
+          </div>
 
+          <div class="row">
+            <div class="col-xs-4" id="family1">
+              <div class="job-family" data="Professional Occupations">
+                <i class="fa fa-black-tie fa-fw fa-2x" aria-hidden="true"></i>
+                <div class="job-family-name">
+                  Professional
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4" id="family2">
+              <div class="job-family" data="Administrative & Secretarial Occupations">
+                <i class="fa fa-folder-open-o fa-fw fa-2x"></i>
+                <div class="job-family-name">
+                  Administrative & secretarial
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4" id="family3">
+              <div class="job-family" data="Skilled Trades Occupations">
+                <i class="fa fa-wrench fa-fw fa-2x"></i>
+                <div class="job-family-name">
+                  Skilled trades
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="row">
@@ -86,7 +106,7 @@ view: location
 
               <div class="helper">
                 <div class="hint hint-bottom hidden-print" id="helper-job-family">
-                  Click a group to highlight occupations
+                  Click a group to view occupations
                   <i class="fa fa-hand-o-up"></i>
                 </div>
               </div>
@@ -186,7 +206,7 @@ view: location
 
         <p class="text-center chart-title" id='scatter-title'>Which occupations are most promising?</p>
         <div class="text-center chart-subtitle">
-          <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Average salary advertised for entry-level roles (<2 years of experience) in 2014">Salary</a> & <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Level of opportunity facing recent course completers, measured in terms of openings relative to recent completers. Occupations with higher opportunity scores are occupations where course completers face less competition.">opportunity</a> for 
+          <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Average salary advertised for entry-level roles (<2 years of experience) in 2014">Salary</a> & <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Level of opportunity facing recent course completers, measured in terms of openings relative to recent completers. Occupations with higher opportunity scores are occupations where course completers face less competition.">opportunity</a> for
           <div id="edu-dropdown" class="fake-underline">
             <div class="dropdown">
               <a class="dropdown-toggle" type="button" id="edu-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="click to change education level">
@@ -205,7 +225,7 @@ view: location
 
         <div id="scatter-comp" class="hidden-xs"></div>
         <div id="scatter-comp-mobile" class="visible-xs"></div>
-        
+
         <div id="scatter-note" class="pull-right">
           <i class="fa fa-asterisk"></i>
           <span id="scatter-note-occ"></span> not shown<br/>

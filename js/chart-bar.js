@@ -15,7 +15,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     return shortenName(this.value);
                 },
                 style: {
-                    fontSize: '9px',
+                    fontSize: '14px',
                     color: '#bdc3c7'
                 },
                 x: -6

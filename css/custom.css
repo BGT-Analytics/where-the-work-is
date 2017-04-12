@@ -1,4 +1,4 @@
-html{
+html {
   height: 100%;
 }
 body {
@@ -9,7 +9,7 @@ body {
   color: #bdc3c7;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #FBAB18;
 }
 
@@ -49,7 +49,6 @@ hr {
 
 
 /*text*/
-
 .text-info, .text-info:hover{
   color: #fbab18;
 }
@@ -76,7 +75,6 @@ hr {
 
 
 /*tooltips*/
-
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -99,8 +97,6 @@ hr {
 .tooltip.right .tooltip-arrow {
   border-right-color: #ecf0f1;
 }
-
-
 
 
 /* occupation pane */
@@ -155,20 +151,19 @@ hr {
   padding-left: 5px;
   padding-right: 10px;
 }
-#family4{
-  padding-left: 0px;
-}
+
 
 .job-family{
   text-align: center;
-  margin-top: 14px;
+  /*margin-top: 14px;*/
   padding-top: 10px;
   padding-left: 2px;
   padding-right: 2px;
-  margin-bottom: 14px;
+  /*margin-bottom: 14px;*/
+  margin-bottom: 4px;
   background-color: #b2becb;
   border-radius: 6px;
-  min-height: 100px;
+  min-height: 72px;
 }
 .job-family:hover{
   cursor: pointer;
@@ -184,6 +179,9 @@ hr {
   font-size: 12px;
 }
 
+.fa-2x {
+  font-size: 1.5em;
+}
 
 #occ-detail-top{
   margin-bottom: 18px;
@@ -428,7 +426,8 @@ hr {
   height: calc(100% - 20px);
 }
 #occ-info-pane{
-  height: 180px;
+  /*height: 180px;*/
+  height: 200px;
 }
 #below-occ-info-pane{
   padding-top: 20px;
@@ -470,16 +469,16 @@ hr {
 
 
 #bar-demand {
-  min-width: 200px; 
+  min-width: 200px;
   max-width: 800px;
   height: 100%;
   margin: 0 auto;
 }
 
 #scatter-comp {
-  min-width: 200px; 
+  min-width: 200px;
   height: 100%;
-  max-width: 800px; 
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -671,11 +670,11 @@ hr {
 }
 
 
-#occ-table > thead > tr > th, 
-#occ-table > tbody > tr > th, 
-#occ-table > tfoot > tr > th, 
-#occ-table > thead > tr > td, 
-#occ-table > tbody > tr > td, 
+#occ-table > thead > tr > th,
+#occ-table > tbody > tr > th,
+#occ-table > tfoot > tr > th,
+#occ-table > thead > tr > td,
+#occ-table > tbody > tr > td,
 #occ-table > tfoot > tr > td {
   border: 1px solid #ddd;
 }
@@ -804,7 +803,7 @@ hr {
   .chart-subtitle, #edu-select-list li{
     font-size: 12px;
   }
-  
+
   #occupation-detail-modal .modal-header{
     padding: 6px;
   }
