@@ -1,22 +1,62 @@
 var geo_hierarchy = {
-    'name': 'UK Total',
-    // 'level': 'Country',
-    'level': 'UK',
+    'name': 'UK',
+    'level': 'Country',
     'children': [
         {
             'name': 'NORTHERN IRELAND',
             'level': 'Nation',
-            'children': []
+            'children': [
+                {
+                    'name': '',
+                    'level': 'Region',
+                    'children': [
+                        {
+                            'name': 'BELFAST METROPOLITAN AREA',
+                            'level': 'LEPplus'
+                        }
+                    ]
+                }
+            ]
         },
         {
             'name': 'SCOTLAND',
             'level': 'Nation',
-            'children': []
+            'children': [
+                {
+                    'name': '',
+                    'level': 'Region',
+                    'children': [
+                         {
+                            'name': 'Edinburgh and the Lothians',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Glasgow City Region',
+                            'level': 'LEPplus'
+                        }
+                    ],
+                },
+            ]
         },
         {
             'name': 'WALES',
             'level': 'Nation',
-            'children': []
+            'children': [
+                {
+                    'name': '',
+                    'level': 'Region',
+                    'children': [
+                         {
+                            'name': 'CARDIFF CAPITAL REGION',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Swansea Bay City Region',
+                            'level': 'LEPplus',
+                        }
+                    ],
+                },
+            ]
         },
         {
             'name': 'ENGLAND',
@@ -28,11 +68,11 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Leicester and Leicestershire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Derby, Derbyshire, Nottingham and Nottinghamshire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         }
 
                     ]
@@ -43,15 +83,15 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Greater Cambridge & Greater Peterborough',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'New Anglia',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'South East',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -66,11 +106,11 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'North East',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Tees Valley',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -80,15 +120,23 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Greater Manchester',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Lancashire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Liverpool City Region',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Cheshire and Warrington',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Cumbria',
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -98,20 +146,32 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Coast to Capital',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
-                            'name': 'Oxfordshire',
-                            'level': 'LEP'
+                            'name': 'Oxfordshire LEP',
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Solent',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Thames Valley Berkshire',
-                            'level': 'LEP'
-                        }
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Dorset',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Enterprise M3',
+                            'level': 'LEPplus'
+                        },
+                        // {
+                        //     'name': 'Oxfordshire LEP',
+                        //     'level': 'LEPplus'
+                        // }
                     ]
                 },
                 {
@@ -120,19 +180,23 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Cornwall and the Isles of Scilly',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Heart of the South West',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Swindon and Wiltshire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'West of England',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Gloucestershire',
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -142,19 +206,19 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Black Country',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Coventry and Warwickshire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Greater Birmingham and Solihull',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Stoke-on-Trent and Staffordshire',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -164,15 +228,15 @@ var geo_hierarchy = {
                     'children': [
                         {
                             'name': 'Humber',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Leeds City Region',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         },
                         {
                             'name': 'Sheffield City Region',
-                            'level': 'LEP'
+                            'level': 'LEPplus'
                         }
                     ]
                 }

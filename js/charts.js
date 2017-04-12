@@ -238,4 +238,7 @@ function shortenName(long_name) {
     if (occupation_mapping[long_name]) {
         return occupation_mapping[long_name]['short_name'];
     }
+    else {
+        return long_name;
+    }
 };

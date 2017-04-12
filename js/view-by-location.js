@@ -58,6 +58,7 @@ function initialize(){
         );
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
+            console.log("location in parameter!")
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
@@ -177,6 +178,9 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
+    console.log(geo_display_name)
+    console.log(geo_type)
+
     // if(geo_type=="Country" && geo_name=='UK Total'){
     // if(geo_type=="UK" && geo_name=='UK Total'){
     if(geo_type=="Country" && geo_name=='UK'){
@@ -195,7 +199,10 @@ function updateLocation(geo_type, geo_name){
     clearJobFamilies();
 
     // var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
-    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
+
+    console.log("place", place_data)
+
 
     if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
@@ -321,8 +328,16 @@ function selectOccupation(occupation, place_data){
         $("#occ-figure-comp-he").html(comp_fig_str_he)
 
 
+        occ = $.address.parameter('occupation')
+        occ_group = $.address.parameter('occupation_group')
+
         var $btn_occ_view = $('#btn-occ-view');
-        var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
+        // var occ_view_url = '/occupation.html#/?occupation_group='+ encodeURIComponent(occ_group) + '&occupation='+encodeURIComponent(occ)
+        // console.log(occ_view_url)
+        // var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
+
+        var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
+
         $btn_occ_view.attr('href', occ_view_url)
 
         $('#occ-info-tooltip').tooltip({

@@ -66,7 +66,6 @@ function initialize(){
 
                 // populate LEPs
                 $.each(lep_locations['features'], function(l_index, lep){
-                    console.log(lep)
                     // if (lep.properties['lep'].toUpperCase() == job['geography_name'].toUpperCase()) {
                     if (lep.properties['LEPplus'].toUpperCase() == job['geography_name'].toUpperCase()) {
                         // console.log("$$$")
@@ -85,6 +84,7 @@ function initialize(){
 
 
         if($.address.parameter("occupation")){
+            // console.log(decodeURIComponent($.address.parameter("occupation")))
             updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
         else{
@@ -180,7 +180,12 @@ function updateOccupation(occ_name, location_level){
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
-    $('#occ-back').attr('href', '/#/?occupation='+encodeURIComponent(occ_name))
+
+    // Code for back button.
+    occ = $.address.parameter('occupation')
+    occ_group = $.address.parameter('occupation_group')
+    var index_view_url = '/#/?occupation_group='+ occ_group + '&occupation='+occ
+    $('#occ-back').attr('href', index_view_url)
 
 
     if(occ_name.length>32){
