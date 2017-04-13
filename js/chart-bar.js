@@ -15,7 +15,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     return shortenName(this.value);
                 },
                 style: {
-                    fontSize: '14px',
+                    fontSize: '12px',
                     color: '#bdc3c7'
                 },
                 x: -6
@@ -53,9 +53,12 @@ function stackedBarHelper(prepped_data, categories, place_data){
             footerFormat: '</table>',
             shared: true,
             positioner: function (boxWidth, boxHeight, point) {
-                var xpos = this.chart.plotWidth-160
-                var ypos = Math.max(120, point.plotY)+40 // keep tooltip below legend
-                var ypos = Math.min(this.chart.plotHeight-80, ypos) // keep tooltip above bottom of chart
+                // var xpos = this.chart.plotWidth-160
+                // var ypos = Math.max(120, point.plotY)+40 // keep tooltip below legend
+                // var ypos = Math.min(this.chart.plotHeight-80, ypos) // keep tooltip above bottom of chart
+                var xpos = this.chart.plotWidth-220
+                var ypos = Math.max(120, point.plotY)-80 // keep tooltip below legend
+                var ypos = Math.min(this.chart.plotHeight-250, ypos)
                 return { x: xpos, y: ypos };
             },
             shadow: false,
@@ -141,20 +144,13 @@ function stackedBarHelper(prepped_data, categories, place_data){
         plotOptions: {
             bar: {
                 stacking: 'normal',
-                pointPadding: 0.2,
-                groupPadding: 0.1,
+                // pointPadding: 0.2,
+                // groupPadding: 0.1,
             },
             series: {
-                // pointWidth: 25,
+                pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
-                // pointPadding: 0,
-                // groupPadding: 0.1,
-            //                 stacking: 'normal',
-            // shadow: false,
-            // groupPadding: 0,
-            // pointPadding: 0,
-
                 states: {
                     select: {
                         borderColor: '#3B4B5C',
@@ -185,9 +181,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
         legend: {
             align: 'right',
             layout: 'vertical',
-            x: -20,
-            verticalAlign: 'top',
-            y: 50,
+            x: 0,
+            verticalAlign: 'bottom',
+            y: -120,
             floating: true,
             backgroundColor: '#4e5d6c',
             borderWidth: 0,

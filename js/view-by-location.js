@@ -142,16 +142,35 @@ function initialize(){
 
         $cls_occ_group.click(function(){
             var clicked_occ_group = $(this).attr('data')
+            // Add new parameter to the URL.
             $.address.parameter('occupation_group', encodeURIComponent(clicked_occ_group));
-            // makeDemandChart(place_data, 51)
 
+            // Call #updateLocation, which builds the bar chart.
             if($.address.parameter("location_type") && $.address.parameter("location")){
                 updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
             }
             else{
-                // This makes the demand bar chart.
                 updateLocation('Country', 'UK');
             }
+
+            // Unselect any highlighted divs.
+            $cls_occ_group.each(function(index, elem){
+                if ($(elem).attr('data')!=clicked_occ_group){
+                    $(elem).removeClass('selected');
+                };
+            });
+
+            // Highlight the div that received the click event.
+            if($(this).hasClass('selected')){
+                // unselecting
+                $(this).removeClass('selected');
+                selectOccFamily('');
+            }else{
+                // selecting
+                $(this).addClass('selected')
+                selectOccFamily(clicked_occ_group);
+            };
+            hideHelperJobFamily();
 
         });
 

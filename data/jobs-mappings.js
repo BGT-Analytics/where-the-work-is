@@ -73,6 +73,14 @@ var geo_hierarchy = {
                         {
                             'name': 'Derby, Derbyshire, Nottingham and Nottinghamshire',
                             'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Greater Lincolnshire',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Northamptonshire',
+                            'level': 'LEPplus'
                         }
 
                     ]
@@ -91,6 +99,10 @@ var geo_hierarchy = {
                         },
                         {
                             'name': 'South East',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Hertfordshire',
                             'level': 'LEPplus'
                         }
                     ]
@@ -168,10 +180,10 @@ var geo_hierarchy = {
                             'name': 'Enterprise M3',
                             'level': 'LEPplus'
                         },
-                        // {
-                        //     'name': 'Oxfordshire LEP',
-                        //     'level': 'LEPplus'
-                        // }
+                        {
+                            'name': 'South East Midlands',
+                            'level': 'LEPplus'
+                        }
                     ]
                 },
                 {
@@ -219,6 +231,14 @@ var geo_hierarchy = {
                         {
                             'name': 'Stoke-on-Trent and Staffordshire',
                             'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'The Marches',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'Worcestershire',
+                            'level': 'LEPplus'
                         }
                     ]
                 },
@@ -236,6 +256,10 @@ var geo_hierarchy = {
                         },
                         {
                             'name': 'Sheffield City Region',
+                            'level': 'LEPplus'
+                        },
+                        {
+                            'name': 'York & North Yorkshire',
                             'level': 'LEPplus'
                         }
                     ]
@@ -494,8 +518,8 @@ var occupation_mapping = {
     "Metal Machining, Fitting & Instrument Making Trades": {
         "short_name":"NA",
         "occ_group": "NA",
-        "description":"NA",
-        "example_titles":["example title"]
+        "description":"Metal machining, fitting and instrument making trades workers mark out metal for machine tool working, set up and operate lathes, boring, drilling, grinding, milling machines and presses, assemble and repair machine tools, install and repair plant and industrial machinery, fix and assemble parts and sub-assemblies in the manufacture of metal products, make, calibrate, test and repair precision and optical instruments, and install and repair air-conditioning and refrigeration systems.",
+        "example_titles":["METAL MACHINING SETTERS AND SETTER-OPERATORS", "TOOL MAKERS, TOOL FITTERS AND MARKERS-OUT", "METAL WORKING PRODUCTION AND MAINTENANCE FITTERS", "PRECISION INSTRUMENT MAKERS AND REPAIRERS", "AIR-CONDITIONING AND REFRIGERATION ENGINEERS"]
 
     },
     "Architects, Town Planners & Surveyors": {
