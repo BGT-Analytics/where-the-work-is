@@ -67,10 +67,8 @@ function initialize(){
                 // populate LEPs
                 $.each(lep_locations['features'], function(l_index, lep){
                     // if (lep.properties['lep'].toUpperCase() == job['geography_name'].toUpperCase()) {
-                    if (lep.properties['LEPplus'].toUpperCase() == job['geography_name'].toUpperCase()) {
-                        // console.log("$$$")
-                        // console.log(lep)
-                        // console.log(job)
+                    // if (lep.properties['LEPplus'].toUpperCase() == job['geography_name'].toUpperCase()) {
+                    if (lep.properties['LEP/City Region'].toUpperCase() == job['geography_name'].toUpperCase()) {
                         addDataToLocation(lep, occ, job);
                     }
                 });
