@@ -355,7 +355,7 @@ function selectOccupation(occupation, place_data){
         // console.log(occ_view_url)
         // var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
 
-        var occ_view_url = '{{ site.baseurl }}/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
+        var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
         $btn_occ_view.attr('href', occ_view_url)
 
