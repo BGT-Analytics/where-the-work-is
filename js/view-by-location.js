@@ -275,15 +275,23 @@ function selectOccupation(occupation, place_data){
     highlightOcc(occupation);
 
     if ($.address.parameter('occupation_group')) {
+        // Add occupation to the URL
         $.address.parameter('occupation', encodeURIComponent(occupation));
-        // this populates the occupation detail pane on the main location view
 
+
+        // Modal
+        // $('#exampleModal').modal('show');
+
+
+
+        // this populates the occupation detail pane on the main location view
         var $occ_info_pane = $('#occ-info-pane');
         $occ_info_pane.fadeTo(0, 0, function () {
             $occ_info_pane.fadeTo(800, 1)
         });
         $occ_info_pane.addClass('well-occ-inactive');
         $occ_info_pane.removeClass('well-occ-active');
+
 
         // show map helper if user doesn't figure it out after 5 secs
         setTimeout(showHelperMap, 5000);
@@ -365,14 +373,14 @@ function selectOccupation(occupation, place_data){
 
     }
     else {
+        // Add occupation group to URL.
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
-        // makeDemandChart(place_data, 51)
 
+        // Check for a location type and call updateLocation, which builds the demand chart.
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
-            // This makes the demand bar chart.
             updateLocation('Country', 'UK');
         }
     }
@@ -386,8 +394,6 @@ function clearJobFamilies(){
         };
     });
 }
-
-
 
 function showHelperJobFamily(){
     if(clicked_occ_group==false){
@@ -421,13 +427,6 @@ function hideHelperOcc(){
     };
 };
 
-// function selectOccupationGroup(occupation_group, place_data){
-//     highlightOcc(occupation_group);
-//     $.address.parameter('occupation_group', encodeURIComponent(occupation_group));
-
-//     console.log("click event!")
-//     makeDemandChart(place_data, 51)
-// }
 
 
 
