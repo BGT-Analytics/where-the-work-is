@@ -10,11 +10,8 @@ var table_header_cols = [   'geography_name',
 
 // do stuff when the page loads
 (function(){
-
     initialize();
 })()
-
-
 
 function initialize(){
 
@@ -51,16 +48,29 @@ function initialize(){
         $.each(occupation_list, function(k_index, occ) {
             current_occupation = _.where(occupation_data, {occupation: occ});
             $.each(current_occupation, function(j_index, job){
-                // populate regions 
+                // populate regions
                 $.each(regions_data[0]['features'], function(r_index, region){
+
+                    // if (job['geography_name'] == 'OXFORDSHIRE LEP') {
+                    // if (region.properties['JOB_REGION'] == 'OXFORDSHIRE') {
+                    //     console.log("looking for ...")
+                    //     // Oxfordshire
+                    //     console.log(job['geography_name'])
+                        // console.log(region.properties['JOB_REGION'])
+                    // }
+
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
                         addDataToLocation(region, occ, job);
                     }
                 });
 
-                // populate LEPs 
+                // populate LEPs
                 $.each(lep_locations['features'], function(l_index, lep){
-                    if (lep.properties['lep'] == job['geography_name']) {
+                    // if (lep.properties['lep'].toUpperCase() == job['geography_name'].toUpperCase()) {
+                    if (lep.properties['LEPplus'].toUpperCase() == job['geography_name'].toUpperCase()) {
+                        // console.log("$$$")
+                        // console.log(lep)
+                        // console.log(job)
                         addDataToLocation(lep, occ, job);
                     }
                 });
@@ -74,6 +84,7 @@ function initialize(){
 
 
         if($.address.parameter("occupation")){
+            // console.log(decodeURIComponent($.address.parameter("occupation")))
             updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
         else{
@@ -141,16 +152,17 @@ function initialize(){
 function addDataToLocation(location, occ, job){
     if (typeof location.properties['jobs_data'] === 'undefined')
         location.properties['jobs_data'] = {};
-    location.properties['jobs_data'][occ] = {};
-    location.properties['jobs_data'][occ]['lq'] = job['lq'];
-    location.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
-    location.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
-    location.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
-    location.properties['jobs_data'][occ]['reg_salary'] = job['reg_salary'];
-    location.properties['jobs_data'][occ]['fe_opportunity_score'] = job['fe_opportunity_score'];
-    location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
-    location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
-    location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
+        location.properties['jobs_data'][occ] = {};
+        location.properties['jobs_data'][occ]['lq'] = job['lq'];
+        location.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
+        location.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+        location.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+        location.properties['jobs_data'][occ]['reg_salary'] = job['reg_salary'];
+        location.properties['jobs_data'][occ]['fe_opportunity_score'] = job['fe_opportunity_score'];
+        location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
+        location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
+        location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
+    // console.log("data added", location.properties['jobs_data'])
 }
 
 function updateOccupation(occ_name, location_level){
@@ -168,7 +180,12 @@ function updateOccupation(occ_name, location_level){
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
-    $('#occ-back').attr('href', '/#/?occupation='+encodeURIComponent(occ_name))
+
+    // Code for back button.
+    occ = $.address.parameter('occupation')
+    occ_group = $.address.parameter('occupation_group')
+    var index_view_url = '/#/?occupation_group='+ occ_group + '&occupation='+occ
+    $('#occ-back').attr('href', index_view_url)
 
 
     if(occ_name.length>32){
@@ -240,8 +257,8 @@ function initializeTable(table_id, column_names, data){
         info: false,
         paging: false,
         aoColumns: [
-            { 
-                "sTitle": "Location", 
+            {
+                "sTitle": "Location",
                 "sType": "string",
                 "mRender": function (data, type, full) {
                             if(data){
@@ -256,8 +273,8 @@ function initializeTable(table_id, column_names, data){
                         }
             },
             {
-                "sTitle": "Job openings", 
-                "sType": "custom-num-html", 
+                "sTitle": "Job openings",
+                "sType": "custom-num-html",
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -268,9 +285,9 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Average salary", 
-                "sType": "custom-num-html", 
+            {
+                "sTitle": "Average salary",
+                "sType": "custom-num-html",
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -281,10 +298,10 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Opportunity score (FE)", 
-                "sType": "custom-num-html", 
-                "oDefault": 0, 
+            {
+                "sTitle": "Opportunity score (FE)",
+                "sType": "custom-num-html",
+                "oDefault": 0,
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){
@@ -295,10 +312,10 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Opportunity score (HE)", 
-                "sType": "custom-num-html", 
-                "oDefault": 0, 
+            {
+                "sTitle": "Opportunity score (HE)",
+                "sType": "custom-num-html",
+                "oDefault": 0,
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){

@@ -14,13 +14,22 @@ var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
 
+function makeDemandChart(place_data, occupation_group_data, n_cols){
+    if ($.address.parameter('occupation_group')) {
+        occ_group = decodeURIComponent($.address.parameter('occupation_group'))
+        console.log(place_data)
+        var filtered_data = _.filter(place_data, function(el) {
+            return el['occ_group'] == occ_group;
+        });
 
+        var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
+        occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+    }
+    else {
+        var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
+        occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+    }
 
-function makeDemandChart(place_data){
-
-    var sorted_data = _.sortBy(place_data, 'demand_sum').reverse()
-
-    var n_cols = 36
     var prepped_data = [
         {
             name: 'Higher education',
@@ -38,12 +47,8 @@ function makeDemandChart(place_data){
         }
     ]
 
-    occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
-
     stackedBarHelper(prepped_data, occupations, place_data)
 }
-
-
 
 function makeCompScatterPlot(place_data, education){
 
@@ -83,7 +88,7 @@ function highlightOcc(occupation){
 
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
-            var isVisible = false; 
+            var isVisible = false;
             // looping thru stuff in scatterplot
             $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation){
@@ -137,7 +142,10 @@ function highlightOccFamily(occ_group){
             // looping thru stuff in bar chart
             $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
-                    if(occupation_mapping[point.category]['occ_group'] == occ_group){
+                    // if(occupation_mapping[point.category]['occ_group'] == occ_group){
+                    //     point.setState('hover');
+                    // }
+                    if(point.category == occ_group){
                         point.setState('hover');
                     }
                     else{
@@ -227,5 +235,10 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
-    return occupation_mapping[long_name]['short_name'];
+    if (occupation_mapping[long_name]) {
+        return occupation_mapping[long_name]['short_name'];
+    }
+    else {
+        return long_name;
+    }
 };
