@@ -60,19 +60,19 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-    <script src="/lib/modernizr-2.6.2.min.js"></script>
-    <script src="/lib/bootstrap.min.js"></script>
-    <script src="/lib/jquery.address.js"></script>
-    <script src="/lib/leaflet.js"></script>
-    <script src="/lib/jquery.csv-0.71.min.js"></script>
-    <script src="/lib/underscore-min.js"></script>
-    <script src="/lib/jquery.geocomplete.min.js"></script>
-    <script src="/lib/accounting.min.js"></script>
-    <script src="/lib/highcharts.js"></script>
-    <script src="/lib/highcharts-more.js"></script>
+    <script src="{{ site.baseurl }}/lib/modernizr-2.6.2.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/jquery.address.js"></script>
+    <script src="{{ site.baseurl }}/lib/leaflet.js"></script>
+    <script src="{{ site.baseurl }}/lib/jquery.csv-0.71.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/underscore-min.js"></script>
+    <script src="{{ site.baseurl }}/lib/jquery.geocomplete.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/accounting.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/highcharts.js"></script>
+    <script src="{{ site.baseurl }}/lib/highcharts-more.js"></script>
 
-    <script src="/lib/spin.min.js" type="text/javascript"></script>
-    <script src="/lib/jquery.spin.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/lib/spin.min.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/lib/jquery.spin.js" type="text/javascript"></script>
     <script src="/js/utils.js"></script>
 
     <script src="/data/lep_locations.js"></script>
@@ -84,9 +84,9 @@
     <script src="/js/chart-bar.js"></script>
     <script src="/js/view-by-location.js"></script>
     {% else if page.view = 'occupation' %}
-    <script src="/lib/jquery.dataTables.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/jquery.dataTables.min.js"></script>
     <script src="/js/datatables-custom-sort.js"></script>
-    <script src="/lib/dataTables.bootstrap.js"></script>
+    <script src="{{ site.baseurl }}/lib/dataTables.bootstrap.js"></script>
     <script src="/js/view-by-occupation.js"></script>
     <script src="/js/maps.js"></script>
     {% endif %}
@@ -146,6 +146,6 @@
         </div>
       </div>
     </div>
-    <script src="/lib/analytics_lib.js"></script>
+    <script src="{{ site.baseurl }}/lib/analytics_lib.js"></script>
   </body>
 </html>
