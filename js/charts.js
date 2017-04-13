@@ -17,7 +17,6 @@ var sl_color = '#667481';
 function makeDemandChart(place_data, occupation_group_data, n_cols){
     if ($.address.parameter('occupation_group')) {
         occ_group = decodeURIComponent($.address.parameter('occupation_group'))
-        console.log(place_data)
         var filtered_data = _.filter(place_data, function(el) {
             return el['occ_group'] == occ_group;
         });
@@ -48,6 +47,7 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     ]
 
     stackedBarHelper(prepped_data, occupations, place_data)
+
 }
 
 function makeCompScatterPlot(place_data, education){

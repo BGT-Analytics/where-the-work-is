@@ -144,11 +144,11 @@ function stackedBarHelper(prepped_data, categories, place_data){
         plotOptions: {
             bar: {
                 stacking: 'normal',
-                // pointPadding: 0.2,
-                // groupPadding: 0.1,
             },
             series: {
-                pointWidth: 25,
+                pointPadding: 0.1,
+                groupPadding: 0,
+                pointWidth: 20,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 states: {
