@@ -279,11 +279,6 @@ function selectOccupation(occupation, place_data){
         $.address.parameter('occupation', encodeURIComponent(occupation));
 
 
-        // Modal
-        // $('#exampleModal').modal('show');
-
-
-
         // this populates the occupation detail pane on the main location view
         var $occ_info_pane = $('#occ-info-pane');
         $occ_info_pane.fadeTo(0, 0, function () {
@@ -291,10 +286,6 @@ function selectOccupation(occupation, place_data){
         });
         $occ_info_pane.addClass('well-occ-inactive');
         $occ_info_pane.removeClass('well-occ-active');
-
-
-        // show map helper if user doesn't figure it out after 5 secs
-        setTimeout(showHelperMap, 5000);
 
         clearJobFamilies();
 
@@ -371,6 +362,43 @@ function selectOccupation(occupation, place_data){
             html: true
         });
 
+
+
+
+// Modal
+$('#occupationModal').modal('show');
+
+// Give modal a title.
+$('#occupationModalLabel').html(occupation);
+
+// Give modal content.
+$("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
+$("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
+$("#modal-occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
+$("#modal-occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
+
+$("#modal-occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
+$("#modal-occ-figure-salary").html(salary_fig_str)
+$("#modal-occ-figure-comp-fe").html(comp_fig_str_fe)
+$("#modal-occ-figure-comp-he").html(comp_fig_str_he)
+
+occ = $.address.parameter('occupation')
+occ_group = $.address.parameter('occupation_group')
+
+var $btn_occ_view = $('#modal-btn-occ-view');
+
+var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
+
+$btn_occ_view.attr('href', occ_view_url)
+
+// $('#occ-info-tooltip').tooltip({
+//     html: true
+// });
+
+
+
+        // show map helper if user doesn't figure it out after 5 secs
+        setTimeout(showHelperMap, 5000);
     }
     else {
         // Add occupation group to URL.

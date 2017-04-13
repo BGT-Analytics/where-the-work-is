@@ -217,6 +217,12 @@ hr {
   margin-bottom: 4px;
 }
 
+.modal-occ-figure-title{
+  color: #3B4B5C;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
 .occ-xs{
   font-size: 9px;
   font-weight: 200px;
@@ -333,7 +339,6 @@ hr {
 }
 
 
-
 /* location select dropdown */
 #location-select-list, #occ-select-list{
   min-width: 380px;
@@ -413,6 +418,12 @@ hr {
   background-color: #fbab18;
 }
 
+.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
+  border: 2px solid #3B4B5C;
+  color: #fff;
+  background-color: #3B4B5C;
+  border-color: #3B4B5C;
+}
 
 /* page layout */
 #main-content{
@@ -569,10 +580,12 @@ hr {
 .modal-title, .modal-subtitle{
   color: #ecf0f1;
 }
+
 .modal-title {
   font-size: 20px;
   font-weight: 700;
 }
+
 .modal-subtitle {
   margin: 0px;
   font-size: 12px;
@@ -584,10 +597,10 @@ hr {
   text-shadow: none;
 }
 
-
 .modal-body {
   color: #777;
 }
+
 
 /* map stuff */
 .info h4 {
