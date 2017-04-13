@@ -1,7 +1,10 @@
 port:  5000
 markdown: kramdown
 name: "Where the work is"
-url: http://wheretheworkis.org
+# url: http://wheretheworkis.org
+# For github pages...
+url: "https://datamade.github.io"
+baseurl: "/where-the-work-is"
 encoding: utf-8
 timezone: America/Chicago
 description: "Explore entry-level job dynamics for middle-skilled jobs in the UK"
