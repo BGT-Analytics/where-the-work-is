@@ -184,7 +184,7 @@ function updateOccupation(occ_name, location_level){
     // Code for back button.
     occ = $.address.parameter('occupation')
     occ_group = $.address.parameter('occupation_group')
-    var index_view_url = '/#/?occupation_group='+ occ_group + '&occupation='+occ
+    var index_view_url = '{{ site.baseurl }}/#/?occupation_group='+ occ_group + '&occupation='+occ
     $('#occ-back').attr('href', index_view_url)
 
 
