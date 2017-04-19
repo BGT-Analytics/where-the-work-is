@@ -15,8 +15,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     return shortenName(this.value);
                 },
                 style: {
-                    fontSize: '12px',
-                    color: '#bdc3c7'
+                    fontSize: '10px',
+                    color: '#bdc3c7',
+                    textOverflow: 'none'
                 },
                 x: -6
             },
@@ -78,7 +79,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 stacking: 'normal',
             },
             series: {
-                pointWidth: 20,
+                pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 pointPadding: 0,
@@ -148,7 +149,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             series: {
                 pointPadding: 0.1,
                 groupPadding: 0,
-                pointWidth: 20,
+                pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 states: {

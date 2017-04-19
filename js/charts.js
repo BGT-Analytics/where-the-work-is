@@ -23,6 +23,13 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
 
         var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
         occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+
+        $('#bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
+        $('#mobile-bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
+
+        $('#chart-subtitle').html("occupation");
+        $('#mobile-chart-subtitle').html("occupation");
+
     }
     else {
         var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
@@ -47,7 +54,6 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     ]
 
     stackedBarHelper(prepped_data, occupations, place_data)
-
 }
 
 function makeCompScatterPlot(place_data, education){
@@ -235,10 +241,11 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
-    if (occupation_mapping[long_name]) {
-        return occupation_mapping[long_name]['short_name'];
-    }
-    else {
-        return long_name;
-    }
+    // if (occupation_mapping[long_name]) {
+    //     return occupation_mapping[long_name]['short_name'];
+    // }
+    // else {
+    //     return long_name;
+    // }
+    return long_name
 };

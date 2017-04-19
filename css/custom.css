@@ -482,7 +482,7 @@ hr {
 #bar-demand {
   min-width: 200px;
   max-width: 800px;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
 }
 
