@@ -29,7 +29,6 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
 
         $('#chart-subtitle').html("occupation");
         $('#mobile-chart-subtitle').html("occupation");
-
     }
     else {
         var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
@@ -52,6 +51,17 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
             data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
         }
     ]
+
+    // Dynamically resize the chart based on number of columns.
+    if ((occupations.length * 12) > 100 ){
+        pct_height = '100%'
+    }
+    else {
+        pct_height = String(occupations.length * 12) + '%'
+    }
+
+    $('#bar-demand').css('height', pct_height)
+
 
     stackedBarHelper(prepped_data, occupations, place_data)
 }
