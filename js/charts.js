@@ -260,3 +260,16 @@ function shortenName(long_name) {
     // }
     return long_name
 };
+
+function clearSelect() {
+    $('#occupationModal').on('hidden.bs.modal', function () {
+        $.each(Highcharts.charts, function(index, chart){
+            if (chart) {
+                points = chart.getSelectedPoints();
+                $.each(points, function(index, point) {
+                    point.select(false);
+                })
+            }
+        });
+    })
+};

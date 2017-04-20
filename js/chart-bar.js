@@ -210,7 +210,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
     }
     var desktop_config = $.extend(deskop_extras, config);
 
-
     $('#bar-demand').highcharts(desktop_config);
     $('#bar-demand-mobile').highcharts(mobile_config);
 };
