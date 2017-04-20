@@ -197,8 +197,6 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
-    // if(geo_type=="Country" && geo_name=='UK Total'){
-    // if(geo_type=="UK" && geo_name=='UK Total'){
     if(geo_type=="Country" && geo_name=='UK'){
         geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
@@ -227,27 +225,13 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    if ($.address.parameter('occupation_group')) {
-        makeDemandChart(place_data, occupation_group_data, 51)
-    }
-    else {
-        makeDemandChart(place_data, occupation_group_data, 6)
-    }
-
-    // Good code here...
-    // makeDemandChart(place_data)
-    // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
+    makeDemandChart(place_data, occupation_group_data)
     makeCompScatterPlot(place_data, education)
 
-    if ($.address.parameter('occupation')){
-        clicked_occ = true;
-        selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
-    }
-
-    // $( "#bar-demand" ).css( "height", function( index ) {
-    //   return  (($.address.parameter('occupation_group')).length * 5 + "%");
-    //   // return '90%'
-    // });
+    // if ($.address.parameter('occupation')){
+    //     clicked_occ = true;
+    //     selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
+    // }
 
 }
 
@@ -366,8 +350,6 @@ function selectOccupation(occupation, place_data){
         });
 
 
-
-
 // Modal
 $('#occupationModal').modal('show');
 
@@ -376,8 +358,6 @@ $('#occupationModalLabel').html(occupation);
 
 // Give modal content.
 $("#modal-occ-description").html(occupation_mapping[occupation]['description']);
-console.log("occc", occupation)
-
 
 $("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
 $("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')

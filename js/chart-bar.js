@@ -109,11 +109,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
             x: 0,
             verticalAlign: 'bottom',
             y: -60,
-            // align: 'right',
-            // layout: 'vertical',
-            // x: -10,
-            // verticalAlign: 'top',
-            // y: 150,
             floating: true,
             backgroundColor: '#4e5d6c',
             borderWidth: 0,
@@ -139,7 +134,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
         }
     }
     var mobile_config = $.extend(mobile_extras, config);
-
 
     var deskop_extras = {
         chart: {

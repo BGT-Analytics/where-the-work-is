@@ -9,7 +9,6 @@ Highcharts.setOptions({
     }
 });
 
-
 var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
@@ -22,7 +21,8 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
         });
 
         var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
-        occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+        // occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+        occupations = _.pluck(sorted_data, "occupation")
 
         $('#bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
         $('#mobile-bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
@@ -32,8 +32,11 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     }
     else {
         var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
-        occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+        // occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+        occupations = _.pluck(sorted_data, "occ_group")
     }
+
+    n_cols = occupations.length
 
     var prepped_data = [
         {
@@ -53,15 +56,13 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     ]
 
     // Dynamically resize the chart based on number of columns.
-    if ((occupations.length * 12) > 100 ){
+    if ((n_cols * 12) > 100 ){
         pct_height = '100%'
     }
     else {
-        pct_height = String(occupations.length * 12) + '%'
+        pct_height = String(n_cols * 12) + '%'
     }
-
     $('#bar-demand').css('height', pct_height)
-
 
     stackedBarHelper(prepped_data, occupations, place_data)
 }
