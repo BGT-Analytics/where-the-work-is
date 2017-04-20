@@ -42,16 +42,31 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
         {
             name: 'Higher education',
             color: he_color,
-            data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#FFF2D6'
+                }
+            },
         }, {
             name: 'Further education',
             color: fe_color,
-            data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#e2be7c'
+                }
+            },
         }
         , {
             name: 'School leavers',
             color: sl_color,
-            data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#FDAC00'
+                }
+            },
         }
     ]
 

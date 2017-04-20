@@ -495,11 +495,11 @@ hr {
 
 .highcharts-tooltip span {
   height:auto;
-  width:240px;
+  width:200px;
   white-space:normal !important; /*this is required to get tooltip contents to wrap*/
 }
 .highcharts-tooltip table{
-  width: 240px;
+  width: 200px;
 }
 
 #scatter-note{
