@@ -15,8 +15,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
                     return shortenName(this.value);
                 },
                 style: {
-                    fontSize: '12px',
-                    color: '#bdc3c7'
+                    fontSize: '10px',
+                    color: '#bdc3c7',
+                    textOverflow: 'none'
                 },
                 x: -6
             },
@@ -53,19 +54,15 @@ function stackedBarHelper(prepped_data, categories, place_data){
             footerFormat: '</table>',
             shared: true,
             positioner: function (boxWidth, boxHeight, point) {
-                // var xpos = this.chart.plotWidth-160
-                // var ypos = Math.max(120, point.plotY)+40 // keep tooltip below legend
-                // var ypos = Math.min(this.chart.plotHeight-80, ypos) // keep tooltip above bottom of chart
-                var xpos = this.chart.plotWidth-220
-                var ypos = Math.max(120, point.plotY)-80 // keep tooltip below legend
-                var ypos = Math.min(this.chart.plotHeight-250, ypos)
+                var xpos = this.chart.plotWidth-60
+                var ypos = Math.max(120, point.plotY)+40 // distance from top
+                var ypos = Math.min(this.chart.plotHeight-185, ypos) // distance from bottom
                 return { x: xpos, y: ypos };
             },
             shadow: false,
             borderColor: '#3B4B5C'
         },
         series: prepped_data
-
     };
 
     var mobile_extras = {
@@ -78,7 +75,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 stacking: 'normal',
             },
             series: {
-                pointWidth: 20,
+                pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 pointPadding: 0,
@@ -105,9 +102,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
         legend: {
             align: 'right',
             layout: 'vertical',
-            x: -10,
-            verticalAlign: 'top',
-            y: 150,
+            x: 0,
+            verticalAlign: 'bottom',
+            y: -60,
             floating: true,
             backgroundColor: '#4e5d6c',
             borderWidth: 0,
@@ -134,7 +131,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
     }
     var mobile_config = $.extend(mobile_extras, config);
 
-
     var deskop_extras = {
         chart: {
             type: 'bar',
@@ -148,7 +144,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             series: {
                 pointPadding: 0.1,
                 groupPadding: 0,
-                pointWidth: 20,
+                pointWidth: 25,
                 borderColor: '#3B4B5C',
                 cursor: 'pointer',
                 states: {
@@ -156,9 +152,9 @@ function stackedBarHelper(prepped_data, categories, place_data){
                         borderColor: '#3B4B5C',
                         color: "#FBAB18"
                     },
-                    hover: {
-                        color: '#e2be7c'
-                    }
+                    // hover: {
+                    //     color: '#e2be7c'
+                    // }
                 },
                 point: {
                     events: {
@@ -183,7 +179,7 @@ function stackedBarHelper(prepped_data, categories, place_data){
             layout: 'vertical',
             x: 0,
             verticalAlign: 'bottom',
-            y: -120,
+            y: -60,
             floating: true,
             backgroundColor: '#4e5d6c',
             borderWidth: 0,
@@ -209,7 +205,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
         }
     }
     var desktop_config = $.extend(deskop_extras, config);
-
 
     $('#bar-demand').highcharts(desktop_config);
     $('#bar-demand-mobile').highcharts(mobile_config);

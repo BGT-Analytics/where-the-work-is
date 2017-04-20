@@ -9,7 +9,6 @@ Highcharts.setOptions({
     }
 });
 
-
 var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
@@ -22,32 +21,65 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
         });
 
         var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
-        occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+        // occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
+        occupations = _.pluck(sorted_data, "occupation")
+
+        $('#bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
+        $('#mobile-bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
+
+        $('#chart-subtitle').html("occupation");
+        $('#mobile-chart-subtitle').html("occupation");
     }
     else {
         var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
-        occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+        // occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
+        occupations = _.pluck(sorted_data, "occ_group")
     }
+
+    n_cols = occupations.length
 
     var prepped_data = [
         {
             name: 'Higher education',
             color: he_color,
-            data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_he").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#FFF2D6'
+                }
+            },
         }, {
             name: 'Further education',
             color: fe_color,
-            data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_fe").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#e2be7c'
+                }
+            },
         }
         , {
             name: 'School leavers',
             color: sl_color,
-            data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols)
+            data: _.pluck(sorted_data, "demand_entry_sl").slice(0,n_cols),
+            states: {
+                hover: {
+                    color: '#FDAC00'
+                }
+            },
         }
     ]
 
-    stackedBarHelper(prepped_data, occupations, place_data)
+    // Dynamically resize the chart based on number of columns.
+    if ((n_cols * 12) > 100 ){
+        pct_height = '100%'
+    }
+    else {
+        pct_height = String(n_cols * 12) + '%'
+    }
+    $('#bar-demand').css('height', pct_height)
 
+    stackedBarHelper(prepped_data, occupations, place_data)
 }
 
 function makeCompScatterPlot(place_data, education){
@@ -235,10 +267,24 @@ function triggerHoverBar(occupation){
 
 
 function shortenName(long_name) {
-    if (occupation_mapping[long_name]) {
-        return occupation_mapping[long_name]['short_name'];
-    }
-    else {
-        return long_name;
-    }
+    // if (occupation_mapping[long_name]) {
+    //     return occupation_mapping[long_name]['short_name'];
+    // }
+    // else {
+    //     return long_name;
+    // }
+    return long_name
+};
+
+function clearSelect() {
+    $('#occupationModal').on('hidden.bs.modal', function () {
+        $.each(Highcharts.charts, function(index, chart){
+            if (chart) {
+                points = chart.getSelectedPoints();
+                $.each(points, function(index, point) {
+                    point.select(false);
+                })
+            }
+        });
+    })
 };

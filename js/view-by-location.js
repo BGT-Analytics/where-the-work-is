@@ -1,4 +1,3 @@
-// data
 // The data created from the full csv document.
 var occupation_data;
 // The data created from the csv document, which contains only the occupation groups (made in the Makefile)
@@ -12,7 +11,6 @@ var clicked_location = false,
     clicked_occ = false,
     clicked_map = false;
 
-// do stuff when the page loads
 (function(){
     initialize();
 })()
@@ -190,6 +188,8 @@ function initialize(){
         $('[data-toggle="tooltip"]').tooltip({
             html: true
         });
+
+        clearSelect();
     });
 }
 
@@ -197,8 +197,6 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
-    // if(geo_type=="Country" && geo_name=='UK Total'){
-    // if(geo_type=="UK" && geo_name=='UK Total'){
     if(geo_type=="Country" && geo_name=='UK'){
         geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
@@ -227,28 +225,8 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    if ($.address.parameter('occupation_group')) {
-        makeDemandChart(place_data, occupation_group_data, 51)
-    }
-    else {
-        makeDemandChart(place_data, occupation_group_data, 6)
-    }
-
-    // Good code here...
-    // makeDemandChart(place_data)
-    // makeDemandScatterPlot('#scatter-demand', agg_data_scatter)
+    makeDemandChart(place_data, occupation_group_data)
     makeCompScatterPlot(place_data, education)
-
-    if ($.address.parameter('occupation')){
-        clicked_occ = true;
-        selectOccupation(decodeURIComponent($.address.parameter('occupation')), place_data)
-    }
-
-    // $( "#bar-demand" ).css( "height", function( index ) {
-    //   return  (($.address.parameter('occupation_group')).length * 5 + "%");
-    //   // return '90%'
-    // });
-
 }
 
 function updateEducation(education){
@@ -278,41 +256,10 @@ function selectOccupation(occupation, place_data){
     highlightOcc(occupation);
 
     if ($.address.parameter('occupation_group')) {
-        // Add occupation to the URL
+        // Add occupation to the URL, becuase someone clicked an occupation.
         $.address.parameter('occupation', encodeURIComponent(occupation));
 
-
-        // this populates the occupation detail pane on the main location view
-        // var $occ_info_pane = $('#occ-info-pane');
-        // $occ_info_pane.fadeTo(0, 0, function () {
-        //     $occ_info_pane.fadeTo(800, 1)
-        // });
-        // $occ_info_pane.addClass('well-occ-inactive');
-        // $occ_info_pane.removeClass('well-occ-active');
-
-        // clearJobFamilies();
-
-
-        // $("#default-occ-info").hide();
-        // $("#occ-detail").show();
-
-        // if(occupation.length>50){
-        //     $("#sel-occ-name").html('<small class="long">'+occupation+'</small>')
-        // }else if(occupation.length>40){
-        //     $("#sel-occ-name").html('<small>'+occupation+'</small>')
-        // }else{
-        //     $("#sel-occ-name").html(occupation)
-        // }
-        // var tooltip_content = 'Jobs included:<br/><ul>'
-        // $.each(occupation_mapping[occupation]['example_titles'], function(index, title){
-        //     tooltip_content = tooltip_content +'<li>'+ title + '</li>'
-        // });
-        // tooltip_content = tooltip_content+'</ul>'+occupation_mapping[occupation]['description']
-        // $("#sel-occ-desc").html('<a href="#" data-toggle="tooltip" id="occ-info-tooltip" data-placement="bottom" title="'+tooltip_content+'"><i class="fa fa-info-circle"></i></a>')
-
         var place_occ_data = _.where(place_data, {occupation: occupation})[0]
-
-
         var salary_fig = place_occ_data['reg_salary']
         if (salary_fig){
             salary_fig_str = '£'+numberWithCommas(salary_fig)
@@ -320,7 +267,6 @@ function selectOccupation(occupation, place_data){
         else {
             salary_fig_str = '--'
         }
-
 
         var comp_fig_he = place_occ_data['he_opportunity_score']
         if (comp_fig_he){
@@ -338,74 +284,35 @@ function selectOccupation(occupation, place_data){
             comp_fig_str_fe = '--'
         }
 
-        // $("#occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
-        // $("#occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
-        // $("#occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
-        // $("#occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
-
-        // $("#occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
-        // $("#occ-figure-salary").html(salary_fig_str)
-        // $("#occ-figure-comp-fe").html(comp_fig_str_fe)
-        // $("#occ-figure-comp-he").html(comp_fig_str_he)
-
-
-        // occ = $.address.parameter('occupation')
-        // occ_group = $.address.parameter('occupation_group')
-
-        // var $btn_occ_view = $('#btn-occ-view');
-        // // var occ_view_url = '/occupation.html#/?occupation_group='+ encodeURIComponent(occ_group) + '&occupation='+encodeURIComponent(occ)
-        // // console.log(occ_view_url)
-        // // var occ_view_url = '/occupation.html#/?occupation='+encodeURIComponent(occupation)
-
-        // var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
-
-        // $btn_occ_view.attr('href', occ_view_url)
-
         $('#occ-info-tooltip').tooltip({
             html: true
         });
 
+        // Pop the modal
+        $('#occupationModal').modal('show');
 
+        // Give modal a title.
+        $('#occupationModalLabel').html(occupation);
 
+        // Give modal content.
+        $("#modal-occ-description").html(occupation_mapping[occupation]['description']);
+        $("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
+        $("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
+        $("#modal-occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
+        $("#modal-occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
+        $("#modal-occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
+        $("#modal-occ-figure-salary").html(salary_fig_str)
+        $("#modal-occ-figure-comp-fe").html(comp_fig_str_fe)
+        $("#modal-occ-figure-comp-he").html(comp_fig_str_he)
 
-// Modal
-$('#occupationModal').modal('show');
+        // Build the button to visit the view-by-location page.
+        occ = $.address.parameter('occupation')
+        occ_group = $.address.parameter('occupation_group')
 
-// Give modal a title.
-$('#occupationModalLabel').html(occupation);
+        var $btn_occ_view = $('#modal-btn-occ-view');
+        var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
-// Give modal content.
-$("#modal-occ-description").html(occupation_mapping[occupation]['description']);
-console.log("occc", occupation)
-
-
-$("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
-$("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
-$("#modal-occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
-$("#modal-occ-label-salary").html('<span class="label label-'+slugify(salaryLabel(salary_fig))+'">'+salaryLabel(salary_fig)+'</span>')
-
-$("#modal-occ-figure-demand").html(numberWithCommas(place_occ_data['demand_sum'])+'<small> jobs</small>')
-$("#modal-occ-figure-salary").html(salary_fig_str)
-$("#modal-occ-figure-comp-fe").html(comp_fig_str_fe)
-$("#modal-occ-figure-comp-he").html(comp_fig_str_he)
-
-occ = $.address.parameter('occupation')
-occ_group = $.address.parameter('occupation_group')
-
-var $btn_occ_view = $('#modal-btn-occ-view');
-
-var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
-
-$btn_occ_view.attr('href', occ_view_url)
-
-// $('#occ-info-tooltip').tooltip({
-//     html: true
-// });
-
-
-
-        // show map helper if user doesn't figure it out after 5 secs
-        setTimeout(showHelperMap, 5000);
+        $btn_occ_view.attr('href', occ_view_url)
     }
     else {
         // Add occupation group to URL.
@@ -461,6 +368,7 @@ function hideHelperOcc(){
         $("#helper-occupation").fadeOut(800)
     };
 };
+
 
 
 
