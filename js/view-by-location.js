@@ -127,49 +127,20 @@ function initialize(){
             highlightOcc('');
         });
 
-
         var $cls_occ_group = $(".job-family");
         $cls_occ_group.hover(
             function(){
                 highlightOccFamily($(this).attr('data'));
+                triggerHoverScatter($(this).attr('data'));
             },
             function(){
                 highlightOccFamily('');
             }
         );
 
-        $cls_occ_group.click(function(){
+        $cls_occ_group.on('click', function(){
             var clicked_occ_group = $(this).attr('data')
-            // Add new parameter to the URL.
-            $.address.parameter('occupation_group', encodeURIComponent(clicked_occ_group));
-
-            // Call #updateLocation, which builds the bar chart.
-            if($.address.parameter("location_type") && $.address.parameter("location")){
-                updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
-            }
-            else{
-                updateLocation('Country', 'UK');
-            }
-
-            // Unselect any highlighted divs.
-            $cls_occ_group.each(function(index, elem){
-                if ($(elem).attr('data')!=clicked_occ_group){
-                    $(elem).removeClass('selected');
-                };
-            });
-
-            // Highlight the div that received the click event.
-            if($(this).hasClass('selected')){
-                // unselecting
-                $(this).removeClass('selected');
-                selectOccFamily('');
-            }else{
-                // selecting
-                $(this).addClass('selected')
-                selectOccFamily(clicked_occ_group);
-            };
-            hideHelperJobFamily();
-
+            selectOccGroup(clicked_occ_group);
         });
 
         // show & flash job family & occupation helpers
@@ -210,14 +181,6 @@ function updateLocation(geo_type, geo_name){
         }
     }
 
-    clearJobFamilies();
-
-    // var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
-    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
-
-    console.log("place", place_data)
-
-
     if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
     }
@@ -225,8 +188,21 @@ function updateLocation(geo_type, geo_name){
         $("#current-location-name").html(geo_display_name)
     }
 
-    makeDemandChart(place_data, occupation_group_data)
-    makeCompScatterPlot(place_data, education)
+    // Get the right data.
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
+
+    if ($.address.parameter('occupation_group')) {
+        occ_group = decodeURIComponent($.address.parameter('occupation_group'))
+        var filtered_data = _.filter(place_data, function(el) {
+            return el['occ_group'] == occ_group;
+        });
+
+        place_data = filtered_data
+    }
+
+    clearJobFamilies();
+    makeDemandChart(place_data, occupation_group_data);
+    makeCompScatterPlot(place_data, education);
 }
 
 function updateEducation(education){
@@ -239,17 +215,26 @@ function updateEducation(education){
     }
     else {
         geo_type = 'Country'
-        // geo_name = 'UK Total'
         geo_name = 'UK'
     }
-
-    var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
-
-    makeCompScatterPlot(place_data, education)
 
     if ($.address.parameter('occupation')){
         highlightOcc(decodeURIComponent($.address.parameter('occupation')), place_data);
     }
+
+    // Get the right data.
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
+
+    if ($.address.parameter('occupation_group')) {
+        occ_group = decodeURIComponent($.address.parameter('occupation_group'))
+        var filtered_data = _.filter(place_data, function(el) {
+            return el['occ_group'] == occ_group;
+        });
+
+        place_data = filtered_data
+    }
+
+    makeCompScatterPlot(place_data, education)
 }
 
 function selectOccupation(occupation, place_data){
@@ -317,7 +302,7 @@ function selectOccupation(occupation, place_data){
     else {
         // Add occupation group to URL.
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
-
+        console.log("occupation", occupation)
         // Check for a location type and call updateLocation, which builds the demand chart.
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -325,6 +310,8 @@ function selectOccupation(occupation, place_data){
         else{
             updateLocation('Country', 'UK');
         }
+
+        selectOccGroup(occupation);
     }
 }
 
@@ -368,6 +355,39 @@ function hideHelperOcc(){
         $("#helper-occupation").fadeOut(800)
     };
 };
+
+function selectOccGroup(clicked_occ_group) {
+    // Add new parameter to the URL.
+    $.address.parameter('occupation_group', encodeURIComponent(clicked_occ_group));
+
+    // Call #updateLocation, which builds the bar chart.
+    if($.address.parameter("location_type") && $.address.parameter("location")){
+        updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
+    }
+    else{
+        updateLocation('Country', 'UK');
+    }
+
+    // Unselect any highlighted divs.
+    $(".job-family").each(function(index, elem){
+        if ($(elem).attr('data')!=clicked_occ_group){
+            $(elem).removeClass('selected');
+        };
+    });
+
+    $this = '[data="' + clicked_occ_group + '"]'
+    // Highlight the div that received the click event.
+    if($($this).hasClass('selected')){
+        // unselecting
+        $($this).removeClass('selected');
+        selectOccFamily('');
+    }else{
+        // selecting
+        $($this).addClass('selected')
+        selectOccFamily(clicked_occ_group);
+    };
+    hideHelperJobFamily();
+}
 
 
 
