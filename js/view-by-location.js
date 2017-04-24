@@ -302,7 +302,7 @@ function selectOccupation(occupation, place_data){
     else {
         // Add occupation group to URL.
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
-
+        console.log("occupation", occupation)
         // Check for a location type and call updateLocation, which builds the demand chart.
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))

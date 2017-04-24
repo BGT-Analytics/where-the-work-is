@@ -207,7 +207,9 @@ function scatterHelper(prepped_data, point_color, place_data){
                 point: {
                     events: {
                         click: function () {
-                            selectOccupation(this.full_name, place_data);
+                            if ($.address.parameter('occupation_group')) {
+                                selectOccupation(this.full_name, place_data);
+                            };
                         },
                         mouseOver: function () {
                             triggerHoverBar(this);
