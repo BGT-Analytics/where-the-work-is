@@ -89,14 +89,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
                         enabled: false
                     }
                 },
-                point: {
-                    events: {
-                        click: function () {
-                            hideHelperOcc();
-                            selectOccupation(categories[this.x], place_data);
-                        }
-                    }
-                }
             }
         },
         legend: {
@@ -169,7 +161,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
                         },
                     }
                 }
-
             }
         },
         legend: {

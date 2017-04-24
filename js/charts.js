@@ -13,7 +13,7 @@ var he_color = '#ECF0F1';
 var fe_color = '#959DA6';
 var sl_color = '#667481';
 
-function makeDemandChart(place_data, occupation_group_data, n_cols){
+function makeDemandChart(place_data, occupation_group_data){
     if ($.address.parameter('occupation_group')) {
         occ_group = decodeURIComponent($.address.parameter('occupation_group'))
         var filtered_data = _.filter(place_data, function(el) {
@@ -21,7 +21,6 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
         });
 
         var sorted_data = _.sortBy(filtered_data, 'demand_sum').reverse()
-        // occupations = _.pluck(sorted_data, "occupation").slice(0,n_cols)
         occupations = _.pluck(sorted_data, "occupation")
 
         $('#bar-chart-title').html("Which " + occ_group.toLowerCase() + " have the most openings?");
@@ -32,7 +31,6 @@ function makeDemandChart(place_data, occupation_group_data, n_cols){
     }
     else {
         var sorted_data = _.sortBy(occupation_group_data, 'demand_sum').reverse()
-        // occupations = _.pluck(sorted_data, "occ_group").slice(0,n_cols)
         occupations = _.pluck(sorted_data, "occ_group")
     }
 
@@ -98,14 +96,14 @@ function makeCompScatterPlot(place_data, education){
         $('#scatter-note-edu').html('FE finishers');
     }
 
-
     var prepped_data = []
     $(place_data).each(function(i, row){
         point = {
             x: row['reg_salary'],
             y: row[col_name],
             name: shortenName(row['occupation']),
-            full_name: row['occupation']
+            full_name: row['occupation'],
+            occ_group: row['occ_group'],
         }
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
@@ -113,11 +111,7 @@ function makeCompScatterPlot(place_data, education){
     scatterHelper(prepped_data, point_color, place_data)
 }
 
-
-
-
 function highlightOcc(occupation){
-
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             var isVisible = false;
@@ -153,11 +147,9 @@ function highlightOcc(occupation){
             });
         };
     });
-
 }
 
 function highlightOccFamily(occ_group){
-
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             // looping thru stuff in scatterplot
@@ -188,6 +180,7 @@ function highlightOccFamily(occ_group){
         };
     });
 }
+
 function selectOccFamily(occ_group){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
@@ -229,7 +222,7 @@ function triggerHoverScatter(occupation){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
             $.each(chart.series[0].points, function(index, point){
-                if(point.full_name == occupation){
+                if(point.full_name == occupation || point.occ_group == occupation){
                     point.setState('hover');
                     chart.tooltip.refresh(point);
                 }
@@ -239,8 +232,8 @@ function triggerHoverScatter(occupation){
             });
         };
     });
-
 }
+
 function removeHoverScatter(){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
@@ -251,14 +244,13 @@ function removeHoverScatter(){
         };
     });
 }
-function triggerHoverBar(occupation){
 
-    // looping thru stuff in bar chart
+function triggerHoverBar(point_data){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'bar'){
             $.each(chart.series, function(index, series){
                 $.each(series.data, function(index, point){
-                    if(point.category == occupation){
+                    if(point.category == point_data.full_name || point.category == point_data.occ_group){
                         point.setState('hover');
                         chart.tooltip.refresh([chart.series[0].data[index], chart.series[1].data[index], chart.series[2].data[index]]);
                     }
@@ -269,9 +261,7 @@ function triggerHoverBar(occupation){
             });
         };
     });
-
 }
-
 
 function shortenName(long_name) {
     // if (occupation_mapping[long_name]) {

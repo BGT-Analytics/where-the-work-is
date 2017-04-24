@@ -210,7 +210,7 @@ function scatterHelper(prepped_data, point_color, place_data){
                             selectOccupation(this.full_name, place_data);
                         },
                         mouseOver: function () {
-                            triggerHoverBar(this.full_name);
+                            triggerHoverBar(this);
                         },
                     }
                 },
