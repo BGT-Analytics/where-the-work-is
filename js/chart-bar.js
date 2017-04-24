@@ -152,23 +152,21 @@ function stackedBarHelper(prepped_data, categories, place_data){
                         borderColor: '#3B4B5C',
                         color: "#FBAB18"
                     },
-                    // hover: {
-                    //     color: '#e2be7c'
-                    // }
                 },
                 point: {
                     events: {
                         click: function () {
                             hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
-                            // selectOccupationGroup(categories[this.x], place_data);
                         },
                         mouseOver: function () {
                             triggerHoverScatter(categories[this.x]);
+                            highlightOccGroupIcon(categories[this.x]);
                         },
                         mouseOut: function () {
                             removeHoverScatter();
-                        }
+                            removeHighlightOccGroupIcon();
+                        },
                     }
                 }
 

@@ -187,7 +187,6 @@ function highlightOccFamily(occ_group){
             });
         };
     });
-
 }
 function selectOccFamily(occ_group){
     $.each(Highcharts.charts, function(index, chart){
@@ -216,6 +215,14 @@ function selectOccFamily(occ_group){
             });
         };
     });
+}
+
+function highlightOccGroupIcon(occ_group){
+    $('[data="' + occ_group + '"]').css('background-color', '#e2be7c');
+}
+
+function removeHighlightOccGroupIcon(occ_group){
+    $('.job-family').css('background-color', '');
 }
 
 function triggerHoverScatter(occupation){

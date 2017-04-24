@@ -215,9 +215,6 @@ function updateLocation(geo_type, geo_name){
     // var place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
     place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
 
-    console.log("place", place_data)
-
-
     if(geo_display_name.length>32){
         $("#current-location-name").html('<small>'+geo_display_name+'</small>')
     }
