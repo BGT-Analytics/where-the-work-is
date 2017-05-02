@@ -224,7 +224,9 @@ function triggerHoverScatter(occupation){
             $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation || point.occ_group == occupation){
                     point.setState('hover');
-                    chart.tooltip.refresh(point);
+                    if ($.address.parameter('occupation_group')) {
+                        chart.tooltip.refresh(point);
+                    }
                 }
                 else{
                     point.setState();

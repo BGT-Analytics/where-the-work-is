@@ -222,13 +222,13 @@ function scatterHelper(prepped_data, point_color, place_data){
                             fillColor: "#FBAB18",
                             lineWidth: 1,
                             lineColor: "#3B4B5C",
-                            radius: 7
+                            radius: 7,
                         },
                         hover: {
                             fillColor: "#e2be7c",
                             lineWidth: 1,
                             lineColor: "#3B4B5C",
-                            radius: 7
+                            radius: 7,
                         }
                     }
                 }

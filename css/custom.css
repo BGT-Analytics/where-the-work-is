@@ -236,30 +236,36 @@ hr {
 
 
 /* footer */
-#footer{
+#footer {
   clear: both;
   padding: 6px 0px;
-  margin-top: 24px;
-  font-size: 10px;
+  margin-top: 28px;
   background: #fff;
 }
+
+#footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
 .footer-brand {
-  height: 28px;
+  height: 38px;
   margin-right: 20px;
   filter: gray; /* IE6-9 */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
+
 /* Disable grayscale on hover */
 .footer-brand:hover {
   filter: none;
   -webkit-filter: grayscale(0);
 }
+
 .footer-brand.smaller {
   padding-bottom: 4px;
   padding-top: 2px;
 }
-
 
 
 /* nav bar */
@@ -856,12 +862,12 @@ hr {
     white-space: normal;
   }
 
+  #footer { text-align: center; }
 
   .footer-brand{
-    height: 22px;
+    height: 28px;
     margin-right: 16px;
   }
-
 
   #video-embed{
     height: 150px;
