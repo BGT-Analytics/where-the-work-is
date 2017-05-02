@@ -58,11 +58,11 @@ merged_regions.table: gb_regions.append
 		   GROUP BY name \
 		 )"
 
-occupation_group_data.csv: INPUT_DATA.xlsx
+occupation_group_data.csv: INPUT_DATA_2017-04-25.xlsx
 		in2csv --sheet "Occupation x Geo" $< | \
 			python calc_occupation_groups.py > $@
 
-occupation_data.csv: INPUT_DATA.xlsx
+occupation_data.csv: INPUT_DATA_2017-04-25.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 
