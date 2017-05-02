@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
@@ -22,9 +23,7 @@ hr {
 }
 
 
-
 /*occupation figure labels*/
-
 .label-very-high{
   background-color: #38925e;
   color: #ecf0f1;
@@ -45,7 +44,6 @@ hr {
   background-color: #9e4940;
   color: #ecf0f1;
 }
-
 
 
 /*text*/
@@ -434,8 +432,7 @@ hr {
   height: calc(100% - 20px);
 }
 #occ-info-pane{
-  /*height: 180px;*/
-  height: 200px;
+  height: 210px;
 }
 #below-occ-info-pane{
   padding-top: 20px;
@@ -444,6 +441,9 @@ hr {
 .chart-col{
   padding-right: 6px;
   padding-left: 6px;
+}
+#default-occ-info p {
+    margin: 10px 0 10px;
 }
 
 
