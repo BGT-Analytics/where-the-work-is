@@ -275,6 +275,10 @@ function shortenName(long_name) {
 
 function clearSelect() {
     $('#occupationModal').on('hidden.bs.modal', function () {
+        // Indicate that the user knows how to click the occ bars...
+        hideHelperOcc();
+        clicked_occ_bar = true;
+
         $.each(Highcharts.charts, function(index, chart){
             if (chart) {
                 points = chart.getSelectedPoints();

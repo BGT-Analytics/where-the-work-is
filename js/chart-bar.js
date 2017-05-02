@@ -92,7 +92,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
-                            hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
                         },
                     }
@@ -156,7 +155,6 @@ function stackedBarHelper(prepped_data, categories, place_data){
                 point: {
                     events: {
                         click: function () {
-                            hideHelperOcc();
                             selectOccupation(categories[this.x], place_data);
                         },
                         mouseOver: function () {

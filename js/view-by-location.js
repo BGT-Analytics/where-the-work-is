@@ -9,6 +9,7 @@ var place_data;
 var clicked_location = false,
     clicked_occ_group = false,
     clicked_occ = false,
+    clicked_occ_bar = false,
     clicked_map = false;
 
 (function(){
@@ -56,7 +57,6 @@ function initialize(){
         );
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
-            console.log("location in parameter!")
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
@@ -144,9 +144,9 @@ function initialize(){
         });
 
         // show & flash job family & occupation helpers
-        // if user doesn't figure it out within 5 secs
-        setTimeout(showHelperJobFamily, 4500);
-        setTimeout(showHelperOcc, 5500);
+        // if user doesn't figure it out within 4 secs
+        setTimeout(showHelperJobFamily, 3500);
+        setTimeout(function(){ showHelperOcc(6); }, 4500);
 
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
@@ -196,8 +196,12 @@ function updateLocation(geo_type, geo_name){
         var filtered_data = _.filter(place_data, function(el) {
             return el['occ_group'] == occ_group;
         });
+        place_data = filtered_data;
 
-        place_data = filtered_data
+        // Info pop up
+        percent_len = filtered_data.length;
+        hideHelperOcc();
+        setTimeout(function(){ showHelperOcc(percent_len); }, 3500);
     }
 
     clearJobFamilies();
@@ -302,15 +306,6 @@ function selectOccupation(occupation, place_data){
     else {
         // Add occupation group to URL.
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
-        console.log("occupation", occupation)
-        // Check for a location type and call updateLocation, which builds the demand chart.
-        if($.address.parameter("location_type") && $.address.parameter("location")){
-            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
-        }
-        else{
-            updateLocation('Country', 'UK');
-        }
-
         selectOccGroup(occupation);
     }
 }
@@ -326,33 +321,40 @@ function clearJobFamilies(){
 
 function showHelperJobFamily(){
     if(clicked_occ_group==false){
-        $("#helper-job-family").fadeTo(800, 1);
+        $("#helper-job-family").fadeTo(700, 1);
     };
 };
 
-function showHelperOcc(){
-    if(clicked_occ==false){
-        $("#helper-occupation").fadeTo(800, 1);
+function showHelperOcc(len){
+    if (len > 8) {
+        percent = "-90%";
+    }
+    else {
+        percent = "-" + String(len * 10) + "%"
+    }
+
+    if(clicked_occ_bar==false){
+        $("#helper-occupation").css("top", percent)
+        $("#helper-occupation").fadeTo(700, 1);
     };
 };
 
 function showHelperMap(){
     if(clicked_map==false){
-        $("#helper-map").fadeIn(800);
+        $("#helper-map").fadeIn(700);
     };
 }
 
 function hideHelperJobFamily(){
     if(clicked_occ_group==false){
         clicked_occ_group = true;
-        $("#helper-job-family").fadeOut(800);
+        $("#helper-job-family").fadeOut(700);
     }
 };
 
 function hideHelperOcc(){
-    if(clicked_occ==false){
-        clicked_occ = true;
-        $("#helper-occupation").fadeOut(800)
+    if(clicked_occ_bar==false){
+        $("#helper-occupation").fadeOut(700)
     };
 };
 

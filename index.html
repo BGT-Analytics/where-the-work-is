@@ -28,10 +28,6 @@ view: location
               </div>
             </div>
           </div>
-<!--
-          <div class="col-md-2">
-            <p><a href="/" style="float: right; padding-top: 20%;"><i class="fa fa-repeat" aria-hidden="true"></i> Show all groups</a></p>
-          </div> -->
 
         </div>
 
@@ -51,14 +47,16 @@ view: location
       <div class="well well-occ-active well-sm" id="occ-info-pane">
         <div id="default-occ-info">
           <div class="row">
-            <div class="col-sm-8">
-              <!-- <p>Compare groups of mid-skilled occupations:</p> -->
+            <div class="col-xs-9">
               <p>
                 View mid-skilled occupations by group:
               </p>
             </div>
-            <div class="col-sm-4">
-              <small><a href="/" style="float: right;" class="btn btn-sm btn-info"><i class="fa fa-repeat" aria-hidden="true"></i> Show all</a></small>
+            <div class="col-xs-3">
+              <small><a href="/" style="float: right;" class="btn btn-sm btn-info hidden-xs"><i class="fa fa-repeat" aria-hidden="true"></i> Show all</a></small>
+            </div>
+            <div class="col-xs-3">
+              <small><a href="/" style="float: right; font-size: 12px" class="btn btn-sm btn-info visible-xs"><i class="fa fa-repeat" aria-hidden="true"></i> Show all</a></small>
             </div>
           </div>
 
@@ -118,7 +116,6 @@ view: location
 
           <div class="row">
             <div class="col-sm-12">
-
               <div class="helper">
                 <div class="hint hint-bottom hidden-print" id="helper-job-family">
                   Click a group to view occupations
@@ -258,6 +255,12 @@ view: location
         <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry-level roles (<2 years of experience) in 2015, based on online job postings and ONS vacancy data">Job openings</a> by <span id="chart-subtitle">occupation group</span> & education level
       </p>
       <div id="bar-demand"></div>
+      <div class="helper pull-right" id="helper-occupation">
+        <div class="hint hint-right hidden-print">
+          <i class="fa fa-hand-o-left"></i>
+          Click for details
+        </div>
+      </div>
 
       <!-- Modal -->
       <div class="modal fade" id="occupationModal" tabindex="-1" role="dialog" aria-labelledby="occupationModalLabel" aria-hidden="true">
