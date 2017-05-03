@@ -317,6 +317,15 @@ function selectOccupation(occupation, place_data){
         $btn_occ_view.attr('href', occ_view_url)
 
         makePieChart(full_time_data, occupation);
+
+        var loc = findLocation().toUpperCase();
+
+        console.log(decodeURIComponent($.address.parameter("location_type")), "*****")
+        if (decodeURIComponent($.address.parameter("location_type")) == 'LEPplus') {
+            console.log("yeesss")
+            loc = loc + '<br><small>Complete data not available for ' + decodeURIComponent($.address.parameter("location")) + '</small>'
+        }
+        $("#location-span-percent").html(loc)
     }
     else {
         // Add occupation group to URL.

@@ -6,49 +6,29 @@ function pieChartHelper(prepped_data) {
             plotShadow: false,
             type: 'pie'
         },
+        credits: {
+            enabled: false
+        },
         title: {
             text: '',
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
+//         options: {
+//  colors: ['#50B432', '#ED561B']
+// },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
+                    enabled: false,
+                },
+                colors: ['#3A4B5D', '#FDAC00'],
             }
         },
         series: prepped_data
-        // series: [{
-        //     data: [{
-        //         name: 'Microsoft Internet Explorer',
-        //         y: 56.33
-        //     }, {
-        //         name: 'Chrome',
-        //         y: 24.03,
-        //         sliced: true,
-        //         selected: true
-        //     }, {
-        //         name: 'Firefox',
-        //         y: 10.38
-        //     }, {
-        //         name: 'Safari',
-        //         y: 4.77
-        //     }, {
-        //         name: 'Opera',
-        //         y: 0.91
-        //     }, {
-        //         name: 'Proprietary or Undetectable',
-        //         y: 0.2
-        //     }]
-        // }]
     }
 
     $('#pie-full-time').highcharts(config);
