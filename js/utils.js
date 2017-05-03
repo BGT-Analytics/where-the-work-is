@@ -46,7 +46,7 @@ function sliceColumns(data, columns){
         return sliced_row
     });
 }
- 
+
 function reduceColumns(data, grouper, column_index){
     // data is a 2D array of values
     // grouper is an index of the array to group by
@@ -61,8 +61,7 @@ function sum(numbers) {
     }, 0);
 }
 
-function cleanGeo(str)
-{
+function cleanGeo(str) {
     return str.replace(/\w\S*/g, function(txt){
         if (txt.toUpperCase()=='OF'||txt.toUpperCase()=='THE'||txt.toUpperCase()=='TO'){
             return txt.toLowerCase();

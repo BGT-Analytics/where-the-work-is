@@ -4,11 +4,15 @@ var occupation_data;
 var occupation_group_data;
 var regions_data;
 var place_data;
+var full_time_data;
+var historical_employment_data;
+var projection_employment_data;
 
 // remembering what has been clicked
 var clicked_location = false,
     clicked_occ_group = false,
     clicked_occ = false,
+    clicked_occ_bar = false,
     clicked_map = false;
 
 (function(){
@@ -16,7 +20,7 @@ var clicked_location = false,
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv')).then(function(geojson, csv, csv_groups){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv){
 
         regions_data = geojson
 
@@ -55,8 +59,49 @@ function initialize(){
             }
         );
 
+        full_time_data = _.map(
+            $.csv.toObjects(full_time_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_description: row.soc_description,
+                    notes: row.notes,
+                    full_time_percent: row.percentage_of_workforce_who_are_full_time,
+                };
+            }
+        );
+
+        historical_employment_data = _.map(
+            $.csv.toObjects(historical_employment_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_name: row.soc_name,
+                    year_2012: row.year_2012,
+                    year_2013: row.year_2013,
+                    year_2014: row.year_2014,
+                    year_2015: row.year_2015,
+                };
+            }
+        );
+
+        projection_employment_data = _.map(
+            $.csv.toObjects(projection_employment_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_name: row.soc_name,
+                    projection: row.working_futures_projection,
+                };
+            }
+        );
+
+        console.log(projection_employment_data);
+
         if($.address.parameter("location_type") && $.address.parameter("location")){
-            console.log("location in parameter!")
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
@@ -144,9 +189,9 @@ function initialize(){
         });
 
         // show & flash job family & occupation helpers
-        // if user doesn't figure it out within 5 secs
-        setTimeout(showHelperJobFamily, 4500);
-        setTimeout(showHelperOcc, 5500);
+        // if user doesn't figure it out within 4 secs
+        setTimeout(showHelperJobFamily, 3500);
+        setTimeout(function(){ showHelperOcc(6); }, 4500);
 
         $("#location-select-list li").click(function() {
            $("#location-dropdown-menu").dropdown("toggle");
@@ -196,8 +241,12 @@ function updateLocation(geo_type, geo_name){
         var filtered_data = _.filter(place_data, function(el) {
             return el['occ_group'] == occ_group;
         });
+        place_data = filtered_data;
 
-        place_data = filtered_data
+        // Info pop up
+        percent_len = filtered_data.length;
+        hideHelperOcc();
+        setTimeout(function(){ showHelperOcc(percent_len); }, 3500);
     }
 
     clearJobFamilies();
@@ -298,19 +347,25 @@ function selectOccupation(occupation, place_data){
         var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
         $btn_occ_view.attr('href', occ_view_url)
+
+        // Find and decode location
+        var loc = findLocation().toUpperCase();
+        if (decodeURIComponent($.address.parameter("location_type")) == 'LEPplus') {
+            loc = loc + '<br><small>Complete data not available for ' + decodeURIComponent($.address.parameter("location")) + '</small>'
+        }
+
+        // Create a pie chart with a subheader
+        makePieChart(full_time_data, occupation);
+        $("#location-span-percent").html(loc)
+
+        // Create a table with a subheader
+        makeTables(historical_employment_data, projection_employment_data, occupation);
+        $("#span-historical").html(loc);
+
     }
     else {
         // Add occupation group to URL.
         $.address.parameter('occupation_group', encodeURIComponent(occupation));
-        console.log("occupation", occupation)
-        // Check for a location type and call updateLocation, which builds the demand chart.
-        if($.address.parameter("location_type") && $.address.parameter("location")){
-            updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
-        }
-        else{
-            updateLocation('Country', 'UK');
-        }
-
         selectOccGroup(occupation);
     }
 }
@@ -326,33 +381,40 @@ function clearJobFamilies(){
 
 function showHelperJobFamily(){
     if(clicked_occ_group==false){
-        $("#helper-job-family").fadeTo(800, 1);
+        $("#helper-job-family").fadeTo(700, 1);
     };
 };
 
-function showHelperOcc(){
-    if(clicked_occ==false){
-        $("#helper-occupation").fadeTo(800, 1);
+function showHelperOcc(len){
+    if (len > 8) {
+        percent = "-90%";
+    }
+    else {
+        percent = "-" + String(len * 10) + "%"
+    }
+
+    if(clicked_occ_bar==false){
+        $("#helper-occupation").css("top", percent)
+        $("#helper-occupation").fadeTo(700, 1);
     };
 };
 
 function showHelperMap(){
     if(clicked_map==false){
-        $("#helper-map").fadeIn(800);
+        $("#helper-map").fadeIn(700);
     };
 }
 
 function hideHelperJobFamily(){
     if(clicked_occ_group==false){
         clicked_occ_group = true;
-        $("#helper-job-family").fadeOut(800);
+        $("#helper-job-family").fadeOut(700);
     }
 };
 
 function hideHelperOcc(){
-    if(clicked_occ==false){
-        clicked_occ = true;
-        $("#helper-occupation").fadeOut(800)
+    if(clicked_occ_bar==false){
+        $("#helper-occupation").fadeOut(700)
     };
 };
 

@@ -1,6 +1,7 @@
 // data
 var occupation_data;
 var regions_data;
+var full_time_data;
 var occ_map;
 var table_header_cols = [   'geography_name',
                             'demand_sum',
@@ -15,8 +16,9 @@ var table_header_cols = [   'geography_name',
 
 function initialize(){
 
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/full_time_percent.csv')).then(function(geojson, csv, full_time_csv){
 
+        // Create objects from geojson and CSV files.
         regions_data = geojson
         occupation_data = _.map(
             $.csv.toObjects(csv[0]),
@@ -40,6 +42,21 @@ function initialize(){
             }
         );
 
+        full_time_data = _.map(
+            $.csv.toObjects(full_time_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_description: row.soc_description,
+                    notes: row.notes,
+                    fulm_time_percent: row.percentage_of_workforce_who_are_full_time,
+                };
+            }
+        );
+
+        console.log(full_time_data)
+
         //merge location and job data
         var current_occupation;
         var occupation_list = [];
@@ -60,7 +77,9 @@ function initialize(){
                     // }
 
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
+                    // if (region.properties['LEP/City Region'] == job['geography_name']) {
                         addDataToLocation(region, occ, job);
+                                            console.log(region.properties)
                     }
                 });
 
@@ -110,8 +129,6 @@ function initialize(){
             $("#occ-dropdown-menu").dropdown("toggle");
             return false;
         });
-
-
 
         $('#geo-level-region').on('click', function (e) {
 
@@ -164,7 +181,6 @@ function addDataToLocation(location, occ, job){
 }
 
 function updateOccupation(occ_name, location_level){
-
     // TO DO: select radio button appropriately
     if(location_level!='lep'){
         // by default, if location_level not specified, show nations/regions

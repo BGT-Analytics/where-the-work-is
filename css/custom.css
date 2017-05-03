@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
@@ -22,9 +23,7 @@ hr {
 }
 
 
-
 /*occupation figure labels*/
-
 .label-very-high{
   background-color: #38925e;
   color: #ecf0f1;
@@ -45,7 +44,6 @@ hr {
   background-color: #9e4940;
   color: #ecf0f1;
 }
-
 
 
 /*text*/
@@ -238,30 +236,36 @@ hr {
 
 
 /* footer */
-#footer{
+#footer {
   clear: both;
   padding: 6px 0px;
-  margin-top: 24px;
-  font-size: 10px;
+  margin-top: 28px;
   background: #fff;
 }
+
+#footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
 .footer-brand {
-  height: 28px;
+  height: 38px;
   margin-right: 20px;
   filter: gray; /* IE6-9 */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
+
 /* Disable grayscale on hover */
 .footer-brand:hover {
   filter: none;
   -webkit-filter: grayscale(0);
 }
+
 .footer-brand.smaller {
   padding-bottom: 4px;
   padding-top: 2px;
 }
-
 
 
 /* nav bar */
@@ -434,8 +438,7 @@ hr {
   height: calc(100% - 20px);
 }
 #occ-info-pane{
-  /*height: 180px;*/
-  height: 200px;
+  height: 210px;
 }
 #below-occ-info-pane{
   padding-top: 20px;
@@ -444,6 +447,9 @@ hr {
 .chart-col{
   padding-right: 6px;
   padding-left: 6px;
+}
+#default-occ-info p {
+    margin: 10px 0 10px;
 }
 
 
@@ -505,7 +511,7 @@ hr {
   color: #fbab18;
   display: none;
   position: relative;
-  top: -85px;
+  top: -95px;
   right: 10px;
   z-index: 2;
 }
@@ -596,6 +602,13 @@ hr {
 
 .modal-body {
   color: #777;
+}
+
+@media (min-width: 768px) {
+  #occupationModal .modal-dialog {
+      width: 660px;
+      margin: 30px auto;
+  }
 }
 
 
@@ -856,12 +869,12 @@ hr {
     white-space: normal;
   }
 
+  #footer { text-align: center; }
 
   .footer-brand{
-    height: 22px;
+    height: 28px;
     margin-right: 16px;
   }
-
 
   #video-embed{
     height: 150px;
@@ -920,7 +933,7 @@ hr {
   }
 
   #helper-occupation{
-    top: -95%;
+    /*top: -60%;*/
     left: -5%;
   }
 

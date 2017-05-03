@@ -111,6 +111,140 @@ function makeCompScatterPlot(place_data, education){
     scatterHelper(prepped_data, point_color, place_data)
 }
 
+function makePieChart(data, occ_clicked){
+    var pie_prepped_data = [];
+    var location = findLocation();
+
+    $(data).each(function(i, row){
+        if (row['soc_description'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
+            pie_prepped_data = [{
+                data: [{
+                    name: 'Full Time',
+                    y: parseFloat(row['full_time_percent']),
+                }, {
+                    name: 'Part Time',
+                    y: 1 - row['full_time_percent'],
+                }]
+            }]
+        }
+    })
+
+    pieChartHelper(pie_prepped_data);
+}
+
+function makeTables(employment_data, projection_data, occ_clicked) {
+    var location = findLocation();
+    var table;
+
+    $(employment_data).each(function(i, row){
+        if (row['soc_name'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
+
+            employment_table = '<table class="table table-striped table-bordered">' +
+                '<thead>' +
+                    '<tr>' +
+                    '<th colspan="2">Employment (Labor force survey)</th>' +
+                    '</tr>' +
+                '</thead>' +
+                '<tbody>' +
+                    '<tr>' +
+                        '<td>2012</td>' +
+                        '<td>' + addCommas(row['year_2012']) + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>2013</td>' +
+                        '<td>' + addCommas(row['year_2013']) + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>2014</td>' +
+                        '<td>' + addCommas(row['year_2014']) + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>2015</td>' +
+                        '<td>' + addCommas(row['year_2015']) + '</td>' +
+                    '</tr>' +
+                '</tbody>' +
+              '</table>'
+        }
+    });
+
+    $(projection_data).each(function(i, row){
+        if (row['soc_name'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
+
+            console.log(row)
+            projection_table = '<table class="table table-striped table-bordered">' +
+                '<thead>' +
+                    '<tr>' +
+                    '<th>Projections</th>' +
+                    '</tr>' +
+                '</thead>' +
+                '<tbody>' +
+                    '<tr>' +
+                        '<td>' + row['projection'] + '</td>' +
+                    '</tr>' +
+                '</tbody>' +
+              '</table>'
+        }
+    });
+
+    $('#employmentTable').html(employment_table);
+    $('#projectionTable').html(projection_table);
+}
+
+function addCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function findLocation() {
+    var lookups = {
+        'east midlands': 'east midlands',
+        'east of england': 'eastern',
+        'greater london': 'london',
+        'north east england': 'north east',
+        'north west england': 'north west (inc merseyside)',
+        'south east england': 'south east',
+        'south west england': 'south west',
+        'west midlands': 'west midlands',
+        'yorkshire & the humber': 'yorkshire and humberside',
+    }
+
+    if($.address.parameter("location_type") && $.address.parameter("location")){
+        select_location_type = decodeURIComponent($.address.parameter("location_type")).toLowerCase();
+        select_location = decodeURIComponent($.address.parameter("location")).toLowerCase();
+
+        if (select_location_type === 'nation') {
+            var location = select_location;
+        }
+        else if (select_location_type === 'region') {
+            var location = lookups[select_location];
+        }
+
+        else if (select_location_type === 'lepplus') {
+            var location;
+
+            $(geo_hierarchy['children']).each(function(i, nation){
+                $(nation['children']).each(function(i,region){
+                    $(region['children']).each(function(i, lepPlus){
+                        if (select_location === lepPlus['name'].toLowerCase()) {
+                            if (region['name'] != '') {
+                                location = lookups[region['name'].toLowerCase()]
+                            }
+                            else {
+                                location = nation['name'].toLowerCase()
+                            }
+                        }
+                    })
+                })
+            })
+        }
+
+    }
+    else {
+        var location = 'uk'
+    }
+
+    return location
+}
+
 function highlightOcc(occupation){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
@@ -224,7 +358,9 @@ function triggerHoverScatter(occupation){
             $.each(chart.series[0].points, function(index, point){
                 if(point.full_name == occupation || point.occ_group == occupation){
                     point.setState('hover');
-                    chart.tooltip.refresh(point);
+                    if ($.address.parameter('occupation_group')) {
+                        chart.tooltip.refresh(point);
+                    }
                 }
                 else{
                     point.setState();
@@ -275,6 +411,10 @@ function shortenName(long_name) {
 
 function clearSelect() {
     $('#occupationModal').on('hidden.bs.modal', function () {
+        // Indicate that the user knows how to click the occ bars...
+        hideHelperOcc();
+        clicked_occ_bar = true;
+
         $.each(Highcharts.charts, function(index, chart){
             if (chart) {
                 points = chart.getSelectedPoints();
