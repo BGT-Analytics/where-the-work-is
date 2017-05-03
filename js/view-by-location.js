@@ -17,7 +17,7 @@ var clicked_location = false,
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv')).then(function(geojson, csv, csv_groups){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv')).then(function(geojson, csv, csv_groups, full_time_csv){
 
         regions_data = geojson
 
@@ -52,6 +52,19 @@ function initialize(){
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
                     demand_entry_sl: parseInt(row.demand_entry_sl),
+                };
+            }
+        );
+
+        full_time_data = _.map(
+            $.csv.toObjects(full_time_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_description: row.soc_description,
+                    notes: row.notes,
+                    full_time_percent: row.percentage_of_workforce_who_are_full_time,
                 };
             }
         );
@@ -302,6 +315,8 @@ function selectOccupation(occupation, place_data){
         var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
         $btn_occ_view.attr('href', occ_view_url)
+
+        makePieChart(full_time_data, occupation);
     }
     else {
         // Add occupation group to URL.

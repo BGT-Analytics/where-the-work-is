@@ -111,6 +111,86 @@ function makeCompScatterPlot(place_data, education){
     scatterHelper(prepped_data, point_color, place_data)
 }
 
+function makePieChart(data, occ_clicked){
+    var pie_prepped_data = [];
+    var lookups = {
+        'east midlands': 'east midlands',
+        'east of england': 'eastern',
+        'greater london': 'london',
+        'north east england': 'north east',
+        'north west england': 'north west (inc merseyside)',
+        'south east england': 'south east',
+        'south west england': 'south west',
+        'west midlands': 'west midlands',
+        'yorkshire & the humber': 'yorkshire and humberside',
+    }
+
+    if($.address.parameter("location_type") && $.address.parameter("location")){
+        select_location_type = decodeURIComponent($.address.parameter("location_type")).toLowerCase();
+        select_location = decodeURIComponent($.address.parameter("location")).toLowerCase();
+
+        if (select_location_type === 'nation') {
+            var location = select_location;
+            console.log('its a nation')
+        }
+        else if (select_location_type === 'region') {
+            var location = lookups[select_location];
+            console.log('its a region')
+        }
+
+        else if (select_location_type === 'lepplus') {
+            console.log('its lepplus')
+            console.log(select_location)
+            var location;
+
+            $(geo_hierarchy['children']).each(function(i, nation){
+                $(nation['children']).each(function(i,region){
+                    $(region['children']).each(function(i, lepPlus){
+                        if (select_location === lepPlus['name'].toLowerCase()) {
+                            console.log(nation['name'], 1)
+                            console.log(region['name'], 2)
+                            console.log(lepPlus['name'], 3)
+                            if (region['name'] != '') {
+                                console.log('england...')
+                                location = lookups[region['name'].toLowerCase()]
+                            }
+                            else {
+                                console.log('not england', nation, '$$')
+                                location = nation['name']
+                            }
+                        }
+                    })
+                })
+            })
+        }
+
+    }
+    else {
+        console.log('its the UK!')
+        var location = 'uk'
+    }
+
+    console.log("location: ", location)
+
+    $(data).each(function(i, row){
+        if (row['soc_description'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
+            pie_prepped_data = [{
+                data: [{
+                    name: 'Full Time',
+                    y: parseFloat(row['full_time_percent']),
+                }, {
+                    name: 'Part Time',
+                    y: 1 - row['full_time_percent'],
+                }]
+            }]
+        }
+    })
+
+    console.log(pie_prepped_data)
+
+    pieChartHelper(pie_prepped_data);
+}
+
 function highlightOcc(occupation){
     $.each(Highcharts.charts, function(index, chart){
         if (chart && chart.options.chart.type == 'scatter'){
