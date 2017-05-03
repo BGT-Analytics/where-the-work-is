@@ -13,16 +13,22 @@ function pieChartHelper(prepped_data) {
             text: '',
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '<b>{point.percentage:.1f}%</b>'
         },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: false,
+                    enabled: true,
+                    distance: -30,
+                    format: '<b>{point.name}</b>',
+                    style: {
+                        color: '#fff',
+                    }
                 },
                 colors: ['#3A4B5D', '#FDAC00'],
+                size: "100%",
             }
         },
         series: prepped_data
