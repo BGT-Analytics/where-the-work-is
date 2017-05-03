@@ -1,6 +1,6 @@
 include config.mk
 
-all: merged_regions.geojson occupation_group_data.csv occupation_data.csv full_time_percent.csv
+all: merged_regions.geojson occupation_group_data.csv occupation_data.csv full_time_percent.csv historical_employment.csv
 # note: the viz now uses merged_regions_simplified.geojson
 # which has been manually derived from merged_regions.geojson
 
@@ -60,6 +60,14 @@ merged_regions.table: gb_regions.append
 
 full_time_percent.csv: 20170330_Full_Time_Percent_WTWI2.xlsx
 		in2csv --sheet "Precentage Full Time" $< | \
+		python slugify_header.py > $@
+
+historical_employment.csv: 20170330_Historical_employment_and_projections_WTWI2.xlsx
+		in2csv --sheet "Historical employment numbers" $< | \
+		python slugify_header.py > $@
+
+projection_employment.csv: 20170330_Historical_employment_and_projections_WTWI2.xlsx
+		in2csv --sheet "Projection text" $< | \
 		python slugify_header.py > $@
 
 occupation_group_data.csv: INPUT_DATA_2017-04-25.xlsx

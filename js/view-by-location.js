@@ -4,6 +4,9 @@ var occupation_data;
 var occupation_group_data;
 var regions_data;
 var place_data;
+var full_time_data;
+var historical_employment_data;
+var projection_employment_data;
 
 // remembering what has been clicked
 var clicked_location = false,
@@ -17,7 +20,7 @@ var clicked_location = false,
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv')).then(function(geojson, csv, csv_groups, full_time_csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv){
 
         regions_data = geojson
 
@@ -68,6 +71,35 @@ function initialize(){
                 };
             }
         );
+
+        historical_employment_data = _.map(
+            $.csv.toObjects(historical_employment_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_name: row.soc_name,
+                    year_2012: row.year_2012,
+                    year_2013: row.year_2013,
+                    year_2014: row.year_2014,
+                    year_2015: row.year_2015,
+                };
+            }
+        );
+
+        projection_employment_data = _.map(
+            $.csv.toObjects(projection_employment_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_name: row.soc_name,
+                    projection: row.working_futures_projection,
+                };
+            }
+        );
+
+        console.log(projection_employment_data);
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -316,16 +348,20 @@ function selectOccupation(occupation, place_data){
 
         $btn_occ_view.attr('href', occ_view_url)
 
-        makePieChart(full_time_data, occupation);
-
+        // Find and decode location
         var loc = findLocation().toUpperCase();
-
-        console.log(decodeURIComponent($.address.parameter("location_type")), "*****")
         if (decodeURIComponent($.address.parameter("location_type")) == 'LEPplus') {
-            console.log("yeesss")
             loc = loc + '<br><small>Complete data not available for ' + decodeURIComponent($.address.parameter("location")) + '</small>'
         }
+
+        // Create a pie chart with a subheader
+        makePieChart(full_time_data, occupation);
         $("#location-span-percent").html(loc)
+
+        // Create a table with a subheader
+        makeTables(historical_employment_data, projection_employment_data, occupation);
+        $("#span-historical").html(loc);
+
     }
     else {
         // Add occupation group to URL.

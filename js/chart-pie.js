@@ -15,9 +15,6 @@ function pieChartHelper(prepped_data) {
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
-//         options: {
-//  colors: ['#50B432', '#ED561B']
-// },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
