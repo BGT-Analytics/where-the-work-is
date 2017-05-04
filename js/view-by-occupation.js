@@ -159,7 +159,6 @@ function initialize(){
         });
 
         MapsLib.initialize();
-
     });
 }
 

@@ -15,6 +15,9 @@ var clicked_location = false,
     clicked_occ_bar = false,
     clicked_map = false;
 
+var counter = 1;
+
+
 (function(){
     initialize();
 })()
@@ -117,12 +120,14 @@ function initialize(){
             updateLocation('Country', 'UK');
         }
 
+
         // populating select menu w/ regions & leps
         var $location_select_list = $('#location-select-list');
         $location_select_list.append('<li><a href="/" id="option-uk">United Kingdom</a></li><hr/>')
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
             n_link_html = makeLinkHTML(n, cleanGeo(n), 'option-nation')
+
             $location_select_list.append('<li>'+n_link_html+'</li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
@@ -137,6 +142,103 @@ function initialize(){
                 });
             });
         });
+
+
+
+        var inputBox = document.getElementById('chatinput');
+
+        inputBox.onkeyup = function(){
+
+            if (inputBox.value != '') {
+                filterHide = ":not(:contains('" + inputBox.value + "'))"
+                $("li").filter(filterHide).hide();
+
+                console.log(filterHide)
+                filterShow = ":contains('" + inputBox.value + "')"
+                console.log(filterShow)
+                $("li").filter(filterShow).show();
+            }
+            else {
+                $("li").show();
+            }
+        }
+
+
+
+        // populating select menu w/ regions & leps
+        // var locations_data_arr = [
+        //     {
+        //         id: 0,
+        //         text: 'United Kingdom',
+        //     }
+        // ]
+        // $.each(geo_hierarchy['children'], function(index, value){
+        //     n = value['name']
+        //     if (n != '') {
+        //         obj = {
+        //             id: counter,
+        //             text: n,
+        //         }
+        //         locations_data_arr.push(obj)
+        //         counter += 1
+        //     }
+
+        //     $.each(value['children'] , function(index, value){
+        //         r = value['name']
+        //         if (r != '') {
+        //             obj = {
+        //                 id: counter,
+        //                 text: r,
+        //             }
+        //             locations_data_arr.push(obj)
+        //             counter += 1
+        //         }
+
+        //         $.each(value['children'] , function(index, value){
+        //             l = value['name']
+        //             if (l != '') {
+        //                 obj = {
+        //                     id: counter,
+        //                     text: l,
+        //                 }
+        //                 locations_data_arr.push(obj)
+        //                 counter += 1
+        //             }
+        //         });
+        //     });
+        // });
+
+
+        // $("#locations-select").select2({
+        //     width: '50%',
+        //     placeholder: "United Kingdom",
+        //     data: locations_data_arr,
+        // });
+
+
+        // $('#locations-select').change(function () {
+        //     location_click = $('#locations-select :selected').text()
+        //     console.log(location_click)
+        //     link = makeLinkHTML(location_click, cleanGeo(location_click), 'option-nation')
+        //     console.log(link)
+
+
+//         var parameters = window.location.href.split("?")[1];
+//         if (parameters) {
+//             var parameters_arr = parameters.split("&");
+//         }
+
+// $.each(parameters_arr, function( index, value ) {
+//    var_query = value.split('=');
+//    console.log(var_query)
+// });
+
+
+//             window.location.search = '?location=' + location_click + parameters;
+
+// window.location.href = url;
+
+        // });
 
         // To "Browse mid-skilled jobs by location":
         var $control_pane = $('#control-pane');
@@ -214,6 +316,7 @@ function initialize(){
         });
 
         clearSelect();
+
     });
 }
 
