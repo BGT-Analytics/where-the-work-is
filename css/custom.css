@@ -427,15 +427,15 @@ hr {
 }
 
 .btn-navy, .btn-navy:active, .btn-navy:visited {
-  border: 2px solid #2C3E50;
-  background-color: #fbab18;
-  color: #2C3E50;
+  border: 2px solid #fff;
+  background-color: #2C3E50;
+  color: #fff;
 }
 
 .btn-navy:hover{
-  border: 2px solid #2C3E50;
-  background-color: #e2be7c;
-  color: #2C3E50;
+  border: 2px solid #fff;
+  background-color: #667481;
+  color: #fff;
 }
 
 /* page layout */
