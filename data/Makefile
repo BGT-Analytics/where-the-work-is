@@ -58,23 +58,27 @@ merged_regions.table: gb_regions.append
 		   GROUP BY name \
 		 )"
 
-full_time_percent.csv: 20170330_Full_Time_Percent_WTWI2.xlsx
+full_time_percent.csv: raw/20170330_Full_Time_Percent_WTWI2.xlsx
 		in2csv --sheet "Precentage Full Time" $< | \
 		python slugify_header.py > $@
 
-historical_employment.csv: 20170330_Historical_employment_and_projections_WTWI2.xlsx
+occ_skills.csv: raw/20170310_Titles_and_Skills_WTWI2.xlsx
+		in2csv --sheet "Spec Skills" $< | \
+		python slugify_header.py > $@
+
+historical_employment.csv: raw/20170330_Historical_employment_and_projections_WTWI2.xlsx
 		in2csv --sheet "Historical employment numbers" $< | \
 		python slugify_header.py > $@
 
-projection_employment.csv: 20170330_Historical_employment_and_projections_WTWI2.xlsx
+projection_employment.csv: raw/20170330_Historical_employment_and_projections_WTWI2.xlsx
 		in2csv --sheet "Projection text" $< | \
 		python slugify_header.py > $@
 
-occupation_group_data.csv: INPUT_DATA_2017-04-25.xlsx
+occupation_group_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
 		in2csv --sheet "Occupation x Geo" $< | \
 			python calc_occupation_groups.py > $@
 
-occupation_data.csv: INPUT_DATA_2017-04-25.xlsx
+occupation_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 

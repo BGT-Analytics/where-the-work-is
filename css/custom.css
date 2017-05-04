@@ -616,12 +616,12 @@ hr {
   color: #777;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   #occupationModal .modal-dialog {
       width: 660px;
       margin: 30px auto;
   }
-}
+}*/
 
 
 /* map stuff */

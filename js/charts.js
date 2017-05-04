@@ -132,66 +132,47 @@ function makePieChart(data, occ_clicked){
     pieChartHelper(pie_prepped_data);
 }
 
-function makeTables(employment_data, projection_data, occ_clicked) {
+function makeLineChart(employment_data, occ_clicked) {
     var location = findLocation();
-    var table;
+    var data_arr = [];
 
     $(employment_data).each(function(i, row){
         if (row['soc_name'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
-
-            employment_table = '<table class="table table-striped table-bordered">' +
-                '<thead>' +
-                    '<tr>' +
-                    '<th colspan="2">Employment (Labor force survey)</th>' +
-                    '</tr>' +
-                '</thead>' +
-                '<tbody>' +
-                    '<tr>' +
-                        '<td>2012</td>' +
-                        '<td>' + addCommas(row['year_2012']) + '</td>' +
-                    '</tr>' +
-                    '<tr>' +
-                        '<td>2013</td>' +
-                        '<td>' + addCommas(row['year_2013']) + '</td>' +
-                    '</tr>' +
-                    '<tr>' +
-                        '<td>2014</td>' +
-                        '<td>' + addCommas(row['year_2014']) + '</td>' +
-                    '</tr>' +
-                    '<tr>' +
-                        '<td>2015</td>' +
-                        '<td>' + addCommas(row['year_2015']) + '</td>' +
-                    '</tr>' +
-                '</tbody>' +
-              '</table>'
+            data_arr.push(parseInt(row['year_2012']), parseInt(row['year_2013']), parseInt(row['year_2014']), parseInt(row['year_2015']))
         }
     });
+
+    console.log(data_arr)
+
+    lineChartHelper(data_arr);
+
+}
+
+function makeProjectionText(projection_data, occ_clicked) {
+    var location = findLocation();
+    var projection_text;
 
     $(projection_data).each(function(i, row){
         if (row['soc_name'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
-
-            console.log(row)
-            projection_table = '<table class="table table-striped table-bordered">' +
-                '<thead>' +
-                    '<tr>' +
-                    '<th>Projections</th>' +
-                    '</tr>' +
-                '</thead>' +
-                '<tbody>' +
-                    '<tr>' +
-                        '<td>' + row['projection'] + '</td>' +
-                    '</tr>' +
-                '</tbody>' +
-              '</table>'
+            projection_text = "<br><small><em>" + row['projection'] + "</em></small>"
         }
     });
 
-    $('#employmentTable').html(employment_table);
-    $('#projectionTable').html(projection_table);
+    $('#projectionTable').html(projection_text);
 }
 
-function addCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+function makeSkillsText(occ_skills_data, occ_clicked) {
+    var skills_text;
+
+    $(occ_skills_data).each(function(i, row){
+        if (row['soc3_name'].replace('&', 'and') === occ_clicked.replace('&', 'and')) {
+            console.log(row['skills'])
+            skills_text += row['skills']
+        }
+    });
+
+    console.log(skills_text)
+    return skills_text;
 }
 
 function findLocation() {

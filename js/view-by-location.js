@@ -20,7 +20,7 @@ var clicked_location = false,
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv'), $.get('data/occ_skills.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv, occ_skils_csv){
 
         regions_data = geojson
 
@@ -99,7 +99,15 @@ function initialize(){
             }
         );
 
-        console.log(projection_employment_data);
+        occ_skills_data = _.map(
+            $.csv.toObjects(occ_skils_csv[0]),
+            function(row) {
+                return {
+                    soc3_name: row.soc3_name,
+                    skills: row.specialist_skills_required_for_this_occupation_include,
+                };
+            }
+        );
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -329,7 +337,7 @@ function selectOccupation(occupation, place_data){
         $('#occupationModalLabel').html(occupation);
 
         // Give modal content.
-        $("#modal-occ-description").html(occupation_mapping[occupation]['description']);
+        $("#modal-occ-description").html('<p>' + occupation_mapping[occupation]['description'] + '</p>');
         $("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
         $("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
         $("#modal-occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
@@ -339,6 +347,8 @@ function selectOccupation(occupation, place_data){
         $("#modal-occ-figure-comp-fe").html(comp_fig_str_fe)
         $("#modal-occ-figure-comp-he").html(comp_fig_str_he)
 
+
+
         // Build the button to visit the view-by-location page.
         occ = $.address.parameter('occupation')
         occ_group = $.address.parameter('occupation_group')
@@ -347,6 +357,9 @@ function selectOccupation(occupation, place_data){
         var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
         $btn_occ_view.attr('href', occ_view_url)
+
+        // Display skills and titles information
+        makeSkillsText(occ_skills_data, occupation);
 
         // Find and decode location
         var loc = findLocation().toUpperCase();
@@ -359,7 +372,8 @@ function selectOccupation(occupation, place_data){
         $("#location-span-percent").html(loc)
 
         // Create a table with a subheader
-        makeTables(historical_employment_data, projection_employment_data, occupation);
+        makeLineChart(historical_employment_data, occupation)
+        makeProjectionText(projection_employment_data, occupation);
         $("#span-historical").html(loc);
 
     }
