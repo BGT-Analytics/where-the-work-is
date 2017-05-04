@@ -15,12 +15,15 @@ var clicked_location = false,
     clicked_occ_bar = false,
     clicked_map = false;
 
+var counter = 1;
+
+
 (function(){
     initialize();
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv'), $.get('data/occ_skills.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv, occ_skils_csv){
 
         regions_data = geojson
 
@@ -99,7 +102,15 @@ function initialize(){
             }
         );
 
-        console.log(projection_employment_data);
+        occ_skills_data = _.map(
+            $.csv.toObjects(occ_skils_csv[0]),
+            function(row) {
+                return {
+                    soc3_name: row.soc3_name,
+                    skills: row.specialist_skills_required_for_this_occupation_include,
+                };
+            }
+        );
 
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
@@ -109,12 +120,15 @@ function initialize(){
             updateLocation('Country', 'UK');
         }
 
+
         // populating select menu w/ regions & leps
         var $location_select_list = $('#location-select-list');
+        $location_select_list.append("<input type='text' class='form-control' placeholder='Start typing a location...' id='locationInput'>")
         $location_select_list.append('<li><a href="/" id="option-uk">United Kingdom</a></li><hr/>')
         $.each(geo_hierarchy['children'], function(index, value){
             n = value['name']
             n_link_html = makeLinkHTML(n, cleanGeo(n), 'option-nation')
+
             $location_select_list.append('<li>'+n_link_html+'</li>')
             // loop thru regions within nation
             $.each(value['children'] , function(index, value){
@@ -129,6 +143,35 @@ function initialize(){
                 });
             });
         });
+
+        // Autocomplete search: do not close window, when clicked
+        $("#locationInput").on("click", function(event) {
+            event.stopPropagation();
+        });
+
+        // Customize jQuery for case insensitive searches
+        $.expr[":"].contains = $.expr.createPseudo(function(arg) {
+            return function( elem ) {
+                return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+            };
+        });
+
+        // Get the text, and hide or show <li>
+        var inputBox = document.getElementById('locationInput');
+
+        inputBox.onkeyup = function(){
+
+            if (inputBox.value != '') {
+                filterHide = ":not(:contains('" + inputBox.value + "'))"
+                $("#location-select-list li").filter(filterHide).hide();
+
+                filterShow = ":contains('" + inputBox.value + "')"
+                $("#location-select-list li").filter(filterShow).show();
+            }
+            else {
+                $("#location-select-list li").show();
+            }
+        }
 
         // To "Browse mid-skilled jobs by location":
         var $control_pane = $('#control-pane');
@@ -206,6 +249,7 @@ function initialize(){
         });
 
         clearSelect();
+
     });
 }
 
@@ -329,7 +373,7 @@ function selectOccupation(occupation, place_data){
         $('#occupationModalLabel').html(occupation);
 
         // Give modal content.
-        $("#modal-occ-description").html(occupation_mapping[occupation]['description']);
+        $("#modal-occ-description").html('<p>' + occupation_mapping[occupation]['description'] + '</p>');
         $("#modal-occ-label-demand").html('<span class="label label-'+slugify(place_occ_data['demand_ticker'])+'">'+place_occ_data['demand_ticker']+'</span>')
         $("#modal-occ-label-comp-fe").html('<span class="label label-'+slugify(oppLabel(comp_fig_fe))+'">'+oppLabel(comp_fig_fe)+'</span>')
         $("#modal-occ-label-comp-he").html('<span class="label label-'+slugify(oppLabel(comp_fig_he))+'">'+oppLabel(comp_fig_he)+'</span>')
@@ -339,6 +383,8 @@ function selectOccupation(occupation, place_data){
         $("#modal-occ-figure-comp-fe").html(comp_fig_str_fe)
         $("#modal-occ-figure-comp-he").html(comp_fig_str_he)
 
+
+
         // Build the button to visit the view-by-location page.
         occ = $.address.parameter('occupation')
         occ_group = $.address.parameter('occupation_group')
@@ -347,6 +393,9 @@ function selectOccupation(occupation, place_data){
         var occ_view_url = '/occupation.html#/?occupation_group='+ occ_group + '&occupation='+occ
 
         $btn_occ_view.attr('href', occ_view_url)
+
+        // Display skills and titles information
+        makeSkillsText(occ_skills_data, occupation);
 
         // Find and decode location
         var loc = findLocation().toUpperCase();
@@ -359,7 +408,8 @@ function selectOccupation(occupation, place_data){
         $("#location-span-percent").html(loc)
 
         // Create a table with a subheader
-        makeTables(historical_employment_data, projection_employment_data, occupation);
+        makeLineChart(historical_employment_data, occupation)
+        makeProjectionText(projection_employment_data, occupation);
         $("#span-historical").html(loc);
 
     }

@@ -390,8 +390,9 @@ hr {
   font-size: 12px;
 }
 
+#location-select-list .form-control { width: 95%; }
 
-
+#location-select-list input { margin: 6px auto; }
 
 /* buttons */
 .btn, .btn:hover, .btn:active, .btn:visited{
@@ -424,6 +425,18 @@ hr {
   color: #fff;
   background-color: #3B4B5C;
   border-color: #3B4B5C;
+}
+
+.btn-navy, .btn-navy:active, .btn-navy:visited {
+  border: 2px solid #fff;
+  background-color: #2C3E50;
+  color: #fff;
+}
+
+.btn-navy:hover{
+  border: 2px solid #fff;
+  background-color: #667481;
+  color: #fff;
 }
 
 /* page layout */
@@ -602,13 +615,6 @@ hr {
 
 .modal-body {
   color: #777;
-}
-
-@media (min-width: 768px) {
-  #occupationModal .modal-dialog {
-      width: 660px;
-      margin: 30px auto;
-  }
 }
 
 
