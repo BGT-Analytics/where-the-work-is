@@ -390,8 +390,9 @@ hr {
   font-size: 12px;
 }
 
+#location-select-list .form-control { width: 95%; }
 
-
+#location-select-list input { margin: 6px auto; }
 
 /* buttons */
 .btn, .btn:hover, .btn:active, .btn:visited{
