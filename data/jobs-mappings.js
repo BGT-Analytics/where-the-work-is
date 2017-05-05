@@ -318,11 +318,11 @@ var occupation_mapping = {
         "occ_group": "Associate professional & technical occupations",
         "description":"Workers in this group prepare for and compete in sporting events for financial gain, train amateur and professional sportsmen and women to enhance performance, promote participation and standards in sport, organise and officiate at sporting events, and provide instruction, training and supervision for various forms of exercise and other recreational activities.",
         "example_titles":["Sports players","Sports coaches, instructors and officials","Fitness instructors"]},
-    "Transport Associate Professionals": {
-        "short_name":"Transport",
-        "occ_group": "Associate professional & technical occupations",
-        "description":"Workers in this group command and navigate aircraft and vessels, perform technical functions to operate and maintain such craft, and plan and regulate the ground and air movements of aircraft.",
-        "example_titles":["Air traffic controllers","Aircraft pilots and flight engineers","Ship and hovercraft officers"]},
+    // "Transport Associate Professionals": {
+    //     "short_name":"Transport",
+    //     "occ_group": "Associate professional & technical occupations",
+    //     "description":"Workers in this group command and navigate aircraft and vessels, perform technical functions to operate and maintain such craft, and plan and regulate the ground and air movements of aircraft.",
+    //     "example_titles":["Air traffic controllers","Aircraft pilots and flight engineers","Ship and hovercraft officers"]},
     "Legal Associate Professionals": {
         "short_name":"Legal",
         "occ_group": "Associate professional & technical occupations",
@@ -378,7 +378,7 @@ var occupation_mapping = {
         "occ_group": "Skilled trades occupations",
         "description":"Metal forming, welding and related trades workers shape, cast, finish and join metal, and erect, install, maintain and repair metal structures and fixtures.",
         "example_titles":["Smiths and forge workers","Moulders, core makers and die casters","Sheet metal workers","Welding trades","Pipe fitters","Metal plate workers, and riveters"]},
-    "Metal machining, fitting & instrument-making trades": {
+    "Metal Machining, Fitting & Instrument Making Trades": {
         "short_name":"Metal machining",
         "occ_group": "Skilled trades occupations",
         "description":"Metal machining, fitting and instrument-making trades workers mark out metal for machine tool working, set up and operate lathes, boring, drilling, grinding and milling machines and presses, assemble and repair machine tools, install and repair plant and industrial machinery, fix and assemble parts and sub-assemblies in the manufacture of metal products, make, calibrate, test and repair precision and optical instruments, and install and repair air-conditioning and refrigeration systems.",
@@ -514,13 +514,6 @@ var occupation_mapping = {
         "occ_group": "NA",
         "description":"Those working in occupations in this minor group organise and maintain services and equipment necessary for sporting and recreational activities, advise upon and make travel arrangements for customers and provide services to enhance the enjoyment, comfort and safety of holidaymakers and air, rail, and sea passengers.",
         "example_titles":["SPORTS AND LEISURE ASSISTANTS", "TRAVEL AGENTS", "AIR TRAVEL ASSISTANTS", "RAIL TRAVEL ASSISTANTS", "LEISURE AND TRAVEL SERVICE OCCUPATIONS N.E.C."]
-    },
-    "Metal Machining, Fitting & Instrument Making Trades": {
-        "short_name":"NA",
-        "occ_group": "NA",
-        "description":"Metal machining, fitting and instrument making trades workers mark out metal for machine tool working, set up and operate lathes, boring, drilling, grinding, milling machines and presses, assemble and repair machine tools, install and repair plant and industrial machinery, fix and assemble parts and sub-assemblies in the manufacture of metal products, make, calibrate, test and repair precision and optical instruments, and install and repair air-conditioning and refrigeration systems.",
-        "example_titles":["METAL MACHINING SETTERS AND SETTER-OPERATORS", "TOOL MAKERS, TOOL FITTERS AND MARKERS-OUT", "METAL WORKING PRODUCTION AND MAINTENANCE FITTERS", "PRECISION INSTRUMENT MAKERS AND REPAIRERS", "AIR-CONDITIONING AND REFRIGERATION ENGINEERS"]
-
     },
     "Architects, Town Planners & Surveyors": {
         "short_name":"NA",
