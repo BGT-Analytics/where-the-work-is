@@ -1,6 +1,6 @@
 include config.mk
 
-all: merged_regions.geojson occupation_group_data.csv occupation_data.csv full_time_percent.csv historical_employment.csv
+all: merged_regions.geojson occupation_group_data.csv occupation_data.csv full_time_percent.csv historical_employment.csv occ_skills.csv projection_employment.csv
 # note: the viz now uses merged_regions_simplified.geojson
 # which has been manually derived from merged_regions.geojson
 
@@ -9,6 +9,9 @@ clean:
 	rm merged_regions.geojson
 	rm occupation_data.csv
 	rm occupation_group_data.csv
+	rm full_time_percent.csv
+	rm historical_employment.csv
+	rm occ_skills.csv projection_employment.csv
 
 define convert_srs
 	ogr2ogr -t_srs EPSG:4326 $@ $<
