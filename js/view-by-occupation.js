@@ -55,39 +55,28 @@ function initialize(){
             }
         );
 
-        console.log(full_time_data)
 
         //merge location and job data
+        // (1) Find all occupations (jobs-mappings.js): put these in an array.
         var current_occupation;
         var occupation_list = [];
         $.each(occupation_mapping, function(key, value) {occupation_list.push(String(key))});
 
+        // (2) Iterate over the array of jobs
         $.each(occupation_list, function(k_index, occ) {
+            // (3) Get all data associated with an occupation.
             current_occupation = _.where(occupation_data, {occupation: occ});
             $.each(current_occupation, function(j_index, job){
-                // populate regions
+                // (4a) populate regions
                 $.each(regions_data[0]['features'], function(r_index, region){
-
-                    // if (job['geography_name'] == 'OXFORDSHIRE LEP') {
-                    // if (region.properties['JOB_REGION'] == 'OXFORDSHIRE') {
-                    //     console.log("looking for ...")
-                    //     // Oxfordshire
-                    //     console.log(job['geography_name'])
-                        // console.log(region.properties['JOB_REGION'])
-                    // }
-
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
-                    // if (region.properties['LEP/City Region'] == job['geography_name']) {
                         addDataToLocation(region, occ, job);
-                                            console.log(region.properties)
                     }
                 });
 
-                // populate LEPs
+                // (4b) populate LEPs
                 $.each(lep_locations['features'], function(l_index, lep){
-                    // if (lep.properties['lep'].toUpperCase() == job['geography_name'].toUpperCase()) {
-                    // if (lep.properties['LEPplus'].toUpperCase() == job['geography_name'].toUpperCase()) {
-                    if (lep.properties['LEP/City Region'].toUpperCase() == job['geography_name'].toUpperCase()) {
+                    if ( lep.properties['LEP/City Region'].toUpperCase() == cleanOccupation(job['geography_name']).toUpperCase() ) {
                         addDataToLocation(lep, occ, job);
                     }
                 });
@@ -101,7 +90,7 @@ function initialize(){
 
 
         if($.address.parameter("occupation")){
-            // console.log(decodeURIComponent($.address.parameter("occupation")))
+            // location_level: determined with the radio button
             updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
         else{
@@ -176,7 +165,6 @@ function addDataToLocation(location, occ, job){
         location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
         location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
         location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
-    // console.log("data added", location.properties['jobs_data'])
 }
 
 function updateOccupation(occ_name, location_level){
@@ -188,7 +176,7 @@ function updateOccupation(occ_name, location_level){
                         });
     } else{
         var occ_data = _.filter(occupation_data, function(row){
-                            return row.occupation==occ_name&&(row.geography_type=='LEP'||row.geography_type=='Country');
+                            return row.occupation==occ_name&&(row.geography_type=='LEPplus'||row.geography_type=='Country');
                         });
     }
 
@@ -275,7 +263,7 @@ function initializeTable(table_id, column_names, data){
                 "sType": "string",
                 "mRender": function (data, type, full) {
                             if(data){
-                                if (data == "UK Total")
+                                if (data == "UK")
                                     return "<strong> " + cleanGeo(data) + "</strong>"
                                 else
                                     return cleanGeo(data);

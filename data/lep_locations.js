@@ -1,5 +1,6 @@
 //convert from CSV to GeoJSON here: http://togeojson.com/
 // OR here: http://www.convertcsv.com/csv-to-geojson.htm
+// N.B. Check that the names here correlate exactly with the Geography_Name in INPUT_DATA (e.g. "Oxfordshire" vs "Oxfordshire LEP")
 
 var lep_locations = {
    "type": "FeatureCollection",
@@ -63,7 +64,7 @@ var lep_locations = {
        "coordinates":  [ -2.550888062,53.31569807 ]
     },
     "properties": {
-    "LEP/City Region":"Cheshire & Warrington",
+    "LEP/City Region":"Cheshire and Warrington",
     "Pin_Location":"Custom",
     "Region":"NORTH WEST ENGLAND",
     "Nation":"England"
@@ -89,7 +90,7 @@ var lep_locations = {
        "coordinates":  [ -3.488,50.903 ]
     },
     "properties": {
-    "LEP/City Region":"Cornwall & Isles of Scilly",
+    "LEP/City Region":"Cornwall and the Isles of Scilly",
     "Pin_Location":"Tiverton",
     "Region":"SOUTH WEST ENGLAND",
     "Nation":"England"
@@ -102,7 +103,7 @@ var lep_locations = {
        "coordinates":  [ -1.510556,52.408056 ]
     },
     "properties": {
-    "LEP/City Region":"Coventry & Warwickshire",
+    "LEP/City Region":"Coventry and Warwickshire",
     "Pin_Location":"Coventry",
     "Region":"WEST MIDLANDS",
     "Nation":"England"
@@ -128,7 +129,7 @@ var lep_locations = {
        "coordinates":  [ -1.133333,52.95 ]
     },
     "properties": {
-    "LEP/City Region":"Derby, Derbyshire, Nottingham & Nottinghamshire",
+    "LEP/City Region":"Derby, Derbyshire, Nottingham and Nottinghamshire",
     "Pin_Location":"Nottingham",
     "Region":"EAST MIDLANDS",
     "Nation":"England"
@@ -154,7 +155,7 @@ var lep_locations = {
        "coordinates":  [ -3.193416595,55.95155464 ]
     },
     "properties": {
-    "LEP/City Region":"Edinburgh & the Lothians",
+    "LEP/City Region":"Edinburgh and the Lothians",
     "Pin_Location":"Edinburgh",
     "Region":"N/A",
     "Nation":"Scotland"
@@ -206,7 +207,7 @@ var lep_locations = {
        "coordinates":  [ -1.893611,52.483056 ]
     },
     "properties": {
-    "LEP/City Region":"Greater Birmingham & Solihull",
+    "LEP/City Region":"Greater Birmingham and Solihull",
     "Pin_Location":"Birmingham",
     "Region":"WEST MIDLANDS",
     "Nation":"England"
@@ -323,7 +324,7 @@ var lep_locations = {
        "coordinates":  [ -1.133333,52.633333 ]
     },
     "properties": {
-    "LEP/City Region":"Leicester & Leicestershire",
+    "LEP/City Region":"Leicester and Leicestershire",
     "Pin_Location":"Leicester",
     "Region":"EAST MIDLANDS",
     "Nation":"England"
@@ -388,7 +389,7 @@ var lep_locations = {
        "coordinates":  [ -1.257778,51.751944 ]
     },
     "properties": {
-    "LEP/City Region":"Oxfordshire",
+    "LEP/City Region":"Oxfordshire LEP",
     "Pin_Location":"Oxford",
     "Region":"SOUTH EAST ENGLAND",
     "Nation":"England"
@@ -453,7 +454,7 @@ var lep_locations = {
        "coordinates":  [ -2.183333,53 ]
     },
     "properties": {
-    "LEP/City Region":"Stoke-on-Trent & Staffordshire",
+    "LEP/City Region":"Stoke-on-Trent and Staffordshire",
     "Pin_Location":"Stoke on Trent",
     "Region":"WEST MIDLANDS",
     "Nation":"England"
@@ -479,7 +480,7 @@ var lep_locations = {
        "coordinates":  [ -1.78,51.56 ]
     },
     "properties": {
-    "LEP/City Region":"Swindon & Wiltshire",
+    "LEP/City Region":"Swindon and Wiltshire",
     "Pin_Location":"Swindon",
     "Region":"SOUTH WEST ENGLAND",
     "Nation":"England"
@@ -557,7 +558,7 @@ var lep_locations = {
        "coordinates":  [ -1.084213257,53.9599236 ]
     },
     "properties": {
-    "LEP/City Region":"York & North Yorkshire",
+    "LEP/City Region":"YORK, NORTH YORKSHIRE AND EAST RIDING",
     "Pin_Location":"York",
     "Region":"YORKSHIRE AND THE HUMBER",
     "Nation":"England"
@@ -565,6 +566,3 @@ var lep_locations = {
   }
 ]
 }
-
-
-// var lep_locations = {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.893611,52.483056]},"properties":{"location_label":"Greater Birmingham","lep":"Greater Birmingham and Solihull"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.583333,51.45]},"properties":{"location_label":"Bristol Region","lep":"West of England"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.233333,53.466667]},"properties":{"location_label":"Greater Manchester","lep":"Greater Manchester"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.549167,53.799722]},"properties":{"location_label":"Leeds City Region","lep":"Leeds City Region"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-3,53.4]},"properties":{"location_label":"Liverpool City Region","lep":"Liverpool City Region"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.133333,52.95]},"properties":{"location_label":"Nottingham City Region","lep":"Derby, Derbyshire, Nottingham and Nottinghamshire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.6,54.966667]},"properties":{"location_label":"Newcastle Region","lep":"North East"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.466944,53.383611]},"properties":{"location_label":"Sheffield City Region","lep":"Sheffield City Region"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.131312,50.842941]},"properties":{"location_label":"Greater Brighton","lep":"Coast to Capital"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.510556,52.408056]},"properties":{"location_label":"Coventry and Warwickshire","lep":"Coventry and Warwickshire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.333333,53.75]},"properties":{"location_label":"Hull and the Humber","lep":"Humber"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[0.74,52.41]},"properties":{"location_label":"Great Ipswich & Greater Norwich","lep":"New Anglia"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.127758,51.507351]},"properties":{"location_label":"London","lep":"London"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.133333,52.633333]},"properties":{"location_label":"Leicester and Leicestershire","lep":"Leicester and Leicestershire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.257778,51.751944]},"properties":{"location_label":"Oxford and Oxfordshire","lep":"Oxfordshire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-3.488,50.903]},"properties":{"location_label":"Plymouth and South West Peninsula","lep":"Heart of the South West"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-5.0523,50.2635]},"properties":{"location_label":"Plymouth and South West Peninsula","lep":"Cornwall and the Isles of Scilly"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.699,53.759]},"properties":{"location_label":"Preston, South Ribble and Lancashire","lep":"Lancashire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.1755,50.8542]},"properties":{"location_label":"Southampton and Portsmouth","lep":"Solent"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[0.730922,51.340203]},"properties":{"location_label":"Southend-on-Sea","lep":"South East"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.183333,53]},"properties":{"location_label":"Stoke-on-Trent and Staffordshire","lep":"Stoke-on-Trent and Staffordshire"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.78,51.56]},"properties":{"location_label":"Swindon and Wiltshire","lep":"Swindon and Wiltshire"}}]}

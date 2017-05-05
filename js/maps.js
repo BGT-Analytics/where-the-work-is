@@ -40,9 +40,7 @@ var MapsLib = {
             var location_key = 'JOB_REGION';
             if (props) {
                 if (typeof props['JOB_REGION'] === 'undefined')
-                    // location_key = 'lep';
                     location_key = 'LEP/City Region'
-                console.log(props)
 
                 this._div.innerHTML = '<b>' + cleanGeo(props[location_key]) + '</b>\
                                        <table class="table table-condensed"><tbody>\
@@ -100,6 +98,7 @@ var MapsLib = {
             },
             onEachFeature: MapsLib.onEachFeature
         });
+
     },
 
     toggleGeo: function(geo_type){
@@ -120,28 +119,23 @@ var MapsLib = {
         MapsLib.occupation = occupation;
 
         $('#modal-occ-name').html('for '+occupation.toLowerCase());
-        console.log(occupation)
         var occupation_formatted = occupation.replace(/((\w+\W+){3})/, '$1<br/>');
         $('#legend-occupation').html(occupation_formatted);
 
         MapsLib.regions_occ_geojson.eachLayer(function (layer) {
-            if (layer.feature.properties['jobs_data']) {
-                layer.setStyle({
-                    weight: 1,
-                    opacity: 1,
-                    color: 'white',
-                    fillOpacity: 0.7,
-                    fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
-                });
-            }
+            layer.setStyle({
+                weight: 1,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.7,
+                fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
+            });
         });
 
         MapsLib.lep_occ_geojson.eachLayer(function (layer) {
-            if (layer.feature.properties['jobs_data']) {
-                layer.setStyle({
-                    fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
-                });
-            }
+            layer.setStyle({
+                fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
+            });
         });
 
         MapsLib.occ_map.fitBounds(MapsLib.regions_occ_geojson.getBounds(), {paddingBottomRight: [150, 0]});
@@ -173,9 +167,8 @@ var MapsLib = {
     },
 
     resetHighlight: function (e) {
-        if (e.target.feature.properties['jobs_data']) {
-            e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])});
-        }
+        e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])});
+
         MapsLib.info.update();
     },
 
