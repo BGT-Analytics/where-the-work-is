@@ -75,6 +75,7 @@ function initialize(){
             }
         );
 
+        // Note: changed the header of historical_employment_csv to include 'year'
         historical_employment_data = _.map(
             $.csv.toObjects(historical_employment_csv[0]),
             function(row) {

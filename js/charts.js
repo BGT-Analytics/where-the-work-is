@@ -81,7 +81,8 @@ function makeDemandChart(place_data, occupation_group_data){
 }
 
 function makeCompScatterPlot(place_data, education){
-
+    console.log(place_data)
+    console.log(education)
     if (education=='he'){
         var point_color = he_color
         var col_name = 'he_opportunity_score'
@@ -107,6 +108,8 @@ function makeCompScatterPlot(place_data, education){
         }
         if (!isNaN(point.x) && !isNaN(point.y)) prepped_data.push(point)
     })
+
+    console.log(prepped_data);
 
     scatterHelper(prepped_data, point_color, place_data)
 }
@@ -142,10 +145,7 @@ function makeLineChart(employment_data, occ_clicked) {
         }
     });
 
-    console.log(data_arr)
-
     lineChartHelper(data_arr);
-
 }
 
 function makeProjectionText(projection_data, occ_clicked) {
@@ -171,7 +171,6 @@ function makeSkillsText(occ_skills_data, occ_clicked) {
         }
     });
 
-    console.log(skills_text)
     return skills_text;
 }
 
