@@ -69,6 +69,10 @@ occ_skills.csv: raw/20170310_Titles_and_Skills_WTWI2.xlsx
 		in2csv --sheet "Spec Skills" $< | \
 		python slugify_header.py > $@
 
+occ_titles.csv: raw/20170310_Titles_and_Skills_WTWI2.xlsx
+		in2csv --sheet "Titles" $< | \
+		python slugify_header.py > $@
+
 historical_employment.csv: raw/20170330_Historical_employment_and_projections_WTWI2.xlsx
 		in2csv --sheet "Historical employment numbers" $< | \
 		python slugify_header.py > $@
@@ -77,11 +81,13 @@ projection_employment.csv: raw/20170330_Historical_employment_and_projections_WT
 		in2csv --sheet "Projection text" $< | \
 		python slugify_header.py > $@
 
-occupation_group_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
+# occupation_group_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
+occupation_group_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-05-08.xlsx
 		in2csv --sheet "Occupation x Geo" $< | \
 			python calc_occupation_groups.py > $@
 
-occupation_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
+# occupation_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
+occupation_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-05-08.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 

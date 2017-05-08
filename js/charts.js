@@ -162,16 +162,27 @@ function makeProjectionText(projection_data, occ_clicked) {
 }
 
 function makeSkillsText(occ_skills_data, occ_clicked) {
-    var skills_text;
+    var skills_text = '';
 
     $(occ_skills_data).each(function(i, row){
         if (row['soc3_name'].replace('&', 'and') === occ_clicked.replace('&', 'and')) {
-            console.log(row['skills'])
-            skills_text += row['skills']
+            skills_text += (row['skills'] + ', ')
         }
     });
 
-    return skills_text;
+    return skills_text.slice(0, -2);
+}
+
+function makeTitlesText(occ_titles_data, occ_clicked) {
+    var titles_text = '';
+
+    $(occ_titles_data).each(function(i, row){
+        if (row['soc3_name'].replace('&', 'and') === occ_clicked.replace('&', 'and')) {
+            titles_text += (row['titles'] + ', ')
+        }
+    });
+
+    return titles_text.slice(0, -2);
 }
 
 function findLocation() {

@@ -263,7 +263,7 @@ function initializeTable(table_id, column_names, data){
                 "sType": "string",
                 "mRender": function (data, type, full) {
                             if(data){
-                                if (data == "UK")
+                                if (data == "UK Total")
                                     return "<strong> " + cleanGeo(data) + "</strong>"
                                 else
                                     return cleanGeo(data);
