@@ -23,7 +23,7 @@ var counter = 1;
 })()
 
 function initialize(){
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv'), $.get('data/occ_skills.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv, occ_skils_csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/occupation_group_data.csv'), $.get('data/full_time_percent.csv'), $.get('data/historical_employment.csv'), $.get('data/projection_employment.csv'), $.get('data/occ_skills.csv'), $.get('data/occ_titles.csv')).then(function(geojson, csv, csv_groups, full_time_csv, historical_employment_csv, projection_employment_csv, occ_skils_csv, occ_titles_csv){
 
         regions_data = geojson
 
@@ -54,6 +54,7 @@ function initialize(){
             function(row) {
                 return {
                     occ_group: cleanOccupation(row.occupation_group),
+                    geo_name: row.geography_name,
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
@@ -61,6 +62,15 @@ function initialize(){
                 };
             }
         );
+
+        geo_name = $.address.parameter("location")
+        if (geo_name) {
+            geo_name = geo_name.toUpperCase();
+        } else {
+            geo_name = 'UK Total'
+        }
+
+        occupation_group_data_parsed = _.where(occupation_group_data, {geo_name: geo_name})
 
         full_time_data = _.map(
             $.csv.toObjects(full_time_csv[0]),
@@ -113,12 +123,22 @@ function initialize(){
             }
         );
 
+        occ_titles_data = _.map(
+            $.csv.toObjects(occ_titles_csv[0]),
+            function(row) {
+                return {
+                    soc3_name: row.soc3_name,
+                    titles: row.common_titles_for_this_occupation_group_include,
+                };
+            }
+        );
+
         if($.address.parameter("location_type") && $.address.parameter("location")){
             updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
         }
         else{
             // This makes the demand bar chart.
-            updateLocation('Country', 'UK');
+            updateLocation('Country', 'UK Total');
         }
 
 
@@ -177,7 +197,7 @@ function initialize(){
         // To "Browse mid-skilled jobs by location":
         var $control_pane = $('#control-pane');
         $control_pane.on('click', '.option-country', function() {
-            updateLocation('Country', 'UK');
+            updateLocation('Country', 'UK Total');
             return false;
         });
         $control_pane.on('click', '.option-nation', function() {
@@ -258,7 +278,7 @@ function updateLocation(geo_type, geo_name){
     var education = decodeURIComponent($.address.parameter("education"))
     var geo_display_name = geo_name
 
-    if(geo_type=="Country" && geo_name=='UK'){
+    if(geo_type=="Country" && geo_name=='UK Total'){
         geo_display_name = "United Kingdom"
         $.address.parameter('location_type', '')
         $.address.parameter('location', '')
@@ -279,7 +299,12 @@ function updateLocation(geo_type, geo_name){
     }
 
     // Get the right data.
-    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
+    if (geo_name != 'UK Total') {
+        geo_name = geo_name.toUpperCase();
+    }
+
+
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     if ($.address.parameter('occupation_group')) {
         occ_group = decodeURIComponent($.address.parameter('occupation_group'))
@@ -292,10 +317,12 @@ function updateLocation(geo_type, geo_name){
         percent_len = filtered_data.length;
         hideHelperOcc();
         setTimeout(function(){ showHelperOcc(percent_len); }, 3500);
+    } else {
+        occupation_group_data_parsed = _.where(occupation_group_data, {geo_name: geo_name})
     }
 
     clearJobFamilies();
-    makeDemandChart(place_data, occupation_group_data);
+    makeDemandChart(place_data, occupation_group_data_parsed);
     makeCompScatterPlot(place_data, education);
 }
 
@@ -309,7 +336,7 @@ function updateEducation(education){
     }
     else {
         geo_type = 'Country'
-        geo_name = 'UK'
+        geo_name = 'UK Total'
     }
 
     if ($.address.parameter('occupation')){
@@ -396,7 +423,8 @@ function selectOccupation(occupation, place_data){
         $btn_occ_view.attr('href', occ_view_url)
 
         // Display skills and titles information
-        makeSkillsText(occ_skills_data, occupation);
+        $('#titlesData').html(makeTitlesText(occ_titles_data, occupation));
+        $('#skillsData').html(makeSkillsText(occ_skills_data, occupation));
 
         // Find and decode location
         var loc = findLocation().toUpperCase();
@@ -441,7 +469,7 @@ function showHelperOcc(len){
         percent = "-90%";
     }
     else {
-        percent = "-" + String(len * 10) + "%"
+        percent = "-" + String(len * 10 + 5) + "%"
     }
 
     if(clicked_occ_bar==false){
@@ -478,7 +506,7 @@ function selectOccGroup(clicked_occ_group) {
         updateLocation(decodeURIComponent($.address.parameter("location_type")), decodeURIComponent($.address.parameter("location")))
     }
     else{
-        updateLocation('Country', 'UK');
+        updateLocation('Country', 'UK Total');
     }
 
     // Unselect any highlighted divs.

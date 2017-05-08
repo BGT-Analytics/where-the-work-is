@@ -1,0 +1,262 @@
+soc_3,soc3_name,common_titles_for_this_occupation_group_include
+222,Therapy Professionals,Physiotherapist
+222,Therapy Professionals,Occupational Therapist
+222,Therapy Professionals,Speech Therapist
+222,Therapy Professionals,Cognitive Behavioural Therapist
+222,Therapy Professionals,Physical Therapist
+223,Nursing and Midwifery Professionals,Registered Nurse
+223,Nursing and Midwifery Professionals,Staff Nurse
+223,Nursing and Midwifery Professionals,Nurse Practitioner
+223,Nursing and Midwifery Professionals,Charge Nurse
+223,Nursing and Midwifery Professionals,Clinical Nurse Specialist
+231,Teaching and Educational Professionals,Primary School Teacher
+231,Teaching and Educational Professionals,Maths Teacher
+231,Teaching and Educational Professionals,English Teacher
+231,Teaching and Educational Professionals,Science Teacher
+231,Teaching and Educational Professionals,Geography Teacher
+241,Legal Professionals,Property Solicitor
+241,Legal Professionals,Solicitor
+241,Legal Professionals,Conveyancer
+241,Legal Professionals,Corporate Solicitor
+241,Legal Professionals,Litigation Solicitor
+242,"Business, Research and Administrative Professionals",Business Analyst
+242,"Business, Research and Administrative Professionals",Accountant
+242,"Business, Research and Administrative Professionals",Financial Accountant
+242,"Business, Research and Administrative Professionals",Risk Manager
+242,"Business, Research and Administrative Professionals",Human Resources Advisor
+243,"Architects, Town Planners and Surveyors",Quantity Surveyor
+243,"Architects, Town Planners and Surveyors",Licenced Surveyor
+243,"Architects, Town Planners and Surveyors",Planner
+243,"Architects, Town Planners and Surveyors",Transport Planner
+243,"Architects, Town Planners and Surveyors",Architect
+244,Welfare Professionals,Social Worker
+244,Welfare Professionals,Family Support Worker
+244,Welfare Professionals,Mental Health Support Worker
+244,Welfare Professionals,Personal Care Assistant
+244,Welfare Professionals,Probation Officer
+245,Librarians and Related Professionals,Librarian
+245,Librarians and Related Professionals,Archivist
+245,Librarians and Related Professionals,Library Manager
+245,Librarians and Related Professionals,School Librarian
+245,Librarians and Related Professionals,Curator
+246,Quality and Regulatory Professionals,Quality Engineer
+246,Quality and Regulatory Professionals,Compliance Officer
+246,Quality and Regulatory Professionals,Quality Manager
+246,Quality and Regulatory Professionals,Quality Assurance Analyst
+246,Quality and Regulatory Professionals,Validation Engineer
+247,Media Professionals,Public Relations Manager
+247,Media Professionals,Technical Writer
+247,Media Professionals,Social Media Manager
+247,Media Professionals,Content Editor
+247,Media Professionals,Communications Specialist
+247,Media Professionals,Communications Coordinator
+311,"Science, Engineering and Production Technicians",Maintenance Engineer
+311,"Science, Engineering and Production Technicians",Maintenance Technician
+311,"Science, Engineering and Production Technicians",Manufacturing Engineer
+311,"Science, Engineering and Production Technicians",Laboratory Technician
+311,"Science, Engineering and Production Technicians",Structural Technician/Draftsperson
+312,Draughtspersons and Related Architectural Technicians,Architectural Technician
+312,Draughtspersons and Related Architectural Technicians,Cad Draughter
+312,Draughtspersons and Related Architectural Technicians,Cad Engineer
+312,Draughtspersons and Related Architectural Technicians,Mechanical Designer
+312,Draughtspersons and Related Architectural Technicians,Draftsman
+313,Information Technology Technicians,Applications Analyst
+313,Information Technology Technicians,Computer Support Engineer
+313,Information Technology Technicians,Information Technology Support Technician
+313,Information Technology Technicians,Technical Support Engineer
+313,Information Technology Technicians,Information Technology Technician
+321,Health Associate Professionals,Auxiliary Nurse
+321,Health Associate Professionals,Pharmacy Technician
+321,Health Associate Professionals,Dental Hygienist
+321,Health Associate Professionals,Massage Therapist
+321,Health Associate Professionals,Dental Associate
+323,Welfare and Housing Associate Professionals,Support Worker
+323,Welfare and Housing Associate Professionals,Charity Fundraiser
+323,Welfare and Housing Associate Professionals,Development Coordinator
+323,Welfare and Housing Associate Professionals,Housing Officer
+323,Welfare and Housing Associate Professionals,Community Support Worker
+331,Protective Service Occupations,Security Manager
+331,Protective Service Occupations,Intelligence Analyst
+331,Protective Service Occupations,Fire Engineer
+331,Protective Service Occupations,Prison Officer
+331,Protective Service Occupations,Police Officer
+341,"Artistic, Literary and Media Occupations",Copywriter
+341,"Artistic, Literary and Media Occupations",Technical Author
+341,"Artistic, Literary and Media Occupations",Creative Director
+341,"Artistic, Literary and Media Occupations",Dance Instructor
+341,"Artistic, Literary and Media Occupations",Studio Manager
+342,Design Occupations,Graphic Designer
+342,Design Occupations,Interior Designer
+342,Design Occupations,Digital Designer
+342,Design Occupations,Visual Designer
+342,Design Occupations,Designer
+344,Sports and Fitness Occupations,Personal Trainer
+344,Sports and Fitness Occupations,Fitness Instructor
+344,Sports and Fitness Occupations,Fitness Trainer
+344,Sports and Fitness Occupations,Swim Instructor
+344,Sports and Fitness Occupations,Football Coach
+352,Legal Associate Professionals,Paralegal
+352,Legal Associate Professionals,Legal Assistant
+352,Legal Associate Professionals,Property Paralegal
+352,Legal Associate Professionals,Compliance Administrator
+352,Legal Associate Professionals,Litigation Paralegal
+353,"Business, Finance and Related Associate Professionals",Account Manager
+353,"Business, Finance and Related Associate Professionals",Data Analyst
+353,"Business, Finance and Related Associate Professionals",Financial Analyst
+353,"Business, Finance and Related Associate Professionals",Estimator
+353,"Business, Finance and Related Associate Professionals",Business Systems Analyst
+354,"Sales, Marketing and Related Associate Professionals",Sales Executive
+354,"Sales, Marketing and Related Associate Professionals",Business Development Executive
+354,"Sales, Marketing and Related Associate Professionals",Sales Engineer
+354,"Sales, Marketing and Related Associate Professionals",Account Manager
+354,"Sales, Marketing and Related Associate Professionals",Marketing Executive
+355,Conservation and Environmental Associate Professionals,Environmental Planner
+355,Conservation and Environmental Associate Professionals,Ranger
+355,Conservation and Environmental Associate Professionals,Assistant Ranger
+355,Conservation and Environmental Associate Professionals,Support Worker - Environment
+355,Conservation and Environmental Associate Professionals,Education Resourcer
+356,Public Services and Other Associate Professionals,Recruiting Consultant
+356,Public Services and Other Associate Professionals,Human Resources Advisor
+356,Public Services and Other Associate Professionals,Health and Safety Manager
+356,Public Services and Other Associate Professionals,Training Manager
+356,Public Services and Other Associate Professionals,Recruiting Coordinator
+411,Administrative Occupations: Government and Related Organisations,Administration Coordinator
+411,Administrative Occupations: Government and Related Organisations,Apprentice Administrator
+411,Administrative Occupations: Government and Related Organisations,Administration Support
+411,Administrative Occupations: Government and Related Organisations,Membership Administrator
+411,Administrative Occupations: Government and Related Organisations,Housing Administrator
+412,Administrative Occupations: Finance,Accountancy Assistant
+412,Administrative Occupations: Finance,Credit Controller
+412,Administrative Occupations: Finance,Bookkeeper
+412,Administrative Occupations: Finance,Payroll Administrator
+412,Administrative Occupations: Finance,Finance Assistant
+413,Administrative Occupations: Records,Human Resources Administrator
+413,Administrative Occupations: Records,Document Controller
+413,Administrative Occupations: Records,Recruitment Administrator
+413,Administrative Occupations: Records,Logistics Coordinator
+413,Administrative Occupations: Records,Pensions Administrator
+416,Administrative Occupations: Office Managers and Supervisors,Office Manager
+416,Administrative Occupations: Office Managers and Supervisors,Practice Manager
+416,Administrative Occupations: Office Managers and Supervisors,Business Manager
+416,Administrative Occupations: Office Managers and Supervisors,Customer Service Manager
+416,Administrative Occupations: Office Managers and Supervisors,Senior Administrator
+421,Secretarial and Related Occupations,Receptionist
+421,Secretarial and Related Occupations,Personal Assistant
+421,Secretarial and Related Occupations,Legal Secretary
+421,Secretarial and Related Occupations,Medical Secretary
+421,Secretarial and Related Occupations,Secretary
+511,Agricultural and Related Trades,Gardener
+511,Agricultural and Related Trades,Landscaper
+511,Agricultural and Related Trades,Groundsman
+511,Agricultural and Related Trades,Landscape Gardener
+511,Agricultural and Related Trades,Groundskeeper
+521,"Metal Forming, Welding and Related Trades",Welder
+521,"Metal Forming, Welding and Related Trades",Mig Welder
+521,"Metal Forming, Welding and Related Trades",Tig Welder
+521,"Metal Forming, Welding and Related Trades",Sheet Metal Worker
+521,"Metal Forming, Welding and Related Trades",Sheet Metal Fabricator
+522,"Metal Machining, Fitting and Instrument Making Trades",CNC Programmer
+522,"Metal Machining, Fitting and Instrument Making Trades",Service Technician
+522,"Metal Machining, Fitting and Instrument Making Trades",Mechanical Fitter
+522,"Metal Machining, Fitting and Instrument Making Trades",CNC Machinist
+522,"Metal Machining, Fitting and Instrument Making Trades",Toolmaker
+523,Vehicle Trades,Mechanic
+523,Vehicle Trades,Vehicle Technician
+523,Vehicle Trades,Hgv Technician
+523,Vehicle Trades,Mechanic / MOT Tester
+523,Vehicle Trades,Auto Technician
+524,Electrical and Electronic Trades,Field Service Engineer
+524,Electrical and Electronic Trades,Electrician
+524,Electrical and Electronic Trades,Electrical Engineer
+524,Electrical and Electronic Trades,Service Engineer
+524,Electrical and Electronic Trades,Electrician's Helper
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Workshop Controller
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Electrical Supervisor
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",General Foreman
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Mechanical Supervisor
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Workshop Supervisor
+531,Construction and Building Trades,Plumber
+531,Construction and Building Trades,Carpenter
+531,Construction and Building Trades,Pipefitter
+531,Construction and Building Trades,Bricklayer
+531,Construction and Building Trades,Joiner
+532,Building Finishing Trades,Painter And Decorator
+532,Building Finishing Trades,Painter
+532,Building Finishing Trades,Plasterer
+532,Building Finishing Trades,Tiler
+532,Building Finishing Trades,Floor Layer
+533,Construction and Building Trades Supervisors,Finishing Foreman
+533,Construction and Building Trades Supervisors,Site Foreman
+533,Construction and Building Trades Supervisors,Ganger
+533,Construction and Building Trades Supervisors,Groundworks Foreman
+533,Construction and Building Trades Supervisors,Contract Supervisor
+541,Textiles and Garments Trades,Upholsterer
+541,Textiles and Garments Trades,Tailor
+541,Textiles and Garments Trades,Pattern Cutter
+541,Textiles and Garments Trades,Upholstery Technician
+541,Textiles and Garments Trades,Fabric Cutter
+542,Printing Trades,Print Finisher
+542,Printing Trades,Flexographic Printer
+542,Printing Trades,Screen Printer
+542,Printing Trades,Printer
+542,Printing Trades,Digital Print Operator
+543,Food Preparation and Hospitality Trades,Chef
+543,Food Preparation and Hospitality Trades,Sous Chef
+543,Food Preparation and Hospitality Trades,Head Chef
+543,Food Preparation and Hospitality Trades,Kitchen Manager
+543,Food Preparation and Hospitality Trades,Cook
+544,Other Skilled Trades,Food Technologist
+544,Other Skilled Trades,Cabinet Maker
+544,Other Skilled Trades,Licenced Surveyor
+544,Other Skilled Trades,Sustainability Consultant
+544,Other Skilled Trades,Industrial Painter
+612,Childcare and Related Personal Services,Teacher's Assistant
+612,Childcare and Related Personal Services,SEN Teacher's Assistant
+612,Childcare and Related Personal Services,Nursery Nurse
+612,Childcare and Related Personal Services,Babysitter
+612,Childcare and Related Personal Services,Nanny
+613,Animal Care and Control Services,Veterinary Nurse
+613,Animal Care and Control Services,Veterinary Assistant
+613,Animal Care and Control Services,Animal Technician
+613,Animal Care and Control Services,Dog Walker
+613,Animal Care and Control Services,Pest Control Technician
+614,Caring Personal Services,Personal Care Assistant
+614,Caring Personal Services,Support Worker
+614,Caring Personal Services,Care Worker
+614,Caring Personal Services,Support Workers
+614,Caring Personal Services,Domestic Assistant
+621,Leisure and Travel Services,Travel Consultant
+621,Leisure and Travel Services,Activities Coordinator
+621,Leisure and Travel Services,Recreation Assistant
+621,Leisure and Travel Services,Lifeguard
+621,Leisure and Travel Services,Activities Assistant
+622,Hairdressers and Related Services,Beauty Therapist
+622,Hairdressers and Related Services,Hair Stylist
+622,Hairdressers and Related Services,Nail Technician
+622,Hairdressers and Related Services,Makeup Artist
+622,Hairdressers and Related Services,Barber
+711,Sales Assistants and Retail Cashiers,Sales Executive
+711,Sales Assistants and Retail Cashiers,Telemarketer
+711,Sales Assistants and Retail Cashiers,Retail Salesperson
+711,Sales Assistants and Retail Cashiers,Sales Consultant
+711,Sales Assistants and Retail Cashiers,Telesales Advisor
+712,Sales Related Occupations,Sales Executive
+712,Sales Related Occupations,Sales Representative
+712,Sales Related Occupations,Merchandiser
+712,Sales Related Occupations,Sales Account Manager
+712,Sales Related Occupations,Sales Specialist
+713,Sales Supervisors,Sales Manager
+713,Sales Supervisors,Assistant Manager
+713,Sales Supervisors,Sales Executive
+713,Sales Supervisors,Shop Manager
+713,Sales Supervisors,Area Sales Manager
+721,Customer Service Occupations,Customer Service Advisor
+721,Customer Service Occupations,Customer Service Representative
+721,Customer Service Occupations,Customer Service Assistant
+721,Customer Service Occupations,Customer Service Agent
+721,Customer Service Occupations,Customer Services Coordinator
+722,Customer Service Managers and Supervisors,Customer Service Manager
+722,Customer Service Managers and Supervisors,Team Manager
+722,Customer Service Managers and Supervisors,Customer Service Team Leader
+722,Customer Service Managers and Supervisors,Customer Service Supervisor
+722,Customer Service Managers and Supervisors,Client Service Manager

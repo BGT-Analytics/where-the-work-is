@@ -243,6 +243,19 @@ var lep_locations = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
+       "coordinates":  [ -0.127758, 51.507351 ]
+    },
+    "properties": {
+    "LEP/City Region":"London",
+    "Pin_Location":"Custom",
+    "Region":"GREATER LONDON",
+    "Nation":"England"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
        "coordinates":  [ -2.233333,53.466667 ]
     },
     "properties": {

@@ -55,8 +55,8 @@ function stackedBarHelper(prepped_data, categories, place_data){
             shared: true,
             positioner: function (boxWidth, boxHeight, point) {
                 var xpos = this.chart.plotWidth-60
-                var ypos = Math.max(120, point.plotY)+40 // distance from top
-                var ypos = Math.min(this.chart.plotHeight-185, ypos) // distance from bottom
+                var ypos = Math.max(120, point.plotY)+30 // distance from top
+                var ypos = Math.min(this.chart.plotHeight-165, ypos) // distance from bottom
                 return { x: xpos, y: ypos };
             },
             shadow: false,

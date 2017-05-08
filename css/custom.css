@@ -71,6 +71,14 @@ hr {
   font-style: italic;
 }
 
+.footnote {
+  clear: both;
+  font-size: 12px;
+  margin-top: 2em;
+  text-align: center;
+  font-style: italic;
+}
+
 
 /*tooltips*/
 .tooltip.in {
@@ -95,7 +103,9 @@ hr {
 .tooltip.right .tooltip-arrow {
   border-right-color: #ecf0f1;
 }
-
+.highcharts-tooltip {
+  z-index: 9999;
+}
 
 /* occupation pane */
 .well{
@@ -239,7 +249,7 @@ hr {
 #footer {
   clear: both;
   padding: 6px 0px;
-  margin-top: 28px;
+  /*margin-top: 32px;*/
   background: #fff;
 }
 
