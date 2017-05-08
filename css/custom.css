@@ -103,7 +103,9 @@ hr {
 .tooltip.right .tooltip-arrow {
   border-right-color: #ecf0f1;
 }
-
+.highcharts-tooltip {
+  z-index: 9999;
+}
 
 /* occupation pane */
 .well{

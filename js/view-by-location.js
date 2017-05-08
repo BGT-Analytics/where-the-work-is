@@ -54,6 +54,7 @@ function initialize(){
             function(row) {
                 return {
                     occ_group: cleanOccupation(row.occupation_group),
+                    geo_name: row.geography_name,
                     demand_sum: parseInt(row.demand_entry_he)+parseInt(row.demand_entry_fe)+parseInt(row.demand_entry_sl),
                     demand_entry_he: parseInt(row.demand_entry_he),
                     demand_entry_fe: parseInt(row.demand_entry_fe),
@@ -61,6 +62,15 @@ function initialize(){
                 };
             }
         );
+
+        geo_name = $.address.parameter("location")
+        if (geo_name) {
+            geo_name = geo_name.toUpperCase();
+        } else {
+            geo_name = 'UK Total'
+        }
+
+        occupation_group_data_parsed = _.where(occupation_group_data, {geo_name: geo_name})
 
         full_time_data = _.map(
             $.csv.toObjects(full_time_csv[0]),
@@ -289,10 +299,11 @@ function updateLocation(geo_type, geo_name){
     }
 
     // Get the right data.
-    // place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
     if (geo_name != 'UK Total') {
         geo_name = geo_name.toUpperCase();
     }
+
+
     place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     if ($.address.parameter('occupation_group')) {
@@ -306,10 +317,12 @@ function updateLocation(geo_type, geo_name){
         percent_len = filtered_data.length;
         hideHelperOcc();
         setTimeout(function(){ showHelperOcc(percent_len); }, 3500);
+    } else {
+        occupation_group_data_parsed = _.where(occupation_group_data, {geo_name: geo_name})
     }
 
     clearJobFamilies();
-    makeDemandChart(place_data, occupation_group_data);
+    makeDemandChart(place_data, occupation_group_data_parsed);
     makeCompScatterPlot(place_data, education);
 }
 
@@ -456,7 +469,7 @@ function showHelperOcc(len){
         percent = "-90%";
     }
     else {
-        percent = "-" + String(len * 10) + "%"
+        percent = "-" + String(len * 10 + 5) + "%"
     }
 
     if(clicked_occ_bar==false){
