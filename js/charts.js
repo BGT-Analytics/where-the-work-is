@@ -113,7 +113,7 @@ function makeCompScatterPlot(place_data, education){
 function makePieChart(data, occ_clicked){
     var pie_prepped_data = [];
     var location = findLocation();
-
+    console.log(location, "for pie chart...")
     $(data).each(function(i, row){
         if (row['soc_description'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
             pie_prepped_data = [{
@@ -133,6 +133,7 @@ function makePieChart(data, occ_clicked){
 
 function makeLineChart(employment_data, occ_clicked) {
     var location = findLocation();
+    console.log(location, "for line chart...")
     var data_arr = [];
 
     $(employment_data).each(function(i, row){
@@ -146,6 +147,7 @@ function makeLineChart(employment_data, occ_clicked) {
 
 function makeProjectionText(projection_data, occ_clicked) {
     var location = findLocation();
+    console.log(location, "for projection text...")
     var projection_text;
 
     $(projection_data).each(function(i, row){
@@ -182,27 +184,14 @@ function makeTitlesText(occ_titles_data, occ_clicked) {
 }
 
 function findLocation() {
-    var lookups = {
-        'east midlands': 'east midlands',
-        'east of england': 'eastern',
-        'greater london': 'london',
-        'north east england': 'north east',
-        'north west england': 'north west (inc merseyside)',
-        'south east england': 'south east',
-        'south west england': 'south west',
-        'west midlands': 'west midlands',
-        'yorkshire & the humber': 'yorkshire and humberside',
-    }
-
     if($.address.parameter("location_type") && $.address.parameter("location")){
         select_location_type = decodeURIComponent($.address.parameter("location_type")).toLowerCase();
         select_location = decodeURIComponent($.address.parameter("location")).toLowerCase();
-
         if (select_location_type === 'nation') {
             var location = select_location;
         }
         else if (select_location_type === 'region') {
-            var location = lookups[select_location];
+            var location = select_location;
         }
 
         else if (select_location_type === 'lepplus') {
@@ -213,7 +202,7 @@ function findLocation() {
                     $(region['children']).each(function(i, lepPlus){
                         if (select_location === lepPlus['name'].toLowerCase()) {
                             if (region['name'] != '') {
-                                location = lookups[region['name'].toLowerCase()]
+                                location = region['name'].toLowerCase()
                             }
                             else {
                                 location = nation['name'].toLowerCase()

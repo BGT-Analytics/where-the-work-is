@@ -17,6 +17,24 @@ var clicked_location = false,
 
 var counter = 1;
 
+var lookups_full_time = {
+    'London': 'Greater London',
+    'Yorkshire and Humberside': 'Yorkshire and the Humber',
+    'Eastern': 'East of England',
+    'North East': 'North East England',
+    'North West (inc Merseyside)': 'North West England',
+    'South East': 'South East England',
+    'South West': 'South West England',
+};
+
+var lookups_historical_projections = {
+    'London': 'Greater London',
+    'Yorkshire and Humberside': 'Yorkshire and the Humber',
+    'North East': 'North East England',
+    'North West': 'North West England',
+    'South East': 'South East England',
+    'South West': 'South West England',
+};
 
 (function(){
     initialize();
@@ -75,8 +93,13 @@ function initialize(){
         full_time_data = _.map(
             $.csv.toObjects(full_time_csv[0]),
             function(row) {
+                found_nation_region = row.nation_region
+                if (lookups_full_time[row.nation_region]) {
+                    found_nation_region = lookups_full_time[row.nation_region]
+                }
+
                 return {
-                    nation_region: row.nation_region,
+                    nation_region: found_nation_region,
                     soc3: row.soc3,
                     soc_description: row.soc_description,
                     notes: row.notes,
@@ -89,8 +112,13 @@ function initialize(){
         historical_employment_data = _.map(
             $.csv.toObjects(historical_employment_csv[0]),
             function(row) {
+                found_nation_region = row.nation_region
+                if (lookups_historical_projections[row.nation_region]) {
+                    found_nation_region = lookups_historical_projections[row.nation_region]
+                }
+
                 return {
-                    nation_region: row.nation_region,
+                    nation_region: found_nation_region,
                     soc3: row.soc3,
                     soc_name: row.soc_name,
                     year_2012: row.year_2012,
@@ -104,8 +132,13 @@ function initialize(){
         projection_employment_data = _.map(
             $.csv.toObjects(projection_employment_csv[0]),
             function(row) {
+                found_nation_region = row.nation_region
+                if (lookups_historical_projections[row.nation_region]) {
+                    found_nation_region = lookups_historical_projections[row.nation_region]
+                }
+
                 return {
-                    nation_region: row.nation_region,
+                    nation_region: found_nation_region,
                     soc3: row.soc3,
                     soc_name: row.soc_name,
                     projection: row.working_futures_projection,
@@ -428,6 +461,7 @@ function selectOccupation(occupation, place_data){
 
         // Find and decode location
         var loc = findLocation().toUpperCase();
+        console.log(loc, "for header...")
         if (decodeURIComponent($.address.parameter("location_type")) == 'LEPplus') {
             loc = loc + '<br><small>Complete data not available for ' + decodeURIComponent($.address.parameter("location")) + '</small>'
         }
