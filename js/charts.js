@@ -113,7 +113,7 @@ function makeCompScatterPlot(place_data, education){
 function makePieChart(data, occ_clicked){
     var pie_prepped_data = [];
     var location = findLocation();
-    console.log(location, "for pie chart...")
+
     $(data).each(function(i, row){
         if (row['soc_description'].replace('&', 'and') === occ_clicked.replace('&', 'and') && row['nation_region'].toLowerCase() === location) {
             pie_prepped_data = [{
@@ -133,7 +133,6 @@ function makePieChart(data, occ_clicked){
 
 function makeLineChart(employment_data, occ_clicked) {
     var location = findLocation();
-    console.log(location, "for line chart...")
     var data_arr = [];
 
     $(employment_data).each(function(i, row){
@@ -147,7 +146,6 @@ function makeLineChart(employment_data, occ_clicked) {
 
 function makeProjectionText(projection_data, occ_clicked) {
     var location = findLocation();
-    console.log(location, "for projection text...")
     var projection_text;
 
     $(projection_data).each(function(i, row){

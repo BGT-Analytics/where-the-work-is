@@ -461,7 +461,6 @@ function selectOccupation(occupation, place_data){
 
         // Find and decode location
         var loc = findLocation().toUpperCase();
-        console.log(loc, "for header...")
         if (decodeURIComponent($.address.parameter("location_type")) == 'LEPplus') {
             loc = loc + '<br><small>Complete data not available for ' + decodeURIComponent($.address.parameter("location")) + '</small>'
         }
