@@ -336,7 +336,6 @@ function updateLocation(geo_type, geo_name){
         geo_name = geo_name.toUpperCase();
     }
 
-
     place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     if ($.address.parameter('occupation_group')) {
@@ -365,7 +364,7 @@ function updateEducation(education){
     // TO-DO: move this logic elsewhere
     if ($.address.parameter('location_type') && $.address.parameter('location')){
         var geo_type = decodeURIComponent($.address.parameter('location_type'))
-        var geo_name = decodeURIComponent($.address.parameter('location'))
+        var geo_name = decodeURIComponent($.address.parameter('location')).toUpperCase()
     }
     else {
         geo_type = 'Country'
@@ -377,7 +376,7 @@ function updateEducation(education){
     }
 
     // Get the right data.
-    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name.toUpperCase()})
+    place_data = _.where(occupation_data, {geography_type: geo_type, geography_name: geo_name})
 
     if ($.address.parameter('occupation_group')) {
         occ_group = decodeURIComponent($.address.parameter('occupation_group'))

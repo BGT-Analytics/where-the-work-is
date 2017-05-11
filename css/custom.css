@@ -356,8 +356,7 @@ hr {
   border: 1px solid #3B4B5C;
   border-radius: 0px;
   background-color: #ecf0f1;
-}
-#occ-select-list{
+  /*scroll functionality*/
   height: auto;
   max-height: 400px;
   overflow-x: hidden;

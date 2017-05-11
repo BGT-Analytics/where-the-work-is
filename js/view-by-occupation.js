@@ -83,11 +83,12 @@ function initialize(){
             });
         });
 
-        var occ_fams = [    'Associate professional & technical',
-                            'Administrative & secretarial',
-                            'Skilled trades',
-                            'Caring, leisure & other service' ]
-
+        var occ_fams = [    'Administrative & secretarial',
+                            'Associate professional & technical',
+                            'Caring, leisure & other service',
+                            'Professional',
+                            'Sales & customer service',
+                            'Skilled trades']
 
         if($.address.parameter("occupation")){
             // location_level: determined with the radio button
@@ -104,7 +105,6 @@ function initialize(){
             $occ_select_list.append('<li class="occ-fam"><span>'+occ_fam+'</span></li>')
             // loop thru jobs & add the ones within this job fam
             $.each(occupation_mapping , function(occ_name, occ_dict){
-
                 if(occ_dict['occ_group']==occ_fam+' occupations'){
                     occ_link_html =  makeLinkHTML(occ_name, occ_name, 'option-occ')
                     $occ_select_list.append('<li>'+occ_link_html+'</li>')
