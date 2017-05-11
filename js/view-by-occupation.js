@@ -105,8 +105,6 @@ function initialize(){
             $occ_select_list.append('<li class="occ-fam"><span>'+occ_fam+'</span></li>')
             // loop thru jobs & add the ones within this job fam
             $.each(occupation_mapping , function(occ_name, occ_dict){
-
-                // if (occ_fam == '')
                 if(occ_dict['occ_group']==occ_fam+' occupations'){
                     occ_link_html =  makeLinkHTML(occ_name, occ_name, 'option-occ')
                     $occ_select_list.append('<li>'+occ_link_html+'</li>')
