@@ -1,0 +1,729 @@
+nation_region,soc3,soc_name,year_2012,year_2013,year_2014,year_2015,notes
+East Midlands,222,Therapy Professionals,8582.5,7865,7690,7689.5,
+East Midlands,223,Nursing and Midwifery Professionals,48316.75,47769.5,36894.25,42977.75,
+East Midlands,231,Teaching and Educational Professionals,97280.5,97809.5,110519.75,106210.25,
+East Midlands,241,Legal Professionals,9095.75,10463.25,9613,7729,
+East Midlands,242,"Business, Research and Administrative Professionals",33098,38343.5,40288.75,38302.5,
+East Midlands,243,"Architects, Town Planners and Surveyors",8750.25,16543.5,12268,11683.75,
+East Midlands,244,Welfare Professionals,10206.75,9304.25,10931,10373.5,
+East Midlands,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+East Midlands,246,Quality and Regulatory Professionals,8810,8409.25,8549.25,11591.75,
+East Midlands,247,Media Professionals,129986.25,123274.25,129008.5,130022.25,Using England figures
+East Midlands,311,"Science, Engineering and Production Technicians",22568,25565.5,19561,23308,
+East Midlands,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+East Midlands,313,Information Technology Technicians,11886,13991.5,11345.5,19580.5,
+East Midlands,321,Health Associate Professionals,9344.5,7354.75,6015.75,9337.25,
+East Midlands,323,Welfare and Housing Associate Professionals,16306,18959.5,16741,18382.5,
+East Midlands,331,Protective Service Occupations,24863,24797.5,17845.5,21417.5,
+East Midlands,341,"Artistic, Literary and Media Occupations",11621,12801.5,15275.75,14508.25,
+East Midlands,342,Design Occupations,6338.75,11232.5,9990,12286.5,
+East Midlands,344,Sports and Fitness Occupations,12359.75,9384.5,10246,7844.25,
+East Midlands,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+East Midlands,353,"Business, Finance and Related Associate Professionals",33044,31861,34129.5,35403.25,
+East Midlands,354,"Sales, Marketing and Related Associate Professionals",63932.25,65651,72637.5,67156.5,
+East Midlands,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+East Midlands,356,Public Services and Other Associate Professionals,36829.25,40242.75,37997.5,30801,
+East Midlands,411,Administrative Occupations: Government and Related Organisations,26577.75,26219,22534,25776.5,
+East Midlands,412,Administrative Occupations: Finance,53268.25,53208.5,51105.5,48081.75,
+East Midlands,413,Administrative Occupations: Records,31964.5,31531.75,37547.75,41886.75,
+East Midlands,416,Administrative Occupations: Office Managers and Supervisors,15656.5,14673.75,11631.75,18887.75,
+East Midlands,421,Secretarial and Related Occupations,45561.75,49646.25,47891.25,47710,
+East Midlands,511,Agricultural and Related Trades,22408,20942.5,22276.25,19737.25,
+East Midlands,521,"Metal Forming, Welding and Related Trades",9667.75,8474.25,10695,8324,
+East Midlands,522,"Metal Machining, Fitting and Instrument Making Trades",23375,20775,24778,26323.75,
+East Midlands,523,Vehicle Trades,18843,28359.25,27030,16167,
+East Midlands,524,Electrical and Electronic Trades,23863.5,29109.5,28698.25,32176.5,
+East Midlands,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+East Midlands,531,Construction and Building Trades,53556,46197.25,55793.75,56964.75,
+East Midlands,532,Building Finishing Trades,17627.75,11293.75,12370.25,13816.25,
+East Midlands,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+East Midlands,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+East Midlands,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+East Midlands,543,Food Preparation and Hospitality Trades,31330.75,30830.75,36922.75,33622.25,
+East Midlands,544,Other Skilled Trades,10015.75,6920.25,8550,8896.75,
+East Midlands,612,Childcare and Related Personal Services,58555,49417.5,63838.75,55974.5,
+East Midlands,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+East Midlands,614,Caring Personal Services,92409.75,86990.75,95501.5,97866.25,
+East Midlands,621,Leisure and Travel Services,146094,146204.75,135766.75,140461.25,Using England figures
+East Midlands,622,Hairdressers and Related Services,16188.5,22036.75,22662.75,20509.5,
+East Midlands,711,Sales Assistants and Retail Cashiers,95981.5,97682,100825.75,98471.25,
+East Midlands,712,Sales Related Occupations,14009.25,11973,12019.25,8908,
+East Midlands,713,Sales Supervisors,13080.75,17389.5,19073,14774.75,
+East Midlands,721,Customer Service Occupations,24017.5,26582.25,25604,28129.25,
+East Midlands,722,Customer Service Managers and Supervisors,9380,7525.25,10098.25,9341,
+East of England,222,Therapy Professionals,12695.75,14062.25,13211.25,11595.75,
+East of England,223,Nursing and Midwifery Professionals,50390.75,49603.5,64786.25,57765.75,
+East of England,231,Teaching and Educational Professionals,138221.25,138079.5,131736,133645.25,
+East of England,241,Legal Professionals,12189.75,14756.5,13491.75,16451,
+East of England,242,"Business, Research and Administrative Professionals",68564.5,64803.5,62136.5,60776.75,
+East of England,243,"Architects, Town Planners and Surveyors",22866,30292.5,24615,23088,
+East of England,244,Welfare Professionals,10046.75,12141.25,13644,13348,
+East of England,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+East of England,246,Quality and Regulatory Professionals,9189.25,12203,14892.75,13240.75,
+East of England,247,Media Professionals,8887.5,7976.5,12465.5,11261,
+East of England,311,"Science, Engineering and Production Technicians",31155.5,24540.75,24115.5,30278.25,
+East of England,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+East of England,313,Information Technology Technicians,19671.75,24762,21851.5,20998.25,
+East of England,321,Health Associate Professionals,12553,13612.25,12734.25,15926.75,
+East of England,323,Welfare and Housing Associate Professionals,20699,29551.25,21208.5,25290.25,
+East of England,331,Protective Service Occupations,39582.5,44466,39355,38803.25,
+East of England,341,"Artistic, Literary and Media Occupations",33779.25,28532.25,31331.75,26431.5,
+East of England,342,Design Occupations,12746.5,14712.5,14511.25,19607.75,
+East of England,344,Sports and Fitness Occupations,16396.5,21695.75,16237.75,17372.5,
+East of England,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+East of England,353,"Business, Finance and Related Associate Professionals",68183.25,72772,78007,77845.75,
+East of England,354,"Sales, Marketing and Related Associate Professionals",85010,83539.5,89558,84028.5,
+East of England,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+East of England,356,Public Services and Other Associate Professionals,38139,39610.75,46508.5,48064.75,
+East of England,411,Administrative Occupations: Government and Related Organisations,27247.25,25131.5,23362.25,27419.25,
+East of England,412,Administrative Occupations: Finance,86463,68883.75,77241.5,78009.75,
+East of England,413,Administrative Occupations: Records,31807.75,48334.75,48382.25,39773.25,
+East of England,416,Administrative Occupations: Office Managers and Supervisors,24687.25,19774.25,23085,20894.5,
+East of England,421,Secretarial and Related Occupations,70730.5,79012.25,71778,68687,
+East of England,511,Agricultural and Related Trades,35714,27719.75,33289.5,31348,
+East of England,521,"Metal Forming, Welding and Related Trades",74238.75,79878,93610.75,92609.25,Using England figures
+East of England,522,"Metal Machining, Fitting and Instrument Making Trades",25949.5,25911.25,28827.75,24123.5,
+East of England,523,Vehicle Trades,27363.5,22765.75,27616.75,31987.25,
+East of England,524,Electrical and Electronic Trades,39911.5,45668.25,39771.5,46805.5,
+East of England,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+East of England,531,Construction and Building Trades,77647.5,80196.5,82156,90547,
+East of England,532,Building Finishing Trades,16538.25,17702,21086.5,22057.75,
+East of England,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+East of England,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+East of England,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+East of England,543,Food Preparation and Hospitality Trades,37354,36586,36939,44581.5,
+East of England,544,Other Skilled Trades,13035.25,11072,7507.25,8594.25,
+East of England,612,Childcare and Related Personal Services,76584,85832.75,81217.5,80407.75,
+East of England,613,Animal Care and Control Services,8523,9616,12040,13467.75,
+East of England,614,Caring Personal Services,104576.5,101595.25,119760.5,112905,
+East of England,621,Leisure and Travel Services,12644,11245.5,10899.5,15247,
+East of England,622,Hairdressers and Related Services,27327.25,24035.25,27541.5,30767.75,
+East of England,711,Sales Assistants and Retail Cashiers,135011,126379.25,135287,134173.25,
+East of England,712,Sales Related Occupations,15276,14461.5,13775.75,13388.5,
+East of England,713,Sales Supervisors,17577,21145.5,13144,18089.75,
+East of England,721,Customer Service Occupations,34641.25,29177.75,31267.25,32066,
+East of England,722,Customer Service Managers and Supervisors,11942,7312,7099,13461.5,
+London,222,Therapy Professionals,17036.25,21105.75,20211.25,17276,
+London,223,Nursing and Midwifery Professionals,66729.25,68260,69458,61613,
+London,231,Teaching and Educational Professionals,205221.25,219255.75,202133.5,199045,
+London,241,Legal Professionals,73406.5,68002.5,57046.75,50998.75,
+London,242,"Business, Research and Administrative Professionals",158295.5,168290.25,171048,157259.75,
+London,243,"Architects, Town Planners and Surveyors",47109.25,46058,45459.75,42149,
+London,244,Welfare Professionals,17992.75,22337.25,20483,25718.25,
+London,245,Librarians and Related Professionals,7138,6748.75,6866.25,7541.5,
+London,246,Quality and Regulatory Professionals,16045.25,18119,11727,22862.75,
+London,247,Media Professionals,61701.5,53916.25,57119.5,53244.75,
+London,311,"Science, Engineering and Production Technicians",27077,22077.25,21101.5,22379.75,
+London,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+London,313,Information Technology Technicians,28016.25,31366.5,23725.5,22085.5,
+London,321,Health Associate Professionals,18779,17021.75,26118.5,15206.25,
+London,323,Welfare and Housing Associate Professionals,42603,39992.5,39029,37408.75,
+London,331,Protective Service Occupations,33447.75,28543.5,24276.25,31649.25,
+London,341,"Artistic, Literary and Media Occupations",111551.5,105698.5,125405.75,128425.75,
+London,342,Design Occupations,33460.75,37429,32505.25,42841.5,
+London,344,Sports and Fitness Occupations,17527,17109,19466,19008,
+London,352,Legal Associate Professionals,11666.75,7744.5,8383,13620.25,
+London,353,"Business, Finance and Related Associate Professionals",157042.5,150153.25,164987.75,145828.25,
+London,354,"Sales, Marketing and Related Associate Professionals",144503,166029.25,177041,184580.75,
+London,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+London,356,Public Services and Other Associate Professionals,64771.25,73581,66784.75,65617.75,
+London,411,Administrative Occupations: Government and Related Organisations,49926.5,56600,54159.5,35348,
+London,412,Administrative Occupations: Finance,129831,132595,127479.75,122635,
+London,413,Administrative Occupations: Records,45482.5,41584.5,50927.75,50708.25,
+London,416,Administrative Occupations: Office Managers and Supervisors,25462.75,23314.5,26231.75,30126.25,
+London,421,Secretarial and Related Occupations,96785.25,98699.25,107019,94761.5,
+London,511,Agricultural and Related Trades,10255.5,11821.75,14636.25,13251.5,
+London,521,"Metal Forming, Welding and Related Trades",74238.75,79878,93610.75,92609.25,Using England figures
+London,522,"Metal Machining, Fitting and Instrument Making Trades",7773.25,8311,10821.5,19412.25,
+London,523,Vehicle Trades,16883,10209.75,15650.75,20241.25,
+London,524,Electrical and Electronic Trades,38105.5,43021,46426.5,54778,
+London,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+London,531,Construction and Building Trades,95530,100728.5,100271,115999.5,
+London,532,Building Finishing Trades,22767.75,28030.25,25903,24468,
+London,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+London,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+London,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+London,543,Food Preparation and Hospitality Trades,59194.75,56552.75,58428,66971.75,
+London,544,Other Skilled Trades,82830,75734.25,77157,84574.25,Using England figures
+London,612,Childcare and Related Personal Services,101429.75,125183.75,123844.5,127975.75,
+London,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+London,614,Caring Personal Services,100453.75,102781.75,99536.75,109511.75,
+London,621,Leisure and Travel Services,25567.5,35253.5,31099.25,28442,
+London,622,Hairdressers and Related Services,25700.25,26940.5,28142,38449.75,
+London,711,Sales Assistants and Retail Cashiers,158869,160072.75,163280.25,175137.25,
+London,712,Sales Related Occupations,17291,18392.5,21785.75,19347.25,
+London,713,Sales Supervisors,22992.5,20187.5,23981.25,21173.5,
+London,721,Customer Service Occupations,37673,47304.25,50852.75,51028.75,
+London,722,Customer Service Managers and Supervisors,15343.75,11651,13250.75,14095,
+North East,222,Therapy Professionals,109279.75,115159.75,120572,106255,Using England figures
+North East,223,Nursing and Midwifery Professionals,30995,36079.75,29782.25,30549.75,
+North East,231,Teaching and Educational Professionals,43168.5,41029,45924.75,48872.75,
+North East,241,Legal Professionals,169804.25,174260.25,166237.5,150741.25,Using England figures
+North East,242,"Business, Research and Administrative Professionals",12718,13186,11324.25,14528.75,
+North East,243,"Architects, Town Planners and Surveyors",175221,205703.5,197961.5,195481,Using England figures
+North East,244,Welfare Professionals,8510.5,7938.25,7778.25,6348.75,
+North East,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+North East,246,Quality and Regulatory Professionals,94141.25,93496.25,99091.25,101245.75,Using England figures
+North East,247,Media Professionals,129986.25,123274.25,129008.5,130022.25,Using England figures
+North East,311,"Science, Engineering and Production Technicians",10506.75,8690.75,14349.25,11157,
+North East,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+North East,313,Information Technology Technicians,174122.25,173624.5,162496.25,154423.75,Using England figures
+North East,321,Health Associate Professionals,125309.75,125274.25,123151.25,122002.5,Using England figures
+North East,323,Welfare and Housing Associate Professionals,17339.5,12026,14121.5,11693.5,
+North East,331,Protective Service Occupations,12861,12620.75,10951.75,12338.25,
+North East,341,"Artistic, Literary and Media Occupations",286992.25,292220.25,325412.5,334665.25,Using England figures
+North East,342,Design Occupations,116832.5,132397.75,124284.75,146581.75,Using England figures
+North East,344,Sports and Fitness Occupations,115612.75,115172.5,132198.25,140316,Using England figures
+North East,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+North East,353,"Business, Finance and Related Associate Professionals",17959.25,17447.75,14546.25,13629.25,
+North East,354,"Sales, Marketing and Related Associate Professionals",17906.5,27300.25,22170.75,27450.25,
+North East,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+North East,356,Public Services and Other Associate Professionals,21997.5,19085,22372.5,24745.5,
+North East,411,Administrative Occupations: Government and Related Organisations,23889.25,26384.5,25159.25,24946.75,
+North East,412,Administrative Occupations: Finance,24329.5,22331.75,23976,20357.75,
+North East,413,Administrative Occupations: Records,13964.75,15040.75,15952,16307,
+North East,416,Administrative Occupations: Office Managers and Supervisors,6787.75,7630.5,8246.75,8543.5,
+North East,421,Secretarial and Related Occupations,23095.5,26670.25,24205.5,22704.75,
+North East,511,Agricultural and Related Trades,9692,10883.5,9268.5,7285.5,
+North East,521,"Metal Forming, Welding and Related Trades",10309,6218.5,11550.75,11739,
+North East,522,"Metal Machining, Fitting and Instrument Making Trades",21713.5,17370,17471.5,18375.25,
+North East,523,Vehicle Trades,11223.25,11539.75,8675.75,14121.5,
+North East,524,Electrical and Electronic Trades,17931.75,19660.75,23842,21136,
+North East,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+North East,531,Construction and Building Trades,25864.5,25057.25,29352.75,30029.5,
+North East,532,Building Finishing Trades,8248.75,9572.5,7409.75,6349.25,
+North East,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+North East,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+North East,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+North East,543,Food Preparation and Hospitality Trades,16915.5,19549.25,19129.5,18416.75,
+North East,544,Other Skilled Trades,82830,75734.25,77157,84574.25,Using England figures
+North East,612,Childcare and Related Personal Services,24521.75,27362.5,24919.75,32632.5,
+North East,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+North East,614,Caring Personal Services,60203.25,55359,69994.25,68929.25,
+North East,621,Leisure and Travel Services,146094,146204.75,135766.75,140461.25,Using England figures
+North East,622,Hairdressers and Related Services,9863.75,9229,11859,11415.75,
+North East,711,Sales Assistants and Retail Cashiers,62576,61937.25,69852.75,57009.5,
+North East,712,Sales Related Occupations,135330.75,128869.5,131716.75,131077.75,Using England figures
+North East,713,Sales Supervisors,7789,6346.5,8184,8973.25,
+North East,721,Customer Service Occupations,29280,33312.5,24404.75,32410.5,
+North East,722,Customer Service Managers and Supervisors,111657,102097.5,113666.25,105291,Using England figures
+North West,222,Therapy Professionals,15314.75,16453.25,16996,12412,
+North West,223,Nursing and Midwifery Professionals,75157.75,77913.5,81913.5,81737.25,
+North West,231,Teaching and Educational Professionals,150386,145012,145831,167024.5,
+North West,241,Legal Professionals,14245.25,19472,18220.5,17906,
+North West,242,"Business, Research and Administrative Professionals",49296,48459.5,55125,56516.5,
+North West,243,"Architects, Town Planners and Surveyors",21219,26249.5,23937.25,22518,
+North West,244,Welfare Professionals,17004.25,17936.75,20984.5,17745.25,
+North West,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+North West,246,Quality and Regulatory Professionals,9290.5,8395.75,14161,10260.25,
+North West,247,Media Professionals,6652.5,7654.25,6297.5,7384.25,
+North West,311,"Science, Engineering and Production Technicians",29250,31906.75,37268,29918,
+North West,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+North West,313,Information Technology Technicians,19353.5,19416.5,16193.5,13656.5,
+North West,321,Health Associate Professionals,17991.5,19372,13589.75,18265,
+North West,323,Welfare and Housing Associate Professionals,30975,30252.75,27457.5,28084.25,
+North West,331,Protective Service Occupations,31442.75,33912.5,37646.5,37749.75,
+North West,341,"Artistic, Literary and Media Occupations",21132.5,18741.75,29177,22208,
+North West,342,Design Occupations,13741.25,10627,12335,14750.75,
+North West,344,Sports and Fitness Occupations,16256.5,11867.25,11691.25,12672.75,
+North West,352,Legal Associate Professionals,6461,12734.25,11311.75,9894.25,
+North West,353,"Business, Finance and Related Associate Professionals",50893.75,56547.5,61826,70123.25,
+North West,354,"Sales, Marketing and Related Associate Professionals",86159.25,72042.25,77410,90586.5,
+North West,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+North West,356,Public Services and Other Associate Professionals,56286,51046.75,53121.75,51657.5,
+North West,411,Administrative Occupations: Government and Related Organisations,66571.75,56096,48623.75,42655,
+North West,412,Administrative Occupations: Finance,79713,78625,79303,90122,
+North West,413,Administrative Occupations: Records,43222,46412.25,54537,54804.75,
+North West,416,Administrative Occupations: Office Managers and Supervisors,18553.75,24550.75,18478.5,20603.75,
+North West,421,Secretarial and Related Occupations,89069,76813.25,67278,71339.75,
+North West,511,Agricultural and Related Trades,20693.25,29250.5,33366,31893.75,
+North West,521,"Metal Forming, Welding and Related Trades",6781.25,9602.25,13385.5,12129,
+North West,522,"Metal Machining, Fitting and Instrument Making Trades",30067.25,25915,27489.25,31137.75,
+North West,523,Vehicle Trades,28438.5,29802.25,29391.5,33502.5,
+North West,524,Electrical and Electronic Trades,46347.25,45948.75,44034.5,43261.75,
+North West,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+North West,531,Construction and Building Trades,79729.25,77959.5,80709.75,86480.5,
+North West,532,Building Finishing Trades,23718,20154.5,20994.75,19973.25,
+North West,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+North West,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+North West,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+North West,543,Food Preparation and Hospitality Trades,45040.5,51201,56792.25,57903.5,
+North West,544,Other Skilled Trades,8338.5,10228.5,6905,10101.25,
+North West,612,Childcare and Related Personal Services,94730.75,81792,79224.75,93002.75,
+North West,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+North West,614,Caring Personal Services,151419.25,137905.5,154401.75,155700.75,
+North West,621,Leisure and Travel Services,26344.25,17040.5,14246.25,24469.25,
+North West,622,Hairdressers and Related Services,30745.25,29702.5,30462.75,28264.75,
+North West,711,Sales Assistants and Retail Cashiers,175627,160098,165906.25,158712,
+North West,712,Sales Related Occupations,21289,15735.25,19990.75,17713.25,
+North West,713,Sales Supervisors,20189,17386.25,17132.75,17758.75,
+North West,721,Customer Service Occupations,48734,63489,57546.5,58711,
+North West,722,Customer Service Managers and Supervisors,15199.75,18921.25,15066.75,13780.5,
+Northern Ireland,222,Therapy Professionals,129962.5,140418.25,144171.25,126361,Using UK figures
+Northern Ireland,223,Nursing and Midwifery Professionals,20448,18954.25,21673.5,26157.25,
+Northern Ireland,231,Teaching and Educational Professionals,40089.75,42145.25,44315.25,43746,
+Northern Ireland,241,Legal Professionals,194331.25,197011,187533.25,172157.5,Using UK figures
+Northern Ireland,242,"Business, Research and Administrative Professionals",16290.75,16531,13160.75,15811,
+Northern Ireland,243,"Architects, Town Planners and Surveyors",6226,6945.25,7485.5,6246.25,
+Northern Ireland,244,Welfare Professionals,158013.75,173970.5,165747,154417.25,Using UK figures
+Northern Ireland,245,Librarians and Related Professionals,32136.5,39633.5,35890.5,36878.5,Using UK figures
+Northern Ireland,246,Quality and Regulatory Professionals,108887.25,114562,115241.5,118232.75,Using UK figures
+Northern Ireland,247,Media Professionals,142164,136728.75,144046.75,147146.25,Using UK figures
+Northern Ireland,311,"Science, Engineering and Production Technicians",8410.75,6520,8396.25,7449.5,
+Northern Ireland,312,Draughtspersons and Related Architectural Technicians,56376.75,56263.75,58883.75,51023.25,Using UK figures
+Northern Ireland,313,Information Technology Technicians,198483.75,201852.25,190649.75,179257.75,Using UK figures
+Northern Ireland,321,Health Associate Professionals,145311.25,142026,145070,142568.5,Using UK figures
+Northern Ireland,323,Welfare and Housing Associate Professionals,278254,282949.75,277041,283313.25,Using UK figures
+Northern Ireland,331,Protective Service Occupations,378666.5,350455.5,351057,351820,Using UK figures
+Northern Ireland,341,"Artistic, Literary and Media Occupations",328296.5,329043.5,360915,370005,Using UK figures
+Northern Ireland,342,Design Occupations,131162.75,141700,135107.25,162057.5,Using UK figures
+Northern Ireland,344,Sports and Fitness Occupations,139931,139335,156340.5,165990,Using UK figures
+Northern Ireland,352,Legal Associate Professionals,56700.5,69605,54812.75,67705,Using UK figures
+Northern Ireland,353,"Business, Finance and Related Associate Professionals",12563.75,10955.25,8902.25,9297.5,
+Northern Ireland,354,"Sales, Marketing and Related Associate Professionals",18242.75,15527.75,17837,17519.25,
+Northern Ireland,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+Northern Ireland,356,Public Services and Other Associate Professionals,10861,10359.75,14874.25,17567.75,
+Northern Ireland,411,Administrative Occupations: Government and Related Organisations,28152.75,25215.5,29216,30079.25,
+Northern Ireland,412,Administrative Occupations: Finance,22401.25,21023.75,17872.5,19089.25,
+Northern Ireland,413,Administrative Occupations: Records,8545.5,7413.5,7665.75,8907.25,
+Northern Ireland,416,Administrative Occupations: Office Managers and Supervisors,200785.75,199948,195202.75,211816.5,Using UK figures
+Northern Ireland,421,Secretarial and Related Occupations,21169,19007.75,21179.25,18554.5,
+Northern Ireland,511,Agricultural and Related Trades,18500.5,20185.25,19827.75,12655.25,
+Northern Ireland,521,"Metal Forming, Welding and Related Trades",95192.5,102994.5,118682.25,112716.25,Using UK figures
+Northern Ireland,522,"Metal Machining, Fitting and Instrument Making Trades",6330.75,10459.25,9932.25,9649,
+Northern Ireland,523,Vehicle Trades,7464,9777.25,8174.75,7506.25,
+Northern Ireland,524,Electrical and Electronic Trades,10378.5,12075.75,12500.5,14840,
+Northern Ireland,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",37329.75,39869,39283.75,36742.25,Using UK figures
+Northern Ireland,531,Construction and Building Trades,23268,22672.75,28880.5,25839.25,
+Northern Ireland,532,Building Finishing Trades,199039.5,198052.5,199253.75,205883.5,Using UK figures
+Northern Ireland,533,Construction and Building Trades Supervisors,57832.75,51043,55990,58700.75,Using UK figures
+Northern Ireland,541,Textiles and Garments Trades,39266.75,40970.75,46384,43210,Using UK figures
+Northern Ireland,542,Printing Trades,57083.75,50388.75,61576.75,55648.5,Using UK figures
+Northern Ireland,543,Food Preparation and Hospitality Trades,15453.75,22361.25,14214.75,11473.25,
+Northern Ireland,544,Other Skilled Trades,96284.75,92772.25,94846,99167,Using UK figures
+Northern Ireland,612,Childcare and Related Personal Services,20949,21721.25,28315.75,24514,
+Northern Ireland,613,Animal Care and Control Services,66870.5,74125.25,83761,85503.75,Using UK figures
+Northern Ireland,614,Caring Personal Services,32197.5,36612.5,32679.5,30354,
+Northern Ireland,621,Leisure and Travel Services,180883.75,175346.5,168131,172110.75,Using UK figures
+Northern Ireland,622,Hairdressers and Related Services,8970,8511,10844.5,9671.25,
+Northern Ireland,711,Sales Assistants and Retail Cashiers,43740.75,49978.5,42948.25,46644.5,
+Northern Ireland,712,Sales Related Occupations,156565,148636.5,155709.25,159292,Using UK figures
+Northern Ireland,713,Sales Supervisors,204427.75,187918.5,199133,179606.75,Using UK figures
+Northern Ireland,721,Customer Service Occupations,8982,10113.5,9817.5,12115,
+Northern Ireland,722,Customer Service Managers and Supervisors,128689.5,117383.5,129640.75,127116,Using UK figures
+Scotland,222,Therapy Professionals,11604.75,16327.25,12089.75,13707,
+Scotland,223,Nursing and Midwifery Professionals,62709.25,70063.5,66265.25,66749,
+Scotland,231,Teaching and Educational Professionals,115916.25,119792,112375.75,130607.25,
+Scotland,241,Legal Professionals,11997.25,13964.5,12557,12402.5,
+Scotland,242,"Business, Research and Administrative Professionals",45426.5,47711.25,46041.25,49177.5,
+Scotland,243,"Architects, Town Planners and Surveyors",20187.5,18763.25,18782.75,16348.75,
+Scotland,244,Welfare Professionals,19152,20857.75,16711.75,17542.25,
+Scotland,245,Librarians and Related Professionals,32136.5,39633.5,35890.5,36878.5,Using UK figures
+Scotland,246,Quality and Regulatory Professionals,9675.5,12645.25,8573.25,10612.25,
+Scotland,247,Media Professionals,142164,136728.75,144046.75,147146.25,Using UK figures
+Scotland,311,"Science, Engineering and Production Technicians",27151.5,28970.5,32767.25,24842.25,
+Scotland,312,Draughtspersons and Related Architectural Technicians,56376.75,56263.75,58883.75,51023.25,Using UK figures
+Scotland,313,Information Technology Technicians,12167.75,15179,17694.25,14549.25,
+Scotland,321,Health Associate Professionals,11574,8872.75,11695.25,11178.5,
+Scotland,323,Welfare and Housing Associate Professionals,28221.25,29140.25,32548.75,33191.25,
+Scotland,331,Protective Service Occupations,33538.75,34279.5,37044.5,36207.75,
+Scotland,341,"Artistic, Literary and Media Occupations",21208,18150.25,18349,20176.25,
+Scotland,342,Design Occupations,131162.75,141700,135107.25,162057.5,Using UK figures
+Scotland,344,Sports and Fitness Occupations,15057.5,14023,12087.75,13115.75,
+Scotland,352,Legal Associate Professionals,56700.5,69605,54812.75,67705,Using UK figures
+Scotland,353,"Business, Finance and Related Associate Professionals",44941.75,40936.75,46848,48130.5,
+Scotland,354,"Sales, Marketing and Related Associate Professionals",57352,51170.75,52125,57144.5,
+Scotland,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+Scotland,356,Public Services and Other Associate Professionals,42051,41262.5,44804.75,39586.5,
+Scotland,411,Administrative Occupations: Government and Related Organisations,48057.75,45151,46906.5,50245.25,
+Scotland,412,Administrative Occupations: Finance,60710,61886.75,72884,70524.75,
+Scotland,413,Administrative Occupations: Records,38437.5,31260.5,35071,36750.75,
+Scotland,416,Administrative Occupations: Office Managers and Supervisors,16762,18427.5,13013.5,16655.25,
+Scotland,421,Secretarial and Related Occupations,48290.75,57735.25,55617.25,60411,
+Scotland,511,Agricultural and Related Trades,33636.5,32462.25,34849.75,28036.5,
+Scotland,521,"Metal Forming, Welding and Related Trades",8343.75,10618.5,12296.5,10121.5,
+Scotland,522,"Metal Machining, Fitting and Instrument Making Trades",22221.5,28638.5,28801,27809.5,
+Scotland,523,Vehicle Trades,21525.5,25891.5,24147.75,27485.25,
+Scotland,524,Electrical and Electronic Trades,37727.25,33011.75,37693.25,39745.5,
+Scotland,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",37329.75,39869,39283.75,36742.25,Using UK figures
+Scotland,531,Construction and Building Trades,64794.25,63827,65408.25,56174,
+Scotland,532,Building Finishing Trades,14785.5,16840.5,17998.25,17919,
+Scotland,533,Construction and Building Trades Supervisors,57832.75,51043,55990,58700.75,Using UK figures
+Scotland,541,Textiles and Garments Trades,39266.75,40970.75,46384,43210,Using UK figures
+Scotland,542,Printing Trades,57083.75,50388.75,61576.75,55648.5,Using UK figures
+Scotland,543,Food Preparation and Hospitality Trades,41153,45477.5,45872,36254.5,
+Scotland,544,Other Skilled Trades,96284.75,92772.25,94846,99167,Using UK figures
+Scotland,612,Childcare and Related Personal Services,48819,48195.5,57468,49336.75,
+Scotland,613,Animal Care and Control Services,6747.5,6764,9073.25,6523.25,
+Scotland,614,Caring Personal Services,114129.75,116613.5,130859.75,141081,
+Scotland,621,Leisure and Travel Services,24996,19077.25,20918.5,16459.5,
+Scotland,622,Hairdressers and Related Services,17581.75,18693.25,20431,24863.5,
+Scotland,711,Sales Assistants and Retail Cashiers,148635.75,141129,139150.25,131956.25,
+Scotland,712,Sales Related Occupations,13562,11278.5,11269.5,16683.75,
+Scotland,713,Sales Supervisors,18083,16678.5,19333.75,16565.75,
+Scotland,721,Customer Service Occupations,41274.5,46283.25,47146.75,50241,
+Scotland,722,Customer Service Managers and Supervisors,8737.25,9863.75,10936.25,13473.75,
+South East,222,Therapy Professionals,22169.5,24363,24834,21447.5,
+South East,223,Nursing and Midwifery Professionals,69499.5,75781.75,74558.25,85142.25,
+South East,231,Teaching and Educational Professionals,209881.5,219678.75,239142.5,240639.25,
+South East,241,Legal Professionals,24633.75,23903.5,22642,17264,
+South East,242,"Business, Research and Administrative Professionals",104671.25,112291.5,114419.75,96863,
+South East,243,"Architects, Town Planners and Surveyors",29667.75,31443,35711.5,39390.5,
+South East,244,Welfare Professionals,20561.75,20498.75,16551.75,16458.5,
+South East,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+South East,246,Quality and Regulatory Professionals,19337.75,14099.5,16561.25,15645.5,
+South East,247,Media Professionals,26723.25,20286.25,26870.25,23512.5,
+South East,311,"Science, Engineering and Production Technicians",46112.5,48247.5,47351.75,40925.5,
+South East,312,Draughtspersons and Related Architectural Technicians,8076.25,7604.25,8834,6875.25,
+South East,313,Information Technology Technicians,36310,33277.25,37673.25,31353.75,
+South East,321,Health Associate Professionals,21813.5,18830.5,14778,17803.75,
+South East,323,Welfare and Housing Associate Professionals,32635.5,26736.5,30526.75,37353.5,
+South East,331,Protective Service Occupations,75733.75,58566,64815.75,64082.75,
+South East,341,"Artistic, Literary and Media Occupations",49716.5,49877.25,53273.5,59831.75,
+South East,342,Design Occupations,24126.75,23647.25,19982.75,24340.75,
+South East,344,Sports and Fitness Occupations,24389.75,23404.75,32128.25,33504.25,
+South East,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+South East,353,"Business, Finance and Related Associate Professionals",98769.75,107443.25,110217,97991.75,
+South East,354,"Sales, Marketing and Related Associate Professionals",153983.75,152756.75,161025.5,159617.75,
+South East,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+South East,356,Public Services and Other Associate Professionals,60728.25,65808.75,84304.75,59993.75,
+South East,411,Administrative Occupations: Government and Related Organisations,37330.25,40225,37539.5,33730.75,
+South East,412,Administrative Occupations: Finance,99320.25,106386.75,108610.75,122908,
+South East,413,Administrative Occupations: Records,54202.25,55242,58863.75,71000.75,
+South East,416,Administrative Occupations: Office Managers and Supervisors,32801.75,32772.75,31100,35083.25,
+South East,421,Secretarial and Related Occupations,101085.25,107306,102670.5,108506.25,
+South East,511,Agricultural and Related Trades,41974.75,37432.5,48719,50229,
+South East,521,"Metal Forming, Welding and Related Trades",10332.75,10635.5,9184.5,10746,
+South East,522,"Metal Machining, Fitting and Instrument Making Trades",26044.5,29339.75,32552.5,36831.75,
+South East,523,Vehicle Trades,37165,37253,36119,40311.5,
+South East,524,Electrical and Electronic Trades,65640.75,51808,55972.25,59574.5,
+South East,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+South East,531,Construction and Building Trades,104673.25,111424,114220.5,101243.5,
+South East,532,Building Finishing Trades,30308.25,33405,27796.5,26724,
+South East,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+South East,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+South East,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+South East,543,Food Preparation and Hospitality Trades,54410,52423.5,56000.75,59161.5,
+South East,544,Other Skilled Trades,13924.25,10756,13680.25,9644.5,
+South East,612,Childcare and Related Personal Services,122951.75,123323.75,117168.75,121250.75,
+South East,613,Animal Care and Control Services,12109.25,15138,17949.75,15625,
+South East,614,Caring Personal Services,132024,153021,146753.25,140098,
+South East,621,Leisure and Travel Services,29359,33036.25,31475.5,28163.5,
+South East,622,Hairdressers and Related Services,38642.75,38035.75,35364.5,47819.75,
+South East,711,Sales Assistants and Retail Cashiers,196922.75,192114.25,181719.5,185948.25,
+South East,712,Sales Related Occupations,20189,18309.5,19697.75,24108,
+South East,713,Sales Supervisors,30141.25,28756.25,28604.75,23912,
+South East,721,Customer Service Occupations,60066.5,43990.5,37441.5,40969.5,
+South East,722,Customer Service Managers and Supervisors,18269.5,18873.75,23303.5,17328,
+South West,222,Therapy Professionals,13058.5,11213.75,12989.25,11367.25,
+South West,223,Nursing and Midwifery Professionals,56130.5,48742.5,48405.25,58893.75,
+South West,231,Teaching and Educational Professionals,112016.75,109457.75,116334.25,120401.75,
+South West,241,Legal Professionals,13531.5,10563.25,12224.75,11801.75,
+South West,242,"Business, Research and Administrative Professionals",52028.25,49574,54618.5,55864,
+South West,243,"Architects, Town Planners and Surveyors",16452,22060.5,18399,14115.25,
+South West,244,Welfare Professionals,13278,13463.5,12248.25,11132.25,
+South West,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+South West,246,Quality and Regulatory Professionals,8271.5,7741,7878.75,6049.25,
+South West,247,Media Professionals,8425.75,9784,10053.25,13898.25,
+South West,311,"Science, Engineering and Production Technicians",27146.25,27701.75,28029,27180.5,
+South West,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+South West,313,Information Technology Technicians,19212.75,15590.5,14457.75,13887.5,
+South West,321,Health Associate Professionals,14130.5,12768,18182.25,16546,
+South West,323,Welfare and Housing Associate Professionals,17122.75,19577.25,19573,20795.25,
+South West,331,Protective Service Occupations,37684.75,33778.75,34119.25,37683.5,
+South West,341,"Artistic, Literary and Media Occupations",21824.5,28228,29115.25,34273.75,
+South West,342,Design Occupations,9872,13530.75,6445.25,8698.5,
+South West,344,Sports and Fitness Occupations,9115.25,10853.5,14409.5,17384.5,
+South West,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+South West,353,"Business, Finance and Related Associate Professionals",42084.5,46453.75,53978,57222.75,
+South West,354,"Sales, Marketing and Related Associate Professionals",76481.25,81764.25,83249,74349.25,
+South West,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+South West,356,Public Services and Other Associate Professionals,45377.5,41181.5,43886.5,50080.75,
+South West,411,Administrative Occupations: Government and Related Organisations,34179.75,26498.25,25337,25347.75,
+South West,412,Administrative Occupations: Finance,59708,60955.5,67825.5,70329.5,
+South West,413,Administrative Occupations: Records,28003.75,30588.75,33553.5,34933.75,
+South West,416,Administrative Occupations: Office Managers and Supervisors,16647,21035.25,20723.75,18338,
+South West,421,Secretarial and Related Occupations,67808.75,60363.25,57207.25,58825.25,
+South West,511,Agricultural and Related Trades,36154.75,31412.75,38057.5,30434.5,
+South West,521,"Metal Forming, Welding and Related Trades",74238.75,79878,93610.75,92609.25,Using England figures
+South West,522,"Metal Machining, Fitting and Instrument Making Trades",27273.75,23251.25,21232.5,22905.75,
+South West,523,Vehicle Trades,30713.75,28496.25,29236.25,26955,
+South West,524,Electrical and Electronic Trades,32744,33051,32242.5,42681.75,
+South West,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+South West,531,Construction and Building Trades,77120.5,84986.25,82775.5,84664.75,
+South West,532,Building Finishing Trades,19380.75,16371,16934,22061.75,
+South West,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+South West,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+South West,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+South West,543,Food Preparation and Hospitality Trades,36476.5,38362.75,37511,40152,
+South West,544,Other Skilled Trades,9880.25,8835.25,7884.25,8952,
+South West,612,Childcare and Related Personal Services,69357,71340.5,66205.5,69879.25,
+South West,613,Animal Care and Control Services,7230.75,7768.5,9202.25,8651,
+South West,614,Caring Personal Services,101858.75,108624.75,115130.25,122208,
+South West,621,Leisure and Travel Services,13493.75,16223.5,10362.75,13559.25,
+South West,622,Hairdressers and Related Services,18620,24324.5,23855.25,18663.25,
+South West,711,Sales Assistants and Retail Cashiers,129205.5,120336,108765,114988.5,
+South West,712,Sales Related Occupations,11811.75,10056.5,10062.5,11882.75,
+South West,713,Sales Supervisors,17413,17564.25,18538.5,14410.25,
+South West,721,Customer Service Occupations,33376.75,25689,21111.75,32664.75,
+South West,722,Customer Service Managers and Supervisors,11088.75,11369.5,14570,10947.5,
+Wales,222,Therapy Professionals,129962.5,140418.25,144171.25,126361,Using UK figures
+Wales,223,Nursing and Midwifery Professionals,29487.75,29943.75,38054.5,41617.5,
+Wales,231,Teaching and Educational Professionals,65445.75,67835.75,75179.75,68306.75,
+Wales,241,Legal Professionals,194331.25,197011,187533.25,172157.5,Using UK figures
+Wales,242,"Business, Research and Administrative Professionals",19487.75,17724.5,21215.25,14999.75,
+Wales,243,"Architects, Town Planners and Surveyors",211995.5,242176.75,229862.25,224428.25,Using UK figures
+Wales,244,Welfare Professionals,158013.75,173970.5,165747,154417.25,Using UK figures
+Wales,245,Librarians and Related Professionals,32136.5,39633.5,35890.5,36878.5,Using UK figures
+Wales,246,Quality and Regulatory Professionals,108887.25,114562,115241.5,118232.75,Using UK figures
+Wales,247,Media Professionals,142164,136728.75,144046.75,147146.25,Using UK figures
+Wales,311,"Science, Engineering and Production Technicians",14231.25,14298.5,9047.5,12238.5,
+Wales,312,Draughtspersons and Related Architectural Technicians,56376.75,56263.75,58883.75,51023.25,Using UK figures
+Wales,313,Information Technology Technicians,9057.5,8318,8415.25,7505.75,
+Wales,321,Health Associate Professionals,145311.25,142026,145070,142568.5,Using UK figures
+Wales,323,Welfare and Housing Associate Professionals,15198,17836.5,16994.25,16243.5,
+Wales,331,Protective Service Occupations,16232.75,17193.5,18277.25,18129.5,
+Wales,341,"Artistic, Literary and Media Occupations",14041.75,12539.5,9914.75,10114,
+Wales,342,Design Occupations,131162.75,141700,135107.25,162057.5,Using UK figures
+Wales,344,Sports and Fitness Occupations,7366,7816.75,8759,9047.5,
+Wales,352,Legal Associate Professionals,56700.5,69605,54812.75,67705,Using UK figures
+Wales,353,"Business, Finance and Related Associate Professionals",18743.5,19643.25,16945.75,22321.5,
+Wales,354,"Sales, Marketing and Related Associate Professionals",25526,21216.25,24305.5,27541.25,
+Wales,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+Wales,356,Public Services and Other Associate Professionals,24632.5,28418,31303,23502.5,
+Wales,411,Administrative Occupations: Government and Related Organisations,33464.75,34297.75,26224.5,24916,
+Wales,412,Administrative Occupations: Finance,24926,33713.75,32919.25,30330.25,
+Wales,413,Administrative Occupations: Records,18010.25,16679.25,15978.25,14691,
+Wales,416,Administrative Occupations: Office Managers and Supervisors,200785.75,199948,195202.75,211816.5,Using UK figures
+Wales,421,Secretarial and Related Occupations,29368.5,30385.75,26838,29545.25,
+Wales,511,Agricultural and Related Trades,16713.25,15384,21737.75,21146.5,
+Wales,521,"Metal Forming, Welding and Related Trades",95192.5,102994.5,118682.25,112716.25,Using UK figures
+Wales,522,"Metal Machining, Fitting and Instrument Making Trades",14067.25,19995.5,13759.75,15537.5,
+Wales,523,Vehicle Trades,16785,20348.25,16817.25,12426.75,
+Wales,524,Electrical and Electronic Trades,23237.75,20283.25,18996,17532.75,
+Wales,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",37329.75,39869,39283.75,36742.25,Using UK figures
+Wales,531,Construction and Building Trades,43473.75,39078,46047.75,36865,
+Wales,532,Building Finishing Trades,9626.75,11533.25,11918,12803.25,
+Wales,533,Construction and Building Trades Supervisors,57832.75,51043,55990,58700.75,Using UK figures
+Wales,541,Textiles and Garments Trades,39266.75,40970.75,46384,43210,Using UK figures
+Wales,542,Printing Trades,57083.75,50388.75,61576.75,55648.5,Using UK figures
+Wales,543,Food Preparation and Hospitality Trades,22578.75,19500.25,19641,24107.5,
+Wales,544,Other Skilled Trades,96284.75,92772.25,94846,99167,Using UK figures
+Wales,612,Childcare and Related Personal Services,36142.75,41775.25,39532.25,38897,
+Wales,613,Animal Care and Control Services,66870.5,74125.25,83761,85503.75,Using UK figures
+Wales,614,Caring Personal Services,60420.25,72419.25,75086.75,79880,
+Wales,621,Leisure and Travel Services,180883.75,175346.5,168131,172110.75,Using UK figures
+Wales,622,Hairdressers and Related Services,12439.75,13164,13480.5,12253,
+Wales,711,Sales Assistants and Retail Cashiers,74868.25,69693.25,62869,69148.5,
+Wales,712,Sales Related Occupations,156565,148636.5,155709.25,159292,Using UK figures
+Wales,713,Sales Supervisors,10428,7128.75,10284.25,11011,
+Wales,721,Customer Service Occupations,21733,19297.5,17328.25,19092.75,
+Wales,722,Customer Service Managers and Supervisors,128689.5,117383.5,129640.75,127116,Using UK figures
+West Midlands,222,Therapy Professionals,10133.75,6294.25,9822.5,10013.75,
+West Midlands,223,Nursing and Midwifery Professionals,54356.25,51123.25,49685.75,54995.25,
+West Midlands,231,Teaching and Educational Professionals,134044.25,127338.75,131413,131916.25,
+West Midlands,241,Legal Professionals,10129.75,12437.5,13615,11452,
+West Midlands,242,"Business, Research and Administrative Professionals",35576.5,39344.75,46715.5,37447,
+West Midlands,243,"Architects, Town Planners and Surveyors",11430,12492,15941.5,19706,
+West Midlands,244,Welfare Professionals,17673.5,13603.5,13423.75,9750.25,
+West Midlands,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+West Midlands,246,Quality and Regulatory Professionals,9997.25,9359.75,8915.5,8841.5,
+West Midlands,247,Media Professionals,129986.25,123274.25,129008.5,130022.25,Using England figures
+West Midlands,311,"Science, Engineering and Production Technicians",25295.25,21442.5,23980.25,16328,
+West Midlands,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+West Midlands,313,Information Technology Technicians,21079.75,18096.25,14064,13317.25,
+West Midlands,321,Health Associate Professionals,12473.75,16232.25,15794.5,11602.25,
+West Midlands,323,Welfare and Housing Associate Professionals,23037.25,28785.75,28429.25,21764.5,
+West Midlands,331,Protective Service Occupations,29283,27747.75,36227,25704.75,
+West Midlands,341,"Artistic, Literary and Media Occupations",16948,23392.75,19039.75,26083,
+West Midlands,342,Design Occupations,116832.5,132397.75,124284.75,146581.75,Using England figures
+West Midlands,344,Sports and Fitness Occupations,115612.75,115172.5,132198.25,140316,Using England figures
+West Midlands,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+West Midlands,353,"Business, Finance and Related Associate Professionals",37670,38112.5,27967.75,41081.75,
+West Midlands,354,"Sales, Marketing and Related Associate Professionals",73221.5,79558.75,67343.5,71950.75,
+West Midlands,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+West Midlands,356,Public Services and Other Associate Professionals,43978,41290.25,39854.25,44507.25,
+West Midlands,411,Administrative Occupations: Government and Related Organisations,39191.75,27007.5,32032.5,28254.75,
+West Midlands,412,Administrative Occupations: Finance,66967,60763.25,54397.75,71423.75,
+West Midlands,413,Administrative Occupations: Records,44250.5,32588.5,32002.25,38159.5,
+West Midlands,416,Administrative Occupations: Office Managers and Supervisors,18438.25,12046.5,15872.25,16793,
+West Midlands,421,Secretarial and Related Occupations,50596.25,58254.75,57133.25,60035.75,
+West Midlands,511,Agricultural and Related Trades,27671,21338.5,27408,27564.25,
+West Midlands,521,"Metal Forming, Welding and Related Trades",10477.5,13932.75,14997.25,16574,
+West Midlands,522,"Metal Machining, Fitting and Instrument Making Trades",40788,40878,49646,43119.5,
+West Midlands,523,Vehicle Trades,27871,29305.5,27186.25,38548,
+West Midlands,524,Electrical and Electronic Trades,38529,37563.25,37428.25,39286.25,
+West Midlands,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+West Midlands,531,Construction and Building Trades,61844.75,62952.25,60340.5,58550,
+West Midlands,532,Building Finishing Trades,13392.75,13804.5,15259,14350,
+West Midlands,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+West Midlands,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+West Midlands,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+West Midlands,543,Food Preparation and Hospitality Trades,29499.25,41263.75,39786,39964.75,
+West Midlands,544,Other Skilled Trades,10331.75,10058.75,11206.75,14501.25,
+West Midlands,612,Childcare and Related Personal Services,63728,68488.5,69321.25,62853.5,
+West Midlands,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+West Midlands,614,Caring Personal Services,97529.5,113897.5,112287,116338,
+West Midlands,621,Leisure and Travel Services,11284.25,10261.5,11689,9156.5,
+West Midlands,622,Hairdressers and Related Services,16666.5,15880.75,20639.25,31877.75,
+West Midlands,711,Sales Assistants and Retail Cashiers,135869.5,127789,124974.5,119404.5,
+West Midlands,712,Sales Related Occupations,12457,18172.75,13983.25,14778.5,
+West Midlands,713,Sales Supervisors,22532,15663,19528.25,13728.75,
+West Midlands,721,Customer Service Occupations,32430.25,28728,31707.25,34362,
+West Midlands,722,Customer Service Managers and Supervisors,10470,9870.5,13886.25,10780,
+Yorkshire and Humberside,222,Therapy Professionals,7614.25,8612,10727.25,9294.75,
+Yorkshire and Humberside,223,Nursing and Midwifery Professionals,50025,51885.5,49589.75,62107.75,
+Yorkshire and Humberside,231,Teaching and Educational Professionals,120370.5,112157.25,118170.25,125049.5,
+Yorkshire and Humberside,241,Legal Professionals,6970,9813.25,12186.25,11109.5,
+Yorkshire and Humberside,242,"Business, Research and Administrative Professionals",40326.5,40703,37977.25,35054.75,
+Yorkshire and Humberside,243,"Architects, Town Planners and Surveyors",11926.25,13673,14834.25,16053.75,
+Yorkshire and Humberside,244,Welfare Professionals,11899.25,18364.5,16783,12188.25,
+Yorkshire and Humberside,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,Using England figures
+Yorkshire and Humberside,246,Quality and Regulatory Professionals,94141.25,93496.25,99091.25,101245.75,Using England figures
+Yorkshire and Humberside,247,Media Professionals,129986.25,123274.25,129008.5,130022.25,Using England figures
+Yorkshire and Humberside,311,"Science, Engineering and Production Technicians",21942,21128.5,21444.75,16893.5,
+Yorkshire and Humberside,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,Using England figures
+Yorkshire and Humberside,313,Information Technology Technicians,11684.75,12833,16045.75,11193.75,
+Yorkshire and Humberside,321,Health Associate Professionals,11958.75,14780.75,11301.25,11777.5,
+Yorkshire and Humberside,323,Welfare and Housing Associate Professionals,26832.5,25027.75,25467.75,26808.25,
+Yorkshire and Humberside,331,Protective Service Occupations,36468.75,30119.5,26677.75,24948.75,
+Yorkshire and Humberside,341,"Artistic, Literary and Media Occupations",15535.25,18833.5,15140.5,14352.25,
+Yorkshire and Humberside,342,Design Occupations,7160.5,12119.75,14840.75,12234.5,
+Yorkshire and Humberside,344,Sports and Fitness Occupations,9352.75,8801.5,8741,12136.25,
+Yorkshire and Humberside,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,Using England figures
+Yorkshire and Humberside,353,"Business, Finance and Related Associate Professionals",37776.25,39913.5,41922.75,35505.5,
+Yorkshire and Humberside,354,"Sales, Marketing and Related Associate Professionals",59900.75,60780,68902,71504.5,
+Yorkshire and Humberside,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+Yorkshire and Humberside,356,Public Services and Other Associate Professionals,37657.5,36434.25,34625.25,36819.25,
+Yorkshire and Humberside,411,Administrative Occupations: Government and Related Organisations,29674,33523.25,28359,27658.5,
+Yorkshire and Humberside,412,Administrative Occupations: Finance,58899.25,57043.75,60104.75,58602.5,
+Yorkshire and Humberside,413,Administrative Occupations: Records,33346.5,32577.25,34514.25,32301.75,
+Yorkshire and Humberside,416,Administrative Occupations: Office Managers and Supervisors,13157.25,13959.25,17817.5,14703,
+Yorkshire and Humberside,421,Secretarial and Related Occupations,48216.25,49760.25,49816.5,47305,
+Yorkshire and Humberside,511,Agricultural and Related Trades,25389.25,20278.75,22292.5,25653.5,
+Yorkshire and Humberside,521,"Metal Forming, Welding and Related Trades",9486,9939.5,15950,12408,
+Yorkshire and Humberside,522,"Metal Machining, Fitting and Instrument Making Trades",35103.25,28846.25,26144.75,27241.25,
+Yorkshire and Humberside,523,Vehicle Trades,22478.25,23712.25,25941.75,20946,
+Yorkshire and Humberside,524,Electrical and Electronic Trades,31818.25,32269,34964.25,41045.25,
+Yorkshire and Humberside,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,Using England figures
+Yorkshire and Humberside,531,Construction and Building Trades,68028.25,57605.5,68109.25,65373.25,
+Yorkshire and Humberside,532,Building Finishing Trades,14868.5,15682,17160.75,19185,
+Yorkshire and Humberside,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,Using England figures
+Yorkshire and Humberside,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,Using England figures
+Yorkshire and Humberside,542,Printing Trades,49020.5,46581.5,53996,48859.5,Using England figures
+Yorkshire and Humberside,543,Food Preparation and Hospitality Trades,47024.75,40762,36080.25,40236.75,
+Yorkshire and Humberside,544,Other Skilled Trades,8473,8749,9747.75,11392,
+Yorkshire and Humberside,612,Childcare and Related Personal Services,63396,63015.75,63520.5,76368.5,
+Yorkshire and Humberside,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,Using England figures
+Yorkshire and Humberside,614,Caring Personal Services,105956.75,126204.25,123342,111528.5,
+Yorkshire and Humberside,621,Leisure and Travel Services,8074,10426.25,9539,8316,
+Yorkshire and Humberside,622,Hairdressers and Related Services,23930.25,23874.25,20256.75,20507.25,
+Yorkshire and Humberside,711,Sales Assistants and Retail Cashiers,130129.75,125126.75,144544.75,138248.5,
+Yorkshire and Humberside,712,Sales Related Occupations,15648.25,16162,12535.25,13767.75,
+Yorkshire and Humberside,713,Sales Supervisors,18710.75,12965,16758.75,12908.75,
+Yorkshire and Humberside,721,Customer Service Occupations,36694.75,38641.75,50273,39980.75,
+Yorkshire and Humberside,722,Customer Service Managers and Supervisors,15243.5,11126.75,10397.5,12310,
+England,222,Therapy Professionals,109279.75,115159.75,120572,106255,
+England,223,Nursing and Midwifery Professionals,501600.75,507159.25,505073.25,535782.5,
+England,231,Teaching and Educational Professionals,1210590.5,1209818.25,1241205,1272804.5,
+England,241,Legal Professionals,169804.25,174260.25,166237.5,150741.25,
+England,242,"Business, Research and Administrative Professionals",554574.5,574996,593653.5,552613,
+England,243,"Architects, Town Planners and Surveyors",175221,205703.5,197961.5,195481,
+England,244,Welfare Professionals,127173.5,135588,132827.5,123063,
+England,245,Librarians and Related Professionals,28214.25,34544,29890.5,29102.75,
+England,246,Quality and Regulatory Professionals,94141.25,93496.25,99091.25,101245.75,
+England,247,Media Professionals,129986.25,123274.25,129008.5,130022.25,
+England,311,"Science, Engineering and Production Technicians",241053.25,231301.25,237201,218368.5,
+England,312,Draughtspersons and Related Architectural Technicians,49409.75,43950.5,51956,43945.5,
+England,313,Information Technology Technicians,174122.25,173624.5,162496.25,154423.75,
+England,321,Health Associate Professionals,125309.75,125274.25,123151.25,122002.5,
+England,323,Welfare and Housing Associate Professionals,227550.5,230909.25,222554.25,227580.75,
+England,331,Protective Service Occupations,321367.25,294552.25,291914.75,294377.75,
+England,341,"Artistic, Literary and Media Occupations",286992.25,292220.25,325412.5,334665.25,
+England,342,Design Occupations,116832.5,132397.75,124284.75,146581.75,
+England,344,Sports and Fitness Occupations,115612.75,115172.5,132198.25,140316,
+England,352,Legal Associate Professionals,51048.75,60672.25,47817,59772.75,
+England,353,"Business, Finance and Related Associate Professionals",543423.25,560704.5,587582,574631.5,
+England,354,"Sales, Marketing and Related Associate Professionals",761098.25,789422,819337.25,831224.75,
+England,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,Using UK figures
+England,356,Public Services and Other Associate Professionals,405764.25,408281,429455.75,412287.5,
+England,411,Administrative Occupations: Government and Related Organisations,334588.25,317685,297106.75,271137.25,
+England,412,Administrative Occupations: Finance,658499.25,640793.25,650044.5,682470,
+England,413,Administrative Occupations: Records,326244.5,333900.5,366280.5,379875.75,
+England,416,Administrative Occupations: Office Managers and Supervisors,172192.25,169757.5,173187.25,183973,
+England,421,Secretarial and Related Occupations,592948.5,606525.5,584999.25,579875.25,
+England,511,Agricultural and Related Trades,229952.5,211080.5,249313.5,237397.25,
+England,521,"Metal Forming, Welding and Related Trades",74238.75,79878,93610.75,92609.25,
+England,522,"Metal Machining, Fitting and Instrument Making Trades",238088,220597.5,238963.75,249470.75,
+England,523,Vehicle Trades,220979.25,221443.75,226848,242780,
+England,524,Electrical and Electronic Trades,334891.5,338099.5,343380,380745.5,
+England,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",34251,36464.75,33604.25,29357.75,
+England,531,Construction and Building Trades,643994,647107,673729,689852.75,
+England,532,Building Finishing Trades,166850.75,166015.5,164914.5,168985.25,
+England,533,Construction and Building Trades Supervisors,46421.75,39390,46432.5,46391.75,
+England,541,Textiles and Garments Trades,34217.25,36135.75,42341.5,37872.75,
+England,542,Printing Trades,49020.5,46581.5,53996,48859.5,
+England,543,Food Preparation and Hospitality Trades,357246,367531.75,377589.5,401010.75,
+England,544,Other Skilled Trades,82830,75734.25,77157,84574.25,
+England,612,Childcare and Related Personal Services,675254,695757,689261.25,720345.25,
+England,613,Animal Care and Control Services,53397,64448.25,70211.75,73526.5,
+England,614,Caring Personal Services,946431.5,986379.75,1036707.25,1035085.5,
+England,621,Leisure and Travel Services,146094,146204.75,135766.75,140461.25,
+England,622,Hairdressers and Related Services,207684.5,214059.25,220783.75,248275.5,
+England,711,Sales Assistants and Retail Cashiers,1220192,1171535.25,1195155.75,1182093,
+England,712,Sales Related Occupations,135330.75,128869.5,131716.75,131077.75,
+England,713,Sales Supervisors,170425.25,157403.75,164945.25,145729.75,
+England,721,Customer Service Occupations,336914,336915,330208.75,350322.5,
+England,722,Customer Service Managers and Supervisors,111657,102097.5,113666.25,105291,
+UK,222,Therapy Professionals,129962.5,140418.25,144171.25,126361,
+UK,223,Nursing and Midwifery Professionals,614245.75,626120.75,631066.5,670306.25,
+UK,231,Teaching and Educational Professionals,1432042.25,1439591.25,1473075.75,1515464.5,
+UK,241,Legal Professionals,194331.25,197011,187533.25,172157.5,
+UK,242,"Business, Research and Administrative Professionals",635779.5,656962.75,674070.75,632601.25,
+UK,243,"Architects, Town Planners and Surveyors",211995.5,242176.75,229862.25,224428.25,
+UK,244,Welfare Professionals,158013.75,173970.5,165747,154417.25,
+UK,245,Librarians and Related Professionals,32136.5,39633.5,35890.5,36878.5,
+UK,246,Quality and Regulatory Professionals,108887.25,114562,115241.5,118232.75,
+UK,247,Media Professionals,142164,136728.75,144046.75,147146.25,
+UK,311,"Science, Engineering and Production Technicians",290846.75,281090.25,287412,262898.75,
+UK,312,Draughtspersons and Related Architectural Technicians,56376.75,56263.75,58883.75,51023.25,
+UK,313,Information Technology Technicians,198483.75,201852.25,190649.75,179257.75,
+UK,321,Health Associate Professionals,145311.25,142026,145070,142568.5,
+UK,323,Welfare and Housing Associate Professionals,278254,282949.75,277041,283313.25,
+UK,331,Protective Service Occupations,378666.5,350455.5,351057,351820,
+UK,341,"Artistic, Literary and Media Occupations",328296.5,329043.5,360915,370005,
+UK,342,Design Occupations,131162.75,141700,135107.25,162057.5,
+UK,344,Sports and Fitness Occupations,139931,139335,156340.5,165990,
+UK,352,Legal Associate Professionals,56700.5,69605,54812.75,67705,
+UK,353,"Business, Finance and Related Associate Professionals",619672.25,632239.75,660278,654381,
+UK,354,"Sales, Marketing and Related Associate Professionals",862219,877336.75,913604.75,933429.75,
+UK,355,Conservation and Environmental Associate Professionals,6390,8653.75,7494.5,9948.75,
+UK,356,Public Services and Other Associate Professionals,483308.75,488321.25,520437.75,492944.25,
+UK,411,Administrative Occupations: Government and Related Organisations,444263.5,422349.25,399453.75,376377.75,
+UK,412,Administrative Occupations: Finance,766536.5,757417.5,773720.25,802414.25,
+UK,413,Administrative Occupations: Records,391237.75,389253.75,424995.5,440224.75,
+UK,416,Administrative Occupations: Office Managers and Supervisors,200785.75,199948,195202.75,211816.5,
+UK,421,Secretarial and Related Occupations,691776.75,713654.25,688633.75,688386,
+UK,511,Agricultural and Related Trades,298802.75,279112,325728.75,299235.5,
+UK,521,"Metal Forming, Welding and Related Trades",95192.5,102994.5,118682.25,112716.25,
+UK,522,"Metal Machining, Fitting and Instrument Making Trades",280707.5,279690.75,291456.75,302466.75,
+UK,523,Vehicle Trades,266753.75,277460.75,275987.75,290198.25,
+UK,524,Electrical and Electronic Trades,406235,403470.25,412569.75,452863.75,
+UK,525,"Skilled Metal, Electrical and Electronic Trades Supervisors",37329.75,39869,39283.75,36742.25,
+UK,531,Construction and Building Trades,775530,772684.75,814065.5,808731,
+UK,532,Building Finishing Trades,199039.5,198052.5,199253.75,205883.5,
+UK,533,Construction and Building Trades Supervisors,57832.75,51043,55990,58700.75,
+UK,541,Textiles and Garments Trades,39266.75,40970.75,46384,43210,
+UK,542,Printing Trades,57083.75,50388.75,61576.75,55648.5,
+UK,543,Food Preparation and Hospitality Trades,436431.5,454870.75,457317.25,472846,
+UK,544,Other Skilled Trades,96284.75,92772.25,94846,99167,
+UK,612,Childcare and Related Personal Services,781164.75,807449,814577.25,833093,
+UK,613,Animal Care and Control Services,66870.5,74125.25,83761,85503.75,
+UK,614,Caring Personal Services,1153179,1212025,1275333.25,1286400.5,
+UK,621,Leisure and Travel Services,180883.75,175346.5,168131,172110.75,
+UK,622,Hairdressers and Related Services,246676,254427.5,265539.75,295063.25,
+UK,711,Sales Assistants and Retail Cashiers,1487436.75,1432336,1440123.25,1429842.25,
+UK,712,Sales Related Occupations,156565,148636.5,155709.25,159292,
+UK,713,Sales Supervisors,204427.75,187918.5,199133,179606.75,
+UK,721,Customer Service Occupations,408903.5,412609.25,404501.25,431771.25,
+UK,722,Customer Service Managers and Supervisors,128689.5,117383.5,129640.75,127116,

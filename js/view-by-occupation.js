@@ -1,6 +1,7 @@
 // data
 var occupation_data;
 var regions_data;
+var full_time_data;
 var occ_map;
 var table_header_cols = [   'geography_name',
                             'demand_sum',
@@ -10,16 +11,14 @@ var table_header_cols = [   'geography_name',
 
 // do stuff when the page loads
 (function(){
-
     initialize();
 })()
 
-
-
 function initialize(){
 
-    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv')).then(function(geojson, csv){
+    $.when($.getJSON('data/merged_regions_simplified.geojson'), $.get('data/occupation_data.csv'), $.get('data/full_time_percent.csv')).then(function(geojson, csv, full_time_csv){
 
+        // Create objects from geojson and CSV files.
         regions_data = geojson
         occupation_data = _.map(
             $.csv.toObjects(csv[0]),
@@ -43,37 +42,56 @@ function initialize(){
             }
         );
 
+        full_time_data = _.map(
+            $.csv.toObjects(full_time_csv[0]),
+            function(row) {
+                return {
+                    nation_region: row.nation_region,
+                    soc3: row.soc3,
+                    soc_description: row.soc_description,
+                    notes: row.notes,
+                    fulm_time_percent: row.percentage_of_workforce_who_are_full_time,
+                };
+            }
+        );
+
+
         //merge location and job data
+        // (1) Find all occupations (jobs-mappings.js): put these in an array.
         var current_occupation;
         var occupation_list = [];
         $.each(occupation_mapping, function(key, value) {occupation_list.push(String(key))});
 
+        // (2) Iterate over the array of jobs
         $.each(occupation_list, function(k_index, occ) {
+            // (3) Get all data associated with an occupation.
             current_occupation = _.where(occupation_data, {occupation: occ});
             $.each(current_occupation, function(j_index, job){
-                // populate regions 
+                // (4a) populate regions
                 $.each(regions_data[0]['features'], function(r_index, region){
                     if (region.properties['JOB_REGION'] == job['geography_name']) {
                         addDataToLocation(region, occ, job);
                     }
                 });
 
-                // populate LEPs 
+                // (4b) populate LEPs
                 $.each(lep_locations['features'], function(l_index, lep){
-                    if (lep.properties['lep'] == job['geography_name']) {
+                    if ( lep.properties['LEP/City Region'].toUpperCase() == cleanOccupation(job['geography_name']).toUpperCase() ) {
                         addDataToLocation(lep, occ, job);
                     }
                 });
             });
         });
 
-        var occ_fams = [    'Associate professional & technical',
-                            'Administrative & secretarial',
-                            'Skilled trades',
-                            'Caring, leisure & other service' ]
-
+        var occ_fams = [    'Administrative & secretarial',
+                            'Associate professional & technical',
+                            'Caring, leisure & other service',
+                            'Professional',
+                            'Sales & customer service',
+                            'Skilled trades']
 
         if($.address.parameter("occupation")){
+            // location_level: determined with the radio button
             updateOccupation(decodeURIComponent($.address.parameter("occupation")), $.address.parameter('location_level'));
         }
         else{
@@ -87,7 +105,6 @@ function initialize(){
             $occ_select_list.append('<li class="occ-fam"><span>'+occ_fam+'</span></li>')
             // loop thru jobs & add the ones within this job fam
             $.each(occupation_mapping , function(occ_name, occ_dict){
-
                 if(occ_dict['occ_group']==occ_fam+' occupations'){
                     occ_link_html =  makeLinkHTML(occ_name, occ_name, 'option-occ')
                     $occ_select_list.append('<li>'+occ_link_html+'</li>')
@@ -101,8 +118,6 @@ function initialize(){
             $("#occ-dropdown-menu").dropdown("toggle");
             return false;
         });
-
-
 
         $('#geo-level-region').on('click', function (e) {
 
@@ -133,7 +148,6 @@ function initialize(){
         });
 
         MapsLib.initialize();
-
     });
 }
 
@@ -141,20 +155,19 @@ function initialize(){
 function addDataToLocation(location, occ, job){
     if (typeof location.properties['jobs_data'] === 'undefined')
         location.properties['jobs_data'] = {};
-    location.properties['jobs_data'][occ] = {};
-    location.properties['jobs_data'][occ]['lq'] = job['lq'];
-    location.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
-    location.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
-    location.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
-    location.properties['jobs_data'][occ]['reg_salary'] = job['reg_salary'];
-    location.properties['jobs_data'][occ]['fe_opportunity_score'] = job['fe_opportunity_score'];
-    location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
-    location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
-    location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
+        location.properties['jobs_data'][occ] = {};
+        location.properties['jobs_data'][occ]['lq'] = job['lq'];
+        location.properties['jobs_data'][occ]['lq_label'] = job['lq_label'];
+        location.properties['jobs_data'][occ]['demand_sum'] = job['demand_sum'];
+        location.properties['jobs_data'][occ]['demand_ticker'] = job['demand_ticker'];
+        location.properties['jobs_data'][occ]['reg_salary'] = job['reg_salary'];
+        location.properties['jobs_data'][occ]['fe_opportunity_score'] = job['fe_opportunity_score'];
+        location.properties['jobs_data'][occ]['he_opportunity_score'] = job['he_opportunity_score'];
+        location.properties['jobs_data'][occ]['fe_opportunity_level'] = job['fe_opportunity_level'];
+        location.properties['jobs_data'][occ]['he_opportunity_level'] = job['he_opportunity_level'];
 }
 
 function updateOccupation(occ_name, location_level){
-
     // TO DO: select radio button appropriately
     if(location_level!='lep'){
         // by default, if location_level not specified, show nations/regions
@@ -163,12 +176,17 @@ function updateOccupation(occ_name, location_level){
                         });
     } else{
         var occ_data = _.filter(occupation_data, function(row){
-                            return row.occupation==occ_name&&(row.geography_type=='LEP'||row.geography_type=='Country');
+                            return row.occupation==occ_name&&(row.geography_type=='LEPplus'||row.geography_type=='Country');
                         });
     }
 
     $.address.parameter('occupation', encodeURIComponent(occ_name))
-    $('#occ-back').attr('href', '/#/?occupation='+encodeURIComponent(occ_name))
+
+    // Code for back button.
+    occ = $.address.parameter('occupation')
+    occ_group = $.address.parameter('occupation_group')
+    var index_view_url = '/#/?occupation_group='+ occ_group + '&occupation='+occ
+    $('#occ-back').attr('href', index_view_url)
 
 
     if(occ_name.length>32){
@@ -240,8 +258,8 @@ function initializeTable(table_id, column_names, data){
         info: false,
         paging: false,
         aoColumns: [
-            { 
-                "sTitle": "Location", 
+            {
+                "sTitle": "Location",
                 "sType": "string",
                 "mRender": function (data, type, full) {
                             if(data){
@@ -256,8 +274,8 @@ function initializeTable(table_id, column_names, data){
                         }
             },
             {
-                "sTitle": "Job openings", 
-                "sType": "custom-num-html", 
+                "sTitle": "Job openings",
+                "sType": "custom-num-html",
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -268,9 +286,9 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Average salary", 
-                "sType": "custom-num-html", 
+            {
+                "sTitle": "Average salary",
+                "sType": "custom-num-html",
                 "oDefault": 0,
                 "mRender": function (data, type, full) {
                             if(data){
@@ -281,10 +299,10 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Opportunity score (FE)", 
-                "sType": "custom-num-html", 
-                "oDefault": 0, 
+            {
+                "sTitle": "Opportunity score (FE)",
+                "sType": "custom-num-html",
+                "oDefault": 0,
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){
@@ -295,10 +313,10 @@ function initializeTable(table_id, column_names, data){
                             }
                         }
             },
-            { 
-                "sTitle": "Opportunity score (HE)", 
-                "sType": "custom-num-html", 
-                "oDefault": 0, 
+            {
+                "sTitle": "Opportunity score (HE)",
+                "sType": "custom-num-html",
+                "oDefault": 0,
                 "width": "15%",
                 "mRender": function (data, type, full) {
                             if(data){

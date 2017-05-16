@@ -207,10 +207,12 @@ function scatterHelper(prepped_data, point_color, place_data){
                 point: {
                     events: {
                         click: function () {
-                            selectOccupation(this.full_name, place_data);
+                            if ($.address.parameter('occupation_group')) {
+                                selectOccupation(this.full_name, place_data);
+                            };
                         },
                         mouseOver: function () {
-                            triggerHoverBar(this.full_name);
+                            triggerHoverBar(this);
                         },
                     }
                 },
@@ -220,13 +222,13 @@ function scatterHelper(prepped_data, point_color, place_data){
                             fillColor: "#FBAB18",
                             lineWidth: 1,
                             lineColor: "#3B4B5C",
-                            radius: 7
+                            radius: 7,
                         },
                         hover: {
                             fillColor: "#e2be7c",
                             lineWidth: 1,
                             lineColor: "#3B4B5C",
-                            radius: 7
+                            radius: 7,
                         }
                     }
                 }

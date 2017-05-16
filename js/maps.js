@@ -16,7 +16,7 @@ var MapsLib = {
 
         MapsLib.occ_map = L.map('occupation-detail-map', {
             scrollWheelZoom: false,
-            center: [59, -9], 
+            center: [59, -9],
             zoom: 5,
             attributionControl: false,
             zoomControl:false,
@@ -39,8 +39,8 @@ var MapsLib = {
 
             var location_key = 'JOB_REGION';
             if (props) {
-                if (typeof props['JOB_REGION'] === 'undefined') 
-                    location_key = 'lep';
+                if (typeof props['JOB_REGION'] === 'undefined')
+                    location_key = 'LEP/City Region'
 
                 this._div.innerHTML = '<b>' + cleanGeo(props[location_key]) + '</b>\
                                        <table class="table table-condensed"><tbody>\
@@ -49,25 +49,24 @@ var MapsLib = {
                                        <tr><td>Salary</td><td>£' + numberWithCommas(props['jobs_data'][MapsLib.occupation]['reg_salary']) + '</td></tr>\
                                        <tr><td>Opportunity (FE)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['fe_opportunity_score']) + '</td></tr>\
                                        <tr><td>Opportunity (HE)</td><td>' + oppLabel(props['jobs_data'][MapsLib.occupation]['he_opportunity_score']) + '</td></tr>';
-
             }
             else {
                 this._div.innerHTML = '<span id="map-helper">Hover over a location</span>';
             }
         };
 
-        MapsLib.info.addTo(MapsLib.occ_map);    
+        MapsLib.info.addTo(MapsLib.occ_map);
 
         MapsLib.legend.onAdd = function (map) {
 
             var div = L.DomUtil.create('div', 'info legend');
 
             var labels = "\
-                <i style='background:" + MapsLib.getColor('Very high') + "'></i> Very high<br>\
+                <i style='background:" + MapsLib.getColor('Very High') + "'></i> Very high<br>\
                 <i style='background:" + MapsLib.getColor('High') + "'></i> High<br>\
                 <i style='background:" + MapsLib.getColor('Average') + "'></i> Average<br>\
                 <i style='background:" + MapsLib.getColor('Low') + "'></i> Low<br>\
-                <i style='background:" + MapsLib.getColor('Very low') + "'></i> Very low\
+                <i style='background:" + MapsLib.getColor('Very Low') + "'></i> Very low\
             ";
 
             div.innerHTML = "<h4>Job concentration<br /><small id='legend-occupation'></small></h4>"
@@ -79,7 +78,7 @@ var MapsLib = {
 
         // define geographic layers
         MapsLib.regions_occ_geojson = L.geoJson(regions_data[0], {onEachFeature: MapsLib.onEachFeature});
-        
+
         MapsLib.regions_bg_geojson = L.geoJson(regions_data[0], {style: {
                 weight: .5,
                 opacity: .5,
@@ -90,7 +89,7 @@ var MapsLib = {
         MapsLib.lep_occ_geojson = L.geoJson(lep_locations, {
             pointToLayer: function(feature, latlng){
                 return L.circleMarker(latlng, {
-                    color: '#154779', 
+                    color: '#154779',
                     fillColor: '#154779',
                     radius: 6,
                     weight: 0,
@@ -99,6 +98,7 @@ var MapsLib = {
             },
             onEachFeature: MapsLib.onEachFeature
         });
+
     },
 
     toggleGeo: function(geo_type){
@@ -133,9 +133,12 @@ var MapsLib = {
         });
 
         MapsLib.lep_occ_geojson.eachLayer(function (layer) {
+            console.log(layer.feature.properties['jobs_data'])
+            console.log(MapsLib.compare_by)
             layer.setStyle({
                 fillColor: MapsLib.getColor(layer.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])
             });
+
         });
 
         MapsLib.occ_map.fitBounds(MapsLib.regions_occ_geojson.getBounds(), {paddingBottomRight: [150, 0]});
@@ -143,11 +146,11 @@ var MapsLib = {
 
     // get color depending on population density value
     getColor: function (d) {
-        return d == 'Very high' ? '#0e1419' :
+        return d == 'Very High' ? '#0e1419' :
                d == 'High'      ? '#2c3e50' :
                d == 'Average'   ? '#56799d' :
                d == 'Low'       ? '#89a4be' :
-               d == 'Very low'  ? '#cbd7e3' :
+               d == 'Very Low'  ? '#cbd7e3' :
                                   '#cbd7e3' ;
     },
 
@@ -168,6 +171,7 @@ var MapsLib = {
 
     resetHighlight: function (e) {
         e.target.setStyle({fillOpacity: 0.7, fillColor: MapsLib.getColor(e.target.feature.properties['jobs_data'][MapsLib.occupation][MapsLib.compare_by])});
+
         MapsLib.info.update();
     },
 
