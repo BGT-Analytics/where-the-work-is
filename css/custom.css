@@ -1,6 +1,7 @@
-html{
+html {
   height: 100%;
 }
+
 body {
   height: 100%;
   font: 16px "Source Sans Pro",sans-serif;
@@ -9,7 +10,7 @@ body {
   color: #bdc3c7;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #FBAB18;
 }
 
@@ -22,9 +23,7 @@ hr {
 }
 
 
-
 /*occupation figure labels*/
-
 .label-very-high{
   background-color: #38925e;
   color: #ecf0f1;
@@ -47,9 +46,7 @@ hr {
 }
 
 
-
 /*text*/
-
 .text-info, .text-info:hover{
   color: #fbab18;
 }
@@ -74,9 +71,16 @@ hr {
   font-style: italic;
 }
 
+.footnote {
+  clear: both;
+  font-size: 12px;
+  margin-top: 2em;
+  text-align: center;
+  font-style: italic;
+}
+
 
 /*tooltips*/
-
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -99,9 +103,9 @@ hr {
 .tooltip.right .tooltip-arrow {
   border-right-color: #ecf0f1;
 }
-
-
-
+.highcharts-tooltip {
+  z-index: 9999;
+}
 
 /* occupation pane */
 .well{
@@ -155,20 +159,16 @@ hr {
   padding-left: 5px;
   padding-right: 10px;
 }
-#family4{
-  padding-left: 0px;
-}
 
 .job-family{
   text-align: center;
-  margin-top: 14px;
   padding-top: 10px;
   padding-left: 2px;
   padding-right: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 4px;
   background-color: #b2becb;
   border-radius: 6px;
-  min-height: 100px;
+  min-height: 72px;
 }
 .job-family:hover{
   cursor: pointer;
@@ -184,6 +184,9 @@ hr {
   font-size: 12px;
 }
 
+.fa-2x {
+  font-size: 1.5em;
+}
 
 #occ-detail-top{
   margin-bottom: 18px;
@@ -219,6 +222,12 @@ hr {
   margin-bottom: 4px;
 }
 
+.modal-occ-figure-title{
+  color: #3B4B5C;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
 .occ-xs{
   font-size: 9px;
   font-weight: 200px;
@@ -237,30 +246,36 @@ hr {
 
 
 /* footer */
-#footer{
+#footer {
   clear: both;
   padding: 6px 0px;
-  margin-top: 24px;
-  font-size: 10px;
+  /*margin-top: 32px;*/
   background: #fff;
 }
+
+#footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
 .footer-brand {
-  height: 28px;
+  height: 38px;
   margin-right: 20px;
   filter: gray; /* IE6-9 */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
+
 /* Disable grayscale on hover */
 .footer-brand:hover {
   filter: none;
   -webkit-filter: grayscale(0);
 }
+
 .footer-brand.smaller {
   padding-bottom: 4px;
   padding-top: 2px;
 }
-
 
 
 /* nav bar */
@@ -335,15 +350,13 @@ hr {
 }
 
 
-
 /* location select dropdown */
 #location-select-list, #occ-select-list{
   min-width: 380px;
   border: 1px solid #3B4B5C;
   border-radius: 0px;
   background-color: #ecf0f1;
-}
-#occ-select-list{
+  /*scroll functionality*/
   height: auto;
   max-height: 400px;
   overflow-x: hidden;
@@ -386,8 +399,9 @@ hr {
   font-size: 12px;
 }
 
+#location-select-list .form-control { width: 95%; }
 
-
+#location-select-list input { margin: 6px auto; }
 
 /* buttons */
 .btn, .btn:hover, .btn:active, .btn:visited{
@@ -415,6 +429,24 @@ hr {
   background-color: #fbab18;
 }
 
+.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
+  border: 2px solid #3B4B5C;
+  color: #fff;
+  background-color: #3B4B5C;
+  border-color: #3B4B5C;
+}
+
+.btn-navy, .btn-navy:active, .btn-navy:visited {
+  border: 2px solid #fff;
+  background-color: #2C3E50;
+  color: #fff;
+}
+
+.btn-navy:hover{
+  border: 2px solid #fff;
+  background-color: #667481;
+  color: #fff;
+}
 
 /* page layout */
 #main-content{
@@ -428,7 +460,7 @@ hr {
   height: calc(100% - 20px);
 }
 #occ-info-pane{
-  height: 180px;
+  height: 210px;
 }
 #below-occ-info-pane{
   padding-top: 20px;
@@ -437,6 +469,9 @@ hr {
 .chart-col{
   padding-right: 6px;
   padding-left: 6px;
+}
+#default-occ-info p {
+    margin: 10px 0 10px;
 }
 
 
@@ -470,26 +505,26 @@ hr {
 
 
 #bar-demand {
-  min-width: 200px; 
+  min-width: 200px;
   max-width: 800px;
   height: 100%;
   margin: 0 auto;
 }
 
 #scatter-comp {
-  min-width: 200px; 
+  min-width: 200px;
   height: 100%;
-  max-width: 800px; 
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .highcharts-tooltip span {
   height:auto;
-  width:240px;
+  width:200px;
   white-space:normal !important; /*this is required to get tooltip contents to wrap*/
 }
 .highcharts-tooltip table{
-  width: 240px;
+  width: 200px;
 }
 
 #scatter-note{
@@ -498,7 +533,7 @@ hr {
   color: #fbab18;
   display: none;
   position: relative;
-  top: -85px;
+  top: -95px;
   right: 10px;
   z-index: 2;
 }
@@ -570,10 +605,12 @@ hr {
 .modal-title, .modal-subtitle{
   color: #ecf0f1;
 }
+
 .modal-title {
   font-size: 20px;
   font-weight: 700;
 }
+
 .modal-subtitle {
   margin: 0px;
   font-size: 12px;
@@ -585,10 +622,10 @@ hr {
   text-shadow: none;
 }
 
-
 .modal-body {
   color: #777;
 }
+
 
 /* map stuff */
 .info h4 {
@@ -671,11 +708,11 @@ hr {
 }
 
 
-#occ-table > thead > tr > th, 
-#occ-table > tbody > tr > th, 
-#occ-table > tfoot > tr > th, 
-#occ-table > thead > tr > td, 
-#occ-table > tbody > tr > td, 
+#occ-table > thead > tr > th,
+#occ-table > tbody > tr > th,
+#occ-table > tfoot > tr > th,
+#occ-table > thead > tr > td,
+#occ-table > tbody > tr > td,
 #occ-table > tfoot > tr > td {
   border: 1px solid #ddd;
 }
@@ -804,7 +841,7 @@ hr {
   .chart-subtitle, #edu-select-list li{
     font-size: 12px;
   }
-  
+
   #occupation-detail-modal .modal-header{
     padding: 6px;
   }
@@ -847,12 +884,12 @@ hr {
     white-space: normal;
   }
 
+  #footer { text-align: center; }
 
   .footer-brand{
-    height: 22px;
+    height: 28px;
     margin-right: 16px;
   }
-
 
   #video-embed{
     height: 150px;
@@ -911,7 +948,7 @@ hr {
   }
 
   #helper-occupation{
-    top: -95%;
+    /*top: -60%;*/
     left: -5%;
   }
 

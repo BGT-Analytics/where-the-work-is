@@ -1,0 +1,274 @@
+soc_3,soc3_name,specialist_skills_required_for_this_occupation_include
+222,Therapy Professionals,Occupational Therapy
+222,Therapy Professionals,Physiotherapy
+222,Therapy Professionals,Mental Health
+222,Therapy Professionals,Treatment Planning
+222,Therapy Professionals,Patient Care
+223,Nursing and Midwifery Professionals,Mental Health
+223,Nursing and Midwifery Professionals,Care Planning
+223,Nursing and Midwifery Professionals,Patient Care
+223,Nursing and Midwifery Professionals,Working With Patient And/Or Condition: Dementia
+223,Nursing and Midwifery Professionals,Supervisory Skills
+231,Teaching and Educational Professionals,Teaching
+231,Teaching and Educational Professionals,Teaching English
+231,Teaching and Educational Professionals,Teaching Mathematics
+231,Teaching and Educational Professionals,Teaching Science
+231,Teaching and Educational Professionals,Lesson Planning
+241,Legal Professionals,Litigation
+241,Legal Professionals,Business Development
+241,Legal Professionals,Commercial Litigation
+241,Legal Professionals,Mergers and Acquisitions
+241,Legal Professionals,Intellectual Property
+242,"Business, Research and Administrative Professionals",Business Analysis
+242,"Business, Research and Administrative Professionals",Microsoft Excel
+242,"Business, Research and Administrative Professionals",Business Management
+242,"Business, Research and Administrative Professionals",Project Management
+242,"Business, Research and Administrative Professionals",Budgeting
+243,"Architects, Town Planners and Surveyors",Procurement
+243,"Architects, Town Planners and Surveyors",Project Management
+243,"Architects, Town Planners and Surveyors",Contract Preparation
+243,"Architects, Town Planners and Surveyors",Microsoft Excel
+243,"Architects, Town Planners and Surveyors",Civil Engineering
+244,Welfare Professionals,Social Work
+244,Welfare Professionals,Child Protection
+244,Welfare Professionals,Care Planning
+244,Welfare Professionals,Supervisory Skills
+244,Welfare Professionals,Working With Patient And/Or Condition: Learning Disabilities
+245,Librarians and Related Professionals,Customer Service
+245,Librarians and Related Professionals,Microsoft Office
+245,Librarians and Related Professionals,Project Management
+245,Librarians and Related Professionals,Library Research
+245,Librarians and Related Professionals,Social Media
+246,Quality and Regulatory Professionals,Compliance Management
+246,Quality and Regulatory Professionals,ISO 9001 Standards
+246,Quality and Regulatory Professionals,Inspection
+246,Quality and Regulatory Professionals,Project Management
+246,Quality and Regulatory Professionals,Business Management
+247,Media Professionals,Social Media
+247,Media Professionals,Journalism
+247,Media Professionals,Public Relations
+247,Media Professionals,Campaign Management
+247,Media Professionals,Marketing Communications
+311,"Science, Engineering and Production Technicians",Inspection
+311,"Science, Engineering and Production Technicians",Microsoft Office
+311,"Science, Engineering and Production Technicians",Customer Service
+311,"Science, Engineering and Production Technicians",Mechanical Engineering
+311,"Science, Engineering and Production Technicians",Electrical Engineering
+312,Draughtspersons and Related Architectural Technicians,Revit
+312,Draughtspersons and Related Architectural Technicians,Project Management
+312,Draughtspersons and Related Architectural Technicians,Microsoft Office
+312,Draughtspersons and Related Architectural Technicians,Adobe Photoshop
+312,Draughtspersons and Related Architectural Technicians,Concept Development
+313,Information Technology Technicians,Microsoft Windows
+313,Information Technology Technicians,Technical Support
+313,Information Technology Technicians,SQL
+313,Information Technology Technicians,Customer Service
+313,Information Technology Technicians,Microsoft Office
+321,Health Associate Professionals,Caregiving
+321,Health Associate Professionals,Therapy
+321,Health Associate Professionals,Mental Health
+321,Health Associate Professionals,Patient Care
+321,Health Associate Professionals,Customer Service
+323,Welfare and Housing Associate Professionals,Mental Health
+323,Welfare and Housing Associate Professionals,Fundraising
+323,Welfare and Housing Associate Professionals,Psychology
+323,Welfare and Housing Associate Professionals,Customer Service
+323,Welfare and Housing Associate Professionals,Working With Patient And/Or Condition: Learning Disabilities
+331,Protective Service Occupations,Customer Service
+331,Protective Service Occupations,Information Security
+331,Protective Service Occupations,Business Development
+331,Protective Service Occupations,Customer Contact
+331,Protective Service Occupations,Risk Management
+341,"Artistic, Literary and Media Occupations",Copy Writing
+341,"Artistic, Literary and Media Occupations",Social Media
+341,"Artistic, Literary and Media Occupations",Project Management
+341,"Artistic, Literary and Media Occupations",Video Production
+341,"Artistic, Literary and Media Occupations",Adobe Photoshop
+342,Design Occupations,Adobe Photoshop
+342,Design Occupations,Graphic Design
+342,Design Occupations,Adobe Indesign
+342,Design Occupations,Digital Design
+342,Design Occupations,Concept Development
+344,Sports and Fitness Occupations,Instruction
+344,Sports and Fitness Occupations,First Aid
+344,Sports and Fitness Occupations,Customer Service
+344,Sports and Fitness Occupations,Sales Training
+344,Sports and Fitness Occupations,Customer Contact
+352,Legal Associate Professionals,Litigation
+352,Legal Associate Professionals,Case Management
+352,Legal Associate Professionals,Customer Service
+352,Legal Associate Professionals,Business Development
+352,Legal Associate Professionals,Commercial Litigation
+353,"Business, Finance and Related Associate Professionals",Microsoft Excel
+353,"Business, Finance and Related Associate Professionals",Business Management
+353,"Business, Finance and Related Associate Professionals",Accountancy
+353,"Business, Finance and Related Associate Professionals",Project Management
+353,"Business, Finance and Related Associate Professionals",Customer Service
+354,"Sales, Marketing and Related Associate Professionals",Sales
+354,"Sales, Marketing and Related Associate Professionals",Business Development
+354,"Sales, Marketing and Related Associate Professionals",Business Management
+354,"Sales, Marketing and Related Associate Professionals",Marketing
+354,"Sales, Marketing and Related Associate Professionals",Customer Service
+355,Conservation and Environmental Associate Professionals,Customer Service
+355,Conservation and Environmental Associate Professionals,Environmental Remediation
+355,Conservation and Environmental Associate Professionals,Environmental Consultancy
+355,Conservation and Environmental Associate Professionals,Environmental Restoration Planning
+355,Conservation and Environmental Associate Professionals,Geographic Information System (GIS)
+356,Public Services and Other Associate Professionals,Business Management
+356,Public Services and Other Associate Professionals,Business Development
+356,Public Services and Other Associate Professionals,Microsoft Office
+356,Public Services and Other Associate Professionals,Customer Service
+356,Public Services and Other Associate Professionals,Employee Relations
+411,Administrative Occupations: Government and Related Organisations,Customer Service
+411,Administrative Occupations: Government and Related Organisations,Microsoft Office
+411,Administrative Occupations: Government and Related Organisations,Office Management
+411,Administrative Occupations: Government and Related Organisations,Administrative Functions
+411,Administrative Occupations: Government and Related Organisations,Administration Management
+412,Administrative Occupations: Finance,Invoicing
+412,Administrative Occupations: Finance,Microsoft Excel
+412,Administrative Occupations: Finance,Accountancy
+412,Administrative Occupations: Finance,Payroll Processing
+412,Administrative Occupations: Finance,Bank Reconciliation
+413,Administrative Occupations: Records,Microsoft Office
+413,Administrative Occupations: Records,Customer Service
+413,Administrative Occupations: Records,Administrative Functions
+413,Administrative Occupations: Records,Invoicing
+413,Administrative Occupations: Records,Administration Management
+416,Administrative Occupations: Office Managers and Supervisors,Business Management
+416,Administrative Occupations: Office Managers and Supervisors,Office Management
+416,Administrative Occupations: Office Managers and Supervisors,Customer Service
+416,Administrative Occupations: Office Managers and Supervisors,Administration Management
+416,Administrative Occupations: Office Managers and Supervisors,Microsoft Excel
+416,Administrative Occupations: Office Managers and Supervisors,Project Management
+416,Administrative Occupations: Office Managers and Supervisors,Microsoft Office
+416,Administrative Occupations: Office Managers and Supervisors,Key Performance Indicators
+416,Administrative Occupations: Office Managers and Supervisors,Office Administration
+416,Administrative Occupations: Office Managers and Supervisors,Customer Contact
+416,Administrative Occupations: Office Managers and Supervisors,Invoicing
+416,Administrative Occupations: Office Managers and Supervisors,Supervisory Skills
+416,Administrative Occupations: Office Managers and Supervisors,Budgeting
+416,Administrative Occupations: Office Managers and Supervisors,Change Management
+416,Administrative Occupations: Office Managers and Supervisors,Facility Supervision
+416,Administrative Occupations: Office Managers and Supervisors,Budget Management
+416,Administrative Occupations: Office Managers and Supervisors,Calendar Management
+416,Administrative Occupations: Office Managers and Supervisors,Accountancy
+421,Secretarial and Related Occupations,Secretarial Skills
+421,Secretarial and Related Occupations,Calendar Management
+421,Secretarial and Related Occupations,Customer Service
+421,Secretarial and Related Occupations,Microsoft Office
+421,Secretarial and Related Occupations,Administrative Support
+511,Agricultural and Related Trades,Grass Cutting
+511,Agricultural and Related Trades,Landscaping
+511,Agricultural and Related Trades,Irrigation
+511,Agricultural and Related Trades,Supervisory Skills
+511,Agricultural and Related Trades,Budgeting
+521,"Metal Forming, Welding and Related Trades",Welding
+521,"Metal Forming, Welding and Related Trades",Mig and Tig Welding
+521,"Metal Forming, Welding and Related Trades",Technical Drawings
+521,"Metal Forming, Welding and Related Trades",Inspection
+521,"Metal Forming, Welding and Related Trades",Computer Numerical Control (CNC)
+522,"Metal Machining, Fitting and Instrument Making Trades",Computer Numerical Control (CNC)
+522,"Metal Machining, Fitting and Instrument Making Trades",Machining
+522,"Metal Machining, Fitting and Instrument Making Trades",Inspection
+522,"Metal Machining, Fitting and Instrument Making Trades",Customer Service
+522,"Metal Machining, Fitting and Instrument Making Trades",Lathes
+523,Vehicle Trades,Automotive Repair
+523,Vehicle Trades,Vehicle Maintenance
+523,Vehicle Trades,Automotive Industry Experience
+523,Vehicle Trades,Customer Service
+523,Vehicle Trades,Inspection
+524,Electrical and Electronic Trades,Electrical Work
+524,Electrical and Electronic Trades,Customer Service
+524,Electrical and Electronic Trades,Inspection
+524,Electrical and Electronic Trades,Microsoft Windows
+524,Electrical and Electronic Trades,Technical Support
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Supervisory Skills
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Customer Service
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Inspection
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Project Management
+525,"Skilled Metal, Electrical and Electronic Trades Supervisors",Automotive Repair
+531,Construction and Building Trades,Plumbing
+531,Construction and Building Trades,Carpentry
+531,Construction and Building Trades,Construction Industry Knowledge
+531,Construction and Building Trades,Boilers
+531,Construction and Building Trades,Customer Service
+532,Building Finishing Trades,Painting
+532,Building Finishing Trades,Commercial Construction
+532,Building Finishing Trades,Spray Painter
+532,Building Finishing Trades,Customer Service
+532,Building Finishing Trades,Fall Protection
+533,Construction and Building Trades Supervisors,Supervisory Skills
+533,Construction and Building Trades Supervisors,Inspection
+533,Construction and Building Trades Supervisors,Civil Engineering
+533,Construction and Building Trades Supervisors,Project Management
+533,Construction and Building Trades Supervisors,Materials Planning
+541,Textiles and Garments Trades,Sewing
+541,Textiles and Garments Trades,Customer Service
+541,Textiles and Garments Trades,Product Sales
+541,Textiles and Garments Trades,Sales
+541,Textiles and Garments Trades,Inspection
+542,Printing Trades,Print Production
+542,Printing Trades,Adobe Photoshop
+542,Printing Trades,Microsoft Excel
+542,Printing Trades,Pre - Press Production
+542,Printing Trades,Project Management
+543,Food Preparation and Hospitality Trades,Cooking
+543,Food Preparation and Hospitality Trades,Food Safety
+543,Food Preparation and Hospitality Trades,Product Sale and Delivery
+543,Food Preparation and Hospitality Trades,Stock Control
+543,Food Preparation and Hospitality Trades,Supervisory Skills
+544,Other Skilled Trades,Paint Sprayer
+544,Other Skilled Trades,Painting
+544,Other Skilled Trades,Project Management
+544,Other Skilled Trades,Microsoft Excel
+544,Other Skilled Trades,Customer Service
+612,Childcare and Related Personal Services,First Aid
+612,Childcare and Related Personal Services,Caregiving
+612,Childcare and Related Personal Services,Working With Patient And/Or Condition: Autism
+612,Childcare and Related Personal Services,Child Protection
+612,Childcare and Related Personal Services,Babysitting
+613,Animal Care and Control Services,Veterinary Medicine Industry Experience
+613,Animal Care and Control Services,Animal Care
+613,Animal Care and Control Services,Dog Walking
+613,Animal Care and Control Services,Customer Service
+613,Animal Care and Control Services,Animal Husbandry
+614,Caring Personal Services,Caregiving
+614,Caring Personal Services,Mental Health
+614,Caring Personal Services,Care Planning
+614,Caring Personal Services,Working With Patient And/Or Condition: Learning Disabilities
+614,Caring Personal Services,Cleaning
+621,Leisure and Travel Services,Customer Service
+621,Leisure and Travel Services,Business Consultancy
+621,Leisure and Travel Services,Sales
+621,Leisure and Travel Services,Customer Contact
+621,Leisure and Travel Services,Microsoft Excel
+622,Hairdressers and Related Services,Customer Service
+622,Hairdressers and Related Services,Hairstyling
+622,Hairdressers and Related Services,Product Promotion
+622,Hairdressers and Related Services,Beauty Industry Experience
+622,Hairdressers and Related Services,Aromatherapy
+711,Sales Assistants and Retail Cashiers,Sales
+711,Sales Assistants and Retail Cashiers,Telesales
+711,Sales Assistants and Retail Cashiers,Customer Service
+711,Sales Assistants and Retail Cashiers,Product Sales
+711,Sales Assistants and Retail Cashiers,Sales Recruiting
+712,Sales Related Occupations,Sales
+712,Sales Related Occupations,Product Sales
+712,Sales Related Occupations,Customer Service
+712,Sales Related Occupations,Business Development
+712,Sales Related Occupations,Sales Recruiting
+713,Sales Supervisors,Sales Management
+713,Sales Supervisors,Business Management
+713,Sales Supervisors,Sales Recruiting
+713,Sales Supervisors,Sales
+713,Sales Supervisors,Key Performance Indicators
+721,Customer Service Occupations,Customer Service
+721,Customer Service Occupations,Customer Contact
+721,Customer Service Occupations,Microsoft Office
+721,Customer Service Occupations,Sales
+721,Customer Service Occupations,Order and Invoice Processing
+722,Customer Service Managers and Supervisors,Customer Service
+722,Customer Service Managers and Supervisors,Key Performance Indicators
+722,Customer Service Managers and Supervisors,Customer Contact
+722,Customer Service Managers and Supervisors,Business Management
+722,Customer Service Managers and Supervisors,Supervisory Skills

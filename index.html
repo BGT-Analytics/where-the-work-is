@@ -9,23 +9,31 @@ view: location
   <div id="control-pane">
     <div class="row">
       <div class='col-md-10 col-md-offset-1'>
-        <div id="control-pane-content">
 
-          <p class="small" id="dropdown-prompt">Browse mid-skilled job prospects by location:</p>
+        <div class="row">
+          <div class="col-md-10">
+            <div id="control-pane-content">
 
-          <div id="dropdown-div">
-            <div class="dropdown">
-              <button class="btn btn-default btn-sm dropdown-toggle hidden-print" type="button" id="location-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span id="current-location-name" class="pull-left"></span>
-                <span class="pull-right"><i id="btn-caret" class="fa fa-2x fa-caret-down"></i></span>
-              </button>
-              <ul id='location-select-list' class="dropdown-menu" aria-labelledby="location-dropdown-menu">
-              </ul>
+              <p class="small" id="dropdown-prompt">Browse mid-skilled job prospects by location:</p>
+
+              <div id="dropdown-div">
+                <div class="dropdown">
+                  <button class="btn btn-default btn-sm dropdown-toggle hidden-print" type="button" id="location-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span id="current-location-name" class="pull-left"></span>
+                    <span class="pull-right"><i id="btn-caret" class="fa fa-2x fa-caret-down"></i></span>
+                  </button>
+                  <ul id='location-select-list' class="dropdown-menu" aria-labelledby="location-dropdown-menu">
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
 
       </div>
+
     </div>
   </div>
 </div>
@@ -36,57 +44,82 @@ view: location
     <div class='col-sm-6 col-md-5 col-md-offset-1 chart-col chart-col-left'>
       <br/>
 
+      <!-- <div class="well well-occ-active well-sm" id="occ-info-pane"> -->
       <div class="well well-occ-active well-sm" id="occ-info-pane">
         <div id="default-occ-info">
           <div class="row">
-            <div class="col-sm-12">
-              <p>Compare groups of mid-skilled occupations:</p>
-
+            <div class="col-xs-9">
+              <p>
+                View mid-skilled occupations by group:
+              </p>
+            </div>
+            <div class="col-xs-3">
+              <small><a href="/" style="float: right;" class="btn btn-sm btn-navy hidden-xs"><i class="fa fa-repeat" aria-hidden="true"></i> Show all</a></small>
+            </div>
+            <div class="col-xs-3">
+              <small><a href="/" style="float: right; font-size: 12px" class="btn btn-sm btn-navy visible-xs"><i class="fa fa-repeat" aria-hidden="true"></i> Show all</a></small>
             </div>
           </div>
-          <div class="row">
 
-            <div class="col-xs-3" id="family1">
-              <div class="job-family" data="Associate professional & technical occupations">
+          <div class="row">
+            <div class="col-xs-4" id="family1">
+              <div class="job-family" data="Associate Professional & Technical Occupations">
                 <i class="fa fa-briefcase fa-fw fa-2x"></i>
                 <div class="job-family-name">
                   Associate professional & technical
                 </div>
               </div>
             </div>
-            <div class="col-xs-3" id="family2">
-              <div class="job-family" data="Administrative & secretarial occupations">
-                <i class="fa fa-folder-open-o fa-fw fa-2x"></i>
+            <div class="col-xs-4" id="family2">
+              <div class="job-family" data="Sales & Customer Service Occupations">
+                <i class="fa fa-gbp fa-fw fa-2x" aria-hidden="true"></i>
                 <div class="job-family-name">
-                  Administrative & secretarial
+                  Sales & customer service
                 </div>
               </div>
             </div>
-            <div class="col-xs-3" id="family3">
-              <div class="job-family" data="Skilled trades occupations">
-                <i class="fa fa-wrench fa-fw fa-2x"></i>
-                <div class="job-family-name">
-                  Skilled trades
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-3" id="family4">
-              <div class="job-family" data="Caring, leisure & other service occupations">
+            <div class="col-xs-4" id="family3">
+              <div class="job-family" data="Caring, Leisure & Other Service Occupations">
                 <i class="fa fa-hand-paper-o fa-fw fa-2x fa-rotate-90"></i>
                 <div class="job-family-name">
                   Caring, leisure & other service
                 </div>
               </div>
             </div>
+          </div>
 
+          <div class="row">
+            <div class="col-xs-4" id="family1">
+              <div class="job-family" data="Professional Occupations">
+                <i class="fa fa-black-tie fa-fw fa-2x" aria-hidden="true"></i>
+                <div class="job-family-name">
+                  Professional
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4" id="family2">
+              <div class="job-family" data="Administrative & Secretarial Occupations">
+                <i class="fa fa-folder-open-o fa-fw fa-2x"></i>
+                <div class="job-family-name">
+                  Administrative & secretarial
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4" id="family3">
+              <div class="job-family" data="Skilled Trades Occupations">
+                <i class="fa fa-wrench fa-fw fa-2x"></i>
+                <div class="job-family-name">
+                  Skilled trades
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="row">
             <div class="col-sm-12">
-
               <div class="helper">
                 <div class="hint hint-bottom hidden-print" id="helper-job-family">
-                  Click a group to highlight occupations
+                  Click a group to view occupations
                   <i class="fa fa-hand-o-up"></i>
                 </div>
               </div>
@@ -115,12 +148,10 @@ view: location
               </div>
               <div class="row">
                 <div class="col-xs-6">
-                  <!-- <p class="occ-xs">&nbsp;</p> -->
                   <p id="occ-label-demand" class="label-occ"></p>
                   <p id="occ-figure-demand" class="occ-figure"></p>
                 </div>
                 <div class="col-xs-6 no-pad-left">
-                  <!-- <p class="occ-xs">&nbsp;</p> -->
                   <p id="occ-label-salary" class="label-occ"></p>
                   <p id="occ-figure-salary" class="occ-figure"></p>
                 </div>
@@ -175,9 +206,9 @@ view: location
         <div class="visible-xs">
           <br/>
 
-          <p class="text-center chart-title">Which occupations have the most openings?</p>
+          <p class="text-center chart-title" id="mobile-bar-chart-title">Which occupation groups have the most openings?</p>
           <p class="text-center chart-subtitle">
-            <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry-level roles (<2 years of experience) in 2014, based on online job postings and ONS vacancy data">Job openings</a> by occupation & education level
+            <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry-level roles (<2 years of experience) in 2015, based on online job postings and ONS vacancy data">Job openings</a> by <span id="mobile-chart-subtitle">occupation group</span> & education level
           </p>
           <div id="bar-demand-mobile"></div>
           <br/>
@@ -186,7 +217,7 @@ view: location
 
         <p class="text-center chart-title" id='scatter-title'>Which occupations are most promising?</p>
         <div class="text-center chart-subtitle">
-          <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Average salary advertised for entry-level roles (<2 years of experience) in 2014">Salary</a> & <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Level of opportunity facing recent course completers, measured in terms of openings relative to recent completers. Occupations with higher opportunity scores are occupations where course completers face less competition.">opportunity</a> for 
+          <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Average salary advertised for entry-level roles (<2 years of experience) in 2015">Salary</a> & <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Level of opportunity facing recent course completers, measured in terms of openings relative to recent completers. Occupations with higher opportunity scores are occupations where course completers face less competition.">opportunity</a> for
           <div id="edu-dropdown" class="fake-underline">
             <div class="dropdown">
               <a class="dropdown-toggle" type="button" id="edu-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="click to change education level">
@@ -205,11 +236,9 @@ view: location
 
         <div id="scatter-comp" class="hidden-xs"></div>
         <div id="scatter-comp-mobile" class="visible-xs"></div>
-        
+
         <div id="scatter-note" class="pull-right">
-          <i class="fa fa-asterisk"></i>
-          <span id="scatter-note-occ"></span> not shown<br/>
-          (uncommon occupation for <span id="scatter-note-edu"></span>)
+          <i class="fa fa-asterisk"></i> Some occupations not shown due to small sample size of finishers
         </div>
       </div>
 
@@ -218,18 +247,156 @@ view: location
     <div class='col-sm-6 col-md-5 chart-col chart-col-right hidden-xs'>
       <br/>
 
-      <p class="text-center chart-title">Which occupations have the most openings?</p>
+      <p class="text-center chart-title" id="bar-chart-title">Which occupation groups have the most openings?</p>
       <p class="text-center chart-subtitle">
-        <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry-level roles (<2 years of experience) in 2014, based on online job postings and ONS vacancy data">Job openings</a> by occupation & education level
+        <a class="fake-underline" data-toggle="tooltip" data-placement="bottom" data-original-title="Number of job openings for entry-level roles (<2 years of experience) in 2015, based on online job postings and ONS vacancy data">Job openings</a> by <span id="chart-subtitle">occupation group</span> & education level
       </p>
       <div id="bar-demand"></div>
       <div class="helper pull-right" id="helper-occupation">
         <div class="hint hint-right hidden-print">
           <i class="fa fa-hand-o-left"></i>
-          Click an occupation for details
+          Click for details
         </div>
       </div>
-
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row footnote">
+    <div class="col-xs-6">
+      <br>
+      <p>Data shown is from 2015, the most recent student finisher data at the time of production</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="container">
+  <div class="modal fade" id="occupationModal" tabindex="-1" role="dialog" aria-labelledby="occupationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="row">
+            <div class="col-xs-10">
+              <h5 class="modal-title" id="occupationModalLabel"></h5>
+            </div>
+            <!-- For an "X" -->
+            <div class="col-xs-2">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-xs-12" id="modal-occ-description">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p><strong>Common titles for this occupation include:</strong> <span id='titlesData'></span></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p><strong>Specialist skills required for this occupation include:</strong> <span id='skillsData'></span></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+
+                <h3>Openings, salary, opportunities</h3>
+
+                <div class="row">
+                  <div class="col-md-9">
+
+                      <div class="col-xs-7">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <p class="modal-occ-figure-title">OPENINGS</p>
+                          </div>
+                          <div class="col-xs-6 no-pad-left">
+                            <p class="modal-occ-figure-title">SALARY</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <p id="modal-occ-label-demand" class="label-occ"></p>
+                            <p id="modal-occ-figure-demand" class="occ-figure"></p>
+                          </div>
+                          <div class="col-xs-6 no-pad-left">
+                            <p id="modal-occ-label-salary" class="label-occ"></p>
+                            <p id="modal-occ-figure-salary" class="occ-figure"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-5 no-pad-left">
+                        <div class="row">
+                          <div class="col-xs-12 no-pad-left">
+                            <p class="modal-occ-figure-title">EMPLOYMENT OPPORTUNITY</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6 no-pad-left no-pad-right">
+                            <p id="modal-occ-label-comp-fe" class="label-occ"></p>
+                            <p class="occ-figure">FE: <span id="modal-occ-figure-comp-fe"></span></p>
+                          </div>
+                          <div class="col-xs-6 no-pad-left no-pad-right">
+                            <p id="modal-occ-label-comp-he" class="label-occ"></p>
+                            <p class="occ-figure">HE: <span id="modal-occ-figure-comp-he"></span></p>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <a href="" id="modal-btn-occ-view" class="btn btn-default btn-xs">
+                      <span class="hidden-xs">See prospects across locations »</span>
+                      <span class="visible-xs">Compare locations »</span>
+                    </a>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+          <br>
+          <div class="row">
+
+            <div class="col-md-6" id="modal-occ-description">
+              <h3>Occupation profile</h3>
+              <p>
+                Percentage of full time and part time workers in
+                <span id='location-span-percent'></span>
+              </p>
+              <div id="pie-full-time" style="height: 220px; width: 320px"></div>
+            </div>
+
+            <div class="col-md-6" id="modal-occ-description">
+              <h3>Historic and projected employment</h3>
+              <p>
+                Year-by-year employment numbers for
+                <span id='span-historical'></span>
+              </p>
+              <br>
+              <div id='employmentLine' style="height: 220px; width: 320px"></div>
+              <div id='projectionTable'></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of modal -->
