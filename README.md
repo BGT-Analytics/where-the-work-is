@@ -21,6 +21,18 @@ jekyll serve
 
 Then navigate to http://localhost:5000/
 
+## Additional notes for Windows users
+
+Assuming Ruby and Jekyll are installed, use Bundler to install required dependencies:
+```
+bundler install
+```
+
+Once all dependencies have installed, run the site locally, again using Bundler:
+```
+bundler exec jekyll serve
+```
+
 ## Updating data
 We use Make to prepare the data.
 
