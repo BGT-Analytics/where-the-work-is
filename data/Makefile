@@ -82,12 +82,12 @@ projection_employment.csv: raw/20170330_Historical_employment_and_projections_WT
 		python slugify_header.py > $@
 
 # occupation_group_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
-occupation_group_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-05-08.xlsx
+occupation_group_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-08-24.xlsx
 		in2csv --sheet "Occupation x Geo" $< | \
 			python calc_occupation_groups.py > $@
 
 # occupation_data.csv: raw/INPUT_DATA_2017-04-25.xlsx
-occupation_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-05-08.xlsx
+occupation_data.csv: raw/BGT_UK_SOC3_Data_for_DataMade_2017-08-24.xlsx
 	in2csv --sheet "Occupation x Geo" $< | \
 		python slugify_header.py > $@
 
