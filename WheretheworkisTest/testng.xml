@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Where the work is Test Suite">
+  <test name="Where the work is Test">
+    <classes>
+      <class name="com.whertheworkis.qa.testcase.MethodologyPageTest"/>
+      <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest"/>
+      <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest"/>
+      <class name="com.whertheworkis.qa.testcase.AboutPageTest"/>
+      <class name="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest"/>
+      <class name="com.whertheworkis.qa.testcase.HomePageTest"/>
+    </classes>
+  </test> <!-- Where the work is Test -->
+</suite> <!-- Where the work is Test Suite -->
