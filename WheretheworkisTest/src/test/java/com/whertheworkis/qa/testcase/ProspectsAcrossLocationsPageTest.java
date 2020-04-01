@@ -1,9 +1,8 @@
 package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -23,7 +22,7 @@ public class ProspectsAcrossLocationsPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -34,53 +33,50 @@ public class ProspectsAcrossLocationsPageTest extends TestBase{
 		prospectsAcrossLocationsPage = occupationPopupWindow.mouseClickOnProspectAcrossLocations();
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void occupationTablePresentTest(){
 		boolean flag = prospectsAcrossLocationsPage.validateOccupationTable();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void dropDownDefaultSelectedOccupationTest(){
 		String selectedOccupation = prospectsAcrossLocationsPage.validateDropDownDefaultSelectedOccupation();
 		Assert.assertEquals(selectedOccupation, "Sales, Marketing & Related Associate Professionals");
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void nationOrRegionRadioButtonTest(){
 		boolean flag = prospectsAcrossLocationsPage.validateNationOrRegionRadioButton();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void lepareaOrCityRegionRadioButtonTest(){
 		boolean flag = prospectsAcrossLocationsPage.validateLepareaOrCityRegionRadioButton();
 		Assert.assertTrue(flag);
 	}
 	
 	
-	@Test
+	@Test(priority = 5)
 	public void jobConcentrationMapButtonPresentTest(){
 		boolean flag = prospectsAcrossLocationsPage.validateJobConcentrationMapButton();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 7)
 	public void jobConcentrationMapPopupPresentTest(){
 		int numberOfWindows = prospectsAcrossLocationsPage.validateJobConcentartionMapPopup();
 		Assert.assertEquals(numberOfWindows, 1);
 	}
 	
-	@Test
+	@Test(priority = 6)
 	public void backButtonTest(){
 		Assert.assertTrue(prospectsAcrossLocationsPage.validateBackButton());
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult result){
-		if(ITestResult.FAILURE==result.getStatus()){
-			testUtil.takeScreenShotForFailedTestCase(result.getName());
-		}
+	@AfterClass
+	public void tearDown(){
 		driver.quit();
 	}
 	

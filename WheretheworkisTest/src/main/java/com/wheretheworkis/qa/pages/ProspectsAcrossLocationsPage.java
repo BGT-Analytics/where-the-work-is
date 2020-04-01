@@ -70,8 +70,11 @@ public class ProspectsAcrossLocationsPage extends TestBase {
 	}
 	
 	public boolean validateBackButton(){
+		String url = driver.getCurrentUrl();
 		backButton.click();
-		return driver.findElement(By.id("occ-info-pane")).isDisplayed();
+		boolean flag = driver.findElement(By.id("occ-info-pane")).isDisplayed();
+		driver.navigate().to(url);
+		return flag;
 	}
 	
 	public JobConcentrationPopupWindow clickOnJobConcentrationMapButton(){

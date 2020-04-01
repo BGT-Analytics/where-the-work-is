@@ -37,7 +37,7 @@ public class AboutPage extends TestBase{
 		testUtil.deleteFile(csvFilePath);
 		csvDataFile.click();
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -48,7 +48,7 @@ public class AboutPage extends TestBase{
 		testUtil.deleteFile(dataDictionayFilePath);
 		dataDictionayFile.click();
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -2,11 +2,8 @@ package com.whertheworkis.qa.testcase;
 
 
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
-
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -24,7 +21,7 @@ public class OccupationPopupWindowTest extends TestBase {
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		occupationPopupWindow = new OccupationPopupWindow();
@@ -69,11 +66,8 @@ public class OccupationPopupWindowTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult result){
-		if(ITestResult.FAILURE==result.getStatus()){
-			testUtil.takeScreenShotForFailedTestCase(result.getName());
-		}
+	@AfterClass
+	public void tearDown(){
 		driver.quit();
 	}
 

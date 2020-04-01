@@ -1,17 +1,17 @@
 package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 
 import com.wheretheworkis.qa.base.TestBase;
 import com.wheretheworkis.qa.pages.AboutPage;
 import com.wheretheworkis.qa.pages.HomePage;
 import com.wheretheworkis.qa.util.TestUtil;
 
-public class AboutPageTest extends TestBase{
+public class AboutPageTest extends TestBase {
 	
 	HomePage homePage;
 	AboutPage aboutPage;
@@ -21,7 +21,7 @@ public class AboutPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -50,11 +50,8 @@ public class AboutPageTest extends TestBase{
 		Assert.assertTrue(aboutPage.validateDataDictionayFileDownload());
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult result){
-		if(ITestResult.FAILURE==result.getStatus()){
-			testUtil.takeScreenShotForFailedTestCase(result.getName());
-		}
+	@AfterClass
+	public void tearDown(){
 		driver.quit();
 	}
 

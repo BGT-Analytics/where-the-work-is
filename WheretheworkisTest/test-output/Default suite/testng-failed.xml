@@ -5,10 +5,13 @@
     <classes>
       <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest">
         <methods>
+          <include name="occupationPopupTitleTest"/>
           <include name="mouseHoverOnLineChartTest"/>
+          <include name="projectedLineChartPresentTest"/>
           <include name="mouseHoverOnPieChartTest"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="popupCloseButtonTest"/>
+          <include name="occupationProfilePieChartPresentTest"/>
         </methods>
       </class> <!-- com.whertheworkis.qa.testcase.OccupationPopupWindowTest -->
     </classes>

@@ -1,9 +1,8 @@
 package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -26,7 +25,7 @@ public class JobConcentrationPopupWindowTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -39,52 +38,50 @@ public class JobConcentrationPopupWindowTest extends TestBase{
 		jobConcentrationPopupWindow = prospectsAcrossLocationsPage.clickOnJobConcentrationMapButton();
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void occupationDetailMapPresentTest(){
 		boolean flag = jobConcentrationPopupWindow.validateOccupationDetailMap();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void occupationNamePresentTest(){
 		String occupationName = jobConcentrationPopupWindow.validateOccupationName();
 		Assert.assertEquals(occupationName, "for sales, marketing & related associate professionals");
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void mapLengendPresentTest(){
 		boolean flag = jobConcentrationPopupWindow.validateMapLegend();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 5)
 	public void mapNationOrRegionRadioButtonSelectedTest(){
 		boolean flag = jobConcentrationPopupWindow.validateMapNationOrRegionRadioButton();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void mapLepOrCityRegionRadioButtonSelectedTest(){
 		boolean flag = jobConcentrationPopupWindow.validateMapLepOrCityRegionRadioButton();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test void mapLocationMouseHoverTest(){
-		boolean flag = jobConcentrationPopupWindow.validateMouseHoverOnMapLOcation();
+	@Test(priority = 6)
+	public void mapLocationMouseHoverTest(){
+		boolean flag = jobConcentrationPopupWindow.validateMouseHoverOnMapLocation();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 7)
 	public void jobConcentrationPopupCloseButtonTest(){
 		boolean flag = jobConcentrationPopupWindow.validateJobConcentrationPopupCloseButton();
 		Assert.assertTrue(flag);
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult result){
-		if(ITestResult.FAILURE==result.getStatus()){
-			testUtil.takeScreenShotForFailedTestCase(result.getName());
-		}
+	@AfterClass
+	public void tearDown(){
 		driver.quit();
 	}
 

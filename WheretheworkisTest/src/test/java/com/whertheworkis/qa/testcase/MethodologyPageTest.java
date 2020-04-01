@@ -1,9 +1,8 @@
 package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -22,7 +21,7 @@ public class MethodologyPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -51,11 +50,8 @@ public class MethodologyPageTest extends TestBase{
 		Assert.assertTrue(methodologyPage.validateMethodologyDataDictionayFileDownload());
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult result){
-		if(ITestResult.FAILURE==result.getStatus()){
-			testUtil.takeScreenShotForFailedTestCase(result.getName());
-		}
+	@AfterClass
+	public void tearDown(){
 		driver.quit();
 	}
 	

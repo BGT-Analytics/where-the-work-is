@@ -57,6 +57,7 @@ public class JobConcentrationPopupWindow extends TestBase{
 	}
 	
 	public boolean validateMapNationOrRegionRadioButton(){
+		mapNationOrRegionRadioButton.click();
 		return mapNationOrRegionRadioButton.isSelected();
 	}
 	
@@ -65,7 +66,7 @@ public class JobConcentrationPopupWindow extends TestBase{
 		return mapLepOrCityRegionRadioButton.isSelected();
 	}
 	
-	public boolean validateMouseHoverOnMapLOcation(){
+	public boolean validateMouseHoverOnMapLocation(){
 		testUtil.waitForElementToBeVisible(occupationDetailMap, 5);
 		testUtil.mouseHoverOnElement(mapLocation);
 		return mapHelperInformation.isDisplayed();
