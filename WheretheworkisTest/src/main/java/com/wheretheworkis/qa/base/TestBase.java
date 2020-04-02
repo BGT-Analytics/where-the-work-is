@@ -62,7 +62,7 @@ public class TestBase {
 		try
 		{
 			driver.get(prop.getProperty("url"));
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			
 		} catch (InterruptedException e) {
 			e.printStackTrace();

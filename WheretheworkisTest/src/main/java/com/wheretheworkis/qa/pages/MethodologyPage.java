@@ -37,7 +37,7 @@ public class MethodologyPage extends TestBase{
 		testUtil.deleteFile(mothodologyCsvDataFilePath);
 		mothodologyCsvData.click();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -48,7 +48,7 @@ public class MethodologyPage extends TestBase{
 		testUtil.deleteFile(mothodologyDataDictionayFilePath);
 		mothodologyDataDictionayFile.click();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

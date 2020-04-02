@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="69" failures="17" name="TestSuite" time="38.248" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_11\jre\bin"/>
+    <property name="java.vm.version" value="25.11-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\Durai\SeleniumProjects\WheretheworkisTest"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\Durai\SeleniumProjects\WheretheworkisTest"/>
+    <property name="java.runtime.version" value="1.8.0_11-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_11\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\DVENKA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="E:\Durai\SeleniumProjects\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5194399235980271477.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\dvenkatesan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_11\bin;C:\Program Files\Java\jre8\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\dvenkatesan"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="dvenkatesan"/>
+    <property name="java.class.path" value="/E:/Durai/eclipse-standard-mars-M1-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.6.2.20150902-0001/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_11\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_11"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_11\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_11\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_11\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_11\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\Durai\SeleniumProjects\WheretheworkisTest\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFileDownloadTest" time="8.512"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFilePresentTest" time="0.072"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFileDownloadTest" time="8.094"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFilePresentTest" time="0.081"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFileDownloadTest" time="8.463"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFilePresentTest" time="0.067"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFileDownloadTest" time="8.13"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFilePresentTest" time="0.063"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnLineChartTest" time="0.367"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnPieChartTest" time="0.364"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationPopupTitleTest" time="0.021"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationProfilePieChartPresentTest" time="0.027"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="popupCloseButtonTest" time="0.117"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="projectedLineChartPresentTest" time="0.029"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageLogoTest" time="0.07"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationDetailMapPresentTest" time="0.042"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="occupationTablePresentTest" time="0.052"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageTitleTest" time="0.041"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationNamePresentTest" time="0.031"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="dropDownDefaultSelectedOccupationTest" time="0.028"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageHeaderSectionTest" time="0.031"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLengendPresentTest" time="0.031"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="nationOrRegionRadioButtonTest" time="0.021"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="aboutLinkTextPresentTest" time="0.035"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLepOrCityRegionRadioButtonSelectedTest" time="0.131"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="lepareaOrCityRegionRadioButtonTest" time="0.189"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="relatedResearchPageLinkTextPresentTest" time="0.052"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapNationOrRegionRadioButtonSelectedTest" time="0.117"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapButtonPresentTest" time="0.026"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="methodologyPageLinkTextPresentTest" time="0.029"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLocationMouseHoverTest" time="0.126">
+    <failure message="stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.162)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6d4006c97705dbfb0e42cc92a5012dca" type="org.openqa.selenium.StaleElementReferenceException">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.162)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6d4006c97705dbfb0e42cc92a5012dca
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
+	at com.wheretheworkis.qa.pages.JobConcentrationPopupWindow.validateMouseHoverOnMapLocation(JobConcentrationPopupWindow.java:71)
+	at com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest.mapLocationMouseHoverTest(JobConcentrationPopupWindowTest.java:73)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="backButtonTest" time="0.876"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="whatcanthistoolshowPageLinkTextPresentTest" time="0.033"/>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="jobConcentrationPopupCloseButtonTest" time="0.117"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapPopupPresentTest" time="0.005">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at com.wheretheworkis.qa.pages.ProspectsAcrossLocationsPage.validateJobConcentartionMapPopup(ProspectsAcrossLocationsPage.java:67)
+	at com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest.jobConcentrationMapPopupPresentTest(ProspectsAcrossLocationsPageTest.java:69)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="defaultLocationSeclectedTest" time="0.049"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsInformationPresentTest" time="0.05"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonPresentTest" time="0.031"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsDashboardHelperPresentTest" time="0.058"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartHelperPresentTest" time="0.076"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartAxisPresentTest" time="0.067"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="clickToHideBarChartLengentPresentTest" time="0.029"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartHigherEducationLenegntVisibilityTest" time="0.096"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartFutherEducationLegentVisibilityTest" time="0.099"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartSchoolLeaversLegentVisibilityTest" time="0.089"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartPresentTest" time="0.05"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartFootnotePresentTest" time="0.034"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="footerSectionLogoPresentTest" time="0.096"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartDataClassificationTest" time="0.067"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartToolTipTest" time="0.001">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartToolTip(HomePage.java:301)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartToolTipTest(HomePageTest.java:197)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartJobOpeningToolTipTest" time="0.027"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartToolTipTest" time="0.001">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
+	at com.wheretheworkis.qa.pages.HomePage.validateLineChartToolTip(HomePage.java:311)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartToolTipTest(HomePageTest.java:209)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartSalaryToolTipTest" time="0.024"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartOpportunityToolTipTest" time="0.022"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownToolTipTest" time="0.023"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownMenuTest" time="0.254"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="dropDownMenuLocationSelecableTest" time="0.478">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
+	at com.wheretheworkis.qa.pages.HomePage.validateDropDownMenu(HomePage.java:210)
+	at com.whertheworkis.qa.testcase.HomePageTest.dropDownMenuLocationSelecableTest(HomePageTest.java:82)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnDashboardOccupationGroupsTest" time="0.001">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnDashboardOccupationGroups(HomePage.java:275)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnDashboardOccupationGroupsTest(HomePageTest.java:169)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBarChartOccupationGroupsTest" time="0.001">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
+	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBarChartOccupationGroups(HomePage.java:284)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBarChartOccupationGroupsTest(HomePageTest.java:178)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBubbleChartOccupationGroupsTest" time="0.002">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
+	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBubbleChartOccupationGroups(HomePage.java:317)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBubbleChartOccupationGroupsTest(HomePageTest.java:215)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseClickOnOccupationGroupDashboardTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateMouseClickOnOccupationGroupDashBoard(HomePage.java:343)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickOnOccupationGroupDashboardTest(HomePageTest.java:246)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartTitleTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartTitle(HomePage.java:349)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartTitleTest(HomePageTest.java:252)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartDataTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartData(HomePage.java:356)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartDataTest(HomePageTest.java:258)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartMouseHoverOnOccupationTest" time="0.004">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartSelectedOccupationMouseHover(HomePage.java:364)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartMouseHoverOnOccupationTest(HomePageTest.java:264)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartMouseHoverOnOccupationTest" time="0.028">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartSelectedOccupationMouseHover(HomePage.java:372)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartMouseHoverOnOccupationTest(HomePageTest.java:270)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonFunctionTest" time="0.001">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateShowallButtonFunction(HomePage.java:380)
+	at com.whertheworkis.qa.testcase.HomePageTest.showallButtonFunctionTest(HomePageTest.java:276)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseClickBarChartOccupationGroupTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartOccupationGroups(HomePage.java:387)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickBarChartOccupationGroupTest(HomePageTest.java:282)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartPopupWindowOpenTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartPopupWindow(HomePage.java:393)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartPopupWindowOpenTest(HomePageTest.java:288)
+</failure>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartPopupWindowOpenTest" time="0">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartPopupWindow(HomePage.java:409)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartPopupWindowOpenTest(HomePageTest.java:293)
+</failure>
+  </testcase>
+</testsuite>

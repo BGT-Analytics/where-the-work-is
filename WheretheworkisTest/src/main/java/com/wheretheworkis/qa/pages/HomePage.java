@@ -446,9 +446,10 @@ public class HomePage extends TestBase{
 	
 	public OccupationPopupWindow clickOnOccupation(){
 		dashboardOccupationGroup.click();
-		testUtil.waitForElementToBeVisible(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss), 10);
+		testUtil.waitForElementToBeVisible(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss), 20);
+		System.out.println(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss).isDisplayed());
 		getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss).click();
-		testUtil.waitForElementToBeVisible(occupationPopupTitle, 10);
+		testUtil.waitForElementToBeVisible(occupationPopupTitle, 15);
 		Set<String> handles = driver.getWindowHandles();
 		Iterator<String> iterator = handles.iterator();
 		String popupWindow = iterator.next();

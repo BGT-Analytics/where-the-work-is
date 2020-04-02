@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest">
+        <methods>
+          <include name="mapLocationMouseHoverTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
+      <class name="com.whertheworkis.qa.testcase.AboutPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.AboutPageTest -->
+      <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.OccupationPopupWindowTest -->
+      <class name="com.whertheworkis.qa.testcase.MethodologyPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.MethodologyPageTest -->
+      <class name="com.whertheworkis.qa.testcase.HomePageTest">
+        <methods>
+          <include name="dropDownMenuLocationSelecableTest"/>
+          <include name="tearDown"/>
+          <include name="barChartPopupWindowOpenTest"/>
+          <include name="mouseClickBarChartOccupationGroupTest"/>
+          <include name="mouseClickOnOccupationGroupDashboardTest"/>
+          <include name="setUp"/>
+          <include name="mouseHoverOnBubbleChartOccupationGroupsTest"/>
+          <include name="bubbleChartMouseHoverOnOccupationTest"/>
+          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
+          <include name="barChartTitleTest"/>
+          <include name="barChartToolTipTest"/>
+          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="bubbleChartToolTipTest"/>
+          <include name="barChartMouseHoverOnOccupationTest"/>
+          <include name="bubbleChartDataTest"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest" invocation-numbers="0"/>
+          <include name="showallButtonFunctionTest"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
+      <class name="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
+        <methods>
+          <include name="jobConcentrationMapPopupPresentTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

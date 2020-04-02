@@ -1,361 +1,603 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="69" passed="69">
+<testng-results skipped="0" failed="10" total="41" passed="31">
   <reporter-output>
   </reporter-output>
-  <suite name="Where the work is Test Suite" duration-ms="224627" started-at="2020-03-31T10:14:21Z" finished-at="2020-03-31T10:18:05Z">
+  <suite name="Default suite" duration-ms="265336" started-at="2020-04-02T07:42:29Z" finished-at="2020-04-02T07:46:54Z">
     <groups>
     </groups>
-    <test name="Where the work is Test" duration-ms="224627" started-at="2020-03-31T10:14:21Z" finished-at="2020-03-31T10:18:05Z">
-      <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="setUp" is-config="true" duration-ms="26565" started-at="2020-03-31T15:45:01Z" finished-at="2020-03-31T15:45:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="mouseHoverOnLineChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="mouseHoverOnLineChartTest" duration-ms="402" started-at="2020-03-31T15:45:28Z" finished-at="2020-03-31T15:45:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseHoverOnLineChartTest -->
-        <test-method status="PASS" signature="mouseHoverOnPieChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="mouseHoverOnPieChartTest" duration-ms="432" started-at="2020-03-31T15:45:28Z" finished-at="2020-03-31T15:45:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseHoverOnPieChartTest -->
-        <test-method status="PASS" signature="occupationPopupTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="occupationPopupTitleTest" duration-ms="48" started-at="2020-03-31T15:45:29Z" finished-at="2020-03-31T15:45:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationPopupTitleTest -->
-        <test-method status="PASS" signature="occupationProfilePieChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="occupationProfilePieChartPresentTest" duration-ms="61" started-at="2020-03-31T15:45:29Z" finished-at="2020-03-31T15:45:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationProfilePieChartPresentTest -->
-        <test-method status="PASS" signature="popupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="popupCloseButtonTest" duration-ms="188" started-at="2020-03-31T15:45:29Z" finished-at="2020-03-31T15:45:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- popupCloseButtonTest -->
-        <test-method status="PASS" signature="projectedLineChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="projectedLineChartPresentTest" duration-ms="60" started-at="2020-03-31T15:45:29Z" finished-at="2020-03-31T15:45:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- projectedLineChartPresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@735b5592]" name="tearDown" is-config="true" duration-ms="1103" started-at="2020-03-31T15:45:29Z" finished-at="2020-03-31T15:45:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.OccupationPopupWindowTest -->
-      <class name="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="setUp" is-config="true" duration-ms="29419" started-at="2020-03-31T15:46:43Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="occupationTablePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="occupationTablePresentTest" duration-ms="36" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationTablePresentTest -->
-        <test-method status="PASS" signature="dropDownDefaultSelectedOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="dropDownDefaultSelectedOccupationTest" duration-ms="44" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dropDownDefaultSelectedOccupationTest -->
-        <test-method status="PASS" signature="nationOrRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="nationOrRegionRadioButtonTest" duration-ms="19" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- nationOrRegionRadioButtonTest -->
-        <test-method status="PASS" signature="lepareaOrCityRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="lepareaOrCityRegionRadioButtonTest" duration-ms="164" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lepareaOrCityRegionRadioButtonTest -->
-        <test-method status="PASS" signature="jobConcentrationMapButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="jobConcentrationMapButtonPresentTest" duration-ms="40" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- jobConcentrationMapButtonPresentTest -->
-        <test-method status="PASS" signature="backButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="backButtonTest" duration-ms="996" started-at="2020-03-31T15:47:13Z" finished-at="2020-03-31T15:47:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- backButtonTest -->
-        <test-method status="PASS" signature="jobConcentrationMapPopupPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="jobConcentrationMapPopupPresentTest" duration-ms="1453" started-at="2020-03-31T15:47:14Z" finished-at="2020-03-31T15:47:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- jobConcentrationMapPopupPresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4cc0edeb]" name="tearDown" is-config="true" duration-ms="1088" started-at="2020-03-31T15:47:15Z" finished-at="2020-03-31T15:47:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest -->
+    <test name="Default test" duration-ms="265336" started-at="2020-04-02T07:42:29Z" finished-at="2020-04-02T07:46:54Z">
       <class name="com.whertheworkis.qa.testcase.HomePageTest">
-        <test-method status="PASS" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="setUp" is-config="true" duration-ms="25083" started-at="2020-03-31T15:47:17Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="setUp" is-config="true" duration-ms="38919" started-at="2020-04-02T13:12:29Z" finished-at="2020-04-02T13:13:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@191a709b]]>
+                <![CDATA[org.testng.TestRunner@4c4d27c8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageLogoTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="homePageLogoTest" duration-ms="88" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="homePageLogoTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="homePageLogoTest" duration-ms="79" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageLogoTest -->
-        <test-method status="PASS" signature="homePageTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="homePageTitleTest" duration-ms="44" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="homePageTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="homePageTitleTest" duration-ms="34" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageTitleTest -->
-        <test-method status="PASS" signature="homePageHeaderSectionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="homePageHeaderSectionTest" duration-ms="56" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="homePageHeaderSectionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="homePageHeaderSectionTest" duration-ms="38" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageHeaderSectionTest -->
-        <test-method status="PASS" signature="aboutLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="aboutLinkTextPresentTest" duration-ms="44" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="aboutLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="aboutLinkTextPresentTest" duration-ms="37" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aboutLinkTextPresentTest -->
-        <test-method status="PASS" signature="relatedResearchPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="relatedResearchPageLinkTextPresentTest" duration-ms="44" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="relatedResearchPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="relatedResearchPageLinkTextPresentTest" duration-ms="37" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- relatedResearchPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="methodologyPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="methodologyPageLinkTextPresentTest" duration-ms="36" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="methodologyPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="methodologyPageLinkTextPresentTest" duration-ms="36" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodologyPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="whatcanthistoolshowPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="whatcanthistoolshowPageLinkTextPresentTest" duration-ms="32" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="whatcanthistoolshowPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="whatcanthistoolshowPageLinkTextPresentTest" duration-ms="36" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- whatcanthistoolshowPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="defaultLocationSeclectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="defaultLocationSeclectedTest" duration-ms="21" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="FAIL" signature="defaultLocationSeclectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="defaultLocationSeclectedTest" duration-ms="29" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [United Kingdom] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [United Kingdom] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.defaultLocationSeclectedTest(HomePageTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- defaultLocationSeclectedTest -->
-        <test-method status="PASS" signature="occupationGroupsInformationPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="occupationGroupsInformationPresentTest" duration-ms="47" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="occupationGroupsInformationPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="occupationGroupsInformationPresentTest" duration-ms="33" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationGroupsInformationPresentTest -->
-        <test-method status="PASS" signature="showallButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="showallButtonPresentTest" duration-ms="100" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="showallButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="showallButtonPresentTest" duration-ms="31" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- showallButtonPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsDashboardHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="occupationGroupsDashboardHelperPresentTest" duration-ms="142" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="occupationGroupsDashboardHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="occupationGroupsDashboardHelperPresentTest" duration-ms="5819" started-at="2020-04-02T13:13:08Z" finished-at="2020-04-02T13:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationGroupsDashboardHelperPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsBarChartHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="occupationGroupsBarChartHelperPresentTest" duration-ms="84" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="occupationGroupsBarChartHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="occupationGroupsBarChartHelperPresentTest" duration-ms="635" started-at="2020-04-02T13:13:14Z" finished-at="2020-04-02T13:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationGroupsBarChartHelperPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsBarChartAxisPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="occupationGroupsBarChartAxisPresentTest" duration-ms="80" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:42Z">
+        <test-method status="PASS" signature="occupationGroupsBarChartAxisPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="occupationGroupsBarChartAxisPresentTest" duration-ms="60" started-at="2020-04-02T13:13:14Z" finished-at="2020-04-02T13:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationGroupsBarChartAxisPresentTest -->
-        <test-method status="PASS" signature="clickToHideBarChartLengentPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="clickToHideBarChartLengentPresentTest" duration-ms="36" started-at="2020-03-31T15:47:42Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="clickToHideBarChartLengentPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="clickToHideBarChartLengentPresentTest" duration-ms="31" started-at="2020-04-02T13:13:14Z" finished-at="2020-04-02T13:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickToHideBarChartLengentPresentTest -->
-        <test-method status="PASS" signature="barChartHigherEducationLenegntVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartHigherEducationLenegntVisibilityTest" duration-ms="137" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="barChartHigherEducationLenegntVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartHigherEducationLenegntVisibilityTest" duration-ms="119" started-at="2020-04-02T13:13:14Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartHigherEducationLenegntVisibilityTest -->
-        <test-method status="PASS" signature="barChartFutherEducationLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartFutherEducationLegentVisibilityTest" duration-ms="152" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="barChartFutherEducationLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartFutherEducationLegentVisibilityTest" duration-ms="126" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartFutherEducationLegentVisibilityTest -->
-        <test-method status="PASS" signature="barChartSchoolLeaversLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartSchoolLeaversLegentVisibilityTest" duration-ms="132" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="barChartSchoolLeaversLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartSchoolLeaversLegentVisibilityTest" duration-ms="107" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartSchoolLeaversLegentVisibilityTest -->
-        <test-method status="PASS" signature="bubbleChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartPresentTest" duration-ms="40" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="bubbleChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartPresentTest" duration-ms="42" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartPresentTest -->
-        <test-method status="PASS" signature="bubbleChartFootnotePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartFootnotePresentTest" duration-ms="40" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="bubbleChartFootnotePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartFootnotePresentTest" duration-ms="48" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartFootnotePresentTest -->
-        <test-method status="PASS" signature="footerSectionLogoPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="footerSectionLogoPresentTest" duration-ms="112" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="footerSectionLogoPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="footerSectionLogoPresentTest" duration-ms="111" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- footerSectionLogoPresentTest -->
-        <test-method status="PASS" signature="barChartDataClassificationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartDataClassificationTest" duration-ms="88" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:43Z">
+        <test-method status="PASS" signature="barChartDataClassificationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartDataClassificationTest" duration-ms="68" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartDataClassificationTest -->
-        <test-method status="PASS" signature="barChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartToolTipTest" duration-ms="1181" started-at="2020-03-31T15:47:43Z" finished-at="2020-03-31T15:47:44Z">
+        <test-method status="PASS" signature="barChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartToolTipTest" duration-ms="19288" started-at="2020-04-02T13:13:15Z" finished-at="2020-04-02T13:13:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartToolTipTest -->
-        <test-method status="PASS" signature="barChartJobOpeningToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartJobOpeningToolTipTest" duration-ms="36" started-at="2020-03-31T15:47:44Z" finished-at="2020-03-31T15:47:44Z">
+        <test-method status="PASS" signature="barChartJobOpeningToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartJobOpeningToolTipTest" duration-ms="31" started-at="2020-04-02T13:13:34Z" finished-at="2020-04-02T13:13:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartJobOpeningToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartToolTipTest" duration-ms="400" started-at="2020-03-31T15:47:44Z" finished-at="2020-03-31T15:47:45Z">
+        <test-method status="PASS" signature="bubbleChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartToolTipTest" duration-ms="332" started-at="2020-04-02T13:13:34Z" finished-at="2020-04-02T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartSalaryToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartSalaryToolTipTest" duration-ms="48" started-at="2020-03-31T15:47:45Z" finished-at="2020-03-31T15:47:45Z">
+        <test-method status="PASS" signature="bubbleChartSalaryToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartSalaryToolTipTest" duration-ms="27" started-at="2020-04-02T13:13:35Z" finished-at="2020-04-02T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartSalaryToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartOpportunityToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartOpportunityToolTipTest" duration-ms="52" started-at="2020-03-31T15:47:45Z" finished-at="2020-03-31T15:47:45Z">
+        <test-method status="PASS" signature="bubbleChartOpportunityToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartOpportunityToolTipTest" duration-ms="25" started-at="2020-04-02T13:13:35Z" finished-at="2020-04-02T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartOpportunityToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartEducationDropDownToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartEducationDropDownToolTipTest" duration-ms="44" started-at="2020-03-31T15:47:45Z" finished-at="2020-03-31T15:47:45Z">
+        <test-method status="PASS" signature="bubbleChartEducationDropDownToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartEducationDropDownToolTipTest" duration-ms="30" started-at="2020-04-02T13:13:35Z" finished-at="2020-04-02T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartEducationDropDownToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartEducationDropDownMenuTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartEducationDropDownMenuTest" duration-ms="280" started-at="2020-03-31T15:47:45Z" finished-at="2020-03-31T15:47:45Z">
+        <test-method status="PASS" signature="bubbleChartEducationDropDownMenuTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartEducationDropDownMenuTest" duration-ms="237" started-at="2020-04-02T13:13:35Z" finished-at="2020-04-02T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartEducationDropDownMenuTest -->
-        <test-method status="PASS" signature="dropDownMenuLocationSelecableTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="dropDownMenuLocationSelecableTest" duration-ms="1126" started-at="2020-03-31T15:47:45Z" finished-at="2020-03-31T15:47:46Z">
+        <test-method status="PASS" signature="dropDownMenuLocationSelecableTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="dropDownMenuLocationSelecableTest" duration-ms="8259" started-at="2020-04-02T13:13:35Z" finished-at="2020-04-02T13:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropDownMenuLocationSelecableTest -->
-        <test-method status="PASS" signature="mouseHoverOnDashboardOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="mouseHoverOnDashboardOccupationGroupsTest" duration-ms="1572" started-at="2020-03-31T15:47:46Z" finished-at="2020-03-31T15:47:48Z">
+        <test-method status="FAIL" signature="mouseHoverOnDashboardOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="mouseHoverOnDashboardOccupationGroupsTest" duration-ms="13301" started-at="2020-04-02T13:13:43Z" finished-at="2020-04-02T13:13:57Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+null, null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+null, null
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnDashboardOccupationGroupsTest(HomePageTest.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHoverOnDashboardOccupationGroupsTest -->
-        <test-method status="PASS" signature="mouseHoverOnBarChartOccupationGroupsTest(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="mouseHoverOnBarChartOccupationGroupsTest" duration-ms="1566" started-at="2020-03-31T15:47:48Z" finished-at="2020-03-31T15:47:50Z">
+        <test-method status="FAIL" signature="mouseHoverOnBarChartOccupationGroupsTest(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="mouseHoverOnBarChartOccupationGroupsTest" duration-ms="12845" started-at="2020-04-02T13:13:57Z" finished-at="2020-04-02T13:14:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@191a709b]]>
+                <![CDATA[org.testng.TestRunner@4c4d27c8]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+null, null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+null, null
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBarChartOccupationGroupsTest(HomePageTest.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHoverOnBarChartOccupationGroupsTest -->
-        <test-method status="PASS" signature="mouseHoverOnBubbleChartOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="mouseHoverOnBubbleChartOccupationGroupsTest" duration-ms="1459" started-at="2020-03-31T15:47:50Z" finished-at="2020-03-31T15:47:51Z">
+        <test-method status="PASS" signature="mouseHoverOnBubbleChartOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="mouseHoverOnBubbleChartOccupationGroupsTest" duration-ms="21771" started-at="2020-04-02T13:14:10Z" finished-at="2020-04-02T13:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHoverOnBubbleChartOccupationGroupsTest -->
-        <test-method status="PASS" signature="mouseClickOnOccupationGroupDashboardTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="mouseClickOnOccupationGroupDashboardTest" duration-ms="1084" started-at="2020-03-31T15:47:51Z" finished-at="2020-03-31T15:47:52Z">
+        <test-method status="FAIL" signature="mouseClickOnOccupationGroupDashboardTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="mouseClickOnOccupationGroupDashboardTest" duration-ms="6183" started-at="2020-04-02T13:14:31Z" finished-at="2020-04-02T13:14:37Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [job-family selected] but found [job-family]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [job-family selected] but found [job-family]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickOnOccupationGroupDashboardTest(HomePageTest.java:247)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseClickOnOccupationGroupDashboardTest -->
-        <test-method status="PASS" signature="barChartTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartTitleTest" duration-ms="941" started-at="2020-03-31T15:47:52Z" finished-at="2020-03-31T15:47:53Z">
+        <test-method status="FAIL" signature="barChartTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartTitleTest" duration-ms="8224" started-at="2020-04-02T13:14:37Z" finished-at="2020-04-02T13:14:46Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Which associate professional & technical occupations have the most openings?] but found [Which occupation groups have the most openings?]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Which associate professional & technical occupations have the most openings?] but found [Which occupation groups have the most openings?]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartTitleTest(HomePageTest.java:253)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartTitleTest -->
-        <test-method status="PASS" signature="bubbleChartDataTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartDataTest" duration-ms="1396" started-at="2020-03-31T15:47:53Z" finished-at="2020-03-31T15:47:54Z">
+        <test-method status="FAIL" signature="bubbleChartDataTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartDataTest" duration-ms="13070" started-at="2020-04-02T13:14:46Z" finished-at="2020-04-02T13:14:59Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Health Associate Professionals] but found [Other Skilled Trades]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Health Associate Professionals] but found [Other Skilled Trades]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartDataTest(HomePageTest.java:259)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartDataTest -->
-        <test-method status="PASS" signature="barChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartMouseHoverOnOccupationTest" duration-ms="1454" started-at="2020-03-31T15:47:54Z" finished-at="2020-03-31T15:47:56Z">
+        <test-method status="FAIL" signature="barChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartMouseHoverOnOccupationTest" duration-ms="11892" started-at="2020-04-02T13:14:59Z" finished-at="2020-04-02T13:15:11Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sales, Marketing & Related Associate Professionals] but found [Associate Professional & Technical Occupations]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sales, Marketing & Related Associate Professionals] but found [Associate Professional & Technical Occupations]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartMouseHoverOnOccupationTest(HomePageTest.java:265)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartMouseHoverOnOccupationTest -->
-        <test-method status="PASS" signature="bubbleChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartMouseHoverOnOccupationTest" duration-ms="1452" started-at="2020-03-31T15:47:56Z" finished-at="2020-03-31T15:47:57Z">
+        <test-method status="FAIL" signature="bubbleChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartMouseHoverOnOccupationTest" duration-ms="14457" started-at="2020-04-02T13:15:11Z" finished-at="2020-04-02T13:15:25Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sales, Marketing & Related Associate Professionals] but found [Sales Supervisors]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sales, Marketing & Related Associate Professionals] but found [Sales Supervisors]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartMouseHoverOnOccupationTest(HomePageTest.java:271)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartMouseHoverOnOccupationTest -->
-        <test-method status="PASS" signature="showallButtonFunctionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="showallButtonFunctionTest" duration-ms="1697" started-at="2020-03-31T15:47:57Z" finished-at="2020-03-31T15:47:59Z">
+        <test-method status="PASS" signature="showallButtonFunctionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="showallButtonFunctionTest" duration-ms="12935" started-at="2020-04-02T13:15:25Z" finished-at="2020-04-02T13:15:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- showallButtonFunctionTest -->
-        <test-method status="PASS" signature="mouseClickBarChartOccupationGroupTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="mouseClickBarChartOccupationGroupTest" duration-ms="1008" started-at="2020-03-31T15:47:59Z" finished-at="2020-03-31T15:48:00Z">
+        <test-method status="PASS" signature="mouseClickBarChartOccupationGroupTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="mouseClickBarChartOccupationGroupTest" duration-ms="18635" started-at="2020-04-02T13:15:38Z" finished-at="2020-04-02T13:15:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseClickBarChartOccupationGroupTest -->
-        <test-method status="PASS" signature="barChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="barChartPopupWindowOpenTest" duration-ms="1695" started-at="2020-03-31T15:48:00Z" finished-at="2020-03-31T15:48:02Z">
+        <test-method status="FAIL" signature="barChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="barChartPopupWindowOpenTest" duration-ms="30717" started-at="2020-04-02T13:15:57Z" finished-at="2020-04-02T13:16:27Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (95b2a34a663dcfd8cb3a63b31793e686)] -> id: occupationModalLabel] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53601}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 95b2a34a663dcfd8cb3a63b31793e686]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (95b2a34a663dcfd8cb3a63b31793e686)] -> id: occupationModalLabel] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53601}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 95b2a34a663dcfd8cb3a63b31793e686
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.wheretheworkis.qa.util.TestUtil.waitForElementToBeVisible(TestUtil.java:47)
+	at com.wheretheworkis.qa.pages.HomePage.validateBarChartPopupWindow(HomePage.java:397)
+	at com.whertheworkis.qa.testcase.HomePageTest.barChartPopupWindowOpenTest(HomePageTest.java:288)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- barChartPopupWindowOpenTest -->
-        <test-method status="PASS" signature="bubbleChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="bubbleChartPopupWindowOpenTest" duration-ms="2437" started-at="2020-03-31T15:48:02Z" finished-at="2020-03-31T15:48:04Z">
+        <test-method status="FAIL" signature="bubbleChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="bubbleChartPopupWindowOpenTest" duration-ms="25416" started-at="2020-04-02T13:16:27Z" finished-at="2020-04-02T13:16:53Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (95b2a34a663dcfd8cb3a63b31793e686)] -> id: occupationModalLabel] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53601}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 95b2a34a663dcfd8cb3a63b31793e686]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (95b2a34a663dcfd8cb3a63b31793e686)] -> id: occupationModalLabel] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.185', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53601}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 95b2a34a663dcfd8cb3a63b31793e686
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.wheretheworkis.qa.util.TestUtil.waitForElementToBeVisible(TestUtil.java:47)
+	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartPopupWindow(HomePage.java:413)
+	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartPopupWindowOpenTest(HomePageTest.java:293)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bubbleChartPopupWindowOpenTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@482f8f11]" name="tearDown" is-config="true" duration-ms="1123" started-at="2020-03-31T15:48:04Z" finished-at="2020-03-31T15:48:05Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@3a82f6ef]" name="tearDown" is-config="true" duration-ms="1107" started-at="2020-04-02T13:16:53Z" finished-at="2020-04-02T13:16:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
-      <class name="com.whertheworkis.qa.testcase.AboutPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="setUp" is-config="true" duration-ms="28344" started-at="2020-03-31T15:46:03Z" finished-at="2020-03-31T15:46:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="csvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="csvDataFileDownloadTest" duration-ms="5559" started-at="2020-03-31T15:46:31Z" finished-at="2020-03-31T15:46:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- csvDataFileDownloadTest -->
-        <test-method status="PASS" signature="csvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="csvDataFilePresentTest" duration-ms="47" started-at="2020-03-31T15:46:37Z" finished-at="2020-03-31T15:46:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- csvDataFilePresentTest -->
-        <test-method status="PASS" signature="dataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="dataDictionayFileDownloadTest" duration-ms="5143" started-at="2020-03-31T15:46:37Z" finished-at="2020-03-31T15:46:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDictionayFileDownloadTest -->
-        <test-method status="PASS" signature="dataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="dataDictionayFilePresentTest" duration-ms="96" started-at="2020-03-31T15:46:42Z" finished-at="2020-03-31T15:46:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDictionayFilePresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@1593948d]" name="tearDown" is-config="true" duration-ms="1198" started-at="2020-03-31T15:46:42Z" finished-at="2020-03-31T15:46:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.AboutPageTest -->
-      <class name="com.whertheworkis.qa.testcase.MethodologyPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="setUp" is-config="true" duration-ms="28699" started-at="2020-03-31T15:44:21Z" finished-at="2020-03-31T15:44:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="methodologyCsvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="methodologyCsvDataFileDownloadTest" duration-ms="5187" started-at="2020-03-31T15:44:49Z" finished-at="2020-03-31T15:44:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyCsvDataFileDownloadTest -->
-        <test-method status="PASS" signature="methodologyCsvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="methodologyCsvDataFilePresentTest" duration-ms="108" started-at="2020-03-31T15:44:55Z" finished-at="2020-03-31T15:44:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyCsvDataFilePresentTest -->
-        <test-method status="PASS" signature="methodologyDataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="methodologyDataDictionayFileDownloadTest" duration-ms="5160" started-at="2020-03-31T15:44:55Z" finished-at="2020-03-31T15:45:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyDataDictionayFileDownloadTest -->
-        <test-method status="PASS" signature="methodologyDataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="methodologyDataDictionayFilePresentTest" duration-ms="84" started-at="2020-03-31T15:45:00Z" finished-at="2020-03-31T15:45:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyDataDictionayFilePresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@1b604f19]" name="tearDown" is-config="true" duration-ms="1210" started-at="2020-03-31T15:45:00Z" finished-at="2020-03-31T15:45:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.MethodologyPageTest -->
-      <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="setUp" is-config="true" duration-ms="30763" started-at="2020-03-31T15:45:30Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="occupationDetailMapPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="occupationDetailMapPresentTest" duration-ms="40" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationDetailMapPresentTest -->
-        <test-method status="PASS" signature="occupationNamePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="occupationNamePresentTest" duration-ms="68" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationNamePresentTest -->
-        <test-method status="PASS" signature="mapLengendPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="mapLengendPresentTest" duration-ms="48" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapLengendPresentTest -->
-        <test-method status="PASS" signature="mapLepOrCityRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="mapLepOrCityRegionRadioButtonSelectedTest" duration-ms="108" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapLepOrCityRegionRadioButtonSelectedTest -->
-        <test-method status="PASS" signature="mapNationOrRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="mapNationOrRegionRadioButtonSelectedTest" duration-ms="108" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapNationOrRegionRadioButtonSelectedTest -->
-        <test-method status="PASS" signature="mapLocationMouseHoverTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="mapLocationMouseHoverTest" duration-ms="382" started-at="2020-03-31T15:46:01Z" finished-at="2020-03-31T15:46:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapLocationMouseHoverTest -->
-        <test-method status="PASS" signature="jobConcentrationPopupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="jobConcentrationPopupCloseButtonTest" duration-ms="188" started-at="2020-03-31T15:46:02Z" finished-at="2020-03-31T15:46:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- jobConcentrationPopupCloseButtonTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@7823a2f9]" name="tearDown" is-config="true" duration-ms="1145" started-at="2020-03-31T15:46:02Z" finished-at="2020-03-31T15:46:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
-    </test> <!-- Where the work is Test -->
-  </suite> <!-- Where the work is Test Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

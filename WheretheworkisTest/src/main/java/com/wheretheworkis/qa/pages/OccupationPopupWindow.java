@@ -75,7 +75,7 @@ public class OccupationPopupWindow extends TestBase {
 	
 	public ProspectsAcrossLocationsPage mouseClickOnProspectAcrossLocations(){
 		propectsAcrossLocationsLink.click();
-		testUtil.waitForElementToBeVisible(occupationTable, 5);
+		testUtil.waitForElementToBeVisible(occupationTable, 15);
 		return new ProspectsAcrossLocationsPage();
 	}
 	

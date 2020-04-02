@@ -3,17 +3,22 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest">
+      <class name="com.whertheworkis.qa.testcase.HomePageTest">
         <methods>
-          <include name="occupationPopupTitleTest"/>
-          <include name="mouseHoverOnLineChartTest"/>
-          <include name="projectedLineChartPresentTest"/>
-          <include name="mouseHoverOnPieChartTest"/>
+          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
+          <include name="barChartTitleTest"/>
+          <include name="defaultLocationSeclectedTest"/>
+          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="tearDown"/>
+          <include name="barChartPopupWindowOpenTest"/>
+          <include name="barChartMouseHoverOnOccupationTest"/>
+          <include name="mouseClickOnOccupationGroupDashboardTest"/>
           <include name="setUp"/>
-          <include name="popupCloseButtonTest"/>
-          <include name="occupationProfilePieChartPresentTest"/>
+          <include name="bubbleChartDataTest"/>
+          <include name="bubbleChartMouseHoverOnOccupationTest"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.whertheworkis.qa.testcase.OccupationPopupWindowTest -->
+      </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
