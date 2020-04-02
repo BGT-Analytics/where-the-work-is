@@ -18,6 +18,11 @@
     	<version>6.8</version>
     	<scope>compile</scope>
 	</dependency>
+    <dependency> 
+	<groupId>com.apple</groupId>
+	 <artifactId>AppleJavaExtensions</artifactId>
+	 <version>1.4</version>
+	</dependency>
   	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 	<dependency>
     	<groupId>commons-io</groupId>
