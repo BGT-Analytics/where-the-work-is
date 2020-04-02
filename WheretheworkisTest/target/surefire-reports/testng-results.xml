@@ -1,1271 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="17" total="69" passed="52">
+<testng-results skipped="45" failed="0" total="69" passed="24">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="215163" started-at="2020-04-02T11:25:46Z" finished-at="2020-04-02T11:29:21Z">
+  <suite name="Command line suite" duration-ms="779946" started-at="2020-04-02T12:38:03Z" finished-at="2020-04-02T12:51:03Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="215163" started-at="2020-04-02T11:25:46Z" finished-at="2020-04-02T11:29:21Z">
+    <test name="Command line test" duration-ms="779946" started-at="2020-04-02T12:38:03Z" finished-at="2020-04-02T12:51:03Z">
       <class name="com.whertheworkis.qa.testcase.OccupationPopupWindowTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="setUp" is-config="true" duration-ms="26443" started-at="2020-04-02T16:57:16Z" finished-at="2020-04-02T16:57:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="29803" started-at="2020-04-02T18:09:46Z" finished-at="2020-04-02T18:10:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="mouseHoverOnLineChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="mouseHoverOnLineChartTest" duration-ms="367" started-at="2020-04-02T16:57:42Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="mouseHoverOnLineChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="mouseHoverOnLineChartTest" duration-ms="374" started-at="2020-04-02T18:10:16Z" finished-at="2020-04-02T18:10:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHoverOnLineChartTest -->
-        <test-method status="PASS" signature="mouseHoverOnPieChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="mouseHoverOnPieChartTest" duration-ms="366" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1079" started-at="2020-04-02T18:10:16Z" finished-at="2020-04-02T18:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="30040" started-at="2020-04-02T18:10:17Z" finished-at="2020-04-02T18:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="mouseHoverOnPieChartTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="mouseHoverOnPieChartTest" duration-ms="395" started-at="2020-04-02T18:10:47Z" finished-at="2020-04-02T18:10:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHoverOnPieChartTest -->
-        <test-method status="PASS" signature="occupationPopupTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="occupationPopupTitleTest" duration-ms="20" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1286" started-at="2020-04-02T18:10:48Z" finished-at="2020-04-02T18:10:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="26286" started-at="2020-04-02T18:10:49Z" finished-at="2020-04-02T18:11:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="occupationPopupTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="occupationPopupTitleTest" duration-ms="30" started-at="2020-04-02T18:11:15Z" finished-at="2020-04-02T18:11:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationPopupTitleTest -->
-        <test-method status="PASS" signature="occupationProfilePieChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="occupationProfilePieChartPresentTest" duration-ms="27" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1073" started-at="2020-04-02T18:11:15Z" finished-at="2020-04-02T18:11:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="45272" started-at="2020-04-02T18:11:16Z" finished-at="2020-04-02T18:12:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="occupationProfilePieChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="occupationProfilePieChartPresentTest" duration-ms="39" started-at="2020-04-02T18:12:02Z" finished-at="2020-04-02T18:12:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationProfilePieChartPresentTest -->
-        <test-method status="PASS" signature="popupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="popupCloseButtonTest" duration-ms="117" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1087" started-at="2020-04-02T18:12:02Z" finished-at="2020-04-02T18:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="68035" started-at="2020-04-02T18:12:03Z" finished-at="2020-04-02T18:13:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="popupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="popupCloseButtonTest" duration-ms="112" started-at="2020-04-02T18:13:11Z" finished-at="2020-04-02T18:13:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- popupCloseButtonTest -->
-        <test-method status="PASS" signature="projectedLineChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="projectedLineChartPresentTest" duration-ms="29" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1089" started-at="2020-04-02T18:13:11Z" finished-at="2020-04-02T18:13:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="setUp" is-config="true" duration-ms="47663" started-at="2020-04-02T18:13:12Z" finished-at="2020-04-02T18:14:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="projectedLineChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="projectedLineChartPresentTest" duration-ms="38" started-at="2020-04-02T18:14:00Z" finished-at="2020-04-02T18:14:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- projectedLineChartPresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@3b81a1bc]" name="tearDown" is-config="true" duration-ms="1057" started-at="2020-04-02T16:57:43Z" finished-at="2020-04-02T16:57:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.OccupationPopupWindowTest@783e6358]" name="tearDown" is-config="true" duration-ms="1079" started-at="2020-04-02T18:14:00Z" finished-at="2020-04-02T18:14:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.whertheworkis.qa.testcase.OccupationPopupWindowTest -->
       <class name="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="setUp" is-config="true" duration-ms="33812" started-at="2020-04-02T16:58:43Z" finished-at="2020-04-02T16:59:16Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="35212" started-at="2020-04-02T18:15:33Z" finished-at="2020-04-02T18:16:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="occupationTablePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="occupationTablePresentTest" duration-ms="52" started-at="2020-04-02T16:59:16Z" finished-at="2020-04-02T16:59:17Z">
+        <test-method status="PASS" signature="occupationTablePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="occupationTablePresentTest" duration-ms="24" started-at="2020-04-02T18:16:08Z" finished-at="2020-04-02T18:16:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- occupationTablePresentTest -->
-        <test-method status="PASS" signature="dropDownDefaultSelectedOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="dropDownDefaultSelectedOccupationTest" duration-ms="28" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1101" started-at="2020-04-02T18:16:08Z" finished-at="2020-04-02T18:16:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="36915" started-at="2020-04-02T18:16:41Z" finished-at="2020-04-02T18:17:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="dropDownDefaultSelectedOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="dropDownDefaultSelectedOccupationTest" duration-ms="52" started-at="2020-04-02T18:17:18Z" finished-at="2020-04-02T18:17:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropDownDefaultSelectedOccupationTest -->
-        <test-method status="PASS" signature="nationOrRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="nationOrRegionRadioButtonTest" duration-ms="21" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1160" started-at="2020-04-02T18:17:18Z" finished-at="2020-04-02T18:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="28764" started-at="2020-04-02T18:17:50Z" finished-at="2020-04-02T18:18:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="nationOrRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="nationOrRegionRadioButtonTest" duration-ms="39" started-at="2020-04-02T18:18:19Z" finished-at="2020-04-02T18:18:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nationOrRegionRadioButtonTest -->
-        <test-method status="PASS" signature="lepareaOrCityRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="lepareaOrCityRegionRadioButtonTest" duration-ms="191" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1073" started-at="2020-04-02T18:18:19Z" finished-at="2020-04-02T18:18:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="31162" started-at="2020-04-02T18:18:58Z" finished-at="2020-04-02T18:19:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="lepareaOrCityRegionRadioButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="lepareaOrCityRegionRadioButtonTest" duration-ms="174" started-at="2020-04-02T18:19:29Z" finished-at="2020-04-02T18:19:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lepareaOrCityRegionRadioButtonTest -->
-        <test-method status="PASS" signature="jobConcentrationMapButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="jobConcentrationMapButtonPresentTest" duration-ms="26" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1073" started-at="2020-04-02T18:19:29Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="28515" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="jobConcentrationMapButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="jobConcentrationMapButtonPresentTest" duration-ms="35" started-at="2020-04-02T18:19:59Z" finished-at="2020-04-02T18:19:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jobConcentrationMapButtonPresentTest -->
-        <test-method status="PASS" signature="backButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="backButtonTest" duration-ms="878" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1100" started-at="2020-04-02T18:19:59Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="29659" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="backButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="backButtonTest" duration-ms="867" started-at="2020-04-02T18:20:30Z" finished-at="2020-04-02T18:20:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backButtonTest -->
-        <test-method status="FAIL" signature="jobConcentrationMapPopupPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="jobConcentrationMapPopupPresentTest" duration-ms="1" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at com.wheretheworkis.qa.pages.ProspectsAcrossLocationsPage.validateJobConcentartionMapPopup(ProspectsAcrossLocationsPage.java:67)
-	at com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest.jobConcentrationMapPopupPresentTest(ProspectsAcrossLocationsPageTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1113" started-at="2020-04-02T18:20:31Z" finished-at="2020-04-02T18:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="setUp" is-config="true" duration-ms="29679" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:21:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="jobConcentrationMapPopupPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="jobConcentrationMapPopupPresentTest" duration-ms="720" started-at="2020-04-02T18:21:01Z" finished-at="2020-04-02T18:21:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jobConcentrationMapPopupPresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@4e04a765]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest@180bc464]" name="tearDown" is-config="true" duration-ms="1137" started-at="2020-04-02T18:21:02Z" finished-at="2020-04-02T18:21:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest -->
       <class name="com.whertheworkis.qa.testcase.HomePageTest">
-        <test-method status="PASS" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="setUp" is-config="true" duration-ms="27311" started-at="2020-04-02T16:57:44Z" finished-at="2020-04-02T16:58:11Z">
+        <test-method status="FAIL" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:14:01Z" finished-at="2020-04-02T18:14:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6b760460]]>
+                <![CDATA[org.testng.TestRunner@2726a511]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageLogoTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="homePageLogoTest" duration-ms="71" started-at="2020-04-02T16:58:11Z" finished-at="2020-04-02T16:58:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePageLogoTest -->
-        <test-method status="PASS" signature="homePageTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="homePageTitleTest" duration-ms="43" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePageTitleTest -->
-        <test-method status="PASS" signature="homePageHeaderSectionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="homePageHeaderSectionTest" duration-ms="31" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePageHeaderSectionTest -->
-        <test-method status="PASS" signature="aboutLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="aboutLinkTextPresentTest" duration-ms="35" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aboutLinkTextPresentTest -->
-        <test-method status="PASS" signature="relatedResearchPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="relatedResearchPageLinkTextPresentTest" duration-ms="52" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- relatedResearchPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="methodologyPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="methodologyPageLinkTextPresentTest" duration-ms="29" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="whatcanthistoolshowPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="whatcanthistoolshowPageLinkTextPresentTest" duration-ms="34" started-at="2020-04-02T16:59:18Z" finished-at="2020-04-02T16:59:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- whatcanthistoolshowPageLinkTextPresentTest -->
-        <test-method status="PASS" signature="defaultLocationSeclectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="defaultLocationSeclectedTest" duration-ms="49" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- defaultLocationSeclectedTest -->
-        <test-method status="PASS" signature="occupationGroupsInformationPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="occupationGroupsInformationPresentTest" duration-ms="49" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationGroupsInformationPresentTest -->
-        <test-method status="PASS" signature="showallButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="showallButtonPresentTest" duration-ms="31" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- showallButtonPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsDashboardHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="occupationGroupsDashboardHelperPresentTest" duration-ms="58" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationGroupsDashboardHelperPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsBarChartHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="occupationGroupsBarChartHelperPresentTest" duration-ms="75" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationGroupsBarChartHelperPresentTest -->
-        <test-method status="PASS" signature="occupationGroupsBarChartAxisPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="occupationGroupsBarChartAxisPresentTest" duration-ms="67" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationGroupsBarChartAxisPresentTest -->
-        <test-method status="PASS" signature="clickToHideBarChartLengentPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="clickToHideBarChartLengentPresentTest" duration-ms="29" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickToHideBarChartLengentPresentTest -->
-        <test-method status="PASS" signature="barChartHigherEducationLenegntVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartHigherEducationLenegntVisibilityTest" duration-ms="96" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartHigherEducationLenegntVisibilityTest -->
-        <test-method status="PASS" signature="barChartFutherEducationLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartFutherEducationLegentVisibilityTest" duration-ms="99" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartFutherEducationLegentVisibilityTest -->
-        <test-method status="PASS" signature="barChartSchoolLeaversLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartSchoolLeaversLegentVisibilityTest" duration-ms="89" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartSchoolLeaversLegentVisibilityTest -->
-        <test-method status="PASS" signature="bubbleChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartPresentTest" duration-ms="50" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartPresentTest -->
-        <test-method status="PASS" signature="bubbleChartFootnotePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartFootnotePresentTest" duration-ms="34" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartFootnotePresentTest -->
-        <test-method status="PASS" signature="footerSectionLogoPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="footerSectionLogoPresentTest" duration-ms="96" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- footerSectionLogoPresentTest -->
-        <test-method status="PASS" signature="barChartDataClassificationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartDataClassificationTest" duration-ms="67" started-at="2020-04-02T16:59:20Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartDataClassificationTest -->
-        <test-method status="FAIL" signature="barChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartToolTipTest" duration-ms="1" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartToolTip(HomePage.java:301)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartToolTipTest(HomePageTest.java:197)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartToolTipTest -->
-        <test-method status="PASS" signature="barChartJobOpeningToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartJobOpeningToolTipTest" duration-ms="27" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartJobOpeningToolTipTest -->
-        <test-method status="FAIL" signature="bubbleChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartToolTipTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
-	at com.wheretheworkis.qa.pages.HomePage.validateLineChartToolTip(HomePage.java:311)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartToolTipTest(HomePageTest.java:209)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartSalaryToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartSalaryToolTipTest" duration-ms="23" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartSalaryToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartOpportunityToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartOpportunityToolTipTest" duration-ms="21" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartOpportunityToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartEducationDropDownToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartEducationDropDownToolTipTest" duration-ms="23" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartEducationDropDownToolTipTest -->
-        <test-method status="PASS" signature="bubbleChartEducationDropDownMenuTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartEducationDropDownMenuTest" duration-ms="254" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartEducationDropDownMenuTest -->
-        <test-method status="FAIL" signature="dropDownMenuLocationSelecableTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="dropDownMenuLocationSelecableTest" duration-ms="477" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateDropDownMenu(HomePage.java:210)
-	at com.whertheworkis.qa.testcase.HomePageTest.dropDownMenuLocationSelecableTest(HomePageTest.java:82)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dropDownMenuLocationSelecableTest -->
-        <test-method status="FAIL" signature="mouseHoverOnDashboardOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="mouseHoverOnDashboardOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnDashboardOccupationGroups(HomePage.java:275)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnDashboardOccupationGroupsTest(HomePageTest.java:169)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseHoverOnDashboardOccupationGroupsTest -->
-        <test-method status="FAIL" signature="mouseHoverOnBarChartOccupationGroupsTest(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="mouseHoverOnBarChartOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6b760460]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBarChartOccupationGroups(HomePage.java:284)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBarChartOccupationGroupsTest(HomePageTest.java:178)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseHoverOnBarChartOccupationGroupsTest -->
-        <test-method status="FAIL" signature="mouseHoverOnBubbleChartOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="mouseHoverOnBubbleChartOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBubbleChartOccupationGroups(HomePage.java:317)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBubbleChartOccupationGroupsTest(HomePageTest.java:215)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseHoverOnBubbleChartOccupationGroupsTest -->
-        <test-method status="FAIL" signature="mouseClickOnOccupationGroupDashboardTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="mouseClickOnOccupationGroupDashboardTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseClickOnOccupationGroupDashBoard(HomePage.java:343)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickOnOccupationGroupDashboardTest(HomePageTest.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseClickOnOccupationGroupDashboardTest -->
-        <test-method status="FAIL" signature="barChartTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartTitleTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartTitle(HomePage.java:349)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartTitleTest(HomePageTest.java:252)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartTitleTest -->
-        <test-method status="FAIL" signature="bubbleChartDataTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartDataTest" duration-ms="1" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartData(HomePage.java:356)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartDataTest(HomePageTest.java:258)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartDataTest -->
-        <test-method status="FAIL" signature="barChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartMouseHoverOnOccupationTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartSelectedOccupationMouseHover(HomePage.java:364)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartMouseHoverOnOccupationTest(HomePageTest.java:264)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartMouseHoverOnOccupationTest -->
-        <test-method status="FAIL" signature="bubbleChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartMouseHoverOnOccupationTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartSelectedOccupationMouseHover(HomePage.java:372)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartMouseHoverOnOccupationTest(HomePageTest.java:270)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartMouseHoverOnOccupationTest -->
-        <test-method status="FAIL" signature="showallButtonFunctionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="showallButtonFunctionTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateShowallButtonFunction(HomePage.java:380)
-	at com.whertheworkis.qa.testcase.HomePageTest.showallButtonFunctionTest(HomePageTest.java:276)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- showallButtonFunctionTest -->
-        <test-method status="FAIL" signature="mouseClickBarChartOccupationGroupTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="mouseClickBarChartOccupationGroupTest" duration-ms="1" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartOccupationGroups(HomePage.java:387)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickBarChartOccupationGroupTest(HomePageTest.java:282)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseClickBarChartOccupationGroupTest -->
-        <test-method status="FAIL" signature="barChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="barChartPopupWindowOpenTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartPopupWindow(HomePage.java:393)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartPopupWindowOpenTest(HomePageTest.java:288)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- barChartPopupWindowOpenTest -->
-        <test-method status="FAIL" signature="bubbleChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="bubbleChartPopupWindowOpenTest" duration-ms="0" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartPopupWindow(HomePage.java:409)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartPopupWindowOpenTest(HomePageTest.java:293)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bubbleChartPopupWindowOpenTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@13fee20c]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-04-02T16:59:21Z" finished-at="2020-04-02T16:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
-      <class name="com.whertheworkis.qa.testcase.AboutPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="setUp" is-config="true" duration-ms="27540" started-at="2020-04-02T16:55:46Z" finished-at="2020-04-02T16:56:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="csvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="csvDataFileDownloadTest" duration-ms="8512" started-at="2020-04-02T16:56:14Z" finished-at="2020-04-02T16:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- csvDataFileDownloadTest -->
-        <test-method status="PASS" signature="csvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="csvDataFilePresentTest" duration-ms="96" started-at="2020-04-02T16:56:22Z" finished-at="2020-04-02T16:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- csvDataFilePresentTest -->
-        <test-method status="PASS" signature="dataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="dataDictionayFileDownloadTest" duration-ms="8093" started-at="2020-04-02T16:56:22Z" finished-at="2020-04-02T16:56:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDictionayFileDownloadTest -->
-        <test-method status="PASS" signature="dataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="dataDictionayFilePresentTest" duration-ms="81" started-at="2020-04-02T16:56:30Z" finished-at="2020-04-02T16:56:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDictionayFilePresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@3498ed]" name="tearDown" is-config="true" duration-ms="1071" started-at="2020-04-02T16:56:31Z" finished-at="2020-04-02T16:56:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.AboutPageTest -->
-      <class name="com.whertheworkis.qa.testcase.MethodologyPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="setUp" is-config="true" duration-ms="26372" started-at="2020-04-02T16:56:32Z" finished-at="2020-04-02T16:56:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="methodologyCsvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="methodologyCsvDataFileDownloadTest" duration-ms="8464" started-at="2020-04-02T16:56:58Z" finished-at="2020-04-02T16:57:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyCsvDataFileDownloadTest -->
-        <test-method status="PASS" signature="methodologyCsvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="methodologyCsvDataFilePresentTest" duration-ms="72" started-at="2020-04-02T16:57:06Z" finished-at="2020-04-02T16:57:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyCsvDataFilePresentTest -->
-        <test-method status="PASS" signature="methodologyDataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="methodologyDataDictionayFileDownloadTest" duration-ms="8130" started-at="2020-04-02T16:57:07Z" finished-at="2020-04-02T16:57:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyDataDictionayFileDownloadTest -->
-        <test-method status="PASS" signature="methodologyDataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="methodologyDataDictionayFilePresentTest" duration-ms="62" started-at="2020-04-02T16:57:15Z" finished-at="2020-04-02T16:57:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodologyDataDictionayFilePresentTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@64616ca2]" name="tearDown" is-config="true" duration-ms="1050" started-at="2020-04-02T16:57:15Z" finished-at="2020-04-02T16:57:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.whertheworkis.qa.testcase.MethodologyPageTest -->
-      <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="setUp" is-config="true" duration-ms="31075" started-at="2020-04-02T16:58:12Z" finished-at="2020-04-02T16:58:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="occupationDetailMapPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="occupationDetailMapPresentTest" duration-ms="42" started-at="2020-04-02T16:58:43Z" finished-at="2020-04-02T16:58:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationDetailMapPresentTest -->
-        <test-method status="PASS" signature="occupationNamePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="occupationNamePresentTest" duration-ms="32" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- occupationNamePresentTest -->
-        <test-method status="PASS" signature="mapLengendPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="mapLengendPresentTest" duration-ms="31" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapLengendPresentTest -->
-        <test-method status="PASS" signature="mapLepOrCityRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="mapLepOrCityRegionRadioButtonSelectedTest" duration-ms="130" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapLepOrCityRegionRadioButtonSelectedTest -->
-        <test-method status="PASS" signature="mapNationOrRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="mapNationOrRegionRadioButtonSelectedTest" duration-ms="117" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mapNationOrRegionRadioButtonSelectedTest -->
-        <test-method status="FAIL" signature="mapLocationMouseHoverTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="mapLocationMouseHoverTest" duration-ms="122" started-at="2020-04-02T16:59:17Z" finished-at="2020-04-02T16:59:17Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: element is not attached to the page document
+              <![CDATA[timeout: Timed out receiving message from renderer: -0.003
   (Session info: chrome=80.0.3987.162)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6d4006c97705dbfb0e42cc92a5012dca]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60252}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c354f8a22cd7adbffdd5710fb6998789]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.003
   (Session info: chrome=80.0.3987.162)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6d4006c97705dbfb0e42cc92a5012dca
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60252}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c354f8a22cd7adbffdd5710fb6998789
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -1276,17 +203,17 @@ Session ID: 6d4006c97705dbfb0e42cc92a5012dca
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
-	at com.wheretheworkis.qa.pages.JobConcentrationPopupWindow.validateMouseHoverOnMapLocation(JobConcentrationPopupWindow.java:71)
-	at com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest.mapLocationMouseHoverTest(JobConcentrationPopupWindowTest.java:73)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at com.wheretheworkis.qa.base.TestBase.initialization(TestBase.java:64)
+	at com.whertheworkis.qa.testcase.HomePageTest.setUp(HomePageTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:483)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -1317,15 +244,711 @@ Session ID: 6d4006c97705dbfb0e42cc92a5012dca
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="homePageLogoTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="homePageLogoTest" duration-ms="0" started-at="2020-04-02T18:14:54Z" finished-at="2020-04-02T18:14:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageLogoTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:14:54Z" finished-at="2020-04-02T18:14:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:16:10Z" finished-at="2020-04-02T18:16:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="homePageTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="homePageTitleTest" duration-ms="0" started-at="2020-04-02T18:16:10Z" finished-at="2020-04-02T18:16:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTitleTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:16:10Z" finished-at="2020-04-02T18:16:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="homePageHeaderSectionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="homePageHeaderSectionTest" duration-ms="0" started-at="2020-04-02T18:17:19Z" finished-at="2020-04-02T18:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageHeaderSectionTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:17:19Z" finished-at="2020-04-02T18:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:17:19Z" finished-at="2020-04-02T18:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="aboutLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="aboutLinkTextPresentTest" duration-ms="1" started-at="2020-04-02T18:18:20Z" finished-at="2020-04-02T18:18:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aboutLinkTextPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:18:20Z" finished-at="2020-04-02T18:18:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:18:20Z" finished-at="2020-04-02T18:18:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="relatedResearchPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="relatedResearchPageLinkTextPresentTest" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- relatedResearchPageLinkTextPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="methodologyPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="methodologyPageLinkTextPresentTest" duration-ms="0" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodologyPageLinkTextPresentTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="whatcanthistoolshowPageLinkTextPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="whatcanthistoolshowPageLinkTextPresentTest" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whatcanthistoolshowPageLinkTextPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="defaultLocationSeclectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="defaultLocationSeclectedTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- defaultLocationSeclectedTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="occupationGroupsInformationPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="occupationGroupsInformationPresentTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationGroupsInformationPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="showallButtonPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="showallButtonPresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showallButtonPresentTest -->
+        <test-method status="SKIP" signature="occupationGroupsDashboardHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="occupationGroupsDashboardHelperPresentTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationGroupsDashboardHelperPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="occupationGroupsBarChartHelperPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="occupationGroupsBarChartHelperPresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationGroupsBarChartHelperPresentTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="occupationGroupsBarChartAxisPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="occupationGroupsBarChartAxisPresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationGroupsBarChartAxisPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="clickToHideBarChartLengentPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="clickToHideBarChartLengentPresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickToHideBarChartLengentPresentTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="barChartHigherEducationLenegntVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartHigherEducationLenegntVisibilityTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartHigherEducationLenegntVisibilityTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="barChartFutherEducationLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartFutherEducationLegentVisibilityTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartFutherEducationLegentVisibilityTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="barChartSchoolLeaversLegentVisibilityTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartSchoolLeaversLegentVisibilityTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartSchoolLeaversLegentVisibilityTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="bubbleChartPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartPresentTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartFootnotePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartFootnotePresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartFootnotePresentTest -->
+        <test-method status="SKIP" signature="footerSectionLogoPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="footerSectionLogoPresentTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerSectionLogoPresentTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="barChartDataClassificationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartDataClassificationTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartDataClassificationTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="barChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartToolTipTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartToolTipTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="barChartJobOpeningToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartJobOpeningToolTipTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartJobOpeningToolTipTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartToolTipTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartToolTipTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="bubbleChartSalaryToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartSalaryToolTipTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartSalaryToolTipTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartEducationDropDownToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartEducationDropDownToolTipTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartEducationDropDownToolTipTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartOpportunityToolTipTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartOpportunityToolTipTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartOpportunityToolTipTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="bubbleChartEducationDropDownMenuTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartEducationDropDownMenuTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartEducationDropDownMenuTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="dropDownMenuLocationSelecableTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="dropDownMenuLocationSelecableTest" duration-ms="1" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropDownMenuLocationSelecableTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="mouseHoverOnBarChartOccupationGroupsTest(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="mouseHoverOnBarChartOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2726a511]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseHoverOnBarChartOccupationGroupsTest -->
+        <test-method status="SKIP" signature="mouseHoverOnDashboardOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="mouseHoverOnDashboardOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseHoverOnDashboardOccupationGroupsTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="mouseHoverOnBubbleChartOccupationGroupsTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="mouseHoverOnBubbleChartOccupationGroupsTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseHoverOnBubbleChartOccupationGroupsTest -->
+        <test-method status="SKIP" signature="barChartTitleTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartTitleTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartTitleTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="mouseClickOnOccupationGroupDashboardTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="mouseClickOnOccupationGroupDashboardTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseClickOnOccupationGroupDashboardTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartDataTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartDataTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartDataTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="barChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartMouseHoverOnOccupationTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartMouseHoverOnOccupationTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="bubbleChartMouseHoverOnOccupationTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartMouseHoverOnOccupationTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartMouseHoverOnOccupationTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="showallButtonFunctionTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="showallButtonFunctionTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showallButtonFunctionTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="mouseClickBarChartOccupationGroupTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="mouseClickBarChartOccupationGroupTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseClickBarChartOccupationGroupTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="barChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="barChartPopupWindowOpenTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- barChartPopupWindowOpenTest -->
+        <test-method status="SKIP" signature="bubbleChartPopupWindowOpenTest()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="bubbleChartPopupWindowOpenTest" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bubbleChartPopupWindowOpenTest -->
+        <test-method status="SKIP" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.HomePageTest@735f7ae5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:21:03Z" finished-at="2020-04-02T18:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
+      <class name="com.whertheworkis.qa.testcase.AboutPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="setUp" is-config="true" duration-ms="30303" started-at="2020-04-02T18:08:03Z" finished-at="2020-04-02T18:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="csvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="csvDataFileDownloadTest" duration-ms="9219" started-at="2020-04-02T18:08:34Z" finished-at="2020-04-02T18:08:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- csvDataFileDownloadTest -->
+        <test-method status="PASS" signature="csvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="csvDataFilePresentTest" duration-ms="99" started-at="2020-04-02T18:08:43Z" finished-at="2020-04-02T18:08:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- csvDataFilePresentTest -->
+        <test-method status="PASS" signature="dataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="dataDictionayFileDownloadTest" duration-ms="8107" started-at="2020-04-02T18:08:43Z" finished-at="2020-04-02T18:08:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataDictionayFileDownloadTest -->
+        <test-method status="PASS" signature="dataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="dataDictionayFilePresentTest" duration-ms="60" started-at="2020-04-02T18:08:51Z" finished-at="2020-04-02T18:08:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataDictionayFilePresentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.AboutPageTest@21bcffb5]" name="tearDown" is-config="true" duration-ms="1090" started-at="2020-04-02T18:08:51Z" finished-at="2020-04-02T18:08:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.whertheworkis.qa.testcase.AboutPageTest -->
+      <class name="com.whertheworkis.qa.testcase.MethodologyPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="setUp" is-config="true" duration-ms="35889" started-at="2020-04-02T18:08:52Z" finished-at="2020-04-02T18:09:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="methodologyCsvDataFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="methodologyCsvDataFileDownloadTest" duration-ms="8472" started-at="2020-04-02T18:09:28Z" finished-at="2020-04-02T18:09:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodologyCsvDataFileDownloadTest -->
+        <test-method status="PASS" signature="methodologyCsvDataFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="methodologyCsvDataFilePresentTest" duration-ms="79" started-at="2020-04-02T18:09:37Z" finished-at="2020-04-02T18:09:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodologyCsvDataFilePresentTest -->
+        <test-method status="PASS" signature="methodologyDataDictionayFileDownloadTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="methodologyDataDictionayFileDownloadTest" duration-ms="8106" started-at="2020-04-02T18:09:37Z" finished-at="2020-04-02T18:09:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodologyDataDictionayFileDownloadTest -->
+        <test-method status="PASS" signature="methodologyDataDictionayFilePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="methodologyDataDictionayFilePresentTest" duration-ms="76" started-at="2020-04-02T18:09:45Z" finished-at="2020-04-02T18:09:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodologyDataDictionayFilePresentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.MethodologyPageTest@17550481]" name="tearDown" is-config="true" duration-ms="1094" started-at="2020-04-02T18:09:45Z" finished-at="2020-04-02T18:09:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.whertheworkis.qa.testcase.MethodologyPageTest -->
+      <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="37618" started-at="2020-04-02T18:14:54Z" finished-at="2020-04-02T18:15:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="occupationDetailMapPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="occupationDetailMapPresentTest" duration-ms="32" started-at="2020-04-02T18:15:32Z" finished-at="2020-04-02T18:15:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationDetailMapPresentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="1109" started-at="2020-04-02T18:15:32Z" finished-at="2020-04-02T18:15:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="30670" started-at="2020-04-02T18:16:10Z" finished-at="2020-04-02T18:16:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="occupationNamePresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="occupationNamePresentTest" duration-ms="32" started-at="2020-04-02T18:16:40Z" finished-at="2020-04-02T18:16:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- occupationNamePresentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="1116" started-at="2020-04-02T18:16:40Z" finished-at="2020-04-02T18:16:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="29174" started-at="2020-04-02T18:17:19Z" finished-at="2020-04-02T18:17:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="mapLengendPresentTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="mapLengendPresentTest" duration-ms="31" started-at="2020-04-02T18:17:49Z" finished-at="2020-04-02T18:17:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mapLengendPresentTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="1097" started-at="2020-04-02T18:17:49Z" finished-at="2020-04-02T18:17:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:18:20Z" finished-at="2020-04-02T18:18:20Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <rect x="392.5" y="266.5" width="25" height="61" stroke="#3B4B5C" stroke-width="1" fill="#667481" rx="0" ry="0"></rect> is not clickable at point (893, 270). Other element would receive the click: <path fill="none" d="M 168.5 10 L 168.5 431" stroke="#eee" stroke-width="1" zIndex="7"></path>
+  (Session info: chrome=80.0.3987.162)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ef4c73701d50886111cdaebc69919b4e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <rect x="392.5" y="266.5" width="25" height="61" stroke="#3B4B5C" stroke-width="1" fill="#667481" rx="0" ry="0"></rect> is not clickable at point (893, 270). Other element would receive the click: <path fill="none" d="M 168.5 10 L 168.5 431" stroke="#eee" stroke-width="1" zIndex="7"></path>
+  (Session info: chrome=80.0.3987.162)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DURAI-LT', ip: '10.199.200.211', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ef4c73701d50886111cdaebc69919b4e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wheretheworkis.qa.pages.HomePage.clickOnOccupation(HomePage.java:437)
+	at com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest.setUp(JobConcentrationPopupWindowTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="mapLepOrCityRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="mapLepOrCityRegionRadioButtonSelectedTest" duration-ms="0" started-at="2020-04-02T18:18:58Z" finished-at="2020-04-02T18:18:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mapLepOrCityRegionRadioButtonSelectedTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:18:58Z" finished-at="2020-04-02T18:18:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="mapNationOrRegionRadioButtonSelectedTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="mapNationOrRegionRadioButtonSelectedTest" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mapNationOrRegionRadioButtonSelectedTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:19:30Z" finished-at="2020-04-02T18:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="mapLocationMouseHoverTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="mapLocationMouseHoverTest" duration-ms="1" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mapLocationMouseHoverTest -->
-        <test-method status="PASS" signature="jobConcentrationPopupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="jobConcentrationPopupCloseButtonTest" duration-ms="117" started-at="2020-04-02T16:59:18Z" finished-at="2020-04-02T16:59:18Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:00Z" finished-at="2020-04-02T18:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="jobConcentrationPopupCloseButtonTest()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="jobConcentrationPopupCloseButtonTest" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jobConcentrationPopupCloseButtonTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@5f2050f6]" name="tearDown" is-config="true" duration-ms="1141" started-at="2020-04-02T16:59:18Z" finished-at="2020-04-02T16:59:20Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="setUp" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest@64616ca2]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-02T18:20:32Z" finished-at="2020-04-02T18:20:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="69" failures="17" name="TestSuite" time="38.248" errors="0" skipped="0">
+<testsuite tests="159" failures="2" name="TestSuite" time="140.048" errors="0" skipped="133">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_11\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8.1"/>
-    <property name="classworlds.conf" value="E:\Durai\SeleniumProjects\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5194399235980271477.tmp"/>
+    <property name="classworlds.conf" value="E:\Durai\SeleniumProjects\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4384296005314103189.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\dvenkatesan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_11\bin;C:\Program Files\Java\jre8\bin;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_11\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,52 +61,34 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFileDownloadTest" time="8.512"/>
-  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFilePresentTest" time="0.072"/>
-  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFileDownloadTest" time="8.094"/>
-  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFilePresentTest" time="0.081"/>
-  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFileDownloadTest" time="8.463"/>
-  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFilePresentTest" time="0.067"/>
-  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFileDownloadTest" time="8.13"/>
-  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFilePresentTest" time="0.063"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnLineChartTest" time="0.367"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnPieChartTest" time="0.364"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationPopupTitleTest" time="0.021"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationProfilePieChartPresentTest" time="0.027"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="popupCloseButtonTest" time="0.117"/>
-  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="projectedLineChartPresentTest" time="0.029"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageLogoTest" time="0.07"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationDetailMapPresentTest" time="0.042"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="occupationTablePresentTest" time="0.052"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageTitleTest" time="0.041"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationNamePresentTest" time="0.031"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="dropDownDefaultSelectedOccupationTest" time="0.028"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageHeaderSectionTest" time="0.031"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLengendPresentTest" time="0.031"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="nationOrRegionRadioButtonTest" time="0.021"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="aboutLinkTextPresentTest" time="0.035"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLepOrCityRegionRadioButtonSelectedTest" time="0.131"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="lepareaOrCityRegionRadioButtonTest" time="0.189"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="relatedResearchPageLinkTextPresentTest" time="0.052"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapNationOrRegionRadioButtonSelectedTest" time="0.117"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapButtonPresentTest" time="0.026"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="methodologyPageLinkTextPresentTest" time="0.029"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLocationMouseHoverTest" time="0.126">
-    <failure message="stale element reference: element is not attached to the page document
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFileDownloadTest" time="9.225"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="csvDataFilePresentTest" time="0.069"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFileDownloadTest" time="8.108"/>
+  <testcase classname="com.whertheworkis.qa.testcase.AboutPageTest" name="dataDictionayFilePresentTest" time="0.061"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFileDownloadTest" time="8.473"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyCsvDataFilePresentTest" time="0.075"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFileDownloadTest" time="8.107"/>
+  <testcase classname="com.whertheworkis.qa.testcase.MethodologyPageTest" name="methodologyDataDictionayFilePresentTest" time="0.076"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnLineChartTest" time="0.374"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="mouseHoverOnPieChartTest" time="0.396"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationPopupTitleTest" time="0.031"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="occupationProfilePieChartPresentTest" time="0.039"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="popupCloseButtonTest" time="0.112"/>
+  <testcase classname="com.whertheworkis.qa.testcase.OccupationPopupWindowTest" name="projectedLineChartPresentTest" time="0.037"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="54.704">
+    <failure message="timeout: Timed out receiving message from renderer: -0.003
   (Session info: chrome=80.0.3987.162)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6d4006c97705dbfb0e42cc92a5012dca" type="org.openqa.selenium.StaleElementReferenceException">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60252}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c354f8a22cd7adbffdd5710fb6998789" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.003
   (Session info: chrome=80.0.3987.162)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6d4006c97705dbfb0e42cc92a5012dca
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60252}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c354f8a22cd7adbffdd5710fb6998789
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -117,311 +99,920 @@ Session ID: 6d4006c97705dbfb0e42cc92a5012dca
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
-	at com.wheretheworkis.qa.pages.JobConcentrationPopupWindow.validateMouseHoverOnMapLocation(JobConcentrationPopupWindow.java:71)
-	at com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest.mapLocationMouseHoverTest(JobConcentrationPopupWindowTest.java:73)
-</failure>
-  </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="backButtonTest" time="0.876"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="whatcanthistoolshowPageLinkTextPresentTest" time="0.033"/>
-  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="jobConcentrationPopupCloseButtonTest" time="0.117"/>
-  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapPopupPresentTest" time="0.005">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at com.wheretheworkis.qa.pages.ProspectsAcrossLocationsPage.validateJobConcentartionMapPopup(ProspectsAcrossLocationsPage.java:67)
-	at com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest.jobConcentrationMapPopupPresentTest(ProspectsAcrossLocationsPageTest.java:69)
-</failure>
-  </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="defaultLocationSeclectedTest" time="0.049"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsInformationPresentTest" time="0.05"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonPresentTest" time="0.031"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsDashboardHelperPresentTest" time="0.058"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartHelperPresentTest" time="0.076"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartAxisPresentTest" time="0.067"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="clickToHideBarChartLengentPresentTest" time="0.029"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartHigherEducationLenegntVisibilityTest" time="0.096"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartFutherEducationLegentVisibilityTest" time="0.099"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartSchoolLeaversLegentVisibilityTest" time="0.089"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartPresentTest" time="0.05"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartFootnotePresentTest" time="0.034"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="footerSectionLogoPresentTest" time="0.096"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartDataClassificationTest" time="0.067"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartToolTipTest" time="0.001">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartToolTip(HomePage.java:301)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartToolTipTest(HomePageTest.java:197)
+	at com.wheretheworkis.qa.base.TestBase.initialization(TestBase.java:64)
+	at com.whertheworkis.qa.testcase.HomePageTest.setUp(HomePageTest.java:28)
 </failure>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 9139
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1585831448.584][WARNING]: Timed out connecting to Chrome, retrying...
+Apr 02, 2020 6:14:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1585831452.630][WARNING]: Timed out connecting to Chrome, retrying...
+[1585831456.285][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.387][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.497][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.598][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.699][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.800][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831456.902][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.003][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.104][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.206][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.307][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.408][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.510][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.611][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.712][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.815][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831457.916][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.018][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.119][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.220][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.321][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.422][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.523][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.624][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.726][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.827][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831458.928][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.029][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.130][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.231][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.332][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.433][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.534][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.636][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.737][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.838][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831459.940][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.042][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.144][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.245][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.346][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.447][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.549][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.650][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.752][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.853][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831460.954][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.055][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.157][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.259][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.361][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.462][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.564][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.665][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.767][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.868][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831461.969][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.071][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.174][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.276][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.377][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.479][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.579][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.681][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.787][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.889][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831462.990][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.094][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.199][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.301][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.404][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.510][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.613][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.717][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.818][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831463.921][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.025][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.127][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.234][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.337][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.441][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.545][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.649][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.754][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.855][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831464.959][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.064][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.166][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.267][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.370][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.474][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.577][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.681][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.783][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.886][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831465.991][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.094][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.204][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.306][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.412][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.515][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.618][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.721][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.822][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831466.924][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.027][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.129][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.233][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.341][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.447][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.551][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.654][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.756][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.864][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831467.967][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.070][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.173][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.274][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.377][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.479][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.581][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.686][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.791][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831468.894][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.000][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.103][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.206][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.309][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.413][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.516][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.619][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.722][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.823][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831469.927][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.031][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.134][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.238][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.343][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.445][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.548][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.651][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.762][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.865][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831470.968][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.075][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.178][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.280][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.384][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.488][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.593][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.697][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.800][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831471.901][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.022][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.127][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.230][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.333][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.440][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.544][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.647][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.752][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.853][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831472.954][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.057][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.161][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.266][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.370][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.473][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.581][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.683][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.786][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.892][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831473.994][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.097][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.198][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.300][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.404][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.511][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.614][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.717][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.820][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831474.922][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.025][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.128][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.233][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.334][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.443][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.546][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.649][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.758][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.861][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831475.964][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.066][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.167][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.269][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.379][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.480][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.584][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.686][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.788][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.894][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831476.998][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.106][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.210][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.313][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.416][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.521][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.626][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.728][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.830][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831477.932][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.036][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.140][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.242][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.345][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.449][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.554][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.656][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.761][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.863][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831478.967][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.073][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.176][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.277][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.384][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.487][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.588][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.693][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.795][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831479.899][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.003][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.107][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.213][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.314][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.418][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.523][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.626][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831480.730][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.005][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.108][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.211][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.313][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.415][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.611][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.714][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.832][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831481.933][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.035][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.136][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.239][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.447][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.548][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.655][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.756][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.857][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831482.959][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.061][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.164][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.266][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.371][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.473][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.576][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.681][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.793][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831483.896][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.002][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.109][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.210][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.314][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.420][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.522][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.624][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.727][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.828][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831484.934][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.036][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.139][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.243][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.344][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.447][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.554][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.657][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.762][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.865][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831485.968][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.071][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.174][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.275][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.378][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.480][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.582][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.687][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.790][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.893][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831486.995][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.101][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.207][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.310][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.414][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.519][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.622][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.725][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.827][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831487.930][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.033][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.139][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.241][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.344][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.447][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.552][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.655][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.756][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.860][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831488.966][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.070][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.173][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.274][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.377][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.481][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.584][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.694][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.796][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831489.900][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.003][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.108][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.210][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.316][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.418][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.521][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.628][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.733][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.834][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831490.939][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.040][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.142][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.244][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.348][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.451][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.553][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.656][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.760][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.863][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831491.964][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.069][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.171][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.272][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.374][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.479][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.583][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.688][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.791][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831492.894][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.001][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.105][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.208][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.309][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.415][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.518][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.621][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.724][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.825][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831493.929][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.032][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.136][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.242][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.346][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.450][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.551][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.654][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.759][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831494.806][SEVERE]: Timed out receiving message from renderer: 0.044
+[1585831494.808][SEVERE]: Timed out receiving message from renderer: -0.003
+</system-err>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartJobOpeningToolTipTest" time="0.027"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartToolTipTest" time="0.001">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageLogoTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationDetailMapPresentTest" time="0.03"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="occupationTablePresentTest" time="0.024"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.126">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageTitleTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="occupationNamePresentTest" time="0.032"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="dropDownDefaultSelectedOccupationTest" time="0.055"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.211">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="homePageHeaderSectionTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLengendPresentTest" time="0.03"/>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="nationOrRegionRadioButtonTest" time="0.038"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.113">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="aboutLinkTextPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="setUp" time="38.427">
+    <failure message="element click intercepted: Element &lt;rect x=&quot;392.5&quot; y=&quot;266.5&quot; width=&quot;25&quot; height=&quot;61&quot; stroke=&quot;#3B4B5C&quot; stroke-width=&quot;1&quot; fill=&quot;#667481&quot; rx=&quot;0&quot; ry=&quot;0&quot;&gt;&lt;/rect&gt; is not clickable at point (893, 270). Other element would receive the click: &lt;path fill=&quot;none&quot; d=&quot;M 168.5 10 L 168.5 431&quot; stroke=&quot;#eee&quot; stroke-width=&quot;1&quot; zIndex=&quot;7&quot;&gt;&lt;/path&gt;
+  (Session info: chrome=80.0.3987.162)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ef4c73701d50886111cdaebc69919b4e" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;rect x=&quot;392.5&quot; y=&quot;266.5&quot; width=&quot;25&quot; height=&quot;61&quot; stroke=&quot;#3B4B5C&quot; stroke-width=&quot;1&quot; fill=&quot;#667481&quot; rx=&quot;0&quot; ry=&quot;0&quot;&gt;&lt;/rect&gt; is not clickable at point (893, 270). Other element would receive the click: &lt;path fill=&quot;none&quot; d=&quot;M 168.5 10 L 168.5 431&quot; stroke=&quot;#eee&quot; stroke-width=&quot;1&quot; zIndex=&quot;7&quot;&gt;&lt;/path&gt;
+  (Session info: chrome=80.0.3987.162)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ef4c73701d50886111cdaebc69919b4e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at com.wheretheworkis.qa.util.TestUtil.mouseHoverOnElement(TestUtil.java:38)
-	at com.wheretheworkis.qa.pages.HomePage.validateLineChartToolTip(HomePage.java:311)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartToolTipTest(HomePageTest.java:209)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wheretheworkis.qa.pages.HomePage.clickOnOccupation(HomePage.java:437)
+	at com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest.setUp(JobConcentrationPopupWindowTest.java:38)
 </failure>
+    <system-out>true
+</system-out>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 4236
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1585831708.043][WARNING]: Timed out connecting to Chrome, retrying...
+Apr 02, 2020 6:18:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1585831712.083][WARNING]: Timed out connecting to Chrome, retrying...
+[1585831715.293][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.394][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.496][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.605][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.706][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.807][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831715.909][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.022][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.131][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.232][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.335][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.436][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.538][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.639][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.741][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.842][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831716.943][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.045][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.146][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.247][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.350][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.452][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.553][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.655][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.756][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.857][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831717.958][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.060][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.161][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.262][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.363][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.464][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.566][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.668][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.770][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.871][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831718.972][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.073][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.174][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.276][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.377][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.478][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.580][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.681][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.784][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.885][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831719.986][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.087][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.189][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.290][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.689][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.791][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831720.893][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.149][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.251][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.352][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.454][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.556][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.657][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.759][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.860][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831721.961][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.062][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.163][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.267][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.368][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.469][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.571][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.672][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.774][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.875][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831722.977][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.082][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.187][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.290][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.392][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.494][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.595][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.696][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.797][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831723.905][SEVERE]: Timed out receiving message from renderer: 0.100
+[1585831724.007][SEVERE]: Timed out receiving message from renderer: 0.100
+</system-err>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartSalaryToolTipTest" time="0.024"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartOpportunityToolTipTest" time="0.022"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownToolTipTest" time="0.023"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownMenuTest" time="0.254"/>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="dropDownMenuLocationSelecableTest" time="0.478">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateDropDownMenu(HomePage.java:210)
-	at com.whertheworkis.qa.testcase.HomePageTest.dropDownMenuLocationSelecableTest(HomePageTest.java:82)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLepOrCityRegionRadioButtonSelectedTest" time="0">
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnDashboardOccupationGroupsTest" time="0.001">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnDashboardOccupationGroups(HomePage.java:275)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnDashboardOccupationGroupsTest(HomePageTest.java:169)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="tearDown" time="0.001">
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBarChartOccupationGroupsTest" time="0.001">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBarChartOccupationGroups(HomePage.java:284)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBarChartOccupationGroupsTest(HomePageTest.java:178)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="lepareaOrCityRegionRadioButtonTest" time="0.174"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.248">
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBubbleChartOccupationGroupsTest" time="0.002">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseHoverOnBubbleChartOccupationGroups(HomePage.java:317)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseHoverOnBubbleChartOccupationGroupsTest(HomePageTest.java:215)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="relatedResearchPageLinkTextPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapNationOrRegionRadioButtonSelectedTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapButtonPresentTest" time="0.034"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.135">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="methodologyPageLinkTextPresentTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="setUp" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="mapLocationMouseHoverTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="backButtonTest" time="0.868"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.982">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="whatcanthistoolshowPageLinkTextPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="jobConcentrationPopupCloseButtonTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" name="jobConcentrationMapPopupPresentTest" time="0.72"/>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="1.858">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="defaultLocationSeclectedTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsInformationPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsDashboardHelperPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartHelperPresentTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="occupationGroupsBarChartAxisPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="clickToHideBarChartLengentPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartHigherEducationLenegntVisibilityTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartFutherEducationLegentVisibilityTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartSchoolLeaversLegentVisibilityTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartFootnotePresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="footerSectionLogoPresentTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartDataClassificationTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartJobOpeningToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartSalaryToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartOpportunityToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownToolTipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartEducationDropDownMenuTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="dropDownMenuLocationSelecableTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnDashboardOccupationGroupsTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBarChartOccupationGroupsTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseHoverOnBubbleChartOccupationGroupsTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseClickOnOccupationGroupDashboardTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateMouseClickOnOccupationGroupDashBoard(HomePage.java:343)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickOnOccupationGroupDashboardTest(HomePageTest.java:246)
-</failure>
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartTitleTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartTitle(HomePage.java:349)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartTitleTest(HomePageTest.java:252)
-</failure>
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartDataTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartData(HomePage.java:356)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartDataTest(HomePageTest.java:258)
-</failure>
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartMouseHoverOnOccupationTest" time="0.004">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartSelectedOccupationMouseHover(HomePage.java:364)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartMouseHoverOnOccupationTest(HomePageTest.java:264)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartMouseHoverOnOccupationTest" time="0.028">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartSelectedOccupationMouseHover(HomePage.java:372)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartMouseHoverOnOccupationTest(HomePageTest.java:270)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
-  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonFunctionTest" time="0.001">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateShowallButtonFunction(HomePage.java:380)
-	at com.whertheworkis.qa.testcase.HomePageTest.showallButtonFunctionTest(HomePageTest.java:276)
-</failure>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartMouseHoverOnOccupationTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartMouseHoverOnOccupationTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="showallButtonFunctionTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="mouseClickBarChartOccupationGroupTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartOccupationGroups(HomePage.java:387)
-	at com.whertheworkis.qa.testcase.HomePageTest.mouseClickBarChartOccupationGroupTest(HomePageTest.java:282)
-</failure>
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="barChartPopupWindowOpenTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBarChartPopupWindow(HomePage.java:393)
-	at com.whertheworkis.qa.testcase.HomePageTest.barChartPopupWindowOpenTest(HomePageTest.java:288)
-</failure>
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="setUp" time="0">
+    <skipped/>
   </testcase>
   <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="bubbleChartPopupWindowOpenTest" time="0">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DURAI-LT&apos;, ip: &apos;10.199.200.211&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_11&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at com.wheretheworkis.qa.pages.HomePage.validateBubbleChartPopupWindow(HomePage.java:409)
-	at com.whertheworkis.qa.testcase.HomePageTest.bubbleChartPopupWindowOpenTest(HomePageTest.java:293)
-</failure>
+    <skipped/>
+  </testcase>
+  <testcase classname="com.whertheworkis.qa.testcase.HomePageTest" name="tearDown" time="0">
+    <skipped/>
   </testcase>
 </testsuite>

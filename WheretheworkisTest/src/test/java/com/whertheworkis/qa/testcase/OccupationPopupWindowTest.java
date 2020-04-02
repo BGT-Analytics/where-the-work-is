@@ -3,7 +3,9 @@ package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -21,7 +23,7 @@ public class OccupationPopupWindowTest extends TestBase {
 		super();
 	}
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setUp(){
 		initialization();
 		occupationPopupWindow = new OccupationPopupWindow();
@@ -66,7 +68,7 @@ public class OccupationPopupWindowTest extends TestBase {
 		Assert.assertTrue(flag);
 	}
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}

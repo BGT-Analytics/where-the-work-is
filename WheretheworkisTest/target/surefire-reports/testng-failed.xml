@@ -5,9 +5,12 @@
     <classes>
       <class name="com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest">
         <methods>
+          <include name="jobConcentrationPopupCloseButtonTest"/>
           <include name="mapLocationMouseHoverTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="mapLepOrCityRegionRadioButtonSelectedTest"/>
+          <include name="mapNationOrRegionRadioButtonSelectedTest"/>
         </methods>
       </class> <!-- com.whertheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
       <class name="com.whertheworkis.qa.testcase.AboutPageTest">
@@ -30,28 +33,52 @@
       </class> <!-- com.whertheworkis.qa.testcase.MethodologyPageTest -->
       <class name="com.whertheworkis.qa.testcase.HomePageTest">
         <methods>
-          <include name="dropDownMenuLocationSelecableTest"/>
-          <include name="tearDown"/>
+          <include name="defaultLocationSeclectedTest"/>
+          <include name="occupationGroupsInformationPresentTest"/>
+          <include name="whatcanthistoolshowPageLinkTextPresentTest"/>
           <include name="barChartPopupWindowOpenTest"/>
           <include name="mouseClickBarChartOccupationGroupTest"/>
-          <include name="mouseClickOnOccupationGroupDashboardTest"/>
-          <include name="setUp"/>
           <include name="mouseHoverOnBubbleChartOccupationGroupsTest"/>
           <include name="bubbleChartMouseHoverOnOccupationTest"/>
+          <include name="homePageLogoTest"/>
           <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
           <include name="barChartTitleTest"/>
+          <include name="aboutLinkTextPresentTest"/>
           <include name="barChartToolTipTest"/>
-          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="bubbleChartFootnotePresentTest"/>
           <include name="bubbleChartToolTipTest"/>
+          <include name="occupationGroupsBarChartHelperPresentTest"/>
+          <include name="barChartSchoolLeaversLegentVisibilityTest"/>
+          <include name="barChartHigherEducationLenegntVisibilityTest"/>
+          <include name="bubbleChartOpportunityToolTipTest"/>
+          <include name="homePageHeaderSectionTest"/>
+          <include name="bubbleChartPresentTest"/>
+          <include name="showallButtonPresentTest"/>
+          <include name="barChartJobOpeningToolTipTest"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
+          <include name="barChartDataClassificationTest"/>
+          <include name="dropDownMenuLocationSelecableTest"/>
+          <include name="relatedResearchPageLinkTextPresentTest"/>
+          <include name="bubbleChartSalaryToolTipTest"/>
+          <include name="mouseClickOnOccupationGroupDashboardTest"/>
+          <include name="bubbleChartEducationDropDownMenuTest"/>
+          <include name="occupationGroupsDashboardHelperPresentTest"/>
+          <include name="setUp"/>
+          <include name="bubbleChartEducationDropDownToolTipTest"/>
+          <include name="occupationGroupsBarChartAxisPresentTest"/>
+          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="homePageTitleTest"/>
+          <include name="footerSectionLogoPresentTest"/>
           <include name="barChartMouseHoverOnOccupationTest"/>
+          <include name="clickToHideBarChartLengentPresentTest"/>
+          <include name="barChartFutherEducationLegentVisibilityTest"/>
+          <include name="methodologyPageLinkTextPresentTest"/>
           <include name="bubbleChartDataTest"/>
-          <include name="mouseHoverOnBarChartOccupationGroupsTest" invocation-numbers="0"/>
           <include name="showallButtonFunctionTest"/>
         </methods>
       </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
       <class name="com.whertheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
         <methods>
-          <include name="jobConcentrationMapPopupPresentTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

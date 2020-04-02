@@ -3,7 +3,9 @@ package com.whertheworkis.qa.testcase;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -21,7 +23,7 @@ public class HomePageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setUp(ITestContext context){
 		initialization();
 		homePage = new HomePage();
@@ -293,7 +295,7 @@ public class HomePageTest extends TestBase {
 		Assert.assertTrue(homePage.validateBubbleChartPopupWindow());
 	}
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}
