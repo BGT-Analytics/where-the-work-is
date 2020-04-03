@@ -16,6 +16,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import com.wheretheworkis.qa.util.TestUtil;
 
 public class TestBase {
@@ -37,6 +40,7 @@ public class TestBase {
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
 		
@@ -50,9 +54,15 @@ public class TestBase {
 			options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 			driver = new ChromeDriver(options);
 		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver\\geckodriver.exe");	
-			driver = new FirefoxDriver(); 
+		else if(browserName.equals("IE")){
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\IEdriver\\IEDriverServer.exe");
+			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		    capabilities.setCapability("InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION", true);
+		    capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+		    capabilities.setCapability("ignoreZoomSetting", true);
+		    capabilities.setCapability("ignoreProtectedModeSettings", true);
+		    capabilities.setCapability("initialBrowserUrl","www.google.co.in");
+			driver = new InternetExplorerDriver(capabilities);
 		}
 		
 		driver.manage().window().maximize();

@@ -30,40 +30,40 @@ public class OccupationPopupWindowTest extends TestBase {
 		occupationPopupWindow = homePage.clickOnOccupation();
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void occupationPopupTitleTest(){
 		String popupTitle = occupationPopupWindow.validateOccupationPopupTitle();
 		Assert.assertEquals(popupTitle, "Sales, Marketing & Related Associate Professionals");
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void occupationProfilePieChartPresentTest(){
 		boolean flag = occupationPopupWindow.validateOccupationProfilePieChart();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void projectedLineChartPresentTest(){
 		boolean flag = occupationPopupWindow.validateProjectedEmployementLineChart();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void mouseHoverOnPieChartTest(){
 		String toolTip = occupationPopupWindow.validateMouseOverOnPieChart();
 		Assert.assertEquals("Full Time", toolTip);
 	}
 	
-	@Test
+	@Test(priority = 5)
 	public void mouseHoverOnLineChartTest(){
 		String toolTip = occupationPopupWindow.validateMouseHoverLineChart();
 		Assert.assertEquals("2015", toolTip);
 	}
 	
-	@Test
+	@Test(priority = 6)
 	public void popupCloseButtonTest(){
 		boolean flag = occupationPopupWindow.validatePopupWindowCloseButton();
-		Assert.assertTrue(flag);
+		Assert.assertEquals(flag, false);
 	}
 	
 	@AfterClass

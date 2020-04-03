@@ -6,17 +6,9 @@
       <class name="com.whertheworkis.qa.testcase.HomePageTest">
         <methods>
           <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
-          <include name="barChartTitleTest"/>
-          <include name="defaultLocationSeclectedTest"/>
-          <include name="bubbleChartPopupWindowOpenTest"/>
           <include name="tearDown"/>
-          <include name="barChartPopupWindowOpenTest"/>
-          <include name="barChartMouseHoverOnOccupationTest"/>
-          <include name="mouseClickOnOccupationGroupDashboardTest"/>
           <include name="setUp"/>
-          <include name="bubbleChartDataTest"/>
-          <include name="bubbleChartMouseHoverOnOccupationTest"/>
-          <include name="mouseHoverOnBarChartOccupationGroupsTest" invocation-numbers="0"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
         </methods>
       </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
     </classes>

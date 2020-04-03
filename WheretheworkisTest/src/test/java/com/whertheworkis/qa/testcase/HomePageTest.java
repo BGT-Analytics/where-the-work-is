@@ -3,7 +3,9 @@ package com.whertheworkis.qa.testcase;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -167,16 +169,15 @@ public class HomePageTest extends TestBase {
 	public void mouseHoverOnDashboardOccupationGroupsTest(){
 		String[] colours = new String[2];
 		colours = homePage.validateMouseHoverOnDashboardOccupationGroups();
-		softAssertion.assertEquals(colours[0], "#FDAC00");
+		softAssertion.assertEquals(colours[0], "#fdac00");
 		softAssertion.assertEquals(colours[1], "#e2be7c");
 		softAssertion.assertAll();
 	}
 	
 	@Test(priority=31)
-	public void mouseHoverOnBarChartOccupationGroupsTest(ITestContext context){
+	public void mouseHoverOnBarChartOccupationGroupsTest(){
 		String[] colours = new String[2];
 		colours = homePage.validateMouseHoverOnBarChartOccupationGroups();
-		context.setAttribute("webDriver", driver);
 		softAssertion.assertEquals(colours[0], "background-color: rgb(226, 190, 124);");
 		softAssertion.assertEquals(colours[1], "#e2be7c");
 		softAssertion.assertAll();
@@ -186,8 +187,8 @@ public class HomePageTest extends TestBase {
 	public void barChartDataClassificationTest(){
 		String[] colours = new String[3];
 		colours = homePage.validateBarChartDataClassification();
-		softAssertion.assertEquals(colours[0], "#ECF0F1");
-		softAssertion.assertEquals(colours[1], "#959DA6");
+		softAssertion.assertEquals(colours[0], "#ecf0f1");
+		softAssertion.assertEquals(colours[1], "#959da6");
 		softAssertion.assertEquals(colours[2], "#667481");
 		softAssertion.assertAll();	
 	}
@@ -213,7 +214,7 @@ public class HomePageTest extends TestBase {
 	@Test(priority=32)
 	public void mouseHoverOnBubbleChartOccupationGroupsTest(){
 		String color = homePage.validateMouseHoverOnBubbleChartOccupationGroups();
-		Assert.assertEquals(color, "#FDAC00");
+		Assert.assertEquals(color, "#fdac00");
 		
 	}
 	

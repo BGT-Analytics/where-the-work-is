@@ -79,7 +79,7 @@ public class JobConcentrationPopupWindowTest extends TestBase{
 	@Test(priority = 7)
 	public void jobConcentrationPopupCloseButtonTest(){
 		boolean flag = jobConcentrationPopupWindow.validateJobConcentrationPopupCloseButton();
-		Assert.assertTrue(flag);
+		Assert.assertEquals(flag, false);
 	}
 	
 	@AfterClass

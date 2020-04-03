@@ -40,7 +40,7 @@ public class MethodologyPageTest extends TestBase{
 		Assert.assertTrue(methodologyPage.validateMethodologyDataDictionayFile());
 	}
 	
-	@Test
+/*	@Test
 	public void methodologyCsvDataFileDownloadTest(){
 		Assert.assertTrue(methodologyPage.validateMethodologyCsvDataFileDownload());
 	}
@@ -48,7 +48,7 @@ public class MethodologyPageTest extends TestBase{
 	@Test
 	public void methodologyDataDictionayFileDownloadTest(){
 		Assert.assertTrue(methodologyPage.validateMethodologyDataDictionayFileDownload());
-	}
+	}*/
 	
 	@AfterClass
 	public void tearDown(){
