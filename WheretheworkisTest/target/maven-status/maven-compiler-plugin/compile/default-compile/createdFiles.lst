@@ -1,9 +1,0 @@
-com\wheretheworkis\qa\pages\AboutPage.class
-com\wheretheworkis\qa\pages\OccupationPopupWindow.class
-com\wheretheworkis\qa\pages\HomePage.class
-com\wheretheworkis\qa\util\TestUtil.class
-com\wheretheworkis\qa\pages\JobConcentrationPopupWindow.class
-com\wheretheworkis\qa\base\TestBase.class
-com\wheretheworkis\qa\listeners\ScreenshotListener.class
-com\wheretheworkis\qa\pages\MethodologyPage.class
-com\wheretheworkis\qa\pages\ProspectsAcrossLocationsPage.class

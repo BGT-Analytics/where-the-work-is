@@ -27,7 +27,7 @@ public class JobConcentrationPopupWindowTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -82,7 +82,7 @@ public class JobConcentrationPopupWindowTest extends TestBase{
 		Assert.assertTrue(flag);
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown(){
 		driver.quit();
 	}

@@ -2,9 +2,7 @@ package com.whertheworkis.qa.testcase;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.wheretheworkis.qa.base.TestBase;
@@ -24,7 +22,7 @@ public class ProspectsAcrossLocationsPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();
@@ -77,7 +75,7 @@ public class ProspectsAcrossLocationsPageTest extends TestBase{
 		Assert.assertTrue(prospectsAcrossLocationsPage.validateBackButton());
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown(){
 		driver.quit();
 	}

@@ -207,6 +207,7 @@ public class HomePage extends TestBase{
 	public String validateDropDownMenu(){
 		 testUtil.dropDownSelect(dropDownMenu, locationsToBeSelected, locationToBeSelected);
 		 String selectedLoction = defaultSelectedLoction.getText();
+		 driver.navigate().refresh();
 		 return selectedLoction;	 
 	 }
 	
@@ -271,6 +272,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String[] validateMouseHoverOnDashboardOccupationGroups(){
+		driver.navigate().to(prop.getProperty("url"));
 		String colours[] = new String[2];
 		testUtil.mouseHoverOnElement(dashboardOccupationGroup);
 		colours[0] = barChartOccupationGroup.getAttribute("fill");
@@ -279,6 +281,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String[] validateMouseHoverOnBarChartOccupationGroups(){
+		driver.navigate().refresh();
 		String colours[] = new String[2];
 		testUtil.mouseHoverOnElement(barChartOccupationGroup);
 		colours[0] = dashboardOccupationGroup.getAttribute("style");
@@ -295,6 +298,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateBarChartToolTip(){
+		driver.navigate().to(prop.getProperty("url"));
 		testUtil.mouseHoverOnElement(barChartOccupationGroup);
 		return barChatToolTip.getText();
 	}
@@ -310,6 +314,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateMouseHoverOnBubbleChartOccupationGroups(){
+		driver.navigate().refresh();
 		testUtil.mouseHoverOnElement(bubbleChartOccupationGroupData);
 		return barChartOccupationGroup.getAttribute("fill");
 	}
@@ -335,17 +340,20 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateMouseClickOnOccupationGroupDashBoard(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		return dashboardOccupationGroup.getAttribute("class");
 	}
 	
 	public String validateBarChartTitle(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		return barChartTitle.getText();
 		
 	}
 	
 	public String validateBubbleChartData(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		testUtil.waitForElementToBeVisible(getChartsElementCss(bubbleChartOccupationData, bubbleChartElementCss), 10);
 		testUtil.mouseHoverOnElement(getChartsElementCss(bubbleChartOccupationData, bubbleChartElementCss));
@@ -353,6 +361,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateBarChartSelectedOccupationMouseHover(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		testUtil.waitForElementToBeVisible(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss), 10);
 		testUtil.mouseHoverOnElement(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss));
@@ -360,6 +369,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateBubbleChartSelectedOccupationMouseHover(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		testUtil.waitForElementToBeVisible(getChartsElementCss(bubbleChartOccupationData, bubbleChartSelectedElementCss), 10);
 		testUtil.mouseHoverOnElement(getChartsElementCss(bubbleChartOccupationData, bubbleChartSelectedElementCss));
@@ -367,17 +377,20 @@ public class HomePage extends TestBase{
 	}
 	
 	public String validateShowallButtonFunction(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		showallButton.click();
 		return dashboardOccupationGroup.getAttribute("class");
 	}
 	
 	public String validateBarChartOccupationGroups(){
+		driver.navigate().to(prop.getProperty("url"));
 		barChartOccupationGroup.click();
 		return dashboardOccupationGroup.getAttribute("class");
 	}
 	
 	public boolean validateBarChartPopupWindow(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		testUtil.waitForElementToBeVisible(getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss), 10);
 		getChartsElementCss(barChartSelectedOccupationGroupData, barChartElementCss).click();
@@ -393,6 +406,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public boolean validateBubbleChartPopupWindow(){
+		driver.navigate().to(prop.getProperty("url"));
 		dashboardOccupationGroup.click();
 		testUtil.waitForElementToBeVisible(getChartsElementCss(bubbleChartOccupationData, bubbleChartSelectedElementCss), 10);
 		getChartsElementCss(bubbleChartOccupationData, bubbleChartSelectedElementCss).click();
