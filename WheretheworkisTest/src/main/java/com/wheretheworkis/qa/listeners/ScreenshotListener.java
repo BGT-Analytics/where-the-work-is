@@ -20,8 +20,8 @@ public class ScreenshotListener extends TestListenerAdapter {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		String methodName = result.getName();
-		if (ITestResult.FAILURE == result.getStatus()){
-			File scrFile = ((TakesScreenshot)TestBase.driver).getScreenshotAs(OutputType.FILE);
+		if (ITestResult.FAILURE == result.getStatus()) {
+			File scrFile = ((TakesScreenshot) TestBase.driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "/failedtestcasescreenshots/"
 						+ methodName + formater.format(calendar.getTime()) + ".png"));

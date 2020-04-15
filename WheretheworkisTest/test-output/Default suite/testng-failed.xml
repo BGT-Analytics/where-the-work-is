@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.whertheworkis.qa.testcase.HomePageTest">
+      <class name="com.wheretheworkis.qa.testcase.HomePageTest">
         <methods>
-          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
-          <include name="tearDown"/>
+          <include name="defaultLocationSeclectedTest"/>
           <include name="setUp"/>
-          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
+          <include name="tearDown"/>
+          <include name="occupationGroupsBarChartHelperPresentTest"/>
+          <include name="occupationGroupsDashboardHelperPresentTest"/>
         </methods>
-      </class> <!-- com.whertheworkis.qa.testcase.HomePageTest -->
+      </class> <!-- com.wheretheworkis.qa.testcase.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

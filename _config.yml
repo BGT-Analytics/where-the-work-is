@@ -8,5 +8,5 @@ timezone: America/Chicago
 description: "Explore entry-level job dynamics for middle-skilled jobs in the UK"
 author: "DataMade"
 image: "images/screencap.png"
-gems:
+plugins:
   - jekyll-redirect-from

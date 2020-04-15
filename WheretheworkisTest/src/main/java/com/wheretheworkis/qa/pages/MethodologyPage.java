@@ -7,33 +7,32 @@ import org.openqa.selenium.support.PageFactory;
 import com.wheretheworkis.qa.base.TestBase;
 import com.wheretheworkis.qa.util.TestUtil;
 
-public class MethodologyPage extends TestBase{
+public class MethodologyPage extends TestBase {
 
-	
-	@FindBy(xpath="//a[@href='data/occupation_data.csv']")
+	@FindBy(xpath = "//a[@href='data/occupation_data.csv']")
 	WebElement mothodologyCsvData;
-	
-	@FindBy(xpath="//a[@href='data/data_dictionary.csv']")
+
+	@FindBy(xpath = "//a[@href='data/data_dictionary.csv']")
 	WebElement mothodologyDataDictionayFile;
-	
+
 	TestUtil testUtil;
 	String mothodologyCsvDataFilePath = "\\downloadedfiles\\pagefiles\\occupation_data.csv";
 	String mothodologyDataDictionayFilePath = "\\downloadedfiles\\pagefiles\\data_dictionary.csv";
-	
-	public MethodologyPage(){
+
+	public MethodologyPage() {
 		PageFactory.initElements(driver, this);
 		testUtil = new TestUtil();
 	}
-	
-	public boolean validateMethodologyCsvDataFile(){
+
+	public boolean validateMethodologyCsvDataFile() {
 		return mothodologyCsvData.isDisplayed();
 	}
-	
-	public boolean validateMethodologyDataDictionayFile(){
+
+	public boolean validateMethodologyDataDictionayFile() {
 		return mothodologyDataDictionayFile.isDisplayed();
 	}
-	
-	public boolean validateMethodologyCsvDataFileDownload(){
+
+	public boolean validateMethodologyCsvDataFileDownload() {
 		testUtil.deleteFile(mothodologyCsvDataFilePath);
 		mothodologyCsvData.click();
 		try {
@@ -43,8 +42,8 @@ public class MethodologyPage extends TestBase{
 		}
 		return testUtil.checkFileExists(mothodologyCsvDataFilePath);
 	}
-	
-	public boolean validateMethodologyDataDictionayFileDownload(){
+
+	public boolean validateMethodologyDataDictionayFileDownload() {
 		testUtil.deleteFile(mothodologyDataDictionayFilePath);
 		mothodologyDataDictionayFile.click();
 		try {
