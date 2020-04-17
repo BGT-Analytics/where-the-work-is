@@ -2,94 +2,94 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Where the work is Test Suite]">
   <listeners>
-    <listener class-name="com.wheretheworkis.qa.listeners.ScreenshotListener"/>
+    <listener class-name="org.wheretheworkis.qa.listeners.ScreenshotListener"/>
   </listeners>
   <test name="Where the work is Test(failed)">
     <classes>
-      <class name="com.wheretheworkis.qa.testcase.AboutPageTest">
+      <class name="org.wheretheworkis.qa.testcase.HomePageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.AboutPageTest -->
-      <class name="com.wheretheworkis.qa.testcase.MethodologyPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.MethodologyPageTest -->
-      <class name="com.wheretheworkis.qa.testcase.OccupationPopupWindowTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.OccupationPopupWindowTest -->
-      <class name="com.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
-      <class name="com.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="jobConcentrationMapButtonPresentTest"/>
-          <include name="dropDownDefaultSelectedOccupationTest"/>
-          <include name="backButtonTest"/>
-          <include name="occupationTablePresentTest"/>
-          <include name="lepareaOrCityRegionRadioButtonTest"/>
-          <include name="tearDown"/>
-          <include name="nationOrRegionRadioButtonTest"/>
-          <include name="jobConcentrationMapPopupPresentTest"/>
-        </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest -->
-      <class name="com.wheretheworkis.qa.testcase.HomePageTest">
-        <methods>
-          <include name="bubbleChartPopupWindowOpenTest"/>
-          <include name="mouseClickOnOccupationGroupDashboardTest"/>
-          <include name="bubbleChartEducationDropDownToolTipTest"/>
-          <include name="footerSectionLogoPresentTest"/>
-          <include name="occupationGroupsBarChartAxisPresentTest"/>
-          <include name="barChartFutherEducationLegentVisibilityTest"/>
-          <include name="bubbleChartDataTest"/>
-          <include name="barChartMouseHoverOnOccupationTest"/>
-          <include name="homePageTitleTest"/>
-          <include name="showallButtonFunctionTest"/>
-          <include name="setUp"/>
-          <include name="methodologyPageLinkTextPresentTest"/>
-          <include name="relatedResearchPageLinkTextPresentTest"/>
-          <include name="dropDownMenuLocationSelecableTest"/>
-          <include name="bubbleChartSalaryToolTipTest"/>
-          <include name="barChartDataClassificationTest"/>
-          <include name="bubbleChartEducationDropDownMenuTest"/>
-          <include name="occupationGroupsBarChartHelperPresentTest"/>
-          <include name="occupationGroupsDashboardHelperPresentTest"/>
-          <include name="bubbleChartFootnotePresentTest"/>
-          <include name="aboutLinkTextPresentTest"/>
-          <include name="bubbleChartToolTipTest"/>
-          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
           <include name="barChartTitleTest"/>
           <include name="homePageHeaderSectionTest"/>
-          <include name="barChartToolTipTest"/>
-          <include name="bubbleChartMouseHoverOnOccupationTest"/>
-          <include name="bubbleChartPresentTest"/>
-          <include name="showallButtonPresentTest"/>
-          <include name="barChartJobOpeningToolTipTest"/>
-          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
+          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
+          <include name="aboutLinkTextPresentTest"/>
+          <include name="bubbleChartFootnotePresentTest"/>
           <include name="barChartSchoolLeaversLegentVisibilityTest"/>
+          <include name="occupationGroupsBarChartHelperPresentTest"/>
+          <include name="bubbleChartToolTipTest"/>
           <include name="tearDown"/>
           <include name="barChartHigherEducationLenegntVisibilityTest"/>
+          <include name="barChartJobOpeningToolTipTest"/>
+          <include name="barChartToolTipTest"/>
+          <include name="bubbleChartPresentTest"/>
+          <include name="showallButtonPresentTest"/>
           <include name="defaultLocationSeclectedTest"/>
-          <include name="clickToHideBarChartLengentPresentTest"/>
-          <include name="bubbleChartOpportunityToolTipTest"/>
           <include name="occupationGroupsInformationPresentTest"/>
-          <include name="mouseHoverOnBubbleChartOccupationGroupsTest"/>
-          <include name="whatcanthistoolshowPageLinkTextPresentTest"/>
           <include name="mouseClickBarChartOccupationGroupTest"/>
-          <include name="homePageLogoTest"/>
+          <include name="whatcanthistoolshowPageLinkTextPresentTest"/>
           <include name="barChartPopupWindowOpenTest"/>
+          <include name="bubbleChartOpportunityToolTipTest"/>
+          <include name="clickToHideBarChartLengentPresentTest"/>
+          <include name="bubbleChartMouseHoverOnOccupationTest"/>
+          <include name="homePageLogoTest"/>
+          <include name="mouseHoverOnBubbleChartOccupationGroupsTest"/>
+          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="footerSectionLogoPresentTest"/>
+          <include name="mouseClickOnOccupationGroupDashboardTest"/>
+          <include name="bubbleChartEducationDropDownToolTipTest"/>
+          <include name="homePageTitleTest"/>
+          <include name="barChartFutherEducationLegentVisibilityTest"/>
+          <include name="bubbleChartDataTest"/>
+          <include name="showallButtonFunctionTest"/>
+          <include name="barChartMouseHoverOnOccupationTest"/>
+          <include name="methodologyPageLinkTextPresentTest"/>
+          <include name="dropDownMenuLocationSelecableTest"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
+          <include name="barChartDataClassificationTest"/>
+          <include name="occupationGroupsDashboardHelperPresentTest"/>
+          <include name="relatedResearchPageLinkTextPresentTest"/>
+          <include name="bubbleChartSalaryToolTipTest"/>
+          <include name="setUp"/>
+          <include name="bubbleChartEducationDropDownMenuTest"/>
+          <include name="occupationGroupsBarChartAxisPresentTest"/>
         </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.HomePageTest -->
+      </class> <!-- org.wheretheworkis.qa.testcase.HomePageTest -->
+      <class name="org.wheretheworkis.qa.testcase.AboutPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.wheretheworkis.qa.testcase.AboutPageTest -->
+      <class name="org.wheretheworkis.qa.testcase.MethodologyPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.wheretheworkis.qa.testcase.MethodologyPageTest -->
+      <class name="org.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
+      <class name="org.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest">
+        <methods>
+          <include name="jobConcentrationMapButtonPresentTest"/>
+          <include name="nationOrRegionRadioButtonTest"/>
+          <include name="dropDownDefaultSelectedOccupationTest"/>
+          <include name="occupationTablePresentTest"/>
+          <include name="setUp"/>
+          <include name="backButtonTest"/>
+          <include name="lepareaOrCityRegionRadioButtonTest"/>
+          <include name="tearDown"/>
+          <include name="jobConcentrationMapPopupPresentTest"/>
+        </methods>
+      </class> <!-- org.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest -->
+      <class name="org.wheretheworkis.qa.testcase.OccupationPopupWindowTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.wheretheworkis.qa.testcase.OccupationPopupWindowTest -->
     </classes>
   </test> <!-- Where the work is Test(failed) -->
 </suite> <!-- Failed suite [Where the work is Test Suite] -->

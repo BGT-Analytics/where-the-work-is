@@ -3,15 +3,53 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wheretheworkis.qa.testcase.HomePageTest">
+      <class name="org.wheretheworkis.qa.testcase.HomePageTest">
         <methods>
-          <include name="defaultLocationSeclectedTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="barChartTitleTest"/>
+          <include name="homePageHeaderSectionTest"/>
+          <include name="mouseHoverOnDashboardOccupationGroupsTest"/>
+          <include name="aboutLinkTextPresentTest"/>
+          <include name="bubbleChartFootnotePresentTest"/>
+          <include name="barChartSchoolLeaversLegentVisibilityTest"/>
           <include name="occupationGroupsBarChartHelperPresentTest"/>
+          <include name="bubbleChartToolTipTest"/>
+          <include name="tearDown"/>
+          <include name="barChartHigherEducationLenegntVisibilityTest"/>
+          <include name="barChartJobOpeningToolTipTest"/>
+          <include name="barChartToolTipTest"/>
+          <include name="bubbleChartPresentTest"/>
+          <include name="showallButtonPresentTest"/>
+          <include name="defaultLocationSeclectedTest"/>
+          <include name="occupationGroupsInformationPresentTest"/>
+          <include name="mouseClickBarChartOccupationGroupTest"/>
+          <include name="whatcanthistoolshowPageLinkTextPresentTest"/>
+          <include name="barChartPopupWindowOpenTest"/>
+          <include name="bubbleChartOpportunityToolTipTest"/>
+          <include name="clickToHideBarChartLengentPresentTest"/>
+          <include name="bubbleChartMouseHoverOnOccupationTest"/>
+          <include name="homePageLogoTest"/>
+          <include name="mouseHoverOnBubbleChartOccupationGroupsTest"/>
+          <include name="bubbleChartPopupWindowOpenTest"/>
+          <include name="footerSectionLogoPresentTest"/>
+          <include name="mouseClickOnOccupationGroupDashboardTest"/>
+          <include name="bubbleChartEducationDropDownToolTipTest"/>
+          <include name="homePageTitleTest"/>
+          <include name="barChartFutherEducationLegentVisibilityTest"/>
+          <include name="bubbleChartDataTest"/>
+          <include name="showallButtonFunctionTest"/>
+          <include name="barChartMouseHoverOnOccupationTest"/>
+          <include name="methodologyPageLinkTextPresentTest"/>
+          <include name="dropDownMenuLocationSelecableTest"/>
+          <include name="mouseHoverOnBarChartOccupationGroupsTest"/>
+          <include name="barChartDataClassificationTest"/>
           <include name="occupationGroupsDashboardHelperPresentTest"/>
+          <include name="relatedResearchPageLinkTextPresentTest"/>
+          <include name="bubbleChartSalaryToolTipTest"/>
+          <include name="setUp"/>
+          <include name="bubbleChartEducationDropDownMenuTest"/>
+          <include name="occupationGroupsBarChartAxisPresentTest"/>
         </methods>
-      </class> <!-- com.wheretheworkis.qa.testcase.HomePageTest -->
+      </class> <!-- org.wheretheworkis.qa.testcase.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,18 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Where the work is Test Suite">
 	<listeners>
-		<listener class-name="com.wheretheworkis.qa.listeners.ScreenshotListener" />
+		<listener class-name="org.wheretheworkis.qa.listeners.ScreenshotListener" />
 	</listeners>
 	<test name="Where the work is Test">
 		<classes>
-			<class name="com.wheretheworkis.qa.testcase.MethodologyPageTest" />
-			<class name="com.wheretheworkis.qa.testcase.OccupationPopupWindowTest" />
+			<class name="org.wheretheworkis.qa.testcase.MethodologyPageTest" />
+			<class name="org.wheretheworkis.qa.testcase.OccupationPopupWindowTest" />
 			<class
-				name="com.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest" />
-			<class name="com.wheretheworkis.qa.testcase.AboutPageTest" />
+				name="org.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest" />
+			<class name="org.wheretheworkis.qa.testcase.AboutPageTest" />
 			<class
-				name="com.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" />
-			<class name="com.wheretheworkis.qa.testcase.HomePageTest" />
+				name="org.wheretheworkis.qa.testcase.ProspectsAcrossLocationsPageTest" />
+			<class name="org.wheretheworkis.qa.testcase.HomePageTest" />
 		</classes>
 	</test> <!-- Where the work is Test -->
 </suite> <!-- Where the work is Test Suite -->
