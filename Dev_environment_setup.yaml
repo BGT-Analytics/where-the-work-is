@@ -1,0 +1,61 @@
+---
+
+- name: Where the work is DEV/Test environment set up
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+
+    - name: install git
+      yum:
+        name: git
+        state: installed
+        
+    - name: install the dependencies required by the ruby-build tool
+      yum:
+        name: git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
+        state: installed
+
+    - name: rbenv path1/2
+      shell: echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+
+    - name: rbenv path2/2
+      shell: echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
+    - name: bash reload
+      shell: source ~/.bashrc
+      
+    - name: git clone rbenv
+      shell: git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+      
+    - name: git clone ruby-build
+      shell: git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+    - name: install ruby-build
+      shell: ~/.rbenv/plugins/ruby-build/install.sh
+      
+    - name: bash reload
+      shell: source ~/.bash_profile
+      
+    - name: Install ruby
+      shell: bash -lc "rbenv install 2.5.1"
+      
+    - name: rbenv default ruby
+      command: bash -lc "rbenv global 2.5.1"
+     
+    - name: download source code
+      shell: git clone https://github.com/BGT-Analytics/where-the-work-is.git
+    
+    - name: install bundler
+      shell:
+        cmd: bash -lc "gem install bundler:1.15.4"
+        chdir: where-the-work-is/
+
+    - name: update json and install gems
+      shell:
+        cmd: bash -lc "bundle update json"
+        chdir: where-the-work-is/
+
+    - name: run the jekyll service
+      shell:
+        cmd: bash -lc "bundler exec jekyll serve --host=0.0.0.0"
+        chdir: where-the-work-is/
