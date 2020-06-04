@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest">
+        <methods>
+          <include name="mapLocationMouseHoverTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.wheretheworkis.qa.testcase.JobConcentrationPopupWindowTest -->
+      <class name="com.wheretheworkis.qa.testcase.OccupationPopupWindowTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.wheretheworkis.qa.testcase.OccupationPopupWindowTest -->
+      <class name="com.wheretheworkis.qa.testcase.MethodologyPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.wheretheworkis.qa.testcase.MethodologyPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
